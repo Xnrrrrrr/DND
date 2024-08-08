@@ -12,14 +12,22 @@ const Login = () => {
 	
 	const [login, { isLoading }] = useLoginMutation();
 
+	useEffect(() => {
+		if (document.cookie.includes("uname")) {
+			navigate('/');
+		}
+	}, []);
+
 	const submitHandler = async (e) => {
         e.preventDefault();
 
         try {
-			const res = await login({ username, password }).unwrap;
+			const res = await login({ username, password }).unwrap();
 			if (res) {
-				navigate('/');
+				console.log(res);
+				document.cookie = `uname=${res.username}; path=/; max-age=${30 * 24 * 60 * 60 * 1000}`;
 			}
+			navigate('/');
             window.location.reload();
         } catch (err) {
             console.error(err?.data?.message || err.error)

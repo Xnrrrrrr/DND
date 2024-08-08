@@ -64,7 +64,7 @@ const authUser = asyncHandler(async (req, res) => {
 	if (user && (await user.matchPassword(password))) {
 		createJWT(res, user._id);
 
-		res.status(StatusCodes.OK).json({ msg: "Logged in." });
+		res.status(StatusCodes.OK).json({ username: user.username });
 	} else {
 		res.status(StatusCodes.UNAUTHORIZED);
 		throw new Error(`Invalid email or password.`);
@@ -77,11 +77,20 @@ const authUser = asyncHandler(async (req, res) => {
  * @access	Private
  */
 const logoutUser = asyncHandler(async (req, res) => {
+	const userId = req.user._id.toString();
+
+	const user = await User.findById(userId);
+
+	if (!user) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(`No user found with id ${userId}.`);
+	}
+
 	res.cookie("jwt", "", {
 		httpOnly: true,
 		expires: new Date(0),
 	});
-	res.status(StatusCodes.OK).json({ msg: "User logged out." });
+	res.status(StatusCodes.OK).json({ username: user.username });
 });
 
 /**

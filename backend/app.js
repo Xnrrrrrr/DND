@@ -39,7 +39,7 @@ app.use("/api/v1/user", userRouter);
 app.use(notFound);
 app.use(errorHandler);
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 6001;
 
 const startServer = async () => {
 	try {

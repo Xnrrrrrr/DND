@@ -14,14 +14,20 @@ const SignUp = () => {
 
 	const [register, { isLoading }] = useRegisterMutation();
 
+	useEffect(() => {
+		if (document.cookie.includes("uname")) {
+			navigate('/');
+		}
+	}, []);
+
 	const submitHandler = async (e) => {
         e.preventDefault();
-		
+
         if (password !== confirmPassword) {
             console.error(`Passwords do not match`);
         } else {
             try {
-                const res = await register({ username, email, password}).unwrap();
+                const res = await register({ username, email, password }).unwrap();
 				if (res) {
 					navigate('/login');
 				}

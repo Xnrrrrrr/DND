@@ -1,25 +1,50 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
 
 const Landing = () => {
+	const [userData, setUserData] = useState("");
+
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (document.cookie.includes("uname")) {
+			setUserData(
+				document.cookie.split(`uname=`).pop().split(";").shift()
+			);
+		}
+	}, []);
+
 	return (
 		<>
 			<Header />
 			<div className="landing-container">
 				<section className="hero-section">
 					<div className="hero-content">
-						<h1>Welcome to DND</h1>
+						{userData ? (
+							<h1>Welcome to DND, {userData}</h1>
+						) : (
+							<h1>Welcome to DND</h1>
+						)}
 						<p>
 							Embark on an epic journey filled with magic,
 							mystery, and endless possibilities.
 						</p>
-						<button
-							className="cta-button"
-							onClick={() => navigate("/sign-up")}
-						>
-							Start Your Adventure
-						</button>
+						{userData ? (
+							<button
+								className="cta-button"
+								onClick={() => navigate("/party")}
+							>
+								Create/Join a Adventure
+							</button>
+						) : (
+							<button
+								className="cta-button"
+								onClick={() => navigate("/sign-up")}
+							>
+								Start Your Adventure
+							</button>
+						)}
 					</div>
 				</section>
 				<section className="features-section">
