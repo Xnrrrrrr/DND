@@ -11,6 +11,7 @@ import './components/Header/Header.css';
 import './pages/Landing/Landing.css';
 import './pages/Login/Login.css';
 import './pages/SignUp/SignUp.css';
+import './pages/CharacterSheet/CharacterSheet.css'
 
 const App = () => {
 	return (
