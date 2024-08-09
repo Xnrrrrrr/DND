@@ -181,7 +181,7 @@ const CharacterSheetSchema = new mongoose.Schema(
 		},
 		religion: {
 			type: String,
-			enum: [], // Use enum to restrict values
+			enum: ["steve"], // Use enum to restrict values
 			required: [true, "Please provide your desired religion"],
 		},
 		flaws: {
@@ -405,28 +405,18 @@ const CharacterSheetSchema = new mongoose.Schema(
 			required: [true, "Please provide your desired username"],
 			minlength: 2,
 			maxlength: 20,
-			unique: true,
 		},
 		currentHitPoints: {
 			type: Number,
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		temporaryHitPoints: {
 			type: Number,
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		equipment: {
 			type: String,
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		race: {
 			type: String,
@@ -503,18 +493,12 @@ const CharacterSheetSchema = new mongoose.Schema(
 			default: 1,
 		},
 		proficiencyBonus: {
-			type: String,
+			type: Number,
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		savingThrows: {
-			type: String,
+			type: Number,
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		alignment: {
 			type: String,
@@ -535,15 +519,12 @@ const CharacterSheetSchema = new mongoose.Schema(
 			type: String,
 			required: [true, "Please provide your desired background"],
 			minlength: 2,
-			maxlength: 20,
+			maxlength: 1000,
 		},
 		features: {
 			type: String,
 			enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		// Minimum of 1 trait
 		// Maximum of 5 traits
@@ -724,9 +705,6 @@ const CharacterSheetSchema = new mongoose.Schema(
 			type: String,
 			enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		characterBackstory: {
 			type: String,
@@ -736,11 +714,8 @@ const CharacterSheetSchema = new mongoose.Schema(
 		},
 		allies: {
 			type: String,
-			enum: [], // Use enum to restrict values
+			enum: ["steve"], // Use enum to restrict values
 			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
 		},
 		organizations: {
 			type: String,
