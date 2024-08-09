@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/v1/user", userRouter);
-app.use("/api/v1/character-sheet", characterSheetRouter);
+app.use("/api/v1/characterSheet", characterSheetRouter);
 app.use("/api/v1/mob", mobRouter);
 
 // Error handlers (Has to be last)
