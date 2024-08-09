@@ -17,10 +17,12 @@ const connectDB = require("./config/connect.js");
 
 // Route Imports
 const userRouter = require("./routes/userRoutes.js");
+const characterSheetRouter = require("./routes/characterSheetRoutes.js");
+const mobRouter = require("./routes/mobRoutes.js");
 
 const corsOptions = {
-    origin: process.env.CLIENT_URL,
-    credentials: true,
+	origin: process.env.CLIENT_URL,
+	credentials: true,
 };
 
 // Cybersecurity
@@ -34,6 +36,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/character-sheet", characterSheetRouter);
+app.use("/api/v1/mob", mobRouter);
 
 // Error handlers (Has to be last)
 app.use(notFound);
