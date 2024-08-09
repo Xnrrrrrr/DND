@@ -172,7 +172,7 @@ const updateCharacterSheet = asyncHandler(async (req, res) => {
             organizations,
 
 
-        }, // checking
+        }, // checking2
         { new: true }
     );                          
     if (!characterSheet) {
