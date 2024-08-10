@@ -14,7 +14,7 @@ const Login = () => {
 
 	useEffect(() => {
 		if (document.cookie.includes("uname")) {
-			navigate('/');
+			navigate('/home');
 		}
 	}, []);
 
@@ -27,7 +27,7 @@ const Login = () => {
 				console.log(res);
 				document.cookie = `uname=${res.username}; path=/; max-age=${30 * 24 * 60 * 60 * 1000}`;
 			}
-			navigate('/');
+			navigate('/home');
             window.location.reload();
         } catch (err) {
             console.error(err?.data?.message || err.error)

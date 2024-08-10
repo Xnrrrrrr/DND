@@ -12,6 +12,12 @@
 	flex-direction: column;
 }
 
+.character-sheet-container form label {
+    display: block;
+    font-weight: bold;
+    margin: 0.5rem 0rem;
+}
+
 .character-sheet-top {
     display: flex;
     justify-content: space-between;
@@ -46,6 +52,19 @@
     justify-content: space-evenly;
 }
 
+.character-sheet-attribute-bottom div label {
+    margin: 0rem;
+}
+
+.character-sheet-attribute-bottom div {
+    width: 11rem;
+    border: 1px solid var(--theme-grey-200);
+    border-radius: 15%;
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
 .character-sheet-attribute-bottom div input {
     -moz-appearance: textfield;
     width: 3rem;
@@ -77,13 +96,8 @@
     margin-right: 0.5rem;
 }
 
-.character-sheet-container form label {
-    display: block;
-    font-weight: bold;
-    margin: 0.5rem 0rem;
-}
-
 .character-sheet-submit-btn {
+    margin-top: 1rem;
     padding: 1rem 2rem;
     background-color: var(--theme-blue-600);
     color: var(--theme-grey-o-100);

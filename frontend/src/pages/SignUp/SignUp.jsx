@@ -16,7 +16,7 @@ const SignUp = () => {
 
 	useEffect(() => {
 		if (document.cookie.includes("uname")) {
-			navigate('/');
+			navigate('/home');
 		}
 	}, []);
 

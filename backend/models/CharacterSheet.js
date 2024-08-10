@@ -402,9 +402,7 @@ const CharacterSheetSchema = new mongoose.Schema(
 		armorClass: {
 			type: String,
 			enum: ["Light Armor", "Medium Armor", "Heavy Armor"], // Use enum to restrict values
-			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
+			required: [true, "Please provide your armour class."],
 		},
 		currentHitPoints: {
 			type: Number,
@@ -467,6 +465,63 @@ const CharacterSheetSchema = new mongoose.Schema(
 				"Grung",
 			],
 			required: [true, "Please select a race"],
+		},
+		subrace: {
+			type: String,
+			enum: [
+				// Dwarf
+				"Hill Dwarf",
+				"Mountain Dwarf",
+
+				// Elf
+				"High Elf",
+				"Wood Elf",
+				"Dark Elf (Drow)",
+				"Eladrin",
+				"Sea Elf",
+				"Shadar-Kai",
+
+				// Gnome
+				"Forest Gnome",
+				"Rock Gnome",
+				"Deep Gnome",
+
+				// Haffling
+				"Lightfoot Halfling",
+				"Stout Halfling",
+				"Ghostwise Halfling",
+
+				// Tiefling
+				"Feral Tiefling",
+				"Asmodeus",
+				"Zariel",
+				"Levistus",
+
+				// Aasimar
+				"Protector Aasimar",
+				"Scourge Aasimar",
+				"Fallen Aasimar",
+
+				// Genasi
+				"Air Genasi",
+				"Earth Genasi",
+				"Fire Genasi",
+				"Water Genasi",
+
+				// Shifter
+				"Beasthide",
+				"Longtooth",
+				"Swiftstride",
+				"Wildhunt",
+
+				// Gith
+				"Githyanki",
+				"Githzerai",
+				
+				// If race does not have a subrace
+				"none",
+			],
+			default: "none",
 		},
 		inspiration: {
 			type: Boolean, // Inspiration is either present or not, represented as true or false
@@ -737,6 +792,7 @@ const CharacterSheetSchema = new mongoose.Schema(
 			minlength: 2, // Minimum length for organization name
 			maxlength: 50, // Adjusted max length for more flexibility
 		},
+		
 	},
 	{
 		timestamps: true,

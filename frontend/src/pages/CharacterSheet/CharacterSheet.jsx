@@ -4,6 +4,249 @@ import { Header } from "../../components";
 
 const maxAttributePoints = 20;
 
+const idealsArray = [
+	"Adventurous",
+	"Ambition",
+	"Charity",
+	"Compassion",
+	"Fairness",
+	"Freedom",
+	"Honor",
+	"Justice",
+	"Knowledge",
+	"Love",
+	"Loyalty",
+	"Perseverance",
+	"Self-Improvement",
+	"Tradition",
+	"Truth",
+	"Wealth",
+	"Wisdom",
+];
+
+const bondsArray = [
+	"Family",
+	"Mentor",
+	"Homeland",
+	"Artifact",
+	"Heirloom",
+	"Oath",
+	"Revenge",
+	"Justice",
+	"Love",
+];
+
+const classesArray = [
+	"Barbarian",
+	"Bard",
+	"Cleric",
+	"Druid",
+	"Fighter",
+	"Monk",
+	"Paladin",
+	"Ranger",
+	"Rogue",
+	"Sorcerer",
+	"Warlock",
+	"Wizard",
+	"Artificer",
+];
+
+const subclasses = {
+	Barbarian: [
+		"Path of the Berserker",
+		"Path of the Totem Warrior",
+		"Path of the Ancestral Guardian",
+		"Path of the Storm Herald",
+		"Path of the Zealot",
+		"Path of the Beast",
+		"Path of Wild Magic",
+	],
+	Bard: [
+		"College of Lore",
+		"College of Valor",
+		"College of Glamour",
+		"College of Swords",
+		"College of Whispers",
+		"College of Creation",
+		"College of Eloquence",
+	],
+	Cleric: [
+		"Knowledge Domain",
+		"Life Domain",
+		"Light Domain",
+		"Nature Domain",
+		"Tempest Domain",
+		"Trickery Domain",
+		"War Domain",
+		"Death Domain",
+		"Arcana Domain",
+		"Forge Domain",
+		"Grave Domain",
+		"Order Domain",
+		"Peace Domain",
+		"Twilight Domain",
+	],
+	Druid: [
+		"Circle of the Land",
+		"Circle of the Moon",
+		"Circle of Dreams",
+		"Circle of the Shepherd",
+		"Circle of Spores",
+		"Circle of Stars",
+		"Circle of Wildfire",
+	],
+	Fighter: [
+		"Champion",
+		"Battle Master",
+		"Eldritch Knight",
+		"Arcane Archer",
+		"Cavalier",
+		"Samurai",
+		"Psi Warrior",
+		"Echo Knight",
+	],
+	Monk: [
+		"Way of the Open Hand",
+		"Way of Shadow",
+		"Way of the Four Elements",
+		"Way of the Drunken Master",
+		"Way of the Kensei",
+		"Way of the Sun Soul",
+		"Way of the Long Death",
+		"Way of the Astral Self",
+		"Way of Mercy",
+	],
+	Paladin: [
+		"Oath of Devotion",
+		"Oath of the Ancients",
+		"Oath of Vengeance",
+		"Oath of Conquest",
+		"Oath of Redemption",
+		"Oath of Glory",
+		"Oath of the Crown",
+		"Oath of the Watchers",
+	],
+	Ranger: [
+		"Hunter",
+		"Beast Master",
+		"Gloom Stalker",
+		"Horizon Walker",
+		"Monster Slayer",
+		"Fey Wanderer",
+		"Swarmkeeper",
+	],
+	Rogue: [
+		"Thief",
+		"Assassin",
+		"Arcane Trickster",
+		"Mastermind",
+		"Swashbuckler",
+		"Inquisitive",
+		"Scout",
+		"Soulknife",
+	],
+	Sorcerer: [
+		"Draconic Bloodline",
+		"Wild Magic",
+		"Divine Soul",
+		"Shadow Magic",
+		"Storm Sorcery",
+		"Aberrant Mind",
+		"Clockwork Soul",
+	],
+	Warlock: [
+		"Archfey",
+		"Fiend",
+		"Great Old One",
+		"Hexblade",
+		"Celestial",
+		"Fathomless",
+		"Genie",
+	],
+	Wizard: [
+		"School of Abjuration",
+		"School of Conjuration",
+		"School of Divination",
+		"School of Enchantment",
+		"School of Evocation",
+		"School of Illusion",
+		"School of Necromancy",
+		"School of Transmutation",
+		"Bladesinging",
+		"War Magic",
+		"Chronurgy Magic",
+		"Graviturgy Magic",
+	],
+	Artificer: ["Alchemist", "Armorer", "Artillerist", "Battle Smith"],
+};
+
+const racesArray = [
+	"Dragonborn",
+	"Dwarf",
+	"Elf",
+	"Gnome",
+	"Half-Elf",
+	"Half-Orc",
+	"Halfling",
+	"Human",
+	"Tiefling",
+	"Aasimar",
+	"Goliath",
+	"Tabaxi",
+	"Genasi",
+	"Firbolg",
+	"Lizardfolk",
+	"Kenku",
+	"Yuan-ti Pureblood",
+	"Triton",
+	"Bugbear",
+	"Hobgoblin",
+	"Goblin",
+	"Kobold",
+	"Minotaur",
+	"Centaur",
+	"Satyr",
+	"Leonin",
+	"Loxodon",
+	"Simic Hybrid",
+	"Vedalken",
+	"Warforged",
+	"Changeling",
+	"Shifter",
+	"Kalashtar",
+	"Orc",
+	"Fairy",
+	"Hadozee",
+	"Autognome",
+	"Plasmoid",
+	"Thri-Kreen",
+	"Harengon",
+	"Owlin",
+	"Verdan",
+	"Gith",
+	"Grung",
+];
+
+const subracesObj = {
+	Dwarf: ["Hill Dwarf", "Mountain Dwarf"],
+	Elf: [
+		"High Elf",
+		"Wood Elf",
+		"Dark Elf (Drow)",
+		"Eladrin",
+		"Sea Elf",
+		"Shadar-Kai",
+	],
+	Gnome: ["Forest Gnome", "Rock Gnome", "Deep Gnome"],
+	Haffling: ["Lightfoot Halfling", "Stout Halfling", "Ghostwise Halfling"],
+	Tiefling: ["Feral Tiefling", "Asmodeus", "Zariel", "Levistus"],
+	Aasimar: ["Protector Aasimar", "Scourge Aasimar", "Fallen Aasimar"],
+	Genasi: ["Air Genasi", "Earth Genasi", "Fire Genasi", "Water Genasi"],
+	Shifter: ["Beasthide", "Longtooth", "Swiftstride", "Wildhunt"],
+	Gith: ["Githyanki", "Githzerai"],
+};
+
 const CharacterSheet = () => {
 	const [characterFirstName, setCharacterFirstName] = useState("");
 	const [characterLastName, setCharacterLastName] = useState("");
@@ -11,6 +254,8 @@ const CharacterSheet = () => {
 	const [height, setHeight] = useState(10);
 	const [weight, setWeight] = useState(5);
 	const [background, setBackground] = useState("");
+	const [primaryClass, setPrimaryClass] = useState("");
+	const [subclass, setSubclass] = useState("");
 	const [idealOne, setIdealOne] = useState("");
 	const [idealTwo, setIdealTwo] = useState("");
 	const [bonds, setBonds] = useState("");
@@ -54,6 +299,25 @@ const CharacterSheet = () => {
 			return;
 		}
 		attributeSetter(currentValue + change);
+	};
+
+	const handleClassChange = (e) => {
+		setPrimaryClass(e.target.value);
+		setSubclass(""); // Reset subclass when a new class is selected
+	};
+
+	const handleIdealOneChange = (e) => {
+		setIdealOne(e.target.value);
+		if (idealTwo === e.target.value) {
+			setIdealTwo("");
+		}
+	};
+
+	const handleIdealTwoChange = (e) => {
+		setIdealTwo(e.target.value);
+		if (idealOne === e.target.value) {
+			setIdealOne("");
+		}
 	};
 
 	const submitHandler = async (e) => {
@@ -367,36 +631,35 @@ const CharacterSheet = () => {
 					</div>
 					<div></div>
 					<div>
-						<label htmlFor="idealOne">Ideal One:</label>
+						<label htmlFor="primaryClass">Class:</label>
 						<select
-							id="idealOne"
-							value={idealOne}
-							onChange={(e) => setIdealOne(e.target.value)}
+							id="primaryClass"
+							value={primaryClass}
+							onChange={handleClassChange}
 						>
-							<option>1</option>
-							<option>2</option>
+							<option value="">Select a Class</option>
+							{classesArray.map((c) => (
+								<option key={c} value={c}>
+									{c}
+								</option>
+							))}
 						</select>
 					</div>
 					<div>
-						<label htmlFor="idealTwo">
-							Ideal Two (Not Required):
-						</label>
+						<label htmlFor="subClass">Subclass:</label>
 						<select
-							id="idealTwo"
-							value={idealTwo}
-							onChange={(e) => setIdealTwo(e.target.value)}
+							id="subClass"
+							value={subclass}
+							onChange={(e) => setSubclass(e.target.value)}
+							disabled={!primaryClass}
 						>
-							{/* Add options here */}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="bonds">Bonds:</label>
-						<select
-							id="bonds"
-							value={bonds}
-							onChange={(e) => setBonds(e.target.value)}
-						>
-							{/* Add options here */}
+							<option value="">Select a Subclass</option>
+							{primaryClass &&
+								subclasses[primaryClass]?.map((sc) => (
+									<option key={sc} value={sc}>
+										{sc}
+									</option>
+								))}
 						</select>
 					</div>
 					<div>
@@ -406,7 +669,12 @@ const CharacterSheet = () => {
 							value={races}
 							onChange={(e) => setRaces(e.target.value)}
 						>
-							{/* Add options here */}
+							<option value="">Select a Race</option>
+							{racesArray.map((r) => (
+								<option key={r} value={r}>
+									{r}
+								</option>
+							))}
 						</select>
 					</div>
 					<div>
@@ -415,8 +683,66 @@ const CharacterSheet = () => {
 							id="subraces"
 							value={subraces}
 							onChange={(e) => setSubraces(e.target.value)}
+							disabled={!races}
 						>
-							{/* Add options here */}
+							<option value="">Select a Race First</option>
+							{races &&
+								subracesObj[races]?.map((sr) => (
+									<option key={sr} value={sr}>
+										{sr}
+									</option>
+								))}
+						</select>
+					</div>
+					<div>
+						<label htmlFor="idealOne">Ideal One:</label>
+						<select
+							id="idealOne"
+							value={idealOne}
+							onChange={handleIdealOneChange}
+						>
+							<option value="">Select an Ideal</option>
+							{idealsArray
+								.filter((ideal) => ideal !== idealTwo)
+								.map((ideal) => (
+									<option key={ideal} value={ideal}>
+										{ideal}
+									</option>
+								))}
+						</select>
+					</div>
+					<div>
+						<label htmlFor="idealTwo">
+							Ideal Two (Not Required):
+						</label>
+						<select
+							id="idealTwo"
+							value={idealTwo}
+							onChange={handleIdealTwoChange}
+						>
+							<option value="">Select an Ideal</option>
+							{idealsArray
+								.filter((ideal) => ideal !== idealOne)
+								.map((ideal) => (
+									<option key={ideal} value={ideal}>
+										{ideal}
+									</option>
+								))}
+						</select>
+					</div>
+					<div>
+						<label htmlFor="bonds">Bonds:</label>
+						<select
+							id="bonds"
+							value={bonds}
+							onChange={(e) => setBonds(e.target.value)}
+						>
+							<option value="">Select a Bond</option>
+							{bondsArray.map((bond) => (
+								<option key={bond} value={bond}>
+									{bond}
+								</option>
+							))}
 						</select>
 					</div>
 					<div>
