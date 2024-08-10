@@ -19,6 +19,9 @@ const connectDB = require("./config/connect.js");
 const userRouter = require("./routes/userRoutes.js");
 const characterSheetRouter = require("./routes/characterSheetRoutes.js");
 const mobRouter = require("./routes/mobRoutes.js");
+const spellRouter = require("./routes/spellRoutes.js");
+const npcRouter = require("./routes/npcRoutes.js");
+
 
 const corsOptions = {
 	origin: process.env.CLIENT_URL,
@@ -38,6 +41,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/character-sheet", characterSheetRouter);
 app.use("/api/v1/mob", mobRouter);
+app.use("/api/v1/spell", spellRouter)
+app.use("./api/v1/npc", npcRouter)
 
 // Error handlers (Has to be last)
 app.use(notFound);

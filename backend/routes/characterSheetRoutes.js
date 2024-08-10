@@ -1,16 +1,26 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
 const {
-	protect,
-	admin,
-	superAdmin,
-} = require("../middleware/authMiddleware.js");
+    protect,
+    admin,
+    superAdmin,
+} = require('../middleware/authMiddleware.js');
 
 const {
-	createCharacterSheet,
-} = require("../controllers/characterSheetController.js");
+    createCharacterSheet,
+    getAllCharacterSheets,
+    updateCharacterSheet,
+    deleteCharacterSheet,
+} = require('../controllers/characterSheetController.js');
 
-router.route("/").post([protect], createCharacterSheet)
+router
+    .route('/')
+    .post([protect, superAdmin], createCharacterSheet)
+    .get([protect, admin], getAllCharacterSheets);
+router
+    .route('/:mobId')
+    .put([protect, superAdmin], updateCharacterSheet)
+    .delete([protect, superAdmin], deleteCharacterSheet);
 
 module.exports = router;
