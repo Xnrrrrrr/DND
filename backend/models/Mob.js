@@ -1,106 +1,179 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const mobSchema = new mongoose.Schema({
-  name: String,
-  type: String,  // enum possibly to categorize? idfk 
-  subtype: String,
-  size: String,
-  armorClass: {
-    base: Number,
-    bonus: Number,
-    calculation: String
-  },
-  hitPoints: {
-    value: Number,
-    hitDice: String,
-    average: Number
-  },
-  speed: {
-    walk: String,
-    swim: String,
-    fly: String,
-    climb: String,
-    burrow: String
-  },
-  attributes: {
-    strength: Number,
-    dexterity: Number,
-    constitution: Number,
-    intelligence: Number,
-    wisdom: Number,
-    charisma: Number
-  },
-  savingThrows: {
-    strength: Number,
-    dexterity: Number,
-    constitution: Number,
-    intelligence: Number,
-    wisdom: Number,
-    charisma: Number
-  },
-  skills: {
-    acrobatics: Number,
-    arcana: Number,
-    athletics: Number,
-    deception: Number,
-    insight: Number,
-    intimidation: Number,
-    investigation: Number,
-    perception: Number,
-    performance: Number,
-    persuasion: Number,
-    sleightOfHand: Number,
-    stealth: Number,
-    survival: Number
-  },
-  damageResistances: [String],
-  damageImmunities: [String],
-  conditionImmunities: [String],
-  senses: {
-    darkvision: String,
-    blindsight: String,
-    truesight: String,
-    passivePerception: Number
-  },
-  languages: [String],
-  challengeRating: Number,
-  attacks: [{
-    name: String,
-    attackBonus: Number,
-    damage: String,
-    damageType: String,
-    range: String
-  }],
-  specialAbilities: [{
-    name: String,
-    description: String
-  }],
-  legendaryActions: [{
-    name: String,
-    description: String
-  }],
-  mythicActions: [{
-    name: String,
-    description: String
-  }],
-  traits: [{
-    name: String,
-    description: String
-  }],
-  actions: [{
-    name: String,
-    description: String
-  }],
-  reactions: [{
-    name: String,
-    description: String
-  }],
-  legendaryResistances: {
-    uses: Number,
-    description: String
-  }
+	name: {
+		type: String,
+		required: true,
+	},
+	type: {
+		type: String,
+		enum: [],
+	}, // enum possibly to categorize? idfk
+	subtype: {
+		type: String,
+		required: true,
+	},
+	size: {
+		type: Number,
+		required: true,
+	},
+	type: {
+		type: Number,
+		required: true,
+	},
+	armorClass: {
+		type: String,
+		enum: ["Light Armor", "Medium Armor", "Heavy Armor"], // Use enum to restrict values
+		required: true,
+	},
+	hitPoints: {
+		type: Number,
+		required: true,
+	},
+	speed: {
+		walk: { type: Number, required: true },
+		swim: { type: Number, default: 0 },  // Default to 0 if not applicable
+		fly: { type: Number, default: 0 },
+		climb: { type: Number, default: 0 },
+		burrow: { type: Number, default: 0 },
+	},
+	attributes: {
+		strength: { type: Number, required: true },
+		dexterity: { type: Number, required: true },
+		constitution: { type: Number, required: true },
+		intelligence: { type: Number, required: true },
+		wisdom: { type: Number, required: true },
+		charisma: { type: Number, required: true},
+	},
+	savingThrows: {
+		strength: { type: Number, default: 0 },
+		dexterity: { type: Number, default: 0 },
+		constitution: { type: Number, default: 0 },
+		intelligence: { type: Number, default: 0 },
+		wisdom: { type: Number, default: 0 },
+		charisma: { type: Number, default: 0 },
+	},
+	  skills: {
+		acrobatics: { type: Number, default: 0 },
+		arcana: { type: Number, default: 0 },
+		athletics: { type: Number, default: 0 },
+		deception: { type: Number, default: 0 },
+		insight: { type: Number, default: 0 },
+		intimidation: { type: Number, default: 0 },
+		investigation: { type: Number, default: 0 },
+		perception: { type: Number, default: 0 },
+		performance: { type: Number, default: 0 },
+		persuasion: { type: Number, default: 0 },
+		sleightOfHand: { type: Number, default: 0 },
+		stealth: { type: Number, default: 0 },
+		survival: { type: Number, default: 0 },
+	},
+	damageResistances: {
+		type: String,
+		required: true,
+	},	
+	damageImmunities: {
+		type: String,
+		required: true,
+	},
+	conditionImmunities: {
+		type: String,
+		required: true,
+	},
+	senses: {
+		darkvision: { type: Number, default: 0 }, // Typically a number of feet, e.g., 60
+		blindsight: { type: Number, default: 0 }, // Typically a number of feet, e.g., 10
+		truesight: { type: Number, default: 0 },  // Typically a number of feet, e.g., 30
+		passivePerception: { type: Number, default: 10 }, // Default for most creatures
+	  },
+	languages: {
+		type: String,
+		required: true,
+	},	
+	challengeRating: {
+		type: Number,
+		required: true,
+	},	
+	attacks: [
+		{
+			name: { type: String},
+			attackBonus: { type: Number},
+			damage: { type: String},
+			damageType: { type: String},
+			range: { type: String},
+		},
+	],
+	specialAbilities: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	legendaryActions: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	mythicActions: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	traits: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	actions: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	reactions: [
+		{
+			name: { type: String},
+			description: { type: String},
+		},
+	],
+	legendaryResistances: {
+		name: { type: String},
+		description: { type: String},
+	},
 });
 
-const Mob = mongoose.model('Mob', mobSchema);
+const Mob = mongoose.model("Mob", mobSchema);
 
 module.exports = Mob;
+
+// const mobSchema = new mongoose.Schema({
+//   name: { type: String, required: true },
+//   type: { type: String, required: true },  // 
+//   subtype: { type: String },
+//   size: {
+//     type: String,
+//     enum: ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'], // 
+//     required: true
+//   },
+//   // other fields as needed
+// });
+
+// const mongoose = require('mongoose');
+
+// const mobSchema = new mongoose.Schema({
+//   name: String,
+//   type: String,  // 
+//   subtype: String,
+//   size: {
+//     enum: ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'],
+//     required: true
+//   },
+//   // other fields as needed
+// });
+
+// const Mob = mongoose.model('Mob', mobSchema);
+
+// module.exports = Mob;
