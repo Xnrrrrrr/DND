@@ -42,7 +42,7 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/character-sheet", characterSheetRouter);
 app.use("/api/v1/mob", mobRouter);
 app.use("/api/v1/spell", spellRouter)
-app.use("./api/v1/npc", npcRouter)
+app.use("/api/v1/npc", npcRouter)
 
 // Error handlers (Has to be last)
 app.use(notFound);

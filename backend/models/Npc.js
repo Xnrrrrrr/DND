@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const NpcSchema = new mongoose.Schema(
+const npcSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -30,6 +30,6 @@ const NpcSchema = new mongoose.Schema(
     {timestamps: true}
 )
 
-const Npc = mongoose.model('Npc',   NpcSchema);
+const Npc = mongoose.model('Npc',   npcSchema);
 
 module.exports = Npc;
