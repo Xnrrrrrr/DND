@@ -34,7 +34,7 @@ const createMob = asyncHandler(async (req, res) => {
 		reactions,
 		legendaryResistances,
 	} = req.body;
-
+    console.log(req.body);
 	// Ensure all required fields are present
 	if (
 		!name ||
@@ -52,7 +52,7 @@ const createMob = asyncHandler(async (req, res) => {
 		!conditionImmunities ||
 		!senses ||
 		!languages ||
-		challengeRating ||
+		!challengeRating ||
 		!attacks ||
 		!specialAbilities ||
 		!legendaryActions ||

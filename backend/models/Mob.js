@@ -7,17 +7,13 @@ const mobSchema = new mongoose.Schema({
 	},
 	type: {
 		type: String,
-		enum: [],
-	}, // enum possibly to categorize? idfk
+		enum: ["steve"],
+	}, 
 	subtype: {
 		type: String,
 		required: true,
 	},
 	size: {
-		type: Number,
-		required: true,
-	},
-	type: {
 		type: Number,
 		required: true,
 	},
@@ -31,7 +27,7 @@ const mobSchema = new mongoose.Schema({
 		required: true,
 	},
 	speed: {
-		walk: { type: Number, required: true },
+		walk: { type: Number, },
 		swim: { type: Number, default: 0 },  // Default to 0 if not applicable
 		fly: { type: Number, default: 0 },
 		climb: { type: Number, default: 0 },
@@ -39,11 +35,11 @@ const mobSchema = new mongoose.Schema({
 	},
 	attributes: {
 		strength: { type: Number, required: true },
-		dexterity: { type: Number, required: true },
-		constitution: { type: Number, required: true },
-		intelligence: { type: Number, required: true },
-		wisdom: { type: Number, required: true },
-		charisma: { type: Number, required: true},
+		dexterity: { type: Number, },
+		constitution: { type: Number, },
+		intelligence: { type: Number, },
+		wisdom: { type: Number, },
+		charisma: { type: Number, },
 	},
 	savingThrows: {
 		strength: { type: Number, default: 0 },
