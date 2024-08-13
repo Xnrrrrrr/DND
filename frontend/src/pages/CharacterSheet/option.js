@@ -2780,357 +2780,357 @@ export const raceArray = [
 // 0 = - (tack) and _ = ' ' (space)
 export const raceDesc = {
 	Aasimar: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
+		expectedLifeSpan: "160 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Charisma +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Celestial",
 	},
 	Autognome: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Small, mechanical gnomes created by the gnomes of the world to assist them.",
+		expectedLifeSpan: "Variable",
+		expectedSize: "3 to 4 feet",
+		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		speed: "25 feet",
+		standardLanguages: "Common, Gnomish",
 	},
 	Bugbear: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Large, hairy goblinoids known for their surprising stealth and physical prowess.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "7 to 8 feet",
+		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Goblin",
 	},
 	Centaur: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Half-human, half-horse creatures with a strong connection to nature and a powerful build.",
+		expectedLifeSpan: "100 years",
+		expectedSize: "7 to 8 feet",
+		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		speed: "40 feet",
+		standardLanguages: "Common, Sylvan",
 	},
 	Changeling: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Shapechangers with the ability to alter their appearance at will.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Charisma +2, Dexterity +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Primordial",
 	},
 	Dragonborn: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Humanoid dragons with draconic ancestry and the ability to breathe elemental energy.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Strength +2, Charisma +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Draconic",
 	},
 	Dwarf: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Short, stout, and resilient beings known for their craftsmanship and endurance.",
+		expectedLifeSpan: "350 years",
+		expectedSize: "4 to 5 feet",
+		abilityScoreIncrease: "Constitution +2",
+		speed: "25 feet",
+		standardLanguages: "Common, Dwarvish",
 	},
 	Elf: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Graceful and long-lived beings with keen senses and an affinity for magic.",
+		expectedLifeSpan: "750 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Dexterity +2",
+		speed: "30 feet",
+		standardLanguages: "Common, Elvish",
 	},
 	Fairy: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Tiny, magical creatures with wings and a playful demeanor.",
+		expectedLifeSpan: "100 years",
+		expectedSize: "2.5 to 3 feet",
+		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		speed: "30 feet (fly 30 feet)",
+		standardLanguages: "Common, Sylvan",
 	},
 	Firbolg: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Large, reclusive forest dwellers with a natural affinity for the land.",
+		expectedLifeSpan: "500 years",
+		expectedSize: "7 to 8 feet",
+		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Elvish, Sylvan",
 	},
 	Genasi: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Beings with elemental heritage, exhibiting traits of their elemental ancestors.",
+		expectedLifeSpan: "120 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Constitution +2, another +1 depending on the subrace",
+		speed: "30 feet",
+		standardLanguages: "Common, Primordial",
 	},
 	Gith: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Alien humanoids with a history of interplanar conflict and psionic abilities.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Gith",
 	},
 	Gnome: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Inventive and curious beings known for their cleverness and affinity with magic.",
+		expectedLifeSpan: "400 years",
+		expectedSize: "3 to 4 feet",
+		abilityScoreIncrease: "Intelligence +2",
+		speed: "25 feet",
+		standardLanguages: "Common, Gnomish",
 	},
 	Goblin: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Small, cunning creatures with a knack for mischief and survival.",
+		expectedLifeSpan: "60 years",
+		expectedSize: "3 to 4 feet",
+		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Goblin",
 	},
 	Goliath: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Giant humanoids with a powerful build and a competitive nature.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "7 to 8 feet",
+		abilityScoreIncrease: "Strength +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Giant",
 	},
 	Grung: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Small, amphibious humanoids with a toxic skin and a unique culture.",
+		expectedLifeSpan: "60 years",
+		expectedSize: "2 to 3 feet",
+		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		speed: "25 feet (jump 20 feet)",
+		standardLanguages: "Common, Grung",
 	},
 	Hadozee: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "A race of winged creatures with a love for exploration and adventure.",
+		expectedLifeSpan: "70 years",
+		expectedSize: "4 to 5 feet",
+		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		speed: "30 feet (fly 30 feet)",
+		standardLanguages: "Common, Auran",
 	},
 	Half0Elf: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Versatile and adaptable individuals born of human and elven parentage.",
+		expectedLifeSpan: "180 years",
+		expectedSize: "5.5 to 6 feet",
+		abilityScoreIncrease: "Charisma +2, and two other ability scores of your choice +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Elvish",
 	},
 	Half0Orc: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Strong and resilient beings born of human and orcish lineage, known for their combat prowess.",
+		expectedLifeSpan: "75 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Strength +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Orc",
 	},
 	Halfling: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Small and agile beings with a penchant for good luck and stealth.",
+		expectedLifeSpan: "150 years",
+		expectedSize: "3 to 4 feet",
+		abilityScoreIncrease: "Dexterity +2",
+		speed: "25 feet",
+		standardLanguages: "Common, Halfling",
 	},
 	Harengon: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Rabbit-like humanoids known for their swiftness and connection to nature.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "4 to 5 feet",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Sylvan",
 	},
 	Hobgoblin: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Disciplined and militaristic goblinoids with a strong sense of order and hierarchy.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Goblin",
 	},
 	Human: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "The most adaptable and diverse of races, with a wide range of potential.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "5.5 to 6 feet",
+		abilityScoreIncrease: "Two ability scores of your choice +1",
+		speed: "30 feet",
+		standardLanguages: "Common",
 	},
 	Kalashtar: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Mystical beings with a psychic connection to a collective consciousness.",
+		expectedLifeSpan: "120 years",
+		expectedSize: "5.5 to 6 feet",
+		abilityScoreIncrease: "Wisdom +2, Charisma +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Quori",
 	},
 	Kenku: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Crow-like humanoids with the ability to mimic sounds and voices.",
+		expectedLifeSpan: "60 years",
+		expectedSize: "5 to 5.5 feet",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Auran",
 	},
 	Kobold: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Small, draconic creatures known for their cunning and trap-making skills.",
+		expectedLifeSpan: "60 years",
+		expectedSize: "2.5 to 3 feet",
+		abilityScoreIncrease: "Dexterity +2, Strength +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Draconic",
 	},
 	Leonin: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Leonin are lion-like humanoids with a strong sense of pride and a warrior culture.",
+        expectedLifeSpan: "60-80 years",
+        expectedSize: "About 6 to 7 feet tall",
+        abilityScoreIncrease: "Strength +2, Dexterity +1",
+        speed: "35 feet",
+        standardLanguages: "Common, Sylvan",
+    },
 	Lizardfolk: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Reptilian humanoids with a natural affinity for the swamp and a primal outlook.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Draconic",
 	},
 	Loxodon: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Loxodons are elephantine humanoids with great physical strength and a peaceful nature, often serving as diplomats or guardians.",
+        expectedLifeSpan: "200-300 years",
+        expectedSize: "About 7 to 8 feet tall",
+        abilityScoreIncrease: "Constitution +2, Wisdom +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Loxodon",
+    },
 	Minotaur: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Bull-headed humanoids known for their strength and labyrinthine culture.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "7 to 8 feet",
+		abilityScoreIncrease: "Strength +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Minotaur",
 	},
 	Orc: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Large, brutish creatures with a fierce demeanor and exceptional physical power.",
+		expectedLifeSpan: "70 years",
+		expectedSize: "6 to 7 feet",
+		abilityScoreIncrease: "Strength +2, Constitution +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Orc",
 	},
 	Owlin: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Owlin are bird-like humanoids with large, owl-like eyes and the ability to glide.",
+        expectedLifeSpan: "60-80 years",
+        expectedSize: "About 4 to 5 feet tall",
+        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Auran",
+    },
 	Plasmoid: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Plasmoids are amorphous beings capable of changing their shape and form, often resembling oozes or slimes.",
+        expectedLifeSpan: "60-80 years",
+        expectedSize: "Variable, but generally around 5 to 6 feet tall",
+        abilityScoreIncrease: "Constitution +2, Dexterity +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Abyssal",
+    },
 	Satyr: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Satyrs are fey creatures with the lower bodies of goats and the upper bodies of humanoids, known for their love of revelry and nature.",
+        expectedLifeSpan: "90-120 years",
+        expectedSize: "About 4 to 5 feet tall",
+        abilityScoreIncrease: "Dexterity +2, Charisma +1",
+        speed: "35 feet",
+        standardLanguages: "Common, Sylvan",
+    },
 	Shifter: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Beings with a bestial nature and the ability to assume animal-like traits.",
+		expectedLifeSpan: "80 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Sylvan",
 	},
 	Simic_Hybrid: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Simic Hybrids are experimental beings created by the Simic Combine, combining traits of various creatures for specific purposes.",
+        expectedLifeSpan: "80-120 years",
+        expectedSize: "Varies, typically 5 to 6 feet tall",
+        abilityScoreIncrease: "Constitution +2, Intelligence +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Elvish",
+    },
 	Tabaxi: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Cat-like humanoids with a penchant for curiosity and agility.",
+		expectedLifeSpan: "70 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Elvish",
 	},
 	Thri0Kreen: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Thri-kreen are insectoid humanoids with a chitinous exoskeleton and powerful limbs, known for their agility and natural predatory skills.",
+        expectedLifeSpan: "50-60 years",
+        expectedSize: "About 6 to 7 feet tall",
+        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Thri-Kreen",
 	},
 	Tiefling: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Infernal-heritaged beings with horns, tails, and a touch of dark magic.",
+		expectedLifeSpan: "100 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Infernal",
 	},
 	Triton: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Aquatic beings with a connection to the ocean and an affinity for water magic.",
+		expectedLifeSpan: "100 years",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Strength +1, Constitution +1, Charisma +1",
+		speed: "30 feet (swim 30 feet)",
+		standardLanguages: "Common, Primordial",
 	},
 	Vedalken: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+        description: "Vedalken are a race of tall, blue-skinned humanoids known for their intellectual prowess and dedication to knowledge and order.",
+        expectedLifeSpan: "150 years",
+        expectedSize: "About 6 to 7 feet tall",
+        abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Vedalken",
+    },
 	Verdan: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+        description: "Verdan are a race of small, green-skinned humanoids who evolve rapidly and have a unique biological adaptability.",
+        expectedLifeSpan: "40-60 years",
+        expectedSize: "About 3 to 4 feet tall",
+        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+        speed: "30 feet",
+        standardLanguages: "Common, Goblin",
+    },
 	Warforged: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
+		description: "Constructed beings with a humanoid form and a capacity for sentience and emotion.",
+		expectedLifeSpan: "Variable",
+		expectedSize: "6 to 6.5 feet",
+		abilityScoreIncrease: "Constitution +2, another +1 depending on the subrace",
+		speed: "30 feet",
+		standardLanguages: "Common, Warforged",
 	},
 	Yuan0ti_Pureblood: {
-		description: "",
-		expectedLifeSpan: "",
-		expectedSize: "", // In feet/inches
-		abilityScoreIncrease: "", // ex: Charisma +2, Strength +1, and Intelligence +1
-		speed: "",
-		standardLanguages: "",
-	},
+		description: "Serpent-like humanoids with a mysterious and sinister heritage.",
+		expectedLifeSpan: "120 years",
+		expectedSize: "5 to 6 feet",
+		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Draconic",
+	}
 };
 
 export const subracesObj = {
