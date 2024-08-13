@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const skills = {
+	// A Barbarian can choose two of the following:
 	Barbarian: [
 		"Animal Handling",
 		"Athletics",
@@ -9,6 +10,7 @@ const skills = {
 		"Perception",
 		"Survival",
 	],
+	// A Bard can choose three of the following:
 	Bard: [
 		"Acrobatics",
 		"Animal Handling",
@@ -28,7 +30,9 @@ const skills = {
 		"Stealth",
 		"Survival",
 	],
+	// A Cleric can choose two of the following
 	Cleric: ["History", "Insight", "Medicine", "Persuasion", "Religion"],
+	// A Druid can choose two of the following
 	Druid: [
 		"Animal Handling",
 		"Arcana",
@@ -39,6 +43,7 @@ const skills = {
 		"Perception",
 		"Survival",
 	],
+	// A Fighter can choose two of the following
 	Fighter: [
 		"Acrobatics",
 		"Animal Handling",
@@ -49,15 +54,16 @@ const skills = {
 		"Perception",
 		"Survival",
 	],
+	// A Monk can choose two of the following
 	Monk: [
 		"Acrobatics",
-		"Arcana",
 		"Athletics",
 		"History",
 		"Insight",
 		"Religion",
 		"Stealth",
 	],
+	// A Paladin can choose two of the following
 	Paladin: [
 		"Athletics",
 		"Insight",
@@ -66,6 +72,7 @@ const skills = {
 		"Persuasion",
 		"Religion",
 	],
+	// A Ranger can choose three of the following
 	Ranger: [
 		"Animal Handling",
 		"Athletics",
@@ -76,22 +83,21 @@ const skills = {
 		"Stealth",
 		"Survival",
 	],
+	// A Rouge can choose four of the following
 	Rogue: [
 		"Acrobatics",
-		"Arcana",
 		"Athletics",
 		"Deception",
 		"Insight",
+		"Intimidation",
 		"Investigation",
-		"Medicine",
-		"Nature",
 		"Perception",
 		"Performance",
 		"Persuasion",
 		"Sleight of Hand",
 		"Stealth",
-		"Survival",
 	],
+	// A Sorcerer can choose two of the following
 	Sorcerer: [
 		"Arcana",
 		"Deception",
@@ -100,16 +106,17 @@ const skills = {
 		"Persuasion",
 		"Religion",
 	],
+	// A Warlock can choose two of the following
 	Warlock: [
 		"Arcana",
 		"Deception",
 		"History",
-		"Insight",
 		"Intimidation",
 		"Investigation",
 		"Nature",
 		"Religion",
 	],
+	// A Wizard can choose two of the following
 	Wizard: [
 		"Arcana",
 		"History",
@@ -118,97 +125,235 @@ const skills = {
 		"Medicine",
 		"Religion",
 	],
+	// An Artificer can choose two of the following
 	Artificer: [
 		"Arcana",
 		"History",
-		"Insight",
 		"Investigation",
 		"Medicine",
+		"Nature",
 		"Perception",
+		"Sleight of Hand",
 	],
 };
+
+const maxSkills = {
+	Barbarian: 2,
+	Bard: 3,
+	Cleric: 2,
+	Druid: 2,
+	Fighter: 2,
+	Monk: 2,
+	Paladin: 2,
+	Ranger: 3,
+	Rogue: 4,
+	Sorcerer: 2,
+	Warlock: 2,
+	Wizard: 2,
+	Artificer: 2,
+};
+
+const subclasses = {
+	Barbarian: [
+		"Path of the Berserker",
+		"Path of the Totem Warrior",
+		"Path of the Ancestral Guardian",
+		"Path of the Storm Herald",
+		"Path of the Zealot",
+		"Path of the Beast",
+		"Path of Wild Magic",
+	],
+	Bard: [
+		"College of Lore",
+		"College of Valor",
+		"College of Glamour",
+		"College of Swords",
+		"College of Whispers",
+		"College of Creation",
+		"College of Eloquence",
+	],
+	Cleric: [
+		"Knowledge Domain",
+		"Life Domain",
+		"Light Domain",
+		"Nature Domain",
+		"Tempest Domain",
+		"Trickery Domain",
+		"War Domain",
+		"Death Domain",
+		"Arcana Domain",
+		"Forge Domain",
+		"Grave Domain",
+		"Order Domain",
+		"Peace Domain",
+		"Twilight Domain",
+	],
+	Druid: [
+		"Circle of the Land",
+		"Circle of the Moon",
+		"Circle of Dreams",
+		"Circle of the Shepherd",
+		"Circle of Spores",
+		"Circle of Stars",
+		"Circle of Wildfire",
+	],
+	Fighter: [
+		"Champion",
+		"Battle Master",
+		"Eldritch Knight",
+		"Arcane Archer",
+		"Cavalier",
+		"Samurai",
+		"Psi Warrior",
+		"Echo Knight",
+	],
+	Monk: [
+		"Way of the Open Hand",
+		"Way of Shadow",
+		"Way of the Four Elements",
+		"Way of the Drunken Master",
+		"Way of the Kensei",
+		"Way of the Sun Soul",
+		"Way of the Long Death",
+		"Way of the Astral Self",
+		"Way of Mercy",
+	],
+	Paladin: [
+		"Oath of Devotion",
+		"Oath of the Ancients",
+		"Oath of Vengeance",
+		"Oath of Conquest",
+		"Oath of Redemption",
+		"Oath of Glory",
+		"Oath of the Crown",
+		"Oath of the Watchers",
+	],
+	Ranger: [
+		"Hunter",
+		"Beast Master",
+		"Gloom Stalker",
+		"Horizon Walker",
+		"Monster Slayer",
+		"Fey Wanderer",
+		"Swarmkeeper",
+	],
+	Rogue: [
+		"Thief",
+		"Assassin",
+		"Arcane Trickster",
+		"Mastermind",
+		"Swashbuckler",
+		"Inquisitive",
+		"Scout",
+		"Soulknife",
+	],
+	Sorcerer: [
+		"Draconic Bloodline",
+		"Wild Magic",
+		"Divine Soul",
+		"Shadow Magic",
+		"Storm Sorcery",
+		"Aberrant Mind",
+		"Clockwork Soul",
+	],
+	Warlock: [
+		"Archfey",
+		"Fiend",
+		"Great Old One",
+		"Hexblade",
+		"Celestial",
+		"Fathomless",
+		"Genie",
+	],
+	Wizard: [
+		"School of Abjuration",
+		"School of Conjuration",
+		"School of Divination",
+		"School of Enchantment",
+		"School of Evocation",
+		"School of Illusion",
+		"School of Necromancy",
+		"School of Transmutation",
+		"Bladesinging",
+		"War Magic",
+		"Chronurgy Magic",
+		"Graviturgy Magic",
+	],
+	Artificer: ["Alchemist", "Armorer", "Artillerist", "Battle Smith"],
+};
+
+const subraces = {
+	Dwarf: ["Hill Dwarf", "Mountain Dwarf"],
+	Elf: [
+		"High Elf",
+		"Wood Elf",
+		"Dark Elf",
+		"Eladrin",
+		"Sea Elf",
+		"Shadar-Kai",
+	],
+	Gnome: ["Forest Gnome", "Rock Gnome", "Deep Gnome"],
+	Halfling: ["Lightfoot Halfling", "Stout Halfling", "Ghostwise Halfling"],
+	Tiefling: ["Feral Tiefling", "Asmodeus", "Zariel", "Levistus"],
+	Aasimar: ["Protector Aasimar", "Scourge Aasimar", "Fallen Aasimar"],
+	Genasi: ["Air Genasi", "Earth Genasi", "Fire Genasi", "Water Genasi"],
+	Shifter: ["Beasthide", "Longtooth", "Swiftstride", "Wildhunt"],
+	Gith: ["Githyanki", "Githzerai"],
+};
+
 const CharacterSheetSchema = new mongoose.Schema(
 	{
 		characterFirstName: {
 			type: String,
 			required: [true, "Please provide your desired first name"],
-			minlength: 2,
-			maxlength: 20,
+			maxlength: 30,
 		},
 		characterLastName: {
 			type: String,
 			required: [true, "Please provide your desired last name"],
-			minlength: 2,
-			maxlength: 20,
+			maxlength: 30,
 		},
 		ideals: {
-			type: [String],
-			enum: [
-				"Adventurous",
-				"Ambition",
-				"Charity",
-				"Compassion",
-				"Fairness",
-				"Freedom",
-				"Honor",
-				"Justice",
-				"Knowledge",
-				"Love",
-				"Loyalty",
-				"Perseverance",
-				"Self-Improvement",
-				"Tradition",
-				"Truth",
-				"Wealth",
-				"Wisdom",
-			], // Use enum to restrict values to common ideals
-			required: [true, "Please provide your ideals"], // Ensures that at least one ideal is provided
+			type: String,
+			required: [true, "Please provide your ideal"], // Ensures that at least one ideal is provided
+			maxlength: 100,
 		},
 		bonds: {
 			type: String,
-			enum: [
-				"Family",
-				"Mentor",
-				"Homeland",
-				"Artifact",
-				"Heirloom",
-				"Oath",
-				"Revenge",
-				"Justice",
-				"Love",
-			], // Use enum to restrict values
 			required: [true, "Please provide your desired bond"],
+			maxlength: 100,
 		},
-		religion: {
-			type: String,
-			enum: ["steve"], // Use enum to restrict values
-			required: [true, "Please provide your desired religion"],
-		},
+		// religion: {
+		// 	type: String,
+		// 	enum: ["steve"], // Use enum to restrict values
+		// 	required: [true, "Please provide your desired religion"],
+		// },
 		flaws: {
 			type: String,
-			enum: [
-				"I judge others harshly, and myself even more severely.",
-				"I have trouble trusting in my allies.",
-				"My appetite for pleasures of the flesh often leads me into trouble.",
-				"I am quick to anger and slow to forgive.",
-				"I believe that everything worth doing is worth doing with excess.",
-				"I harbor dark, bloodthirsty thoughts that my better nature strives to hide.",
-				"I have an insatiable desire for carnal pleasures.",
-				"I turn tail and run when things look bad.",
-				"I am convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure.",
-				"I see most people as expendable, and worth less than the gold they carry.",
-				"Once I pick a goal, I become obsessed with it to the detriment of everything else in my life.",
-				"I cling to secrets and refuse to share important information with my allies.",
-				"I can’t resist swindling people who are more powerful than I am.",
-				"I’m never satisfied with what I have—I always want more.",
-				"I’ll do anything to win fame and renown.",
-				"I’m too enamored of ale, wine, and other intoxicants.",
-				"I have an overwhelming fear of a particular kind of creature, and I freeze up in the face of it.",
-				"I can’t stand to be without a weapon in my hand.",
-				"I’m deeply paranoid and constantly suspect my companions of betrayal.",
-				"I trust no one and expect betrayal at every turn.",
-			],
+			// enum: [
+			// 	"I judge others harshly, and myself even more severely.",
+			// 	"I have trouble trusting in my allies.",
+			// 	"My appetite for pleasures of the flesh often leads me into trouble.",
+			// 	"I am quick to anger and slow to forgive.",
+			// 	"I believe that everything worth doing is worth doing with excess.",
+			// 	"I harbor dark, bloodthirsty thoughts that my better nature strives to hide.",
+			// 	"I have an insatiable desire for carnal pleasures.",
+			// 	"I turn tail and run when things look bad.",
+			// 	"I am convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure.",
+			// 	"I see most people as expendable, and worth less than the gold they carry.",
+			// 	"Once I pick a goal, I become obsessed with it to the detriment of everything else in my life.",
+			// 	"I cling to secrets and refuse to share important information with my allies.",
+			// 	"I can’t resist swindling people who are more powerful than I am.",
+			// 	"I’m never satisfied with what I have—I always want more.",
+			// 	"I’ll do anything to win fame and renown.",
+			// 	"I’m too enamored of ale, wine, and other intoxicants.",
+			// 	"I have an overwhelming fear of a particular kind of creature, and I freeze up in the face of it.",
+			// 	"I can’t stand to be without a weapon in my hand.",
+			// 	"I’m deeply paranoid and constantly suspect my companions of betrayal.",
+			// 	"I trust no one and expect betrayal at every turn.",
+			// ],
 			required: [true, "Please provide your desired flaw"],
+			maxlength: 100,
 		},
 		backgrounds: {
 			type: String,
@@ -243,179 +388,55 @@ const CharacterSheetSchema = new mongoose.Schema(
 			], // Use enum to restrict values to official D&D 5e backgrounds
 			required: [true, "Please provide your desired background"],
 		},
-
 		primaryClass: {
 			type: String,
-			enum: [
-				"Barbarian",
-				"Bard",
-				"Cleric",
-				"Druid",
-				"Fighter",
-				"Monk",
-				"Paladin",
-				"Ranger",
-				"Rogue",
-				"Sorcerer",
-				"Warlock",
-				"Wizard",
-				"Artificer",
-			],
+			enum: Object.keys(skills),
 			required: [true, "Please provide your desired primary class"],
 		},
 		subClass: {
 			type: String,
-			enum: [
-				// Barbarian
-				"Path of the Berserker",
-				"Path of the Totem Warrior",
-				"Path of the Ancestral Guardian",
-				"Path of the Storm Herald",
-				"Path of the Zealot",
-				"Path of the Beast",
-				"Path of Wild Magic",
-
-				// Bard
-				"College of Lore",
-				"College of Valor",
-				"College of Glamour",
-				"College of Swords",
-				"College of Whispers",
-				"College of Creation",
-				"College of Eloquence",
-
-				// Cleric
-				"Knowledge Domain",
-				"Life Domain",
-				"Light Domain",
-				"Nature Domain",
-				"Tempest Domain",
-				"Trickery Domain",
-				"War Domain",
-				"Death Domain",
-				"Arcana Domain",
-				"Forge Domain",
-				"Grave Domain",
-				"Order Domain",
-				"Peace Domain",
-				"Twilight Domain",
-
-				// Druid
-				"Circle of the Land",
-				"Circle of the Moon",
-				"Circle of Dreams",
-				"Circle of the Shepherd",
-				"Circle of Spores",
-				"Circle of Stars",
-				"Circle of Wildfire",
-
-				// Fighter
-				"Champion",
-				"Battle Master",
-				"Eldritch Knight",
-				"Arcane Archer",
-				"Cavalier",
-				"Samurai",
-				"Psi Warrior",
-				"Echo Knight",
-
-				// Monk
-				"Way of the Open Hand",
-				"Way of Shadow",
-				"Way of the Four Elements",
-				"Way of the Drunken Master",
-				"Way of the Kensei",
-				"Way of the Sun Soul",
-				"Way of the Long Death",
-				"Way of the Astral Self",
-				"Way of Mercy",
-
-				// Paladin
-				"Oath of Devotion",
-				"Oath of the Ancients",
-				"Oath of Vengeance",
-				"Oath of Conquest",
-				"Oath of Redemption",
-				"Oath of Glory",
-				"Oath of the Crown",
-				"Oath of the Watchers",
-
-				// Ranger
-				"Hunter",
-				"Beast Master",
-				"Gloom Stalker",
-				"Horizon Walker",
-				"Monster Slayer",
-				"Fey Wanderer",
-				"Swarmkeeper",
-
-				// Rogue
-				"Thief",
-				"Assassin",
-				"Arcane Trickster",
-				"Mastermind",
-				"Swashbuckler",
-				"Inquisitive",
-				"Scout",
-				"Soulknife",
-
-				// Sorcerer
-				"Draconic Bloodline",
-				"Wild Magic",
-				"Divine Soul",
-				"Shadow Magic",
-				"Storm Sorcery",
-				"Aberrant Mind",
-				"Clockwork Soul",
-
-				// Warlock
-				"Archfey",
-				"Fiend",
-				"Great Old One",
-				"Hexblade",
-				"Celestial",
-				"Fathomless",
-				"Genie",
-
-				// Wizard
-				"School of Abjuration",
-				"School of Conjuration",
-				"School of Divination",
-				"School of Enchantment",
-				"School of Evocation",
-				"School of Illusion",
-				"School of Necromancy",
-				"School of Transmutation",
-				"Bladesinging",
-				"War Magic",
-				"Chronurgy Magic",
-				"Graviturgy Magic",
-
-				// Artificer
-				"Alchemist",
-				"Armorer",
-				"Artillerist",
-				"Battle Smith",
-			],
+			validate: {
+				validator: function (value) {
+					// Check if the subclass is valid for the selected primary class
+					return subclasses[this.primaryClass].includes(value);
+				},
+				message: (props) =>
+					`${props.value} is not a valid subclass for ${props.instance.primaryClass}.`,
+			},
 			required: [true, "Please provide your desired subclass"],
 		},
-		armorClass: {
-			type: String,
-			enum: ["Light Armor", "Medium Armor", "Heavy Armor"], // Use enum to restrict values
-			required: [true, "Please provide your armour class."],
+		skills: {
+			type: [String],
+			validate: [
+				{
+					// Validator to ensure selected skills are valid for the class
+					validator: function (value) {
+						// Validate that the selected skills belong to the primaryClass
+						const allowedSkills = skills[this.primaryClass];
+						return value.every((skill) =>
+							allowedSkills.includes(skill)
+						);
+					},
+					message: (props) =>
+						`Invalid skills selected for the class ${props.instance.primaryClass}.`,
+				},
+				{
+					// Validator to ensure correct number of skills is selected
+					validator: function (value) {
+						const max = maxSkills[this.primaryClass];
+						return value.length === max;
+					},
+					message: (props) =>
+						`You can only select ${
+							maxSkills[props.instance.primaryClass]
+						} skills for the class ${props.instance.primaryClass}.`,
+				},
+			],
 		},
-		currentHitPoints: {
-			type: Number,
-			required: [true, "Please provide your desired username"],
-		},
-		temporaryHitPoints: {
-			type: Number,
-			required: [true, "Please provide your desired username"],
-		},
-		equipment: {
-			type: String,
-			required: [true, "Please provide your desired username"],
-		},
+		// equipment: {
+		// 	type: String,
+		// 	required: [true, "Please provide your desired username"],
+		// },
 		race: {
 			type: String,
 			enum: [
@@ -517,17 +538,21 @@ const CharacterSheetSchema = new mongoose.Schema(
 				// Gith
 				"Githyanki",
 				"Githzerai",
-				
-				// If race does not have a subrace
-				"none",
 			],
-			default: "none",
 		},
 		inspiration: {
 			type: Boolean, // Inspiration is either present or not, represented as true or false
 			default: false, // By default, a character starts without Inspiration
 		},
+		strength: {
+			type: Number,
+			default: 1,
+		},
 		dexterity: {
+			type: Number,
+			default: 1,
+		},
+		constitution: {
 			type: Number,
 			default: 1,
 		},
@@ -543,17 +568,36 @@ const CharacterSheetSchema = new mongoose.Schema(
 			type: Number,
 			default: 1,
 		},
-		strength: {
-			type: Number,
-			default: 1,
-		},
-		proficiencyBonus: {
-			type: Number,
+		// Determined by class (pg. 39); Will have 2 of the following
+		savingThrowProficiency: {
+			type: [String],
+			enum: [
+				"Strength",
+				"Charisma",
+				"Constitution",
+				"Dexterity",
+				"Wisdom",
+				"Intelligence",
+			],
 			required: [true, "Please provide your desired username"],
 		},
-		savingThrows: {
+		// Determined by class
+		hitDie: {
+			type: String,
+			required: true,
+		},
+		// Depends on class highest roll on hit die and Constitution modifier
+		hitPointMax: {
 			type: Number,
-			required: [true, "Please provide your desired username"],
+			requried: true,
+		},
+		currentHitPoints: {
+			type: Number,
+			required: true,
+		},
+		temporaryHitPoints: {
+			type: Number,
+			default: 0,
 		},
 		alignment: {
 			type: String,
@@ -570,50 +614,17 @@ const CharacterSheetSchema = new mongoose.Schema(
 			], // Use enum to restrict values to official D&D 5e alignments
 			required: [true, "Please provide your desired alignment"],
 		},
-		background: {
-			type: String,
-			required: [true, "Please provide your desired background"],
-			minlength: 2,
-			maxlength: 1000,
-		},
-		features: {
-			type: String,
-			enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
-			required: [true, "Please provide your desired username"],
-		},
-		// Minimum of 1 trait
-		// Maximum of 5 traits
+		// features: {
+		// 	type: String,
+		// 	enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
+		// 	required: [true, "Please provide your desired username"],
+		// },
 		personalityTraits: {
-			type: [String], // Changed to an array to allow multiple selections
-			enum: [
-				"Amiable",
-				"Curious",
-				"Diligent",
-				"Humble",
-				"Optimistic",
-				"Pessimistic",
-				"Courageous",
-				"Reserved",
-				"Charismatic",
-				"Stubborn",
-				"Impulsive",
-				"Sympathetic",
-				"Perceptive",
-				"Generous",
-				"Greedy",
-				"Pragmatic",
-				"Quirky",
-				"Trusting",
-				"Suspicious",
-				"Methodical",
-				"Skeptical",
-				"Altruistic",
-				"Assertive",
-				"Detached",
-				"Resourceful",
-			], // Use enum to restrict values
+			type: [String], // Changed to an array to allow multiple selections (2 max)
 			required: [true, "Please provide your desired traits"], // Ensures at least one trait is selected
+			minlength: 50,
 		},
+		// Determined by race/subrace
 		languages: {
 			type: [String], // Allows multiple languages to be selected
 			enum: [
@@ -635,8 +646,6 @@ const CharacterSheetSchema = new mongoose.Schema(
 				"Undercommon",
 			], // Use enum to restrict values to official D&D 5e languages
 			required: [true, "Please provide at least one language"], // Ensures at least one language is selected
-			minlength: 1, // Minimum of 1 language
-			maxlength: 5, // Maximum of 5 languages
 		},
 		exoticLanguage: {
 			type: String,
@@ -655,20 +664,25 @@ const CharacterSheetSchema = new mongoose.Schema(
 		age: {
 			type: Number,
 			required: [true, "Please provide your desired age"],
-			min: 0,
-			max: 10000,
+			min: [1, "Age must be a positive number"], // Ensures height is non-negative
+			max: [300, "Age must be realistic"]
 		},
 		height: {
 			type: Number,
 			required: [true, "Please provide the character's height"], // Ensures height is provided
-			min: [0, "Height must be a positive number"], // Ensures height is non-negative
-			max: [300, "Height must be realistic (e.g., 300 cm)"], // Ensures height is within a reasonable range
+			min: [25, "Height must be a positive number"], // Ensures height is non-negative
+			max: [300, "Height must be realistic (e.g., 300 inches)"], // Ensures height is within a reasonable range
 		},
 		weight: {
 			type: Number,
 			required: [true, "Please provide the character's weight"], // Ensures weight is provided
-			min: [0, "Weight must be a positive number"], // Ensures weight is non-negative
-			max: [500, "Weight must be realistic (e.g., up to 500 kg)"], // Ensures weight is within a reasonable range
+			min: [50, "Weight must be a positive number"], // Ensures weight is non-negative
+			max: [500, "Weight must be realistic (e.g., up to 500 pounds)"], // Ensures weight is within a reasonable range
+		},
+		sex: {
+			type: String,
+			enum: ["Male", "Female", "Both"],
+			requried: [true, "Please provide a sex"],
 		},
 		skin: {
 			type: String,
@@ -705,17 +719,34 @@ const CharacterSheetSchema = new mongoose.Schema(
 				"Pink",
 			], // Use enum to restrict values to common hair colors
 			required: [true, "Please provide the character's hair color"], // Ensures a value is provided
-			minlength: 2, // Minimum length of hair color description
-			maxlength: 20, // Maximum length of hair color description
 		},
 		eyes: {
 			type: String,
-			enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
-			required: [true, "Please provide your desired username"],
-			minlength: 2,
-			maxlength: 20,
-			unique: true,
+			enum: [
+				"Yellow",
+				"Amber",
+				"Brown",
+				"Hazel",
+				"Green",
+				"Blue",
+				"Gray",
+				"Aqua",
+				"Red",
+				"Purple",
+				"Pale Brown",
+				"Pale Blue",
+				"Pale Green",
+				"Pale Gray",
+				"Deep Blue",
+				"Violet Red",
+				"Orange",
+				"Spring Green",
+				"Sea Green",
+				"Emerald Green",
+			],
+			required: [true, "Please select an eye color"],
 		},
+		// This is determined by selected class at level 1, background, and some races
 		proficiencies: {
 			type: [String], // Array of strings to allow multiple proficiencies
 			enum: [
@@ -756,48 +787,115 @@ const CharacterSheetSchema = new mongoose.Schema(
 			], // Use enum to restrict values to official D&D 5e proficiencies
 			required: [true, "Please provide the character's proficiencies"], // Ensures that proficiencies are provided
 		},
-		characterAppearance: {
-			type: String,
-			enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
-			required: [true, "Please provide your desired username"],
+		// This is determined by selected class at level 1, background, and some races
+		proficiencyBonus: {
+			type: Number,
+			default: 0,
 		},
+		// Determined by selected class
+		armorClass: {
+			type: [String],
+			enum: ["Light Armor", "Medium Armor", "Heavy Armor"], 
+			required: true,
+		},
+		// characterAppearance: {
+		// 	type: String,
+		// 	enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
+		// 	required: [true, "Please provide your desired username"],
+		// },
 		characterBackstory: {
 			type: String,
 			required: [true, "Please provide your character's backstory"],
 			minlength: 25,
-			maxlength: 500,
+			maxlength: 1000,
 		},
-		allies: {
-			type: String,
-			enum: ["steve"], // Use enum to restrict values
-			required: [true, "Please provide your desired username"],
+		// allies: {
+		// 	type: String,
+		// 	enum: ["steve"], // Use enum to restrict values
+		// 	required: [true, "Please provide your desired username"],
+		// },
+		// organizations: {
+		// 	type: String,
+		// 	enum: [
+		// 		"Noble Houses",
+		// 		"Merchant Guilds",
+		// 		"Criminal Organizations",
+		// 		"Military Orders",
+		// 		"Scholarly Societies",
+		// 		"Secret Societies",
+		// 		"Druidic Circles",
+		// 		"Rebellion Groups",
+		// 		"Exploration Guilds",
+		// 	], // Use enum to restrict values to common types of organizations
+		// 	required: [
+		// 		true,
+		// 		"Please provide the character's associated organization",
+		// 	], // Ensures a value is provided
+		// },
+		user: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "User",
 		},
-		organizations: {
-			type: String,
-			enum: [
-				"Noble Houses",
-				"Merchant Guilds",
-				"Criminal Organizations",
-				"Military Orders",
-				"Scholarly Societies",
-				"Secret Societies",
-				"Druidic Circles",
-				"Rebellion Groups",
-				"Exploration Guilds",
-			], // Use enum to restrict values to common types of organizations
-			required: [
-				true,
-				"Please provide the character's associated organization",
-			], // Ensures a value is provided
-			minlength: 2, // Minimum length for organization name
-			maxlength: 50, // Adjusted max length for more flexibility
+		camp: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "User",
 		},
-		
 	},
 	{
 		timestamps: true,
 	}
 );
+
+CharacterSheetSchema.pre("save", function (next) {
+	// Ensure that skills match the selected primaryClass
+	if (!skills[this.primaryClass]) {
+		return next(new Error("Invalid primary class."));
+	}
+
+	// Validate selected skills
+	const invalidSkills = this.skills.filter(
+		(skill) => !skills[this.primaryClass].includes(skill)
+	);
+	if (invalidSkills.length > 0) {
+		return next(new Error(`Invalid skills: ${invalidSkills.join(", ")}`));
+	}
+
+	// Validate subclass
+	if (!subclasses[this.primaryClass]) {
+		return next(new Error("Invalid primary class for subclass selection."));
+	}
+
+	if (!subclasses[this.primaryClass].includes(this.subClass)) {
+		return next(
+			new Error(
+				`Invalid subclass: ${this.subClass} for class ${this.primaryClass}`
+			)
+		);
+	}
+
+	// Check if the selected race has subraces
+	if (subraces[this.race]) {
+		// If the race has subraces, validate that the selected subrace is valid
+		if (!this.subrace || !subraces[this.race].includes(this.subrace)) {
+			return next(
+				new Error(
+					`Invalid or missing subrace for the selected race: ${this.race}`
+				)
+			);
+		}
+	} else {
+		// If the race does not have subraces, ensure subrace is not provided
+		if (this.subrace) {
+			return next(
+				new Error(
+					`Subrace should not be selected for race: ${this.race}`
+				)
+			);
+		}
+	}
+
+	next();
+});
 
 const CharacterSheet = mongoose.model("CharacterSheet", CharacterSheetSchema);
 

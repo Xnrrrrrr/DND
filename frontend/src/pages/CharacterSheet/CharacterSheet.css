@@ -18,6 +18,17 @@
     margin: 0.5rem 0rem;
 }
 
+.character-sheet-container select {
+    width: 100%;
+}
+
+.red-star {
+    color: red;
+    vertical-align: super;
+    font-size: 0.9rem;
+}
+
+/* Start Top */
 .character-sheet-top {
     display: flex;
     justify-content: space-between;
@@ -28,11 +39,13 @@
     width: 100%;
 }
 
-.background-text-area {
+.backstory-text-area {
     width: 40rem;
     height: 28.2rem;
 }
+/* End Top */
 
+/* Start Middle */
 .character-sheet-attribute {
     display: flex;
     flex-direction: column;
@@ -66,7 +79,6 @@
 }
 
 .character-sheet-attribute-bottom div input {
-    -moz-appearance: textfield;
     width: 3rem;
 }
 
@@ -94,6 +106,32 @@
 
 .character-sheet-attribute-bottom div button:nth-child(2) {
     margin-right: 0.5rem;
+}
+/* End Middle */
+
+/* Start Bottom */
+.character-sheet-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.character-sheet-bottom-left {
+    width: 27.5rem;
+}
+
+.character-sheet-bottom-right {
+    margin-top: 1rem;
+    min-height: 100%;
+    width: 45rem;
+    border: 1px solid var(--theme-grey-200);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.character-sheet-bottom-right h6 {
+    text-align: center;
+    border-bottom: 1px solid var(--theme-grey-200);
+    font-weight: bolder;
 }
 
 .character-sheet-submit-btn {

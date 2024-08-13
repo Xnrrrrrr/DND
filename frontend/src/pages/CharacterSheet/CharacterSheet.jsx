@@ -1,269 +1,43 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
+import {
+	classesArray,
+	classDesc,
+	subclasses,
+	subclassDesc,
+	skillsObj,
+	maxSkills,
+	skillsDesc,
+	raceArray,
+	raceDesc,
+	subracesObj,
+	subracesDesc,
+	alignmentArray,
+	alignmentDesc,
+	backgroundsArray,
+	backgroundDesc,
+	exoticLanguageArray,
+	exoticLanguageDesc,
+	sexArray,
+	skinArray,
+	hairArray,
+	eyesArray,
+} from "./option.js";
 
 const maxAttributePoints = 20;
-
-const idealsArray = [
-	"Adventurous",
-	"Ambition",
-	"Charity",
-	"Compassion",
-	"Fairness",
-	"Freedom",
-	"Honor",
-	"Justice",
-	"Knowledge",
-	"Love",
-	"Loyalty",
-	"Perseverance",
-	"Self-Improvement",
-	"Tradition",
-	"Truth",
-	"Wealth",
-	"Wisdom",
-];
-
-const bondsArray = [
-	"Family",
-	"Mentor",
-	"Homeland",
-	"Artifact",
-	"Heirloom",
-	"Oath",
-	"Revenge",
-	"Justice",
-	"Love",
-];
-
-const classesArray = [
-	"Barbarian",
-	"Bard",
-	"Cleric",
-	"Druid",
-	"Fighter",
-	"Monk",
-	"Paladin",
-	"Ranger",
-	"Rogue",
-	"Sorcerer",
-	"Warlock",
-	"Wizard",
-	"Artificer",
-];
-
-const subclasses = {
-	Barbarian: [
-		"Path of the Berserker",
-		"Path of the Totem Warrior",
-		"Path of the Ancestral Guardian",
-		"Path of the Storm Herald",
-		"Path of the Zealot",
-		"Path of the Beast",
-		"Path of Wild Magic",
-	],
-	Bard: [
-		"College of Lore",
-		"College of Valor",
-		"College of Glamour",
-		"College of Swords",
-		"College of Whispers",
-		"College of Creation",
-		"College of Eloquence",
-	],
-	Cleric: [
-		"Knowledge Domain",
-		"Life Domain",
-		"Light Domain",
-		"Nature Domain",
-		"Tempest Domain",
-		"Trickery Domain",
-		"War Domain",
-		"Death Domain",
-		"Arcana Domain",
-		"Forge Domain",
-		"Grave Domain",
-		"Order Domain",
-		"Peace Domain",
-		"Twilight Domain",
-	],
-	Druid: [
-		"Circle of the Land",
-		"Circle of the Moon",
-		"Circle of Dreams",
-		"Circle of the Shepherd",
-		"Circle of Spores",
-		"Circle of Stars",
-		"Circle of Wildfire",
-	],
-	Fighter: [
-		"Champion",
-		"Battle Master",
-		"Eldritch Knight",
-		"Arcane Archer",
-		"Cavalier",
-		"Samurai",
-		"Psi Warrior",
-		"Echo Knight",
-	],
-	Monk: [
-		"Way of the Open Hand",
-		"Way of Shadow",
-		"Way of the Four Elements",
-		"Way of the Drunken Master",
-		"Way of the Kensei",
-		"Way of the Sun Soul",
-		"Way of the Long Death",
-		"Way of the Astral Self",
-		"Way of Mercy",
-	],
-	Paladin: [
-		"Oath of Devotion",
-		"Oath of the Ancients",
-		"Oath of Vengeance",
-		"Oath of Conquest",
-		"Oath of Redemption",
-		"Oath of Glory",
-		"Oath of the Crown",
-		"Oath of the Watchers",
-	],
-	Ranger: [
-		"Hunter",
-		"Beast Master",
-		"Gloom Stalker",
-		"Horizon Walker",
-		"Monster Slayer",
-		"Fey Wanderer",
-		"Swarmkeeper",
-	],
-	Rogue: [
-		"Thief",
-		"Assassin",
-		"Arcane Trickster",
-		"Mastermind",
-		"Swashbuckler",
-		"Inquisitive",
-		"Scout",
-		"Soulknife",
-	],
-	Sorcerer: [
-		"Draconic Bloodline",
-		"Wild Magic",
-		"Divine Soul",
-		"Shadow Magic",
-		"Storm Sorcery",
-		"Aberrant Mind",
-		"Clockwork Soul",
-	],
-	Warlock: [
-		"Archfey",
-		"Fiend",
-		"Great Old One",
-		"Hexblade",
-		"Celestial",
-		"Fathomless",
-		"Genie",
-	],
-	Wizard: [
-		"School of Abjuration",
-		"School of Conjuration",
-		"School of Divination",
-		"School of Enchantment",
-		"School of Evocation",
-		"School of Illusion",
-		"School of Necromancy",
-		"School of Transmutation",
-		"Bladesinging",
-		"War Magic",
-		"Chronurgy Magic",
-		"Graviturgy Magic",
-	],
-	Artificer: ["Alchemist", "Armorer", "Artillerist", "Battle Smith"],
-};
-
-const racesArray = [
-	"Dragonborn",
-	"Dwarf",
-	"Elf",
-	"Gnome",
-	"Half-Elf",
-	"Half-Orc",
-	"Halfling",
-	"Human",
-	"Tiefling",
-	"Aasimar",
-	"Goliath",
-	"Tabaxi",
-	"Genasi",
-	"Firbolg",
-	"Lizardfolk",
-	"Kenku",
-	"Yuan-ti Pureblood",
-	"Triton",
-	"Bugbear",
-	"Hobgoblin",
-	"Goblin",
-	"Kobold",
-	"Minotaur",
-	"Centaur",
-	"Satyr",
-	"Leonin",
-	"Loxodon",
-	"Simic Hybrid",
-	"Vedalken",
-	"Warforged",
-	"Changeling",
-	"Shifter",
-	"Kalashtar",
-	"Orc",
-	"Fairy",
-	"Hadozee",
-	"Autognome",
-	"Plasmoid",
-	"Thri-Kreen",
-	"Harengon",
-	"Owlin",
-	"Verdan",
-	"Gith",
-	"Grung",
-];
-
-const subracesObj = {
-	Dwarf: ["Hill Dwarf", "Mountain Dwarf"],
-	Elf: [
-		"High Elf",
-		"Wood Elf",
-		"Dark Elf (Drow)",
-		"Eladrin",
-		"Sea Elf",
-		"Shadar-Kai",
-	],
-	Gnome: ["Forest Gnome", "Rock Gnome", "Deep Gnome"],
-	Haffling: ["Lightfoot Halfling", "Stout Halfling", "Ghostwise Halfling"],
-	Tiefling: ["Feral Tiefling", "Asmodeus", "Zariel", "Levistus"],
-	Aasimar: ["Protector Aasimar", "Scourge Aasimar", "Fallen Aasimar"],
-	Genasi: ["Air Genasi", "Earth Genasi", "Fire Genasi", "Water Genasi"],
-	Shifter: ["Beasthide", "Longtooth", "Swiftstride", "Wildhunt"],
-	Gith: ["Githyanki", "Githzerai"],
-};
 
 const CharacterSheet = () => {
 	const [characterFirstName, setCharacterFirstName] = useState("");
 	const [characterLastName, setCharacterLastName] = useState("");
 	const [age, setAge] = useState(1);
 	const [height, setHeight] = useState(10);
-	const [weight, setWeight] = useState(5);
-	const [background, setBackground] = useState("");
-	const [primaryClass, setPrimaryClass] = useState("");
-	const [subclass, setSubclass] = useState("");
-	const [idealOne, setIdealOne] = useState("");
-	const [idealTwo, setIdealTwo] = useState("");
-	const [bonds, setBonds] = useState("");
-	const [races, setRaces] = useState("");
-	const [subraces, setSubraces] = useState("");
-	const [flaws, setFlaws] = useState("");
-	const [languages, setLanguages] = useState("");
-	const [alignments, setAlignments] = useState("");
+	const [weight, setWeight] = useState(50);
+	const [sex, setSex] = useState("");
+	const [skin, setSkin] = useState("");
+	const [backstory, setBackstory] = useState("");
+	const [hair, setHair] = useState("");
+	const [eyes, setEyes] = useState("");
 	const [strength, setStrength] = useState(1);
 	const [dexterity, setDexterity] = useState(1);
 	const [constitution, setConstitution] = useState(1);
@@ -272,6 +46,22 @@ const CharacterSheet = () => {
 	const [charisma, setCharisma] = useState(1);
 	const [totalAttributePointsRemaining, setTotalAttributePointsRemaining] =
 		useState(maxAttributePoints - 6);
+	const [primaryClass, setPrimaryClass] = useState("");
+	const [subclass, setSubclass] = useState("");
+	const [skills, setSkills] = useState(["", "", "", ""]);
+	const maxSkillCount = maxSkills[primaryClass] || 2;
+	const [race, setRace] = useState("");
+	const [subraces, setSubraces] = useState("");
+	const [background, setBackground] = useState("");
+	const [exoticLanguage, setExoticLanguage] = useState("");
+	const [alignment, setAlignment] = useState("");
+	const [ideal, setIdeal] = useState("");
+	const [bond, setBond] = useState("");
+	const [flaw, setFlaw] = useState("");
+	const [personalityTraitOne, setPersonalityTraitOne] = useState("");
+	const [personalityTraitTwo, setPersonalityTraitTwo] = useState("");
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const pointsLeft =
@@ -304,19 +94,34 @@ const CharacterSheet = () => {
 	const handleClassChange = (e) => {
 		setPrimaryClass(e.target.value);
 		setSubclass(""); // Reset subclass when a new class is selected
+		setSkills(["", "", "", ""]); // Reset skills if the class changes
 	};
 
-	const handleIdealOneChange = (e) => {
-		setIdealOne(e.target.value);
-		if (idealTwo === e.target.value) {
-			setIdealTwo("");
-		}
+	const handleSkillChange = (index, value) => {
+		const newSkills = [...skills];
+		newSkills[index] = value;
+		setSkills(newSkills);
 	};
 
-	const handleIdealTwoChange = (e) => {
-		setIdealTwo(e.target.value);
-		if (idealOne === e.target.value) {
-			setIdealOne("");
+	// Filter out already selected skills for the dropdown options
+	const availableSkills = (index) =>
+		skillsObj[primaryClass]?.filter(
+			(s) => !skills.includes(s) || s === skills[index]
+		) || [];
+
+	const handleRaceChange = (e) => {
+		setRace(e.target.value);
+
+		// Reset subraces when a new race is selected
+		setSubraces("");
+
+		// Check if the selected race has subraces
+		if (!subracesObj[e.target.value]) {
+			// Disable the subraces dropdown if no subraces are found
+			document.getElementById("subraces").disabled = true;
+		} else {
+			// Enable the subraces dropdown if subraces are found
+			document.getElementById("subraces").disabled = false;
 		}
 	};
 
@@ -325,6 +130,7 @@ const CharacterSheet = () => {
 
 		try {
 			//const res = await login({ ... }).unwrap();
+			navigate("/home");
 		} catch (err) {
 			console.error(err?.data?.message || err.error);
 		}
@@ -339,7 +145,10 @@ const CharacterSheet = () => {
 						<div>
 							<div>
 								<label htmlFor="characterFirstName">
-									First Name:
+									First Name:{" "}
+									{!characterFirstName && (
+										<sup className="red-star">*</sup>
+									)}
 								</label>
 								<input
 									type="text"
@@ -349,11 +158,15 @@ const CharacterSheet = () => {
 										setCharacterFirstName(e.target.value)
 									}
 									required
+									maxLength={30}
 								/>
 							</div>
 							<div>
 								<label htmlFor="characterLastName">
-									Last Name:
+									Last Name:{" "}
+									{!characterLastName && (
+										<sup className="red-star">*</sup>
+									)}
 								</label>
 								<input
 									type="text"
@@ -363,57 +176,156 @@ const CharacterSheet = () => {
 										setCharacterLastName(e.target.value)
 									}
 									required
+									maxLength={30}
 								/>
 							</div>
 							<div>
-								<label htmlFor="age">Age (Years):</label>
+								<label htmlFor="age">
+									Age (Years):{" "}
+									{!age && <sup className="red-star">*</sup>}
+								</label>
 								<input
 									type="number"
 									id="age"
 									value={age}
 									onChange={(e) => setAge(e.target.value)}
-									min="1"
-									max="10000"
-									style={{}}
+									min={1}
+									max={10000}
 								/>
 							</div>
 							<div>
-								<label htmlFor="height">Height (Inches):</label>
+								<label htmlFor="height">
+									Height (Inches):{" "}
+									{!height && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
 								<input
 									type="number"
 									id="height"
 									value={height}
 									onChange={(e) => setHeight(e.target.value)}
-									min="25"
-									max="300"
+									min={25}
+									max={300}
 								/>
 							</div>
 							<div>
-								<label htmlFor="weight">Weight (Pounds):</label>
+								<label htmlFor="weight">
+									Weight (Pounds):{" "}
+									{!weight && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
 								<input
 									type="number"
 									id="weight"
 									value={weight}
 									onChange={(e) => setWeight(e.target.value)}
-									min="5"
-									max="1000"
+									min={50}
+									max={500}
 								/>
+							</div>
+							<div>
+								<label htmlFor="sex">
+									Sex:{" "}
+									{!sex && <sup className="red-star">*</sup>}
+								</label>
+								<select
+									id="sex"
+									value={sex}
+									onChange={(e) => setSex(e.target.value)}
+									required
+								>
+									<option value="">Select a Sex</option>
+									{sexArray.map((s) => (
+										<option key={s} value={s}>
+											{s}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="skin">
+									Skin Color:{" "}
+									{!skin && <sup className="red-star">*</sup>}
+								</label>
+								<select
+									id="skin"
+									value={skin}
+									onChange={(e) => setSkin(e.target.value)}
+									required
+								>
+									<option value="">
+										Select a Skin Color
+									</option>
+									{skinArray.map((s) => (
+										<option key={s} value={s}>
+											{s}
+										</option>
+									))}
+								</select>
 							</div>
 						</div>
 						<div>
 							<div>
-								<label htmlFor="background">
-									Background (1000 Char Limit):
+								<label htmlFor="backstory">
+									Background (1000 Char Limit):{" "}
+									{!backstory && (
+										<sup className="red-star">*</sup>
+									)}
 								</label>
 								<textarea
-									id="background"
-									value={background}
+									id="backstory"
+									value={backstory}
 									onChange={(e) =>
-										setBackground(e.target.value)
+										setBackstory(e.target.value)
 									}
 									maxLength="1000"
-									className="background-text-area"
+									className="backstory-text-area"
+									required
 								/>
+							</div>
+							<div>
+								<label htmlFor="hair">
+									Hair Color:{" "}
+									{!hair && <sup className="red-star">*</sup>}
+								</label>
+								<select
+									id="hair"
+									value={hair}
+									onChange={(e) => setHair(e.target.value)}
+									required
+								>
+									<option value="">
+										Select a Hair Color
+									</option>
+									{hairArray.map((h) => (
+										<option key={h} value={h}>
+											{h}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="eyes">
+									Eye Color:{" "}
+									{!eyes && <sup className="red-star">*</sup>}
+								</label>
+								<select
+									id="eyes"
+									value={eyes}
+									onChange={(e) => setEyes(e.target.value)}
+									required
+								>
+									<option value="">
+										Select an Eye Color
+									</option>
+									{eyesArray.map((e) => (
+										<option key={e} value={e}>
+											{e}
+										</option>
+									))}
+								</select>
 							</div>
 						</div>
 					</div>
@@ -629,151 +541,493 @@ const CharacterSheet = () => {
 							</div>
 						</div>
 					</div>
-					<div></div>
-					<div>
-						<label htmlFor="primaryClass">Class:</label>
-						<select
-							id="primaryClass"
-							value={primaryClass}
-							onChange={handleClassChange}
-						>
-							<option value="">Select a Class</option>
-							{classesArray.map((c) => (
-								<option key={c} value={c}>
-									{c}
-								</option>
-							))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="subClass">Subclass:</label>
-						<select
-							id="subClass"
-							value={subclass}
-							onChange={(e) => setSubclass(e.target.value)}
-							disabled={!primaryClass}
-						>
-							<option value="">Select a Subclass</option>
-							{primaryClass &&
-								subclasses[primaryClass]?.map((sc) => (
-									<option key={sc} value={sc}>
-										{sc}
+					<div className="character-sheet-bottom">
+						<div className="character-sheet-bottom-left">
+							<div>
+								<label htmlFor="primaryClass">
+									Classes:{" "}
+									{!primaryClass && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="primaryClass"
+									value={primaryClass}
+									onChange={handleClassChange}
+									required
+								>
+									<option value="">Select a Class</option>
+									{classesArray.map((c) => (
+										<option key={c} value={c}>
+											{c}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="subclass">
+									Subclasses:{" "}
+									{!subclass && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="subclass"
+									value={subclass}
+									onChange={(e) =>
+										setSubclass(e.target.value)
+									}
+									disabled={!primaryClass}
+									required
+								>
+									<option value="">Select a Subclass</option>
+									{primaryClass &&
+										subclasses[primaryClass]?.map((sc) => (
+											<option key={sc} value={sc}>
+												{sc}
+											</option>
+										))}
+								</select>
+							</div>
+							{Array.from({ length: maxSkillCount }).map(
+								(_, index) => (
+									<div key={index}>
+										<label htmlFor={`skill${index + 1}`}>
+											Skill {index + 1}:{" "}
+											{!skills[index] && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</label>
+										<select
+											id={`skill${index + 1}`}
+											value={skills[index]}
+											onChange={(e) =>
+												handleSkillChange(
+													index,
+													e.target.value
+												)
+											}
+											disabled={!primaryClass}
+											required
+										>
+											<option value="">
+												{primaryClass
+													? `Select a Skill`
+													: `Select a Class`}
+											</option>
+											{availableSkills(index).map((s) => (
+												<option key={s} value={s}>
+													{s}
+												</option>
+											))}
+										</select>
+									</div>
+								)
+							)}
+							<div>
+								<label htmlFor="race">
+									Races:{" "}
+									{!race && <sup className="red-star">*</sup>}
+								</label>
+								<select
+									id="race"
+									value={race}
+									onChange={handleRaceChange}
+									required
+								>
+									<option value="">Select a Race</option>
+									{raceArray.map((r) => (
+										<option key={r} value={r}>
+											{r}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="subraces">
+									Subraces:{" "}
+									{subracesObj[race] && !subraces && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="subraces"
+									value={subraces}
+									onChange={(e) =>
+										setSubraces(e.target.value)
+									}
+									disabled={!race || !subracesObj[race]}
+									required={subracesObj[race] && !subraces}
+								>
+									{race ? (
+										subracesObj[race] ? (
+											<>
+												<option value="">
+													Select a Subrace
+												</option>
+												{subracesObj[race].map((sr) => (
+													<option key={sr} value={sr}>
+														{sr}
+													</option>
+												))}
+											</>
+										) : (
+											<option value="">
+												No subraces available for this
+												race
+											</option>
+										)
+									) : (
+										<option value="">Select a Race</option>
+									)}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="background">
+									Backgrounds:{" "}
+									{!background && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="background"
+									value={background}
+									onChange={(e) =>
+										setBackground(e.target.value)
+									}
+								>
+									<option value="">
+										Select a Background
 									</option>
-								))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="races">Races:</label>
-						<select
-							id="races"
-							value={races}
-							onChange={(e) => setRaces(e.target.value)}
-						>
-							<option value="">Select a Race</option>
-							{racesArray.map((r) => (
-								<option key={r} value={r}>
-									{r}
-								</option>
-							))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="subraces">Subraces:</label>
-						<select
-							id="subraces"
-							value={subraces}
-							onChange={(e) => setSubraces(e.target.value)}
-							disabled={!races}
-						>
-							<option value="">Select a Race First</option>
-							{races &&
-								subracesObj[races]?.map((sr) => (
-									<option key={sr} value={sr}>
-										{sr}
+									{backgroundsArray.map((b) => (
+										<option key={b} value={b}>
+											{b}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="exoticLanguage">
+									Exotic Languages:{" "}
+									{!exoticLanguage && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="exoticLanguage"
+									value={exoticLanguage}
+									onChange={(e) =>
+										setExoticLanguage(e.target.value)
+									}
+								>
+									<option value="">
+										Select an Exotic Language
 									</option>
-								))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="idealOne">Ideal One:</label>
-						<select
-							id="idealOne"
-							value={idealOne}
-							onChange={handleIdealOneChange}
-						>
-							<option value="">Select an Ideal</option>
-							{idealsArray
-								.filter((ideal) => ideal !== idealTwo)
-								.map((ideal) => (
-									<option key={ideal} value={ideal}>
-										{ideal}
+									{exoticLanguageArray.map((e) => (
+										<option key={e} value={e}>
+											{e}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="alignment">
+									Alignments:{" "}
+									{!alignment && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<select
+									id="alignment"
+									value={alignment}
+									onChange={(e) =>
+										setAlignment(e.target.value)
+									}
+								>
+									<option value="">
+										Select an Alignment
 									</option>
-								))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="idealTwo">
-							Ideal Two (Not Required):
-						</label>
-						<select
-							id="idealTwo"
-							value={idealTwo}
-							onChange={handleIdealTwoChange}
-						>
-							<option value="">Select an Ideal</option>
-							{idealsArray
-								.filter((ideal) => ideal !== idealOne)
-								.map((ideal) => (
-									<option key={ideal} value={ideal}>
-										{ideal}
-									</option>
-								))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="bonds">Bonds:</label>
-						<select
-							id="bonds"
-							value={bonds}
-							onChange={(e) => setBonds(e.target.value)}
-						>
-							<option value="">Select a Bond</option>
-							{bondsArray.map((bond) => (
-								<option key={bond} value={bond}>
-									{bond}
-								</option>
-							))}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="flaws">Flaws:</label>
-						<select
-							id="flaws"
-							value={flaws}
-							onChange={(e) => setFlaws(e.target.value)}
-						>
-							{/* Add options here */}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="languages">Languages:</label>
-						<select
-							id="languages"
-							value={languages}
-							onChange={(e) => setLanguages(e.target.value)}
-						>
-							{/* Add options here */}
-						</select>
-					</div>
-					<div>
-						<label htmlFor="alignments">Alignments:</label>
-						<select
-							id="alignments"
-							value={alignments}
-							onChange={(e) => setAlignments(e.target.value)}
-						>
-							{/* Add options here */}
-						</select>
+									{alignmentArray.map((a) => (
+										<option key={a} value={a}>
+											{a}
+										</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label htmlFor="ideal">
+									Ideal:{" "}
+									<sub
+										style={{
+											verticalAlign: "sub",
+											fontSize: "0.8rem",
+											cursor: "pointer",
+										}}
+										onClick={() =>
+											window.scrollTo(
+												0,
+												document.body.scrollHeight
+											)
+										}
+									>
+										1
+									</sub>{" "}
+									{!ideal && (
+										<sup className="red-star">*</sup>
+									)}
+								</label>
+								<textarea
+									id="ideal"
+									value={ideal}
+									onChange={(e) => setIdeal(e.target.value)}
+									maxLength="100"
+									style={{ height: "8rem", width: "100%" }}
+								/>
+							</div>
+							<div>
+								<label htmlFor="bond">
+									Bond:{" "}
+									<sub
+										style={{
+											verticalAlign: "sub",
+											fontSize: "0.8rem",
+											cursor: "pointer",
+										}}
+										onClick={() =>
+											window.scrollTo(
+												0,
+												document.body.scrollHeight
+											)
+										}
+									>
+										2
+									</sub>{" "}
+									{!bond && <sup className="red-star">*</sup>}
+								</label>
+								<textarea
+									id="bond"
+									value={bond}
+									onChange={(e) => setBond(e.target.value)}
+									maxLength="100"
+									style={{ height: "8rem", width: "100%" }}
+								/>
+							</div>
+							<div>
+								<label htmlFor="flaw">
+									Flaw:{" "}
+									<sub
+										style={{
+											verticalAlign: "sub",
+											fontSize: "0.8rem",
+											cursor: "pointer",
+										}}
+										onClick={() =>
+											window.scrollTo(
+												0,
+												document.body.scrollHeight
+											)
+										}
+									>
+										3
+									</sub>{" "}
+									{!flaw && <sup className="red-star">*</sup>}
+								</label>
+								<textarea
+									id="flaw"
+									value={flaw}
+									onChange={(e) => setFlaw(e.target.value)}
+									maxLength="100"
+									style={{ height: "8rem", width: "100%" }}
+								/>
+							</div>
+							<div>
+								<label htmlFor="personalityTraitOne">
+									First Personality Trait:{" "}
+									<sub
+										style={{
+											verticalAlign: "sub",
+											fontSize: "0.8rem",
+											cursor: "pointer",
+										}}
+										onClick={() =>
+											window.scrollTo(
+												0,
+												document.body.scrollHeight
+											)
+										}
+									>
+										4
+									</sub>{" "}
+									{!personalityTraitOne && <sup className="red-star">*</sup>}
+								</label>
+								<textarea
+									id="personalityTraitOne"
+									value={personalityTraitOne}
+									onChange={(e) => setPersonalityTraitOne(e.target.value)}
+									maxLength="50"
+									style={{ height: "6rem", width: "100%" }}
+								/>
+							</div>
+							<div>
+								<label htmlFor="personalityTraitTwo">
+									Second Personality Trait:{" "}
+									<sub
+										style={{
+											verticalAlign: "sub",
+											fontSize: "0.8rem",
+											cursor: "pointer",
+										}}
+										onClick={() =>
+											window.scrollTo(
+												0,
+												document.body.scrollHeight
+											)
+										}
+									>
+										4
+									</sub>{" "}
+									{!personalityTraitTwo && <sup className="red-star">*</sup>}
+								</label>
+								<textarea
+									id="personalityTraitTwo"
+									value={personalityTraitTwo}
+									onChange={(e) => setPersonalityTraitTwo(e.target.value)}
+									maxLength="50"
+									style={{ height: "6rem", width: "100%" }}
+								/>
+							</div>
+						</div>
+						<div className="character-sheet-bottom-right">
+							<h6>Class</h6>
+							<p>
+								{primaryClass
+									? `${primaryClass} - ${classDesc[primaryClass]}`
+									: `Select a class to populate more information here.`}
+							</p>
+							<h6>Subclass</h6>
+							<p>
+								{subclass
+									? `${subclass} - ${
+											subclassDesc[primaryClass][
+												subclass.replaceAll(" ", "_")
+											]
+									  }`
+									: `Select a class and a subclass to populate more information here.`}
+							</p>
+							<h6>Skills</h6>
+							{Array.from({ length: maxSkillCount }).map(
+								(_, index) => (
+									<p key={index}>
+										{skills[index] &&
+											`${skills[index]} - ${
+												skillsDesc[
+													skills[index].replaceAll(
+														" ",
+														"_"
+													)
+												]
+											}`}
+									</p>
+								)
+							)}
+							{!skills[0] &&
+								!skills[1] &&
+								!skills[2] &&
+								!skills[3] && (
+									<p>
+										Select a class and a skill to populate
+										more information here.
+									</p>
+								)}
+							<h6>Race</h6>
+							<p>
+								{race
+									? `${race} - ${
+											raceDesc[
+												race
+													.replaceAll("-", "0")
+													.replaceAll(" ", "_")
+											]
+									  }`
+									: `Select a race to populate more information here.`}
+							</p>
+							<h6>Subrace</h6>
+							<p>
+								{race
+									? subracesObj[race]
+										? subraces
+											? `${subraces} - ${
+													subracesDesc[
+														race.replaceAll(
+															" ",
+															"_"
+														)
+													][
+														subraces.replaceAll(
+															" ",
+															"_"
+														)
+													]
+											  }`
+											: `Select a subrace to populate more information here.`
+										: `This race has no subraces.`
+									: `Select a race to determine if it has subraces.`}
+							</p>
+							<h6>Background</h6>
+							<p>
+								{background
+									? `${background} - ${
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											]
+									  }`
+									: `Select a background to populate more information here.`}
+							</p>
+							<h6>Exotic Language</h6>
+							<p>
+								{exoticLanguage ? (
+									<>
+										{exoticLanguage}:
+										<p>
+											- Typical Speakers:{" "}
+											{
+												exoticLanguageDesc[
+													exoticLanguage.replaceAll(
+														" ",
+														"_"
+													)
+												].typicalSpeakers
+											}
+										</p>
+										<p>
+											- Script:{" "}
+											{
+												exoticLanguageDesc[
+													exoticLanguage.replaceAll(
+														" ",
+														"_"
+													)
+												].script
+											}
+										</p>
+									</>
+								) : (
+									`Select and exotic language to populate more information here.`
+								)}
+							</p>
+							<h6>Alignment</h6>
+							<p>
+								{alignment
+									? `${alignment} - ${
+											alignmentDesc[
+												alignment.replaceAll(" ", "_")
+											]
+									  }`
+									: `Select an alignment to populate more information here.`}
+							</p>
+						</div>
 					</div>
 					<button
 						type="submit"
@@ -781,6 +1035,30 @@ const CharacterSheet = () => {
 					>
 						Save Character
 					</button>
+					<div style={{ marginTop: "1rem" }}>
+						<p>
+							1. Your ideals are the things that you believe in
+							most strongly, the fundamental moral and ethical
+							principles that com pel you to act as you do. Ideals
+							encom pass everything from your life goals to your
+							core belief system. Ideals may answer the following
+							questions: What are the principles that you will
+							never betray? What would prompt you to make
+							sacrifices? What drives you to act and guides your
+							goals and ambitions? What is the single most
+							important thing you strive for? (100 char limit)
+						</p>
+						<p>
+							2. Bonds represent a character’s connections to
+							people, places, and events in the world. Bonds may
+							answer the following questions: Whom do you care
+							most about? To what place do you feel a special
+							connection? What is your most treasured possession?
+							(100 char limit)
+						</p>
+						<p>3.</p>
+						<p>4.</p>
+					</div>
 				</form>
 			</div>
 		</>
