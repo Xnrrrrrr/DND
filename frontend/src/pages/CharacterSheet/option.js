@@ -1833,8 +1833,234 @@ export const subclassDesc = {
 	},
 	Paladin: {
 		Oath_of_Devotion: "",
-		Oath_of_the_Ancients: "",
-		Oath_of_Vengeance: "",
+		Oath_of_the_Ancients: {
+            description: `The Oath of the Ancients is as old as the race of elves 
+						and the rituals of the druids. Sometimes called fey 
+						knights, green knights, or horned knights, paladins who 
+						swear this oath cast their lot with the side of the light 
+						in the cosmic struggle against darkness because they 
+						love the beautiful and life-giving things of the world, 
+						not necessarily because they believe in principles of 
+						honor, courage, and justice. They adorn their armor and 
+						clothing with images of growing things—leaves, antlers, 
+						or flowers—to reflect their commitment to preserving 
+						life and light in the world.`,
+            features: [
+                { 
+                    title: "Tenets of the Ancients", // add formatting for a real right runny 
+                    description: ` The tenets of the Oath of the Ancients have been 
+								preserved for uncounted centuries. This oath 
+								emphasizes the principles of good above any concerns 
+								of law or chaos. Its four central principles are simple.
+								Kindle the Light. Through your acts of mercy, 
+								kindness, and forgiveness, kindle the light of hope in the 
+								world, beating back despair.
+								Shelter the Light. Where there is good, beauty, love, 
+								and laughter in the world, stand against the wickedness 
+								that would swallow it. Where life flourishes, stand 
+								against the forces that would render it barren.
+								Preserve Your Own Light. Delight in song and 
+								laughter, in beauty and art. If you allow the light to die in 
+								your own heart, you can’t preserve it in the world.
+								Be the Light. Be a glorious beacon for all who live in 
+								despair. Let the light of your joy and courage shine forth 
+								in all your deeds.`,
+                },
+                {
+                    title: "Oath Spells", // add formatting for a real right runny 
+                    description: ` You gain oath spells at the paladin levels listed.
+								O ath of the Ancients Spells
+								Paladin Level Spells
+								3rd
+								ensnaring strike, speak with animals
+								5th
+								9th
+								13th
+								17th
+								moonbeam, misty step
+								plant growth, protection from energy
+								ice storm, stoneskin
+								commune with nature, tree stride`,
+                },
+                {
+                    title: "Channel Divinity", // add formatting for a real right runny 
+                    description: ` When you take this oath at 3rd level, you gain the 
+								following two Channel Divinity options.
+								Nature’s Wrath. You can use your Channel Divinity 
+								to invoke primeval forces to ensnare a foe. As an action, 
+								you can cause spectral vines to spring up and reach 
+								for a creature within 10 feet of you that you can see.
+								The creature must succeed on a Strength or Dexterity 
+								saving throw (its choice) or be restrained. While 
+								restrained by the vines, the creature repeats the saving 
+								throw at the end of each of its turns. On a success, it 
+								frees itself and the vines vanish.
+								Turn the Faithless. You can use your Channel 
+								Divinity to utter ancient words that are painful for fey 
+								and fiends to hear. As an action, you present your holy symbol, and each fey or fiend within 30 feet of you that 
+								can hear you must make a Wisdom saving throw. On a 
+								failed save, the creature is turned for 1 minute or until it 
+								takes damage.
+								A turned creature must spend its turns trying to move 
+								as far away from you as it can, and it can’t willingly 
+								move to a space within 30 feet of you. It also can’t take 
+								reactions. For its action, it can use only the Dash action 
+								or try to escape from an effect that prevents it from 
+								moving. If there’s nowhere to move, the creature can use 
+								the Dodge action.
+								If the creature’s true form is concealed by an illusion, 
+								shapeshifting, or other effect, that form is revealed while 
+								it is turned.`,
+                },
+				{
+                    title: "Aura of Warding",
+                    description: ` Beginning at 7th level, ancient magic lies so heavily 
+								upon you that it forms an eldritch ward. You and friendly 
+								creatures within 10 feet of you have resistance to 
+								damage from spells.
+								At 18th level, the range of this aura increases to 30 feet.`,
+                },
+                {
+                    title: "Undying Sentinel",
+                    description: ` Starting at 15th level, when you are reduced to 0 hit 
+								points and are not killed outright, you can choose to 
+								drop to 1 hit point instead. Once you use this ability, you 
+								can’t use it again until you finish a long rest.
+								Additionally, you suffer none of the drawbacks of old 
+								age, and you can’t be aged magically.`,
+                },
+                {
+                    title: "Elder Champion", // add formatting for a real right runny
+                    description: `At 20th level, you can assume the form of an ancient 
+								force of nature, taking on an appearance you choose.
+								For example, your skin might turn green or take on a 
+								bark-like texture, your hair might become leafy or moss- 
+								like, or you might sprout antlers or a lion-like mane.
+								Using your action, you undergo a transformation.
+								For 1 minute, you gain the following benefits:
+								• At the start of each of your turns, you regain 10 hit 
+								points.
+								• Whenever you cast a paladin spell that has a casting 
+								time of 1 action, you can cast it using a bonus action 
+								instead.
+								• Enemy creatures within 10 feet of you have disadvan
+								tage on saving throws against your paladin spells and 
+								Channel Divinity options.
+								Once you use this feature, you can’t use it again until 
+								you finish a long rest`,
+                },
+            ],
+        }, 
+		Oath_of_Vengeance: {
+            description: ` The Oath of Vengeance is a solemn commitment to 
+						punish those who have committed a grievous sin. When 
+						evil forces slaughter helpless villagers, when an entire 
+						people turns against the will of the gods, when a thieves’ 
+						guild grows too violent and powerful, when a dragon 
+						rampages through the countryside—at times like these, 
+						paladins arise and swear an Oath of Vengeance to set 
+						right that which has gone wrong. To these paladins— 
+						sometimes called avengers or dark knights—their own 
+						purity is not as important as delivering justice.
+						`,
+            features: [
+                {
+                    title: "Tenets of Vengeance",
+                    description: ` The tenets of the Oath of Vengeance vary by paladin, but 
+								all the tenets revolve around punishing wrongdoers by 
+								any means necessary. Paladins who uphold these tenets 
+								are willing to sacrifice even their own righteousness to 
+								mete out justice upon those who do evil, so the paladins 
+								are often neutral or lawful neutral in alignment. The 
+								core principles of the tenets are brutally simple.
+								Fight the Greater Evil. Faced with a choice of fighting 
+								my sworn foes or combating a lesser evil. I choose the 
+								greater evil.
+								No Mercy for the Wicked. Ordinary foes might win 
+								my mercy, but my sworn enemies do not.
+								By Any Means Necessary. My qualms can’t get in the 
+								way of exterminating my foes.
+								Restitution. If my foes wreak ruin on the world, it is 
+								because I failed to stop them. I must help those harmed 
+								by their misdeeds.`,
+                },
+                {
+                    title: "Oath Spells", // add formatting for a real right runny
+                    description: `You gain oath spells at the paladin levels listed.
+								O ath of Vengeance Spells
+								Paladin Level Spells
+								3rd
+								5th
+								9th
+								13th
+								17th
+								bane, hunter’s mark
+								hold person, misty step
+								haste, protection from energy
+								banishment, dimension door
+								hold monster, scrying`,
+                },
+                {
+                    title: "Channel Divinity", // add formatting for a real right runny
+                    description: `When you take this oath at 3rd level, you gain the 
+								following two Channel Divinity options.
+								Abjure Enemy. As an action, you present your holy 
+								symbol and speak a prayer of denunciation, using your 
+								Channel Divinity. Choose one creature within 60 feet 
+								of you that you can see. That creature must make a 
+								Wisdom saving throw, unless it is immune to being 
+								frightened. Fiends and undead have disadvantage on 
+								this saving throw.
+								On a failed save, the creature is frightened for 1 
+								minute or until it takes any damage. While frightened, 
+								the creature’s speed is 0, and it can’t benefit from any 
+								bonus to its speed.
+								On a successful save, the creature’s speed is halved 
+								for 1 minute or until the creature takes any damage.
+								Vow of Enmity. As a bonus action, you can utter a vow 
+								of enmity against a creature you can see within 10 feet 
+								of you, using your Channel Divinity. You gain advantage 
+								on attack rolls against the creature for 1 minute or until 
+								it drops to 0 hit points or falls unconscious.`,
+                },
+				{
+                    title: "Relentless Avenger",
+                    description: ` By 7th level, your supernatural focus helps you close 
+								off a foe’s retreat. When you hit a creature with an 
+								opportunity attack, you can move up to half your 
+								speed immediately after the attack and as part of 
+								the same reaction. This movement doesn’t provoke 
+								opportunity attacks.`,
+                },
+                {
+                    title: "Soul of Vengeance",
+                    description: `Starting at 15th level, the authority with which you 
+								speak your Vow of Enmity gives you greater power over 
+								your foe. When a creature under the effect of your Vow 
+								of Enmity makes an attack, you can use your reaction to 
+								make a melee weapon attack against that creature if it is 
+								within range.`,
+                },
+                {
+                    title: "Avenging Angel",
+                    description: ` At 20th level, you can assume the form of an 
+								angelic avenger. Using your action, you undergo a 
+								transformation. For 1 hour, you gain the following 
+								benefits:
+								• Wings sprout from your back and grant you a flying 
+								speed of 60 feet.
+								• You emanate an aura of menace in a 30-foot radius. 
+								The first time any enemy creature enters the aura or 
+								starts its turn there during a battle, the creature must 
+								succeed on a Wisdom saving throw or become fright
+								ened of you for 1 minute or until it takes any damage. 
+								Attack rolls against the frightened creature have 
+								advantage.
+								Once you use this feature, you can’t use it again until 
+								you finish a long rest.`,
+                },
+            ],
+        }, 
 		Oath_of_Conquest: "",
 		Oath_of_Redemption: "",
 		Oath_of_Glory: "",
@@ -1842,8 +2068,138 @@ export const subclassDesc = {
 		Oath_of_the_Watchers: "",
 	},
 	Ranger: {
-		Hunter: "",
-		Beast_Master: "",
+		Hunter: {
+            description: ` Emulating the Hunter archetype means accepting your 
+						place as a bulwark between civilization and the terrors 
+						of the wilderness. As you walk the Hunter’s path, you 
+						learn specialized techniques for fighting the threats 
+						you face, from rampaging ogres and hordes of orcs to 
+						towering giants and terrifying dragons.`,
+            features: [
+                {
+                    title: "Hunter’s Prey", // needs formatting for a real right runny
+                    description: ` At 3rd level, you gain one of the following features 
+								of your choice.
+								Colossus Slayer. Your tenacity can wear down 
+								the most potent foes. When you hit a creature with a 
+								weapon attack, the creature takes an extra 1d8 damage 
+								if it’s below its hit point maximum. You can deal this 
+								extra damage only once per turn.
+								Giant Killer. When a Large or larger creature within
+								5 feet of you hits or misses you with an attack, you can 
+								use your reaction to attack that creature immediately 
+								after its attack, provided that you can see the creature.
+								Horde Breaker. Once on each of your turns when you 
+								make a weapon attack, you can make another attack 
+								with the same weapon against a different creature that 
+								is within 5 feet of the original target and within range 
+								of your weapon.`,
+                },
+                {
+                    title: " Defensive Tactics", // needs formatting for a real right runny
+                    description: ` At 7th level, you gain one of the following features 
+								of your choice.
+								Escape the Horde. Opportunity attacks against you 
+								are made with disadvantage.
+								Multiattack Defense. When a creature hits you 
+								with an attack, you gain a +4 bonus to AC against 
+								all subsequent attacks made by that creature for the 
+								rest of the turn.
+								Steel Will. You have advantage on saving throws 
+								against being frightened.`,
+                },
+                {
+                    title: " Multiattack",
+                    description: ` At 11th level, you gain one of the following features 
+								of your choice.
+								Volley. You can use your action to make a ranged 
+								attack against any number of creatures within 10 feet 
+								of a point you can see within your weapon’s range. You 
+								must have ammunition for each target, as normal, and 
+								you make a separate attack roll for each target.
+								Whirlwind Attack. You can use your action to make a 
+								melee attack against any number of creatures within 5 
+								feet of you, with a separate attack roll for each target`,
+                },
+				{
+                    title: "Superior Hunter’s Defense", // needs formatting
+                    description: `At 15th level, you gain one of the following features 
+								of your choice.
+								Evasion. You can nimbly dodge out of the way of 
+								certain area effects, such as a red dragon’s fiery breath 
+								or a lightning bolt spell. When you are subjected to an 
+								effect that allows you to make a Dexterity saving throw 
+								to take only half damage, you instead take no damage
+								if you succeed on the saving throw, and only half 
+								damage if you fail.
+								Stand Against the Tide. When a hostile creature 
+								misses you with a melee attack, you can use your reaction 
+								to force that creature to repeat the same attack against 
+								another creature (other than itself) of your choice.
+								Uncanny Dodge. When an attacker that you can see 
+								hits you with an attack, you can use your reaction to 
+								halve the attack’s damage against you.`,
+                },
+            ],
+        }, 
+		Beast_Master: {
+            description: `The Beast Master archetype embodies a friendship 
+						between the civilized races and the beasts of the world. 
+						United in focus, beast and ranger work as one to fight 
+						the monstrous foes that threaten civilization and the 
+						wilderness alike. Emulating the Beast Master archetype 
+						means committing yourself to this ideal, working in 
+						partnership with an animal as its companion and friend.`,
+            features: [
+                {
+                    title: " Ranger’s Companion", // needs formatting for a real right runny
+                    description: ` At 3rd level, you gain a beast companion that 
+								accompanies you on your adventures and is trained to 
+								fight alongside you. Choose a beast that is no larger than 
+								Medium and that has a challenge rating of 1/4 or lower 
+								(appendix D presents statistics for the hawk, mastiff, 
+								and panther as examples). Add your proficiency bonus 
+								to the beast’s AC, attack rolls, and damage rolls, as well 
+								as to any saving throws and skills it is proficient in. Its 
+								hit point maximum equals its normal maximum or four 
+								times your ranger level, whichever is higher.
+								The beast obeys your commands as best as it can. It 
+								takes its turn on your initiative, though it doesn’t take an 
+								action unless you command it to. On your turn, you can 
+								verbally command the beast where to move (no action 
+								required by you). You can use your action to verbally 
+								command it to take the Attack, Dash, Disengage, Dodge, 
+								or Help action. Once you have the Extra Attack feature, 
+								you can make one weapon attack yourself when you 
+								command the beast to take the Attack action.
+								While traveling through your favored terrain with only 
+								the beast, you can move stealthily at a normal pace.
+								If the beast dies, you can obtain another one by 
+								spending 8 hours magically bonding with another beast 
+								that isn’t hostile to you, either the same type of beast as 
+								before or a different one.`,
+                },
+                {
+                    title: "Exceptional Training",
+                    description: `Beginning at 7th level, on any of your turns when 
+								your beast companion doesn’t attack, you can use a 
+								bonus action to command the beast to take the Dash, 
+								Disengage, Dodge, or Help action on its turn.`,
+                },
+                {
+                    title: "Bestial Fury",
+                    description: `Starting at 11th level, your beast companion can 
+								make two attacks when you command it to use the 
+								Attack action.`,
+                },
+				{
+                    title: "Share Spells",
+                    description: `Beginning at 15th level, when you cast a spell targeting 
+								yourself, you can also affect your beast companion with 
+								the spell if the beast is within 30 feet of you.`,
+                },
+            ],
+        }, 
 		Gloom_Stalker: "",
 		Horizon_Walker: "",
 		Monster_Slayer: "",
@@ -1851,9 +2207,229 @@ export const subclassDesc = {
 		Swarmkeeper: "",
 	},
 	Rogue: {
-		Thief: "",
-		Assassin: "",
-		Arcane_Trickster: "",
+		Thief: {
+            description: ` You hone your skills in the larcenous arts. Burglars, 
+						bandits, cutpurses, and other criminals typically follow 
+						this archetype, but so do rogues who prefer to think of 
+						themselves as professional treasure seekers, explorers, 
+						delvers, and investigators. In addition to improving your 
+						agility and stealth, you learn skills useful for delving into 
+						ancient ruins, reading unfamiliar languages, and using 
+						magic items you normally couldn’t employ.`,
+            features: [
+                {
+                    title: "Fast Hands",
+                    description: ` Starting at 3rd level, you can use the bonus action 
+								granted by your Cunning Action to make a Dexterity 
+								(Sleight of Hand) check, use your thieves’ tools to 
+								disarm a trap or open a lock, or take the Use an 
+								Object action.`,
+                },
+                {
+                    title: "Second-Story Work",
+                    description: ` When you choose this archetype at 3rd level, you gain 
+								the ability to climb faster than normal; climbing no 
+								longer costs you extra movement.
+								In addition, when you make a running jump, the 
+								distance you cover increases by a number of feet equal 
+								to your Dexterity modifier.`,
+                },
+                {
+                    title: "Supreme Sneak",
+                    description: `Starting at 9th level, you have advantage on a Dexterity 
+								(Stealth) check if you move no more than half your 
+								speed on the same turn.`,
+                },
+				{
+                    title: "Use Magic Device",
+                    description: `By 13th level, you have learned enough about the 
+								workings of magic that you can improvise the use of 
+								items even when they are not intended for you. You 
+								ignore all class, race, and level requirements on the use 
+								of magic items.`,
+                },
+                {
+                    title: "Thief's Reflexes",
+                    description: ` When you reach 17th level, you have become adept at 
+								laying ambushes and quickly escaping danger. You can 
+								take two turns during the first round of any combat. You 
+								take your first turn at your normal initiative and your
+								second turn at your initiative minus 10. You can’t use 
+								this feature when you are surprised.`,
+                },
+            ],
+        }, 
+		Assassin: {
+            description: ` You focus your training on the grim art of death. Those 
+						who adhere to this archetype are diverse: hired killers, 
+						spies, bounty hunters, and even specially anointed 
+						priests trained to exterminate the enemies of their deity. 
+						Stealth, poison, and disguise help you eliminate your 
+						foes with deadly efficiency.`,
+            features: [
+                {
+                    title: "Bonus Proficiencies",
+                    description: ` When you choose this archetype at 3rd level, you gain 
+								proficiency with the disguise kit and the poisoner’s kit.`,
+                },
+                {
+                    title: "Assassinate",
+                    description: `Starting at 3rd level, you are at your deadliest when you 
+								get the drop on your enemies. You have advantage on 
+								attack rolls against any creature that hasn’t taken a turn 
+								in the combat yet. In addition, any hit you score against 
+								a creature that is surprised is a critical hit.`,
+                },
+                {
+                    title: "Infiltration Expertise",
+                    description: `Starting at 9th level, you can unfailingly create false 
+								identities for yourself. You must spend seven days and 
+								25 gp to establish the history, profession, and affiliations 
+								for an identity. You can’t establish an identity that 
+								belongs to someone else. For example, you might acquire 
+								appropriate clothing, letters of introduction, and official- 
+								looking certification to establish yourself as a member of 
+								a trading house from a remote city so you can insinuate 
+								yourself into the company of other wealthy merchants.
+								Thereafter, if you adopt the new identity as a disguise, 
+								other creatures believe you to be that person until given 
+								an obvious reason not to.`,
+                },
+				{
+                    title: "Imposter",
+                    description: `At 13th level, you gain the ability to unerringly mimic 
+								another person’s speech, writing, and behavior.
+								You must spend at least three hours studying 
+								these three components of the person’s behavior, 
+								listening to speech, examining handwriting, and 
+								observing mannerisms.
+								Your ruse is indiscernible to the casual observer. If a 
+								wary creature suspects something is amiss, you have 
+								advantage on any Charisma (Deception) check you make 
+								to avoid detection.`,
+                },
+                {
+                    title: "Death Strike",
+                    description: `Starting at 17th level, you become a master of instant 
+								death. When you attack and hit a creature that is 
+								surprised, it must make a Constitution saving throw 
+								(DC 8 + your Dexterity modifier + your proficiency 
+								bonus). On a failed save, double the damage of your 
+								attack against the creature.`,
+                },
+            ],
+        }, 
+		Arcane_Trickster: {
+            description: `Some rogues enhance their fine-honed skills of stealth 
+						and agility with magic, learning tricks of enchantment 
+						and illusion. These rogues include pickpockets and 
+						burglars, but also pranksters, mischief-makers, and a 
+						significant number of adventurers.`,
+            features: [
+                {
+                    title: "Spellcasting", // needs formatting for a real right runny + add spellcasting table
+                    description: `When you reach 3rd level, you gain the ability to 
+								cast spells. See chapter 10 for the general rules of 
+								spellcasting and chapter 11 for the wizard spell list.
+								Cantrips. You learn three cantrips: mage hand and 
+								two other cantrips of your choice from the wizard spell 
+								list. You learn another wizard cantrip of your choice 
+								at 10th level.
+								Spell Slots. The Arcane Trickster Spellcasting 
+								table shows how many spell slots you have to cast 
+								your spells of 1st level and higher. To cast one of these 
+								spells, you must expend a slot of the spell's level or 
+								higher. You regain all expended spell slots when you 
+								finish a long rest.
+								For example, if you know the 1st-level spell charm 
+								person and have a 1st-level and a 2nd-level spell slot 
+								available, you can cast charm person using either slot.
+								Spells Known of 1st-Level and Higher. You know 
+								three 1st-level wizard spells of your choice, two of which 
+								you must choose from the enchantment and illusion 
+								spells on the wizard spell list.
+								The Spells Known column of the Arcane Trickster 
+								Spellcasting table shows when you learn more wizard 
+								spells of 1st level or higher. Each of these spells must 
+								be an enchantment or illusion spell of your choice, and 
+								must be of a level for which you have spell slots. For 
+								instance, when you reach 7th level in this class, you can 
+								learn one new spell of 1st or 2nd level.
+								The spells you learn at 8th, 14th, and 20th level can 
+								come from any school of magic.
+								Whenever you gain a level in this class, you can 
+								replace one of the wizard spells you know with another 
+								spell of your choice from the wizard spell list. The 
+								new spell must be of a level for which you have spell 
+								slots, and it must be an enchantment or illusion spell, 
+								unless you’re replacing the spell you gained at 8th, 14th, 
+								or 20th level.
+								Spellcasting Ability. Intelligence is your spellcasting 
+								ability for your wizard spells, since you learn your 
+								spells through dedicated study and memorization.
+								You use your Intelligence whenever a spell refers to 
+								your spellcasting ability. In addition, you use your 
+								Intelligence modifier when setting the saving throw 
+								DC for a wizard spell you cast and when making an 
+								attack roll with one.
+								Spell save DC = 8 + your proficiency bonus + 
+								your Intelligence modifier
+								Spell attack modifier = your proficiency bonus + 
+								your Intelligence modifier`,
+                },
+                {
+                    title: "Mage Hand Legerdemain",
+                    description: ` Starting at 3rd level, when you cast mage hand, you can 
+								make the spectral hand invisible, and you can perform 
+								the following additional tasks with it:
+								• You can stow one object the hand is holding in a 
+								container worn or carried by another creature.
+								• You can retrieve an object in a container worn or 
+								carried by another creature.
+								• You can use thieves’ tools to pick locks and disarm 
+								traps at range.  You can perform one of these tasks without being 
+								noticed by a creature if you succeed on a Dexterity 
+								(Sleight of Hand) check contested by the creature’s 
+								Wisdom (Perception) check.
+								In addition, you can use the bonus action granted by 
+								your Cunning Action to control the hand`,
+                },
+                {
+                    title: "Magical Ambush",
+                    description: ` Starting at 9th level, if you are hidden from a 
+								creature when you cast a spell on it, the creature has 
+								disadvantage on any saving throw it makes against the 
+								spell this turn.`,
+                },
+				{
+                    title: "Versatile Trickster",
+                    description: `At 13th level, you gain the ability to distract targets with 
+								your mage hand. As a bonus action on your turn, you can 
+								designate a creature within 5 feet of the spectral hand 
+								created by the spell. Doing so gives you advantage on 
+								attack rolls against that creature until the end of the turn.`,
+                },
+                {
+                    title: "Spell Thief",
+                    description: ` At 17th level, you gain the ability to magically 
+								steal the knowledge of how to cast a spell from 
+								another spellcaster.
+								Immediately after a creature casts a spell that targets 
+								you or includes you in its area of effect, you can use your 
+								reaction to force the creature to make a saving throw 
+								with its spellcasting ability modifier. The DC equals 
+								your spell save DC. On a failed save, you negate the 
+								spell’s effect against you, and you steal the knowledge 
+								of the spell if it is at least 1st level and of a level you can 
+								cast (it doesn’t need to be a wizard spell). For the next 
+								8 hours, you know the spell and can cast it using your 
+								spell slots. The creature can’t cast that spell until the 
+								8 hours have passed.
+								Once you use this feature, you can’t use it again until 
+								you finish a long rest.`,
+                },
+            ],
+        }, 
 		Mastermind: "",
 		Swashbuckler: "",
 		Inquisitive: "",
@@ -2047,34 +2623,111 @@ export const maxSkills = {
 	Wizard: 2,
 };
 
+// all skills needs formatting for runny
 export const skillsDesc = {
 	// Strength Related
-	Athletics: "",
+	Athletics: {
+        attribute: `Strength`,
+        description: `Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.`,
+        examples: `You attempt to climb a sheer or slippery cliff, avoid hazards while scaling a wall, or cling to a surface while something is trying to knock you off.
+                You try to jump an unusually long distance or pull off a stunt mid-jump.
+                You struggle to swim or stay afloat in treacherous currents, storm-tossed waves, or areas of thick seaweed. Or another creature tries to push or pull you underwater or otherwise interfere with your swimming.`,
+    },
 
 	// Dexterity Related
-	Acrobatics: "",
-	Sleight_of_Hand: "",
-	Stealth: "",
+	Acrobatics: {
+		attribute: `Dexterity`,
+		description: `The Acrobatics skill involves performing tasks like balancing, tumbling, and avoiding obstacles with agility and grace.`,
+		examples: `Examples include walking a tightrope, keeping your balance on a slippery surface, or performing flips and somersaults.`,
+	},
+
+	Sleight_of_Hand: {
+        attribute: `Dexterity`,
+        description: `The Sleight of Hand skill involves manual dexterity used for feats such as pickpocketing or planting something on someone else.`,
+        examples: `Examples include concealing an object on your person, slipping something out of another person's pocket, or performing a card trick without being noticed.`,
+    },
+
+	Stealth: {
+        attribute: `Dexterity`,
+        description: `The Stealth skill allows you to hide, move silently, and avoid detection.`,
+        examples: `Examples include sneaking past guards, hiding from enemies, or moving quietly to avoid making noise.`,
+    },
 
 	// Intelligence Related
-	Arcana: "",
-	History: "",
-	Investigation: "",
-	Nature: "",
-	Religon: "",
+	Arcana: {
+        attribute: `Intelligence`,
+        description: `The Arcana skill measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.`,
+        examples: `Examples include identifying a spell being cast, recognizing the effects of a magical item, or recalling information about a magical creature or phenomenon.`,
+    },
+	History: {
+        attribute: `Intelligence`,
+        description: `The History skill involves recalling significant events, historical figures, ancient kingdoms, past disputes, recent wars, and lost civilizations.`,
+        examples: `Examples include remembering facts about a famous battle, identifying the lineage of a noble family, or recalling the significance of an ancient ruin.`,
+    },
+	Investigation: {
+        attribute: `Intelligence`,
+        description: `The Investigation skill is used to deduce clues from physical evidence, solve puzzles, and search for hidden objects.`,
+        examples: `Examples include finding a secret door, piecing together a complex puzzle, or determining the cause of a mysterious event.`,
+    },
+	Nature: {
+        attribute: `Intelligence`,
+        description: `The Nature skill reflects your knowledge about the natural world, including terrain, plants, animals, weather, and natural cycles.`,
+        examples: `Examples include identifying plants and animals, predicting the weather, or recalling knowledge about natural hazards.`,
+    },
+	Religion: {
+        attribute: `Intelligence`,
+        description: `The Religion skill involves knowledge of deities, religious rituals, holy symbols, and the practices of cults and other religious sects.`,
+        examples: `Examples include identifying a religious symbol, recalling a legend about a deity, or recognizing the practices of a particular cult.`,
+    },
 
 	// Wisdom Related
-	Animal_Handling: "",
-	Insight: "",
-	Medicine: "",
-	Perception: "",
-	Survival: "",
+	Animal_Handling: {
+        attribute: `Wisdom`,
+        description: `The Animal Handling skill involves understanding and managing the behavior of animals, calming them, and influencing their actions.`,
+        examples: `Examples include calming a frightened horse, intuiting the intentions of a domesticated animal, or training a pet to follow commands.`,
+    },
+	Insight: {
+        attribute: `Wisdom`,
+        description: `The Insight skill allows you to determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move.`,
+        examples: `Examples include sensing whether someone is being truthful, reading body language to gauge a person's mood, or interpreting a creature's intentions.`,
+    },
+	Medicine: {
+        attribute: `Wisdom`,
+        description: `The Medicine skill is used to stabilize a dying companion, diagnose an illness, or treat a wound.`,
+        examples: `Examples include providing first aid to stabilize a dying ally, diagnosing a disease, or applying a salve to treat a wound.`,
+    },
+	Perception: {
+        attribute: `Wisdom`,
+        description: `The Perception skill measures your ability to spot, hear, or otherwise detect the presence of something. It involves your senses and awareness.`,
+        examples: `Examples include noticing a hidden enemy, hearing faint sounds in the distance, or spotting a trap before it is triggered.`,
+    },
+	Survival: {
+        attribute: `Wisdom`,
+        description: `The Survival skill involves enduring hazardous environments, tracking creatures, and finding food or shelter in the wild.`,
+        examples: `Examples include following tracks to find a creature, identifying edible plants in the wilderness, or predicting the weather to prepare for an incoming storm.`,
+    },
 
 	// Charisma Related
-	Deception: "",
-	Intimidation: "",
-	Performance: "",
-	Persuasion: "",
+	Deception: {
+        attribute: `Charisma`,
+        description: `The Deception skill is used to convince others of a falsehood, mislead them, or hide the truth.`,
+        examples: `Examples include lying to someone about your intentions, disguising yourself to avoid recognition, or creating a diversion to escape.`,
+    },
+	Intimidation: {
+        attribute: `Charisma`,
+        description: `The Intimidation skill involves using threats, hostile actions, or fear to influence others.`,
+        examples: `Examples include making a demand with a threatening tone, staring someone down to make them back off, or using physical presence to coerce someone into action.`,
+    },
+	Performance: {
+        attribute: `Charisma`,
+        description: `The Performance skill is used to entertain an audience through acts such as singing, dancing, acting, or playing an instrument.`,
+        examples: `Examples include singing a song to lift spirits, performing a dramatic monologue to captivate an audience, or playing an instrument to earn money in a tavern.`,
+    },
+	Persuasion: {
+        attribute: `Charisma`,
+        description: `The Persuasion skill is used to influence others through tact, social grace, or charm.`,
+        examples: `Examples include convincing someone to see things your way, negotiating a deal, or calming someone down with kind words.`,
+    },
 };
 
 export const raceArray = [
