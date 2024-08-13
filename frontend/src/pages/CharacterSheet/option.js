@@ -1079,8 +1079,144 @@ export const subclassDesc = {
 		Twilight_Domain: "",
 	},
 	Druid: {
-		Circle_of_the_Land: "",
-		Circle_of_the_Moon: "",
+		Circle_of_the_Land: {
+            description: ` The Circle of the Land is made up of mystics and sages 
+						who safeguard ancient knowledge and rites through 
+						a vast oral tradition. These druids meet within sacred 
+						circles of trees or standing stones to whisper primal 
+						secrets in Druidic. The circle’s wisest members preside 
+						as the chief priests of communities that hold to the Old 
+						Faith and serve as advisors to the rulers of those folk.
+						As a member of this circle, your magic is influenced 
+						by the land where you were initiated into the circle’s 
+						mysterious rites.`,
+            features: [
+                {
+                    title: "Bonus Cantrip",
+                    description: `When you choose this circle at 2nd level, you learn one 
+								additional druid cantrip of your choice.`,
+                },
+                {
+                    title: "Natural Recovery",
+                    description: `Starting at 2nd level, you can regain some of your 
+								magical energy by sitting in meditation and communing 
+								with nature. During a short rest, you choose expended 
+								spell slots to recover. The spell slots can have a 
+								combined level that is equal to or less than half your 
+								druid level (rounded up), and none of the slots can be 
+								6th level or higher. You can’t use this feature again until 
+								you finish a long rest 
+								For example, when you are a 4th-level druid, you can 
+								recover up to two levels worth of spell slots. You can 
+								recover either a 2nd-level slot or two 1st-level slots`,
+                },
+                {
+                    title: "Circle Spells",
+                    description: ` Your mystical connection to the land infuses you with 
+								the ability to cast certain spells. At 3rd, 5th, 7th, and 
+								9th level you gain access to circle spells connected 
+								to the land where you became a druid. Choose that 
+								land—arctic, coast, desert, forest, grassland, mountain, 
+								swamp, or Underdark—and consult the associated 
+								list of spells.
+								Once you gain access to a circle spell, you always have 
+								it prepared, and it doesn’t count against the number of 
+								spells you can prepare each day. If you gain access to a 
+								spell that doesn’t appear on the druid spell list, the spell 
+								is nonetheless a druid spell for you.`,
+                },
+				{
+                    title: "Land’s Stride",
+                    description: ` Starting at 6th level, moving through nonmagical 
+								difficult terrain costs you no extra movement. You can 
+								also pass through nonmagical plants without being 
+								slowed by them and without taking damage from them if 
+								they have thorns, spines, or a similar hazard.
+								In addition, you have advantage on saving throws against 
+								plants that are magically created or manipulated to impede 
+								movement, such those created by the entangle spell.`,
+                },
+                {
+                    title: "Nature's Ward",
+                    description: ` When you reach 10th level, you can’t be charmed or 
+								frightened by elementals or fey, and you are immune to 
+								poison and disease.`,
+                },
+                {
+                    title: "Nature's Sanctuary",
+                    description: `When you reach 14th level, creatures of the natural 
+								world sense your connection to nature and become 
+								hesitant to attack you. When a beast or plant creature 
+								attacks you, that creature must make a Wisdom saving 
+								throw against your druid spell save DC. On a failed save, 
+								the creature must choose a different target, or the attack 
+								automatically misses. On a successful save, the creature 
+								is immune to this effect for 24 hours.
+								The creature is aware of this effect before it makes its 
+								attack against you.`,
+                },
+            ],
+        }, 
+		Circle_of_the_Moon: {
+            description: ` Druids of the Circle of the Moon are fierce guardians 
+						of the wilds. Their order gathers under the full moon to 
+						share news and trade warnings. They haunt the deepest 
+						parts of the wilderness, where they might go for weeks 
+						on end before crossing paths with another humanoid 
+						creature, let alone another druid.
+						Changeable as the moon, a druid of this circle might 
+						prowl as a great cat one night, soar over the treetops 
+						as an eagle the next day, and crash through the 
+						undergrowth in bear form to drive off a trespassing 
+						monster. The wild is in the druid's blood`,
+            features: [
+                {
+                    title: "Combat Wild Shape",
+                    description: ` When you choose this circle at 2nd level, you gain the 
+								ability to use Wild Shape on your turn as a bonus action, 
+								rather than as an action.
+								Additionally, while you are transformed by Wild 
+								Shape, you can use a bonus action to expend one 
+								spell slot to regain 1d8 hit points per level of the spell 
+								slot expended.`,
+                },
+                {
+                    title: "Circle Forms",
+                    description: ` The rites of your circle grant you the ability to transform 
+								into more dangerous animal forms. Starting at 2nd 
+								level, you can use your Wild Shape to transform into a 
+								beast with a challenge rating as high as 1 (you ignore 
+								the Max. CR column of the Beast Shapes table, but must 
+								abide by the other limitations there).
+								Starting at 6th level, you can transform into a beast 
+								with a challenge rating as high as your druid level 
+								divided by 3, rounded down.`,
+                },
+                {
+                    title: "Primal Strike",
+                    description: ` Primal Strike
+								Starting at 6th level, your attacks in beast form count as 
+								magical for the purpose of overcoming resistance and 
+								immunity to nonmagical attacks and damage.`,
+                },
+				{
+                    title: "Elemental Wild Shape",
+                    description: `At 10th level, you can expend two uses of Wild Shape 
+								at the same time to transform into an air elemental, an 
+								earth elemental, a fire elemental, or a water elemental.`,
+                },
+                {
+                    title: "Thousand Forms",
+                    description: ` By 14th level, you have learned to use magic to alter 
+								your physical form in more subtle ways. You can cast the 
+								alter self spell at will.`,
+                },
+                {
+                    title: "",
+                    description: ``,
+                },
+            ],
+        }, 
 		Circle_of_Dreams: "",
 		Circle_of_the_Shepherd: "",
 		Circle_of_Spores: "",
@@ -1088,9 +1224,356 @@ export const subclassDesc = {
 		Circle_of_Wildfire: "",
 	},
 	Fighter: {
-		Champion: "",
-		Battle_Master: "",
-		Eldritch_Knight: "",
+		Champion: {
+            description: `The archetypal Champion focuses on the development 
+						of raw physical power honed to deadly perfection.
+						Those who model themselves on this archetype combine 
+						rigorous training with physical excellence to deal 
+						devastating blows`,
+            features: [
+                {
+                    title: " Improved Critical",
+                    description: ` Beginning when you choose this archetype at 3rd 
+								level, your weapon attacks score a critical hit on a 
+								roll of 19 or 20.`,
+                },
+                {
+                    title: "Remarkable Athlete",
+                    description: ` Starting at 7th level, you can add half your proficiency 
+								bonus (round up) to any Strength, Dexterity, or 
+								Constitution check you make that doesn’t already use 
+								your proficiency bonus.
+								In addition, when you make a running long jump, the 
+								distance you can cover increases by a number of feet 
+								equal to your Strength modifier.
+								`,
+                },
+                {
+                    title: "Additional Fighting Style",
+                    description: ` At 10th level, you can choose a second option from the
+								Fighting Style class feature.`,
+                },
+				{
+                    title: "Superior Critical",
+                    description: ` Starting at 15th level, your weapon attacks score a 
+								critical hit on a roll of 18-20.`,
+                },
+				{
+                    title: "Survivor",
+                    description: `At 18th level, you attain the pinnacle of resilience in 
+								battle. At the start of each of your turns, you regain hit 
+								points equal to 5 + your Constitution modifier if you 
+								have no more than half of your hit points left. You don’t 
+								gain this benefit if you have 0 hit points.`,
+                },
+            ],
+        }, 
+		Battle_Master: {
+            description: ` Those who emulate the archetypal Battle Master 
+						employ martial techniques passed down through 
+						generations. To a Battle Master, combat is an academic 
+						field, sometimes including subjects beyond battle such 
+						as weaponsmithing and calligraphy. Not every fighter 
+						absorbs the lessons of history, theory, and artistry 
+						that are reflected in the Battle Master archetype, but 
+						those who do are well-rounded fighters of great skill 
+						and knowledge.`,
+            features: [
+                {
+                    title: "Combat Superiority",
+                    description: `When you choose this archetype at 3rd level, you 
+								learn maneuvers that are fueled by special dice called 
+								superiority dice.
+								Maneuvers. You learn three maneuvers of your 
+								choice, which are detailed under “Maneuvers” below. 
+								Many maneuvers enhance an attack in some way. You 
+								can use only one maneuver per attack.
+								You learn two additional maneuvers of your choice 
+								at 7th, 10th, and 15th level. Each time you learn new 
+								maneuvers, you can also replace one maneuver you 
+								know with a different one.
+								Superiority Dice. You have four superiority dice, 
+								which are d8s. A superiority die is expended when you 
+								use it. You regain all of your expended superiority dice 
+								when you finish a short or long rest.
+								You gain another superiority die at 7th level and one 
+								more at 15th level.
+								Saving Throws. Some of your maneuvers require 
+								your target to make a saving throw to resist the 
+								maneuver’s effects. The saving throw DC is calculated 
+								as follows:
+								Maneuver save DC = 8 + your proficiency bonus + 
+								your Strength or Dexterity modifier (your choice)`,
+                },
+                {
+                    title: " Student of War",
+                    description: ` At 3rd level, you gain proficiency with one type of 
+								artisan’s tools of your choice.`,
+                },
+                {
+                    title: "Know Your Enemy",
+                    description: ` Starting at 7th level, if you spend at least 1 minute 
+								observing or interacting with another creature outside 
+								combat, you can learn certain information about its 
+								capabilities compared to your own. The DM tells you if 
+								the creature is your equal, superior, or inferior in regard 
+								to two of the following characteristics of your choice:
+								• Strength score
+								• Dexterity score
+								• Constitution score
+								• Armor Class
+								• Current hit points
+								• Total class levels (if any)
+								• Fighter class levels (if any)`,
+                },
+				{
+                    title: " Improved Combat Superiority",
+                    description: ` At 10th level, your superiority dice turn into d10s. At
+								18th level, they turn into dl2s.`,
+                },
+                {
+                    title: "Relentless",
+                    description: ` Starting at 15th level, when you roll initiative and 
+								have no superiority dice remaining, you regain 1 
+								superiority die.`,
+                },
+                {
+                    title: "Maneuvers",
+                    description: ` The maneuvers are presented in alphabetical order.
+								Commander’s Strike. When you take the Attack 
+								action on your turn, you can forgo one of your attacks 
+								and use a bonus action to direct one of your companions 
+								to strike. When you do so, choose a friendly creature 
+								who can see or hear you and expend one superiority die. 
+								That creature can immediately use its reaction to make 
+								one weapon attack, adding the superiority die to the 
+								attack’s damage roll.
+
+								Disarming Attack. When you hit a creature with a 
+								weapon attack, you can expend one superiority die to 
+								attempt to disarm the target, forcing it to drop one item 
+								of your choice that it’s holding. You add the superiority 
+								die to the attack’s damage roll, and the target must 
+								make a Strength saving throw. On a failed save, it drops 
+								the object you choose. The object lands at its feet.
+
+								Distracting Strike. When you hit a creature with a 
+								weapon attack, you can expend one superiority die to 
+								distract the creature, giving your allies an opening. You 
+								add the superiority die to the attack’s damage roll. The 
+								next attack roll against the target by an attacker other 
+								than you has advantage if the attack is made before the 
+								start of your next turn.
+
+								Evasive Footwork. When you move, you can expend 
+								one superiority die, rolling the die and adding the 
+								number rolled to your AC until you stop moving.
+
+								Feinting Attack. You can expend one superiority die 
+								and use a bonus action on your turn to feint, choosing 
+								one creature within 5 feet of you as your target. You 
+								have advantage on your next attack roll against that 
+								creature. If that attack hits, add the superiority die to the 
+								attack’s damage roll.
+
+								Goading Attack. When you hit a creature with a 
+								weapon attack, you can expend one superiority die to 
+								attempt to goad the target into attacking you. You add 
+								the superiority die to the attack’s damage roll, and 
+								the target must make a Wisdom saving throw. On a 
+								failed save, the target has disadvantage on all attack 
+								rolls against targets other than you until the end of 
+								your next turn.
+
+								Lunging Attack. When you make a melee weapon 
+								attack on your turn, you can expend one superiority die 
+								to increase your reach for that attack by 5 feet. If you hit, 
+								you add the superiority die to the attack’s damage roll.
+
+								Maneuvering Attack. When you hit a creature with 
+								a weapon attack, you can expend one superiority 
+								die to maneuver one of your comrades into a more 
+								advantageous position. You add the superiority die to the 
+								attack’s damage roll, and you choose a friendly creature 
+								who can see or hear you. That creature can use its 
+								reaction to move up to half its speed without provoking 
+								opportunity attacks from the target of your attack.
+
+								Menacing Attack. When you hit a creature with a 
+								weapon attack, you can expend one superiority die to 
+								attempt to frighten the target. You add the superiority 
+								die to the attack’s damage roll, and the target must 
+								make a Wisdom saving throw. On a failed save, it is 
+								frightened of you until the end of your next turn.
+
+								Parry. When another creature damages you with a 
+								melee attack, you can use your reaction and expend one 
+								superiority die to reduce the damage by the number you 
+								roll on your superiority die + your Dexterity modifier.
+
+								Precision Attack. When you make a weapon attack 
+								roll against a creature, you can expend one superiority 
+								die to add it to the roll. You can use this maneuver 
+								before or after making the attack roll, but before any 
+								effects of the attack are applied.
+
+								Pushing Attack. When you hit a creature with 
+								a weapon attack, you can expend one superiority 
+								die to attempt to drive the target back. You add the 
+								superiority die to the attack's damage roll, and if the 
+								target is Large or smaller, it must make a Strength 
+								saving throw. On a failed save, you push the target up 
+								to 15 feet away from you.
+
+								Rally. On your turn, you can use a bonus action and 
+								expend one superiority die to bolster the resolve of one 
+								of your companions. When you do so, choose a friendly 
+								creature who can see or hear you. That creature gains 
+								temporary hit points equal to the superiority die roll + 
+								your Charisma modifier.
+
+								Riposte. When a creature misses you with a melee 
+								attack, you can use your reaction and expend one 
+								superiority die to make a melee weapon attack against 
+								the creature. If you hit, you add the superiority die to the 
+								attack's damage roll.
+
+								Sweeping Attack. When you hit a creature with a 
+								melee weapon attack, you can expend one superiority 
+								die to attempt to damage another creature with the 
+								same attack. Choose another creature within 5 feet 
+								of the original target and within your reach. If the 
+								original attack roll would hit the second creature, it 
+								takes damage equal to the number you roll on your 
+								superiority die. The damage is of the same type dealt by 
+								the original attack.
+
+								Trip Attack. When you hit a creature with a weapon 
+								attack, you can expend one superiority die to attempt 
+								to knock the target down. You add the superiority die 
+								to the attack’s damage roll, and if the target is Large or 
+								smaller, it must make a Strength saving throw. On a 
+								failed save, you knock the target prone.`,
+                },
+            ],
+        }, 
+		Eldritch_Knight: {
+            description: ` The archetypal Eldritch Knight combines the martial 
+						mastery common to all fighters with a careful study of 
+						magic. Eldritch Knights use magical techniques similar 
+						to those practiced by wizards. They focus their study
+						on two of the eight schools of magic: abjuration and 
+						evocation. Abjuration spells grant an Eldritch Knight 
+						additional protection in battle, and evocation spells deal 
+						damage to many foes at once, extending the fighter’s 
+						reach in combat. These knights learn a comparatively 
+						small number of spells, committing them to memory 
+						instead of keeping them in a spellbook.`,
+            features: [
+                {
+                    title: "Spellcasting",        // needs formatting 4 a real rite runny and add spellcasting table 
+                    description: ` When you reach 3rd level, you augment your martial 
+								prowess with the ability to cast spells. See chapter 10 
+								for the general rules of spellcasting and chapter 11 for 
+								the wizard spell list.
+
+								Cantrips. You learn two cantrips of your choice from 
+								the wizard spell list. You learn an additional wizard 
+								cantrip of your choice at 10th level.
+
+								Spell Slots. The Eldritch Knight Spellcasting table 
+								shows how many spell slots you have to cast your 
+								spells of 1st level and higher. To cast one of these 
+								spells, you must expend a slot of the spell’s level or 
+								higher. You regain all expended spell slots when you 
+								finish a long rest.
+								For example, if you know the 1st-level spell shield and 
+								have a 1st-level and a 2nd-level spell slot available, you 
+								can cast shield using either slot.
+
+								Spells Known of 1st-Level and Higher. You know 
+								three 1st-level wizard spells of your choice, two of which 
+								you must choose from the abjuration and evocation 
+								spells on the wizard spell list.
+								The Spells Known column of the Eldritch Knight 
+								Spellcasting table shows when you learn more wizard 
+								spells of 1st level or higher. Each of these spells must be 
+								an abjuration or evocation spell of your choice, and must 
+								be of a level for which you have spell slots. For instance, 
+								when you reach 7th level in this class, you can learn one 
+								new spell of 1st or 2nd level.
+								The spells you learn at 8th, 14th, and 20th level can 
+								come from any school of magic.
+								Whenever you gain a level in this class, you can 
+								replace one of the wizard spells you know with another 
+								spell of your choice from the wizard spell list. The 
+								new spell must be of a level for which you have spell 
+								slots, and it must be an abjuration or evocation spell, 
+								unless you’re replacing the spell you gained at 8th, 14th, 
+								or 20th level.
+
+								Spellcasting Ability. Intelligence is your spellcasting 
+								ability for your wizard spells, since you learn your 
+								spells through study and memorization. You use your 
+								Intelligence whenever a spell refers to your spellcasting 
+								ability. In addition, you use your Intelligence modifier 
+								when setting the saving throw DC for a wizard spell you 
+								cast and when making an attack roll with one.
+
+								Spell save DC = 8 + your proficiency bonus + 
+								your Intelligence modifier
+								Spell attack modifier = your proficiency bonus + 
+								your Intelligence modifier
+								
+								 `,
+                },
+                {
+                    title: "Weapon Bond",
+                    description: `At 3rd level, you learn a ritual that creates a magical 
+								bond between yourself and one weapon. You perform 
+								the ritual over the course of 1 hour, which can be done  during a short rest. The weapon must be within your 
+								reach throughout the ritual, at the conclusion of which 
+								you touch the weapon and forge the bond.
+								Once you have bonded a weapon to yourself, you 
+								can’t be disarmed of that weapon unless you are 
+								incapacitated. If it is on the same plane of existence, 
+								you can summon that weapon as a bonus action on your 
+								turn, causing it to teleport instantly to your hand.
+								You can have up to two bonded weapons, but can 
+								summon only one at a time with your bonus action.
+								If you attempt to bond with a third weapon, you must 
+								break the bond with one of the other two.`,
+                },
+                {
+                    title: "War Magic",
+                    description: `Beginning at 7th level, when you use your action to 
+								cast a cantrip, you can make one weapon attack as a 
+								bonus action.`,
+                },
+				{
+                    title: "Eldritch Strike",
+                    description: ` At 10th level, you learn how to make your weapon 
+								strikes undercut a creature’s resistance to your spells. 
+								When you hit a creature with a weapon attack, that 
+								creature has disadvantage on the next saving throw 
+								it makes against a spell you cast before the end of 
+								your next turn.`,
+                },
+                {
+                    title: "Arcane Charge",
+                    description: `At 15th level, you gain the ability to teleport up to 30 
+								feet to an unoccupied space you can see when you use 
+								your Action Surge. You can teleport before or after the 
+								additional action.`,
+                },
+                {
+                    title: "Improved War Magic",
+                    description: `Starting at 18th level, when you use your action to 
+								cast a spell, you can make one weapon attack as a 
+								bonus action.`,
+                },
+            ],
+        }, 
 		Arcane_Archer: "",
 		Cavalier: "",
 		Samurai: "",
@@ -1098,9 +1581,249 @@ export const subclassDesc = {
 		Echo_Knight: "",
 	},
 	Monk: {
-		Way_of_the_Open_Hand: "",
-		Way_of_Shadow: "",
-		Way_of_the_Four_Elements: "",
+		Way_of_the_Open_Hand: {
+            description: `Monks of the Way of the Open Hand are the ultimate 
+						masters of martial arts combat, whether armed or 
+						unarmed. They learn techniques to push and trip their 
+						opponents, manipulate ki to heal damage to their 
+						bodies, and practice advanced meditation that can 
+						protect them from harm`,
+            features: [
+                {
+                    title: "Open Hand Technique",
+                    description: `Starting when you choose this tradition at 3rd level, 
+								you can manipulate your enemy’s ki when you harness 
+								your own. Whenever you hit a creature with one of the 
+								attacks granted by your Flurry of Blows, you can impose 
+								one of the following effects on that target:
+								• It must succeed on a Dexterity saving throw or be 
+								knocked prone.
+								• It must make a Strength saving throw. If it fails, you 
+								can push it up to 15 feet away from you.
+								• It can’t take reactions until the end of your next turn.`,
+                },
+                {
+                    title: "Wholeness of Body",
+                    description: `At 6th level, you gain the ability to heal yourself. As an 
+								action, you can regain hit points equal to three times your 
+								monk level. You must finish a long rest before you 
+								can use this feature again.
+`,
+                },
+                {
+                    title: "Tranquility",
+                    description: `Beginning at 11th level, you can enter a special 
+								meditation that surrounds you with an aura of peace. At 
+								the end of a long rest, you gain the effect of a sanctuary 
+								spell that lasts until the start of your next long rest (the 
+								spell can end early as normal). The saving throw DC 
+								for the spell equals 8 + your Wisdom modifier + your 
+								proficiency bonus.`,
+                },
+				{
+                    title: "Quivering Palm",
+                    description: ` At 17th level, you gain the ability to set up lethal 
+								vibrations in someone’s body. When you hit a creature 
+								with an unarmed strike, you can spend 3 ki points to 
+								start these imperceptible vibrations, which last for a 
+								number of days equal to your monk level. The vibrations 
+								are harmless unless you use your action to end them.
+								To do so, you and the target must be on the same plane 
+								of existence. When you use this action, the creature 
+								must make a Constitution saving throw. If it fails, it is 
+								reduced to 0 hit points. If it succeeds, it takes 10d10 
+								necrotic damage.
+								You can have only one creature under the effect of this 
+								feature at a time. You can choose to end the vibrations 
+								harmlessly without using an action.`,
+                },
+            ],
+        }, 
+		Way_of_Shadow: {
+            description: `Monks of the Way of Shadow follow a tradition that 
+						values stealth and subterfuge. These monks might 
+						be called ninjas or shadowdancers, and they serve as 
+						spies and assassins. Sometimes the members of a 
+						ninja monastery are family members, forming a clan 
+						sworn to secrecy about their arts and missions. Other 
+						monasteries are more like thieves’ guilds, hiring out 
+						their services to nobles, rich merchants, or anyone else 
+						who can pay their fees. Regardless of their methods, the 
+						heads of these monasteries expect the unquestioning 
+						obedience of their students.`,
+            features: [
+                {
+                    title: "Shadow Arts",
+                    description: ` Starting when you choose this tradition at 3rd level, you 
+								can use your ki to duplicate the effects of certain spells. 
+								As an action, you can spend 2 ki points to cast darkness, 
+								darkvision, pass without trace, or silence, without 
+								providing material components. Additionally, you gain 
+								the minor illusion cantrip if you don’t already know it.`,
+                },
+                {
+                    title: "Shadow Step",
+                    description: ` At 6th level, you gain the ability to step from one shadow 
+								into another. When you are in dim light or darkness, 
+								as a bonus action you can teleport up to 60 feet to an 
+								unoccupied space you can see that is also in dim light 
+								or darkness. You then have advantage on the first melee 
+								attack you make before the end of the turn.`,
+                },
+                {
+                    title: "Cloak of Shadows",
+                    description: ` By 11th level, you have learned to become one with 
+								the shadows. When you are in an area of dim light or 
+								darkness, you can use your action to become invisible. 
+								You remain invisible until you make an attack, cast a 
+								spell, or are in an area of bright light.`,
+                },
+				{
+                    title: "Oppurtunist",
+                    description: ` At 17th level, you can exploit a creature's momentary 
+								distraction when it is hit by an attack. Whenever a 
+								creature within 5 feet of you is hit by an attack made by 
+								a creature other than you, you can use your reaction to 
+								make a melee attack against that creature.`,
+                },
+            ],
+        }, 
+		Way_of_the_Four_Elements: {
+            description: ` You follow a monastic tradition that teaches you to 
+						harness the elements. When you focus your ki, you can 
+						align yourself with the forces of creation and bend the 
+						four elements to your will, using them as an extension 
+						of your body. Some members of this tradition dedicate 
+						themselves to a single element, but others weave the 
+						elements together.
+						Many monks of this tradition tattoo their bodies with 
+						representations of their ki powers, commonly imagined 
+						as coiling dragons, but also as phoenixes, fish, plants, 
+						mountains, and cresting waves.`,
+            features: [
+                {
+                    title: "Disciple of the Elements ", // Add skillpoints table for a real rite runny, add formatting 
+                    description: `When you choose this tradition at 3rd level, you learn 
+								magical disciplines that harness the power of the four 
+								elements. A discipline requires you to spend ki points 
+								each time you use it.
+								You know the Elemental Attunement discipline and 
+								one other elemental discipline of your choice, which are 
+								detailed in the “Elemental Disciplines” section below. 
+								You learn one additional elemental discipline of your 
+								choice at 6th, 11th, and 17th level.
+								Whenever you learn a new elemental discipline, 
+								you can also replace one elemental discipline that you 
+								already know with a different discipline.
+								Casting Elemental Spells. Some elemental 
+								disciplines allow you to cast spells. See chapter 10 for 
+								the general rules of spellcasting. To cast one of these 
+								spells, you use its casting time and other rules, but you 
+								don’t need to provide material components for it.
+								Once you reach 5th level in this class, you can spend 
+								additional ki points to increase the level of an elemental 
+								discipline spell that you cast, provided that the spell has 
+								an enhanced effect at a higher level, as burning hands 
+								does. The spell's level increases by 1 for each additional 
+								ki point you spend. For example, if you are a 5th-level 
+								monk and use Sweeping Cinder Strike to cast burning 
+								hands, you can spend 3 ki points to cast it as a 2nd-level 
+								spell (the discipline’s base cost of 2 ki points plus 1).
+								The maximum number of ki points you can spend to 
+								cast a spell in this way (including its base ki point cost 
+								and any additional ki points you spend to increase its 
+								level) is determined by your monk level, as shown in the 
+								Spells and Ki Points table`,
+                },
+                {
+                    title: "Elemental Disciplines", // add formatting for a real right runny 
+                    description: ` The elemental disciplines are presented in alphabetical 
+								order. If a discipline requires a level, you must be that 
+								level in this class to learn the discipline.
+								Breath of Winter (17th Level Required). You can 
+								spend 6 ki points to cast cone of cold.
+								Clench of the North Wind (6th Level Required). You 
+								can spend 3 ki points to cast hold person.
+								Elemental Attunement. You can use your action to 
+								briefly control elemental forces nearby, causing one of 
+								the following effects of your choice:
+								• Create a harmless, instantaneous sensory effect 
+								related to air, earth, fire, or water, such as a shower of 
+								sparks, a puff of wind, a spray of light mist, or a gentle 
+								rumbling of stone.
+								• Instantaneously light or snuff out a candle, a torch, or 
+								a small campfire.
+								• Chill or warm up to 1 pound of nonliving material for 
+								up to 1 hour.
+								• Cause earth, fire, water, or mist that can fit within a 
+								1-foot cube to shape itself into a crude form you desig
+								nate for 1 minute.
+								Eternal Mountain Defense (11th Level Required).
+								You can spend 5 ki points to cast stoneskin, 
+								targeting yourself.
+								Fangs of the Fire Snake. When you use the Attack 
+								action on your turn, you can spend 1 ki point to cause 
+								tendrils of flame to stretch out from your fists and feet. 
+								Your reach with your unarmed strikes increases by 
+								10 feet for that action, as well as the rest of the turn.
+								A hit with such an attack deals fire damage instead of 
+								bludgeoning damage, and if you spend 1 ki point when 
+								the attack hits, it also deals an extra 1d10 fire damage.
+								Fist of Four Thunders. You can spend 2 ki points to 
+								cast thunderwave.
+								Fist of Unbroken Air. You can create a blast of 
+								compressed air that strikes like a mighty fist. As an 
+								action, you can spend 2 ki points and choose a creature 
+								within 30 feet of you. That creature must make a 
+								Strength saving throw. On a failed save, the creature 
+								takes 3d10 bludgeoning damage, plus an extra 1d10 
+								bludgeoning damage for each additional ki point you 
+								spend, and you can push the creature up to 20 feet away 
+								from you and knock it prone. On a successful save, the 
+								creature takes half as much damage, and you don’t push 
+								it or knock it prone.
+								Flames of the Phoenix (11th Level Required). You 
+								can spend 4 ki points to cast fireball.
+								Gong of the Summit (6th Level Required). You can 
+								spend 3 ki points to cast shatter.
+								Mist Stance (11th Level Required). You can spend 4 
+								ki points to cast gaseous form, targeting yourself.
+								Ride the Wind (11th Level Required). You can spend
+								4 ki points to cast fly, targeting yourself.
+								River of Hungry Flame (17th Level Required). You 
+								can spend 5 ki points to cast wall of fire.
+								Rush of the Gale Spirits. You can spend 2 ki points 
+								to cast gust of wind.
+								Shape the Flowing River. As an action, you can 
+								spend 1 ki point to choose an area of ice or water no 
+								larger than 30 feet on a side within 120 feet of you. You 
+								can change water to ice within the area and vice versa, 
+								and you can reshape ice in the area in any manner you 
+								choose. You can raise or lower the ice’s elevation, create 
+								or fill in a trench, erect or flatten a wall, or form a pillar. 
+								The extent of any such changes can’t exceed half the 
+								area’s largest dimension. For example, if you affect a 
+								30-foot square, you can create a pillar up to 15 feet high, 
+								raise or lower the square’s elevation by up to 15 feet, dig 
+								a trench up to 15 feet deep, and so on. You can’t shape 
+								the ice to trap or injure a creature in the area.
+								Sweeping Cinder Strike. You can spend 2 ki points to 
+								cast burning hands.
+								Water Whip. You can spend 2 ki points as a bonus 
+								action to create a whip of water that shoves and pulls 
+								a creature to unbalance it. A creature that you can see 
+								that is within 30 feet of you must make a Dexterity 
+								saving throw. On a failed save, the creature takes 3d10 
+								bludgeoning damage, plus an extra 1d10 bludgeoning 
+								damage for each additional ki point you spend, and you 
+								can either knock it prone or pull it up to 25 feet closer 
+								to you. On a successful save, the creature takes half as 
+								much damage, and you don’t pull it or knock it prone.
+								Wave of Rolling Earth (17th Level Required). You 
+								can spend 6 ki points to cast wall of stone.`,
+                },
+            ],
+        }, 
 		Way_of_the_Drunken_Master: "",
 		Way_of_the_Kensei: "",
 		Way_of_the_Sun_Soul: "",
