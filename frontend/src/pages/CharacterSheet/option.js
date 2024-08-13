@@ -17,11 +17,11 @@ export const classesArray = [
 // pg 39 in DND 5e pdf
 export const classDesc = {
 	Artificer: {
-	description: "A master of invention, Artificers use ingenuity and magic to unlock extraordinary abilities, crafting magical items and imbuing objects with their own arcane energy.",
-	hitDie: "1d8",
-	primaryAbility: "Intelligence",
-	savingThrowProficiencies: "Constitution, Intelligence",
-	armorAndWeaponProficiencies: "Light armor, medium armor, shields, simple weapons"
+		description: "A master of invention, Artificers use ingenuity and magic to unlock extraordinary abilities, crafting magical items and imbuing objects with their own arcane energy.",
+		hitDie: "1d8",
+		primaryAbility: "Intelligence",
+		savingThrowProficiencies: "Constitution, Intelligence",
+		armorAndWeaponProficiencies: "Light armor, medium armor, shields, simple weapons"
 	},
 
 	Barbarian: {
@@ -39,7 +39,7 @@ export const classDesc = {
 		armorAndWeaponProficiencies: " Light armor, simple weapons, hand,crossbows, longswords, rapiers, shortswords",
 	},
 	Cleric: {
-		description: "A priestly champion who wields divinemagic in service of a higher power",
+		description: "A priestly champion who wields divine magic in service of a higher power",
 		hitDie: "d8",
 		primaryAbility: "Wisdom",
 		savingThrowProficiencies: "Wisdom and Charisma",
