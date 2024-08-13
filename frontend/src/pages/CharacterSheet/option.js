@@ -549,22 +549,303 @@ export const subclassDesc = {
 						Onatar, Moradin, Hephaestus, and Goibhniu`,
             features: [
                 {
-                    title: "",
-                    description: "",
+                    title: "Blessings of Knowledge",
+                    description: `At 1st level, you learn two languages of your choice.
+								You also become proficient in your choice of two of the 
+								following skills: Arcana, History, Nature, or Religion.
+								Your proficiency bonus is doubled for any ability check 
+								you make that uses either of those skills.`
                 },
                 {
-                    title: "",
-                    description: "",
+                    title: "Channel Divinity: Knowledge of the Ages",
+                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								to tap into a divine well of knowledge. As an action, 
+								you choose one skill or tool. For 10 minutes, you have 
+								proficiency with the chosen skill or tool.`
                 },
                 {
-                    title: "",
-                    description: "",
+                    title: "Channel Divinity: Read Thoughts",
+                    description: `At 6th level, you can use your Channel Divinity to read a 
+								creature’s thoughts. You can then use your access to the 
+								creature’s mind to command it.
+								As an action, choose one creature that you can see 
+								within 60 feet of you. That creature must make a 
+								Wisdom saving throw. If the creature succeeds on the 
+								saving throw, you can’t use this feature on it again until 
+								you finish a long rest.
+								If the creature fails its save, you can read its surface 
+								thoughts (those foremost in its mind, reflecting its 
+								current emotions and what it is actively thinking 
+								about) when it is within 60 feet of you. This effect lasts 
+								for 1 minute.
+								During that time, you can use your action to end this 
+								effect and cast the suggestion spell on the creature 
+								without expending a spell slot. The target automatically 
+								fails its saving throw against the spell`
+                },
+				{
+                    title: "Potent Spellcasting",
+                    description: `  Starting at 8th level, you add your Wisdom modifier to 
+									the damage you deal with any cleric cantrip.`
+                },
+				{
+                    title: "Visions of the Past",
+                    description: ` Starting at 17th level, you can call up visions of the 
+								past that relate to an object you hold or your immediate 
+								surroundings. You spend at least 1 minute in meditation 
+								and prayer, then receive dreamlike, shadowy glimpses 
+								of recent events. You can meditate in this way for a 
+								number of minutes equal to your Wisdom score and 
+								must maintain concentration during that time, as if you 
+								were casting a spell.
+								Once you use this feature, you can’t use it again until 
+								you finish a short or long rest.
+								Object Reading. Holding an object as you meditate, 
+								you can see visions of the object’s previous owner.
+								After meditating for 1 minute, you learn how the owner 
+								acquired and lost the object, as well as the most recent 
+								significant event involving the object and that owner.
+								If the object was owned by another creature in the 
+								recent past (within a number of days equal to your 
+								Wisdom score), you can spend 1 additional minute 
+								for each owner to learn the same information about 
+								that creature.
+								Area Reading. As you meditate, you see visions 
+								of recent events in your immediate vicinity (a room, 
+								street, tunnel, clearing, or the like, up to a 50-foot cube), 
+								going back a number of days equal to your Wisdom 
+								score. For each minute you meditate, you learn about 
+								one significant event, beginning with the most recent. 
+								Significant events typically involve powerful emotions, 
+								such as battles and betrayals, marriages and murders, 
+								births and funerals. However, they might also include 
+								more mundane events that are nevertheless important 
+								in your current situation`
                 },
             ],
         },
-		Life_Domain: "",
-		Light_Domain: "",
-		Nature_Domain: "",
+		Life_Domain: {
+            description: `The Life domain focuses on the vibrant positive 
+						energy—one of the fundamental forces of the universe— 
+						that sustains all life. The gods of life promote vitality 
+						and health through healing the sick and wounded, 
+						caring for those in need, and driving away the forces of 
+						death and undeath. Almost any non-evil deity can claim 
+						influence over this domain, particularly agricultural 
+						deities (such as Chauntea, Arawai, and Demeter), sun 
+						gods (such as Lathander, Pelor, and Re-Horakhty), gods
+						of healing or endurance (such as Ilmater, Mishakal, 
+						Apollo, and Diancecht), and gods of home and 
+						community (such as Hestia, Hathor, and Boldrei).
+
+						Life Domain Spells
+						Cleric Level Spells
+						1st bless, cure wounds
+						3rd lesser restoration, spiritual weapon
+						5th beacon of hope, revivify
+						7th death ward, guardian of faith
+						9th mass cure wounds, raise dead`,
+            features: [
+                {
+                    title: " Bonus Proficiency",
+                    description: ` When you choose this domain at 1st level, you gain 
+								proficiency with heavy armor.`
+                },
+                {
+                    title: "Disciple of Life",
+                    description: ` Also starting at 1st level, your healing spells are more 
+								effective. Whenever you use a spell of 1st level or higher 
+								to restore hit points to a creature, the creature regains 
+								additional hit points equal to 2 + the spell’s level`
+                },
+                {
+                    title: "Channel Divinity: Preserve Life",
+                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								to heal the badly injured.
+								As an action, you present your holy symbol and 
+								evoke healing energy that can restore a number of hit 
+								points equal to five times your cleric level. Choose any 
+								creatures within 30 feet of you, and divide those hit 
+								points among them. This feature can restore a creature 
+								to no more than half of its hit point maximum. You can’t 
+								use this feature on an undead or a construct`
+                },
+				{
+                    title: "Blessed Healer",
+                    description: `Beginning at 6th level, the healing spells you cast on 
+								others heal you as well. When you cast a spell of 1st 
+								level or higher that restores hit points to a creature 
+								other than you, you regain hit points equal to 2 + the 
+								spell’s level.`
+                },
+                {
+                    title: "Divine Strike",
+                    description: `At 8th level, you gain the ability to infuse your weapon 
+								strikes with divine energy. Once on each of your turns 
+								when you hit a creature with a weapon attack, you can 
+								cause the attack to deal an extra 1d8 radiant damage to 
+								the target. When you reach 14th level, the extra damage 
+								increases to 2d8.`
+                },
+                {
+                    title: "Supreme Healing",
+                    description: `Starting at 17th level, when you would normally roll 
+								one or more dice to restore hit points with a spell, you 
+								instead use the highest number possible for each die. 
+								For example, instead of restoring 2d6 hit points to a 
+								creature, you restore 12.`
+                },
+            ],
+        },
+		Light_Domain: {
+            description: `Gods of light—including Helm, Lathander, Pholtus, 
+						Branchala, the Silver Flame, Belenus, Apollo, and 
+						Re-Horakhty—promote the ideals of rebirth and 
+						renewal, truth, vigilance, and beauty, often using the 
+						symbol of the sun. Some of these gods are portrayed 
+						as the sun itself or as a charioteer who guides the sun
+						across the sky. Others are tireless sentinels whose eyes 
+						pierce every shadow and see through every deception. 
+						Some are deities of beauty and artistry, who teach that 
+						art is a vehicle for the soul's improvement. Clerics of a 
+						god of light are enlightened souls infused with radiance 
+						and the power of their gods’ discerning vision, charged 
+						with chasing away lies and burning away darkness.
+						
+						Life Domain Spells
+						Cleric Level
+						
+						1st burning hands, faerie fire
+						3rd flaming sphere, scorching ray
+						5th daylight, fireball
+						7th wall of fire, guardian of faith
+						9th flame strike, scrying`,
+            features: [
+                {
+                    title: " Bonus cantrip ",
+                    description: ` When you choose this domain at 1st level, you gain the 
+								light cantrip if you don’t already know it.`
+                },
+                {
+                    title: "Warding Flare",
+                    description: `Also at 1st level, you can interpose divine light between 
+								yourself and an attacking enemy. When you are attacked 
+								by a creature within 30 feet of you that you can see, 
+								you can use your reaction to impose disadvantage on 
+								the attack roll, causing light to flare before the attacker 
+								before it hits or misses. An attacker that can’t be blinded 
+								is immune to this feature.
+								You can use this feature a number of times equal to 
+								your Wisdom modifier (a minimum of once). You regain 
+								all expended uses when you finish a long rest`
+                },
+                {
+                    title: "Channel Divinity: Radiance of the Dawn",
+                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								to harness sunlight, banishing darkness and dealing 
+								radiant damage to your foes.
+								As an action, you present your holy symbol, and any 
+								magical darkness within 30 feet of you is dispelled. 
+								Additionally, each hostile creature within 30 feet of 
+								you must make a Constitution saving throw. A creature 
+								takes radiant damage equal to 2d10 + your cleric level 
+								on a failed saving throw, and half as much damage on a 
+								successful one. A creature that has total cover from you 
+								is not affected.`
+                },
+				{
+                    title: "Improved Flare",
+                    description: `Starting at 6th level, you can also use your Warding 
+								Flare feature when a creature that you can see within 
+								30 feet of you attacks a creature other than you.`
+                },
+                {
+                    title: "Potent Spellcasting",
+                    description: ` Starting at 8th level, you add your Wisdom modifier to 
+								the damage you deal with any cleric cantrip.`
+                },
+                {
+                    title: "Corona of Light",
+                    description: `Starting at 17th level, you can use your action to activate 
+								an aura of sunlight that lasts for 1 minute or until you 
+								dismiss it using another action. You emit bright light in 
+								a 60-foot radius and dim light 30 feet beyond that. Your 
+								enemies in the bright light have disadvantage on saving 
+								throws against any spell that deals fire or radiant damage`
+                },
+            ],
+        },
+		Nature_Domain: {
+            description: ` Gods of nature are as varied as the natural world 
+						itself, from inscrutable gods of the deep forests (such 
+						as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to 
+						friendly deities associated with particular springs and 
+						groves (such as Eldath). Druids revere nature as a 
+						whole and might serve one of these deities, practicing 
+						mysterious rites and reciting all-but-forgotten prayers in 
+						their own secret tongue. But many of these gods have 
+						clerics as well, champions who take a more active role 
+						in advancing the interests of a particular nature god. 
+						These clerics might hunt the evil monstrosities that 
+						despoil the woodlands, bless the harvest of the faithful, 
+						or wither the crops of those who anger their gods
+						
+						Nature Domain Spells
+						Cleric Level
+						1st animal friendship, speak with animals
+						3rd barkskin, spike growth
+						5th plaant growth, wind wall
+						7th dominate beast, grasping vines
+						9th insect plague, tree stride`,
+            features: [
+                {
+                    title: "Acolyte of Nature",
+                    description: ` At 1st level, you learn one druid cantrip of your choice. 
+								You also gain proficiency in one of the following skills of 
+								your choice: Animal Handling, Nature, or Survival`
+                },
+                {
+                    title: "Bonus Proficiency",
+                    description: "",
+                },
+                {
+                    title: "Channel Divinity: Charm of Animals and Plants",
+                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								to charm animals and plants.
+								As an action, you present your holy symbol and invoke 
+								the name of your deity. Each beast or plant creature that 
+								can see you within 30 feet of you must make a Wisdom 
+								saving throw. If the creature fails its saving throw, it is 
+								charmed by you for 1 minute or until it takes damage. 
+								While it is charmed by you, it is friendly to you and other 
+								creatures you designate.`
+                },
+				{
+                    title: "Dampen Elements",
+                    description: ` Starting at 6th level, when you or a creature within 30 
+								feet of you takes acid, cold, fire, lightning, or thunder 
+								damage, you can use your reaction to grant resistance to 
+								the creature against that instance of the damage.`
+                },
+                {
+                    title: "Divine Strike",
+                    description: ` At 8th level, you gain the ability to infuse your weapon 
+								strikes with divine energy. Once on each of your turns 
+								when you hit a creature with a weapon attack, you 
+								can cause the attack to deal an extra 1d8 cold, fire, or 
+								lightning damage (your choice) to the target. When you 
+								reach 14th level, the extra damage increases to 2d8.`
+                },
+                {
+                    title: "Master of Nature",
+                    description: `At 17th level, you gain the ability to command animals 
+								and plant creatures. While creatures are charmed by 
+								your Charm Animals and Plants feature, you can take 
+								a bonus action on your turn to verbally command what 
+								each of those creatures will do on its next turn.`
+                },
+            ],
+        },
 		Tempest_Domain: "",
 		Trickery_Domain: "",
 		War_Domain: "",
