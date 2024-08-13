@@ -846,9 +846,230 @@ export const subclassDesc = {
                 },
             ],
         },
-		Tempest_Domain: "",
-		Trickery_Domain: "",
-		War_Domain: "",
+		Tempest_Domain: {
+            description: ` Gods whose portfolios include the Tempest dom ain- 
+						including Talos, Umberlee, Kord, Zeboim, the 
+						Devourer, Zeus, and Thor—govern storms, sea, and 
+						sky. They include gods of lightning and thunder, gods 
+						of earthquakes, some fire gods, and certain gods of 
+						violence, physical strength, and courage. In some 
+						pantheons, a god of this domain rules over other deities 
+						and is known for swift justice delivered by thunderbolts. 
+						In the pantheons of seafaring people, gods of this 
+						domain are ocean deities and the patrons of sailors. 
+						Tempest gods send their clerics to inspire fear in the 
+						common folk, either to keep those folk on the path of
+						righteousness or to encourage them to offer sacrifices of 
+						propitiation to ward off divine wrath.
+						
+						Tempest Domain Spells
+						Cleric Level
+						
+						1st fog cloud, thunderwave
+						3rd gust of wind, shatter
+						5th call lightning, sleet storm
+						7th control water, ice storm
+						9th destructive wave, insect plague`,
+            features: [
+                {
+                    title: "Bonus Proficiencies",
+                    description: ` At 1st level, you gain proficiency with martial weapons 
+								and heavy armor`,
+                },
+                {
+                    title: "Wrath of the Storm",
+                    description: `Also at 1st level, you can thunderously rebuke attackers. 
+								When a creature within 5 feet of you that you can see 
+								hits you with an attack, you can use your reaction to 
+								cause the creature to make a Dexterity saving throw. 
+								The creature takes 2d8 lightning or thunder damage 
+								(your choice) on a failed saving throw, and half as much 
+								damage on a successful one.
+								You can use this feature a number of times equal to 
+								your Wisdom modifier (a minimum of once). You regain 
+								all expended uses when you finish a long rest.`,
+                },
+                {
+                    title: "Channel Divinity: Destructive Wrath",
+                    description: `Starting at 2nd level, you can use your Channel Divinity 
+								to wield the power of the storm with unchecked ferocity.
+								When you roll lightning or thunder damage, you can 
+								use your Channel Divinity to deal maximum damage, 
+								instead of rolling.`,
+                },
+				{
+                    title: "Thunderbolt Strike",
+                    description: ` At 6th level, when you deal lightning damage to a Large 
+								or smaller creature, you can also push it up to 10 feet 
+								away from you.`,
+                },
+                {
+                    title: "Divine Strike",
+                    description: `At 8th level, you gain the ability to infuse your weapon 
+								strikes with divine energy. Once on each of your turns 
+								when you hit a creature with a weapon attack, you can 
+								cause the attack to deal an extra 1d8 thunder damage to 
+								the target. When you reach 14th level, the extra damage 
+								increases to 2d8.`,
+                },
+                {
+                    title: "Stormborn",
+                    description: `At 17th level, you have a flying speed equal to 
+								your current walking speed whenever you are not 
+								underground or indoors.`,
+                },
+            ],
+        }, 
+		Trickery_Domain: {
+            description: `Gods of trickery—such as Tymora, Beshaba, 
+						Olidammara, the Traveler, Garl Glittergold, and 
+						Loki—are mischief-makers and instigators who stand 
+						as a constant challenge to the accepted order among 
+						both gods and mortals. They’re patrons of thieves, 
+						scoundrels, gamblers, rebels, and liberators. Their 
+						clerics are a disruptive force in the world, puncturing 
+						pride, mocking tyrants, stealing from the rich, freeing 
+						captives, and flouting hollow traditions. They prefer
+						subterfuge, pranks, deception, and theft rather than 
+						direct confrontation.
+						
+						Trickery Domain Spells
+						Cleric Level
+						
+						1st charm person, disguise self
+						3rd mirror image, pass without trace
+						5th blink, dispel magic
+						7th dimension door, polymorph
+						9th dominate person`,
+            features: [
+                {
+                    title: " Blessing of the Trickster ",
+                    description: `Starting when you choose this domain at 1st level, you 
+								can use your action to touch a willing creature other 
+								than yourself to give it advantage on Dexterity (Stealth) 
+								checks. This blessing lasts for 1 hour or until you use 
+								this feature again.`,
+                },
+                {
+                    title: "Channel Divinity: Invoke Duplicity",
+                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								to create an illusory duplicate of yourself.
+								As an action, you create a perfect illusion of 
+								yourself that lasts for 1 minute, or until you lose your 
+								concentration (as if you were concentrating on a spell). 
+								The illusion appears in an unoccupied space that you 
+								can see within 30 feet of you. As a bonus action on your 
+								turn, you can move the illusion up to 30 feet to a space 
+								you can see, but it must remain within 120 feet of you.
+								For the duration, you can cast spells as though you 
+								were in the illusion’s space, but you must use your own 
+								senses. Additionally, when both you and your illusion 
+								are within 5 feet of a creature that can see the illusion, 
+								you have advantage on attack rolls against that creature, 
+								given how distracting the illusion is to the target.`,
+                },
+                {
+                    title: " Channel Divinity: Cloak of Shadows",
+                    description: ` Starting at 6th level, you can use your Channel 
+								Divinity to vanish.
+								As an action, you become invisible until the end of your 
+								next turn. You become visible if you attack or cast a spell`,
+                },
+				{
+                    title: "Divine Strike",
+                    description: ` At 8th level, you gain the ability to infuse your weapon 
+								strikes with poison—a gift from your deity. Once on each 
+								of your turns when you hit a creature with a weapon 
+								attack, you can cause the attack to deal an extra 1d8 
+								poison damage to the target. When you reach 14th level, 
+								the extra damage increases to 2d8`,
+                },
+                {
+                    title: "Improved Duplicity",
+                    description: ` At 17th level, you can create up to four duplicates 
+								of yourself, instead of one, when you use Invoke 
+								Duplicity. As a bonus action on your turn, you can 
+								move any number of them up to 30 feet, to a maximum 
+								range of 120 feet.`,
+                },
+				
+            ],
+        }, 
+		War_Domain: {
+            description: `War has many manifestations. It can make heroes of 
+						ordinary people. It can be desperate and horrific, with 
+						acts of cruelty and cowardice eclipsing instances of 
+						excellence and courage. In either case, the gods of war
+						watch over warriors and reward them for their great 
+						deeds. The clerics of such gods excel in battle, inspiring 
+						others to fight the good fight or offering acts of violence 
+						as prayers. Gods of war include champions of honor 
+						and chivalry (such as Torm, Heironeous, and Kiri- 
+						Jolith) as well as gods of destruction and pillage (such 
+						as Erythnul, the Fury, Gruumsh, and Ares) and gods of 
+						conquest and domination (such as Bane, Hextor, and 
+						Maglubiyet). Other war gods (such as Tempus, Nike, 
+						and Nuada) take a more neutral stance, promoting war 
+						in all its manifestations and supporting warriors in any 
+						circumstance.
+						
+						War Domain Spells
+						Cleric Level
+						
+						1st divine favor, shield of faith
+						3rd magic weapon, spiritual weapon
+						5th crusader's mantle, spririt guardians
+						7th freedom of movement, stoneskin
+						9th flame strike, hold monster`,
+            features: [
+                {
+                    title: " Bonus Proficiencies",
+                    description: `At 1st level, you gain proficiency with martial weapons 
+							and heavy armor.`,
+                },
+                {
+                    title: "War Priest",
+                    description: ` From 1st level, your god delivers bolts of inspiration to 
+								you while you are engaged in battle. When you use the 
+								Attack action, you can make one weapon attack as a 
+								bonus action.
+								You can use this feature a number of times equal to 
+								your Wisdom modifier (a minimum of once). You regain 
+								all expended uses when you finish a long rest.`,
+                },
+                {
+                    title: "Channel Divinity: Guided Strike ",
+                    description: `Starting at 2nd level, you can use your Channel Divinity 
+								to strike with supernatural accuracy. When you make 
+								an attack roll, you can use your Channel Divinity to gain 
+								a +10 bonus to the roll. You make this choice after you 
+								see the roll, but before the DM says whether the attack 
+								hits or misses.`,
+                },
+				{
+                    title: "Channel Divinity: War God’s Blessing",
+                    description: `At 6th level, when a creature within 30 feet of you 
+								makes an attack roll, you can use your reaction to grant 
+								that creature a +10 bonus to the roll, using your Channel 
+								Divinity. You make this choice after you see the roll, but 
+								before the DM says whether the attack hits or misses.`,
+                },
+                {
+                    title: "Divine Strike",
+                    description: ` At 8th level, you gain the ability to infuse your weapon 
+								strikes with divine energy. Once on each of your turns 
+								when you hit a creature with a weapon attack, you can 
+								cause the attack to deal an extra 1d8 damage of the 
+								same type dealt by the weapon to the target. When you 
+								reach 14th level, the extra damage increases to 2d8.`,
+                },
+                {
+                    title: "Avatar of Battle",
+                    description: ` At 17th level, you gain resistance to bludgeoning, piercing, 
+								and slashing damage from nonmagical weapons.`,
+                },
+            ],
+        }, 
 		Death_Domain: "",
 		Arcana_Domain: "",
 		Forge_Domain: "",
