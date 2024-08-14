@@ -3216,7 +3216,7 @@ export const alignmentArray = [
 	"Neutral Evil",
 	"Chaotic Evil",
 ];
-//ds
+
 export const alignmentDesc = {
 	Lawful_Good: {
         description: `(LG) creatures can be counted on to do 
@@ -3242,24 +3242,34 @@ others according to their needs.`,
 						some wizards are lawful neutral.`,
     },
 	Neutral: {
-        description: ``,
-        expectedClasses:``,
+        description: ` (N) is the alignment of those who prefer to 
+					steer clear of moral questions and don’t take sides, doing what seems best at the time`,
+        expectedClasses:` Lizardfolk, most 
+						druids, and many humans are neutral`,
     },
 	Chaotic_Neutral: {
-        description: ``,
-        expectedClasses:``,
+        description: ` (CN) creatures follow their whims, 
+					holding their personal freedom above all else.`,
+        expectedClasses:`Many barbarians and rogues, and some bards, are 
+						chaotic neutral.`,
     },
 	Lawful_Evil: {
-        description: ``,
-        expectedClasses:``,
+        description: `(LE) creatures methodically take what they 
+					want, within the limits of a code of tradition, loyalty, or 
+					order. `,
+        expectedClasses:`Devils, blue dragons, and hobgoblins are lawful evil.`,
     },
 	Neutral_Evil: {
-        description: ``,
-        expectedClasses:``,
+        description: `l (NE) is the alignment of those who do 
+					whatever they can get away with, without compassion or 
+					qualms. `,
+        expectedClasses:`Many drow, some cloud giants, and yugoloths 
+				are neutral evil.`,
     },
 	Chaotic_Evil: {
-        description: ``,
-        expectedClasses:``,
+        description: `l (CE) creatures act with arbitrary 
+					violence, spurred by their greed, hatred, or bloodlust. `,
+        expectedClasses:`Demons, red dragons, and orcs are chaotic evil.`,
     },
 };
 
