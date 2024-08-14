@@ -3218,15 +3218,49 @@ export const alignmentArray = [
 ];
 
 export const alignmentDesc = {
-	Lawful_Good: "",
-	Neutral_Good: "",
-	Chaotic_Good: "",
-	Lawful_Neutral: "",
-	Neutral: "",
-	Chaotic_Neutral: "",
-	Lawful_Evil: "",
-	Neutral_Evil: "",
-	Chaotic_Evil: "",
+	Lawful_Good: {
+        description: `(LG) creatures can be counted on to do 
+					the right thing as expected by society. `,
+        expectedClasses:`Gold dragons, 
+						paladins, and most dwarves are lawful good.`,
+    },
+	Neutral_Good: {
+        description: ` (NG) folk do the best they can to help 
+others according to their needs.`,
+        expectedClasses:``,
+    },
+	Chaotic_Good: {
+        description: ` (CG) creatures act as their conscience 
+						directs, with little regard for what others expect.`,
+        expectedClasses:`Copper 
+						dragons, many elves, and unicorns are chaotic good.`,
+    },
+	Lawful_Neutral: {
+        description: ` (LN) individuals act in accordance 
+						with law, tradition, or personal codes.`,
+        expectedClasses:`Many monks and 
+						some wizards are lawful neutral.`,
+    },
+	Neutral: {
+        description: ``,
+        expectedClasses:``,
+    },
+	Chaotic_Neutral: {
+        description: ``,
+        expectedClasses:``,
+    },
+	Lawful_Evil: {
+        description: ``,
+        expectedClasses:``,
+    },
+	Neutral_Evil: {
+        description: ``,
+        expectedClasses:``,
+    },
+	Chaotic_Evil: {
+        description: ``,
+        expectedClasses:``,
+    },
 };
 
 export const backgroundsArray = [
