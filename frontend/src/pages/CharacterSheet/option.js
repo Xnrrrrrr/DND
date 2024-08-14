@@ -3216,7 +3216,7 @@ export const alignmentArray = [
 	"Neutral Evil",
 	"Chaotic Evil",
 ];
-
+//ds
 export const alignmentDesc = {
 	Lawful_Good: {
         description: `(LG) creatures can be counted on to do 
