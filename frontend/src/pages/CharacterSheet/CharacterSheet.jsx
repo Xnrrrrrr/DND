@@ -17,13 +17,13 @@ import {
 	alignmentDesc,
 	backgroundsArray,
 	backgroundDesc,
-	exoticLanguageArray,
-	exoticLanguageDesc,
 	sexArray,
 	skinArray,
 	hairArray,
 	eyesArray,
 } from "./option.js";
+import { useCreateCharacterSheetMutation } from "../../slices/characterSheet/characterSheetApiSlice.js";
+import { ClipLoader } from "react-spinners";
 
 const maxAttributePoints = 20;
 
@@ -31,7 +31,7 @@ const CharacterSheet = () => {
 	const [characterFirstName, setCharacterFirstName] = useState("");
 	const [characterLastName, setCharacterLastName] = useState("");
 	const [age, setAge] = useState(1);
-	const [height, setHeight] = useState(10);
+	const [height, setHeight] = useState(25);
 	const [weight, setWeight] = useState(50);
 	const [sex, setSex] = useState("");
 	const [skin, setSkin] = useState("");
@@ -53,15 +53,15 @@ const CharacterSheet = () => {
 	const [race, setRace] = useState("");
 	const [subraces, setSubraces] = useState("");
 	const [background, setBackground] = useState("");
-	const [exoticLanguage, setExoticLanguage] = useState("");
 	const [alignment, setAlignment] = useState("");
 	const [ideal, setIdeal] = useState("");
 	const [bond, setBond] = useState("");
 	const [flaw, setFlaw] = useState("");
-	const [personalityTraitOne, setPersonalityTraitOne] = useState("");
-	const [personalityTraitTwo, setPersonalityTraitTwo] = useState("");
+	const [personalityTraits, setPersonalityTraits] = useState(["", ""]);
 
 	const navigate = useNavigate();
+
+	const [create, { isCreateLoading }] = useCreateCharacterSheetMutation();
 
 	useEffect(() => {
 		const pointsLeft =
@@ -128,9 +128,47 @@ const CharacterSheet = () => {
 	const submitHandler = async (e) => {
 		e.preventDefault();
 
+		if (totalAttributePointsRemaining) {
+			// Make this a toastify msg
+			console.error("You must spend all of your attribute points.");
+			return;
+		}
+
+		const filteredSkills = skills.filter((skill) => skill.trim() !== "");
+
 		try {
-			//const res = await login({ ... }).unwrap();
-			navigate("/home");
+			const res = await create({
+				characterFirstName,
+				characterLastName,
+				ideals: ideal,
+				bonds: bond,
+				flaws: flaw,
+				backgrounds: background,
+				primaryClass,
+				subclass,
+				skills: filteredSkills,
+				race,
+				subrace: subraces,
+				strength,
+				dexterity,
+				constitution,
+				intelligence,
+				wisdom,
+				charisma,
+				alignment,
+				personalityTraits,
+				age,
+				height,
+				weight,
+				sex,
+				skin,
+				hair,
+				eyes,
+				backstory,
+			}).unwrap();
+			if (res) {
+				navigate("/home");
+			}
 		} catch (err) {
 			console.error(err?.data?.message || err.error);
 		}
@@ -709,30 +747,6 @@ const CharacterSheet = () => {
 								</select>
 							</div>
 							<div>
-								<label htmlFor="exoticLanguage">
-									Exotic Languages:{" "}
-									{!exoticLanguage && (
-										<sup className="red-star">*</sup>
-									)}
-								</label>
-								<select
-									id="exoticLanguage"
-									value={exoticLanguage}
-									onChange={(e) =>
-										setExoticLanguage(e.target.value)
-									}
-								>
-									<option value="">
-										Select an Exotic Language
-									</option>
-									{exoticLanguageArray.map((e) => (
-										<option key={e} value={e}>
-											{e}
-										</option>
-									))}
-								</select>
-							</div>
-							<div>
 								<label htmlFor="alignment">
 									Alignments:{" "}
 									{!alignment && (
@@ -860,12 +874,18 @@ const CharacterSheet = () => {
 									>
 										4
 									</sub>{" "}
-									{!personalityTraitOne && <sup className="red-star">*</sup>}
+									{!personalityTraits[0] && (
+										<sup className="red-star">*</sup>
+									)}
 								</label>
 								<textarea
 									id="personalityTraitOne"
-									value={personalityTraitOne}
-									onChange={(e) => setPersonalityTraitOne(e.target.value)}
+									value={personalityTraits[0]}
+									onChange={(e) => {
+										const newTraits = [...personalityTraits];
+										newTraits[0] = e.target.value;
+										setPersonalityTraits(newTraits);
+									}}
 									maxLength="50"
 									style={{ height: "6rem", width: "100%" }}
 								/>
@@ -888,12 +908,18 @@ const CharacterSheet = () => {
 									>
 										4
 									</sub>{" "}
-									{!personalityTraitTwo && <sup className="red-star">*</sup>}
+									{!personalityTraits[1] && (
+										<sup className="red-star">*</sup>
+									)}
 								</label>
 								<textarea
 									id="personalityTraitTwo"
-									value={personalityTraitTwo}
-									onChange={(e) => setPersonalityTraitTwo(e.target.value)}
+									value={personalityTraits[1]}
+									onChange={(e) => {
+										const newTraits = [...personalityTraits];
+										newTraits[1] = e.target.value;
+										setPersonalityTraits(newTraits);
+									}}
 									maxLength="50"
 									style={{ height: "6rem", width: "100%" }}
 								/>
@@ -902,9 +928,45 @@ const CharacterSheet = () => {
 						<div className="character-sheet-bottom-right">
 							<h6>Class</h6>
 							<p>
-								{primaryClass
-									? `${primaryClass} - ${classDesc[primaryClass]}`
-									: `Select a class to populate more information here.`}
+								{primaryClass ? (
+									<>
+										{primaryClass}:
+										<p>
+											- Description:{" "}
+											{
+												classDesc[primaryClass]
+													.description
+											}
+										</p>
+										<p>
+											- Hit Die/Hit Points:{" "}
+											{classDesc[primaryClass].hitDie}
+										</p>
+										<p>
+											- Primary Ability:{" "}
+											{
+												classDesc[primaryClass]
+													.primaryAbility
+											}
+										</p>
+										<p>
+											- Saving Throw Proficiencies:{" "}
+											{
+												classDesc[primaryClass]
+													.savingThrowProficiencies
+											}
+										</p>
+										<p>
+											- Armor and Weapon Proficiencies:{" "}
+											{
+												classDesc[primaryClass]
+													.armorAndWeaponProficiencies
+											}
+										</p>
+									</>
+								) : (
+									`Select a class to populate more information here.`
+								)}
 							</p>
 							<h6>Subclass</h6>
 							<p>
@@ -985,38 +1047,6 @@ const CharacterSheet = () => {
 									  }`
 									: `Select a background to populate more information here.`}
 							</p>
-							<h6>Exotic Language</h6>
-							<p>
-								{exoticLanguage ? (
-									<>
-										{exoticLanguage}:
-										<p>
-											- Typical Speakers:{" "}
-											{
-												exoticLanguageDesc[
-													exoticLanguage.replaceAll(
-														" ",
-														"_"
-													)
-												].typicalSpeakers
-											}
-										</p>
-										<p>
-											- Script:{" "}
-											{
-												exoticLanguageDesc[
-													exoticLanguage.replaceAll(
-														" ",
-														"_"
-													)
-												].script
-											}
-										</p>
-									</>
-								) : (
-									`Select and exotic language to populate more information here.`
-								)}
-							</p>
 							<h6>Alignment</h6>
 							<p>
 								{alignment
@@ -1032,8 +1062,13 @@ const CharacterSheet = () => {
 					<button
 						type="submit"
 						className="character-sheet-submit-btn"
+						disabled={isCreateLoading}
 					>
-						Save Character
+						{isCreateLoading ? (
+							<ClipLoader color="#fff" size={12} />
+						) : (
+							`Save Character`
+						)}
 					</button>
 					<div style={{ marginTop: "1rem" }}>
 						<p>
