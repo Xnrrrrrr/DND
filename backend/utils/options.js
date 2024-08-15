@@ -1,4 +1,6 @@
 const backgrounds = [
+	"Abandoned",
+	"Abyssdweller",
 	"Acolyte",
 	"Charlatan",
 	"Criminal",
@@ -10,6 +12,7 @@ const backgrounds = [
 	"Outlander",
 	"Sage",
 	"Sailor",
+	"Secret",
 	"Soldier",
 	"Urchin",
 	"Far Traveler",
