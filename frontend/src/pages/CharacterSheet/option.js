@@ -15,6 +15,8 @@ export const classesArray = [
 ];
 
 // pg 39 in DND 5e pdf
+
+// all classDescs need formatting
 export const classDesc = {
 	Artificer: {
 		description:
@@ -2623,7 +2625,7 @@ export const maxSkills = {
 	Wizard: 2,
 };
 
-// all skills needs formatting for runny
+// all skills needs formatting 
 export const skillsDesc = {
 	// Strength Related
 	Athletics: {
@@ -2778,6 +2780,8 @@ export const raceArray = [
 ];
 
 // 0 = - (tack) and _ = ' ' (space)
+
+// all raceDescs need formatting
 export const raceDesc = {
 	Aasimar: {
 		description: "Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
@@ -3217,6 +3221,7 @@ export const alignmentArray = [
 	"Chaotic Evil",
 ];
 
+// all alignmentDescs need formatting
 export const alignmentDesc = {
 	Lawful_Good: {
         description: `(LG) creatures can be counted on to do 
@@ -3303,6 +3308,7 @@ export const backgroundsArray = [
 	"Waterdhavian Noble",
 ];
 
+// all backgroundDescs need formatting
 export const backgroundDesc = {
 	Acolyte: {
         description: ` You have spent your life in the service of a temple 
@@ -3523,49 +3529,342 @@ export const backgroundDesc = {
 						`,
     },
 	Criminal: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You are an experienced criminal with a history of 
+					breaking the law. You have spent a lot of time among 
+					other criminals and still have contacts within the 
+					criminal underworld. You’re far closer than most people 
+					to the world of murder, theft, and violence that pervades 
+					the underbelly of civilization, and you have survived up to 
+					this point by flouting the rules and regulations of society.`,
+        skillProficiencies: `Deception, Stealth `,
+        toolProficiencies: `One type of gaming set, 
+							thieves’ tools`,
+        startingEquipment: `A crowbar, a set of dark common clothes 
+							including a hood, and a belt pouch containing 15 gp`,
+
+		custom: {       // additional 0000
+			title:`Criminal Specialty`,
+			feature: `There are many kinds of criminals, and within a thieves’ 
+							guild or similar criminal organization, individual 
+							members have particular specialties. Even criminals 
+							who operate outside of such organizations have strong 
+							preferences for certain kinds of crimes over others. 
+							Choose the role you played in your criminal life, or roll 
+							on the table below.
+							d8 Specialty
+							1
+							2
+							Blackmailer
+							Burglar
+							3 Enforcer
+							4 Fence
+							d8 Specialty
+							5 Highway robber
+							6
+							Hired killer
+							7 Pickpocket
+							8
+							Smuggler`,
+
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Criminal Contact`,
+            description: ` You have a reliable and trustworthy contact who acts as 
+						your liaison to a network of other criminals. You know 
+						how to get messages to and from your contact, even 
+						over great distances; specifically, you know the local 
+						messengers, corrupt caravan masters, and seedy sailors 
+						who can deliver messages for you.`,
         },
-        suggestedCharacteristics: ``,
+        suggestedCharacteristics: ` Criminals might seem like villains on the surface, 
+								and many of them are villainous to the core. But some 
+								have an abundance of endearing, if not redeeming, 
+								characteristics. There might be honor among thieves, but 
+								criminals rarely show any respect for law or authority.`,
 		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+		suggestedIdeal: ` d6 Ideal
+						1
+						2
+						Honor. I don’t steal from others in the trade. (Lawful)
+						Freedom. Chains are meant to be broken, as are those 
+						who would forge them. (Chaotic)
+						3 Charity. I steal from the wealthy so that I can help 
+						people in need. (Good)
+						4 Greed. I will do whatever it takes to become 
+						wealthy. (Evil)
+						5 People. I’m loyal to my friends, not to any ideals, and 
+						everyone else can take a trip down the Styx for all I 
+						care. (Neutral)
+						6
+						Redemption. There’s a spark of good in everyone. 
+						(Good)`,
+		suggestedBond: ` d6 Bond
+						1
+						2
+						I’m trying to pay off an old debt I owe to a generous 
+						benefactor.
+						My ill-gotten gains go to support my family.
+						3 Something important was taken from me, and I aim to 
+						steal it back.
+						4 I will become the greatest thief that ever lived.
+						5 I’m guilty of a terrible crime. I hope I can redeem 
+						myself for it.
+						6
+						Someone I loved died because of a mistake I made. 
+						That will never happen again.`,
+		suggestedFlaw: `d6 Flaw
+						1 When I see something valuable, I can’t think about 
+						anything but how to steal it.
+						2 When faced with a choice between money and my 
+						friends, I usually choose the money.
+						3 If there’s a plan, I’ll forget it. If I don’t forget it, I’ll 
+						ignore it.
+						4 I have a “tell” that reveals when I'm lying.
+						5 I turn tail and run when things look bad.
+						6 An innocent person is in prison for a crime that I 
+						committed. I’m okay with that.`, // possiblyt add variant criminal spy
+		variant: {
+			title: `Spy`,
+			description: ` Although your capabilities are not much different 
+						from those of a burglar or smuggler, you learned 
+						and practiced them in a very different context: as an 
+						espionage agent. You might have been an officially 
+						sanctioned agent of the crown, or perhaps you sold the 
+						secrets you uncovered to the highest bidder.`,
+		},
     },
 	Entertainer: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You thrive in front of an audience. You know how to 
+					entrance them, entertain them, and even inspire them. 
+					Your poetics can stir the hearts of those who hear you, 
+					awakening grief or joy, laughter or anger. Your music 
+					raises their spirits or captures their sorrow. Your dance 
+					steps captivate, your humor cuts to the quick. Whatever 
+					techniques you use, your art is your life.`,
+        skillProficiencies: ` Acrobatics, Performance `,
+        toolProficiencies: `Disguise kit, one type of 
+							musical instrument `,
+        startingEquipment: `A musical instrument (one of your choice), 
+							the favor of an admirer (love letter, lock of hair, or 
+							trinket), a costume, and a belt pouch containing 15 gp`,
+		custom: {
+			title: `Entertainer Routines`, // additional 0000
+			description: ` A good entertainer is versatile, spicing up every 
+						performance with a variety of different routines. Choose 
+						one to three routines or roll on the table below to define 
+						your expertise as an entertainer.
+						
+						 d10 Entertainer Routine
+						1 Actor
+						Dancer
+						2
+						3 Fire-eater
+						4 jester
+						5 juggler
+						d10 Entertainer Routine
+						6
+						Instrumentalist
+						7 Poet
+						8
+						Singer
+						9 Storyteller
+						10 Tumbler`,
+		},
+
         feature: {
-            title: ``,
-            description: ``,
+            title: `By Popular Demand`,
+            description: ` You can always find a place to perform, usually in an 
+						inn or tavern but possibly with a circus, at a theater, or 
+						even in a noble’s court. At such a place, you receive free 
+						lodging and food of a modest or comfortable standard 
+						(depending on the quality of the establishment), as 
+						long as you perform each night. In addition, your 
+						performance makes you something of a local figure. 
+						When strangers recognize you in a town where you have 
+						performed, they typically take a liking to you.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: `Successful entertainers have to be able to capture 
+								and hold an audience’s attention, so they tend to 
+								have flamboyant or forceful personalities. They’re 
+								inclined toward the romantic and often cling to 
+								high-minded ideals about the practice of art and the 
+								appreciation of beauty.`,
+		suggestedPersonalityTraits: `d8
+								Personality Trait
+								1 I know a story relevant to almost every situation.
+								2 Whenever I come to a new place, I collect local rumors 
+								and spread gossip.
+								3 I’m a hopeless romantic, always searching for that 
+								“special someone.”
+								4 Nobody stays angry at me or around me for long, since 
+								I can defuse any amount of tension.
+								5 I love a good insult, even one directed at me.
+								6 I get bitter if I’m not the center of attention.
+								7 I’ll settle for nothing less than perfection.
+								8 I change my mood or my mind as quickly as I change 
+								key in a song.`,
+		suggestedIdeal: `d6 Ideal
+						1 Beauty. When I perform, I make the world better than 
+						it was. (Good)
+						2 Tradition. The stories, legends, and songs of the past 
+						must never be forgotten, for they teach us who we 
+						are. (Lawful)
+						3 Creativity. The world is in need of new ideas and bold 
+						action. (Chaotic)
+						4 Greed. I’m only in it for the money and fame. (Evil)
+						5 People. I like seeing the smiles on people’s faces when 
+						I perform. That’s all that matters. (Neutral)
+						6 Honesty. Art should reflect the soul; it should come 
+						from within and reveal who we really are. (Any)`,
+		suggestedBond: ` d6 Bond
+						1 My instrument is my most treasured possession, and it 
+						reminds me of someone I love.
+						2 Someone stole my precious instrument, and someday 
+						I’ll get it back.
+						3 I want to be famous, whatever it takes.
+						4 I idolize a hero of the old tales and measure my deeds 
+						against that person’s.
+						5 I will do anything to prove myself superior to my hated 
+						rival.
+						6 I would do anything for the other members of my 
+						old troupe.`,
+		suggestedFlaw: ` d6 Flaw
+						1 I’ll do anything to win fame and renown.
+						2 I’m a sucker for a pretty face.
+						3 A scandal prevents me from ever going home again. 
+						That kind of trouble seems to follow me around.
+						4 I once satirized a noble who still wants my head. It was 
+						a mistake that I will likely repeat.
+						5 I have trouble keeping my true feelings hidden. My 
+						sharp tongue lands me in trouble.
+						6 Despite my best efforts, I am unreliable to my friends.`,
+		variant: {
+			title:`Gladiator`,
+			description:` A gladiator is as much an entertainer as any minstrel 
+						or circus performer, trained to make the arts of combat 
+						into a spectacle the crowd can enjoy. This kind of 
+						flashy combat is your entertainer routine, though you 
+						might also have some skills as a tumbler or actor.
+						Using your By Popular Demand feature, you can find a 
+						place to perform in any place that features combat for 
+						entertainment—perhaps a gladiatorial arena or secret 
+						pit fighting club. You can replace the musical instrument 
+						in your equipment package with an inexpensive but 
+						unusual weapon, such as a trident or net.`,
+		}
     },
 	Folk_Hero: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: `You come from a humble social rank, but you are 
+					destined for so much more. Already the people of 
+					your home village regard you as their champion, and 
+					your destiny calls you to stand against the tyrants and 
+					monsters that threaten the common folk everywhere`,
+        skillProficiencies: `animal Handling, Survival `,
+        toolProficiencies: ` One type of artisan’s tools, 
+							vehicles (land)`,
+        startingEquipment: ` A set of artisan’s tools (one of your choice), 
+							a shovel, an iron pot, a set of common clothes, and a 
+							belt pouch containing 10 gp`,
+		custom: {
+			title: `Defining Event`,
+			description: `You previously pursued a simple profession among 
+						the peasantry, perhaps as a farmer, miner, servant, 
+						shepherd, woodcutter, or gravedigger. But something 
+						happened that set you on a different path and marked 
+						you for greater things. Choose or randomly determine a 
+						defining event that marked you as a hero of the people.
+						
+						d10 Defining Event
+					1 I stood up to a tyrant’s agents.
+					2 I saved people during a natural disaster.
+					3 I stood alone against a terrible monster.
+					4 I stole from a corrupt merchant to help the poor.
+					5 I led a militia to fight off an invading army.
+					6 I broke into a tyrant’s castle and stole weapons to arm 
+					the people.
+					7 I trained the peasantry to use farm implements as 
+					weapons against a tyrant’s soldiers.
+					8 A lord rescinded an unpopular decree after I led a 
+					symbolic act of protect against it.
+					9 A celestial, fey, or similar creature gave me a blessing 
+					or revealed my secret origin.
+					10 Recruited into a lord’s army, I rose to leadership and 
+					was commended for my heroism.`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Rustic Hospitality`,
+            description: ` Since you come from the ranks of the common folk, 
+						you fit in among them with ease. You can find a place 
+						to hide, rest, or recuperate among other commoners, 
+						unless you have shown yourself to be a danger to 
+						them. They will shield you from the law or anyone 
+						else searching for you, though they will not risk 
+						their lives for you.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: `A folk hero is one of the common people, for better 
+								or for worse. Most folk heroes look on their humble 
+								origins as a virtue, not a shortcoming, and their home 
+								communities remain very important to them.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+										8
+										1 I judge people by their actions, not their words.
+										2 If someone is in trouble, I’m always ready to lend help.
+										3 When I set my mind to something, I follow through no 
+										matter what gets in my way.
+										4 I have a strong sense of fair play and always try to find 
+										the most equitable solution to arguments.
+										5 I’m confident in my own abilities and do what I can to 
+										instill confidence in others.
+										6 Thinking is for other people. I prefer action.
+										7 I misuse long words in an attempt to sound smarter.
+										I get bored easily. When am I going to get on with my 
+										destiny?
+										`,
+		suggestedIdeal: `d6 Ideal
+						1
+						2
+						Respect. People deserve to be treated with dignity and 
+						respect. (Good)
+						Fairness. No one should get preferential treatment 
+						before the law, and no one is above the law. (Lawful)
+						3 Freedom. Tyrants must not be allowed to oppress the 
+						people. (Chaotic)
+						4 Might. If I become strong, I can take what I want— 
+						what I deserve. (Evil)
+						5 Sincerity. There’s no good in pretending to be 
+						something I’m not. (Neutral)
+						6
+						Destiny. Nothing and no one can steer me away from 
+						my higher calling. (Any)`,
+		suggestedBond: ` d6 Bond
+						1
+						2
+						I have a family, but I have no idea where they are. One 
+						day, I hope to see them again.
+						I worked the land, I love the land, and I will protect the 
+						land.
+						3 A proud noble once gave me a horrible beating, and I 
+						will take my revenge on any bully I encounter.
+						4 My tools are symbols of my past life, and I carry them 
+						so that I will never forget my roots.
+						5 I protect those who cannot protect themselves.
+						6
+						I wish my childhood sweetheart had come with me to 
+						pursue my destiny.`,
+		suggestedFlaw: ` d6 Flaw
+						1 The tyrant who rules my land will stop at nothing to 
+						see me killed.
+						2
+						6
+						I’m convinced of the significance of my destiny, and 
+						blind to my shortcomings and the risk of failure.
+						3 The people who knew me when I was young know my 
+						shameful secret, so I can never go home again.
+						4 I have a weakness for the vices of the city, especially 
+						hard drink.
+						5 Secretly, I believe that things would be better if I were a 
+						tyrant lording over the land.
+						I have trouble trusting in my allies.`,
     },
 	Guild_Artisan: {
         description: ``,
