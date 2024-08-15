@@ -3740,7 +3740,7 @@ export const backgroundDesc = {
 						5 I have trouble keeping my true feelings hidden. My 
 						sharp tongue lands me in trouble.
 						6 Despite my best efforts, I am unreliable to my friends.`,
-		variant: {
+		variant: {  // additional 0000
 			title:`Gladiator`,
 			description:` A gladiator is as much an entertainer as any minstrel 
 						or circus performer, trained to make the arts of combat 
@@ -3869,124 +3869,1033 @@ export const backgroundDesc = {
 						I have trouble trusting in my allies.`,
     },
 	Guild_Artisan: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You are a member of an artisan’s guild, skilled in 
+					a particular field and closely associated with other 
+					artisans. You are a well-established part of the 
+					mercantile world, freed by talent and wealth from the 
+					constraints of a feudal social order. You learned your 
+					skills as an apprentice to a master artisan, under the 
+					sponsorship of your guild, until you became a master in 
+					your own right.`,
+        skillProficiencies: `Insight, Persuasion `,
+        toolProficiencies: `One type of artisan’s tools `,
+        startingEquipment: `A set of artisan’s tools (one of your choice), 
+						a letter of introduction from your guild, a set of 
+						traveler’s clothes, and a belt pouch containing 15 gp`,
+
+		custom: {     // additional 0000
+			title:`Guild Business`,
+			description: `  Guilds are generally found in cities large enough to 
+						support several artisans practicing the same trade. 
+						However, your guild might instead be a loose network 
+						of artisans who each work in a different village within 
+						a larger realm. Work with your DM to determine the 
+						nature of your guild. You can select your guild business 
+						from the Guild Business table or roll randomly.
+						d20 Guild Business
+
+						1 Alchemists and apothecaries
+						2
+						3
+						4
+						5
+						6
+						7
+						8
+						9
+						Armorers, locksmiths, and finesmiths
+						Brewers, distillers, and vintners
+						Calligraphers, scribes, and scriveners
+						Carpenters, roofers, and plasterers
+						Cartographers, surveyors, and chart-makers
+						Cobblers and shoemakers
+						Cooks and bakers
+						Glassblowers and glaziers
+						10 Jewelers and gemcutters
+						11
+						12
+						13
+						14
+						15
+						16
+						17
+						Leatherworkers, skinners, and tanners
+						Masons and stonecutters
+						Painters, limners, and sign-makers
+						Potters and tile-makers
+						Shipwrights and sailmakers
+						Smiths and metal-forgers
+						Tinkers, pewterers, and casters
+						18 Wagon-makers and wheelwrights
+						19
+						20
+						Weavers and dyers
+						Woodcarvers, coopers, and bowyers
+						As a member of your guild, you know the skills needed 
+						to create finished items from raw materials (reflected in 
+						your proficiency with a certain kind of artisan’s tools), 
+						as well as the principles of trade and good business 
+						practices. The question now is whether you abandon 
+						your trade for adventure, or take on the extra effort to 
+						weave adventuring and trade together.`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Guild Membership`,
+            description: `As an established and respected member of a guild, you 
+						can rely on certain benefits that membership provides. 
+						Your fellow guild members will provide you with 
+						lodging and food if necessary, and pay for your funeral 
+						if needed. In some cities and towns, a guildhall offers a 
+						central place to meet other members of your profession, 
+						which can be a good place to meet potential patrons, 
+						allies, or hirelings.
+						Guilds often wield tremendous political power. If 
+						you are accused of a crime, your guild will support you 
+						if a good case can be made for your innocence or the 
+						crime is justifiable. You can also gain access to powerful 
+						political figures through the guild, if you are a member 
+						in good standing. Such connections might require the 
+						donation of money or magic items to the guild’s coffers.
+						You must pay dues of 5 gp per month to the guild. If 
+						you miss payments, you must make up back dues to 
+						remain in the guild’s good graces.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` Guild artisans are among the most ordinary people in 
+								the world—until they set down their tools and take up 
+								an adventuring career. They understand the value of  
+								hard work and the importance of community, but they’re 
+								vulnerable to sins of greed and covetousness.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1
+									I believe that anything worth doing is worth doing 
+									right. I can’t help it— I’m a perfectionist.
+									2 I’m a snob who looks down on those who can’t 
+									appreciate fine art.
+									3 I always want to know how things work and what 
+									makes people tick.
+									4 I’m full of witty aphorisms and have a proverb for 
+									every occasion.
+									5 I’m rude to people who lack my commitment to hard 
+									work and fair play.
+									6 I like to talk at length about my profession.
+									7 I don’t part with my money easily and will haggle 
+									tirelessly to get the best deal possible.
+									8 I’m well known for my work, and I want to make sure 
+									everyone appreciates it. I'm always taken aback when 
+									people haven’t heard of me.`,
+		suggestedIdeal: ` d6 Ideal
+						1
+						2
+						Community. It is the duty of all civilized people to 
+						strengthen the bonds of community and the security 
+						of civilization. (Lawful)
+						Generosity. My talents were given to me so that I could 
+						use them to benefit the world. (Good)
+						3 Freedom. Everyone should be free to pursue his or her 
+						own livelihood. (Chaotic)
+						4 Greed. I’m only in it for the money. (Evil)
+						5 People. I’m committed to the people I care about, not 
+						to ideals. (Neutral)
+						6
+						Aspiration. I work hard to be the best there is at 
+						my craft`,
+		suggestedBond: `d6 Bond
+						1
+						2
+						The workshop where I learned my trade is the most 
+						important place in the world to me.
+						I created a great work for someone, and then found 
+						them unworthy to receive it. I’m still looking for 
+						someone worthy.
+						3 I owe my guild a great debt for forging me into the 
+						person I am today.
+						4 I pursue wealth to secure someone’s love.
+						5 One day I will return to my guild and prove that I am 
+						the greatest artisan of them all.
+						6
+						I will get revenge on the evil forces that destroyed my 
+						place of business and ruined my livelihood.`,
+		suggestedFlaw: `d6 Flaw
+						1
+						2
+						I’ll do anything to get my hands on something rare or 
+						priceless.
+						I’m quick to assume that someone is trying to cheat 
+						me.
+						3 No one must ever learn that I once stole money from 
+						guild coffers.
+						4 I’m never satisfied with what I have—I always want 
+						more.
+						5 I would kill to acquire a noble title.
+						6
+						I’m horribly jealous of anyone who can outshine my 
+						handiwork. Everywhere I go, I’m surrounded by rivals.`,
+		variant: {     // additional 0000
+			title: `Guild Merchant`,
+			description: `Instead of an artisans’ guild, you might belong to a 
+						guild of traders, caravan masters, or shopkeepers. You 
+						don’t craft items yourself but earn a living by buying 
+						and selling the works of others (or the raw materials 
+						artisans need to practice their craft). Your guild might 
+						be a large merchant consortium (or family) with 
+						interests across the region. Perhaps you transported 
+						goods from one place to another, by ship, wagon, or 
+						caravan, or bought them from traveling traders and sold 
+						them in your own little shop. In some ways, the traveling 
+						merchant’s life lends itself to adventure far more than 
+						the life of an artisan.
+						Rather than proficiency with artisan’s tools, you might 
+						be proficient with navigator’s tools or an additional 
+						language. And instead of artisan’s tools, you can start 
+						with a mule and a cart.
+						`,
+		},
     },
 	Hermit: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You lived in seclusion—either in a sheltered community 
+					such as a monastery, or entirely alone—for a formative 
+					part of your life. In your time apart from the clamor of 
+					society, you found quiet, solitude, and perhaps some of 
+					the answers you were looking for.`,
+        skillProficiencies: ` Medicine, Religion `,
+        toolProficiencies: ` Herbalism kit `,
+        startingEquipment: `A scroll case stuffed full of notes from your 
+							studies or prayers, a winter blanket, a set of common 
+							clothes, an herbalism kit, and 5 gp`,
+		custom: {
+			title: `Life of Seclusion`,
+			description:` What was the reason for your isolation, and what 
+						changed to allow you to end your solitude? You can work 
+						with your DM to determine the exact nature of your 
+						seclusion, or you can choose or roll on the table below to 
+						determine the reason behind your seclusion.
+						
+						 d8 Life of Seclusion
+						1
+						I was searching for spiritual enlightenment.
+						2 I was partaking of communal living in accordance with 
+						the dictates of a religious order.
+						3 I was exiled for a crime I didn’t commit.
+						4 I retreated from society after a life-altering event.
+						d8 Life of Seclusion
+						5 I needed a quiet place to work on my art, literature, 
+						music, or manifesto.
+						6 I needed to commune with nature, far from civilization.
+						7 I was the caretaker of an ancient ruin or relic.
+						8 I was a pilgrim in search of a person, place, or relic of 
+						spiritual significance.`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Discovery`,
+            description: ` The quiet seclusion of your extended hermitage gave you 
+						access to a unique and powerful discovery. The exact 
+						nature of this revelation depends on the nature of your 
+						seclusion. It might be a great truth about the cosmos, 
+						the deities, the powerful beings of the outer planes, or 
+						the forces of nature. It could be a site that no one else 
+						has ever seen. You might have uncovered a fact that has 
+						long been forgotten, or unearthed some relic of the past 
+						that could rewrite history. It might be information that 
+						would be damaging to the people who or consigned you 
+						to exile, and hence the reason for your return to society.
+						Work with your DM to determine the details of your 
+						discovery and its impact on the campaign.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` Some hermits are well suited to a life of seclusion, 
+									whereas others chafe against it and long for company. 
+									Whether they embrace solitude or long to escape it, the 
+									solitary life shapes their attitudes and ideals. A few are 
+									driven slightly mad by their years apart from society.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1
+									2
+									I’ve been isolated for so long that I rarely speak, 
+									preferring gestures and the occasional grunt.
+									I am utterly serene, even in the face of disaster.
+									3 The leader of my community had something wise 
+									to say on every topic, and I am eager to share 
+									that wisdom.
+									4 I feel tremendous empathy for all who suffer.
+									5 I’m oblivious to etiquette and social expectations.
+									6
+									8
+									I connect everything that happens to me to a grand, 
+									cosmic plan.
+									7 I often get lost in my own thoughts and contemplation, 
+									becoming oblivious to my surroundings.
+									I am working on a grand philosophical theory and love 
+									sharing my ideas.`,
+		suggestedIdeal: `d6 Ideal
+						1 Greater Good. My gifts are meant to be shared with all, 
+						not used for my own benefit. (Good)
+						Logic. Emotions must not cloud our sense of what is 
+						right and true, or our logical thinking. (Lawful)
+						3 Free Thinking. Inquiry and curiosity are the pillars of 
+						progress. (Chaotic)
+						4 Power. Solitude and contemplation are paths toward 
+						mystical or magical power. (Evil)
+						5 Live and Let Live. Meddling in the affairs of others only 
+						causes trouble. (Neutral)
+						6
+						Self-Knowledge. If you know yourself, there’s nothing 
+						left to know. (Any)`,
+		suggestedBond: `d6 Bond
+						1
+						2
+						Nothing is more important than the other members of 
+						my hermitage, order, or association.
+						I entered seclusion to hide from the ones who might 
+						still be hunting me. I must someday confront them.
+						3 I’m still seeking the enlightenment I pursued in my 
+						seclusion, and it still eludes me.
+						4 I entered seclusion because I loved someone I could 
+						not have.
+						5 Should my discovery come to light, it could bring ruin to 
+						the world.
+						6
+						My isolation gave me great insight into a great evil that 
+						only I can destroy.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						2
+						Now that I've returned to the world, I enjoy its delights 
+						a little too much.
+						I harbor dark, bloodthirsty thoughts that my isolation 
+						and meditation failed to quell.
+						3 I am dogmatic in my thoughts and philosophy.
+						4 I let my need to win arguments overshadow 
+						friendships and harmony.
+						5 I’d risk too much to uncover a lost bit of knowledge.
+						6
+						I like keeping secrets and won’t share them with 
+						anyone.`,
+		variant: {
+			title: `Other Hermit`,
+			description: ` This hermit background assumes a contemplative sort 
+						of seclusion that allows room for study and prayer. If you 
+						want to play a rugged wilderness recluse who lives off 
+						the land while shunning the company of other people, 
+						look at the outlander background. On the other hand, if 
+						you want to go in a more religious direction, the acolyte 
+						might be what you’re looking for. Or you could even be a 
+						charlatan, posing as a wise and holy person and letting 
+						pious fools support you.`,
+		},
     },
 	Noble: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You understand wealth, power, and privilege. You 
+					carry a noble title, and your family owns land, collects 
+					taxes, and wields significant political influence. You 
+					might be a pampered aristocrat unfamiliar with 
+					work or discomfort, a former merchant just elevated 
+					to the nobility, or a disinherited scoundrel with a 
+					disproportionate sense of entitlement. Or you could be 
+					an honest, hard-working landowner who cares deeply 
+					about the people who live and work on your land, keenly 
+					aware of your responsibility to them.
+					Work with your DM to come up with an appropriate 
+					title and determine how much authority that title 
+					carries. A noble title doesn’t stand on its own—it’s 
+					connected to an entire family, and whatever title you 
+					hold, you will pass it down to your own children. Not 
+					only do you need to determine your noble title, but you 
+					should also work with the DM to describe your family 
+					and their influence on you.
+					Is your family old and established, or was your title 
+					only recently bestowed? How much influence do they 
+					wield, and over what area? What kind of reputation
+					does your family have among the other aristocrats of the 
+					region? How do the common people regard them?
+					What’s your position in the family? Are you the heir 
+					to the head of the family? Have you already inherited 
+					the title? How do you feel about that responsibility? Or 
+					are you so far down the line of inheritance that no one 
+					cares what you do, as long as you don’t embarrass the 
+					family? How does the head of your family feel about 
+					your adventuring career? Are you in your family’s good 
+					graces, or shunned by the rest of your family?
+					Does your family have a coat of arms? An insignia you 
+					might wear on a signet ring? Particular colors you wear 
+					all the time? An animal you regard as a symbol of your 
+					line or even a spiritual member of the family?
+					These details help establish your family and your title 
+					as features of the world of the campaign`,
+        skillProficiencies: `History, Persuasion `,
+        toolProficiencies: `One type of gaming set `,
+        startingEquipment: `A set of fine clothes, a signet ring, a scroll 
+							of pedigree, and a purse containing 25 gp`,
         feature: {
-            title: ``,
-            description: ``,
+            title: `Position of Privelege`,
+            description: `Thanks to your noble birth, people are inclined to 
+						think the best of you. You are welcome in high society, 
+						and people assume you have the right to be wherever 
+						you are. The common folk make every effort to 
+						accommodate you and avoid your displeasure, and other 
+						people of high birth treat you as a member of the same 
+						social sphere. You can secure an audience with a local 
+						noble if you need to.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: `Nobles are born and raised to a very different lifestyle 
+								than most people ever experience, and their personalities 
+								reflect that upbringing. A noble title comes with a 
+								plethora of bonds—responsibilities to family, to other 
+								nobles (including the sovereign), to the people entrusted 
+								to the family’s care, or even to the title itself. But this 
+								responsibility is often a good way to undermine a noble.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1
+									2
+									My eloquent flattery makes everyone I talk to feel 
+									like the most wonderful and important person in the 
+									world.
+									The common folk love me for my kindness and 
+									generosity.
+									3 No one could doubt by looking at my regal bearing that 
+									I am a cut above the unwashed masses.
+									4 I take great pains to always look my best and follow the 
+									latest fashions.
+									5 I don’t like to get my hands dirty, and I won’t be caught 
+									dead in unsuitable accommodations.
+									6
+									8
+									Despite my noble birth, I do not place myself above 
+									other folk. We all have the same blood.
+									7 My favor, once lost, is lost forever.
+									If you do me an injury, I will crush you, ruin your name, 
+									and salt your fields`,
+		suggestedIdeal: `d6 Ideal
+						1
+						2
+						3
+						4
+						5
+						6
+						Respect. Respect is due to me because of my position, 
+						but all people regardless of station deserve to be 
+						treated with dignity. (Good)
+						Responsibility. It is my duty to respect the authority of 
+						those above me, just as those below me must respect 
+						mine. (Lawful)
+						Independence. I must prove that I can handle myself 
+						without the coddling of my family. (Chaotic)
+						Power. If I can attain more power, no one will tell me 
+						what to do. (Evil)
+						Family. Blood runs thicker than water. (Any)
+						Noble Obligation. It is my duty to protect and care for 
+						the people beneath me. (Good)`,
+		suggestedBond: ` d6 Bond
+						1
+						2
+						3
+						4
+						5
+						I will face any challenge to win the approval of my 
+						family.
+						My house’s alliance with another noble family 
+						must be sustained at all costs.
+						Nothing is more important than the other members 
+						of my family.
+						I am in love with the heir of a family that my family 
+						despises.
+						My loyalty to my sovereign is unwavering.
+						6 The common folk must see me as a hero of the people.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						2
+						3
+						4
+						5
+						6
+						I secretly believe that everyone is beneath me.
+						I hide a truly scandalous secret that could ruin my 
+						family forever.
+						I too often hear veiled insults and threats in every word 
+						addressed to me, and I’m quick to anger.
+						I have an insatiable desire for carnal pleasures.
+						In fact, the world does revolve around me.
+						By my words and actions, I often bring shame to 
+						my family.`,
+		variant: {
+			title: `Knight`,
+			description: ` A knighthood is among the lowest noble titles in most 
+						societies, but it can be a path to higher status. If you 
+						wish to be a knight, choose the Retainers feature (see 
+						the sidebar) instead of the Position of Privilege feature. 
+						One of your commoner retainers is replaced by a noble 
+						who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two 
+						remaining retainers might include a groom to care for 
+						your horse and a servant who polishes your armor (and 
+						even helps you put it on).
+						As an emblem of chivalry and the ideals of courtly 
+						love, you might include among your equipment a banner 
+						or other token from a noble lord or lady to whom you 
+						have given your heart—in a chaste sort of devotion.
+						(This person could be your bond.)
+						
+						Variant Feature: Retainers
+						If your character has a noble background, you may select this 
+						background feature instead of Position of Privilege.
+						You have the service of three retainers loyal to your family. 
+						These retainers can be attendants or messengers, and one 
+						might be a majordomo. Your retainers are commoners who 
+						can perform mundane tasks for you, but they do not fight 
+						for you, will not follow you into obviously dangerous areas 
+						(such as dungeons), and will leave if they are frequently 
+						endangered or abused.`,
+		},
     },
 	Outlander: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You grew up in the wilds, far from civilization and the 
+					comforts of town and technology. You’ve witnessed the 
+					migration of herds larger than forests, survived weather 
+					more extreme than any city-dweller could comprehend, 
+					and enjoyed the solitude of being the only thinking 
+					creature for miles in any direction. The wilds are in 
+					your blood, whether you were a nomad, an explorer, a 
+					recluse, a hunter-gatherer, or even a marauder. Even in 
+					places where you don’t know the specific features of the 
+					terrain, you know the ways of the wild.`,
+        skillProficiencies: `Athletics, Survival `,
+        toolProficiencies: `One type of musical instrument `,
+        startingEquipment: `A staff, a hunting trap, a trophy from an 
+							animal you killed, a set of traveler’s clothes, and a belt 
+							pouch containing 10 gp`,
+		custom: {
+			title: `Origin`,
+			description: ` You've been to strange places and seen things that 
+						others cannot begin to fathom. Consider some of the 
+						distant lands you have visited, and how they impacted 
+						you. You can roll on the following table to determine 
+						your occupation during your time in the wild, or choose 
+						one that best fits your character.
+						d10 Origin
+						1
+						2
+						3
+						4
+						5
+						Forester
+						Trapper
+						Homesteader
+						Guide
+						Exile or outcast
+						d10 Origin
+						6
+						7
+						8
+						9
+						Bounty hunter
+						Pilgrim
+						Tribal nomad
+						Hunter-gatherer
+						10 Tribal marauder`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Wanderer`,
+            description: ` You have an excellent memory for maps and geography, 
+						and you can always recall the general layout of terrain, 
+						settlements, and other features around you. In addition, 
+						you can find food and fresh water for yourself and up to 
+						five other people each day, provided that the land offers 
+						berries, small game, water, and so forth.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` Often considered rude and uncouth among civilized 
+									folk, outlanders have little respect for the niceties of 
+									life in the cities. The ties of tribe, clan, family, and the 
+									natural world of which they are a part are the most 
+									important bonds to most outlanders.
+									`,
+		suggestedPersonalityTraits: `d8 Personality Trait
+									1 I’m driven by a wanderlust that led me away 
+									from home.
+									2 I watch over my friends as if they were a litter of 
+									newborn pups.
+									3 I once ran twenty-five miles without stopping to warn 
+									to my clan of an approaching orc horde. I’d do it again 
+									if I had to.
+									4 I have a lesson for every situation, drawn from 
+									observing nature.
+									5 I place no stock in wealthy or well-mannered folk. 
+									Money and manners won’t save you from a hungry 
+									owlbear.
+									6 I’m always picking things up, absently fiddling with 
+									them, and sometimes accidentally breaking them.
+									7 I feel far more comfortable around animals than 
+									people.
+									8 I was, in fact, raised by wolves.`,
+		suggestedIdeal: ` d6 Ideal
+						1 Change. Life is like the seasons, in constant change, 
+						and we must change with it. (Chaotic)
+						2 Greater Good. It is each person’s responsibility to 
+						make the most happiness for the whole tribe. (Good)
+						3 Honor. If I dishonor myself, I dishonor my whole 
+						clan. (Lawful)
+						4 Might. The strongest are meant to rule. (Evil)
+						5 Nature. The natural world is more important than all 
+						the constructs of civilization. (Neutral)
+						6 Glory. I must earn glory in battle, for myself and 
+						my clan. (Any)`,
+		suggestedBond: ` d6 Bond
+						1
+						My family, clan, or tribe is the most important thing in 
+						my life, even when they are far from me.
+						2 An injury to the unspoiled wilderness of my home is an 
+						injury to me.
+						3 I will bring terrible wrath down on the evildoers who 
+						destroyed my homeland.
+						4 I am the last of my tribe, and it is up to me to ensure 
+						their names enter legend.
+						5 I suffer awful visions of a coming disaster and will do 
+						anything to prevent it.
+						6 It is my duty to provide children to sustain my tribe.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						I am too enamored of ale, wine, and other intoxicants.
+						2 There’s no room for caution in a life lived to the fullest.
+						3 I remember every insult I’ve received and nurse a silent 
+						resentment toward anyone who’s ever wronged me.
+						4 I am slow to trust members of other races, tribes, and 
+						societies.
+						5 Violence is my answer to almost any challenge.
+						6 Don’t expect me to save those who can’t save 
+						themselves. It is nature’s way that the strong thrive 
+						and the weak perish`,
     },
 	Sage: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` You spent years learning the lore of the multiverse. You 
+						scoured manuscripts, studied scrolls, and listened to the 
+						greatest experts on the subjects that interest you. Your 
+						efforts have made you a master in your fields of study.`,
+        skillProficiencies: `Arcana, History `,
+        toolProficiencies: `Two of your choice`, // this needs to be thought about and fixed werd 2 roon timbs
+        startingEquipment: `A bottle of black ink, a quill, a small knife, 
+							a letter from a dead colleague posing a question you 
+							have not yet been able to answer, a set of common 
+							clothes, and a belt pouch containing 10 gp`,
+		custom: {
+			title: `Specialty`,
+			description: `To determine the nature of your scholarly training, roll a 
+						d8 or choose from the options in the table below.
+						d8 Specialty
+						1
+						2
+						Alchemist
+						Astronomer
+						3 Discredited
+						academic
+						4 Librarian
+						d8 Specialty
+						5 Professor
+						6
+						Researcher
+						7 Wizard’s apprentice
+						8
+						Scribe
+						`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Researcher`,
+            description: ` When you attempt to learn or recall a piece of lore, if you 
+						do not know that information, you often know where and 
+						from whom you can obtain it. Usually, this information 
+						comes from a library, scriptorium, university, or a sage 
+						or other learned person or creature. Your DM might 
+						rule that the knowledge you seek is secreted away in an 
+						almost inaccessible place, or that it simply cannot be 
+						found. Unearthing the deepest secrets of the multiverse 
+						can require an adventure or even a whole campaign.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` Sages are defined by their extensive studies, and their 
+									characteristics reflect this life of study. Devoted to 
+									scholarly pursuits, a sage values knowledge highly— 
+									sometimes in its own right, sometimes as a means 
+									toward other ideals.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1 I use polysyllabic words that convey the impression of 
+									great erudition.
+									2 I've read every book in the world’s greatest libraries— 
+									or I like to boast that I have.
+									3 I'm used to helping out those who aren’t as smart as I 
+									am, and I patiently explain anything and everything to 
+									others.
+									4 There’s nothing I like more than a good mystery.
+									5 I’m willing to listen to every side of an argument before 
+									I make my own judgment.
+									6 I . . . speak . . . slowly . . . when talking . . . to idiots, . . . 
+									which . . . almost . . . everyone . . . is . . . compared . . . 
+									to me.
+									7 I am horribly, horribly awkward in social situations.
+									8 I’m convinced that people are always trying to steal my 
+									secrets.`,
+		suggestedIdeal: ` d6 Ideal
+						1
+						2
+						6
+						Knowledge. The path to power and self-improvement 
+						is through knowledge. (Neutral)
+						Beauty. What is beautiful points us beyond itself 
+						toward what is true. (Good)
+						3 Logic. Emotions must not cloud our logical thinking. 
+						(Lawful)
+						4 No Limits. Nothing should fetter the infinite possibility 
+						inherent in all existence. (Chaotic)
+						5 Power. Knowledge is the path to power and 
+						domination. (Evil)
+						Self-Improvement. The goal of a life of study is the 
+						betterment of oneself. (Any)`,
+		suggestedBond: ` d6 Bond
+						1
+						2
+						It is my duty to protect my students.
+						I have an ancient text that holds terrible secrets that 
+						must not fall into the wrong hands.
+						3 I work to preserve a library, university, scriptorium, 
+						or monastery.
+						4 My life’s work is a series of tomes related to a specific 
+						field of lore.
+						5 I've been searching my whole life for the answer to a 
+						certain question.
+						6
+						I sold my soul for knowledge. I hope to do great deeds 
+						and win it back.`,
+		suggestedFlaw: `d6 Flaw
+						1
+						2
+						I am easily distracted by the promise of information.
+						Most people scream and run when they see a demon. I 
+						stop and take notes on its anatomy.
+						3 Unlocking an ancient mystery is worth the price of a 
+						civilization.
+						4 I overlook obvious solutions in favor of complicated 
+						ones.
+						5 I speak without really thinking through my words, 
+						invariably insulting others.
+						I can’t keep a secret to save my life, or anyone else’s.`,
     },
 	Sailor: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: `You sailed on a seagoing vessel for years. In that 
+					time, you faced down mighty storms, monsters of the 
+					deep, and those who wanted to sink your craft to the 
+					bottomless depths. Your first love is the distant line of 
+					the horizon, but the time has come to try your hand 
+					at something new.
+					Discuss the nature of the ship you previously sailed 
+					with your Dungeon Master. Was it a merchant ship, 
+					a naval vessel, a ship of discovery, or a pirate ship?
+					How famous (or infamous) is it? Is it widely traveled?
+					Is it still sailing, or is it missing and presumed lost 
+					with all hands?
+					What were your duties on board—boatswain, captain, 
+					navigator, cook, or some other position? Who were the 
+					captain and first mate? Did you leave your ship on good 
+					terms with your fellows, or on the run?`,
+        skillProficiencies: `Athletics, Perception `,
+        toolProficiencies: `Navigator’s tools, vehicles (water) `,
+        startingEquipment: `A belaying pin (club), 50 feet of silk rope, 
+							a lucky charm such as a rabbit foot or a small stone 
+							with a hole in the center (or you may roll for a random 
+							trinket on the Trinkets table in chapter 5), a set of 
+							common clothes, and a belt pouch containing 10 gp`,
         feature: {
-            title: ``,
-            description: ``,
+            title: `Ship's Passage`,
+            description: ` When you need to, you can secure free passage on 
+						a sailing ship for yourself and your adventuring 
+						companions. You might sail on the ship you served on, 
+						or another ship you have good relations with (perhaps 
+						one captained by a former crewmate). Because you’re 
+						calling in a favor, you can’t be certain of a schedule or 
+						route that will meet your every need. Your Dungeon 
+						Master will determine how long it takes to get where 
+						you need to go. In return for your free passage, you 
+						and your companions are expected to assist the crew 
+						during the voyage.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` Sailors can be a rough lot, but the responsibilities of 
+									life on a ship make them generally reliable as well. Life 
+									aboard a ship shapes their outlook and forms their most 
+									important attachments.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1 My friends know they can rely on me, no matter what.
+									2 I work hard so that I can play hard when the work 
+									is done.
+									3 I enjoy sailing into new ports and making new friends 
+									over a flagon of ale.
+									4 I stretch the truth for the sake of a good story.
+									5 To me, a tavern brawl is a nice way to get to know a 
+									new city.
+									6 I never pass up a friendly wager.
+									7 My language is as foul as an otyugh nest.
+									8 I like a job well done, especially if I can convince 
+									someone else to do it.`,
+		suggestedIdeal: ` d6 Ideal
+						1
+						2
+						Respect. The thing that keeps a ship together is mutual 
+						respect between captain and crew. (Good)
+						Fairness. We all do the work, so we all share in the 
+						rewards. (Lawful)
+						3 Freedom. The sea is freedom—the freedom to go 
+						anywhere and do anything. (Chaotic)
+						4 Mastery. I’m a predator, and the other ships on the sea 
+						are my prey. (Evil)
+						5 People. I’m committed to my crewmates, not to ideals. 
+						(Neutral)
+						6
+						Aspiration. Someday I’ll own my own ship and chart 
+						my own destiny. (Any)`,
+		suggestedBond: ` d6 Bond
+						1
+						2
+						I’m loyal to my captain first, everything else second.
+						The ship is most important—crewmates and captains 
+						come and go.
+						3 I’ll always remember my first ship.
+						4 In a harbor town, I have a paramour whose eyes nearly 
+						stole me from the sea.
+						5 I was cheated out of my fair share of the profits, and I 
+						want to get my due.
+						6
+						Ruthless pirates murdered my captain and crewmates, 
+						plundered our ship, and left me to die. Vengeance will 
+						be mine.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						2
+						I follow orders, even if I think they’re wrong.
+						I’ll say anything to avoid having to do extra work.
+						3 Once someone questions my courage, I never back 
+						down no matter how dangerous the situation.
+						4 Once I start drinking, it’s hard for me to stop.
+						5 I can’t help but pocket loose coins and other trinkets I 
+						come across.
+						6
+						My pride will probably lead to my destruction.`,
+		variant: {
+			title:`Pirate`,  // possibly add variant feature
+			description:`You spent your youth under the sway of a dread pirate, 
+						a ruthless cutthroat who taught you how to survive in a 
+						world of sharks and savages. You’ve indulged in larceny 
+						on the high seas and sent more than one deserving soul 
+						to a briny grave. Fear and bloodshed are no strangers 
+						to you, and you’ve garnered a somewhat unsavory 
+						reputation in many a port town.
+						If you decide that your sailing career involved piracy, 
+						you can choose the Bad Reputation feature (see sidebar) 
+						instead of the Ship’s Passage feature.
+
+						Variant Feature: Bad Reputation          
+						If your character has a sailor background, you may select this 
+						background feature instead of Ship’s Passage.
+						No matter where you go, people are afraid of you due to 
+						your reputation. When you are in a civilized settlement, you 
+						can get away with minor criminal offenses, such as refusing 
+						to pay for food at a tavern or breaking down doors at a local 
+						shop, since most people will not report your activity to the 
+						authorities`,
+		},
     },
 	Soldier: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: ` War has been your life for as long as you care to 
+						remember. You trained as a youth, studied the use of 
+						weapons and armor, learned basic survival techniques, 
+						including how to stay alive on the battlefield. You 
+						might have been part of a standing national army or a 
+						mercenary company, or perhaps a member of a local 
+						militia who rose to prominence during a recent war.
+						When you choose this background, work with your 
+						DM to determine which military organization you were 
+						a part of, how far through its ranks you progressed, and 
+						what kind of experiences you had during your military 
+						career. Was it a standing army, a town guard, or a village 
+						militia? Or it might have been a noble’s or merchant’s 
+						private army, or a mercenary company.`,
+        skillProficiencies: `Athletics, Intimidation `,
+        toolProficiencies: ` One type of gaming set, 
+							vehicles (land)`,
+        startingEquipment: ` An insignia of rank, a trophy taken from 
+						a fallen enemy (a dagger, broken blade, or piece of a 
+						banner), a set of bone dice or deck of cards, a set of 
+						common clothes, and a belt pouch containing 10 gp`,
+		custom: {
+			title: `Specialty`,
+			description: ` During your time as a soldier, you had a specific role to 
+						play in your unit or army. Roll a d8 or choose from the 
+						options in the table below to determine your role:
+						d8 Specialty
+						1
+						Officer
+						2 Scout
+						3 Infantry
+						4 Cavalry
+						5 Healer
+						d8 Specialty
+						6 Quartermaster
+						7 Standard bearer
+						8
+						Support staff (cook, 
+						blacksmith, or the 
+						like)`,
+		},
         feature: {
-            title: ``,
-            description: ``,
+            title: `Military Rank`,
+            description: ` You have a military rank from your career as a soldier. 
+						Soldiers loyal to your former military organization 
+						still recognize your authority and influence, and they 
+						defer to you if they are of a lower rank. You can invoke 
+						your rank to exert influence over other soldiers and 
+						requisition simple equipment or horses for temporary 
+						use. You can also usually gain access to friendly 
+						military encampments and fortresses where your 
+						rank is recognized.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: ` The horrors of war combined with the rigid discipline of 
+								military service leave their mark on all soldiers, shaping 
+								their ideals, creating strong bonds, and often leaving 
+								them scarred and vulnerable to fear, shame, and hatred.`,
+		suggestedPersonalityTraits: `d8 Personality Trait
+									1
+									I'm always polite and respectful.
+									2 I’m haunted by memories of war. I can’t get the images 
+									of violence out of my mind.
+									3 I’ve lost too many friends, and I’m slow to make new 
+									ones.
+									4 I’m full of inspiring and cautionary tales from my 
+									military experience relevant to almost every combat 
+									situation.
+									5 I can stare down a hell hound without flinching.
+									6 I enjoy being strong and like breaking things.
+									7 I have a crude sense of humor.
+									8 I face problems head-on. A simple, direct solution is 
+									the best path to success.`,
+		suggestedIdeal: `d6 Ideal
+						1 Greater Good. Our lot is to lay down our lives in 
+						defense of others. (Good)
+						2 Responsibility. I do what I must and obey just 
+						authority. (Lawful)
+						3 Independence. When people follow orders blindly, they 
+						embrace a kind of tyranny. (Chaotic)
+						4 Might. In life as in war, the stronger force wins. (Evil)
+						5 Live and Let Live. Ideals aren’t worth killing over or 
+						going to war for. (Neutral)
+						6 Nation. My city, nation, or people are all that matter. 
+						(Any)
+						`,
+		suggestedBond: `d6 Bond
+					1 I would still lay down my life for the people I 
+					served with.
+					2 Someone saved my life on the battlefield. To this day, I 
+					will never leave a friend behind.
+					3 My honor is my life.
+					4 I’ll never forget the crushing defeat my company 
+					suffered or the enemies who dealt it.
+					5 Those who fight beside me are those worth dying for.
+					6 I fight for those who cannot fight for themselves.`,
+		suggestedFlaw: ` d6 Flaw
+						1 The monstrous enemy we faced in battle still leaves 
+						me quivering with fear.
+						2 I have little respect for anyone who is not a 
+						proven warrior.
+						3 I made a terrible mistake in battle cost many lives— 
+						and I would do anything to keep that mistake secret.
+						4 My hatred of my enemies is blind and unreasoning.
+						5 I obey the law, even if the law causes misery.
+						6 I’d rather eat my armor than admit when I’m wrong`,
     },
 	Urchin: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+        description: `You grew up on the streets alone, orphaned, and poor. 
+					You had no one to watch over you or to provide for 
+					you, so you learned to provide for yourself. You fought 
+					fiercely over food and kept a constant watch out for other 
+					desperate souls who might steal from you. You slept on 
+					rooftops and in alleyways, exposed to the elements, and 
+					endured sickness without the advantage of medicine or 
+					a place to recuperate. You’ve survived despite all odds, 
+					and did so through cunning, strength, speed, or some 
+					combination of each.
+					You begin your adventuring career with enough 
+					money to live modestly but securely for at least ten days. 
+					How did you come by that money? What allowed you to 
+					break free of your desperate circumstances and embark 
+					on a better life?`,
+        skillProficiencies: `Sleight of Hand, Stealth `,
+        toolProficiencies: `Disguise kit, thieves’ tools `,
+        startingEquipment: ` A small knife, a map of the city you 
+							grew up in, a pet mouse, a token to remember your 
+							parents by, a set of common clothes, and a belt pouch 
+							containing 10 gp`,
         feature: {
-            title: ``,
-            description: ``,
+            title: `City Secrets`,
+            description: ` You know the secret patterns and flow to cities and can 
+						find passages through the urban sprawl that others would 
+						miss. When you are not in combat, you (and companions 
+						you lead) can travel between any two locations in the city 
+						twice as fast as your speed would normally allow.`,
         },
-        suggestedCharacteristics: ``,
-		suggestedPersonalityTraits: ``,
-		suggestedIdeal: ``,
-		suggestedBond: ``,
-		suggestedFlaw: ``,
+        suggestedCharacteristics: `Urchins are shaped by lives of desperate poverty, for 
+								good and for ill. They tend to be driven either by a 
+								commitment to the people with whom they shared life 
+								on the street or by a burning desire to find a better life— 
+								and maybe get some payback on all the rich people who 
+								treated them badly.`,
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1
+									2
+									6
+									I hide scraps of food and trinkets away in my pockets.
+									I ask a lot of questions.
+									3 I like to squeeze into small places where no one else 
+									can get to me.
+									4 I sleep with my back to a wall or tree, with everything I 
+									own wrapped in a bundle in my arms.
+									5 I eat like a pig and have bad manners.
+									I think anyone who’s nice to me is hiding evil intent.
+									7 I don’t like to bathe.
+									8
+									I bluntly say what other people are hinting at or hiding.`,
+		suggestedIdeal: ` d6 Ideal
+						1
+						2
+						Respect. All people, rich or poor, deserve respect. 
+						(Good)
+						Community. We have to take care of each other, 
+						because no one else is going to do it. (Lawful)
+						3 Change. The low are lifted up, and the high and mighty 
+						are brought down. Change is the nature of things. 
+						(Chaotic)
+						4 Retribution. The rich need to be shown what life and 
+						death are like in the gutters. (Evil)
+						5 People. I help the people who help me—that’s what 
+						keeps us alive. (Neutral)
+						6
+						Aspiration. I'm going to prove that I'm worthy of a 
+						better life.`,
+		suggestedBond: `d6 Bond
+						1
+						2
+						6
+						My town or city is my home, and I’ll fight to defend it.
+						I sponsor an orphanage to keep others from enduring 
+						what I was forced to endure.
+						3 I owe my survival to another urchin who taught me to 
+						live on the streets.
+						4 I owe a debt I can never repay to the person who took 
+						pity on me.
+						5 I escaped my life of poverty by robbing an important 
+						person, and I’m wanted for it.
+						No one else should have to endure the hardships I’ve 
+						been through.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						2
+						6
+						If I'm outnumbered, I will run away from a fight.
+						Gold seems like a lot of money to me, and I’ll do just 
+						about anything for more of it.
+						3 I will never fully trust anyone other than myself.
+						4 I’d rather kill someone in their sleep then fight fair.
+						5 It’s not stealing if I need it more than someone else.
+						People who can't take care of themselves get what they 
+						deserve.`,
     },
 	Far_Traveler: {
         description: ``,
