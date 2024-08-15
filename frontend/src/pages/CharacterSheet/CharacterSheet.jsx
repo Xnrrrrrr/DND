@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
 import {
@@ -136,36 +136,43 @@ const CharacterSheet = () => {
 
 		const filteredSkills = skills.filter((skill) => skill.trim() !== "");
 
+		// Prepare the request payload
+		const payload = {
+			characterFirstName,
+			characterLastName,
+			ideals: ideal,
+			bonds: bond,
+			flaws: flaw,
+			backgrounds: background,
+			primaryClass,
+			subclass,
+			skills: filteredSkills,
+			race,
+			strength,
+			dexterity,
+			constitution,
+			intelligence,
+			wisdom,
+			charisma,
+			alignment,
+			personalityTraits,
+			age,
+			height,
+			weight,
+			sex,
+			skin,
+			hair,
+			eyes,
+			backstory,
+		};
+
+		// Only include subrace if it's not an empty string
+		if (subraces.trim() !== "") {
+			payload.subrace = subraces;
+		}
+
 		try {
-			const res = await create({
-				characterFirstName,
-				characterLastName,
-				ideals: ideal,
-				bonds: bond,
-				flaws: flaw,
-				backgrounds: background,
-				primaryClass,
-				subclass,
-				skills: filteredSkills,
-				race,
-				subrace: subraces,
-				strength,
-				dexterity,
-				constitution,
-				intelligence,
-				wisdom,
-				charisma,
-				alignment,
-				personalityTraits,
-				age,
-				height,
-				weight,
-				sex,
-				skin,
-				hair,
-				eyes,
-				backstory,
-			}).unwrap();
+			const res = await create(payload).unwrap();
 			if (res) {
 				navigate("/home");
 			}
@@ -304,7 +311,7 @@ const CharacterSheet = () => {
 								</select>
 							</div>
 						</div>
-						<div>
+						<div className="character-sheet-top-right-container">
 							<div>
 								<label htmlFor="backstory">
 									Background (1000 Char Limit):{" "}
@@ -370,7 +377,7 @@ const CharacterSheet = () => {
 					<div className="character-sheet-attribute">
 						<div className="character-sheet-attribute-top">
 							<p>
-								Attribute Points Remaining:{" "}
+								Ability Points Remaining:{" "}
 								{totalAttributePointsRemaining}
 							</p>
 						</div>
@@ -778,12 +785,13 @@ const CharacterSheet = () => {
 											verticalAlign: "sub",
 											fontSize: "0.8rem",
 											cursor: "pointer",
+											color: "#edf2f4",
 										}}
 										onClick={() =>
-											window.scrollTo(
-												0,
-												document.body.scrollHeight
-											)
+											window.scrollTo({
+												top: document.body.scrollHeight,
+												behavior: "smooth",
+											})
 										}
 									>
 										1
@@ -808,12 +816,13 @@ const CharacterSheet = () => {
 											verticalAlign: "sub",
 											fontSize: "0.8rem",
 											cursor: "pointer",
+											color: "#edf2f4",
 										}}
 										onClick={() =>
-											window.scrollTo(
-												0,
-												document.body.scrollHeight
-											)
+											window.scrollTo({
+												top: document.body.scrollHeight,
+												behavior: "smooth",
+											})
 										}
 									>
 										2
@@ -836,12 +845,13 @@ const CharacterSheet = () => {
 											verticalAlign: "sub",
 											fontSize: "0.8rem",
 											cursor: "pointer",
+											color: "#edf2f4",
 										}}
 										onClick={() =>
-											window.scrollTo(
-												0,
-												document.body.scrollHeight
-											)
+											window.scrollTo({
+												top: document.body.scrollHeight,
+												behavior: "smooth",
+											})
 										}
 									>
 										3
@@ -864,12 +874,13 @@ const CharacterSheet = () => {
 											verticalAlign: "sub",
 											fontSize: "0.8rem",
 											cursor: "pointer",
+											color: "#edf2f4",
 										}}
 										onClick={() =>
-											window.scrollTo(
-												0,
-												document.body.scrollHeight
-											)
+											window.scrollTo({
+												top: document.body.scrollHeight,
+												behavior: "smooth",
+											})
 										}
 									>
 										4
@@ -882,7 +893,9 @@ const CharacterSheet = () => {
 									id="personalityTraitOne"
 									value={personalityTraits[0]}
 									onChange={(e) => {
-										const newTraits = [...personalityTraits];
+										const newTraits = [
+											...personalityTraits,
+										];
 										newTraits[0] = e.target.value;
 										setPersonalityTraits(newTraits);
 									}}
@@ -898,12 +911,13 @@ const CharacterSheet = () => {
 											verticalAlign: "sub",
 											fontSize: "0.8rem",
 											cursor: "pointer",
+											color: "#edf2f4",
 										}}
 										onClick={() =>
-											window.scrollTo(
-												0,
-												document.body.scrollHeight
-											)
+											window.scrollTo({
+												top: document.body.scrollHeight,
+												behavior: "smooth",
+											})
 										}
 									>
 										4
@@ -916,7 +930,9 @@ const CharacterSheet = () => {
 									id="personalityTraitTwo"
 									value={personalityTraits[1]}
 									onChange={(e) => {
-										const newTraits = [...personalityTraits];
+										const newTraits = [
+											...personalityTraits,
+										];
 										newTraits[1] = e.target.value;
 										setPersonalityTraits(newTraits);
 									}}
@@ -925,12 +941,13 @@ const CharacterSheet = () => {
 								/>
 							</div>
 						</div>
-						<div className="character-sheet-bottom-right">
-							<h6>Class</h6>
-							<p>
+						<div>
+							<div className="character-sheet-image-container"></div>
+							<div className="character-sheet-bottom-right">
+								<h3>Class</h3>
 								{primaryClass ? (
 									<>
-										{primaryClass}:
+										<h5>{primaryClass}:</h5>
 										<p>
 											- Description:{" "}
 											{
@@ -939,7 +956,7 @@ const CharacterSheet = () => {
 											}
 										</p>
 										<p>
-											- Hit Die/Hit Points:{" "}
+											- Hit Die:{" "}
 											{classDesc[primaryClass].hitDie}
 										</p>
 										<p>
@@ -965,98 +982,224 @@ const CharacterSheet = () => {
 										</p>
 									</>
 								) : (
-									`Select a class to populate more information here.`
+									<p>
+										Select a class to populate more
+										information here.
+									</p>
 								)}
-							</p>
-							<h6>Subclass</h6>
-							<p>
-								{subclass
-									? `${subclass} - ${
-											subclassDesc[primaryClass][
-												subclass.replaceAll(" ", "_")
-											]
-									  }`
-									: `Select a class and a subclass to populate more information here.`}
-							</p>
-							<h6>Skills</h6>
-							{Array.from({ length: maxSkillCount }).map(
-								(_, index) => (
-									<p key={index}>
-										{skills[index] &&
-											`${skills[index]} - ${
-												skillsDesc[
-													skills[index].replaceAll(
+								<h3>Subclass</h3>
+								{subclass ? (
+									<>
+										<h5>{subclass}:</h5>
+										<p>
+											- Description:
+											{
+												subclassDesc[primaryClass][
+													subclass.replaceAll(
+														" ",
+														"_"
+													)
+												].description
+											}
+										</p>
+										<p>- Features:</p>
+										{subclassDesc[primaryClass][
+											subclass.replaceAll(" ", "_")
+										].features.map((feature, index) => (
+											<React.Fragment key={index}>
+												<p
+													style={{
+														paddingLeft: "2rem",
+													}}
+												>
+													- {feature.title}
+												</p>
+												<p
+													style={{
+														paddingLeft: "4rem",
+													}}
+												>
+													- {feature.description}
+												</p>
+											</React.Fragment>
+										))}
+									</>
+								) : (
+									<p>
+										Select a class and a subclass to
+										populate more information here.
+									</p>
+								)}
+								<h3>Skills</h3>
+								{Array.from({ length: maxSkillCount }).map(
+									(_, index) => (
+										<React.Fragment key={index}>
+											{skills[index] && (
+												<>
+													<h5>{skills[index]}</h5>
+													<p>
+														- Ability Check:{" "}
+														{
+															skillsDesc[
+																skills[
+																	index
+																].replaceAll(
+																	" ",
+																	"_"
+																)
+															].attribute
+														}
+													</p>
+													<p>
+														- Description:{" "}
+														{
+															skillsDesc[
+																skills[
+																	index
+																].replaceAll(
+																	" ",
+																	"_"
+																)
+															].description
+														}
+													</p>
+													<p>
+														- Examples of Usage:{" "}
+														{
+															skillsDesc[
+																skills[
+																	index
+																].replaceAll(
+																	" ",
+																	"_"
+																)
+															].examples
+														}
+													</p>
+												</>
+											)}
+										</React.Fragment>
+									)
+								)}
+								{!skills[0] &&
+									!skills[1] &&
+									!skills[2] &&
+									!skills[3] && (
+										<p>
+											Select a class and a skill to
+											populate more information here.
+										</p>
+									)}
+								<h3>Race</h3>
+								{race ? (
+									<>
+										<h5>{race}:</h5>
+										<p>
+											- Description:{" "}
+											{
+												raceDesc[
+													race
+														.replaceAll("-", "0")
+														.replaceAll(" ", "_")
+												].description
+											}
+										</p>
+										<p>
+											- Expected Life Span:{" "}
+											{
+												raceDesc[
+													race
+														.replaceAll("-", "0")
+														.replaceAll(" ", "_")
+												].expectedLifeSpan
+											}
+										</p>
+										<p>
+											- Expected Height:{" "}
+											{
+												raceDesc[
+													race
+														.replaceAll("-", "0")
+														.replaceAll(" ", "_")
+												].expectedSize
+											}
+										</p>
+										<p>
+											- Speed:{" "}
+											{
+												raceDesc[
+													race
+														.replaceAll("-", "0")
+														.replaceAll(" ", "_")
+												].abilityScoreIncrease
+											}
+										</p>
+										<p>
+											- Spoken Language:{" "}
+											{
+												raceDesc[
+													race
+														.replaceAll("-", "0")
+														.replaceAll(" ", "_")
+												].standardLanguages
+											}
+										</p>
+									</>
+								) : (
+									<p>
+										Select a race to populate more
+										information here.
+									</p>
+								)}
+								<h3>Subrace</h3>
+								<p>
+									{race
+										? subracesObj[race]
+											? subraces
+												? `${subraces} - ${
+														subracesDesc[
+															race.replaceAll(
+																" ",
+																"_"
+															)
+														][
+															subraces.replaceAll(
+																" ",
+																"_"
+															)
+														]
+												  }`
+												: `Select a subrace to populate more information here.`
+											: `This race has no subraces.`
+										: `Select a race to determine if it has subraces.`}
+								</p>
+								<h3>Background</h3>
+								<p>
+									{background
+										? `${background} - ${
+												backgroundDesc[
+													background.replaceAll(
 														" ",
 														"_"
 													)
 												]
-											}`}
-									</p>
-								)
-							)}
-							{!skills[0] &&
-								!skills[1] &&
-								!skills[2] &&
-								!skills[3] && (
-									<p>
-										Select a class and a skill to populate
-										more information here.
-									</p>
-								)}
-							<h6>Race</h6>
-							<p>
-								{race
-									? `${race} - ${
-											raceDesc[
-												race
-													.replaceAll("-", "0")
-													.replaceAll(" ", "_")
-											]
-									  }`
-									: `Select a race to populate more information here.`}
-							</p>
-							<h6>Subrace</h6>
-							<p>
-								{race
-									? subracesObj[race]
-										? subraces
-											? `${subraces} - ${
-													subracesDesc[
-														race.replaceAll(
-															" ",
-															"_"
-														)
-													][
-														subraces.replaceAll(
-															" ",
-															"_"
-														)
-													]
-											  }`
-											: `Select a subrace to populate more information here.`
-										: `This race has no subraces.`
-									: `Select a race to determine if it has subraces.`}
-							</p>
-							<h6>Background</h6>
-							<p>
-								{background
-									? `${background} - ${
-											backgroundDesc[
-												background.replaceAll(" ", "_")
-											]
-									  }`
-									: `Select a background to populate more information here.`}
-							</p>
-							<h6>Alignment</h6>
-							<p>
-								{alignment
-									? `${alignment} - ${
-											alignmentDesc[
-												alignment.replaceAll(" ", "_")
-											]
-									  }`
-									: `Select an alignment to populate more information here.`}
-							</p>
+										  }`
+										: `Select a background to populate more information here.`}
+								</p>
+								<h3>Alignment</h3>
+								<p>
+									{alignment
+										? `${alignment} - ${
+												alignmentDesc[
+													alignment.replaceAll(
+														" ",
+														"_"
+													)
+												]
+										  }`
+										: `Select an alignment to populate more information here.`}
+								</p>
+							</div>
 						</div>
 					</div>
 					<button
@@ -1075,7 +1218,7 @@ const CharacterSheet = () => {
 							1. Your ideals are the things that you believe in
 							most strongly, the fundamental moral and ethical
 							principles that com pel you to act as you do. Ideals
-							encom pass everything from your life goals to your
+							encompass everything from your life goals to your
 							core belief system. Ideals may answer the following
 							questions: What are the principles that you will
 							never betray? What would prompt you to make
@@ -1091,8 +1234,33 @@ const CharacterSheet = () => {
 							connection? What is your most treasured possession?
 							(100 char limit)
 						</p>
-						<p>3.</p>
-						<p>4.</p>
+						<p>
+							3. Your character’s flaw represents some vice,
+							compulsion, fear, or weakness; in particular,
+							anything that someone else could exploit to bring
+							you to ruin or cause you to act against your best
+							interests. A flaw might answer any of these
+							question: What enrages you? What’s the one person,
+							concept, or event that you are terrified of? What
+							are your vices? (100 char limit)
+						</p>
+						<p>
+							4. Personality traits are small, simple ways to help
+							you set your character apart from every other
+							character. Your personality traits should tell you
+							something interesting and fun about your character.
+							They should be self descriptions that are specific
+							about what makes your character stand out. “I’m
+							smart” is not a good trait, because it describes a
+							lot of characters. “I’ve read every book in
+							Candlekeep” tells you something specific about your
+							character’s interests and disposition. Personality
+							traits might describe the things your character
+							likes, his or her past accomplishments, things your
+							character dislikes or fears, your character’s
+							selfattitude or mannerisms, or the influence of his
+							or her ability scores. (50 char limit each)
+						</p>
 					</div>
 				</form>
 			</div>
