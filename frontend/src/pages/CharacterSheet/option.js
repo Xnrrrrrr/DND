@@ -1,4 +1,5 @@
 export const classesArray = [
+	"Artificer",
 	"Barbarian",
 	"Bard",
 	"Cleric",
@@ -11,7 +12,6 @@ export const classesArray = [
 	"Sorcerer",
 	"Warlock",
 	"Wizard",
-	"Artificer",
 ];
 
 // pg 39 in DND 5e pdf
@@ -31,7 +31,7 @@ export const classDesc = {
 	Barbarian: {
 		description:
 			"A fierce warrior of primitive background who can enter a battle rage",
-		hitDie: "d12",
+		hitDie: "1d12",
 		primaryAbility: "Strength",
 		savingThrowProficiencies: "Strength and Constitution",
 		armorAndWeaponProficiencies:
@@ -40,7 +40,7 @@ export const classDesc = {
 	Bard: {
 		description:
 			" An inspiring magician whose power echoes the music of creation",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Charisma",
 		savingThrowProficiencies: "Dexterity and Charisma",
 		armorAndWeaponProficiencies:
@@ -49,7 +49,7 @@ export const classDesc = {
 	Cleric: {
 		description:
 			"A priestly champion who wields divine magic in service of a higher power",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Wisdom",
 		savingThrowProficiencies: "Wisdom and Charisma",
 		armorAndWeaponProficiencies:
@@ -58,7 +58,7 @@ export const classDesc = {
 	Druid: {
 		description:
 			" A priest of the Old Faith, wielding the powers of nature—moonlight and plant growth, fire and lightning—and adopting animal forms",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Wisdom",
 		savingThrowProficiencies: "Intelligence and Wisdom",
 		armorAndWeaponProficiencies:
@@ -67,7 +67,7 @@ export const classDesc = {
 	Fighter: {
 		description:
 			"A master of martial combat, skilled with a variety of weapons and armor",
-		hitDie: "d10",
+		hitDie: "1d10",
 		primaryAbility: "Strength or Dexterity",
 		savingThrowProficiencies: "Strength and Constitution",
 		armorAndWeaponProficiencies:
@@ -76,14 +76,14 @@ export const classDesc = {
 	Monk: {
 		description:
 			"An master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Dexterity and Wisdom",
 		savingThrowProficiencies: "Strength and Dexterity",
 		armorAndWeaponProficiencies: "Simple weapons, shortswords",
 	},
 	Paladin: {
 		description: "A holy warrior bound to a sacred oath",
-		hitDie: "d10",
+		hitDie: "1d10",
 		primaryAbility: "Strength and Charisma",
 		savingThrowProficiencies: "Wisdom and Charisma",
 		armorAndWeaponProficiencies:
@@ -92,7 +92,7 @@ export const classDesc = {
 	Ranger: {
 		description:
 			" A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
-		hitDie: "d10",
+		hitDie: "1d10",
 		primaryAbility: "Dexterity and Wisdom",
 		savingThrowProficiencies: "Strength and Dexterity",
 		armorAndWeaponProficiencies:
@@ -101,7 +101,7 @@ export const classDesc = {
 	Rogue: {
 		description:
 			" A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Dexterity",
 		savingThrowProficiencies: "Dexterity and Intelligence",
 		armorAndWeaponProficiencies:
@@ -110,7 +110,7 @@ export const classDesc = {
 	Sorcerer: {
 		description:
 			" A spellcaster who draws on inherent magic from a gift or bloodline",
-		hitDie: "d6",
+		hitDie: "1d6",
 		primaryAbility: "Charisma",
 		savingThrowProficiencies: "Constitution and Charisma",
 		armorAndWeaponProficiencies:
@@ -119,7 +119,7 @@ export const classDesc = {
 	Warlock: {
 		description:
 			" A wielder of magic that is derived from a bargain with an extraplanar entity",
-		hitDie: "d8",
+		hitDie: "1d8",
 		primaryAbility: "Charisma",
 		savingThrowProficiencies: "Wisdom and Charisma",
 		armorAndWeaponProficiencies: "Light armor, simple weapons",
@@ -127,7 +127,7 @@ export const classDesc = {
 	Wizard: {
 		description:
 			"A scholarly magic-user capable of manipulating the structures of reality",
-		hitDie: "d6",
+		hitDie: "1d6",
 		primaryAbility: "Intelligence",
 		savingThrowProficiencies: "Intelligence and Wisdom",
 		armorAndWeaponProficiencies:
@@ -2778,6 +2778,8 @@ export const raceArray = [
 	"Warforged",
 	"Yuan-ti Pureblood",
 ];
+
+
 
 // 0 = - (tack) and _ = ' ' (space)
 
