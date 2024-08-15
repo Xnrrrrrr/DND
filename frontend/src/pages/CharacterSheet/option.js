@@ -3220,15 +3220,59 @@ export const alignmentArray = [
 ];
 
 export const alignmentDesc = {
-	Lawful_Good: "",
-	Neutral_Good: "",
-	Chaotic_Good: "",
-	Lawful_Neutral: "",
-	Neutral: "",
-	Chaotic_Neutral: "",
-	Lawful_Evil: "",
-	Neutral_Evil: "",
-	Chaotic_Evil: "",
+	Lawful_Good: {
+        description: `(LG) creatures can be counted on to do 
+					the right thing as expected by society. `,
+        expectedClasses:`Gold dragons, 
+						paladins, and most dwarves are lawful good.`,
+    },
+	Neutral_Good: {
+        description: ` (NG) folk do the best they can to help 
+others according to their needs.`,
+        expectedClasses:``,
+    },
+	Chaotic_Good: {
+        description: ` (CG) creatures act as their conscience 
+						directs, with little regard for what others expect.`,
+        expectedClasses:`Copper 
+						dragons, many elves, and unicorns are chaotic good.`,
+    },
+	Lawful_Neutral: {
+        description: ` (LN) individuals act in accordance 
+						with law, tradition, or personal codes.`,
+        expectedClasses:`Many monks and 
+						some wizards are lawful neutral.`,
+    },
+	Neutral: {
+        description: ` (N) is the alignment of those who prefer to 
+					steer clear of moral questions and don’t take sides, doing what seems best at the time`,
+        expectedClasses:` Lizardfolk, most 
+						druids, and many humans are neutral`,
+    },
+	Chaotic_Neutral: {
+        description: ` (CN) creatures follow their whims, 
+					holding their personal freedom above all else.`,
+        expectedClasses:`Many barbarians and rogues, and some bards, are 
+						chaotic neutral.`,
+    },
+	Lawful_Evil: {
+        description: `(LE) creatures methodically take what they 
+					want, within the limits of a code of tradition, loyalty, or 
+					order. `,
+        expectedClasses:`Devils, blue dragons, and hobgoblins are lawful evil.`,
+    },
+	Neutral_Evil: {
+        description: `l (NE) is the alignment of those who do 
+					whatever they can get away with, without compassion or 
+					qualms. `,
+        expectedClasses:`Many drow, some cloud giants, and yugoloths 
+				are neutral evil.`,
+    },
+	Chaotic_Evil: {
+        description: `l (CE) creatures act with arbitrary 
+					violence, spurred by their greed, hatred, or bloodlust. `,
+        expectedClasses:`Demons, red dragons, and orcs are chaotic evil.`,
+    },
 };
 
 export const backgroundsArray = [
@@ -3262,33 +3306,599 @@ export const backgroundsArray = [
 ];
 
 export const backgroundDesc = {
-	Acolyte: "",
-	Charlatan: "",
-	Criminal: "",
-	Entertainer: "",
-	Folk_Hero: "",
-	Guild_Artisan: "",
-	Hermit: "",
-	Noble: "",
-	Outlander: "",
-	Sage: "",
-	Sailor: "",
-	Soldier: "",
-	Urchin: "",
-	Far_Traveler: "",
-	Haunted_One: "",
-	Knight: "",
-	Pirate: "",
-	City_Watch: "",
-	Clan_Crafter: "",
-	Cloistered_Scholar: "",
-	Courtier: "",
-	Faction_Agent: "",
-	Inheritor: "",
-	Investigator: "",
-	Mercenary_Veteran: "",
-	Urban_Bounty_Hunter: "",
-	Waterdhavian_Noble: "",
+	Acolyte: {
+        description: ` You have spent your life in the service of a temple 
+					to a specific god or pantheon of gods. You act as an 
+					intermediary between the realm of the holy and the 
+					mortal world, performing sacred rites and offering 
+					sacrifices in order to conduct worshipers into the 
+					presence of the divine. You are not necessarily a 
+					cleric-perform ing sacred rites is not the same thing as 
+					channeling divine power.
+
+					Choose a god, a pantheon of gods, or some other 
+					quasi-divine being from among those listed in appendix 
+					B or those specified by your DM, and work with your 
+					DM to detail the nature of your religious service.
+					Were you a lesser functionary in a temple, raised from 
+					childhood to assist the priests in the sacred rites? Or 
+					were you a high priest who suddenly experienced a call 
+					to serve your god in a different way? Perhaps you were 
+					the leader of a small cult outside of any established 
+					temple structure, or even an occult group that served a 
+					fiendish master that you now deny.`,
+        skillProficiencies: `Insight, Religion `,
+        toolProficiencies: `Two of your choice `,
+        startingEquipment: `A holy symbol (a gift to you when you 
+						entered the priesthood), a prayer book or prayer 
+						wheel, 5 sticks of incense, vestments, a set of common 
+						clothes, and a belt pouch containing 15 gp`,
+        feature: {
+            title: `Shelter of the Faithful`,
+            description: ` As an acolyte, you command the respect of those who 
+						share your faith, and you can perform the religious 
+						ceremonies of your deity. You and your adventuring 
+						companions can expect to receive free healing and 
+						care at a temple, shrine, or other established presence 
+						of your faith, though you must provide any material 
+						components needed for spells. Those who share 
+						your religion will support you (but only you) at a 
+						modest lifestyle.
+
+						You might also have ties to a specific temple dedicated 
+						to your chosen deity or pantheon, and you have a 
+						residence there. This could be the temple where you 
+						used to serve, if you remain on good terms with it, or a 
+						temple where you have found a new home. While near 
+						your temple, you can call upon the priests for assistance, 
+						provided the assistance you ask for is not hazardous and 
+						you remain in good standing with your temple.`,
+        },
+        suggestedCharacteristics: ` Acolytes are shaped by their experience in temples 
+								or other religious communities. Their study of the 
+								history and tenets of their faith and their relationships 
+								to temples, shrines, or hierarchies affect their 
+								mannerisms and ideals. Their flaws might be some 
+								hidden hypocrisy or heretical idea, or an ideal or bond 
+								taken to an extreme.`,												// needs formatting
+		suggestedPersonalityTraits: ` 1 I idolize a particular hero of my faith, and constantly 
+									refer to that person’s deeds and example.
+									3 I see omens in every event and action. The gods try to 
+									speak to us, we just need to listen
+									4 Nothing can shake my optimistic attitude.
+									5 I quote (or misquote) sacred texts and proverbs in 
+									almost every situation.
+									6 I am tolerant (or intolerant) of other faiths and respect 
+									(or condemn) the worship of other gods.
+									7 I've enjoyed fine food, drink, and high society among 
+									my temple’s elite. Rough living grates on me.
+									8 I’ve spent so long in the temple that I have little 
+									practical experience dealing with people in the outside 
+									world`,
+		suggestedIdeal: `d6 Ideal
+						1 Tradition. The ancient traditions of worship and 
+						sacrifice must be preserved and upheld. (Lawful)
+						2 Charity. I always try to help those in need, no matter 
+						what the personal cost. (Good)
+						3 Change. We must help bring about the changes the 
+						gods are constantly working in the world. (Chaotic)
+						4 Power. I hope to one day rise to the top of my faith’s 
+						religious hierarchy. (Lawful)
+						5 Faith. I trust that my deity will guide my actions, I have 
+						faith that if I work hard, things will go well. (Lawful)
+						6 Aspiration. I seek to prove myself worthy of my god’s 
+						favor by matching my actions against his or her 
+						teachings. (Any)`,
+		suggestedBond: ` d6 Bond
+						1 I would die to recover an ancient relic of my faith that 
+						was lost long ago.
+						2 I will someday get revenge on the corrupt temple 
+						hierarchy who branded me a heretic.
+						3 I owe my life to the priest who took me in when my 
+						parents died.
+						4 Everything I do is for the common people.
+						5 I will do anything to protect the temple where I served.
+						6 I seek to preserve a sacred text that my enemies 
+						consider heretical and seek to destroy.`,
+		suggestedFlaw: ` d6 Flaw
+						1 I judge others harshly, and myself even more severely.
+						2 I put too much trust in those who wield power within 
+						my temple’s hierarchy.
+						3 My piety sometimes leads me to blindly trust those 
+						that profess faith in my god.
+						4 I am inflexible in my thinking.
+						5 I am suspicious of strangers and expect the worst of 
+						them.
+						6 Once I pick a goal, I become obsessed with it to the 
+						detriment of everything else in my life`,
+    },
+	Charlatan: {
+        description: `You have always had a way with people. You know 
+					what makes them tick, you can tease out their hearts' 
+					desires after a few minutes of conversation, and with a 
+					few leading questions you can read them like they were 
+					children's books. It’s a useful talent, and one that you’re 
+					perfectly willing to use for your advantage.
+
+					You know what people want and you deliver, or rather, 
+					you promise to deliver. Common sense should steer 
+					people away from things that sound too good to be true, 
+					but common sense seems to be in short supply when 
+					you’re around. The bottle of pink-colored liquid will 
+					surely cure that unseemly rash, this ointment—nothing 
+					more than a bit of fat with a sprinkle of silver dust—can 
+					restore youth and vigor, and there’s a bridge in the city 
+					that just happens to be for sale. These marvels sound 
+					implausible, but you make them sound like the real deal.`,
+        skillProficiencies: `Deception, Sleight of Hand `,
+        toolProficiencies: ` Disguise kit, forgery kit `,
+        startingEquipment: ` A set of fine clothes, a disguise kit, tools 
+							of the con of your choice (ten stoppered bottles filled 
+							with colored liquid, a set of weighted dice, a deck of 
+							marked cards, or a signet ring of an imaginary duke), 
+							and a belt pouch containing 15 gp`,
+        feature: {
+            title: `Flase Identity`,
+            description: `You have created a second identity that includes 
+						documentation, established acquaintances, and 
+						disguises that allow you to assume that persona. 
+						Additionally, you can forge documents including official 
+						papers and personal letters, as long as you have seen an 
+						example of the kind of document or the handwriting you 
+						are trying to copy.`,
+        },
+
+        suggestedCharacteristics: ` Charlatans are colorful characters who conceal their 
+									true selves behind the masks they construct. They 
+									reflect what people want to see, what they want to 
+									believe, and how they see the world. But their true 
+									selves are sometimes plagued by an uneasy conscience, 
+									an old enemy, or deep-seated trust issues.`,
+
+		suggestedPersonalityTraits: ` d8 Personality Trait
+									1
+									2
+									I fall in and out of love easily, and am always pursuing 
+									someone.
+									I have a joke for every occasion, especially occasions 
+									where humor is inappropriate.
+									3 Flattery is my preferred trick for getting what I want.
+									4 I’m a born gambler who can't resist taking a risk for a 
+									potential payoff.
+									5 I lie about almost everything, even when there’s no 
+									good reason to.
+									6
+									Sarcasm and insults are my weapons of choice.
+									7 I keep multiple holy symbols on me and invoke 
+									whatever deity might come in useful at any given 
+									moment.
+									8
+									I pocket anything I see that might have some value.`,
+		suggestedIdeal: `  d6 Ideal
+							1
+							2
+							Independence. I am a free spirit—no one tells me what 
+							to do. (Chaotic)
+							Fairness. I never target people who can’t afford to lose 
+							a few coins. (Lawful)
+							3 Charity. I distribute the money I acquire to the people 
+							who really need it. (Good)
+							4 Creativity. I never run the same con twice. (Chaotic)
+							5 Friendship. Material goods come and go. Bonds of 
+							friendship last forever. (Good)
+							6
+							Aspiration. I’m determined to make something 
+							of myself. (Any)`,
+		suggestedBond: `  d6 Bond
+						1
+						2
+						I fleeced the wrong person and must work to ensure 
+						that this individual never crosses paths with me or 
+						those I care about.
+						I owe everything to my mentor—a horrible person 
+						who’s probably rotting in jail somewhere.
+						3 Somewhere out there, I have a child who doesn’t 
+						know me. I’m making the world better for him or her.
+						4 I come from a noble family, and one day I’ll reclaim my 
+						lands and title from those who stole them from me.
+						5 A powerful person killed someone I love. Some day 
+						soon, I’ll have my revenge.
+						6
+						I swindled and ruined a person who didn’t deserve it. I 
+						seek to atone for my misdeeds but might never be able 
+						to forgive myself.`,
+		suggestedFlaw: ` d6 Flaw
+						1
+						2
+						I can’t resist a pretty face.
+						I'm always in debt. I spend my ill-gotten gains on 
+						decadent luxuries faster than I bring them in..
+						3 I’m convinced that no one could ever fool me the way 
+						I fool others.
+						4 I’m too greedy for my own good. I can’t resist taking a 
+						risk if there’s money involved.
+						5 I can’t resist swindling people who are more powerful 
+						than me.
+						6
+						I hate to admit it and will hate myself for it, but I'll run 
+						and preserve my own hide if the going gets tough.
+						`,
+    },
+	Criminal: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Entertainer: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Folk_Hero: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Guild_Artisan: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Hermit: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Noble: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Outlander: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Sage: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Sailor: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Soldier: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Urchin: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Far_Traveler: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Haunted_One: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Knight: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Pirate: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	City_Watch: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Clan_Crafter: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Cloistered_Scholar: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Courtier: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Faction_Agent: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Inheritor: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Investigator: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Mercenary_Veteran: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Urban_Bounty_Hunter: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
+	Waterdhavian_Noble: {
+        description: ``,
+        skillProficiencies: ``,
+        toolProficiencies: ``,
+        startingEquipment: ``,
+        feature: {
+            title: ``,
+            description: ``,
+        },
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: ``,
+		suggestedIdeal: ``,
+		suggestedBond: ``,
+		suggestedFlaw: ``,
+    },
 };
 
 export const exoticLanguageArray = [
