@@ -3858,8 +3858,8 @@ export const backgroundDesc = {
 						see me killed.
 						2
 						6
-						I’m convinced of the significance of my destiny, and 
-						blind to my shortcomings and the risk of failure.
+						I’m convinced of the significance of my destiny, and s
+						blind to my shortcomings and the risk of failure.v
 						3 The people who knew me when I was young know my 
 						shameful secret, so I can never go home again.
 						4 I have a weakness for the vices of the city, especially 
