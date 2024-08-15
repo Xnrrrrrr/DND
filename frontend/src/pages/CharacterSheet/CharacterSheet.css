@@ -1,10 +1,47 @@
+.character-sheet-background {
+	position: relative;
+	/* background-image: url("../../assets/wood-background1.png");
+	background-repeat: repeat-y;
+	background-size: contain; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.character-sheet-background::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--tint-overlay);
+	z-index: 0;
+}
+
 .character-sheet-container {
+	position: relative;
 	max-width: 800px;
 	margin: 10rem auto 2rem;
 	padding: 2rem;
 	border-radius: 8px;
+	background-image: url("../../assets/wood-background1.png");
+	background-repeat: repeat-y;
+	background-size: contain;
 	background-color: var(--secondary-background-color);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	z-index: 2;
+}
+
+.character-sheet-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--tint-overlay);
+    z-index: -1;
 }
 
 .character-sheet-container form {
@@ -123,11 +160,27 @@
 .character-sheet-image-container {
 	height: 30rem;
 	width: 30rem;
-	background-color: #8d99ae;
+
 	margin: auto;
 	margin-top: 1rem;
-	background: url("../../assets/barbarian.jpg") no-repeat center
-		center/cover;
+	border-radius: 50%; /* Makes the container circular */
+	/* border: 0.6rem solid var(--secondary-background-color); */
+	padding: 1rem;
+
+	overflow: hidden; /* Ensures any overflow from image is hidden */
+	box-shadow: 10px 10px 10px 6px var(--tint-overlay); /* Adds a subtle shadow to the frame */
+
+	background-image: url("../../assets/classes/parchment.jpg");
+	background-size: cover;
+	background-blend-mode: overlay; /* Blends texture with border color */
+}
+
+.character-sheet-image-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 50%;
 }
 
 .character-sheet-bottom-right {

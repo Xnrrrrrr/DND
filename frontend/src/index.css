@@ -43,14 +43,14 @@ textarea {
 	font-weight: 400;
 	font-size: 62.5%;
 
-	--background-color: #2b2d42;
-	--background-color-o: #2b2d42ea;
-	--secondary-background-color: #4a4e69;
+	--background-color: #a89070;
+	--background-color-o: #a89070ea;
+	--secondary-background-color: #4b3832;
 	--base-text-color: #edf2f4;
-	--button-color: #d4a373;
-	--button-color-hover: #bc8f5e;
-	--border-color: #edf2f4;
-	--tint-overlay: rgba(0, 0, 0, 0.6);
+	--button-color: #d2b48c;
+	--button-color-hover: #b6966c;
+	--border-color: #3f362a;
+	--tint-overlay: rgba(0, 0, 0, 0.5);
 
 	/* accent colors */
 	--deep-amber: #e07a5f;
@@ -104,11 +104,11 @@ select {
 
 option {
 	font-size: 1.4rem;
-	background-color: var(--soft-slate-gray);
+	background-color: var(--button-color);
 }
 
 option:nth-child(even) {
-	background-color: var(--soft-slate-gray-hover);
+	background-color: var(--button-color-hover);
 }
 
 ::-webkit-scrollbar {
@@ -116,12 +116,12 @@ option:nth-child(even) {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--soft-slate-gray);
+	background-color: var(--button-color);
 	border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: var(--soft-slate-gray-hover);
+	background-color: var(--button-color-hover);
 }
 
 ::-webkit-scrollbar-track {
@@ -129,7 +129,7 @@ option:nth-child(even) {
 }
 
 ::-webkit-scrollbar-corner {
-	background: var(--soft-slate-gray-hover);
+	background: var(--button-color-hover);
 }
 
 a {

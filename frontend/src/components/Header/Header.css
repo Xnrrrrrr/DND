@@ -52,5 +52,5 @@
 
 .landing-header nav ul li a:hover {
 	background-color: var(--button-color-hover);
-	color: var(--border-color);
+	color: var(--base-text-color);
 }
