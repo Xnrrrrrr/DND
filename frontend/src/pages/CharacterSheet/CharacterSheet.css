@@ -24,7 +24,7 @@
 	max-width: 800px;
 	margin: 10rem auto 2rem;
 	padding: 2rem;
-	border-radius: 8px;
+	border-radius: 1rem;
 	background-image: url("../../assets/wood-background1.png");
 	background-repeat: repeat-y;
 	background-size: contain;
@@ -34,14 +34,16 @@
 }
 
 .character-sheet-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--tint-overlay);
-    z-index: -1;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 1rem;
+	background: var(--tint-overlay);
+	z-index: -1;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .character-sheet-container form {
@@ -64,6 +66,59 @@
 	vertical-align: super;
 	font-size: 0.9rem;
 }
+
+/* Slider Start */
+/* Toggle Switch Container */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide Default Checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The Slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--secondary-background-color);
+	transition: 0.4s;
+	border-radius: 34px;
+}
+
+/* Before the Slider */
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--base-text-color);
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+/* Checkbox Checked State */
+input:checked + .slider {
+	background-color: var(--button-color);
+}
+
+/* Checkbox Checked Slider Position */
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+/* Slider Stop */
 
 /* Start Top */
 .character-sheet-top {
@@ -186,16 +241,17 @@
 .character-sheet-bottom-right {
 	margin-top: 1rem;
 	width: 45rem;
-	height: 50rem;
+	height: 52rem;
 	border: 2px solid var(--border-color);
 	border-radius: 1rem;
-	padding: 0.5rem;
+	padding: 1rem;
 	overflow-y: auto;
+	background-color: var(--secondary-background-color);
 }
 
 .character-sheet-bottom-right h3 {
 	text-align: center;
-	border-bottom: 1px solid var(--border-color);
+	border-bottom: 4px solid var(--border-color);
 	font-weight: bolder;
 }
 
@@ -205,8 +261,10 @@
 	transition: all 0.5s ease;
 }
 
-/* .character-sheet-submit-btn:hover {
-	background-color: var(--theme-blue-400);
-	color: var(--theme-grey-o-100);
-	border-color: var(--theme-blue-600);
-} */
+.character-sheet-footer {
+	margin-top: 1rem;
+	padding: 1rem;
+	border: 2px solid var(--border-color);
+	border-radius: 1rem;
+	background-color: var(--secondary-background-color);
+}

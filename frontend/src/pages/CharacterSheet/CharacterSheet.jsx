@@ -30,6 +30,7 @@ import selectClassImage from "../../assets/classes/select-class.jpg";
 const maxAttributePoints = 20;
 
 const CharacterSheet = () => {
+	const [isHomebrew, setIsHomebrew] = useState(false);
 	const [characterFirstName, setCharacterFirstName] = useState("");
 	const [characterLastName, setCharacterLastName] = useState("");
 	const [age, setAge] = useState(1);
@@ -76,6 +77,46 @@ const CharacterSheet = () => {
 			charisma;
 		setTotalAttributePointsRemaining(pointsLeft);
 	}, [strength, dexterity, constitution, intelligence, wisdom, charisma]);
+
+	const toggleHomebrew = (e) => {
+		setIsHomebrew(e.target.checked);
+		setPrimaryClass("");
+		setSubclass("");
+		setSkills(["", "", "", ""]);
+		setRace("");
+		setSubraces("");
+		setBackground("");
+		setAlignment("");
+		setIdeal("");
+		setBond("");
+		setFlaw("");
+		setPersonalityTraits(["", ""]);
+	};
+
+	const handleNumberChange = (e, setValue, min, max) => {
+		// Allow empty input or leading zeros
+		const inputValue = e.target.value;
+		if (
+			inputValue === "" ||
+			inputValue.match(/^0+\d*$/) ||
+			inputValue.match(/^\d+$/)
+		) {
+			setValue(inputValue);
+		}
+	};
+
+	const enforceMinMax = (e, setValue, min, max) => {
+		let value = Number(e.target.value);
+
+		// If input is empty, keep it as empty, otherwise enforce limits
+		if (e.target.value === "") {
+			setValue("");
+		} else {
+			if (value < min) value = min;
+			if (value > max) value = max;
+			setValue(value.toString());
+		}
+	};
 
 	const handleAttributeChange = (attributeSetter, currentValue, change) => {
 		// Prevent increasing if no points are remaining
@@ -192,6 +233,21 @@ const CharacterSheet = () => {
 						<div className="character-sheet-top">
 							<div>
 								<div>
+									<label
+										htmlFor="homebrew-toggle"
+										className="toggle-label"
+									>
+										Include Homebrew?
+									</label>
+									<label className="switch">
+										<input
+											type="checkbox"
+											id="homebrew-toggle"
+											checked={isHomebrew}
+											onChange={(e) => toggleHomebrew(e)}
+										/>
+										<span className="slider"></span>
+									</label>
 									<label htmlFor="characterFirstName">
 										First Name:{" "}
 										{!characterFirstName && (
@@ -240,9 +296,19 @@ const CharacterSheet = () => {
 										type="number"
 										id="age"
 										value={age}
-										onChange={(e) => setAge(e.target.value)}
+										onChange={(e) =>
+											handleNumberChange(
+												e,
+												setAge,
+												1,
+												300
+											)
+										}
+										onBlur={(e) =>
+											enforceMinMax(e, setAge, 1, 300)
+										}
 										min={1}
-										max={10000}
+										max={300}
 									/>
 								</div>
 								<div>
@@ -257,10 +323,16 @@ const CharacterSheet = () => {
 										id="height"
 										value={height}
 										onChange={(e) =>
-											setHeight(e.target.value)
+											handleNumberChange(
+												e,
+												setHeight,
+												25,
+												300
+											)
 										}
-										min={25}
-										max={300}
+										onBlur={(e) =>
+											enforceMinMax(e, setHeight, 25, 300)
+										}
 									/>
 								</div>
 								<div>
@@ -275,10 +347,16 @@ const CharacterSheet = () => {
 										id="weight"
 										value={weight}
 										onChange={(e) =>
-											setWeight(e.target.value)
+											handleNumberChange(
+												e,
+												setWeight,
+												50,
+												500
+											)
 										}
-										min={50}
-										max={500}
+										onBlur={(e) =>
+											enforceMinMax(e, setWeight, 50, 500)
+										}
 									/>
 								</div>
 								<div>
@@ -331,7 +409,7 @@ const CharacterSheet = () => {
 							<div className="character-sheet-top-right-container">
 								<div>
 									<label htmlFor="backstory">
-										Background (1000 Char Limit):{" "}
+										Backstory (1000 Char Limit):{" "}
 										{!backstory && (
 											<sup className="red-star">*</sup>
 										)}
@@ -795,11 +873,18 @@ const CharacterSheet = () => {
 										<option value="">
 											Select a Background
 										</option>
-										{backgroundsArray.map((b) => (
-											<option key={b} value={b}>
-												{b}
-											</option>
-										))}
+										{backgroundsArray
+											.filter(
+												(b) => isHomebrew || !b.isHomebrew
+											) // Only include non-homebrew when isHomebrew is false
+											.map((b) => (
+												<option
+													key={b.option}
+													value={b.option}
+												>
+													{b.option}
+												</option>
+											))}
 									</select>
 								</div>
 								<div>
@@ -850,7 +935,7 @@ const CharacterSheet = () => {
 											<sup className="red-star">*</sup>
 										)}
 									</label>
-									<textarea
+									{/* <textarea
 										id="ideal"
 										value={ideal}
 										onChange={(e) =>
@@ -861,7 +946,18 @@ const CharacterSheet = () => {
 											height: "8rem",
 											width: "100%",
 										}}
-									/>
+									/> */}
+									<select
+										id="ideal"
+										value={ideal}
+										onChange={(e) =>
+											setIdeal(e.target.value)
+										}
+									>
+										<option value="">
+											Select an Ideal
+										</option>
+									</select>
 								</div>
 								<div>
 									<label htmlFor="bond">
@@ -887,7 +983,7 @@ const CharacterSheet = () => {
 											<sup className="red-star">*</sup>
 										)}
 									</label>
-									<textarea
+									{/* <textarea
 										id="bond"
 										value={bond}
 										onChange={(e) =>
@@ -898,7 +994,27 @@ const CharacterSheet = () => {
 											height: "8rem",
 											width: "100%",
 										}}
-									/>
+									/> */}
+									<select
+										id="bond"
+										value={bond}
+										onChange={(e) =>
+											setBond(e.target.value)
+										}
+									>
+										<option value="">Select a Bond</option>
+										{background &&
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											].suggestedBond.roll.map((b) => (
+												<option
+													key={b.number}
+													value={b.description}
+												>
+													{b.description}
+												</option>
+											))}
+									</select>
 								</div>
 								<div>
 									<label htmlFor="flaw">
@@ -1296,31 +1412,64 @@ const CharacterSheet = () => {
 											: `Select a race to determine if it has subraces.`}
 									</p>
 									<h3>Background</h3>
-									<p>
-										{background
-											? `${background} - ${
+									{background ? (
+										<>
+											<h5>{background}:</h5>
+											<p>
+												- Description:{" "}
+												{
 													backgroundDesc[
 														background.replaceAll(
 															" ",
 															"_"
 														)
-													]
-											  }`
-											: `Select a background to populate more information here.`}
-									</p>
+													].description
+												}
+											</p>
+											{/* Add others here when done */}
+										</>
+									) : (
+										<p>
+											Select a background to populate more
+											information here.
+										</p>
+									)}
 									<h3>Alignment</h3>
-									<p>
-										{alignment
-											? `${alignment} - ${
+									{alignment ? (
+										<>
+											<h5>{alignment}:</h5>
+											<p>
+												- Description:{" "}
+												{
 													alignmentDesc[
 														alignment.replaceAll(
 															" ",
 															"_"
 														)
-													]
-											  }`
-											: `Select an alignment to populate more information here.`}
-									</p>
+													].description
+												}
+											</p>
+											<p>
+												- Expected Classes:{" "}
+												{
+													alignmentDesc[
+														alignment.replaceAll(
+															" ",
+															"_"
+														)
+													].expectedClasses
+												}
+											</p>
+										</>
+									) : (
+										<p>
+											Select an alignment to populate more
+											information here.
+										</p>
+									)}
+								</div>
+								<div className="character-sheet-image-container">
+									<img src="" alt="" />
 								</div>
 							</div>
 						</div>
@@ -1335,7 +1484,7 @@ const CharacterSheet = () => {
 								`Save Character`
 							)}
 						</button>
-						<div style={{ marginTop: "1rem" }}>
+						<div className="character-sheet-footer">
 							<p>
 								1. Your ideals are the things that you believe
 								in most strongly, the fundamental moral and
