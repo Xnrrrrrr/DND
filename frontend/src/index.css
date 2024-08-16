@@ -51,6 +51,8 @@ textarea {
 	--button-color-hover: #b6966c;
 	--border-color: #3f362a;
 	--tint-overlay: rgba(0, 0, 0, 0.5);
+	--option-odd-color: #4b3832;
+	--option-even-color: #544838;
 
 	/* accent colors */
 	--deep-amber: #e07a5f;
@@ -70,6 +72,10 @@ textarea {
 
 	background-color: var(--background-color);
 	color: var(--base-text-color);
+}
+
+body {
+	position: relative;
 }
 
 input[type="checkbox"] {
@@ -104,11 +110,11 @@ select {
 
 option {
 	font-size: 1.4rem;
-	background-color: var(--button-color);
+	background-color: var(--option-odd-color);
 }
 
 option:nth-child(even) {
-	background-color: var(--button-color-hover);
+	background-color: var(--option-even-color);
 }
 
 ::-webkit-scrollbar {

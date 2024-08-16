@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header } from "../../components";
+import { Header, SliderSwitch } from "../../components";
 import {
 	classesArray,
 	classDesc,
@@ -27,7 +27,8 @@ import { ClipLoader } from "react-spinners";
 import { classImages } from "./image.js";
 import selectClassImage from "../../assets/classes/select-class.jpg";
 
-const maxAttributePoints = 20;
+const baseAbilityValue = 8;
+const costTable = [0, 1, 2, 3, 4, 5, 7, 9]; // Costs for scores 8-15
 
 const CharacterSheet = () => {
 	const [isHomebrew, setIsHomebrew] = useState(false);
@@ -41,14 +42,28 @@ const CharacterSheet = () => {
 	const [backstory, setBackstory] = useState("");
 	const [hair, setHair] = useState("");
 	const [eyes, setEyes] = useState("");
-	const [strength, setStrength] = useState(1);
-	const [dexterity, setDexterity] = useState(1);
-	const [constitution, setConstitution] = useState(1);
-	const [intelligence, setIntelligence] = useState(1);
-	const [wisdom, setWisdom] = useState(1);
-	const [charisma, setCharisma] = useState(1);
-	const [totalAttributePointsRemaining, setTotalAttributePointsRemaining] =
-		useState(maxAttributePoints - 6);
+	const [isPointBuy, setIsPointBuy] = useState(true);
+	const [strength, setStrength] = useState(baseAbilityValue);
+	const [strengthRoll, setStrengthRoll] = useState(0);
+	const [isStrengthRolled, setIsStrengthRolled] = useState(false);
+	const [dexterity, setDexterity] = useState(baseAbilityValue);
+	const [dexterityRoll, setDexterityRoll] = useState(0);
+	const [isDexterityRolled, setIsDexterityRolled] = useState(false);
+	const [constitution, setConstitution] = useState(baseAbilityValue);
+	const [constitutionRoll, setConstitutionRoll] = useState(0);
+	const [isConstitutionRolled, setIsConstitutionRolled] = useState(false);
+	const [intelligence, setIntelligence] = useState(baseAbilityValue);
+	const [intelligenceRoll, setIntelligenceRoll] = useState(0);
+	const [isIntelligenceRolled, setIsIntelligenceRolled] = useState(false);
+	const [wisdom, setWisdom] = useState(baseAbilityValue);
+	const [wisdomRoll, setWisdomRoll] = useState(0);
+	const [isWisdomRolled, setIsWisdomRolled] = useState(false);
+	const [charisma, setCharisma] = useState(baseAbilityValue);
+	const [charismaRoll, setCharismaRoll] = useState(0);
+	const [isCharismaRolled, setIsCharismaRolled] = useState(false);
+	const [maxAbilityPoints, setMaxAbilityPoints] = useState(27);
+	const [totalAbilityPointsRemaining, setTotalAbilityPointsRemaining] =
+		useState(maxAbilityPoints - 6);
 	const [primaryClass, setPrimaryClass] = useState("");
 	const [subclass, setSubclass] = useState("");
 	const [skills, setSkills] = useState(["", "", "", ""]);
@@ -66,17 +81,33 @@ const CharacterSheet = () => {
 
 	const [create, { isCreateLoading }] = useCreateCharacterSheetMutation();
 
+	const calculateTotalPointsSpent = () => {
+		return (
+			costTable[strength - baseAbilityValue] +
+			costTable[dexterity - baseAbilityValue] +
+			costTable[constitution - baseAbilityValue] +
+			costTable[intelligence - baseAbilityValue] +
+			costTable[wisdom - baseAbilityValue] +
+			costTable[charisma - baseAbilityValue]
+		);
+	};
+
 	useEffect(() => {
-		const pointsLeft =
-			maxAttributePoints -
-			strength -
-			dexterity -
-			constitution -
-			intelligence -
-			wisdom -
-			charisma;
-		setTotalAttributePointsRemaining(pointsLeft);
-	}, [strength, dexterity, constitution, intelligence, wisdom, charisma]);
+		if (isPointBuy) {
+			const pointsSpent = calculateTotalPointsSpent();
+			setTotalAbilityPointsRemaining(maxAbilityPoints - pointsSpent);
+		} else {
+			setTotalAbilityPointsRemaining(0);
+		}
+	}, [
+		strength,
+		dexterity,
+		constitution,
+		intelligence,
+		wisdom,
+		charisma,
+		isPointBuy,
+	]);
 
 	const toggleHomebrew = (e) => {
 		setIsHomebrew(e.target.checked);
@@ -118,20 +149,44 @@ const CharacterSheet = () => {
 		}
 	};
 
-	const handleAttributeChange = (attributeSetter, currentValue, change) => {
-		// Prevent increasing if no points are remaining
-		if (change > 0 && totalAttributePointsRemaining === 0) {
-			return;
-		}
+	const toggleAbility = (e) => {
+		setIsPointBuy(e.target.checked);
+		setStrength(isPointBuy ? strengthRoll || 0 : baseAbilityValue);
+		setDexterity(isPointBuy ? 0 : baseAbilityValue);
+		setConstitution(isPointBuy ? 0 : baseAbilityValue);
+		setIntelligence(isPointBuy ? 0 : baseAbilityValue);
+		setWisdom(isPointBuy ? 0 : baseAbilityValue);
+		setCharisma(isPointBuy ? 0 : baseAbilityValue);
+	};
 
-		// Ensure attribute value stays within 1 and 20
-		if (
-			currentValue + change < 1 ||
-			currentValue + change > maxAttributePoints
-		) {
-			return;
+	const handleAbilityBuyChange = (abilitySetter, currentValue, change) => {
+		if (isPointBuy) {
+			const newValue = currentValue + change;
+
+			// Ensure value stays within range 8-15 and points don't exceed max
+			if (newValue < baseAbilityValue || newValue > 15) return;
+
+			const pointsSpent = calculateTotalPointsSpent();
+			const costDifference =
+				costTable[newValue - baseAbilityValue] -
+				costTable[currentValue - baseAbilityValue];
+
+			if (costDifference > totalAbilityPointsRemaining) return;
+
+			abilitySetter(newValue);
 		}
-		attributeSetter(currentValue + change);
+	};
+
+	const roll4d6DropLowest = (setIsAbilityRolled, setIsAbility) => {
+		const rolls = [];
+		for (let i = 0; i < 4; i++) {
+			rolls.push(Math.floor(Math.random() * 6) + 1);
+		}
+		// Sort the rolls and drop the lowest one
+		rolls.sort((a, b) => a - b);
+		rolls.shift(); // Remove the lowest roll
+		setIsAbilityRolled(true);
+		setIsAbility(rolls.reduce((sum, roll) => sum + roll, 0));
 	};
 
 	const handleClassChange = (e) => {
@@ -168,12 +223,32 @@ const CharacterSheet = () => {
 		}
 	};
 
+	const handleSubLabelClick = () => {
+		window.scrollTo({
+			top: document.body.scrollHeight,
+			behavior: "smooth",
+		});
+	};
+
 	const submitHandler = async (e) => {
 		e.preventDefault();
 
-		if (totalAttributePointsRemaining) {
+		if (totalAbilityPointsRemaining) {
 			// Make this a toastify msg
-			console.error("You must spend all of your attribute points.");
+			console.error("You must spend all of your ability points.");
+			return;
+		}
+
+		if (isPointBuy) {
+			if (
+				!strengthRoll ||
+				!dexterityRoll ||
+				!constitutionRoll ||
+				!intelligenceRoll ||
+				!wisdomRoll ||
+				!charismaRoll
+			)
+				console.error("You must roll for all of your ability points.");
 			return;
 		}
 
@@ -191,12 +266,6 @@ const CharacterSheet = () => {
 			subclass,
 			skills: filteredSkills,
 			race,
-			strength,
-			dexterity,
-			constitution,
-			intelligence,
-			wisdom,
-			charisma,
 			alignment,
 			personalityTraits,
 			age,
@@ -212,6 +281,22 @@ const CharacterSheet = () => {
 		// Only include subrace if it's not an empty string
 		if (subraces.trim() !== "") {
 			payload.subrace = subraces;
+		}
+
+		if (isPointBuy) {
+			payload.strength = strength;
+			payload.dexterity = dexterity;
+			payload.constitution = constitution;
+			payload.intelligence = intelligence;
+			payload.wisdom = wisdom;
+			payload.charisma = charisma;
+		} else {
+			payload.strength = strengthRoll;
+			payload.dexterity = dexterityRoll;
+			payload.constitution = constitutionRoll;
+			payload.intelligence = intelligenceRoll;
+			payload.wisdom = wisdomRoll;
+			payload.charisma = charismaRoll;
 		}
 
 		try {
@@ -233,21 +318,14 @@ const CharacterSheet = () => {
 						<div className="character-sheet-top">
 							<div>
 								<div>
-									<label
-										htmlFor="homebrew-toggle"
-										className="toggle-label"
-									>
-										Include Homebrew?
-									</label>
-									<label className="switch">
-										<input
-											type="checkbox"
-											id="homebrew-toggle"
-											checked={isHomebrew}
-											onChange={(e) => toggleHomebrew(e)}
-										/>
-										<span className="slider"></span>
-									</label>
+									<SliderSwitch
+										label="Include Homebrew?"
+										subLabel="1"
+										subLabelAction={handleSubLabelClick}
+										checked={isHomebrew}
+										onChange={toggleHomebrew}
+										id="homebrew-toggle"
+									/>
 									<label htmlFor="characterFirstName">
 										First Name:{" "}
 										{!characterFirstName && (
@@ -380,6 +458,26 @@ const CharacterSheet = () => {
 										))}
 									</select>
 								</div>
+							</div>
+							<div className="character-sheet-top-right-container">
+								<div>
+									<label htmlFor="backstory">
+										Backstory (1000 Char Limit):{" "}
+										{!backstory && (
+											<sup className="red-star">*</sup>
+										)}
+									</label>
+									<textarea
+										id="backstory"
+										value={backstory}
+										onChange={(e) =>
+											setBackstory(e.target.value)
+										}
+										maxLength="1000"
+										className="backstory-text-area"
+										required
+									/>
+								</div>
 								<div>
 									<label htmlFor="skin">
 										Skin Color:{" "}
@@ -404,26 +502,6 @@ const CharacterSheet = () => {
 											</option>
 										))}
 									</select>
-								</div>
-							</div>
-							<div className="character-sheet-top-right-container">
-								<div>
-									<label htmlFor="backstory">
-										Backstory (1000 Char Limit):{" "}
-										{!backstory && (
-											<sup className="red-star">*</sup>
-										)}
-									</label>
-									<textarea
-										id="backstory"
-										value={backstory}
-										onChange={(e) =>
-											setBackstory(e.target.value)
-										}
-										maxLength="1000"
-										className="backstory-text-area"
-										required
-									/>
 								</div>
 								<div>
 									<label htmlFor="hair">
@@ -477,220 +555,467 @@ const CharacterSheet = () => {
 								</div>
 							</div>
 						</div>
-						<div className="character-sheet-attribute">
-							<div className="character-sheet-attribute-top">
-								<p>
-									Ability Points Remaining:{" "}
-									{totalAttributePointsRemaining}
-								</p>
+						<div className="character-sheet-ability">
+							<div className="character-sheet-ability-top">
+								<div>
+									<SliderSwitch
+										label="Purchase Ability Score?"
+										subLabel="2"
+										subLabelAction={handleSubLabelClick}
+										checked={isPointBuy}
+										onChange={toggleAbility}
+										id="ability-toggle"
+									/>
+								</div>
+								{isPointBuy && (
+									<h6>
+										Ability Points Remaining:{" "}
+										{totalAbilityPointsRemaining}
+									</h6>
+								)}
 							</div>
-							<div className="character-sheet-attribute-bottom">
+							<div className="character-sheet-ability-bottom">
 								<div>
 									<label htmlFor="strength">Strength:</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setStrength,
-												strength,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="strength"
-										value={strength}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setStrength,
-												strength,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setStrength,
+														strength,
+														-1
+													)
+												}
+												disabled={
+													strength <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="strength"
+												value={strength}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setStrength,
+														strength,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													strength >= 15 ||
+													(strength >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isStrengthRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsStrengthRolled,
+														setStrengthRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="strength"
+												value={strengthRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 								<div>
 									<label htmlFor="dexterity">
 										Dexterity:
 									</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setDexterity,
-												dexterity,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="dexterity"
-										value={dexterity}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setDexterity,
-												dexterity,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setDexterity,
+														dexterity,
+														-1
+													)
+												}
+												disabled={
+													dexterity <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="dexterity"
+												value={dexterity}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setDexterity,
+														dexterity,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													dexterity >= 15 ||
+													(dexterity >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isDexterityRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsDexterityRolled,
+														setDexterityRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="dexterity"
+												value={dexterityRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 								<div>
 									<label htmlFor="constitution">
 										Constitution:
 									</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setConstitution,
-												constitution,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="constitution"
-										value={constitution}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setConstitution,
-												constitution,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setConstitution,
+														constitution,
+														-1
+													)
+												}
+												disabled={
+													constitution <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="constitution"
+												value={constitution}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setConstitution,
+														constitution,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													constitution >= 15 ||
+													(constitution >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isConstitutionRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsConstitutionRolled,
+														setConstitutionRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="constitution"
+												value={constitutionRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 								<div>
 									<label htmlFor="intelligence">
 										Intelligence:
 									</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setIntelligence,
-												intelligence,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="intelligence"
-										value={intelligence}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setIntelligence,
-												intelligence,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setIntelligence,
+														intelligence,
+														-1
+													)
+												}
+												disabled={
+													intelligence <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="intelligence"
+												value={intelligence}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setIntelligence,
+														intelligence,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													intelligence >= 15 ||
+													(intelligence >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isIntelligenceRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsIntelligenceRolled,
+														setIntelligenceRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="intelligence"
+												value={intelligenceRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 								<div>
 									<label htmlFor="wisdom">Wisdom:</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setWisdom,
-												wisdom,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="wisdom"
-										value={wisdom}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setWisdom,
-												wisdom,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setWisdom,
+														wisdom,
+														-1
+													)
+												}
+												disabled={
+													wisdom <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="wisdom"
+												value={wisdom}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setWisdom,
+														wisdom,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													wisdom >= 15 ||
+													(wisdom >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isWisdomRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsWisdomRolled,
+														setWisdomRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="wisdom"
+												value={wisdomRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 								<div>
 									<label htmlFor="charisma">Charisma:</label>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setCharisma,
-												charisma,
-												-1
-											)
-										}
-									>
-										-
-									</button>
-									<input
-										type="number"
-										id="charisma"
-										value={charisma}
-										readOnly
-									/>
-									<button
-										type="button"
-										onClick={() =>
-											handleAttributeChange(
-												setCharisma,
-												charisma,
-												1
-											)
-										}
-									>
-										+
-									</button>
+									{isPointBuy ? (
+										<>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setCharisma,
+														charisma,
+														-1
+													)
+												}
+												disabled={
+													charisma <=
+														baseAbilityValue ||
+													!isPointBuy
+												}
+											>
+												-
+											</button>
+											<input
+												type="number"
+												id="charisma"
+												value={charisma}
+												readOnly
+											/>
+											<button
+												type="button"
+												onClick={() =>
+													handleAbilityBuyChange(
+														setCharisma,
+														charisma,
+														1
+													)
+												}
+												disabled={
+													totalAbilityPointsRemaining ===
+														0 ||
+													charisma >= 15 ||
+													(charisma >= 13 &&
+														totalAbilityPointsRemaining <=
+															1) ||
+													!isPointBuy
+												}
+											>
+												+
+											</button>
+										</>
+									) : (
+										<>
+											<button
+												disabled={isCharismaRolled}
+												type="button"
+												onClick={() =>
+													roll4d6DropLowest(
+														setIsCharismaRolled,
+														setCharismaRoll
+													)
+												}
+											>
+												4d6
+											</button>
+											<input
+												type="number"
+												id="charisma"
+												value={charismaRoll}
+												readOnly
+											/>
+										</>
+									)}
 								</div>
 							</div>
 						</div>
+						<div>Ability Modifiers...</div>
 						<div className="character-sheet-bottom">
 							<div className="character-sheet-bottom-left">
 								<div>
@@ -875,14 +1200,17 @@ const CharacterSheet = () => {
 										</option>
 										{backgroundsArray
 											.filter(
-												(b) => isHomebrew || !b.isHomebrew
+												(b) =>
+													isHomebrew || !b.isHomebrew
 											) // Only include non-homebrew when isHomebrew is false
 											.map((b) => (
 												<option
 													key={b.option}
 													value={b.option}
 												>
-													{b.option}
+													{b.option}{" "}
+													{b.isHomebrew &&
+														`(Homebrew)`}
 												</option>
 											))}
 									</select>
@@ -921,15 +1249,9 @@ const CharacterSheet = () => {
 												cursor: "pointer",
 												color: "#edf2f4",
 											}}
-											onClick={() =>
-												window.scrollTo({
-													top: document.body
-														.scrollHeight,
-													behavior: "smooth",
-												})
-											}
+											onClick={handleSubLabelClick}
 										>
-											1
+											3
 										</sub>{" "}
 										{!ideal && (
 											<sup className="red-star">*</sup>
@@ -969,15 +1291,9 @@ const CharacterSheet = () => {
 												cursor: "pointer",
 												color: "#edf2f4",
 											}}
-											onClick={() =>
-												window.scrollTo({
-													top: document.body
-														.scrollHeight,
-													behavior: "smooth",
-												})
-											}
+											onClick={handleSubLabelClick}
 										>
-											2
+											4
 										</sub>{" "}
 										{!bond && (
 											<sup className="red-star">*</sup>
@@ -1001,8 +1317,14 @@ const CharacterSheet = () => {
 										onChange={(e) =>
 											setBond(e.target.value)
 										}
+										disabled={!background}
+										required
 									>
-										<option value="">Select a Bond</option>
+										<option value="">
+											{background
+												? `Select a Bond`
+												: `Select a Background`}
+										</option>
 										{background &&
 											backgroundDesc[
 												background.replaceAll(" ", "_")
@@ -1026,21 +1348,15 @@ const CharacterSheet = () => {
 												cursor: "pointer",
 												color: "#edf2f4",
 											}}
-											onClick={() =>
-												window.scrollTo({
-													top: document.body
-														.scrollHeight,
-													behavior: "smooth",
-												})
-											}
+											onClick={handleSubLabelClick}
 										>
-											3
+											5
 										</sub>{" "}
 										{!flaw && (
 											<sup className="red-star">*</sup>
 										)}
 									</label>
-									<textarea
+									{/* <textarea
 										id="flaw"
 										value={flaw}
 										onChange={(e) =>
@@ -1051,7 +1367,33 @@ const CharacterSheet = () => {
 											height: "8rem",
 											width: "100%",
 										}}
-									/>
+									/> */}
+									<select
+										id="flaw"
+										value={flaw}
+										onChange={(e) =>
+											setFlaw(e.target.value)
+										}
+										disabled={!background}
+										required
+									>
+										<option value="">
+											{background
+												? `Select a Flaw`
+												: `Select a Background`}
+										</option>
+										{background &&
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											].suggestedFlaw.roll.map((f) => (
+												<option
+													key={f.number}
+													value={f.description}
+												>
+													{f.description}
+												</option>
+											))}
+									</select>
 								</div>
 								<div>
 									<label htmlFor="personalityTraitOne">
@@ -1063,15 +1405,9 @@ const CharacterSheet = () => {
 												cursor: "pointer",
 												color: "#edf2f4",
 											}}
-											onClick={() =>
-												window.scrollTo({
-													top: document.body
-														.scrollHeight,
-													behavior: "smooth",
-												})
-											}
+											onClick={handleSubLabelClick}
 										>
-											4
+											6
 										</sub>{" "}
 										{!personalityTraits[0] && (
 											<sup className="red-star">*</sup>
@@ -1104,15 +1440,9 @@ const CharacterSheet = () => {
 												cursor: "pointer",
 												color: "#edf2f4",
 											}}
-											onClick={() =>
-												window.scrollTo({
-													top: document.body
-														.scrollHeight,
-													behavior: "smooth",
-												})
-											}
+											onClick={handleSubLabelClick}
 										>
-											4
+											6
 										</sub>{" "}
 										{!personalityTraits[1] && (
 											<sup className="red-star">*</sup>
@@ -1363,11 +1693,27 @@ const CharacterSheet = () => {
 																" ",
 																"_"
 															)
+													].speed
+												}
+											</p>
+											<p>
+												- Additional Ability Scores:{" "}
+												{
+													raceDesc[
+														race
+															.replaceAll(
+																"-",
+																"0"
+															)
+															.replaceAll(
+																" ",
+																"_"
+															)
 													].abilityScoreIncrease
 												}
 											</p>
 											<p>
-												- Spoken Language:{" "}
+												- Spoken Languages:{" "}
 												{
 													raceDesc[
 														race
@@ -1414,7 +1760,19 @@ const CharacterSheet = () => {
 									<h3>Background</h3>
 									{background ? (
 										<>
-											<h5>{background}:</h5>
+											<h5>
+												{background}:{" "}
+												<span style={{ color: "red" }}>
+													{backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].isHomebrew
+														? `(This is a homebrew background)`
+														: ``}
+												</span>
+											</h5>
 											<p>
 												- Description:{" "}
 												{
@@ -1426,6 +1784,7 @@ const CharacterSheet = () => {
 													].description
 												}
 											</p>
+											<p></p>
 											{/* Add others here when done */}
 										</>
 									) : (
@@ -1486,7 +1845,19 @@ const CharacterSheet = () => {
 						</button>
 						<div className="character-sheet-footer">
 							<p>
-								1. Your ideals are the things that you believe
+								1. Including homebrew will give you more options
+								to choose from. However, your GM may not allow
+								homebrew characters in their campaign. If you do
+								not plan to choose homebrew options, do not turn
+								homebrew on, as this will flag your character as
+								a homebrew character.
+							</p>
+							<p>
+								2. You have the choice to roll for your ability
+								points if you please. Be aware
+							</p>
+							<p>
+								3. Your ideals are the things that you believe
 								in most strongly, the fundamental moral and
 								ethical principles that com pel you to act as
 								you do. Ideals encompass everything from your
@@ -1499,7 +1870,7 @@ const CharacterSheet = () => {
 								strive for? (100 char limit)
 							</p>
 							<p>
-								2. Bonds represent a character’s connections to
+								4. Bonds represent a character’s connections to
 								people, places, and events in the world. Bonds
 								may answer the following questions: Whom do you
 								care most about? To what place do you feel a
@@ -1507,7 +1878,7 @@ const CharacterSheet = () => {
 								possession? (100 char limit)
 							</p>
 							<p>
-								3. Your character’s flaw represents some vice,
+								5. Your character’s flaw represents some vice,
 								compulsion, fear, or weakness; in particular,
 								anything that someone else could exploit to
 								bring you to ruin or cause you to act against
@@ -1517,7 +1888,7 @@ const CharacterSheet = () => {
 								of? What are your vices? (100 char limit)
 							</p>
 							<p>
-								4. Personality traits are small, simple ways to
+								6. Personality traits are small, simple ways to
 								help you set your character apart from every
 								other character. Your personality traits should
 								tell you something interesting and fun about

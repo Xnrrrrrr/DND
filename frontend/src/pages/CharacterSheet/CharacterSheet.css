@@ -67,59 +67,6 @@
 	font-size: 0.9rem;
 }
 
-/* Slider Start */
-/* Toggle Switch Container */
-.switch {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-}
-
-/* Hide Default Checkbox */
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-/* The Slider */
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: var(--secondary-background-color);
-	transition: 0.4s;
-	border-radius: 34px;
-}
-
-/* Before the Slider */
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: var(--base-text-color);
-	transition: 0.4s;
-	border-radius: 50%;
-}
-
-/* Checkbox Checked State */
-input:checked + .slider {
-	background-color: var(--button-color);
-}
-
-/* Checkbox Checked Slider Position */
-input:checked + .slider:before {
-	transform: translateX(26px);
-}
-/* Slider Stop */
-
 /* Start Top */
 .character-sheet-top {
 	display: flex;
@@ -133,7 +80,7 @@ input:checked + .slider:before {
 
 .backstory-text-area {
 	width: 40rem;
-	height: 28.2rem;
+	height: 22rem;
 }
 
 .character-sheet-top-right-container {
@@ -144,59 +91,71 @@ input:checked + .slider:before {
 /* End Top */
 
 /* Start Middle */
-.character-sheet-attribute {
+.character-sheet-ability {
 	display: flex;
 	flex-direction: column;
 }
 
-.character-sheet-attribute-top {
-	text-align: center;
+.character-sheet-ability-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin-top: 1rem;
+	padding: auto;
 }
 
-.character-sheet-attribute-top p {
+.character-sheet-ability-top h6 {
 	font-weight: bold;
+	padding: 1rem;
+	border-radius: 1rem;
+	border: 2px solid var(--border-color);
+	background-color: var(--secondary-background-color);
 }
 
-.character-sheet-attribute-bottom {
+.character-sheet-ability-bottom {
 	display: flex;
 	justify-content: space-evenly;
 }
 
-.character-sheet-attribute-bottom div label {
+.character-sheet-ability-bottom div label {
 	margin: 0rem;
 }
 
-.character-sheet-attribute-bottom div {
+.character-sheet-ability-bottom div {
 	width: 11rem;
 	border: 2px solid var(--border-color);
+	background-color: var(--secondary-background-color);
 	border-radius: 15%;
 	margin-top: 1rem;
 	padding: 1rem;
 	text-align: center;
 }
 
-.character-sheet-attribute-bottom div input {
+.character-sheet-ability-bottom div input {
 	width: 3rem;
 }
 
-.character-sheet-attribute-bottom div input::-webkit-outer-spin-button,
-.character-sheet-attribute-bottom div input::-webkit-inner-spin-button {
+.character-sheet-ability-bottom div input::-webkit-outer-spin-button,
+.character-sheet-ability-bottom div input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 
-.character-sheet-attribute-bottom div button {
+.character-sheet-ability-bottom div button {
 	padding: 0.45rem 0.9rem;
 	border-radius: 0.3rem;
 	font-size: 1rem;
 	transition: all 0.5s ease;
 }
+.character-sheet-ability-bottom div button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
 
-.character-sheet-attribute-bottom div button:nth-child(4) {
+.character-sheet-ability-bottom div button:nth-child(4) {
 	margin-left: 0.5rem;
 }
 
-.character-sheet-attribute-bottom div button:nth-child(2) {
+.character-sheet-ability-bottom div button:nth-child(2) {
 	margin-right: 0.5rem;
 }
 /* End Middle */
