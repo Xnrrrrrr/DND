@@ -873,11 +873,18 @@ const CharacterSheet = () => {
 										<option value="">
 											Select a Background
 										</option>
-										{backgroundsArray.map((b) => (
-											<option key={b} value={b}>
-												{b}
-											</option>
-										))}
+										{backgroundsArray
+											.filter(
+												(b) => isHomebrew || !b.isHomebrew
+											) // Only include non-homebrew when isHomebrew is false
+											.map((b) => (
+												<option
+													key={b.option}
+													value={b.option}
+												>
+													{b.option}
+												</option>
+											))}
 									</select>
 								</div>
 								<div>
