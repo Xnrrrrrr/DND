@@ -3361,10 +3361,6 @@ export const backgroundsArray = [
 		isHomebrew: false,
 	},
 	{
-		option: "Hermit",
-		isHomebrew: false,
-	},
-	{
 		option: "Noble",
 		isHomebrew: false,
 	},
@@ -4141,14 +4137,14 @@ export const backgroundDesc = {
 			],
 		},
 	},
-	
+
 	Afflicted: {
-	isHomebrew: true ,
-        description: `Since early in life, possibly from birth, you have been subject to a highly visible abnormal condition. Your condition is chronic and, in the absence of powerful magic or advanced medical technology, incurable, though not detrimental to your ability to function. The main impact of your condition is cosmetic, though it may also be uncomfortable, affect your diet, alter your mannerisms, or shorten your lifespan in the long run. People are generally ignorant of the plight of their fellow man, and even in highly advanced enlightened societies, they will swiftly judge one another based on little more than looks alone. As a result, anyone who stands out as being weird in any way is likely to be the target of fear, suspicion, rumors, superstition, abuse, and other expressions of plain ignorance. People suffering through such circumstances find themselves living a life that is not their own, foisted upon them by fate and misfortune, trying to choose their own direction as others try to decide things for them.`,
-        skillProficiencies: `Intimidation and Persuasion.`,
-        toolProficiencies: ` One tool of any sort.`,
+		isHomebrew: true,
+		description: `Since early in life, possibly from birth, you have been subject to a highly visible abnormal condition. Your condition is chronic and, in the absence of powerful magic or advanced medical technology, incurable, though not detrimental to your ability to function. The main impact of your condition is cosmetic, though it may also be uncomfortable, affect your diet, alter your mannerisms, or shorten your lifespan in the long run. People are generally ignorant of the plight of their fellow man, and even in highly advanced enlightened societies, they will swiftly judge one another based on little more than looks alone. As a result, anyone who stands out as being weird in any way is likely to be the target of fear, suspicion, rumors, superstition, abuse, and other expressions of plain ignorance. People suffering through such circumstances find themselves living a life that is not their own, foisted upon them by fate and misfortune, trying to choose their own direction as others try to decide things for them.`,
+		skillProficiencies: `Intimidation and Persuasion.`,
+		toolProficiencies: ` One tool of any sort.`,
 		languages: `any one language`,
-        startingEquipment: ` A medical device (A mask, crutch, brace, etc.) you use to maintain some comfort, a set of common clothes, a bag, a blank notebook, and a belt pouch containing 5gp`,
+		startingEquipment: ` A medical device (A mask, crutch, brace, etc.) you use to maintain some comfort, a set of common clothes, a bag, a blank notebook, and a belt pouch containing 5gp`,
 		backgroundSpecial: {
 			title: `Affliction`,
 			description: `What is it which makes you so hideous?`,
@@ -4177,13 +4173,13 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Modification. You have some sort of substantial body modification which is significantly outside of normal, even for people with modifications, and dramatically alters your appearance. (Full body tattoos, facial brandings, etc.)`,
-				}
+				},
 			],
 		},
-        feature: {
-            title: `Pity`,
-            description: `People feel your pain. Even if they have never been through anything like what happened to you, they can somehow empathize. People will take pity on you, opting to reduce your suffering if they can, or at least choosing not to inflict any more suffering upon you. This can range from a farmer letting you spend the night in his barn, to a jailer who is cruel to everyone else, but simply neglectful of you.`,
-        },
+		feature: {
+			title: `Pity`,
+			description: `People feel your pain. Even if they have never been through anything like what happened to you, they can somehow empathize. People will take pity on you, opting to reduce your suffering if they can, or at least choosing not to inflict any more suffering upon you. This can range from a farmer letting you spend the night in his barn, to a jailer who is cruel to everyone else, but simply neglectful of you.`,
+		},
 		alterateFeature: [
 			{
 				title: `Fear`,
@@ -4194,7 +4190,7 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: ``,
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: {
 			description: ``,
 			die: `1d8`,
@@ -4268,7 +4264,7 @@ export const backgroundDesc = {
 					number: 6,
 					description: ``,
 					alignment: ``,
-				}
+				},
 			],
 		},
 		suggestedBond: {
@@ -4299,7 +4295,7 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: ``,
-				}
+				},
 			],
 		},
 		suggestedFlaw: {
@@ -4330,10 +4326,10 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: ``,
-				}
+				},
 			],
 		},
-    },
+	},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
