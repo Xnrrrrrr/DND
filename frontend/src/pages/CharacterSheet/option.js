@@ -3325,27 +3325,27 @@ others according to their needs.`,
 
 export const backgroundsArray = [
 	{
-		option: "Abandoned",
+		option: "Abandoned", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Abyssdweller",
+		option: "Abyssdweller", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Addict",
+		option: "Addict", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Adept",
+		option: "Adept", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Adopted",
+		option: "Adopted", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Afflicted",
+		option: "Afflicted", //homebrew
 		isHomebrew: true,
 	},
 	{
@@ -3353,39 +3353,43 @@ export const backgroundsArray = [
 		isHomebrew: false,
 	},
 	{
-		option: "Alchemist",
+		option: "Alchemist", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Alcoholic",
+		option: "Alcoholic", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Alcoholic_Scientist",
+		option: "Alcoholic_Scientist", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Amnesiac",
+		option: "Amnesiac", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Anarchist",
+		option: "Anarchist", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Ancient_Cultist",
+		option: "Ancient_Cultist", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Ancient_King",
+		option: "Ancient_King", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Ancient_One",
+		option: "Ancient_One", //homebrew
 		isHomebrew: true,
 	},
 	{
-		option: "Anthropologist",
+		option: "Anthropologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Antiquarian", //homebrew
 		isHomebrew: true,
 	},
 	{
@@ -6116,6 +6120,198 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 				{
 					number: 6,
 					description: `I sometimes get ahead of myself.`,
+				},
+			],
+		},
+	},
+	Antiquarian: {
+		isHomebrew: true,
+		description: `You study ancient lore and recover priceless artifacts from past civilizations and bygone ages. You preserve that which was once thought lost, and seek to uncover the forgotten stories of those who came before. Your journeys often take you to abandoned ruins far removed from the comforts of modern civilization, but there is nowhere else you’d rather be. You’ve seen some of the greatest historical wonders the world has to offer, and you may have even helped discover some of them.`,
+		skillProficiencies: `History, Investigation`,
+		toolProficiencies: `Calligrapher's supplies`,
+		languages: `One of your choice`,
+		startingEquipment: `A bottle of black ink, a quill, a tome that appears to contain the history of an unknown settlement or culture, a set of traveler's clothes (Indiana Jones hat Included), and a belt pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `It Belonggs in a Museum`,
+			description: `You are a member of a respected museum, university, or other organization that preserves relics of ages past. You can gain access to the facilities where such antiquities are stored and can participate in their study. You may be allowed to accompany expeditions seeking to explore ruins or retrieve items of historical interest, if your area of expertise is relevant to the task at hand.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Because they spend large amounts of time studying the past, antiquarians tend to be quite knowledgeable, although they can sometimes be ignorant to more modern happenings. They are often excited by new discoveries, and are fascinated by exotic cultures and practices. Their social lives often leave much to be desired, as they frequently disappear for days or weeks at a time exploring lost ruins.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I quote historical texts and famous philosophers whenever they seem relevant to the situations I’m in.`,
+				},
+				{
+					number: 2,
+					description: `	I insist on checking every ruined fortress, abandoned town, and forgotten castle I come across.`,
+				},
+				{
+					number: 3,
+					description: `I speak in a dull monotone that is more likely to put others to sleep than to entertain them.`,
+				},
+				{
+					number: 4,
+					description: `	I am more interested in the past than the present; as a result, I am mostly asocial.`,
+				},
+				{
+					number: 5,
+					description: `Whenever I meet a new person, I try to learn about their history if at all possible`,
+				},
+				{
+					number: 6,
+					description: `I freely offer my knowledge to those who wish to learn, and I encourage those I know to do so as well`,
+				},
+				{
+					number: 7,
+					description: `I enjoy going through ruins for the adventure; getting to experience lost history is just a bonus.`,
+				},
+				{
+					number: 8,
+					description: `Ignorance frustrates me, and I always try to correct others when they’re wrong.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	Preservation We must protect the relics of the past, else their creators will fade from memory.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					description: `Betterment By studying the mistakes of our elders, we might prevent the mistakes of our children.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					description: `	Dominance The past holds secrets I can use against those who oppose me.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					description: `Trophy The original inventors of these relics are dead; why shouldn’t I hold on to them for a while? `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					description: `Expertise I must become the authority in my field of study.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					description: `Vigil Only by remembering the dead do we honor their accomplishments.`,
+					alignment: `Lawful`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I must prevent the relics of the past from falling into the hands of thieves and looters.`,
+				},
+				{
+					number: 2,
+					description: `The historical works of my race must be preserved for the enrichment of future generations.`,
+				},
+				{
+					number: 3,
+					description: `I work to uncover the truth of past events, even if doing so is harmful to my nation or organization.`,
+				},
+				{
+					number: 4,
+					description: `My family, clan, or guild has a rich history, and I must ensure that others are aware of its importance`,
+				},
+				{
+					number: 5,
+					description: `I will perform the heroic deeds that future historians will surely write about.`,
+				},
+				{
+					number: 6,
+					description: `	If an artifact has been entrusted to me, I will protect it at all costs, even my life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have falsely claimed to have discovered a forgotten civilization and faked evidence to support it.`,
+				},
+				{
+					number: 2,
+					description: `If I ever find a relic of singular worth, I might keep it for myself…or for the merchant down the road.`,
+				},
+				{
+					number: 3,
+					description: `There is an intense rivalry between myself and a particular colleague, and it often clouds my judgment.`,
+				},
+				{
+					number: 4,
+					description: `I pretend to know far more than I actually do, and will often ignore any evidence that proves me wrong.`,
+				},
+				{
+					number: 5,
+					description: `I care more for the money I’m paid by the museums than for the artifacts I deliver to them`,
+				},
+				{
+					number: 6,
+					description: `My obsessive search for a particular object has pushed my loved ones away.`,
 				},
 			],
 		},

@@ -14,6 +14,7 @@ const backgrounds = [
 	"Ancient_King", //homebrew
 	"Ancient_One", //homebrew
 	"Anthropologist", //homebrew
+	"Antiquarian", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
