@@ -3324,38 +3324,131 @@ others according to their needs.`,
 };
 
 export const backgroundsArray = [
-	"Abandoned",
-	"Abyssdweller",
-	"Acolyte",
-	"Charlatan",
-	"Criminal",
-	"Entertainer",
-	"Folk Hero",
-	"Guild Artisan",
-	"Hermit",
-	"Noble",
-	"Outlander",
-	"Sage",
-	"Sailor",
-	"Secret",
-	"Soldier",
-	"Urchin",
-	"Far Traveler",
-	"Haunted One",
-	"Knight",
-	"Pirate",
-	"City Watch",
-	"Clan Crafter",
-	"Cloistered Scholar",
-	"Courtier",
-	"Faction Agent",
-	"Inheritor",
-	"Investigator",
-	"Mercenary Veteran",
-	"Urban Bounty Hunter",
-	"Waterdhavian Noble",
+	{
+		option: "Abandoned",
+		isHomebrew: false,
+	},
+	{
+		option: "Abyssdweller",
+		isHomebrew: false,
+	},
+	{
+		option: "Acolyte",
+		isHomebrew: false,
+	},
+	{
+		option: "Charlatan",
+		isHomebrew: false,
+	},
+	{
+		option: "Criminal",
+		isHomebrew: false,
+	},
+	{
+		option: "Entertainer",
+		isHomebrew: false,
+	},
+	{
+		option: "Folk Hero",
+		isHomebrew: false,
+	},
+	{
+		option: "Guild Artisan",
+		isHomebrew: false,
+	},
+	{
+		option: "Hermit",
+		isHomebrew: false,
+	},
+	{
+		option: "Hermit",
+		isHomebrew: false,
+	},
+	{
+		option: "Noble",
+		isHomebrew: false,
+	},
+	{
+		option: "Outlander",
+		isHomebrew: false,
+	},
+	{
+		option: "Sage",
+		isHomebrew: false,
+	},
+	{
+		option: "Sailor",
+		isHomebrew: false,
+	},
+	{
+		option: "Secret",
+		isHomebrew: true,
+	},
+	{
+		option: "Soldier",
+		isHomebrew: false,
+	},
+	{
+		option: "Urchin",
+		isHomebrew: false,
+	},
+	{
+		option: "Far Traveler",
+		isHomebrew: false,
+	},
+	{
+		option: "Haunted One",
+		isHomebrew: false,
+	},
+	{
+		option: "Knight",
+		isHomebrew: false,
+	},
+	{
+		option: "Pirate",
+		isHomebrew: false,
+	},
+	{
+		option: "City Watch",
+		isHomebrew: false,
+	},
+	{
+		option: "Clan Crafter",
+		isHomebrew: false,
+	},
+	{
+		option: "Cloistered Scholar",
+		isHomebrew: false,
+	},
+	{
+		option: "Courtier",
+		isHomebrew: false,
+	},
+	{
+		option: "Faction Agent",
+		isHomebrew: false,
+	},
+	{
+		option: "Inheritor",
+		isHomebrew: false,
+	},
+	{
+		option: "Investigator",
+		isHomebrew: false,
+	},
+	{
+		option: "Mercenary Veteran",
+		isHomebrew: false,
+	},
+	{
+		option: "Urban Bounty Hunter",
+		isHomebrew: false,
+	},
+	{
+		option: "Waterdhavian Noble",
+		isHomebrew: false,
+	},
 ];
-
 // all backgroundDescs need formatting
 export const backgroundDesc = {
 	Abandoned: {
