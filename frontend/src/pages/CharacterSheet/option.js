@@ -3281,6 +3281,8 @@ others according to their needs.`,
 };
 
 export const backgroundsArray = [
+	"Abandoned",
+	"Abyssdweller",
 	"Acolyte",
 	"Charlatan",
 	"Criminal",
@@ -3292,6 +3294,7 @@ export const backgroundsArray = [
 	"Outlander",
 	"Sage",
 	"Sailor",
+	"Secret",
 	"Soldier",
 	"Urchin",
 	"Far Traveler",
@@ -3312,6 +3315,121 @@ export const backgroundsArray = [
 
 // all backgroundDescs need formatting
 export const backgroundDesc = {
+
+	Abandoned: {
+        description: `Not everyone will have someone with them their entire life. Even if there is a crowd of potential relationships waiting to happen, they will tend to not want to forge a relationship, so as to not be abandoned again. These individuals tend to shy away from very large crowds, acting as an observer of sorts (like an outsider observing the in crowd, etc.). A person who is abandoned also has a unique viewpoint as they interpret events drastically from other party members.
+
+					Think for a moment. Who abandoned you? Are you holding a grudge against them, Or are you willing to forgive them? For how long have you been abandoned? These are questions you should ask yourself, and answer in the shoes of your character. You could've been abandoned by a ragtag group of adventurers, after you discussed that you wanted to leave the group behind! Or perhaps, you were abandoned by your family, left to starve in the alleyways of a run down village.`,
+        skillProficiencies: ` Deception, Intimidation, Performance, Persuasion, or Stealth. `,
+        toolProficiencies: `One artisan's tool of your choice.`,
+		languages: `One language of your choice`,
+        startingEquipment: `You start with dark common clothes, a few (1d4) pieces of gold, one trinket from your life, before you were abandoned.`,
+		backgroundSpecial: ``,
+        feature: {
+            title: `Pity or Hope`,
+            description: `Whether you are a sorrowful realist, or a hopeful for what the future can give you, you have learned to embrace who you are, for better or worse. When you meet new people and explain what has happened to you, those who can feel empathy or share your pain are more often willing to lend a helping hand. Whether that is in the form of information, food and supplies, or just a place for you and your party to sleep, most with a heart will do their best to understand your plight and help in any way they can.`,
+        },
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+        suggestedCharacteristics: `AWAITING FILLING`, // NEEDS TO BE FILLED IN
+		suggestedPersonalityTraits: `d4	Personality Traits (Pity)
+								1	I don’t know what I’m supposed to do with my life anymore…
+								2	People always tell me to look on the bright side...what one, though?
+								3	I worry that even if I help complete some sort of magical quest, I’ll be forgotten.
+								4	I don’t even like to help...I just do it for a second chance.
+								d4	Personality Traits (Hope)
+								1	Everybody deserves a second chance!
+								2	I'll never give up on the people I care about!
+								3	Everything is gonna turn out a-O.K!
+								4	Come on, there's always a bright side!`,
+		suggestedIdeal: `d6	Ideals
+						1	Chaos. I'm just here to cause chaos! no wrong, no right! (Chaotic)
+						2	Self-Improvement. I must go on a journey of self-improvement, or else, what's the point of this all? (Neutral)
+						3	Guidance. I feel that I've broken something, and must been guided by some type of kind deity or system! (Lawful)
+						4	Vengeance. I will find the one that has abandoned me first, and I will have revenge. (Evil)
+						5	The World. The World needs to hear the story of someone like me, someone who's broken boundaries of life. (Any)
+						6	Friendship. I'll go from being abandoned, to having made wondrous friends. (Good)`,
+		suggestedBond: `d6	Bond
+						1	The inn owner that took me in was quite kind...I owe them thanks, still.
+						2	A small group of adventurers guided me to this place...I should thank them if I see them again.
+						3	Whenever I see someone in a similar situation as me, I simply must help them.
+						4	Seeing even little animals get along makes me smile, I can't stand to see one hurt.
+						5	Sometimes I think there's someone out there for me, and that makes all the worries go away.
+						6	Thinking of the people I can call my friends...that makes me smile.`,
+		suggestedFlaw: `d6	Flaw
+						1	I get paranoid and anxious easily.
+						2	If it's to protect my new friends, I will never stand down; no matter how strong the foe.
+						3	I think of myself as some sort of "Tough Guy", having gone through what I have.
+						4	I get angry at the little things in life...
+						5	I often apologize for things out of my control to try and avoid conflict.
+						6	When things get too hard, I push people away before they can abandon me again.`,
+    },
+	AbyssDweller: {
+        description: `You were spawned in the layers of the Abyss. You might be a demon, or a lost soul.
+
+Do you have any memories of the time in the Abyss? What have you experienced? Have you received torture or torment in any kind and if yes, was there a reason for that? Were you part of the army of a demon lord? Did you fight against devils or other demons? What is the reason that you are not part of that world anymore? Maybe you found a way out by yourself, someone sent you on a mission, or you were summoned by a cult or other force?`,
+        skillProficiencies: `Intimidation, Deception`,
+        toolProficiencies: `Disguise Kit`,
+		languages:`Choose one from the following list: Abyssal, Infernal, Celestial or Deep Speech`,
+        startingEquipment: `A Disguise kit, a set of dark common clothes, a small belt pouch containing 5 gp, and a trinket from the lower planes`,
+		backgroundSpecial: ``,
+        feature: {
+            title: `Secrets of the Abyss`,
+            description: `As a dweller of the abyss, you know passages and routes through the abyss that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the Abyss twice as fast as your speed would normally allow.`,
+        },
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+        suggestedCharacteristics: `AWAITING FILLING`, // NEEDS FILLING
+		suggestedPersonalityTraits: `
+									d8	Personality Trait
+									1	Friendship is new and strange to me.
+									2	I'm not a man of many words.
+									3	The stage is mine; I'm the center of everything.
+									4	I like to express emotions and feelings in wild gestures.
+									5	Staying at one place for too long is not in my interest.
+									6	For some reason, I enjoy nature and it's beauty.
+									7	It's hard/easy to adapt to this world.
+									8	It's easier to kill someone than to be nice to someone.`,
+		suggestedIdeal: `d6	Ideal
+						1	Order. Following orders is sometimes a good option, that might lead in less pain. (Lawful)
+						2	Pain. Feeling pain reminds people of the fact that they are still alive, so it’s good to give them that feeling. [A fact that they forget too easy] (Evil)
+						3	Freedom. If you have the possibility to do everything you want, what could stop you from doing that? (Chaotic)
+						4	Hate. Everyone not from the Abyss does not deserve to live. (Evil)
+						5	Integrity. Reducing the pain of someone means less pain in the entire world. (Good)
+						6	Destruction. Chaos is more likely than order. Let's help with this process. (Chaotic)`,
+		suggestedBond: `
+						d6	Bond
+						1	There is this one special place in the abyss where I always came back to.
+						2	I took part in the blood war against the devils.
+						3	I was/am under the command of a demon lord/prince.
+						4	I had some friends/comrades in the abyss. I wonder what happened to them.
+						5	I once fought in a huge battle between two demon lords/princes.
+						6	I have connections to a cult from the Material Plane.`,
+		suggestedFlaw: `d6	Flaw
+					1	There is no way I'll go back to the abyss. If there is a way to survive, I will take it, even when that means I have to leave others behind.
+					2	Thinking about the abyss always makes me angry.
+					3	Everyone is hateable.
+					4	I have an explosive nature. It's pretty easy to trigger me.
+					5	Sometimes I talk to myself. The time in the abyss was long and lonely...
+					6	I usually keep stuff I find or get for me.`,
+    },
+
 	Acolyte: {
         description: ` You have spent your life in the service of a temple 
 					to a specific god or pantheon of gods. You act as an 
@@ -3417,6 +3535,80 @@ export const backgroundDesc = {
 						them.
 						6 Once I pick a goal, I become obsessed with it to the 
 						detriment of everything else in my life`,
+    },
+	Addict: {
+        description: `Addiction can happen to anyone. While genetics can help increase or decrease the chances of addiction, everything that causes pleasure can become an addiction.
+
+					You've became dependent on some sort of substance or activity. You become jittery and unreasonable if you don't feed your addiction for a while. You may be working to rid yourself of the addiction, became numb to it, or revel in it. In a way, you are a sick person afflicted with a disease that keeps you hooked. You may have tried to get help. Did it work? Are you on recovery?Or perhaps you recovered and fell back into the hole, or even found some new form of addiction. It's a slippery slope, after all.
+
+					When you pick this background, talk with your GM about any addictive substances in the campaign. Is there support for addicts or is knowledge on addictions vague or nonexistent? How long have you been addicted? Is your addiction deadly? What are your withdrawal symptoms and when do they start occurring? And do you do anything to help subdue withdraw and/or the addiction itself? When discussing with your DM, it is recommended you make an addiction that is feasible to the campaign to sustain. It should not be something overly rare, just to keep it always within reach.`,
+        skillProficiencies: `Choose between Deception or Persuasion, your 2nd skill must be related to something you've learned from your addiction (ie: sex or drugs could be medicine, gambling could be sleight of hand).`,
+        toolProficiencies: `1 tool set that facilitates your addiction (ie: alchemy lab for drugs, game set for gambling, a bondage set for sex.)`,
+		languages:`Any one`,
+        startingEquipment: ` Medical diagnosis papers, paraphernalia that relates to your addiction (usually the tool you are proficient in), common clothes, and a pouch containing 5gp.`,
+		backgroundSpecial: `Addiction, Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.
+
+							d6	Addiction
+							1	Drugs (can be recreational or medicinal, be sure to know the drug and its intended effects)
+							2	Food (whether this shows up as a crazy chocolate hunter/lover type, or an unhealthy reaction to purging and unhealthy diets type, is up to you)
+							3	Gambling and/or gaming.
+							4	Sex and/or masturbation.
+							5	A certain activity (maybe you just REALLY love climbing trees, perhaps your fingers tingle and shake to knit scarves, you just can't go very long without needing to do that activity)
+							6	You have a rare genetic disorder that makes anything remotely pleasurable addictive.`,
+        feature: {
+            title: `Strong Highs and Lows`,
+            description: `As an addict, your mental and physical state deal heavily with how you have fed your addiction. When you indulge in your addiction, you start to feel euphoric and powerful. You might make risky decisions or become stupidly cockamamie. It is also what keeps you normal and happy, able to enjoy things.
+
+						On the other side of the spectrum, if you don't feed your addiction you start to feel withdrawal. You might feel anxious, jittery, weak, and may even become dangerously erratic. The agitation caused makes you a danger to yourself and others around you as you recklessly may do dangerous things to try and feed your addiction. For example, if you are addicted to sexual activities, you may steal money from even allies to spend on prostitutes.
+
+						Talk with your GM about your high and the withdrawal symptoms. How long do they last? Do you suffer madness without your fix? How much of your chosen addiction do you require to get high? Is it getting worse?`,
+        },
+		alterateFeature: [
+			{
+				title: `Enabled`,
+				description: `You have an enabler that feeds your addiction. This could be a drug dealer, a sex friend, a goblin with 3 cups and a ball, or whoever might be feeding this addiction. Somehow the enabler always finds you, and it is up to you whether you like this. This keeps you fairly stable, because bankrupting or killing you would not be in the enablers' interest.
+
+							Discuss the enabler with the GM. Are they abusive? Are you in their debt? How often do they appear? Are they a help or hindrance to party activities? Are they, in fact, another party member?`,
+			},
+			{
+				title: `Recovering Addict`,
+				description: `You have seen the error of your ways and are trying to quit. But it is not easy. When in the presence of your addiction you feel the urge to engage in the substance or activity. Depending on what you and your DM discuss to be your threshold of resistance, your character will have variable difficulty not dropping whatever it is they are doing to chase after their next euphoric high. If you successfully resist, you can go about as usual. But if you can't resist, you will inevitably go running off.
+
+							Work with the GM to determine your road to recovery. How hard is it to resist? It can depend on what your addiction is. You can use Wisdom or Constitution saves if necessary. Is it worse over time? Will you ever fully recover and if so, when? What benefits might you gain when you finally quit for good?`,
+			},
+		],
+        suggestedCharacteristics: `Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.`,
+		suggestedPersonalityTraits: `d8	Personality Trait
+									1	I think constantly about my choice of substance/Activity.
+									2	I will do anything to get more of what I want.
+									3	I try to get other people addicted as well.
+									4	I believe my addiction is normal for everyone.
+									5	I hate myself but can't seem to stop.
+									6	I frequently twitch and babble about my addiction.
+									7	I am prone to random and frequently inappropriate emotional changes.
+									8	I spend most of my earnings on my addiction.`,
+		suggestedIdeal: `d6	Ideal
+						1	Love and Betterment I'm trying to get a better handle on my addiction so that I can be better for someone I love. (Good)
+						2	Magic Cure I'm chasing the cure for my addiction because the process to quit is WAY too much work. (Chaotic)
+						3	Self Improvement . I am determined to get my life in order. (Lawful)
+						4	Ambrosia I believe my addiction is the key to happiness and spiritual transcendence. (Neutral)
+						5	Improvement I can make my addiction even better, with the right tweaks I could reach new highs. (Neutral)
+						6	MORE I want more, I want it all to myself, I can never get enough, and no one can stop me. (Evil)`,
+		suggestedBond: `d6	Bond
+						1	My addiction is my choice, if I want to let it run my life, that's my prerogative.
+						2	I am trying to get better for the sake my family and friends.
+						3	I will never stop trying to relive that first high.
+						4	my addiction was the only thing that kept me going in trying times.
+						5	I owe someone a mountain of debt.
+						6	I made a tidy sum from other addicts but can't use the money (guilt or the law)
+						`,
+		suggestedFlaw: `d6	Flaw
+						1	I'm allergic (to the material, substance, food, drink, activity, etc, required for my addiction)
+						2	I've become a bit defined by my addiction.
+						3	I have to bring the supplies to aid/sustain my addiction and sometimes people say it's more trouble than it's worth.
+						4	I have an uncontrollable twitch that never stops, not even when I sleep.
+						5	When going through withdrawal, I become very violent and aggressive to everyone around me.
+						6	When I don't get my addiction satisfied I can barely sleep.`,
     },
 	Charlatan: {
         description: `You have always had a way with people. You know 
@@ -4694,6 +4886,199 @@ export const backgroundDesc = {
 						authorities`,
 		},
     },
+	Secret: {
+		isHomebrew: true,
+        description: `You or your past were kept secret for some reason or another. Maybe your parents wanted to protect you from those who might harm you, or maybe they wanted to secret you away to use for their own gain. Maybe they aren’t your parents at all, or maybe you have no parents, being born of a higher power. But why? Are you an alien? A being of extreme power? Or maybe you’re just cursed, and no one wanted to tell you. Whether you led a normal life up to this point or not is of no consequence because now you know, and your life will never be normal again.`,
+        skillProficiencies: `Arcana or History, and Insight or Intimidation`,
+        toolProficiencies: `Disguise Kit`,
+        startingEquipment: `One trinket from your past related to your secret, Disguise Kit, a set of traveller's clothes, a set of common clothes, and a pouch containing 10 gp`,
+		languages: `One exotic language of your choice.`,
+		backgroundSpecial: {
+			description: `Your secret was a big one, and now you get to choose it. Pick one from the table below (or roll the appropriate die for a random one), or make up a new one, at your DM’s discretion.`,
+			die: "1d6",
+			title: `Your Secret`,
+			roll: [
+				{
+					number: 1,
+					description: `You have angelic/demonic blood.`,
+				},
+				{
+					number: 2,
+					description: `You are of a different race that is physically similar to your parents. (eg. Aasimar`,
+				},
+				{
+					number: 3,
+					description: `You have been cursed somehow, and you must find a way to reverse it.`,
+				},
+				{
+					number: 4,
+					description: `	You are a lycanthrope, or something similar.`,
+				},
+				{
+					number: 5,
+					description: `	You were polymorphed from a different creature.`,
+				},
+				{
+					number: 6,
+					description: `	You have special powers not easily explained by science or magic.`,
+				}
+			],
+		},
+        feature: {
+            title: `Fabricated Background`,
+            description: `Having the wool pulled over your eyes for so long has some benefits, as you now know how to do it to others. Weaving false stories has become second nature to you, so you gain advantage on Deception checks pertaining to any backstory you have fabricated about your past to make someone believe it as fact.`,
+        },
+		alterateFeature: [
+			{
+				title: `Heralded`,
+				description: `It turns out that the entire town knew your secret but you. Your first thought is to get mad at your parents (if they even are your parents), but soon you realize that it was impossible not to tell them. However, now that you know, they are ready to help you in any way possible. You will always have a place to stay in your home, and your companions will have free food and lodging, with anything else they (or you) need at a hefty discount, if not free too. In addition, any connections they have are now your connections. At the DM’s discretion, by mentioning certain townspeople in other cities, you may be able to procure goods and services at a slight discount.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I lived a very sheltered life, so standard customs seem foreign to me.`,
+				},
+				{
+					number: 2,
+					description: `I see my secret as fate calling me to a new adventure.`,
+				},
+				{
+					number: 3,
+					description: `My life has been very mundane until now, so I jump at the chance to try new things!`,
+				},
+				{
+					number: 4,
+					description: `People are nervous of my secret, so I strive to change their views.`,
+				},
+				{
+					number: 5,
+					description: `I’m still not used to the attention my secret draws, so I tend to stay away from crowds.`,
+				},
+				{
+					number: 6,
+					description: `I take extra lengths to hide my secret, going so far as to hide myself if necessary.`,
+				},
+				{
+					number: 7,
+					description: `I am always afraid of others trying to use my secret for their own gain.`,
+				},
+				{
+					number: 8,
+					description: `I’ll do anything to protect my secret, even if I have to kill.`,
+				},
+				
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Jaded. People are only trying to use me. I won’t let them get the chance.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 2,
+					description: `Freedom. My family always held me back because of my secret. Now that I know, I can do whatever I want.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					description: `Duty. My secret has given me a chance to make right was goes wrong in this world, and I can’t ignore that. (Lawful)`,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					description: `Hero. I can use my secret to help others, and inspire others to do the same.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					description: `Recluse. My secret has only caused problems for everyone around me. I just want to be left alone.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					description: `Curiosity. I want to know more about my secret, and why it was bestowed upon me`,
+					alignment: `Any`,
+				}
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Something gave me this secret, and I need to know why.`,
+				},
+				{
+					number: 2,
+					description: `I was cursed, and now I need vengeance.`,
+				},
+				{
+					number: 3,
+					description: `Fate gave me my secret to help others, and I have a constant urge to do so.`,
+				},
+				{
+					number: 4,
+					description: `My home wouldn’t accept me due to my secret, and I’m constantly searching for a place that does.`,
+				},
+				{
+					number: 5,
+					description: `I had to leave my home because of my secret; I feel my destiny is elsewhere.`,
+				},
+				{
+					number: 6,
+					description: `My secret is my curse, and I need to find a cure.`,
+				}
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A part of my life was kept from me without my knowledge, so I’m slow to trust others.`,
+				},
+				{
+					number: 2,
+					description: `	I think my life would be easier without my secret; I’ll do anything to be rid of it.`,
+				},
+				{
+					number: 3,
+					description: `I have to help literally anyone I see in trouble, no matter the cost.`,
+				},
+				{
+					number: 4,
+					description: `My worldview is small and restricted; I often can’t see past my secret.`,
+				},
+				{
+					number: 5,
+					description: `People think I’m a freak, so I’m very hostile and susceptible to any criticism.`,
+				},
+				{
+					number: 6,
+					description: `I don’t think I deserve my secret. It should’ve gone to someone better than me.`,
+				}
+			],
+		},
+    },
 	Soldier: {
         description: ` War has been your life for as long as you care to 
 						remember. You trained as a youth, studied the use of 
@@ -4902,10 +5287,21 @@ export const backgroundDesc = {
         skillProficiencies: ``,
         toolProficiencies: ``,
         startingEquipment: ``,
+		backgroundSpecial: ``,
         feature: {
             title: ``,
             description: ``,
         },
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
         suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
