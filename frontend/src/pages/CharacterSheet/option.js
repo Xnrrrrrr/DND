@@ -3325,16 +3325,72 @@ others according to their needs.`,
 
 export const backgroundsArray = [
 	{
-		option: "Abandoned",
-		isHomebrew: false,
+		option: "Abandoned", //homebrew
+		isHomebrew: true,
 	},
 	{
-		option: "Abyssdweller",
-		isHomebrew: false,
+		option: "Abyssdweller", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Addict", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Adept", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Adopted", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Afflicted", //homebrew
+		isHomebrew: true,
 	},
 	{
 		option: "Acolyte",
 		isHomebrew: false,
+	},
+	{
+		option: "Alchemist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Alcoholic", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Alcoholic_Scientist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Amnesiac", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Anarchist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Ancient_Cultist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Ancient_King", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Ancient_One", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Anthropologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Antiquarian", //homebrew
+		isHomebrew: true,
 	},
 	{
 		option: "Charlatan",
@@ -3953,13 +4009,15 @@ export const backgroundDesc = {
 			],
 		},
 	},
-	Adopted: {
+	Adept: {
 		isHomebrew: true,
-		description: ``,
-		skillProficiencies: ``,
-		toolProficiencies: ``,
-		languages: ``,
-		startingEquipment: ``,
+		description: `You've always wanted to learn something interesting and different to make you stand out from the crowd, and now you have! With the tool skills you have learned they may just save your life one day and you are always ready for that moment.
+
+Your learning has gotten you this far, but you are seeking more. What knowledge could draw you from your books to a life of adventure? Is there forbidden lore you seek? Did the promise of ruins and mysteries draw you from the comfort of your office? Did you learn secrets you weren't welcome to and choose to see the world instead of face the music?`,
+		skillProficiencies: `Two skill of your choice`,
+		toolProficiencies: `One tool kit of your choice`,
+		languages: `One standard language of your choice`,
+		startingEquipment: `A trinket of your choice from your childhood, a set of common clothes, a book of your old teachings, and a belt pouch containing 10gp`,
 		backgroundSpecial: {
 			title: ``,
 			description: ``,
@@ -3992,8 +4050,8 @@ export const backgroundDesc = {
 			],
 		},
 		feature: {
-			title: ``,
-			description: ``,
+			title: `Prodigy`,
+			description: `You are one of the fastest learners out there. When trying to learn something (languages, proficiencies, or otherwise), for every week it would take to gain this, you reduce the time taken by 2 days.`,
 		},
 		alterateFeature: [
 			{
@@ -4005,134 +4063,134 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: ``,
+		suggestedCharacteristics: `Most Adepts have a habit of trusting too much in their easy way of understanding things. Many Adepts suffer from unusual flaws and are stimulated by peculiar drives, it makes them ever more interesting to play and serves to bring a much more unique experience to the world and set out their destiny.`,
 		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I am always eager to learn new subjects`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I will always be ready to help my friends`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `My dream is my destiny, and my friends are my path to setting it`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I only continue to set out my dream to use it for unspeakable uses.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `	I find it hard being around others.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `	I will never back down from a fight.`,
 				},
 			],
 		},
 		suggestedIdeal: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
-					alignment: ``,
+					description: `Teacher I will set out my dream to help the helpless. `,
+					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: ``,
-					alignment: ``,
+					description: `Persistence My dream is my life. No one will stop me from achieving victory in it. `,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					description: ``,
-					alignment: ``,
+					description: `Knowledge When I reach my goal, I will teach others what I've learnt. `,
+					alignment: `Lawful`,
 				},
 				{
 					number: 4,
-					description: ``,
-					alignment: ``,
+					description: `Revenge My dream will be used against those who laughed at me`,
+					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: ``,
-					alignment: ``,
+					description: `Remembrance Even if I don't reach my goal, I will still use my skills.`,
+					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: ``,
-					alignment: ``,
+					description: `	Acceptance This destiny is for me. I can feel it.`,
+					alignment: `Any`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `My Instructor was my everything.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `Once I complete my goal, I will go home and share it.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I would die for my destiny.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My imagination of the future dives me forward.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I can still hear the voice's of the people who helped me.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `	My friends and their help are what keeps me going.`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I will do anything, to reach my goal.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I can only trust in myself and no one else.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `My skills won't always work.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I am rather clumsy and foregetful.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `People ask me for help, but I'm not always the best at my certain skill.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I still wish that my destiny was to be something else.`,
 				},
 			],
 		},
@@ -4330,6 +4388,1935 @@ export const backgroundDesc = {
 			],
 		},
 	},
+	Alchemist: {
+		isHomebrew: true,
+		description: `The use of alchemy walks a fine line between that of science and magic. Alchemy utilizes formulas with strict values and carefully weighed portions, compared to how free magic can be. An important thing to note is that alchemy is best realized in settings where magic is not too predominant and common. Too much magic makes alchemy secondary, as one can conjure gold rather than laboriously try and synthesize it. Alchemists often were employed by various nexuses of power to do miraculous things, like transmutation. The ability to change materials from one into another, usually an entirely different element, is something many alchemists seek in their studies. Many other goals also do exist, like finding eternal life or manufacturing artificial forms, like homunculi.
+
+					Alchemy also covers more mundane uses, including medicine. Many alchemists could accurately define or detect certain elements and even concoct tinctures and poisons out of minerals. Alchemists do often require a lot of materials, be it lab equipment or formula ingredients. They are thus less efficient than an arcane scholar in many ways, but they are more meticulously trained to deal in something like the scientific method. Many a time, alchemists might run into doubt regarding their profession, be it due to religious stigma or persecution from rivals.
+
+					So, what kind of alchemist are you? Do you work for a wealthy nobleman or even a governmental agency? What is your goal as an alchemist, and what is expected of you by your superiors? Do you want fame for your work? Do you maybe seek a rare ingredient on your adventures? Or, maybe you need political cover due to some scandal regarding your discoveries? What have you discovered and learned through your work? Have you perhaps perfected a formula that your teacher never finished? Or maybe you found a new element to the medieval alchemic quartet of fire, water, air, and earth?`,
+		skillProficiencies: `Arcana and Medicine`,
+		toolProficiencies: `Alchemist's Supplies`,
+		languages: `One language of your choice`,
+		startingEquipment: `Alchemist's Supplies, a book on alchemical formulae, common clothes, and a belt pouch with 10 gp`,
+		backgroundSpecial: {
+			title: `Alchemy Type`,
+			description: `In seeking their magnum opus, an alchemist decides on a specific field of study, no different than how a scientist may choose to specialize in an area of their expertise. What does your alchemist character study in particular?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Transmutation. The art of changing one thing into another is one of the primary bases for all of alchemy. Usually, this involves changing base materials into more valuable ones, called noble metals, like making gold from dirt.`,
+				},
+				{
+					number: 2,
+					description: `Solvent. The search for the universal solvents known as alkahest and azoth is a pursuit of many alchemists in the fields of medicine.`,
+				},
+				{
+					number: 3,
+					description: `	Animate. Creation of artificial life is a goal for many alchemists who seek to play god.`,
+				},
+				{
+					number: 4,
+					description: `	Eternity. Works to create elixirs of life that grant immortality are present across many areas of the arcane. Alchemy is no exception. Whether its brewing minerals according to rasayana or seeking a philosopher's stone, the quest for longevity is yours.`,
+				},
+				{
+					number: 5,
+					description: `	Yliaster. The prime material is a starting point for all alchemists. It's not easy to isolate the true essence of something, and it is an absolute fundamental that many budding alchemists and even veterans have trouble doing.`,
+				},
+				{
+					number: 6,
+					description: `Esotericism. The arts of alchemy require preservation of symbols, codices, arcane tools, and many other secrets. Alchemists in this vein seek to preserve their traditions.`,
+				},
+			],
+		},
+		feature: {
+			title: `Experimenter`,
+			description: `You are a sort of prototype for the modern scientist, with an insatiable drive and inquisitive mind that seeks further knowledge with or without the aid of the conventional arcane. You have advantage on ability checks to identify mundane materials using your alchemist supplies. This can distinguish metals from one another, like pyrite from gold, for example, but it will not determine if something has magical properties.`,
+		},
+		alterateFeature: [
+			{
+				title: `Secretive Knowledge`,
+				description: `Alchemists often belonged to hidden orders that sought to disseminate, disprove, or test certain knowledge. As an alchemist, you are a member of one such group on the down low, you can expect some help from those also of your alchemist order, including shelter and small alchemical components. However, these groups are very secretive and distrustful of others, meaning your party members will likely not receive such kind treatment. So long as you remain in good terms with your alchemist order, you can receive lodging and food there, up to a modest lifestyle. However, they will not do anything dangerous or extravagant for you, nor will they reveal themselves and follow you to battle.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Alchemists vary as much as scientists. Some are super zealous and love to keep their secrets. Others are open and want to teach and spread their knowledge. Their attitudes towards people can be volatile, with some alchemists having been only shut-ins in their labs and others penniless beggars perhaps disowned by their orders.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I have an insatiable thirst for knowledge.`,
+				},
+				{
+					number: 2,
+					description: `My mind does not work the same as others. Others call me crazy.`,
+				},
+				{
+					number: 3,
+					description: `I tend to speak quietly and avoid eye contact. Really, I prefer talking to myself over talking to others.`,
+				},
+				{
+					number: 4,
+					description: `I cannot handle making big decisions and want others to take or share responsibility.`,
+				},
+				{
+					number: 5,
+					description: `I want everything to be done as I want it, always!`,
+				},
+				{
+					number: 6,
+					description: `I do not take criticism lightly, be it from a sage or a fool. Especially a fool.`,
+				},
+				{
+					number: 7,
+					description: `I spend all my resources on my craft. Money, time...`,
+				},
+				{
+					number: 8,
+					description: `I can't stand being a center of attention. I like to be the one no one notices.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Discovery. I am on the verge of a great discovery that will revolutionize alchemy as we know it, and I must follow through.`,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					description: `Money. I don't care what I'm being told to do; if you can pay, I can do it.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					description: `Power. With this craft, I can control creation and death like a god. All lives thus become trivial before me.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					description: `Ethics. There are bad actors out there that I swear to find and subdue to preserve the integrity of alchemy. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Improvement. There are great things that alchemy can accomplish for people, like medicine. I strive for this.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					description: `Knowledge. My passion is a drive that never ceases. I will do anything to learn about what I desire.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I grew up in a poor family, which led me to become a bit of a scrooge that scrimps and saves all the time.`,
+				},
+				{
+					number: 2,
+					description: `My customers, sponsors, and patrons are my friends!`,
+				},
+				{
+					number: 3,
+					description: `I have a rival who is a greater alchemist than I. I constantly seek to best them.`,
+				},
+				{
+					number: 4,
+					description: `	My notes on my greatest discovery were stolen, and I must find them before they fall into the wrong hands.`,
+				},
+				{
+					number: 5,
+					description: `I have a great interest in teaching and am constantly seeking out new students.`,
+				},
+				{
+					number: 6,
+					description: `The one who taught me my trade still lives; I respect them above all else and will defend them to the death if they require it.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I once caused a great accident amid an experiment. It is my greatest shame that I will never forgive myself for.`,
+				},
+				{
+					number: 2,
+					description: `	I have twisted my mind a bit in exposure to chemicals, making me lose my sense of morals and such.`,
+				},
+				{
+					number: 3,
+					description: `	I have a tendency to desire destroying what I create for a vile sense of pleasure.`,
+				},
+				{
+					number: 4,
+					description: `I've developed an addiction to one of my substances, and I need to make it whenever possible.`,
+				},
+				{
+					number: 5,
+					description: `Due to my hubris, I irreversibly scarred myself in my experiments and so I never ever want to be seen in public.`,
+				},
+				{
+					number: 6,
+					description: `i  tend to wander in my thoughts and get lost or separated from my group.`,
+				},
+			],
+		},
+	},
+	Alcoholic: {
+		isHomebrew: true,
+		description: `The vice of alcohol holds a tight grip on your heart, as well as your liver, for some reason or another. Maybe some past trauma has caused you to turn to fermented fruits and grains as a solace and way to cope, no matter how poor it may be. Maybe you enjoy the flavor to the point that you would do anything for a single drop of the bitter tasting substance. You will do anything to continue living your life through beer goggles, and it has lead to desperate measures, be it a life of crime, or brewing your own alcohol in the privacy of your home. Its plain to see that your life has spiraled out of your control and many people have suggested you get help. Maybe that's why you turned to adventuring, to turn over a new leaf and get a fresh start, or maybe you seek more gold to feed your alcoholism.`,
+		skillProficiencies: `Sleight of Hand and Medicine`,
+		toolProficiencies: `Brewer's Tools or Thieves' Tools`,
+		languages: `Any single language of your choice`,
+		startingEquipment: `A flask filled with your favorite alcohol, a memento of your life before alcohol, common clothes, a heavy blanket, and a pouch with 5 sp`,
+		backgroundSpecial: {
+			title: `Drink of Choice`,
+			description: `While you will drink any alcohol if need be, you of course have your own preferences for drinks. Maybe it was the first alcohol you tried, or maybe you just like the flavor, either way, you are utterly obsessed with this beverage and are even more susceptible to its siren song.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Beer`,
+				},
+				{
+					number: 2,
+					description: `Wine`,
+				},
+				{
+					number: 3,
+					description: `Rum`,
+				},
+				{
+					number: 4,
+					description: `Mead`,
+				},
+				{
+					number: 5,
+					description: `Brandy`,
+				},
+				{
+					number: 6,
+					description: `Scotch`,
+				},
+			],
+		},
+		feature: {
+			title: `Temperance`,
+			description: `Having already struggled through addiction in the past you know how to identify the signs of addiction, and are better equipped to quit other addictions or help others through their addictions. Your demeanor after giving up alcohol may also affect the way different people interact with you.
+							`,
+		},
+		alterateFeature: [
+			{
+				title: `Pitiful`,
+				description: `You love alcohol far too much, and find yourself forgoing inns for the tavern. As such, you have garnered a form of condescending pity from people and can typically find a place to stay on the condition that you do not drink for the duration of your stay. Whether you hold up your end of the bargain or not is up to you.`,
+			},
+			{
+				title: `Strong-headed`,
+				description: `You are extremely tolerant of alcohol and have advantage on Constitution checks related to alcohol. You also can consume 3 times that of most people before feeling even a little tipsy.`,
+			},
+		],
+		suggestedCharacteristics: `Alcoholics are not meant to be envied, they are sad individuals who feel they need alcohol, and their personalities should reflect that.
+`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have mastered the art of crocodile tears and use them to get whatever I want from whoever I want`,
+				},
+				{
+					number: 2,
+					description: `I live for any distraction from my monotonous life.`,
+				},
+				{
+					number: 3,
+					description: `	I have found that everyone's a lot more attractive after a few drinks.`,
+				},
+				{
+					number: 4,
+					description: `I find a wooden table to be an easier surface to fall asleep on than a bed.`,
+				},
+				{
+					number: 5,
+					description: `I find the scent of alcohol to be revolting, but still find myself drawn to it.`,
+				},
+				{
+					number: 6,
+					description: `I have found that praying to gods has been ineffective, and have decided to give up on religion all together.`,
+				},
+				{
+					number: 7,
+					description: `	I hate confrontation about my problematic behaviors.`,
+				},
+				{
+					number: 8,
+					description: `I have a very fragile ego and sense of self.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Self-Serving. Nobody helped me, so why should I do the same for them?`,
+					alignment: `Evil`,
+				},
+				{
+					number: 2,
+					description: `Idealistic. If there's still hope for me, there's hope for anyone.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					description: `Drinking. I don't care about much else other than alcohol. `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					description: `Tempered. I find that drinking within reason keeps me sane, but I still need alcohol everyday`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `	Hedonism. If something's good why shouldn't I pursue it? `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					description: `Change. I want to change my ways and be a better person.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `The local barkeep is my only real friend.`,
+				},
+				{
+					number: 2,
+					description: `I have abandoned my family for alcohol, I want to fix that.`,
+				},
+				{
+					number: 3,
+					description: `There is at least one night stand who is a bit bitter towards me.`,
+				},
+				{
+					number: 4,
+					description: `Turning away from alcohol has lost me a lot of my drinking buddies.`,
+				},
+				{
+					number: 5,
+					description: `	I have sequestered myself away to avoid alcohol.`,
+				},
+				{
+					number: 6,
+					description: `I have at least one illegitimate child from a drinking bender.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I drink to run from my problems.`,
+				},
+				{
+					number: 2,
+					description: `I owe people a lot of money from when I was drunk.`,
+				},
+				{
+					number: 3,
+					description: `Loyalty to anyone but alcohol is something I don't get.`,
+				},
+				{
+					number: 4,
+					description: `	I use my drinking as an excuse to be a terrible person.`,
+				},
+				{
+					number: 5,
+					description: `I think that anyone who chooses not to drink is a sanctimonious jerk.`,
+				},
+				{
+					number: 6,
+					description: `	I blame everyone other than me for my problems.`,
+				},
+			],
+		},
+	},
+	Alcoholic_Scientist: {
+		isHomebrew: true,
+		description: `You are a brilliant scientist, well-known for your advancements and contributions to a field of your choice. You have a tutored many a bright-eyed student, sending them on their way to becoming as intelligent as yourself. Your students are also quite familiar with the sight of you passed out, facedown, on your desk, several empty flasks scattered amongst your notes. As long as you can remember, though that isn't saying much, you have been an avid enjoyer of alcohol, despite your scientific background. Do you drink to cope with stress? Or is it merely a tool to help unlock the secrets of the world? Do you regulate your alcoholism, and only drink when working, or has it completely spiraled out of control, requiring your colleagues and students to care for you after another one of your drunken benders?`,
+		skillProficiencies: ` Perception, Investigation`,
+		toolProficiencies: `Tinker’s tools and Calligrapher's supplies`,
+		languages: `Any one of your choosing`,
+		startingEquipment: `A backpack, a set of lab coats, a bedroll, a pouch containing 15 gp, lab notes on the experiment, three flasks of alcohol, three empty flasks, an ink bottle, a feather pen, and a chess set.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Intoxicated Teacher`,
+			description: `You drink. A lot. No, really, you have a serious problem. Unfortunately in terms of your recovery, you've found that drinking, to a certain extent, helps organize your slightly scattered mind, and makes previously difficult to understand concepts easier to parse and work through. While drunk, your character is somehow able to find just the right words to explain any concept related to your scientific domain, no matter how complicated, in simple enough terminology that anyone listening will be able to garner at least a basic understanding of it.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I’m fascinated by technology.`,
+				},
+				{
+					number: 2,
+					description: `I don’t understand the role of religion.`,
+				},
+				{
+					number: 3,
+					description: `I often enjoy analyzing the people around me.`,
+				},
+				{
+					number: 4,
+					description: `I always have a plan for what to do when things go wrong.`,
+				},
+				{
+					number: 5,
+					description: `I'll settle for nothing less than perfection.`,
+				},
+				{
+					number: 6,
+					description: `	I can't help but grow excited over the possibility of a new student.`,
+				},
+				{
+					number: 7,
+					description: `I am utterly serene, even in the face of disaster.`,
+				},
+				{
+					number: 8,
+					description: `I use polysyllabic words to convey the impression of great erudition`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Sincerity. There's no good pretending to be something I'm not.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					description: `Aspiration. I'm determined to make something of myself`,
+					alignment: `Any`,
+				},
+				{
+					number: 3,
+					description: `Creativity. The world is in need of new ideas and bold action. `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					description: `	Respect. People deserve to be treated with dignity and respect.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					description: `Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 6,
+					description: `Knowledge. The path to power and self-improvement is through knowledge`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am often considered a disgrace to the scientific community due to my bad habits.`,
+				},
+				{
+					number: 2,
+					description: `I ruined my colleagues' research while I was drunk. I'll do whatever it takes to replace it.`,
+				},
+				{
+					number: 3,
+					description: `	The university where I learned my trade is the most important place in the world to me`,
+				},
+				{
+					number: 4,
+					description: `It is my duty to protect my students, no matters how many drinks I've had.`,
+				},
+				{
+					number: 5,
+					description: `I work to preserve a library, university, alchemical lab, or monastery.`,
+				},
+				{
+					number: 6,
+					description: `I owe a debt I can never repay to the people who helped me with my alcoholism.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm as stubborn as a mule, and refuse to admit I have a problem.`,
+				},
+				{
+					number: 2,
+					description: `I am infamous for showing up to serious events completely wasted.`,
+				},
+				{
+					number: 3,
+					description: `My curiosity always made me a bit oblivious to danger. That lack of awareness is only magnified when I'm tipsy.`,
+				},
+				{
+					number: 4,
+					description: `I suffer from racing thoughts; a few drinks slows my mind down enough to focus.`,
+				},
+				{
+					number: 5,
+					description: `I feel horrible guilt surrounding my addiction, and try to hide it whenever possible.`,
+				},
+				{
+					number: 6,
+					description: `If I were forced to pick between my research or feeding my cravings, I'd choose the booze any day.`,
+				},
+			],
+		},
+	},
+	Amnesiac: {
+		isHomebrew: true,
+		description: `You... don't even know who you were before becoming an Amnesiac. You come up with so many different ideas of who you were, ideas that would keep you up at night. You adventure, dig through history, investigate on leads, hoping that they'd bring you one step closer to finding out who you truly are... That is if you even want to know who you are.. Maybe you lost your memory from an explosion that caused you to hit your head, maybe you overdosed on a dodgy potion that blanked your mind, maybe you were cursed to forget everything, maybe you did this to yourself to forget a horrible trauma. Whatever happened, you have no idea, but there must be evidence of the past somewhere...`,
+		skillProficiencies: `Perception, Investigation`,
+		toolProficiencies: ` Choose one musical instrument or gaming set, and one weapon`,
+		languages: `One of your choice`,
+		startingEquipment: `Two trinkets from your past (one of which is a meaningless red herring and the other being pivotal to your forgotten backstory. Which is up to your DM, who does not have to share which if they don't want to), one weapon you are proficient with, a set of commoner's clothes, and a belt pouch containing 5 GP.`,
+		backgroundSpecial: {
+			title: `Quirks and Impulses`,
+			description: `Although you have no memory, you are not a blank slate. Certain mannerisms and behaviours persist, even though you don't remember their point of origin.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Formal Attitude. You speak extremely formally at all times, especially to those you see as superiors. This may have been due to a military or noble background.`,
+				},
+				{
+					number: 2,
+					description: `Forgiver. Even when you don't always fully believe it, you have a strong feeling that everyone should be given a second chance. This impulse may steer you right, but you may also develop a deep distrust of it as well.`,
+				},
+				{
+					number: 3,
+					description: `Wanderlust. You feel a compulsion to travel, like you used to do it all the time. When in one place for too long, you grow physically restless. Over time, you might choose to curb this instinct.`,
+				},
+				{
+					number: 4,
+					description: `Driven to Learn. For some reason you are compelled to the library and colleges of the world. The urge to absorb and learn as much as you can is deeply rooted in you. This may or may not line up with your class, it may help or hinder your path to finding yourself.`,
+				},
+				{
+					number: 5,
+					description: `	Religious Thinking. You find yourself easily convinced by religious figures and messages. Evidently, you were quite the devout in your past, although you might now have a fresh perspective on the consequences of such thinking now that you're starting from scratch.`,
+				},
+			],
+		},
+		feature: {
+			title: `Deja Vu`,
+			description: `You suddenly remember a huge amount of detail about a person, place or thing that you are currently looking at or interacting with without knowing why. Maybe a certain phrase or image sets you off, but you suddenly know all about this thing like you've been familiar with it for years. Any Insight, Investigation or History checks you make relating to this thing are done with advantage. You can use this feature three times per campaign and/or per character.`,
+		},
+		alterateFeature: [
+			{
+				title: `Oh, I know that`,
+				description: `Despite your amnesia, you clearly remember one specific field of knowledge, lore, or something else. Choose the field you want your character to know and write it down on your character sheet. If you fail your History roll regarding that field of knowledge, you can consult for the answer regardless unless it is otherwise impossible to know about it (i.e. it's unknown)`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I like to do something to capture the current moment, be it writing down a poem or drawing a picture.`,
+				},
+				{
+					number: 2,
+					description: `I keep a notebook of all the things I'm supposed to know so I won't forget it.`,
+				},
+				{
+					number: 3,
+					description: `	I have a ribbon tied to my finger at all times... And I don't know why.`,
+				},
+				{
+					number: 4,
+					description: `i  get constant headaches when I want to think about my past.`,
+				},
+				{
+					number: 5,
+					description: `I come up with a new story of who I was every time I am asked.`,
+				},
+				{
+					number: 6,
+					description: `I worry that I'll forget the life I'm living right now.`,
+				},
+				{
+					number: 7,
+					description: `I sometimes think about who my family was and where I fitted in.`,
+				},
+				{
+					number: 8,
+					description: `I don't want to pay close attention to my past.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Beginning. "This is a new, fresh start for me!" `,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					description: `Placement. "I will become a helpful member of my community, both from my past and my new future." `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					description: `Improvement. "In order for me to be better in the future, I must know about my past." `,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					description: `Neglect. "Why bother searching for my past? It's in the past, after all." `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					description: `	Freedom. "Having no memories means having no obligations." `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					description: `Advantage. "Once I find out who I was, I'll use it to take back what I want." `,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A kindly old man took me in when he found me. I owe him a favor ever since.`,
+				},
+				{
+					number: 2,
+					description: `I had a lover in my past who wants me to come back to her.`,
+				},
+				{
+					number: 3,
+					description: `I hold onto my trinket, the only thing that I remember in my past.`,
+				},
+				{
+					number: 4,
+					description: `The home I live in right now is the only home that matters to me.`,
+				},
+				{
+					number: 5,
+					description: `I have a good idea who's responsible for my amnesia, and they will pay for it.`,
+				},
+				{
+					number: 6,
+					description: `I remember only one person from my past. He holds the key to finding out about who I was.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will stop at nothing to find out who I was.`,
+				},
+				{
+					number: 2,
+					description: `Every time I hit a dead end in learning of my past, I mentally shut down for a bit.`,
+				},
+				{
+					number: 3,
+					description: `On top of forgetting my past, I also forgot basic stuff like eating.`,
+				},
+				{
+					number: 4,
+					description: `I'm quick to forget things.`,
+				},
+				{
+					number: 5,
+					description: `I will latch onto anything that will provide me at least an idea of who I was, even if it's an obvious trap.`,
+				},
+				{
+					number: 6,
+					description: `I am almost certain that what I did in the past was bad, and the guilt eats me up even though I don't know what it was.`,
+				},
+			],
+		},
+	},
+	Anarchist: {
+		isHomebrew: true,
+		description: `You are an anarchist, For whatever reason you believe nobody should have control over another person. This may have been caused by a variety of reasons. You are steadfast in your beliefs and refuse to command or be commanded. You may seek to tear down a dictator or ruin an economy, no matter the goal it is towards anarchy.`,
+		skillProficiencies: `Choose one out of: History, Survival, or Nature`,
+		toolProficiencies: `Poisoner's Kit or Thieves' Tools and one set of Artisan Tools`,
+		languages: `Choose one `,
+		startingEquipment: `Common Clothes in a dark colour with a hood, one of whatever set of Artisan Tools you chose for proficiency, a list of names of other anarchists, a flint and steel, a flask of oil, and 5 gold pieces.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Public Enemy`,
+			description: `It's better to keep your beliefs hidden as wanting to topple a government would most likely be met with hostility and have you executed. Luckily you know of others who share your ideals and may help you if it furthers the cause.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I can't help but try and prove what I'm doing is right.`,
+				},
+				{
+					number: 2,
+					description: `I witnessed the atrocities of king first-hand and it troubles me deeply.`,
+				},
+				{
+					number: 3,
+					description: `I'm constantly looking for people to help me fight.`,
+				},
+				{
+					number: 4,
+					description: `I keep to myself and often keep my intentions secret.`,
+				},
+				{
+					number: 5,
+					description: `Everyone is entitled to their own opinion and I will make mine known.`,
+				},
+				{
+					number: 6,
+					description: `Gold is near worthless in reality and don't particularly like being payed with it.`,
+				},
+				{
+					number: 7,
+					description: `I have killed people for going against me before and will do it again.`,
+				},
+				{
+					number: 8,
+					description: `I don't like getting my hands dirty and I prefer to manipulate Rulers into their own self-destruction.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Nihilism. Society is corrupt and cruel and people will benefit from it's removal. `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					description: `Relativism. Everyone has their own morals and making people follow your own is wrong.`,
+					alignment: `Any`,
+				},
+				{
+					number: 3,
+					description: `Sociopath. Society did not accept me so I will burn it down to feel it's warmth.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					description: `	Freedom. I want to do what I want and nobody can tell me otherwise.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					description: `Equaliser. Power should be equal from one person to another.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					description: `	Choice. People should know everything about their leader, they can then make judgement from that. `,
+					alignment: `Lawful`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I work for the people to free they from oppression.`,
+				},
+				{
+					number: 2,
+					description: `The legal system is flawed and does more harm then good.`,
+				},
+				{
+					number: 3,
+					description: `Money has destroyed love and I see to put an end to it.`,
+				},
+				{
+					number: 4,
+					description: `The Elites are too prideful for their own good and it's my job to cut them down a notch.`,
+				},
+				{
+					number: 5,
+					description: `Kings sit back as his subjects fight his wars, I will end the unnecessary blood shed caused by a rulers lust for power.`,
+				},
+				{
+					number: 6,
+					description: `Nobles always abuse their position so I seek to make everyone equal.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will only help if it benefits me in some way.`,
+				},
+				{
+					number: 2,
+					description: `	I refuse to listen to orders even if I know that they're the right course of action.`,
+				},
+				{
+					number: 3,
+					description: `I'm an incredibly spiteful person who will hold a grudge if you wrong me`,
+				},
+				{
+					number: 4,
+					description: `I hate egos and anyone you throws theirs around will face my wrath.`,
+				},
+				{
+					number: 5,
+					description: `If I consider your actions morally wrong I won't lift a finger to help you.`,
+				},
+				{
+					number: 6,
+					description: `	I'm stubborn and I refuse to change my beliefs.`,
+				},
+			],
+		},
+	},
+	Ancient_Cultist: {
+		isHomebrew: true,
+		description: `You are part of a cult that follows an elder god, an ancient monstrosity or another such entity. You were either born into the cult's fold or joined later in life for one reason or another. For whatever reason, you've chosen to leave your former allies behind. Perhaps you can't stand what your "family" has done and what you've been made to do, and have decided to leave that life behind, or at least are trying to. On the other hand, perhaps you have set out on a private mission, received from the cult or directly from your god and you are willing to do everything in your power to finish it. Choose an elder god from those that exists within the world, or create one for your cultist to follow. Work with your GM to fashion and detail the cult, its practices and members, and seek to incorporate it into the world in a natural and logical way.`,
+		skillProficiencies: `Arcana, Religion`,
+		toolProficiencies: `Poisoner's Kit`,
+		languages: ` One language of your choice`,
+		startingEquipment: `A set of traveler's clothes, Holy Symbol, a marked dagger, and a pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `One of the Family`,
+			description: `Thanks to your long affiliation with your cult, you can easily identify members of other cults that follow an esoteric entity like that of yours. This does not mean that you are held in high standing with such cults: the field of hidden worship is often a competitive one, and an adherent of one creed might stand in bloody opposition to a faithful of another. Nonetheless, you have insight into the nature of hidden religions and can usually recognize the basic features of any given cult.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Cultists are very much molded by the experiences they've faced within their own cult. Although many such cults are secretive and adherents don't speak publicly of their strange faith, cults tend to snake their way into all areas of a cultist's life. This influence, and the kind of personality it breeds, tends to linger long after a person has left the fold. Not all cultists are bad people, just as not all cults are inherently bad - but they do tend to be secretive, suspicious and even paranoid.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My past still haunts me in my dreams. I often wake up screaming or do not sleep at all.`,
+				},
+				{
+					number: 2,
+					description: `I anger quickly and I am prone to violent tantrums when someone tries to control me or give me orders.`,
+				},
+				{
+					number: 3,
+					description: `Being a pawn in someone else’s game left me with an inability to make choices of my own. I am indecisive.`,
+				},
+				{
+					number: 4,
+					description: `	I am having second thoughts about having left the cult. I am afraid I could easily return to my old ways given the right circumstances.`,
+				},
+				{
+					number: 5,
+					description: `Boundaries were violated time and time again in the cult until I lost sense of which boundaries were appropriate. I often behave inappropriately or in a seemingly random manner.`,
+				},
+				{
+					number: 6,
+					description: `	Constant feelings of shame, helplessness and inferiority make me change my mood at a moment’s notice. I suffer from mood swings or sudden emotional breakdowns`,
+				},
+				{
+					number: 7,
+					description: `I feel immense guilt over my past actions and welcome suffering as my atonement. I have little or no regard for my personal health.`,
+				},
+				{
+					number: 8,
+					description: `Every day I expect to get a knife in my gut and I see vengeful assassins in every shadow. I am paranoid or suspicious of others.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Protective. Dark cults trifle with powers that are beyond their understanding or control. Those fools must be stopped.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					description: `Nihilist. What’s the point of anything? People are insignificant and their struggle is futile. `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					description: `Repentant. I cannot possibly undo the wrongs I have done, but I can still try and atone.`,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					description: `	Anarchist. Lives of men should not be ruled by anyone. No gods, no masters! `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					description: `Faithful. While our cause is righteous, the cult's leaders are corrupt: I seek to follow my god's plans.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					description: `Selfish. The world is doomed either way. Better make the most of it.`,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `When I left the cult, I took one of its relics with me. For some strange reason, I cannot part with it.`,
+				},
+				{
+					number: 2,
+					description: `They were supposed to be sacrificed, but I helped them escape. Now I feel responsible for them.`,
+				},
+				{
+					number: 3,
+					description: `	It breaks my heart to know that my close friend, lover or family member is still a loyal follower of the cult.`,
+				},
+				{
+					number: 4,
+					description: `The cult leader made me kill my old friend during the initiation. I have not forgotten that and I want revenge.`,
+				},
+				{
+					number: 5,
+					description: `	I cannot stand by and watch as more children and youths get turned into mindless fanatics or are exploited for someone else's personal gain.`,
+				},
+				{
+					number: 6,
+					description: `No one must ever know about my involvement with the cult.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Sometimes, I hear voices in my head that command me to do terrible things. And sometimes, I give in.`,
+				},
+				{
+					number: 2,
+					description: `I trance out and lose touch with reality. I am sometimes delusional or experience delirious states.`,
+				},
+				{
+					number: 3,
+					description: `I take great solace in flagellation. The road to salvation is through blood and self-inflicted pain.`,
+				},
+				{
+					number: 4,
+					description: `Before I left, I was given a task by my cult's deity or leader that I am yet to fulfill.`,
+				},
+				{
+					number: 5,
+					description: `While at the cult, they kept us on drugs. I am still heavily addicted and I will do anything to get a dose.`,
+				},
+				{
+					number: 6,
+					description: `I dread the idea of killing another sentient creature. I have already spilled enough blood.`,
+				},
+			],
+		},
+	},
+	Ancient_King: {
+		isHomebrew: true,
+		description: `At an ancient, perhaps long-forgotten point in history, you were a mighty ruler who lorded over your people, whether you were cruel or fair. Your name was known all across the land and your people prospered. But like all living things you eventually died, and were memorialised in a tomb. But now, for whatever reason you have risen again. Perhaps a necromancer rose you, or perhaps your patron god revived you for a certain purpose. But these lands are unfamiliar; the people, the environment, even the very ground beneath your feet may be different from how you remember. You had better get used to this new world quickly.`,
+		skillProficiencies: `History, Survival`,
+		toolProficiencies: `One type of gaming set`,
+		languages: `Two of your choice`,
+		startingEquipment: `A set of fine clothes, an ancient signet ring of your dynasty, and a ragged purse containing 15 gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Ancient Thinking`,
+			description: `Since you died so long ago, your way of thinking is unusual for these modern times. Perhaps you believe something long since proven wrong, like that Drow are Fiends formed from the bowels of the earth. Perhaps you don't value the same things that other people do, like believing knowledge is a useless pursuit when compared to something strange such as jousting with boulders. Or perhaps you believe something more esoteric, like that nothing truly happens in the world without spirits deciding it should happen. Let your imagination flow and think of something like that.`,
+		},
+		alterateFeature: [
+			{
+				title: `Ancient Knowledge`,
+				description: `Since you died so long ago, you may know things that have been lost to time, like how to manipulate a certain form of magic, or why an ancient civilisation fell. Whatever you know, there may be people searching for that information at any cost.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I've lost my kingdom, leave me to mourn for what I have lost.`,
+				},
+				{
+					number: 2,
+					description: `I don't need to care about anything anymore, my people have gone and I'm practically immortal now`,
+				},
+				{
+					number: 3,
+					description: `	This world is new, and I want to explore it!`,
+				},
+				{
+					number: 4,
+					description: `I ruled them once. So why don't people treat me the way I deserve!`,
+				},
+				{
+					number: 5,
+					description: `My anger often gets the better of me. But how dare people live while I don't!`,
+				},
+				{
+					number: 6,
+					description: `I am dignified in death, and have the patience only an undying ruler may have.`,
+				},
+				{
+					number: 7,
+					description: `I experienced death, and I fear it. Because of this, I'm a coward.`,
+				},
+				{
+					number: 8,
+					description: `There are new things to do in this world, and I want to do them all!`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Conquest. My rule will return, no matter how many bodies it takes!`,
+					alignment: `Evil`,
+				},
+				{
+					number: 2,
+					description: `Freedom. I've been gone for so long that I don't need to live up to any standards anymore. I can be whoever I want to be!`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					description: `Justice. Though my people may be gone, I still have to hold true to the ideal of a fair and just ruler.`,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					description: `Order. The world I know is different from this new one, it must be tamed.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Rebuilding. This world has changed, but I have to rebuild my life no matter the cost`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					description: `Exploiting. This world is one of opportunity, and I plan to take advantage of that.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Whatever caused my people to be gone from this world will pay!`,
+				},
+				{
+					number: 2,
+					description: `	I need to find out what caused me to rise from my grave.`,
+				},
+				{
+					number: 3,
+					description: `Something was stolen from my tomb, and I want it back!`,
+				},
+				{
+					number: 4,
+					description: `I had a friend when I was alive, and I want to know what happened to them.`,
+				},
+				{
+					number: 5,
+					description: `My people are gone from this world, and I will preserve their memory.`,
+				},
+				{
+					number: 6,
+					description: `	I had an old rival from another Kingdom who wronged me, I want to know what happened to him, and whether or not I'll be able to settle the score.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I believe I'm above everybody else, and that they don't even deserve to be in the same building as me.`,
+				},
+				{
+					number: 2,
+					description: `My curiosity for this new world often gets me into trouble.`,
+				},
+				{
+					number: 3,
+					description: `	I often get distracted by thoughts of what could have happened to my Kingdom.`,
+				},
+				{
+					number: 4,
+					description: `I'm slow to come up with or trust new ideas because of my age.`,
+				},
+				{
+					number: 5,
+					description: `	Whenever someone speaks of my kingdom in a bad light, I fly into a burning rage.`,
+				},
+				{
+					number: 6,
+					description: `I am extremely superstitious, believing otherwise mundane things in a strange way, to ward off bad spirits and the like.`,
+				},
+			],
+		},
+	},
+	Ancient_One: {
+		isHomebrew: true,
+		description: `Long, long ago, you ventured into the world to play your part in history. However, for whatever reason, history has moved on, and you continue to exist. You do not age naturally, or contract common diseases, and have lived several lifetimes beyond your race's eldest. Were you blessed by a deity, to gather knowledge far beyond your years? Cursed by fate to watch everyone around you wither away from age and disease? Or mayhap a victim of your own magical experimentation? Regardless of the cause, your soul refuses to give up its claim to life, and gives you an ancient perspective on life.
+
+					Where some immortals are relatively young and rash, though, you are far older than your appearance may imply, and you've lived a far sight longer than much anyone alive. You've seen kingdoms rise and fall, history be made, and both good and evil waste away to the passage of time.
+
+					The details of your immortality are best left to you and your DM, but it's recommended to use the vanilla Boon of Immortality that prevents aging. Alternative methods could be a dark magic using phylacteries, or some sort of rebirth as a child elsewhere on death.`,
+		skillProficiencies: `History, Insight`,
+		toolProficiencies: ``, // possibly add
+		languages: `Two languages of your choice`,
+		startingEquipment: `A set of traveller's clothes, a heavy cloak or robe, a small trinket from a past life that you always seem to find, and a pouch containing 15 gp`,
+		backgroundSpecial: {
+			title: `Source of your Soul`,
+			description: `What gives you your undying soul? Why do you live on beyond your years?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `I was blessed and given a purpose by a benevolent being.`,
+				},
+				{
+					number: 2,
+					description: `	I was cursed by a cruel being to watch the end of the world.`,
+				},
+				{
+					number: 3,
+					description: `	I obtained a Wish spell and gained immortality, for better or worse.`,
+				},
+				{
+					number: 4,
+					description: `I won a bet against a god of death itself in a time long past, and obtained reincarnation.`,
+				},
+				{
+					number: 5,
+					description: `I meticulously set up a cycle of clones and phylacteries to obtain my own immortality.`,
+				},
+				{
+					number: 6,
+					description: `I don't know why I'm immortal... only that I'm older than I've any right to be.`,
+				},
+			],
+		},
+		feature: {
+			title: `Lifetimes of Experience`,
+			description: `Ancient perspectives give one a broad range of knowledge and history to draw from, though they often cloud new ideas from being formed. You can often recall information about places that many characters have never ventured, or extrapolate based off similar events. Similarly, historical facts come naturally to you, and many a scholar or ruler values your counsel if you make it available.`,
+		},
+		alterateFeature: [
+			{
+				title: `A World of Connections`,
+				description: `As time passed, you cultivated your connections. In any major town, you know ways to gain an audience with important people. Names to drop, people to refer to, symbols to pull up, and various catchphrases to get you into high (and sometimes low) places. These people may not always know why you know these things, though, so getting the audience itself may be all you can manage.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `While most Ancient Ones simply do not age or contract disease, some simply found a way to reincarnate, albeit generally slowly and with some form of penalty. Others have obtained some kind of far more effective means, though the player should consult with their DM for anything stronger than agelessness or rebirth. Most adventuring Ancient Ones, though, have some quirk pushing them out of their timeless vigils, or a cause pushing them on. Below are some ideas to get you started.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I obsess about my appearance. If I'm this old, I refuse to look it!`,
+				},
+				{
+					number: 2,
+					description: `My worldview is old and obtuse to many, but I won't change it for children.`,
+				},
+				{
+					number: 3,
+					description: `Having seen most everything, I spent time away from the world, to let it catch up. What new things can I explore?`,
+				},
+				{
+					number: 4,
+					description: `	I cannot, for the lives of me, replicate the cause of my immortality. I'm so close, though!`,
+				},
+				{
+					number: 5,
+					description: `The world is doomed to repeat itself, and my melancholy attitude makes few friends.`,
+				},
+				{
+					number: 6,
+					description: `My odd mannerisms tend to make people uneasy, though my knowledge tends to eventually make allies.`,
+				},
+				{
+					number: 7,
+					description: `I have a tendency to get bored with what many consider new, and seem disrespectful because of this.`,
+				},
+				{
+					number: 8,
+					description: `Others are unimportant compared to the grand designs of the universe, and I plan to be more than a cog.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Knowledge. My knowledge is meant to be gathered and shared freely, with all who wish to know.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					description: `Prophecy. There are things far beyond the ken of mortals, and I will carry out what must be done.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					description: `Entropy. Infinite time means infinite plans to serve my ends... and mine shall come to fruition soon.`,
+					alignment: `Chaos`,
+				},
+				{
+					number: 4,
+					description: `Calamity. The only way to end my cycle is to end the world, and I shall be the one to usher in the end of eras.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					description: `Rest. I only wish to find a way to end this cycle, and finally make peace`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					description: `Beyond. I have obtained immortality... but what could be even further beyond? `,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	Bonds are hard to form, as other mortals have such short lives.`,
+				},
+				{
+					number: 2,
+					description: `My immortality is the closest of my secrets, and the knowledge slipping away could do irreversible harm.`,
+				},
+				{
+					number: 3,
+					description: `I do not form alliances easily, and trust slowly.`,
+				},
+				{
+					number: 4,
+					description: `I revere the one that gave me immortality, and seek to understand them.`,
+				},
+				{
+					number: 5,
+					description: `	I resent the one that thrust immortality upon me, and seek to undermine them.`,
+				},
+				{
+					number: 6,
+					description: `I wish to find those from my past - or their kin - and rekindle the bonds, but worry they won't realize who I am.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I tire of the world, and find no joy in things.`,
+				},
+				{
+					number: 2,
+					description: `Anything new sends me into an overexcited frenzy.`,
+				},
+				{
+					number: 3,
+					description: `I obsess over knowledge of all kinds, and must seek out anything new.`,
+				},
+				{
+					number: 4,
+					description: `My immortality and drive leave me somewhat callous, and underlings tend to get churned up in my wake.`,
+				},
+				{
+					number: 5,
+					description: `Time wears on the mind, looping over and over and over, until the madness sets in. Oh, the glorious madness!`,
+				},
+				{
+					number: 6,
+					description: `I know all. I am not wrong, and any who disagree with me are foolish whelps.`,
+				},
+			],
+		},
+	},
+	Anthropologist: {
+		isHomebrew: true,
+		description: `You have always been fascinated by other cultures, from the most ancient and primeval lost lands to the most modern civilizations. By studying other cultures, customs, philosophies, laws, rituals, religious beliefs, languages, and art, you have learned how tribes, empires, and all forms of society in between craft their own destinies and doom. This knowledge came to you not only through books and scrolls, but also through firsthand observation – by visiting far-flung settlements and exploring local histories and customs.
+					When making an anthropologist, consider how your character developed this interest in others. Usually, anthropologists have to be good at interacting with people of all cultures, so being a withdrawn misanthrope really doesn't fit the bill. Anthropologists are good at field work, like conducting ethnographies. They are also slow to judge, and good at gathering information and making inferences about the subjects of their study. Sometimes you may be ore interested in specifically the language of a culture, or maybe its history.
+					Alternatively, forensic anthropologists are those who study the structure of bones. They are highly intellectual individuals that can piece together a skull from pieces, and also discern special things about a persons identity from their skeletal remains. This profession can invite stigma, as it closely deals with the dead. Fascination with bones overall is also not usually welcomed.`,
+		skillProficiencies: `Insight, Religion`,
+		toolProficiencies: ``,
+		languages: `Two languages of your choice`,
+		startingEquipment: `A leather-bound diary, a bottle of ink, a quill, a set of traveler's clothes, one trinket of special significance from a culture of your study, and a pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: `Anthropologists study a wide variety of cultures and subjects. A specialization helps better define what you have studied and perhaps what you know of your world and the locale.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Biological Anthropology`,
+				},
+				{
+					number: 2,
+					description: `Cultural Anthropology`,
+				},
+				{
+					number: 3,
+					description: `Linguistics`,
+				},
+				{
+					number: 4,
+					description: `Archaeology`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Cultural Chameleon`,
+			description: `Before becoming an adventurer, you spent much of your adult life away from your homeland, living among people different from your kin. You came to understand these foreign cultures and the ways of their people, who eventually treated you as one of their own. One culture had more of an influence on you than any other, shaping your beliefs and customs. Choose a race whose culture you've adopted. You are considered a friend to the race by their major groups, and they will be willing to help you out, so long as it does not conflict with their own interests or endanger their own`,
+		},
+		alterateFeature: [
+			{
+				title: `Eye for Bone`,
+				description: `You have adept eyes and senses for bones as an anthropologist. From skeletal remains, you can determine creature type, sex and age of the deceased.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Anthropologists leave behind the societies into which they were born to discover what life ls like in other parts of the world. They seek to see how other races and civilizations survive – or why they did not. Some anthropologists are driven by intellectual curiosity, while others want the fame and recognition that comes with being the first to discover a new people, a lost tribe, or the truth about an ancient empire's downfall.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I prefer the company of those who aren't like me, including people of other races.`,
+				},
+				{
+					number: 2,
+					description: `	I'm a stickler when it comes to observing proper etiquette and local customs`,
+				},
+				{
+					number: 3,
+					description: `I would rather observe than meddle.`,
+				},
+				{
+					number: 4,
+					description: `By living among violent people, I have become desensitized to violence.`,
+				},
+				{
+					number: 5,
+					description: `I would risk life and limb to discover a new culture or unravel the secrets of a dead one.`,
+				},
+				{
+					number: 6,
+					description: `When I arrive at a new settlement for the first time, I must learn all its customs.`,
+				},
+				{
+					number: 7,
+					description: `I ask more questions than I give answers.`,
+				},
+				{
+					number: 8,
+					description: `When I want to know something, everything else takes a back seat.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Discovery. I want to be the first person to discover a lost culture.`,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					description: `Distance. One must not interfere with the affairs of another culture – even one in need of aid.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					description: `Knowledge. By understanding other races and cultures, we learn to understand ourselves.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					description: `Power. Common people crave strong leadership, and I do my utmost to provide it. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Protection. I must do everything possible to save a society facing extinction. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					description: `Indifference. Life is cruel. What's the point in saving people if they're going to die anyway? `,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My mentor gave me a journal filled with lore and wisdom. Losing it would devastate me.`,
+				},
+				{
+					number: 2,
+					description: `Having lived among the people of a primeval tribe or clan, I long to return and see how they are faring`,
+				},
+				{
+					number: 3,
+					description: `Years ago, tragedy struck the members of an isolated society I befriended, and I will honor them.`,
+				},
+				{
+					number: 4,
+					description: `	I want to learn more about a particular humanoid culture that fascinates me.`,
+				},
+				{
+					number: 5,
+					description: `I seek to avenge a clan, tribe, kingdom, or empire that was wiped out.`,
+				},
+				{
+					number: 6,
+					description: `I have a trinket that I believe is the key to finding a long-lost society.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Boats make me seasick.`,
+				},
+				{
+					number: 2,
+					description: `I talk to myself, and I don't make friends easily.`,
+				},
+				{
+					number: 3,
+					description: `I believe that I'm intellectually superior to people from other cultures and have much to teach them.`,
+				},
+				{
+					number: 4,
+					description: `I've picked up some unpleasant habits from living among races such as goblins, lizardfolk, or orcs`,
+				},
+				{
+					number: 5,
+					description: `I complain about everything.`,
+				},
+				{
+					number: 6,
+					description: `I sometimes get ahead of myself.`,
+				},
+			],
+		},
+	},
+	Antiquarian: {
+		isHomebrew: true,
+		description: `You study ancient lore and recover priceless artifacts from past civilizations and bygone ages. You preserve that which was once thought lost, and seek to uncover the forgotten stories of those who came before. Your journeys often take you to abandoned ruins far removed from the comforts of modern civilization, but there is nowhere else you’d rather be. You’ve seen some of the greatest historical wonders the world has to offer, and you may have even helped discover some of them.`,
+		skillProficiencies: `History, Investigation`,
+		toolProficiencies: `Calligrapher's supplies`,
+		languages: `One of your choice`,
+		startingEquipment: `A bottle of black ink, a quill, a tome that appears to contain the history of an unknown settlement or culture, a set of traveler's clothes (Indiana Jones hat Included), and a belt pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `It Belonggs in a Museum`,
+			description: `You are a member of a respected museum, university, or other organization that preserves relics of ages past. You can gain access to the facilities where such antiquities are stored and can participate in their study. You may be allowed to accompany expeditions seeking to explore ruins or retrieve items of historical interest, if your area of expertise is relevant to the task at hand.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Because they spend large amounts of time studying the past, antiquarians tend to be quite knowledgeable, although they can sometimes be ignorant to more modern happenings. They are often excited by new discoveries, and are fascinated by exotic cultures and practices. Their social lives often leave much to be desired, as they frequently disappear for days or weeks at a time exploring lost ruins.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I quote historical texts and famous philosophers whenever they seem relevant to the situations I’m in.`,
+				},
+				{
+					number: 2,
+					description: `	I insist on checking every ruined fortress, abandoned town, and forgotten castle I come across.`,
+				},
+				{
+					number: 3,
+					description: `I speak in a dull monotone that is more likely to put others to sleep than to entertain them.`,
+				},
+				{
+					number: 4,
+					description: `	I am more interested in the past than the present; as a result, I am mostly asocial.`,
+				},
+				{
+					number: 5,
+					description: `Whenever I meet a new person, I try to learn about their history if at all possible`,
+				},
+				{
+					number: 6,
+					description: `I freely offer my knowledge to those who wish to learn, and I encourage those I know to do so as well`,
+				},
+				{
+					number: 7,
+					description: `I enjoy going through ruins for the adventure; getting to experience lost history is just a bonus.`,
+				},
+				{
+					number: 8,
+					description: `Ignorance frustrates me, and I always try to correct others when they’re wrong.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	Preservation We must protect the relics of the past, else their creators will fade from memory.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					description: `Betterment By studying the mistakes of our elders, we might prevent the mistakes of our children.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					description: `	Dominance The past holds secrets I can use against those who oppose me.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					description: `Trophy The original inventors of these relics are dead; why shouldn’t I hold on to them for a while? `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					description: `Expertise I must become the authority in my field of study.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					description: `Vigil Only by remembering the dead do we honor their accomplishments.`,
+					alignment: `Lawful`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I must prevent the relics of the past from falling into the hands of thieves and looters.`,
+				},
+				{
+					number: 2,
+					description: `The historical works of my race must be preserved for the enrichment of future generations.`,
+				},
+				{
+					number: 3,
+					description: `I work to uncover the truth of past events, even if doing so is harmful to my nation or organization.`,
+				},
+				{
+					number: 4,
+					description: `My family, clan, or guild has a rich history, and I must ensure that others are aware of its importance`,
+				},
+				{
+					number: 5,
+					description: `I will perform the heroic deeds that future historians will surely write about.`,
+				},
+				{
+					number: 6,
+					description: `	If an artifact has been entrusted to me, I will protect it at all costs, even my life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have falsely claimed to have discovered a forgotten civilization and faked evidence to support it.`,
+				},
+				{
+					number: 2,
+					description: `If I ever find a relic of singular worth, I might keep it for myself…or for the merchant down the road.`,
+				},
+				{
+					number: 3,
+					description: `There is an intense rivalry between myself and a particular colleague, and it often clouds my judgment.`,
+				},
+				{
+					number: 4,
+					description: `I pretend to know far more than I actually do, and will often ignore any evidence that proves me wrong.`,
+				},
+				{
+					number: 5,
+					description: `I care more for the money I’m paid by the museums than for the artifacts I deliver to them`,
+				},
+				{
+					number: 6,
+					description: `My obsessive search for a particular object has pushed my loved ones away.`,
+				},
+			],
+		},
+	},
+
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
