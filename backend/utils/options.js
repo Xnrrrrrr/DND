@@ -7,6 +7,10 @@ const backgrounds = [
 	"Acolyte",
 	"Alchemist", //homebrew
 	"Alcoholic", //homebrew
+	"Alcoholic_Scientist", //homebrew
+	"Amnesiac", //homebrew
+	"Anarchist", //homebrew
+	"Ancient_Cultist", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
