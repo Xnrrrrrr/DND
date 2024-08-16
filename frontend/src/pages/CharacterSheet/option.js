@@ -296,7 +296,7 @@ export const subclassDesc = {
 					description: `Beginning at 6th level, you can’t be charmed or 
 								frightened while raging. If you are charmed or 
 								frightened when you enter your rage, the effect is 
-								suspended for the duration of the rage.`
+								suspended for the duration of the rage.`,
 				},
 				{
 					title: "Intimidating Presence",
@@ -312,7 +312,7 @@ export const subclassDesc = {
 								if the creature ends its turn out of line of sight or more 
 								than 60 feet away from you.
 								If the creature succeeds on its saving throw, you can't 
-								use this feature on that creature again for 24 hours.`
+								use this feature on that creature again for 24 hours.`,
 				},
 			],
 		},
@@ -333,8 +333,7 @@ export const subclassDesc = {
 								world, giving you a kinship with beasts. At 3rd level when 
 								you adopt this path, you gain the ability to cast the beast 
 								sense and speak with animals spells, but only as rituals, 
-								as described in chapter 10.`
-
+								as described in chapter 10.`,
 				},
 				{
 					title: "Totem Spirit",
@@ -363,11 +362,11 @@ export const subclassDesc = {
 								Wolf, While you're raging, your friends have 
 								advantage on melee attack rolls against any creature 
 								within 5 feet of you that is hostile to you. The spirit of 
-								the wolf makes you a leader of hunters.`
+								the wolf makes you a leader of hunters.`,
 				},
 				{
-						title:"Aspect Of The Beast",
-					description:` At 6th level, you gain a magical benefit based on the 
+					title: "Aspect Of The Beast",
+					description: ` At 6th level, you gain a magical benefit based on the 
 								totem animal of your choice. You can choose the same 
 								animal you selected at 3rd level or a different one.
 								Bear. You gain the might of a bear. Your carrying 
@@ -383,7 +382,7 @@ export const subclassDesc = {
 								Wolf, You gain the hunting sensibilities of a wolf. You 
 								can track other creatures while traveling at a fast pace, 
 								and you can move stealthily while traveling at a normal 
-								pace (see chapter 8 for rules on travel pace)`
+								pace (see chapter 8 for rules on travel pace)`,
 				},
 				{
 					title: "Spirit Walker",
@@ -391,7 +390,7 @@ export const subclassDesc = {
 								spell, but only as a ritual. When you do so, a spiritual 
 								version of one of the animals you chose for Totem Spirit 
 								or Aspect of the Beast appears to you to convey the 
-								information you seek.`
+								information you seek.`,
 				},
 				{
 					title: "Totemic Attunement",
@@ -409,8 +408,8 @@ export const subclassDesc = {
 								nothing else is holding you aloft.
 								Wolf. While you’re raging, you can use a bonus action 
 								on your turn to knock a Large or smaller creature prone 
-								when you hit it with melee weapon attack`
-				}
+								when you hit it with melee weapon attack`,
+				},
 			],
 		},
 		Path_of_the_Ancestral_Guardian: "",
@@ -421,7 +420,7 @@ export const subclassDesc = {
 	},
 	Bard: {
 		College_of_Lore: {
-            description: `Bards of the College of Lore know something about 
+			description: `Bards of the College of Lore know something about 
 						most things, collecting bits of knowledge from sources 
 						as diverse as scholarly tomes and peasant tales. 
 						Whether singing folk ballads in taverns or elaborate 
@@ -442,15 +441,15 @@ export const subclassDesc = {
 						They also meet at festivals or affairs of state, where they 
 						can expose corruption, unravel lies, and poke fun at self- 
 						important figures of authority.`,
-            features: [
-                {
-                    title: "Bonus Proficiencies",
-                    description: `When you join the College of Lore at 3rd level, you gain 
-								proficiency with three skills of your choice.`
-                },
-                {
-                    title: "Cutting Words",
-                    description: `Also at 3rd level, you learn how to use your wit to 
+			features: [
+				{
+					title: "Bonus Proficiencies",
+					description: `When you join the College of Lore at 3rd level, you gain 
+								proficiency with three skills of your choice.`,
+				},
+				{
+					title: "Cutting Words",
+					description: `Also at 3rd level, you learn how to use your wit to 
 								distract, confuse, and otherwise sap the confidence and 
 								competence of others. When a creature that you can 
 								see within 60 feet of you makes an attack roll, an ability 
@@ -462,29 +461,29 @@ export const subclassDesc = {
 								the DM determines whether the attack roll or ability
 								check succeeds or fails, or before the creature deals its 
 								damage. The creature is immune if it can’t hear you or if 
-								it’s immune to being charmed.`
-                },
-                {
-                    title: "Additional Magical Secrets",
-                    description: ` At 6th level, you learn two spells of your choice from any 
+								it’s immune to being charmed.`,
+				},
+				{
+					title: "Additional Magical Secrets",
+					description: ` At 6th level, you learn two spells of your choice from any 
 								class. A spell you choose must be of a level you can cast, 
 								as shown on the Bard table, or a cantrip. The chosen 
 								spells count as bard spells for you but don’t count 
-								against the number of bard spells you know.`
-                },
+								against the number of bard spells you know.`,
+				},
 				{
-                    title: "Peerless Skill",
-                    description:` Starting at 14th level, when you make an ability check, 
+					title: "Peerless Skill",
+					description: ` Starting at 14th level, when you make an ability check, 
 								you can expend one use of Bardic Inspiration. Roll a 
 								Bardic Inspiration die and add the number rolled to 
 								your ability check. You can choose to do so after you roil 
 								the die for the ability check, but before the DM tells you 
-								whether you succeed or fail.`
-                },
-            ],
-        },
+								whether you succeed or fail.`,
+				},
+			],
+		},
 		College_of_Valor: {
-            description: `Bards of the College of Valor are daring skalds whose 
+			description: `Bards of the College of Valor are daring skalds whose 
 						tales keep alive the memory of the great heroes of the 
 						past, and thereby inspire a new generation of heroes. 
 						These bards gather in mead halls or around great 
@@ -494,39 +493,39 @@ export const subclassDesc = {
 						those events doesn’t pass from the world. With their
 						songs, they inspire others to reach the same heights of 
 						accomplishment as the heroes of old`,
-            features: [
-                {
-                    title: "Bonus Proficiencies",
-                    description: `When you join the College of Valor at 3rd level, you 
+			features: [
+				{
+					title: "Bonus Proficiencies",
+					description: `When you join the College of Valor at 3rd level, you 
 								gain proficiency with medium armor, shields, and 
-								martial weapons.`
-                },
-                {
-                    title: "Combat Inspiration",
-                    description: ` Also at 3rd level, you learn to inspire others in battle.
+								martial weapons.`,
+				},
+				{
+					title: "Combat Inspiration",
+					description: ` Also at 3rd level, you learn to inspire others in battle.
 								A creature that has a Bardic Inspiration die from you 
 								can roll that die and add the number rolled to a weapon 
 								damage roll it just made. Alternatively, when an attack 
 								roll is made against the creature, it can use its reaction 
 								to roll the Bardic Inspiration die and add the number 
 								rolled to its AC against that attack, after seeing the roll 
-								but before knowing whether it hits or misses.`
-                },
-                {
-                    title: "Extra Attack",
-                    description: `Starting at 6th level, you can attack twice, instead of 
-								once, whenever you take the Attack action on your turn.`
-                },
+								but before knowing whether it hits or misses.`,
+				},
 				{
-                    title: "Battle Magic",
-                    description: ` At 14th level, you have mastered the art of weaving 
+					title: "Extra Attack",
+					description: `Starting at 6th level, you can attack twice, instead of 
+								once, whenever you take the Attack action on your turn.`,
+				},
+				{
+					title: "Battle Magic",
+					description: ` At 14th level, you have mastered the art of weaving 
 								spellcasting and weapon use into a single harmonious 
 								act. When you use your action to cast a bard spell, you 
 								can make one weapon attack as a bonus action.
-								`
-                },
-            ],
-        },
+								`,
+				},
+			],
+		},
 		College_of_Glamour: "",
 		College_of_Swords: "",
 		College_of_Whispers: "",
@@ -535,7 +534,7 @@ export const subclassDesc = {
 	},
 	Cleric: {
 		Knowledge_Domain: {
-            description: `The gods of knowledge—including Oghma, Boccob, 
+			description: `The gods of knowledge—including Oghma, Boccob, 
 						Gilean, Aureon, and Thoth—value learning and 
 						understanding above all. Some teach that knowledge is 
 						to be gathered and shared in libraries and universities, 
@@ -549,25 +548,25 @@ export const subclassDesc = {
 						of knowledge promote the practical knowledge of craft 
 						and invention, including smith deities like Gond, Reorx, 
 						Onatar, Moradin, Hephaestus, and Goibhniu`,
-            features: [
-                {
-                    title: "Blessings of Knowledge",
-                    description: `At 1st level, you learn two languages of your choice.
+			features: [
+				{
+					title: "Blessings of Knowledge",
+					description: `At 1st level, you learn two languages of your choice.
 								You also become proficient in your choice of two of the 
 								following skills: Arcana, History, Nature, or Religion.
 								Your proficiency bonus is doubled for any ability check 
-								you make that uses either of those skills.`
-                },
-                {
-                    title: "Channel Divinity: Knowledge of the Ages",
-                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								you make that uses either of those skills.`,
+				},
+				{
+					title: "Channel Divinity: Knowledge of the Ages",
+					description: ` Starting at 2nd level, you can use your Channel Divinity 
 								to tap into a divine well of knowledge. As an action, 
 								you choose one skill or tool. For 10 minutes, you have 
-								proficiency with the chosen skill or tool.`
-                },
-                {
-                    title: "Channel Divinity: Read Thoughts",
-                    description: `At 6th level, you can use your Channel Divinity to read a 
+								proficiency with the chosen skill or tool.`,
+				},
+				{
+					title: "Channel Divinity: Read Thoughts",
+					description: `At 6th level, you can use your Channel Divinity to read a 
 								creature’s thoughts. You can then use your access to the 
 								creature’s mind to command it.
 								As an action, choose one creature that you can see 
@@ -583,16 +582,16 @@ export const subclassDesc = {
 								During that time, you can use your action to end this 
 								effect and cast the suggestion spell on the creature 
 								without expending a spell slot. The target automatically 
-								fails its saving throw against the spell`
-                },
+								fails its saving throw against the spell`,
+				},
 				{
-                    title: "Potent Spellcasting",
-                    description: `  Starting at 8th level, you add your Wisdom modifier to 
-									the damage you deal with any cleric cantrip.`
-                },
+					title: "Potent Spellcasting",
+					description: `  Starting at 8th level, you add your Wisdom modifier to 
+									the damage you deal with any cleric cantrip.`,
+				},
 				{
-                    title: "Visions of the Past",
-                    description: ` Starting at 17th level, you can call up visions of the 
+					title: "Visions of the Past",
+					description: ` Starting at 17th level, you can call up visions of the 
 								past that relate to an object you hold or your immediate 
 								surroundings. You spend at least 1 minute in meditation 
 								and prayer, then receive dreamlike, shadowy glimpses 
@@ -622,12 +621,12 @@ export const subclassDesc = {
 								such as battles and betrayals, marriages and murders, 
 								births and funerals. However, they might also include 
 								more mundane events that are nevertheless important 
-								in your current situation`
-                },
-            ],
-        },
+								in your current situation`,
+				},
+			],
+		},
 		Life_Domain: {
-            description: `The Life domain focuses on the vibrant positive 
+			description: `The Life domain focuses on the vibrant positive 
 						energy—one of the fundamental forces of the universe— 
 						that sustains all life. The gods of life promote vitality 
 						and health through healing the sick and wounded, 
@@ -647,22 +646,22 @@ export const subclassDesc = {
 						5th beacon of hope, revivify
 						7th death ward, guardian of faith
 						9th mass cure wounds, raise dead`,
-            features: [
-                {
-                    title: " Bonus Proficiency",
-                    description: ` When you choose this domain at 1st level, you gain 
-								proficiency with heavy armor.`
-                },
-                {
-                    title: "Disciple of Life",
-                    description: ` Also starting at 1st level, your healing spells are more 
+			features: [
+				{
+					title: " Bonus Proficiency",
+					description: ` When you choose this domain at 1st level, you gain 
+								proficiency with heavy armor.`,
+				},
+				{
+					title: "Disciple of Life",
+					description: ` Also starting at 1st level, your healing spells are more 
 								effective. Whenever you use a spell of 1st level or higher 
 								to restore hit points to a creature, the creature regains 
-								additional hit points equal to 2 + the spell’s level`
-                },
-                {
-                    title: "Channel Divinity: Preserve Life",
-                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								additional hit points equal to 2 + the spell’s level`,
+				},
+				{
+					title: "Channel Divinity: Preserve Life",
+					description: ` Starting at 2nd level, you can use your Channel Divinity 
 								to heal the badly injured.
 								As an action, you present your holy symbol and 
 								evoke healing energy that can restore a number of hit 
@@ -670,37 +669,37 @@ export const subclassDesc = {
 								creatures within 30 feet of you, and divide those hit 
 								points among them. This feature can restore a creature 
 								to no more than half of its hit point maximum. You can’t 
-								use this feature on an undead or a construct`
-                },
+								use this feature on an undead or a construct`,
+				},
 				{
-                    title: "Blessed Healer",
-                    description: `Beginning at 6th level, the healing spells you cast on 
+					title: "Blessed Healer",
+					description: `Beginning at 6th level, the healing spells you cast on 
 								others heal you as well. When you cast a spell of 1st 
 								level or higher that restores hit points to a creature 
 								other than you, you regain hit points equal to 2 + the 
-								spell’s level.`
-                },
-                {
-                    title: "Divine Strike",
-                    description: `At 8th level, you gain the ability to infuse your weapon 
+								spell’s level.`,
+				},
+				{
+					title: "Divine Strike",
+					description: `At 8th level, you gain the ability to infuse your weapon 
 								strikes with divine energy. Once on each of your turns 
 								when you hit a creature with a weapon attack, you can 
 								cause the attack to deal an extra 1d8 radiant damage to 
 								the target. When you reach 14th level, the extra damage 
-								increases to 2d8.`
-                },
-                {
-                    title: "Supreme Healing",
-                    description: `Starting at 17th level, when you would normally roll 
+								increases to 2d8.`,
+				},
+				{
+					title: "Supreme Healing",
+					description: `Starting at 17th level, when you would normally roll 
 								one or more dice to restore hit points with a spell, you 
 								instead use the highest number possible for each die. 
 								For example, instead of restoring 2d6 hit points to a 
-								creature, you restore 12.`
-                },
-            ],
-        },
+								creature, you restore 12.`,
+				},
+			],
+		},
 		Light_Domain: {
-            description: `Gods of light—including Helm, Lathander, Pholtus, 
+			description: `Gods of light—including Helm, Lathander, Pholtus, 
 						Branchala, the Silver Flame, Belenus, Apollo, and 
 						Re-Horakhty—promote the ideals of rebirth and 
 						renewal, truth, vigilance, and beauty, often using the 
@@ -722,15 +721,15 @@ export const subclassDesc = {
 						5th daylight, fireball
 						7th wall of fire, guardian of faith
 						9th flame strike, scrying`,
-            features: [
-                {
-                    title: " Bonus cantrip ",
-                    description: ` When you choose this domain at 1st level, you gain the 
-								light cantrip if you don’t already know it.`
-                },
-                {
-                    title: "Warding Flare",
-                    description: `Also at 1st level, you can interpose divine light between 
+			features: [
+				{
+					title: " Bonus cantrip ",
+					description: ` When you choose this domain at 1st level, you gain the 
+								light cantrip if you don’t already know it.`,
+				},
+				{
+					title: "Warding Flare",
+					description: `Also at 1st level, you can interpose divine light between 
 								yourself and an attacking enemy. When you are attacked 
 								by a creature within 30 feet of you that you can see, 
 								you can use your reaction to impose disadvantage on 
@@ -739,11 +738,11 @@ export const subclassDesc = {
 								is immune to this feature.
 								You can use this feature a number of times equal to 
 								your Wisdom modifier (a minimum of once). You regain 
-								all expended uses when you finish a long rest`
-                },
-                {
-                    title: "Channel Divinity: Radiance of the Dawn",
-                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								all expended uses when you finish a long rest`,
+				},
+				{
+					title: "Channel Divinity: Radiance of the Dawn",
+					description: ` Starting at 2nd level, you can use your Channel Divinity 
 								to harness sunlight, banishing darkness and dealing 
 								radiant damage to your foes.
 								As an action, you present your holy symbol, and any 
@@ -753,32 +752,32 @@ export const subclassDesc = {
 								takes radiant damage equal to 2d10 + your cleric level 
 								on a failed saving throw, and half as much damage on a 
 								successful one. A creature that has total cover from you 
-								is not affected.`
-                },
+								is not affected.`,
+				},
 				{
-                    title: "Improved Flare",
-                    description: `Starting at 6th level, you can also use your Warding 
+					title: "Improved Flare",
+					description: `Starting at 6th level, you can also use your Warding 
 								Flare feature when a creature that you can see within 
-								30 feet of you attacks a creature other than you.`
-                },
-                {
-                    title: "Potent Spellcasting",
-                    description: ` Starting at 8th level, you add your Wisdom modifier to 
-								the damage you deal with any cleric cantrip.`
-                },
-                {
-                    title: "Corona of Light",
-                    description: `Starting at 17th level, you can use your action to activate 
+								30 feet of you attacks a creature other than you.`,
+				},
+				{
+					title: "Potent Spellcasting",
+					description: ` Starting at 8th level, you add your Wisdom modifier to 
+								the damage you deal with any cleric cantrip.`,
+				},
+				{
+					title: "Corona of Light",
+					description: `Starting at 17th level, you can use your action to activate 
 								an aura of sunlight that lasts for 1 minute or until you 
 								dismiss it using another action. You emit bright light in 
 								a 60-foot radius and dim light 30 feet beyond that. Your 
 								enemies in the bright light have disadvantage on saving 
-								throws against any spell that deals fire or radiant damage`
-                },
-            ],
-        },
+								throws against any spell that deals fire or radiant damage`,
+				},
+			],
+		},
 		Nature_Domain: {
-            description: ` Gods of nature are as varied as the natural world 
+			description: ` Gods of nature are as varied as the natural world 
 						itself, from inscrutable gods of the deep forests (such 
 						as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to 
 						friendly deities associated with particular springs and 
@@ -799,20 +798,20 @@ export const subclassDesc = {
 						5th plaant growth, wind wall
 						7th dominate beast, grasping vines
 						9th insect plague, tree stride`,
-            features: [
-                {
-                    title: "Acolyte of Nature",
-                    description: ` At 1st level, you learn one druid cantrip of your choice. 
+			features: [
+				{
+					title: "Acolyte of Nature",
+					description: ` At 1st level, you learn one druid cantrip of your choice. 
 								You also gain proficiency in one of the following skills of 
-								your choice: Animal Handling, Nature, or Survival`
-                },
-                {
-                    title: "Bonus Proficiency",
-                    description: "",
-                },
-                {
-                    title: "Channel Divinity: Charm of Animals and Plants",
-                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+								your choice: Animal Handling, Nature, or Survival`,
+				},
+				{
+					title: "Bonus Proficiency",
+					description: "",
+				},
+				{
+					title: "Channel Divinity: Charm of Animals and Plants",
+					description: ` Starting at 2nd level, you can use your Channel Divinity 
 								to charm animals and plants.
 								As an action, you present your holy symbol and invoke 
 								the name of your deity. Each beast or plant creature that 
@@ -820,36 +819,36 @@ export const subclassDesc = {
 								saving throw. If the creature fails its saving throw, it is 
 								charmed by you for 1 minute or until it takes damage. 
 								While it is charmed by you, it is friendly to you and other 
-								creatures you designate.`
-                },
+								creatures you designate.`,
+				},
 				{
-                    title: "Dampen Elements",
-                    description: ` Starting at 6th level, when you or a creature within 30 
+					title: "Dampen Elements",
+					description: ` Starting at 6th level, when you or a creature within 30 
 								feet of you takes acid, cold, fire, lightning, or thunder 
 								damage, you can use your reaction to grant resistance to 
-								the creature against that instance of the damage.`
-                },
-                {
-                    title: "Divine Strike",
-                    description: ` At 8th level, you gain the ability to infuse your weapon 
+								the creature against that instance of the damage.`,
+				},
+				{
+					title: "Divine Strike",
+					description: ` At 8th level, you gain the ability to infuse your weapon 
 								strikes with divine energy. Once on each of your turns 
 								when you hit a creature with a weapon attack, you 
 								can cause the attack to deal an extra 1d8 cold, fire, or 
 								lightning damage (your choice) to the target. When you 
-								reach 14th level, the extra damage increases to 2d8.`
-                },
-                {
-                    title: "Master of Nature",
-                    description: `At 17th level, you gain the ability to command animals 
+								reach 14th level, the extra damage increases to 2d8.`,
+				},
+				{
+					title: "Master of Nature",
+					description: `At 17th level, you gain the ability to command animals 
 								and plant creatures. While creatures are charmed by 
 								your Charm Animals and Plants feature, you can take 
 								a bonus action on your turn to verbally command what 
-								each of those creatures will do on its next turn.`
-                },
-            ],
-        },
+								each of those creatures will do on its next turn.`,
+				},
+			],
+		},
 		Tempest_Domain: {
-            description: ` Gods whose portfolios include the Tempest dom ain- 
+			description: ` Gods whose portfolios include the Tempest dom ain- 
 						including Talos, Umberlee, Kord, Zeboim, the 
 						Devourer, Zeus, and Thor—govern storms, sea, and 
 						sky. They include gods of lightning and thunder, gods 
@@ -872,15 +871,15 @@ export const subclassDesc = {
 						5th call lightning, sleet storm
 						7th control water, ice storm
 						9th destructive wave, insect plague`,
-            features: [
-                {
-                    title: "Bonus Proficiencies",
-                    description: ` At 1st level, you gain proficiency with martial weapons 
+			features: [
+				{
+					title: "Bonus Proficiencies",
+					description: ` At 1st level, you gain proficiency with martial weapons 
 								and heavy armor`,
-                },
-                {
-                    title: "Wrath of the Storm",
-                    description: `Also at 1st level, you can thunderously rebuke attackers. 
+				},
+				{
+					title: "Wrath of the Storm",
+					description: `Also at 1st level, you can thunderously rebuke attackers. 
 								When a creature within 5 feet of you that you can see 
 								hits you with an attack, you can use your reaction to 
 								cause the creature to make a Dexterity saving throw. 
@@ -890,40 +889,40 @@ export const subclassDesc = {
 								You can use this feature a number of times equal to 
 								your Wisdom modifier (a minimum of once). You regain 
 								all expended uses when you finish a long rest.`,
-                },
-                {
-                    title: "Channel Divinity: Destructive Wrath",
-                    description: `Starting at 2nd level, you can use your Channel Divinity 
+				},
+				{
+					title: "Channel Divinity: Destructive Wrath",
+					description: `Starting at 2nd level, you can use your Channel Divinity 
 								to wield the power of the storm with unchecked ferocity.
 								When you roll lightning or thunder damage, you can 
 								use your Channel Divinity to deal maximum damage, 
 								instead of rolling.`,
-                },
+				},
 				{
-                    title: "Thunderbolt Strike",
-                    description: ` At 6th level, when you deal lightning damage to a Large 
+					title: "Thunderbolt Strike",
+					description: ` At 6th level, when you deal lightning damage to a Large 
 								or smaller creature, you can also push it up to 10 feet 
 								away from you.`,
-                },
-                {
-                    title: "Divine Strike",
-                    description: `At 8th level, you gain the ability to infuse your weapon 
+				},
+				{
+					title: "Divine Strike",
+					description: `At 8th level, you gain the ability to infuse your weapon 
 								strikes with divine energy. Once on each of your turns 
 								when you hit a creature with a weapon attack, you can 
 								cause the attack to deal an extra 1d8 thunder damage to 
 								the target. When you reach 14th level, the extra damage 
 								increases to 2d8.`,
-                },
-                {
-                    title: "Stormborn",
-                    description: `At 17th level, you have a flying speed equal to 
+				},
+				{
+					title: "Stormborn",
+					description: `At 17th level, you have a flying speed equal to 
 								your current walking speed whenever you are not 
 								underground or indoors.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Trickery_Domain: {
-            description: `Gods of trickery—such as Tymora, Beshaba, 
+			description: `Gods of trickery—such as Tymora, Beshaba, 
 						Olidammara, the Traveler, Garl Glittergold, and 
 						Loki—are mischief-makers and instigators who stand 
 						as a constant challenge to the accepted order among 
@@ -943,18 +942,18 @@ export const subclassDesc = {
 						5th blink, dispel magic
 						7th dimension door, polymorph
 						9th dominate person`,
-            features: [
-                {
-                    title: " Blessing of the Trickster ",
-                    description: `Starting when you choose this domain at 1st level, you 
+			features: [
+				{
+					title: " Blessing of the Trickster ",
+					description: `Starting when you choose this domain at 1st level, you 
 								can use your action to touch a willing creature other 
 								than yourself to give it advantage on Dexterity (Stealth) 
 								checks. This blessing lasts for 1 hour or until you use 
 								this feature again.`,
-                },
-                {
-                    title: "Channel Divinity: Invoke Duplicity",
-                    description: ` Starting at 2nd level, you can use your Channel Divinity 
+				},
+				{
+					title: "Channel Divinity: Invoke Duplicity",
+					description: ` Starting at 2nd level, you can use your Channel Divinity 
 								to create an illusory duplicate of yourself.
 								As an action, you create a perfect illusion of 
 								yourself that lasts for 1 minute, or until you lose your 
@@ -969,36 +968,35 @@ export const subclassDesc = {
 								are within 5 feet of a creature that can see the illusion, 
 								you have advantage on attack rolls against that creature, 
 								given how distracting the illusion is to the target.`,
-                },
-                {
-                    title: " Channel Divinity: Cloak of Shadows",
-                    description: ` Starting at 6th level, you can use your Channel 
+				},
+				{
+					title: " Channel Divinity: Cloak of Shadows",
+					description: ` Starting at 6th level, you can use your Channel 
 								Divinity to vanish.
 								As an action, you become invisible until the end of your 
 								next turn. You become visible if you attack or cast a spell`,
-                },
+				},
 				{
-                    title: "Divine Strike",
-                    description: ` At 8th level, you gain the ability to infuse your weapon 
+					title: "Divine Strike",
+					description: ` At 8th level, you gain the ability to infuse your weapon 
 								strikes with poison—a gift from your deity. Once on each 
 								of your turns when you hit a creature with a weapon 
 								attack, you can cause the attack to deal an extra 1d8 
 								poison damage to the target. When you reach 14th level, 
 								the extra damage increases to 2d8`,
-                },
-                {
-                    title: "Improved Duplicity",
-                    description: ` At 17th level, you can create up to four duplicates 
+				},
+				{
+					title: "Improved Duplicity",
+					description: ` At 17th level, you can create up to four duplicates 
 								of yourself, instead of one, when you use Invoke 
 								Duplicity. As a bonus action on your turn, you can 
 								move any number of them up to 30 feet, to a maximum 
 								range of 120 feet.`,
-                },
-				
-            ],
-        }, 
+				},
+			],
+		},
 		War_Domain: {
-            description: `War has many manifestations. It can make heroes of 
+			description: `War has many manifestations. It can make heroes of 
 						ordinary people. It can be desperate and horrific, with 
 						acts of cruelty and cowardice eclipsing instances of 
 						excellence and courage. In either case, the gods of war
@@ -1023,55 +1021,55 @@ export const subclassDesc = {
 						5th crusader's mantle, spririt guardians
 						7th freedom of movement, stoneskin
 						9th flame strike, hold monster`,
-            features: [
-                {
-                    title: " Bonus Proficiencies",
-                    description: `At 1st level, you gain proficiency with martial weapons 
+			features: [
+				{
+					title: " Bonus Proficiencies",
+					description: `At 1st level, you gain proficiency with martial weapons 
 							and heavy armor.`,
-                },
-                {
-                    title: "War Priest",
-                    description: ` From 1st level, your god delivers bolts of inspiration to 
+				},
+				{
+					title: "War Priest",
+					description: ` From 1st level, your god delivers bolts of inspiration to 
 								you while you are engaged in battle. When you use the 
 								Attack action, you can make one weapon attack as a 
 								bonus action.
 								You can use this feature a number of times equal to 
 								your Wisdom modifier (a minimum of once). You regain 
 								all expended uses when you finish a long rest.`,
-                },
-                {
-                    title: "Channel Divinity: Guided Strike ",
-                    description: `Starting at 2nd level, you can use your Channel Divinity 
+				},
+				{
+					title: "Channel Divinity: Guided Strike ",
+					description: `Starting at 2nd level, you can use your Channel Divinity 
 								to strike with supernatural accuracy. When you make 
 								an attack roll, you can use your Channel Divinity to gain 
 								a +10 bonus to the roll. You make this choice after you 
 								see the roll, but before the DM says whether the attack 
 								hits or misses.`,
-                },
+				},
 				{
-                    title: "Channel Divinity: War God’s Blessing",
-                    description: `At 6th level, when a creature within 30 feet of you 
+					title: "Channel Divinity: War God’s Blessing",
+					description: `At 6th level, when a creature within 30 feet of you 
 								makes an attack roll, you can use your reaction to grant 
 								that creature a +10 bonus to the roll, using your Channel 
 								Divinity. You make this choice after you see the roll, but 
 								before the DM says whether the attack hits or misses.`,
-                },
-                {
-                    title: "Divine Strike",
-                    description: ` At 8th level, you gain the ability to infuse your weapon 
+				},
+				{
+					title: "Divine Strike",
+					description: ` At 8th level, you gain the ability to infuse your weapon 
 								strikes with divine energy. Once on each of your turns 
 								when you hit a creature with a weapon attack, you can 
 								cause the attack to deal an extra 1d8 damage of the 
 								same type dealt by the weapon to the target. When you 
 								reach 14th level, the extra damage increases to 2d8.`,
-                },
-                {
-                    title: "Avatar of Battle",
-                    description: ` At 17th level, you gain resistance to bludgeoning, piercing, 
+				},
+				{
+					title: "Avatar of Battle",
+					description: ` At 17th level, you gain resistance to bludgeoning, piercing, 
 								and slashing damage from nonmagical weapons.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Death_Domain: "",
 		Arcana_Domain: "",
 		Forge_Domain: "",
@@ -1082,7 +1080,7 @@ export const subclassDesc = {
 	},
 	Druid: {
 		Circle_of_the_Land: {
-            description: ` The Circle of the Land is made up of mystics and sages 
+			description: ` The Circle of the Land is made up of mystics and sages 
 						who safeguard ancient knowledge and rites through 
 						a vast oral tradition. These druids meet within sacred 
 						circles of trees or standing stones to whisper primal 
@@ -1092,15 +1090,15 @@ export const subclassDesc = {
 						As a member of this circle, your magic is influenced 
 						by the land where you were initiated into the circle’s 
 						mysterious rites.`,
-            features: [
-                {
-                    title: "Bonus Cantrip",
-                    description: `When you choose this circle at 2nd level, you learn one 
+			features: [
+				{
+					title: "Bonus Cantrip",
+					description: `When you choose this circle at 2nd level, you learn one 
 								additional druid cantrip of your choice.`,
-                },
-                {
-                    title: "Natural Recovery",
-                    description: `Starting at 2nd level, you can regain some of your 
+				},
+				{
+					title: "Natural Recovery",
+					description: `Starting at 2nd level, you can regain some of your 
 								magical energy by sitting in meditation and communing 
 								with nature. During a short rest, you choose expended 
 								spell slots to recover. The spell slots can have a 
@@ -1111,10 +1109,10 @@ export const subclassDesc = {
 								For example, when you are a 4th-level druid, you can 
 								recover up to two levels worth of spell slots. You can 
 								recover either a 2nd-level slot or two 1st-level slots`,
-                },
-                {
-                    title: "Circle Spells",
-                    description: ` Your mystical connection to the land infuses you with 
+				},
+				{
+					title: "Circle Spells",
+					description: ` Your mystical connection to the land infuses you with 
 								the ability to cast certain spells. At 3rd, 5th, 7th, and 
 								9th level you gain access to circle spells connected 
 								to the land where you became a druid. Choose that 
@@ -1126,10 +1124,10 @@ export const subclassDesc = {
 								spells you can prepare each day. If you gain access to a 
 								spell that doesn’t appear on the druid spell list, the spell 
 								is nonetheless a druid spell for you.`,
-                },
+				},
 				{
-                    title: "Land’s Stride",
-                    description: ` Starting at 6th level, moving through nonmagical 
+					title: "Land’s Stride",
+					description: ` Starting at 6th level, moving through nonmagical 
 								difficult terrain costs you no extra movement. You can 
 								also pass through nonmagical plants without being 
 								slowed by them and without taking damage from them if 
@@ -1137,16 +1135,16 @@ export const subclassDesc = {
 								In addition, you have advantage on saving throws against 
 								plants that are magically created or manipulated to impede 
 								movement, such those created by the entangle spell.`,
-                },
-                {
-                    title: "Nature's Ward",
-                    description: ` When you reach 10th level, you can’t be charmed or 
+				},
+				{
+					title: "Nature's Ward",
+					description: ` When you reach 10th level, you can’t be charmed or 
 								frightened by elementals or fey, and you are immune to 
 								poison and disease.`,
-                },
-                {
-                    title: "Nature's Sanctuary",
-                    description: `When you reach 14th level, creatures of the natural 
+				},
+				{
+					title: "Nature's Sanctuary",
+					description: `When you reach 14th level, creatures of the natural 
 								world sense your connection to nature and become 
 								hesitant to attack you. When a beast or plant creature 
 								attacks you, that creature must make a Wisdom saving 
@@ -1156,11 +1154,11 @@ export const subclassDesc = {
 								is immune to this effect for 24 hours.
 								The creature is aware of this effect before it makes its 
 								attack against you.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Circle_of_the_Moon: {
-            description: ` Druids of the Circle of the Moon are fierce guardians 
+			description: ` Druids of the Circle of the Moon are fierce guardians 
 						of the wilds. Their order gathers under the full moon to 
 						share news and trade warnings. They haunt the deepest 
 						parts of the wilderness, where they might go for weeks 
@@ -1171,20 +1169,20 @@ export const subclassDesc = {
 						as an eagle the next day, and crash through the 
 						undergrowth in bear form to drive off a trespassing 
 						monster. The wild is in the druid's blood`,
-            features: [
-                {
-                    title: "Combat Wild Shape",
-                    description: ` When you choose this circle at 2nd level, you gain the 
+			features: [
+				{
+					title: "Combat Wild Shape",
+					description: ` When you choose this circle at 2nd level, you gain the 
 								ability to use Wild Shape on your turn as a bonus action, 
 								rather than as an action.
 								Additionally, while you are transformed by Wild 
 								Shape, you can use a bonus action to expend one 
 								spell slot to regain 1d8 hit points per level of the spell 
 								slot expended.`,
-                },
-                {
-                    title: "Circle Forms",
-                    description: ` The rites of your circle grant you the ability to transform 
+				},
+				{
+					title: "Circle Forms",
+					description: ` The rites of your circle grant you the ability to transform 
 								into more dangerous animal forms. Starting at 2nd 
 								level, you can use your Wild Shape to transform into a 
 								beast with a challenge rating as high as 1 (you ignore 
@@ -1193,32 +1191,32 @@ export const subclassDesc = {
 								Starting at 6th level, you can transform into a beast 
 								with a challenge rating as high as your druid level 
 								divided by 3, rounded down.`,
-                },
-                {
-                    title: "Primal Strike",
-                    description: ` Primal Strike
+				},
+				{
+					title: "Primal Strike",
+					description: ` Primal Strike
 								Starting at 6th level, your attacks in beast form count as 
 								magical for the purpose of overcoming resistance and 
 								immunity to nonmagical attacks and damage.`,
-                },
+				},
 				{
-                    title: "Elemental Wild Shape",
-                    description: `At 10th level, you can expend two uses of Wild Shape 
+					title: "Elemental Wild Shape",
+					description: `At 10th level, you can expend two uses of Wild Shape 
 								at the same time to transform into an air elemental, an 
 								earth elemental, a fire elemental, or a water elemental.`,
-                },
-                {
-                    title: "Thousand Forms",
-                    description: ` By 14th level, you have learned to use magic to alter 
+				},
+				{
+					title: "Thousand Forms",
+					description: ` By 14th level, you have learned to use magic to alter 
 								your physical form in more subtle ways. You can cast the 
 								alter self spell at will.`,
-                },
-                {
-                    title: "",
-                    description: ``,
-                },
-            ],
-        }, 
+				},
+				{
+					title: "",
+					description: ``,
+				},
+			],
+		},
 		Circle_of_Dreams: "",
 		Circle_of_the_Shepherd: "",
 		Circle_of_Spores: "",
@@ -1227,21 +1225,21 @@ export const subclassDesc = {
 	},
 	Fighter: {
 		Champion: {
-            description: `The archetypal Champion focuses on the development 
+			description: `The archetypal Champion focuses on the development 
 						of raw physical power honed to deadly perfection.
 						Those who model themselves on this archetype combine 
 						rigorous training with physical excellence to deal 
 						devastating blows`,
-            features: [
-                {
-                    title: " Improved Critical",
-                    description: ` Beginning when you choose this archetype at 3rd 
+			features: [
+				{
+					title: " Improved Critical",
+					description: ` Beginning when you choose this archetype at 3rd 
 								level, your weapon attacks score a critical hit on a 
 								roll of 19 or 20.`,
-                },
-                {
-                    title: "Remarkable Athlete",
-                    description: ` Starting at 7th level, you can add half your proficiency 
+				},
+				{
+					title: "Remarkable Athlete",
+					description: ` Starting at 7th level, you can add half your proficiency 
 								bonus (round up) to any Strength, Dexterity, or 
 								Constitution check you make that doesn’t already use 
 								your proficiency bonus.
@@ -1249,29 +1247,29 @@ export const subclassDesc = {
 								distance you can cover increases by a number of feet 
 								equal to your Strength modifier.
 								`,
-                },
-                {
-                    title: "Additional Fighting Style",
-                    description: ` At 10th level, you can choose a second option from the
+				},
+				{
+					title: "Additional Fighting Style",
+					description: ` At 10th level, you can choose a second option from the
 								Fighting Style class feature.`,
-                },
+				},
 				{
-                    title: "Superior Critical",
-                    description: ` Starting at 15th level, your weapon attacks score a 
+					title: "Superior Critical",
+					description: ` Starting at 15th level, your weapon attacks score a 
 								critical hit on a roll of 18-20.`,
-                },
+				},
 				{
-                    title: "Survivor",
-                    description: `At 18th level, you attain the pinnacle of resilience in 
+					title: "Survivor",
+					description: `At 18th level, you attain the pinnacle of resilience in 
 								battle. At the start of each of your turns, you regain hit 
 								points equal to 5 + your Constitution modifier if you 
 								have no more than half of your hit points left. You don’t 
 								gain this benefit if you have 0 hit points.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Battle_Master: {
-            description: ` Those who emulate the archetypal Battle Master 
+			description: ` Those who emulate the archetypal Battle Master 
 						employ martial techniques passed down through 
 						generations. To a Battle Master, combat is an academic 
 						field, sometimes including subjects beyond battle such 
@@ -1280,10 +1278,10 @@ export const subclassDesc = {
 						that are reflected in the Battle Master archetype, but 
 						those who do are well-rounded fighters of great skill 
 						and knowledge.`,
-            features: [
-                {
-                    title: "Combat Superiority",
-                    description: `When you choose this archetype at 3rd level, you 
+			features: [
+				{
+					title: "Combat Superiority",
+					description: `When you choose this archetype at 3rd level, you 
 								learn maneuvers that are fueled by special dice called 
 								superiority dice.
 								Maneuvers. You learn three maneuvers of your 
@@ -1306,15 +1304,15 @@ export const subclassDesc = {
 								as follows:
 								Maneuver save DC = 8 + your proficiency bonus + 
 								your Strength or Dexterity modifier (your choice)`,
-                },
-                {
-                    title: " Student of War",
-                    description: ` At 3rd level, you gain proficiency with one type of 
+				},
+				{
+					title: " Student of War",
+					description: ` At 3rd level, you gain proficiency with one type of 
 								artisan’s tools of your choice.`,
-                },
-                {
-                    title: "Know Your Enemy",
-                    description: ` Starting at 7th level, if you spend at least 1 minute 
+				},
+				{
+					title: "Know Your Enemy",
+					description: ` Starting at 7th level, if you spend at least 1 minute 
 								observing or interacting with another creature outside 
 								combat, you can learn certain information about its 
 								capabilities compared to your own. The DM tells you if 
@@ -1327,21 +1325,21 @@ export const subclassDesc = {
 								• Current hit points
 								• Total class levels (if any)
 								• Fighter class levels (if any)`,
-                },
+				},
 				{
-                    title: " Improved Combat Superiority",
-                    description: ` At 10th level, your superiority dice turn into d10s. At
+					title: " Improved Combat Superiority",
+					description: ` At 10th level, your superiority dice turn into d10s. At
 								18th level, they turn into dl2s.`,
-                },
-                {
-                    title: "Relentless",
-                    description: ` Starting at 15th level, when you roll initiative and 
+				},
+				{
+					title: "Relentless",
+					description: ` Starting at 15th level, when you roll initiative and 
 								have no superiority dice remaining, you regain 1 
 								superiority die.`,
-                },
-                {
-                    title: "Maneuvers",
-                    description: ` The maneuvers are presented in alphabetical order.
+				},
+				{
+					title: "Maneuvers",
+					description: ` The maneuvers are presented in alphabetical order.
 								Commander’s Strike. When you take the Attack 
 								action on your turn, you can forgo one of your attacks 
 								and use a bonus action to direct one of your companions 
@@ -1456,11 +1454,11 @@ export const subclassDesc = {
 								to the attack’s damage roll, and if the target is Large or 
 								smaller, it must make a Strength saving throw. On a 
 								failed save, you knock the target prone.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Eldritch_Knight: {
-            description: ` The archetypal Eldritch Knight combines the martial 
+			description: ` The archetypal Eldritch Knight combines the martial 
 						mastery common to all fighters with a careful study of 
 						magic. Eldritch Knights use magical techniques similar 
 						to those practiced by wizards. They focus their study
@@ -1471,10 +1469,10 @@ export const subclassDesc = {
 						reach in combat. These knights learn a comparatively 
 						small number of spells, committing them to memory 
 						instead of keeping them in a spellbook.`,
-            features: [
-                {
-                    title: "Spellcasting",        // needs formatting 4 a real rite runny and add spellcasting table 
-                    description: ` When you reach 3rd level, you augment your martial 
+			features: [
+				{
+					title: "Spellcasting", // needs formatting 4 a real rite runny and add spellcasting table
+					description: ` When you reach 3rd level, you augment your martial 
 								prowess with the ability to cast spells. See chapter 10 
 								for the general rules of spellcasting and chapter 11 for 
 								the wizard spell list.
@@ -1528,10 +1526,10 @@ export const subclassDesc = {
 								your Intelligence modifier
 								
 								 `,
-                },
-                {
-                    title: "Weapon Bond",
-                    description: `At 3rd level, you learn a ritual that creates a magical 
+				},
+				{
+					title: "Weapon Bond",
+					description: `At 3rd level, you learn a ritual that creates a magical 
 								bond between yourself and one weapon. You perform 
 								the ritual over the course of 1 hour, which can be done  during a short rest. The weapon must be within your 
 								reach throughout the ritual, at the conclusion of which 
@@ -1545,37 +1543,37 @@ export const subclassDesc = {
 								summon only one at a time with your bonus action.
 								If you attempt to bond with a third weapon, you must 
 								break the bond with one of the other two.`,
-                },
-                {
-                    title: "War Magic",
-                    description: `Beginning at 7th level, when you use your action to 
+				},
+				{
+					title: "War Magic",
+					description: `Beginning at 7th level, when you use your action to 
 								cast a cantrip, you can make one weapon attack as a 
 								bonus action.`,
-                },
+				},
 				{
-                    title: "Eldritch Strike",
-                    description: ` At 10th level, you learn how to make your weapon 
+					title: "Eldritch Strike",
+					description: ` At 10th level, you learn how to make your weapon 
 								strikes undercut a creature’s resistance to your spells. 
 								When you hit a creature with a weapon attack, that 
 								creature has disadvantage on the next saving throw 
 								it makes against a spell you cast before the end of 
 								your next turn.`,
-                },
-                {
-                    title: "Arcane Charge",
-                    description: `At 15th level, you gain the ability to teleport up to 30 
+				},
+				{
+					title: "Arcane Charge",
+					description: `At 15th level, you gain the ability to teleport up to 30 
 								feet to an unoccupied space you can see when you use 
 								your Action Surge. You can teleport before or after the 
 								additional action.`,
-                },
-                {
-                    title: "Improved War Magic",
-                    description: `Starting at 18th level, when you use your action to 
+				},
+				{
+					title: "Improved War Magic",
+					description: `Starting at 18th level, when you use your action to 
 								cast a spell, you can make one weapon attack as a 
 								bonus action.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Arcane_Archer: "",
 		Cavalier: "",
 		Samurai: "",
@@ -1584,16 +1582,16 @@ export const subclassDesc = {
 	},
 	Monk: {
 		Way_of_the_Open_Hand: {
-            description: `Monks of the Way of the Open Hand are the ultimate 
+			description: `Monks of the Way of the Open Hand are the ultimate 
 						masters of martial arts combat, whether armed or 
 						unarmed. They learn techniques to push and trip their 
 						opponents, manipulate ki to heal damage to their 
 						bodies, and practice advanced meditation that can 
 						protect them from harm`,
-            features: [
-                {
-                    title: "Open Hand Technique",
-                    description: `Starting when you choose this tradition at 3rd level, 
+			features: [
+				{
+					title: "Open Hand Technique",
+					description: `Starting when you choose this tradition at 3rd level, 
 								you can manipulate your enemy’s ki when you harness 
 								your own. Whenever you hit a creature with one of the 
 								attacks granted by your Flurry of Blows, you can impose 
@@ -1603,28 +1601,28 @@ export const subclassDesc = {
 								• It must make a Strength saving throw. If it fails, you 
 								can push it up to 15 feet away from you.
 								• It can’t take reactions until the end of your next turn.`,
-                },
-                {
-                    title: "Wholeness of Body",
-                    description: `At 6th level, you gain the ability to heal yourself. As an 
+				},
+				{
+					title: "Wholeness of Body",
+					description: `At 6th level, you gain the ability to heal yourself. As an 
 								action, you can regain hit points equal to three times your 
 								monk level. You must finish a long rest before you 
 								can use this feature again.
 `,
-                },
-                {
-                    title: "Tranquility",
-                    description: `Beginning at 11th level, you can enter a special 
+				},
+				{
+					title: "Tranquility",
+					description: `Beginning at 11th level, you can enter a special 
 								meditation that surrounds you with an aura of peace. At 
 								the end of a long rest, you gain the effect of a sanctuary 
 								spell that lasts until the start of your next long rest (the 
 								spell can end early as normal). The saving throw DC 
 								for the spell equals 8 + your Wisdom modifier + your 
 								proficiency bonus.`,
-                },
+				},
 				{
-                    title: "Quivering Palm",
-                    description: ` At 17th level, you gain the ability to set up lethal 
+					title: "Quivering Palm",
+					description: ` At 17th level, you gain the ability to set up lethal 
 								vibrations in someone’s body. When you hit a creature 
 								with an unarmed strike, you can spend 3 ki points to 
 								start these imperceptible vibrations, which last for a 
@@ -1638,11 +1636,11 @@ export const subclassDesc = {
 								You can have only one creature under the effect of this 
 								feature at a time. You can choose to end the vibrations 
 								harmlessly without using an action.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Way_of_Shadow: {
-            description: `Monks of the Way of Shadow follow a tradition that 
+			description: `Monks of the Way of Shadow follow a tradition that 
 						values stealth and subterfuge. These monks might 
 						be called ninjas or shadowdancers, and they serve as 
 						spies and assassins. Sometimes the members of a 
@@ -1653,45 +1651,45 @@ export const subclassDesc = {
 						who can pay their fees. Regardless of their methods, the 
 						heads of these monasteries expect the unquestioning 
 						obedience of their students.`,
-            features: [
-                {
-                    title: "Shadow Arts",
-                    description: ` Starting when you choose this tradition at 3rd level, you 
+			features: [
+				{
+					title: "Shadow Arts",
+					description: ` Starting when you choose this tradition at 3rd level, you 
 								can use your ki to duplicate the effects of certain spells. 
 								As an action, you can spend 2 ki points to cast darkness, 
 								darkvision, pass without trace, or silence, without 
 								providing material components. Additionally, you gain 
 								the minor illusion cantrip if you don’t already know it.`,
-                },
-                {
-                    title: "Shadow Step",
-                    description: ` At 6th level, you gain the ability to step from one shadow 
+				},
+				{
+					title: "Shadow Step",
+					description: ` At 6th level, you gain the ability to step from one shadow 
 								into another. When you are in dim light or darkness, 
 								as a bonus action you can teleport up to 60 feet to an 
 								unoccupied space you can see that is also in dim light 
 								or darkness. You then have advantage on the first melee 
 								attack you make before the end of the turn.`,
-                },
-                {
-                    title: "Cloak of Shadows",
-                    description: ` By 11th level, you have learned to become one with 
+				},
+				{
+					title: "Cloak of Shadows",
+					description: ` By 11th level, you have learned to become one with 
 								the shadows. When you are in an area of dim light or 
 								darkness, you can use your action to become invisible. 
 								You remain invisible until you make an attack, cast a 
 								spell, or are in an area of bright light.`,
-                },
+				},
 				{
-                    title: "Oppurtunist",
-                    description: ` At 17th level, you can exploit a creature's momentary 
+					title: "Oppurtunist",
+					description: ` At 17th level, you can exploit a creature's momentary 
 								distraction when it is hit by an attack. Whenever a 
 								creature within 5 feet of you is hit by an attack made by 
 								a creature other than you, you can use your reaction to 
 								make a melee attack against that creature.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Way_of_the_Four_Elements: {
-            description: ` You follow a monastic tradition that teaches you to 
+			description: ` You follow a monastic tradition that teaches you to 
 						harness the elements. When you focus your ki, you can 
 						align yourself with the forces of creation and bend the 
 						four elements to your will, using them as an extension 
@@ -1702,10 +1700,10 @@ export const subclassDesc = {
 						representations of their ki powers, commonly imagined 
 						as coiling dragons, but also as phoenixes, fish, plants, 
 						mountains, and cresting waves.`,
-            features: [
-                {
-                    title: "Disciple of the Elements ", // Add skillpoints table for a real rite runny, add formatting 
-                    description: `When you choose this tradition at 3rd level, you learn 
+			features: [
+				{
+					title: "Disciple of the Elements ", // Add skillpoints table for a real rite runny, add formatting
+					description: `When you choose this tradition at 3rd level, you learn 
 								magical disciplines that harness the power of the four 
 								elements. A discipline requires you to spend ki points 
 								each time you use it.
@@ -1736,10 +1734,10 @@ export const subclassDesc = {
 								and any additional ki points you spend to increase its 
 								level) is determined by your monk level, as shown in the 
 								Spells and Ki Points table`,
-                },
-                {
-                    title: "Elemental Disciplines", // add formatting for a real right runny 
-                    description: ` The elemental disciplines are presented in alphabetical 
+				},
+				{
+					title: "Elemental Disciplines", // add formatting for a real right runny
+					description: ` The elemental disciplines are presented in alphabetical 
 								order. If a discipline requires a level, you must be that 
 								level in this class to learn the discipline.
 								Breath of Winter (17th Level Required). You can 
@@ -1823,9 +1821,9 @@ export const subclassDesc = {
 								much damage, and you don’t pull it or knock it prone.
 								Wave of Rolling Earth (17th Level Required). You 
 								can spend 6 ki points to cast wall of stone.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Way_of_the_Drunken_Master: "",
 		Way_of_the_Kensei: "",
 		Way_of_the_Sun_Soul: "",
@@ -1836,7 +1834,7 @@ export const subclassDesc = {
 	Paladin: {
 		Oath_of_Devotion: "",
 		Oath_of_the_Ancients: {
-            description: `The Oath of the Ancients is as old as the race of elves 
+			description: `The Oath of the Ancients is as old as the race of elves 
 						and the rituals of the druids. Sometimes called fey 
 						knights, green knights, or horned knights, paladins who 
 						swear this oath cast their lot with the side of the light 
@@ -1847,10 +1845,10 @@ export const subclassDesc = {
 						clothing with images of growing things—leaves, antlers, 
 						or flowers—to reflect their commitment to preserving 
 						life and light in the world.`,
-            features: [
-                { 
-                    title: "Tenets of the Ancients", // add formatting for a real right runny 
-                    description: ` The tenets of the Oath of the Ancients have been 
+			features: [
+				{
+					title: "Tenets of the Ancients", // add formatting for a real right runny
+					description: ` The tenets of the Oath of the Ancients have been 
 								preserved for uncounted centuries. This oath 
 								emphasizes the principles of good above any concerns 
 								of law or chaos. Its four central principles are simple.
@@ -1867,10 +1865,10 @@ export const subclassDesc = {
 								Be the Light. Be a glorious beacon for all who live in 
 								despair. Let the light of your joy and courage shine forth 
 								in all your deeds.`,
-                },
-                {
-                    title: "Oath Spells", // add formatting for a real right runny 
-                    description: ` You gain oath spells at the paladin levels listed.
+				},
+				{
+					title: "Oath Spells", // add formatting for a real right runny
+					description: ` You gain oath spells at the paladin levels listed.
 								O ath of the Ancients Spells
 								Paladin Level Spells
 								3rd
@@ -1883,10 +1881,10 @@ export const subclassDesc = {
 								plant growth, protection from energy
 								ice storm, stoneskin
 								commune with nature, tree stride`,
-                },
-                {
-                    title: "Channel Divinity", // add formatting for a real right runny 
-                    description: ` When you take this oath at 3rd level, you gain the 
+				},
+				{
+					title: "Channel Divinity", // add formatting for a real right runny
+					description: ` When you take this oath at 3rd level, you gain the 
 								following two Channel Divinity options.
 								Nature’s Wrath. You can use your Channel Divinity 
 								to invoke primeval forces to ensnare a foe. As an action, 
@@ -1913,27 +1911,27 @@ export const subclassDesc = {
 								If the creature’s true form is concealed by an illusion, 
 								shapeshifting, or other effect, that form is revealed while 
 								it is turned.`,
-                },
+				},
 				{
-                    title: "Aura of Warding",
-                    description: ` Beginning at 7th level, ancient magic lies so heavily 
+					title: "Aura of Warding",
+					description: ` Beginning at 7th level, ancient magic lies so heavily 
 								upon you that it forms an eldritch ward. You and friendly 
 								creatures within 10 feet of you have resistance to 
 								damage from spells.
 								At 18th level, the range of this aura increases to 30 feet.`,
-                },
-                {
-                    title: "Undying Sentinel",
-                    description: ` Starting at 15th level, when you are reduced to 0 hit 
+				},
+				{
+					title: "Undying Sentinel",
+					description: ` Starting at 15th level, when you are reduced to 0 hit 
 								points and are not killed outright, you can choose to 
 								drop to 1 hit point instead. Once you use this ability, you 
 								can’t use it again until you finish a long rest.
 								Additionally, you suffer none of the drawbacks of old 
 								age, and you can’t be aged magically.`,
-                },
-                {
-                    title: "Elder Champion", // add formatting for a real right runny
-                    description: `At 20th level, you can assume the form of an ancient 
+				},
+				{
+					title: "Elder Champion", // add formatting for a real right runny
+					description: `At 20th level, you can assume the form of an ancient 
 								force of nature, taking on an appearance you choose.
 								For example, your skin might turn green or take on a 
 								bark-like texture, your hair might become leafy or moss- 
@@ -1950,11 +1948,11 @@ export const subclassDesc = {
 								Channel Divinity options.
 								Once you use this feature, you can’t use it again until 
 								you finish a long rest`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Oath_of_Vengeance: {
-            description: ` The Oath of Vengeance is a solemn commitment to 
+			description: ` The Oath of Vengeance is a solemn commitment to 
 						punish those who have committed a grievous sin. When 
 						evil forces slaughter helpless villagers, when an entire 
 						people turns against the will of the gods, when a thieves’ 
@@ -1965,10 +1963,10 @@ export const subclassDesc = {
 						sometimes called avengers or dark knights—their own 
 						purity is not as important as delivering justice.
 						`,
-            features: [
-                {
-                    title: "Tenets of Vengeance",
-                    description: ` The tenets of the Oath of Vengeance vary by paladin, but 
+			features: [
+				{
+					title: "Tenets of Vengeance",
+					description: ` The tenets of the Oath of Vengeance vary by paladin, but 
 								all the tenets revolve around punishing wrongdoers by 
 								any means necessary. Paladins who uphold these tenets 
 								are willing to sacrifice even their own righteousness to 
@@ -1985,10 +1983,10 @@ export const subclassDesc = {
 								Restitution. If my foes wreak ruin on the world, it is 
 								because I failed to stop them. I must help those harmed 
 								by their misdeeds.`,
-                },
-                {
-                    title: "Oath Spells", // add formatting for a real right runny
-                    description: `You gain oath spells at the paladin levels listed.
+				},
+				{
+					title: "Oath Spells", // add formatting for a real right runny
+					description: `You gain oath spells at the paladin levels listed.
 								O ath of Vengeance Spells
 								Paladin Level Spells
 								3rd
@@ -2001,10 +1999,10 @@ export const subclassDesc = {
 								haste, protection from energy
 								banishment, dimension door
 								hold monster, scrying`,
-                },
-                {
-                    title: "Channel Divinity", // add formatting for a real right runny
-                    description: `When you take this oath at 3rd level, you gain the 
+				},
+				{
+					title: "Channel Divinity", // add formatting for a real right runny
+					description: `When you take this oath at 3rd level, you gain the 
 								following two Channel Divinity options.
 								Abjure Enemy. As an action, you present your holy 
 								symbol and speak a prayer of denunciation, using your 
@@ -2024,28 +2022,28 @@ export const subclassDesc = {
 								of you, using your Channel Divinity. You gain advantage 
 								on attack rolls against the creature for 1 minute or until 
 								it drops to 0 hit points or falls unconscious.`,
-                },
+				},
 				{
-                    title: "Relentless Avenger",
-                    description: ` By 7th level, your supernatural focus helps you close 
+					title: "Relentless Avenger",
+					description: ` By 7th level, your supernatural focus helps you close 
 								off a foe’s retreat. When you hit a creature with an 
 								opportunity attack, you can move up to half your 
 								speed immediately after the attack and as part of 
 								the same reaction. This movement doesn’t provoke 
 								opportunity attacks.`,
-                },
-                {
-                    title: "Soul of Vengeance",
-                    description: `Starting at 15th level, the authority with which you 
+				},
+				{
+					title: "Soul of Vengeance",
+					description: `Starting at 15th level, the authority with which you 
 								speak your Vow of Enmity gives you greater power over 
 								your foe. When a creature under the effect of your Vow 
 								of Enmity makes an attack, you can use your reaction to 
 								make a melee weapon attack against that creature if it is 
 								within range.`,
-                },
-                {
-                    title: "Avenging Angel",
-                    description: ` At 20th level, you can assume the form of an 
+				},
+				{
+					title: "Avenging Angel",
+					description: ` At 20th level, you can assume the form of an 
 								angelic avenger. Using your action, you undergo a 
 								transformation. For 1 hour, you gain the following 
 								benefits:
@@ -2060,9 +2058,9 @@ export const subclassDesc = {
 								advantage.
 								Once you use this feature, you can’t use it again until 
 								you finish a long rest.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Oath_of_Conquest: "",
 		Oath_of_Redemption: "",
 		Oath_of_Glory: "",
@@ -2071,16 +2069,16 @@ export const subclassDesc = {
 	},
 	Ranger: {
 		Hunter: {
-            description: ` Emulating the Hunter archetype means accepting your 
+			description: ` Emulating the Hunter archetype means accepting your 
 						place as a bulwark between civilization and the terrors 
 						of the wilderness. As you walk the Hunter’s path, you 
 						learn specialized techniques for fighting the threats 
 						you face, from rampaging ogres and hordes of orcs to 
 						towering giants and terrifying dragons.`,
-            features: [
-                {
-                    title: "Hunter’s Prey", // needs formatting for a real right runny
-                    description: ` At 3rd level, you gain one of the following features 
+			features: [
+				{
+					title: "Hunter’s Prey", // needs formatting for a real right runny
+					description: ` At 3rd level, you gain one of the following features 
 								of your choice.
 								Colossus Slayer. Your tenacity can wear down 
 								the most potent foes. When you hit a creature with a 
@@ -2096,10 +2094,10 @@ export const subclassDesc = {
 								with the same weapon against a different creature that 
 								is within 5 feet of the original target and within range 
 								of your weapon.`,
-                },
-                {
-                    title: " Defensive Tactics", // needs formatting for a real right runny
-                    description: ` At 7th level, you gain one of the following features 
+				},
+				{
+					title: " Defensive Tactics", // needs formatting for a real right runny
+					description: ` At 7th level, you gain one of the following features 
 								of your choice.
 								Escape the Horde. Opportunity attacks against you 
 								are made with disadvantage.
@@ -2109,10 +2107,10 @@ export const subclassDesc = {
 								rest of the turn.
 								Steel Will. You have advantage on saving throws 
 								against being frightened.`,
-                },
-                {
-                    title: " Multiattack",
-                    description: ` At 11th level, you gain one of the following features 
+				},
+				{
+					title: " Multiattack",
+					description: ` At 11th level, you gain one of the following features 
 								of your choice.
 								Volley. You can use your action to make a ranged 
 								attack against any number of creatures within 10 feet 
@@ -2122,10 +2120,10 @@ export const subclassDesc = {
 								Whirlwind Attack. You can use your action to make a 
 								melee attack against any number of creatures within 5 
 								feet of you, with a separate attack roll for each target`,
-                },
+				},
 				{
-                    title: "Superior Hunter’s Defense", // needs formatting
-                    description: `At 15th level, you gain one of the following features 
+					title: "Superior Hunter’s Defense", // needs formatting
+					description: `At 15th level, you gain one of the following features 
 								of your choice.
 								Evasion. You can nimbly dodge out of the way of 
 								certain area effects, such as a red dragon’s fiery breath 
@@ -2141,21 +2139,21 @@ export const subclassDesc = {
 								Uncanny Dodge. When an attacker that you can see 
 								hits you with an attack, you can use your reaction to 
 								halve the attack’s damage against you.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Beast_Master: {
-            description: `The Beast Master archetype embodies a friendship 
+			description: `The Beast Master archetype embodies a friendship 
 						between the civilized races and the beasts of the world. 
 						United in focus, beast and ranger work as one to fight 
 						the monstrous foes that threaten civilization and the 
 						wilderness alike. Emulating the Beast Master archetype 
 						means committing yourself to this ideal, working in 
 						partnership with an animal as its companion and friend.`,
-            features: [
-                {
-                    title: " Ranger’s Companion", // needs formatting for a real right runny
-                    description: ` At 3rd level, you gain a beast companion that 
+			features: [
+				{
+					title: " Ranger’s Companion", // needs formatting for a real right runny
+					description: ` At 3rd level, you gain a beast companion that 
 								accompanies you on your adventures and is trained to 
 								fight alongside you. Choose a beast that is no larger than 
 								Medium and that has a challenge rating of 1/4 or lower 
@@ -2180,28 +2178,28 @@ export const subclassDesc = {
 								spending 8 hours magically bonding with another beast 
 								that isn’t hostile to you, either the same type of beast as 
 								before or a different one.`,
-                },
-                {
-                    title: "Exceptional Training",
-                    description: `Beginning at 7th level, on any of your turns when 
+				},
+				{
+					title: "Exceptional Training",
+					description: `Beginning at 7th level, on any of your turns when 
 								your beast companion doesn’t attack, you can use a 
 								bonus action to command the beast to take the Dash, 
 								Disengage, Dodge, or Help action on its turn.`,
-                },
-                {
-                    title: "Bestial Fury",
-                    description: `Starting at 11th level, your beast companion can 
+				},
+				{
+					title: "Bestial Fury",
+					description: `Starting at 11th level, your beast companion can 
 								make two attacks when you command it to use the 
 								Attack action.`,
-                },
+				},
 				{
-                    title: "Share Spells",
-                    description: `Beginning at 15th level, when you cast a spell targeting 
+					title: "Share Spells",
+					description: `Beginning at 15th level, when you cast a spell targeting 
 								yourself, you can also affect your beast companion with 
 								the spell if the beast is within 30 feet of you.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Gloom_Stalker: "",
 		Horizon_Walker: "",
 		Monster_Slayer: "",
@@ -2210,7 +2208,7 @@ export const subclassDesc = {
 	},
 	Rogue: {
 		Thief: {
-            description: ` You hone your skills in the larcenous arts. Burglars, 
+			description: ` You hone your skills in the larcenous arts. Burglars, 
 						bandits, cutpurses, and other criminals typically follow 
 						this archetype, but so do rogues who prefer to think of 
 						themselves as professional treasure seekers, explorers, 
@@ -2218,73 +2216,73 @@ export const subclassDesc = {
 						agility and stealth, you learn skills useful for delving into 
 						ancient ruins, reading unfamiliar languages, and using 
 						magic items you normally couldn’t employ.`,
-            features: [
-                {
-                    title: "Fast Hands",
-                    description: ` Starting at 3rd level, you can use the bonus action 
+			features: [
+				{
+					title: "Fast Hands",
+					description: ` Starting at 3rd level, you can use the bonus action 
 								granted by your Cunning Action to make a Dexterity 
 								(Sleight of Hand) check, use your thieves’ tools to 
 								disarm a trap or open a lock, or take the Use an 
 								Object action.`,
-                },
-                {
-                    title: "Second-Story Work",
-                    description: ` When you choose this archetype at 3rd level, you gain 
+				},
+				{
+					title: "Second-Story Work",
+					description: ` When you choose this archetype at 3rd level, you gain 
 								the ability to climb faster than normal; climbing no 
 								longer costs you extra movement.
 								In addition, when you make a running jump, the 
 								distance you cover increases by a number of feet equal 
 								to your Dexterity modifier.`,
-                },
-                {
-                    title: "Supreme Sneak",
-                    description: `Starting at 9th level, you have advantage on a Dexterity 
+				},
+				{
+					title: "Supreme Sneak",
+					description: `Starting at 9th level, you have advantage on a Dexterity 
 								(Stealth) check if you move no more than half your 
 								speed on the same turn.`,
-                },
+				},
 				{
-                    title: "Use Magic Device",
-                    description: `By 13th level, you have learned enough about the 
+					title: "Use Magic Device",
+					description: `By 13th level, you have learned enough about the 
 								workings of magic that you can improvise the use of 
 								items even when they are not intended for you. You 
 								ignore all class, race, and level requirements on the use 
 								of magic items.`,
-                },
-                {
-                    title: "Thief's Reflexes",
-                    description: ` When you reach 17th level, you have become adept at 
+				},
+				{
+					title: "Thief's Reflexes",
+					description: ` When you reach 17th level, you have become adept at 
 								laying ambushes and quickly escaping danger. You can 
 								take two turns during the first round of any combat. You 
 								take your first turn at your normal initiative and your
 								second turn at your initiative minus 10. You can’t use 
 								this feature when you are surprised.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Assassin: {
-            description: ` You focus your training on the grim art of death. Those 
+			description: ` You focus your training on the grim art of death. Those 
 						who adhere to this archetype are diverse: hired killers, 
 						spies, bounty hunters, and even specially anointed 
 						priests trained to exterminate the enemies of their deity. 
 						Stealth, poison, and disguise help you eliminate your 
 						foes with deadly efficiency.`,
-            features: [
-                {
-                    title: "Bonus Proficiencies",
-                    description: ` When you choose this archetype at 3rd level, you gain 
+			features: [
+				{
+					title: "Bonus Proficiencies",
+					description: ` When you choose this archetype at 3rd level, you gain 
 								proficiency with the disguise kit and the poisoner’s kit.`,
-                },
-                {
-                    title: "Assassinate",
-                    description: `Starting at 3rd level, you are at your deadliest when you 
+				},
+				{
+					title: "Assassinate",
+					description: `Starting at 3rd level, you are at your deadliest when you 
 								get the drop on your enemies. You have advantage on 
 								attack rolls against any creature that hasn’t taken a turn 
 								in the combat yet. In addition, any hit you score against 
 								a creature that is surprised is a critical hit.`,
-                },
-                {
-                    title: "Infiltration Expertise",
-                    description: `Starting at 9th level, you can unfailingly create false 
+				},
+				{
+					title: "Infiltration Expertise",
+					description: `Starting at 9th level, you can unfailingly create false 
 								identities for yourself. You must spend seven days and 
 								25 gp to establish the history, profession, and affiliations 
 								for an identity. You can’t establish an identity that 
@@ -2296,10 +2294,10 @@ export const subclassDesc = {
 								Thereafter, if you adopt the new identity as a disguise, 
 								other creatures believe you to be that person until given 
 								an obvious reason not to.`,
-                },
+				},
 				{
-                    title: "Imposter",
-                    description: `At 13th level, you gain the ability to unerringly mimic 
+					title: "Imposter",
+					description: `At 13th level, you gain the ability to unerringly mimic 
 								another person’s speech, writing, and behavior.
 								You must spend at least three hours studying 
 								these three components of the person’s behavior, 
@@ -2309,28 +2307,28 @@ export const subclassDesc = {
 								wary creature suspects something is amiss, you have 
 								advantage on any Charisma (Deception) check you make 
 								to avoid detection.`,
-                },
-                {
-                    title: "Death Strike",
-                    description: `Starting at 17th level, you become a master of instant 
+				},
+				{
+					title: "Death Strike",
+					description: `Starting at 17th level, you become a master of instant 
 								death. When you attack and hit a creature that is 
 								surprised, it must make a Constitution saving throw 
 								(DC 8 + your Dexterity modifier + your proficiency 
 								bonus). On a failed save, double the damage of your 
 								attack against the creature.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Arcane_Trickster: {
-            description: `Some rogues enhance their fine-honed skills of stealth 
+			description: `Some rogues enhance their fine-honed skills of stealth 
 						and agility with magic, learning tricks of enchantment 
 						and illusion. These rogues include pickpockets and 
 						burglars, but also pranksters, mischief-makers, and a 
 						significant number of adventurers.`,
-            features: [
-                {
-                    title: "Spellcasting", // needs formatting for a real right runny + add spellcasting table
-                    description: `When you reach 3rd level, you gain the ability to 
+			features: [
+				{
+					title: "Spellcasting", // needs formatting for a real right runny + add spellcasting table
+					description: `When you reach 3rd level, you gain the ability to 
 								cast spells. See chapter 10 for the general rules of 
 								spellcasting and chapter 11 for the wizard spell list.
 								Cantrips. You learn three cantrips: mage hand and 
@@ -2378,10 +2376,10 @@ export const subclassDesc = {
 								your Intelligence modifier
 								Spell attack modifier = your proficiency bonus + 
 								your Intelligence modifier`,
-                },
-                {
-                    title: "Mage Hand Legerdemain",
-                    description: ` Starting at 3rd level, when you cast mage hand, you can 
+				},
+				{
+					title: "Mage Hand Legerdemain",
+					description: ` Starting at 3rd level, when you cast mage hand, you can 
 								make the spectral hand invisible, and you can perform 
 								the following additional tasks with it:
 								• You can stow one object the hand is holding in a 
@@ -2395,25 +2393,25 @@ export const subclassDesc = {
 								Wisdom (Perception) check.
 								In addition, you can use the bonus action granted by 
 								your Cunning Action to control the hand`,
-                },
-                {
-                    title: "Magical Ambush",
-                    description: ` Starting at 9th level, if you are hidden from a 
+				},
+				{
+					title: "Magical Ambush",
+					description: ` Starting at 9th level, if you are hidden from a 
 								creature when you cast a spell on it, the creature has 
 								disadvantage on any saving throw it makes against the 
 								spell this turn.`,
-                },
+				},
 				{
-                    title: "Versatile Trickster",
-                    description: `At 13th level, you gain the ability to distract targets with 
+					title: "Versatile Trickster",
+					description: `At 13th level, you gain the ability to distract targets with 
 								your mage hand. As a bonus action on your turn, you can 
 								designate a creature within 5 feet of the spectral hand 
 								created by the spell. Doing so gives you advantage on 
 								attack rolls against that creature until the end of the turn.`,
-                },
-                {
-                    title: "Spell Thief",
-                    description: ` At 17th level, you gain the ability to magically 
+				},
+				{
+					title: "Spell Thief",
+					description: ` At 17th level, you gain the ability to magically 
 								steal the knowledge of how to cast a spell from 
 								another spellcaster.
 								Immediately after a creature casts a spell that targets 
@@ -2429,9 +2427,9 @@ export const subclassDesc = {
 								8 hours have passed.
 								Once you use this feature, you can’t use it again until 
 								you finish a long rest.`,
-                },
-            ],
-        }, 
+				},
+			],
+		},
 		Mastermind: "",
 		Swashbuckler: "",
 		Inquisitive: "",
@@ -2625,16 +2623,16 @@ export const maxSkills = {
 	Wizard: 2,
 };
 
-// all skills needs formatting 
+// all skills needs formatting
 export const skillsDesc = {
 	// Strength Related
 	Athletics: {
-        attribute: `Strength`,
-        description: `Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.`,
-        examples: `You attempt to climb a sheer or slippery cliff, avoid hazards while scaling a wall, or cling to a surface while something is trying to knock you off.
+		attribute: `Strength`,
+		description: `Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.`,
+		examples: `You attempt to climb a sheer or slippery cliff, avoid hazards while scaling a wall, or cling to a surface while something is trying to knock you off.
                 You try to jump an unusually long distance or pull off a stunt mid-jump.
                 You struggle to swim or stay afloat in treacherous currents, storm-tossed waves, or areas of thick seaweed. Or another creature tries to push or pull you underwater or otherwise interfere with your swimming.`,
-    },
+	},
 
 	// Dexterity Related
 	Acrobatics: {
@@ -2644,92 +2642,92 @@ export const skillsDesc = {
 	},
 
 	Sleight_of_Hand: {
-        attribute: `Dexterity`,
-        description: `The Sleight of Hand skill involves manual dexterity used for feats such as pickpocketing or planting something on someone else.`,
-        examples: `Examples include concealing an object on your person, slipping something out of another person's pocket, or performing a card trick without being noticed.`,
-    },
+		attribute: `Dexterity`,
+		description: `The Sleight of Hand skill involves manual dexterity used for feats such as pickpocketing or planting something on someone else.`,
+		examples: `Examples include concealing an object on your person, slipping something out of another person's pocket, or performing a card trick without being noticed.`,
+	},
 
 	Stealth: {
-        attribute: `Dexterity`,
-        description: `The Stealth skill allows you to hide, move silently, and avoid detection.`,
-        examples: `Examples include sneaking past guards, hiding from enemies, or moving quietly to avoid making noise.`,
-    },
+		attribute: `Dexterity`,
+		description: `The Stealth skill allows you to hide, move silently, and avoid detection.`,
+		examples: `Examples include sneaking past guards, hiding from enemies, or moving quietly to avoid making noise.`,
+	},
 
 	// Intelligence Related
 	Arcana: {
-        attribute: `Intelligence`,
-        description: `The Arcana skill measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.`,
-        examples: `Examples include identifying a spell being cast, recognizing the effects of a magical item, or recalling information about a magical creature or phenomenon.`,
-    },
+		attribute: `Intelligence`,
+		description: `The Arcana skill measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.`,
+		examples: `Examples include identifying a spell being cast, recognizing the effects of a magical item, or recalling information about a magical creature or phenomenon.`,
+	},
 	History: {
-        attribute: `Intelligence`,
-        description: `The History skill involves recalling significant events, historical figures, ancient kingdoms, past disputes, recent wars, and lost civilizations.`,
-        examples: `Examples include remembering facts about a famous battle, identifying the lineage of a noble family, or recalling the significance of an ancient ruin.`,
-    },
+		attribute: `Intelligence`,
+		description: `The History skill involves recalling significant events, historical figures, ancient kingdoms, past disputes, recent wars, and lost civilizations.`,
+		examples: `Examples include remembering facts about a famous battle, identifying the lineage of a noble family, or recalling the significance of an ancient ruin.`,
+	},
 	Investigation: {
-        attribute: `Intelligence`,
-        description: `The Investigation skill is used to deduce clues from physical evidence, solve puzzles, and search for hidden objects.`,
-        examples: `Examples include finding a secret door, piecing together a complex puzzle, or determining the cause of a mysterious event.`,
-    },
+		attribute: `Intelligence`,
+		description: `The Investigation skill is used to deduce clues from physical evidence, solve puzzles, and search for hidden objects.`,
+		examples: `Examples include finding a secret door, piecing together a complex puzzle, or determining the cause of a mysterious event.`,
+	},
 	Nature: {
-        attribute: `Intelligence`,
-        description: `The Nature skill reflects your knowledge about the natural world, including terrain, plants, animals, weather, and natural cycles.`,
-        examples: `Examples include identifying plants and animals, predicting the weather, or recalling knowledge about natural hazards.`,
-    },
+		attribute: `Intelligence`,
+		description: `The Nature skill reflects your knowledge about the natural world, including terrain, plants, animals, weather, and natural cycles.`,
+		examples: `Examples include identifying plants and animals, predicting the weather, or recalling knowledge about natural hazards.`,
+	},
 	Religion: {
-        attribute: `Intelligence`,
-        description: `The Religion skill involves knowledge of deities, religious rituals, holy symbols, and the practices of cults and other religious sects.`,
-        examples: `Examples include identifying a religious symbol, recalling a legend about a deity, or recognizing the practices of a particular cult.`,
-    },
+		attribute: `Intelligence`,
+		description: `The Religion skill involves knowledge of deities, religious rituals, holy symbols, and the practices of cults and other religious sects.`,
+		examples: `Examples include identifying a religious symbol, recalling a legend about a deity, or recognizing the practices of a particular cult.`,
+	},
 
 	// Wisdom Related
 	Animal_Handling: {
-        attribute: `Wisdom`,
-        description: `The Animal Handling skill involves understanding and managing the behavior of animals, calming them, and influencing their actions.`,
-        examples: `Examples include calming a frightened horse, intuiting the intentions of a domesticated animal, or training a pet to follow commands.`,
-    },
+		attribute: `Wisdom`,
+		description: `The Animal Handling skill involves understanding and managing the behavior of animals, calming them, and influencing their actions.`,
+		examples: `Examples include calming a frightened horse, intuiting the intentions of a domesticated animal, or training a pet to follow commands.`,
+	},
 	Insight: {
-        attribute: `Wisdom`,
-        description: `The Insight skill allows you to determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move.`,
-        examples: `Examples include sensing whether someone is being truthful, reading body language to gauge a person's mood, or interpreting a creature's intentions.`,
-    },
+		attribute: `Wisdom`,
+		description: `The Insight skill allows you to determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move.`,
+		examples: `Examples include sensing whether someone is being truthful, reading body language to gauge a person's mood, or interpreting a creature's intentions.`,
+	},
 	Medicine: {
-        attribute: `Wisdom`,
-        description: `The Medicine skill is used to stabilize a dying companion, diagnose an illness, or treat a wound.`,
-        examples: `Examples include providing first aid to stabilize a dying ally, diagnosing a disease, or applying a salve to treat a wound.`,
-    },
+		attribute: `Wisdom`,
+		description: `The Medicine skill is used to stabilize a dying companion, diagnose an illness, or treat a wound.`,
+		examples: `Examples include providing first aid to stabilize a dying ally, diagnosing a disease, or applying a salve to treat a wound.`,
+	},
 	Perception: {
-        attribute: `Wisdom`,
-        description: `The Perception skill measures your ability to spot, hear, or otherwise detect the presence of something. It involves your senses and awareness.`,
-        examples: `Examples include noticing a hidden enemy, hearing faint sounds in the distance, or spotting a trap before it is triggered.`,
-    },
+		attribute: `Wisdom`,
+		description: `The Perception skill measures your ability to spot, hear, or otherwise detect the presence of something. It involves your senses and awareness.`,
+		examples: `Examples include noticing a hidden enemy, hearing faint sounds in the distance, or spotting a trap before it is triggered.`,
+	},
 	Survival: {
-        attribute: `Wisdom`,
-        description: `The Survival skill involves enduring hazardous environments, tracking creatures, and finding food or shelter in the wild.`,
-        examples: `Examples include following tracks to find a creature, identifying edible plants in the wilderness, or predicting the weather to prepare for an incoming storm.`,
-    },
+		attribute: `Wisdom`,
+		description: `The Survival skill involves enduring hazardous environments, tracking creatures, and finding food or shelter in the wild.`,
+		examples: `Examples include following tracks to find a creature, identifying edible plants in the wilderness, or predicting the weather to prepare for an incoming storm.`,
+	},
 
 	// Charisma Related
 	Deception: {
-        attribute: `Charisma`,
-        description: `The Deception skill is used to convince others of a falsehood, mislead them, or hide the truth.`,
-        examples: `Examples include lying to someone about your intentions, disguising yourself to avoid recognition, or creating a diversion to escape.`,
-    },
+		attribute: `Charisma`,
+		description: `The Deception skill is used to convince others of a falsehood, mislead them, or hide the truth.`,
+		examples: `Examples include lying to someone about your intentions, disguising yourself to avoid recognition, or creating a diversion to escape.`,
+	},
 	Intimidation: {
-        attribute: `Charisma`,
-        description: `The Intimidation skill involves using threats, hostile actions, or fear to influence others.`,
-        examples: `Examples include making a demand with a threatening tone, staring someone down to make them back off, or using physical presence to coerce someone into action.`,
-    },
+		attribute: `Charisma`,
+		description: `The Intimidation skill involves using threats, hostile actions, or fear to influence others.`,
+		examples: `Examples include making a demand with a threatening tone, staring someone down to make them back off, or using physical presence to coerce someone into action.`,
+	},
 	Performance: {
-        attribute: `Charisma`,
-        description: `The Performance skill is used to entertain an audience through acts such as singing, dancing, acting, or playing an instrument.`,
-        examples: `Examples include singing a song to lift spirits, performing a dramatic monologue to captivate an audience, or playing an instrument to earn money in a tavern.`,
-    },
+		attribute: `Charisma`,
+		description: `The Performance skill is used to entertain an audience through acts such as singing, dancing, acting, or playing an instrument.`,
+		examples: `Examples include singing a song to lift spirits, performing a dramatic monologue to captivate an audience, or playing an instrument to earn money in a tavern.`,
+	},
 	Persuasion: {
-        attribute: `Charisma`,
-        description: `The Persuasion skill is used to influence others through tact, social grace, or charm.`,
-        examples: `Examples include convincing someone to see things your way, negotiating a deal, or calming someone down with kind words.`,
-    },
+		attribute: `Charisma`,
+		description: `The Persuasion skill is used to influence others through tact, social grace, or charm.`,
+		examples: `Examples include convincing someone to see things your way, negotiating a deal, or calming someone down with kind words.`,
+	},
 };
 
 export const raceArray = [
@@ -2779,14 +2777,13 @@ export const raceArray = [
 	"Yuan-ti Pureblood",
 ];
 
-
-
 // 0 = - (tack) and _ = ' ' (space)
 
 // all raceDescs need formatting
 export const raceDesc = {
 	Aasimar: {
-		description: "Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
+		description:
+			"Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
 		expectedLifeSpan: "160 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Charisma +2, Constitution +1",
@@ -2794,7 +2791,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Celestial",
 	},
 	Autognome: {
-		description: "Small, mechanical gnomes created by the gnomes of the world to assist them.",
+		description:
+			"Small, mechanical gnomes created by the gnomes of the world to assist them.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "3 to 4 feet",
 		abilityScoreIncrease: "Constitution +2, Intelligence +1",
@@ -2802,7 +2800,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Gnomish",
 	},
 	Bugbear: {
-		description: "Large, hairy goblinoids known for their surprising stealth and physical prowess.",
+		description:
+			"Large, hairy goblinoids known for their surprising stealth and physical prowess.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
 		abilityScoreIncrease: "Strength +2, Dexterity +1",
@@ -2810,7 +2809,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Goblin",
 	},
 	Centaur: {
-		description: "Half-human, half-horse creatures with a strong connection to nature and a powerful build.",
+		description:
+			"Half-human, half-horse creatures with a strong connection to nature and a powerful build.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "7 to 8 feet",
 		abilityScoreIncrease: "Strength +2, Wisdom +1",
@@ -2818,7 +2818,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Sylvan",
 	},
 	Changeling: {
-		description: "Shapechangers with the ability to alter their appearance at will.",
+		description:
+			"Shapechangers with the ability to alter their appearance at will.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Charisma +2, Dexterity +1",
@@ -2826,7 +2827,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Primordial",
 	},
 	Dragonborn: {
-		description: "Humanoid dragons with draconic ancestry and the ability to breathe elemental energy.",
+		description:
+			"Humanoid dragons with draconic ancestry and the ability to breathe elemental energy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Strength +2, Charisma +1",
@@ -2834,7 +2836,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Draconic",
 	},
 	Dwarf: {
-		description: "Short, stout, and resilient beings known for their craftsmanship and endurance.",
+		description:
+			"Short, stout, and resilient beings known for their craftsmanship and endurance.",
 		expectedLifeSpan: "350 years",
 		expectedSize: "4 to 5 feet",
 		abilityScoreIncrease: "Constitution +2",
@@ -2842,7 +2845,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Dwarvish",
 	},
 	Elf: {
-		description: "Graceful and long-lived beings with keen senses and an affinity for magic.",
+		description:
+			"Graceful and long-lived beings with keen senses and an affinity for magic.",
 		expectedLifeSpan: "750 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Dexterity +2",
@@ -2850,7 +2854,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Elvish",
 	},
 	Fairy: {
-		description: "Tiny, magical creatures with wings and a playful demeanor.",
+		description:
+			"Tiny, magical creatures with wings and a playful demeanor.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "2.5 to 3 feet",
 		abilityScoreIncrease: "Dexterity +2, Charisma +1",
@@ -2858,7 +2863,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Sylvan",
 	},
 	Firbolg: {
-		description: "Large, reclusive forest dwellers with a natural affinity for the land.",
+		description:
+			"Large, reclusive forest dwellers with a natural affinity for the land.",
 		expectedLifeSpan: "500 years",
 		expectedSize: "7 to 8 feet",
 		abilityScoreIncrease: "Strength +2, Wisdom +1",
@@ -2866,15 +2872,18 @@ export const raceDesc = {
 		standardLanguages: "Common, Elvish, Sylvan",
 	},
 	Genasi: {
-		description: "Beings with elemental heritage, exhibiting traits of their elemental ancestors.",
+		description:
+			"Beings with elemental heritage, exhibiting traits of their elemental ancestors.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease:
+			"Constitution +2, another +1 depending on the subrace",
 		speed: "30 feet",
 		standardLanguages: "Common, Primordial",
 	},
 	Gith: {
-		description: "Alien humanoids with a history of interplanar conflict and psionic abilities.",
+		description:
+			"Alien humanoids with a history of interplanar conflict and psionic abilities.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
@@ -2882,7 +2891,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Gith",
 	},
 	Gnome: {
-		description: "Inventive and curious beings known for their cleverness and affinity with magic.",
+		description:
+			"Inventive and curious beings known for their cleverness and affinity with magic.",
 		expectedLifeSpan: "400 years",
 		expectedSize: "3 to 4 feet",
 		abilityScoreIncrease: "Intelligence +2",
@@ -2890,7 +2900,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Gnomish",
 	},
 	Goblin: {
-		description: "Small, cunning creatures with a knack for mischief and survival.",
+		description:
+			"Small, cunning creatures with a knack for mischief and survival.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "3 to 4 feet",
 		abilityScoreIncrease: "Dexterity +2, Constitution +1",
@@ -2898,7 +2909,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Goblin",
 	},
 	Goliath: {
-		description: "Giant humanoids with a powerful build and a competitive nature.",
+		description:
+			"Giant humanoids with a powerful build and a competitive nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
 		abilityScoreIncrease: "Strength +2, Constitution +1",
@@ -2906,7 +2918,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Giant",
 	},
 	Grung: {
-		description: "Small, amphibious humanoids with a toxic skin and a unique culture.",
+		description:
+			"Small, amphibious humanoids with a toxic skin and a unique culture.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2 to 3 feet",
 		abilityScoreIncrease: "Dexterity +2, Constitution +1",
@@ -2914,7 +2927,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Grung",
 	},
 	Hadozee: {
-		description: "A race of winged creatures with a love for exploration and adventure.",
+		description:
+			"A race of winged creatures with a love for exploration and adventure.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "4 to 5 feet",
 		abilityScoreIncrease: "Dexterity +2, Charisma +1",
@@ -2922,15 +2936,18 @@ export const raceDesc = {
 		standardLanguages: "Common, Auran",
 	},
 	Half0Elf: {
-		description: "Versatile and adaptable individuals born of human and elven parentage.",
+		description:
+			"Versatile and adaptable individuals born of human and elven parentage.",
 		expectedLifeSpan: "180 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, and two other ability scores of your choice +1",
+		abilityScoreIncrease:
+			"Charisma +2, and two other ability scores of your choice +1",
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
 	Half0Orc: {
-		description: "Strong and resilient beings born of human and orcish lineage, known for their combat prowess.",
+		description:
+			"Strong and resilient beings born of human and orcish lineage, known for their combat prowess.",
 		expectedLifeSpan: "75 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Strength +2, Constitution +1",
@@ -2938,7 +2955,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Orc",
 	},
 	Halfling: {
-		description: "Small and agile beings with a penchant for good luck and stealth.",
+		description:
+			"Small and agile beings with a penchant for good luck and stealth.",
 		expectedLifeSpan: "150 years",
 		expectedSize: "3 to 4 feet",
 		abilityScoreIncrease: "Dexterity +2",
@@ -2946,7 +2964,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Halfling",
 	},
 	Harengon: {
-		description: "Rabbit-like humanoids known for their swiftness and connection to nature.",
+		description:
+			"Rabbit-like humanoids known for their swiftness and connection to nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "4 to 5 feet",
 		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
@@ -2954,7 +2973,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Sylvan",
 	},
 	Hobgoblin: {
-		description: "Disciplined and militaristic goblinoids with a strong sense of order and hierarchy.",
+		description:
+			"Disciplined and militaristic goblinoids with a strong sense of order and hierarchy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Constitution +2, Intelligence +1",
@@ -2962,7 +2982,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Goblin",
 	},
 	Human: {
-		description: "The most adaptable and diverse of races, with a wide range of potential.",
+		description:
+			"The most adaptable and diverse of races, with a wide range of potential.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5.5 to 6 feet",
 		abilityScoreIncrease: "Two ability scores of your choice +1",
@@ -2970,7 +2991,8 @@ export const raceDesc = {
 		standardLanguages: "Common",
 	},
 	Kalashtar: {
-		description: "Mystical beings with a psychic connection to a collective consciousness.",
+		description:
+			"Mystical beings with a psychic connection to a collective consciousness.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5.5 to 6 feet",
 		abilityScoreIncrease: "Wisdom +2, Charisma +1",
@@ -2978,7 +3000,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Quori",
 	},
 	Kenku: {
-		description: "Crow-like humanoids with the ability to mimic sounds and voices.",
+		description:
+			"Crow-like humanoids with the ability to mimic sounds and voices.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "5 to 5.5 feet",
 		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
@@ -2986,7 +3009,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Auran",
 	},
 	Kobold: {
-		description: "Small, draconic creatures known for their cunning and trap-making skills.",
+		description:
+			"Small, draconic creatures known for their cunning and trap-making skills.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2.5 to 3 feet",
 		abilityScoreIncrease: "Dexterity +2, Strength +1",
@@ -2994,15 +3018,17 @@ export const raceDesc = {
 		standardLanguages: "Common, Draconic",
 	},
 	Leonin: {
-		description: "Leonin are lion-like humanoids with a strong sense of pride and a warrior culture.",
-        expectedLifeSpan: "60-80 years",
-        expectedSize: "About 6 to 7 feet tall",
-        abilityScoreIncrease: "Strength +2, Dexterity +1",
-        speed: "35 feet",
-        standardLanguages: "Common, Sylvan",
-    },
+		description:
+			"Leonin are lion-like humanoids with a strong sense of pride and a warrior culture.",
+		expectedLifeSpan: "60-80 years",
+		expectedSize: "About 6 to 7 feet tall",
+		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		speed: "35 feet",
+		standardLanguages: "Common, Sylvan",
+	},
 	Lizardfolk: {
-		description: "Reptilian humanoids with a natural affinity for the swamp and a primal outlook.",
+		description:
+			"Reptilian humanoids with a natural affinity for the swamp and a primal outlook.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Constitution +2, Wisdom +1",
@@ -3010,15 +3036,17 @@ export const raceDesc = {
 		standardLanguages: "Common, Draconic",
 	},
 	Loxodon: {
-		description: "Loxodons are elephantine humanoids with great physical strength and a peaceful nature, often serving as diplomats or guardians.",
-        expectedLifeSpan: "200-300 years",
-        expectedSize: "About 7 to 8 feet tall",
-        abilityScoreIncrease: "Constitution +2, Wisdom +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Loxodon",
-    },
+		description:
+			"Loxodons are elephantine humanoids with great physical strength and a peaceful nature, often serving as diplomats or guardians.",
+		expectedLifeSpan: "200-300 years",
+		expectedSize: "About 7 to 8 feet tall",
+		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Loxodon",
+	},
 	Minotaur: {
-		description: "Bull-headed humanoids known for their strength and labyrinthine culture.",
+		description:
+			"Bull-headed humanoids known for their strength and labyrinthine culture.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
 		abilityScoreIncrease: "Strength +2, Constitution +1",
@@ -3026,7 +3054,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Minotaur",
 	},
 	Orc: {
-		description: "Large, brutish creatures with a fierce demeanor and exceptional physical power.",
+		description:
+			"Large, brutish creatures with a fierce demeanor and exceptional physical power.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "6 to 7 feet",
 		abilityScoreIncrease: "Strength +2, Constitution +1",
@@ -3034,31 +3063,35 @@ export const raceDesc = {
 		standardLanguages: "Common, Orc",
 	},
 	Owlin: {
-		description: "Owlin are bird-like humanoids with large, owl-like eyes and the ability to glide.",
-        expectedLifeSpan: "60-80 years",
-        expectedSize: "About 4 to 5 feet tall",
-        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Auran",
-    },
+		description:
+			"Owlin are bird-like humanoids with large, owl-like eyes and the ability to glide.",
+		expectedLifeSpan: "60-80 years",
+		expectedSize: "About 4 to 5 feet tall",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Auran",
+	},
 	Plasmoid: {
-		description: "Plasmoids are amorphous beings capable of changing their shape and form, often resembling oozes or slimes.",
-        expectedLifeSpan: "60-80 years",
-        expectedSize: "Variable, but generally around 5 to 6 feet tall",
-        abilityScoreIncrease: "Constitution +2, Dexterity +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Abyssal",
-    },
+		description:
+			"Plasmoids are amorphous beings capable of changing their shape and form, often resembling oozes or slimes.",
+		expectedLifeSpan: "60-80 years",
+		expectedSize: "Variable, but generally around 5 to 6 feet tall",
+		abilityScoreIncrease: "Constitution +2, Dexterity +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Abyssal",
+	},
 	Satyr: {
-		description: "Satyrs are fey creatures with the lower bodies of goats and the upper bodies of humanoids, known for their love of revelry and nature.",
-        expectedLifeSpan: "90-120 years",
-        expectedSize: "About 4 to 5 feet tall",
-        abilityScoreIncrease: "Dexterity +2, Charisma +1",
-        speed: "35 feet",
-        standardLanguages: "Common, Sylvan",
-    },
+		description:
+			"Satyrs are fey creatures with the lower bodies of goats and the upper bodies of humanoids, known for their love of revelry and nature.",
+		expectedLifeSpan: "90-120 years",
+		expectedSize: "About 4 to 5 feet tall",
+		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		speed: "35 feet",
+		standardLanguages: "Common, Sylvan",
+	},
 	Shifter: {
-		description: "Beings with a bestial nature and the ability to assume animal-like traits.",
+		description:
+			"Beings with a bestial nature and the ability to assume animal-like traits.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
@@ -3066,15 +3099,17 @@ export const raceDesc = {
 		standardLanguages: "Common, Sylvan",
 	},
 	Simic_Hybrid: {
-		description: "Simic Hybrids are experimental beings created by the Simic Combine, combining traits of various creatures for specific purposes.",
-        expectedLifeSpan: "80-120 years",
-        expectedSize: "Varies, typically 5 to 6 feet tall",
-        abilityScoreIncrease: "Constitution +2, Intelligence +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Elvish",
-    },
+		description:
+			"Simic Hybrids are experimental beings created by the Simic Combine, combining traits of various creatures for specific purposes.",
+		expectedLifeSpan: "80-120 years",
+		expectedSize: "Varies, typically 5 to 6 feet tall",
+		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Elvish",
+	},
 	Tabaxi: {
-		description: "Cat-like humanoids with a penchant for curiosity and agility.",
+		description:
+			"Cat-like humanoids with a penchant for curiosity and agility.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Dexterity +2, Charisma +1",
@@ -3082,15 +3117,17 @@ export const raceDesc = {
 		standardLanguages: "Common, Elvish",
 	},
 	Thri0Kreen: {
-		description: "Thri-kreen are insectoid humanoids with a chitinous exoskeleton and powerful limbs, known for their agility and natural predatory skills.",
-        expectedLifeSpan: "50-60 years",
-        expectedSize: "About 6 to 7 feet tall",
-        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Thri-Kreen",
+		description:
+			"Thri-kreen are insectoid humanoids with a chitinous exoskeleton and powerful limbs, known for their agility and natural predatory skills.",
+		expectedLifeSpan: "50-60 years",
+		expectedSize: "About 6 to 7 feet tall",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Thri-Kreen",
 	},
 	Tiefling: {
-		description: "Infernal-heritaged beings with horns, tails, and a touch of dark magic.",
+		description:
+			"Infernal-heritaged beings with horns, tails, and a touch of dark magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Charisma +2, Intelligence +1",
@@ -3098,7 +3135,8 @@ export const raceDesc = {
 		standardLanguages: "Common, Infernal",
 	},
 	Triton: {
-		description: "Aquatic beings with a connection to the ocean and an affinity for water magic.",
+		description:
+			"Aquatic beings with a connection to the ocean and an affinity for water magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "6 to 6.5 feet",
 		abilityScoreIncrease: "Strength +1, Constitution +1, Charisma +1",
@@ -3106,37 +3144,42 @@ export const raceDesc = {
 		standardLanguages: "Common, Primordial",
 	},
 	Vedalken: {
-        description: "Vedalken are a race of tall, blue-skinned humanoids known for their intellectual prowess and dedication to knowledge and order.",
-        expectedLifeSpan: "150 years",
-        expectedSize: "About 6 to 7 feet tall",
-        abilityScoreIncrease: "Intelligence +2, Wisdom +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Vedalken",
-    },
+		description:
+			"Vedalken are a race of tall, blue-skinned humanoids known for their intellectual prowess and dedication to knowledge and order.",
+		expectedLifeSpan: "150 years",
+		expectedSize: "About 6 to 7 feet tall",
+		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Vedalken",
+	},
 	Verdan: {
-        description: "Verdan are a race of small, green-skinned humanoids who evolve rapidly and have a unique biological adaptability.",
-        expectedLifeSpan: "40-60 years",
-        expectedSize: "About 3 to 4 feet tall",
-        abilityScoreIncrease: "Dexterity +2, Wisdom +1",
-        speed: "30 feet",
-        standardLanguages: "Common, Goblin",
-    },
+		description:
+			"Verdan are a race of small, green-skinned humanoids who evolve rapidly and have a unique biological adaptability.",
+		expectedLifeSpan: "40-60 years",
+		expectedSize: "About 3 to 4 feet tall",
+		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		speed: "30 feet",
+		standardLanguages: "Common, Goblin",
+	},
 	Warforged: {
-		description: "Constructed beings with a humanoid form and a capacity for sentience and emotion.",
+		description:
+			"Constructed beings with a humanoid form and a capacity for sentience and emotion.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease:
+			"Constitution +2, another +1 depending on the subrace",
 		speed: "30 feet",
 		standardLanguages: "Common, Warforged",
 	},
 	Yuan0ti_Pureblood: {
-		description: "Serpent-like humanoids with a mysterious and sinister heritage.",
+		description:
+			"Serpent-like humanoids with a mysterious and sinister heritage.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
 		abilityScoreIncrease: "Charisma +2, Intelligence +1",
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
-	}
+	},
 };
 
 export const subracesObj = {
@@ -3226,58 +3269,58 @@ export const alignmentArray = [
 // all alignmentDescs need formatting
 export const alignmentDesc = {
 	Lawful_Good: {
-        description: `(LG) creatures can be counted on to do 
+		description: `(LG) creatures can be counted on to do 
 					the right thing as expected by society. `,
-        expectedClasses:`Gold dragons, 
+		expectedClasses: `Gold dragons, 
 						paladins, and most dwarves are lawful good.`,
-    },
+	},
 	Neutral_Good: {
-        description: ` (NG) folk do the best they can to help 
+		description: ` (NG) folk do the best they can to help 
 others according to their needs.`,
-        expectedClasses:``,
-    },
+		expectedClasses: ``,
+	},
 	Chaotic_Good: {
-        description: ` (CG) creatures act as their conscience 
+		description: ` (CG) creatures act as their conscience 
 						directs, with little regard for what others expect.`,
-        expectedClasses:`Copper 
+		expectedClasses: `Copper 
 						dragons, many elves, and unicorns are chaotic good.`,
-    },
+	},
 	Lawful_Neutral: {
-        description: ` (LN) individuals act in accordance 
+		description: ` (LN) individuals act in accordance 
 						with law, tradition, or personal codes.`,
-        expectedClasses:`Many monks and 
+		expectedClasses: `Many monks and 
 						some wizards are lawful neutral.`,
-    },
+	},
 	Neutral: {
-        description: ` (N) is the alignment of those who prefer to 
+		description: ` (N) is the alignment of those who prefer to 
 					steer clear of moral questions and don’t take sides, doing what seems best at the time`,
-        expectedClasses:` Lizardfolk, most 
+		expectedClasses: ` Lizardfolk, most 
 						druids, and many humans are neutral`,
-    },
+	},
 	Chaotic_Neutral: {
-        description: ` (CN) creatures follow their whims, 
+		description: ` (CN) creatures follow their whims, 
 					holding their personal freedom above all else.`,
-        expectedClasses:`Many barbarians and rogues, and some bards, are 
+		expectedClasses: `Many barbarians and rogues, and some bards, are 
 						chaotic neutral.`,
-    },
+	},
 	Lawful_Evil: {
-        description: `(LE) creatures methodically take what they 
+		description: `(LE) creatures methodically take what they 
 					want, within the limits of a code of tradition, loyalty, or 
 					order. `,
-        expectedClasses:`Devils, blue dragons, and hobgoblins are lawful evil.`,
-    },
+		expectedClasses: `Devils, blue dragons, and hobgoblins are lawful evil.`,
+	},
 	Neutral_Evil: {
-        description: `l (NE) is the alignment of those who do 
+		description: `l (NE) is the alignment of those who do 
 					whatever they can get away with, without compassion or 
 					qualms. `,
-        expectedClasses:`Many drow, some cloud giants, and yugoloths 
+		expectedClasses: `Many drow, some cloud giants, and yugoloths 
 				are neutral evil.`,
-    },
+	},
 	Chaotic_Evil: {
-        description: `l (CE) creatures act with arbitrary 
+		description: `l (CE) creatures act with arbitrary 
 					violence, spurred by their greed, hatred, or bloodlust. `,
-        expectedClasses:`Demons, red dragons, and orcs are chaotic evil.`,
-    },
+		expectedClasses: `Demons, red dragons, and orcs are chaotic evil.`,
+	},
 };
 
 export const backgroundsArray = [
@@ -3315,20 +3358,19 @@ export const backgroundsArray = [
 
 // all backgroundDescs need formatting
 export const backgroundDesc = {
-
 	Abandoned: {
-        description: `Not everyone will have someone with them their entire life. Even if there is a crowd of potential relationships waiting to happen, they will tend to not want to forge a relationship, so as to not be abandoned again. These individuals tend to shy away from very large crowds, acting as an observer of sorts (like an outsider observing the in crowd, etc.). A person who is abandoned also has a unique viewpoint as they interpret events drastically from other party members.
+		description: `Not everyone will have someone with them their entire life. Even if there is a crowd of potential relationships waiting to happen, they will tend to not want to forge a relationship, so as to not be abandoned again. These individuals tend to shy away from very large crowds, acting as an observer of sorts (like an outsider observing the in crowd, etc.). A person who is abandoned also has a unique viewpoint as they interpret events drastically from other party members.
 
 					Think for a moment. Who abandoned you? Are you holding a grudge against them, Or are you willing to forgive them? For how long have you been abandoned? These are questions you should ask yourself, and answer in the shoes of your character. You could've been abandoned by a ragtag group of adventurers, after you discussed that you wanted to leave the group behind! Or perhaps, you were abandoned by your family, left to starve in the alleyways of a run down village.`,
-        skillProficiencies: ` Deception, Intimidation, Performance, Persuasion, or Stealth. `,
-        toolProficiencies: `One artisan's tool of your choice.`,
+		skillProficiencies: ` Deception, Intimidation, Performance, Persuasion, or Stealth. `,
+		toolProficiencies: `One artisan's tool of your choice.`,
 		languages: `One language of your choice`,
-        startingEquipment: `You start with dark common clothes, a few (1d4) pieces of gold, one trinket from your life, before you were abandoned.`,
+		startingEquipment: `You start with dark common clothes, a few (1d4) pieces of gold, one trinket from your life, before you were abandoned.`,
 		backgroundSpecial: ``,
-        feature: {
-            title: `Pity or Hope`,
-            description: `Whether you are a sorrowful realist, or a hopeful for what the future can give you, you have learned to embrace who you are, for better or worse. When you meet new people and explain what has happened to you, those who can feel empathy or share your pain are more often willing to lend a helping hand. Whether that is in the form of information, food and supplies, or just a place for you and your party to sleep, most with a heart will do their best to understand your plight and help in any way they can.`,
-        },
+		feature: {
+			title: `Pity or Hope`,
+			description: `Whether you are a sorrowful realist, or a hopeful for what the future can give you, you have learned to embrace who you are, for better or worse. When you meet new people and explain what has happened to you, those who can feel empathy or share your pain are more often willing to lend a helping hand. Whether that is in the form of information, food and supplies, or just a place for you and your party to sleep, most with a heart will do their best to understand your plight and help in any way they can.`,
+		},
 		alterateFeature: [
 			{
 				title: ``,
@@ -3339,7 +3381,7 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: `AWAITING FILLING`, // NEEDS TO BE FILLED IN
+		suggestedCharacteristics: `AWAITING FILLING`, // NEEDS TO BE FILLED IN
 		suggestedPersonalityTraits: `d4	Personality Traits (Pity)
 								1	I don’t know what I’m supposed to do with my life anymore…
 								2	People always tell me to look on the bright side...what one, though?
@@ -3371,20 +3413,20 @@ export const backgroundDesc = {
 						4	I get angry at the little things in life...
 						5	I often apologize for things out of my control to try and avoid conflict.
 						6	When things get too hard, I push people away before they can abandon me again.`,
-    },
+	},
 	AbyssDweller: {
-        description: `You were spawned in the layers of the Abyss. You might be a demon, or a lost soul.
+		description: `You were spawned in the layers of the Abyss. You might be a demon, or a lost soul.
 
-Do you have any memories of the time in the Abyss? What have you experienced? Have you received torture or torment in any kind and if yes, was there a reason for that? Were you part of the army of a demon lord? Did you fight against devils or other demons? What is the reason that you are not part of that world anymore? Maybe you found a way out by yourself, someone sent you on a mission, or you were summoned by a cult or other force?`,
-        skillProficiencies: `Intimidation, Deception`,
-        toolProficiencies: `Disguise Kit`,
-		languages:`Choose one from the following list: Abyssal, Infernal, Celestial or Deep Speech`,
-        startingEquipment: `A Disguise kit, a set of dark common clothes, a small belt pouch containing 5 gp, and a trinket from the lower planes`,
+					Do you have any memories of the time in the Abyss? What have you experienced? Have you received torture or torment in any kind and if yes, was there a reason for that? Were you part of the army of a demon lord? Did you fight against devils or other demons? What is the reason that you are not part of that world anymore? Maybe you found a way out by yourself, someone sent you on a mission, or you were summoned by a cult or other force?`,
+		skillProficiencies: `Intimidation, Deception`,
+		toolProficiencies: `Disguise Kit`,
+		languages: `Choose one from the following list: Abyssal, Infernal, Celestial or Deep Speech`,
+		startingEquipment: `A Disguise kit, a set of dark common clothes, a small belt pouch containing 5 gp, and a trinket from the lower planes`,
 		backgroundSpecial: ``,
-        feature: {
-            title: `Secrets of the Abyss`,
-            description: `As a dweller of the abyss, you know passages and routes through the abyss that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the Abyss twice as fast as your speed would normally allow.`,
-        },
+		feature: {
+			title: `Secrets of the Abyss`,
+			description: `As a dweller of the abyss, you know passages and routes through the abyss that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the Abyss twice as fast as your speed would normally allow.`,
+		},
 		alterateFeature: [
 			{
 				title: ``,
@@ -3395,7 +3437,7 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: `AWAITING FILLING`, // NEEDS FILLING
+		suggestedCharacteristics: `AWAITING FILLING`, // NEEDS FILLING
 		suggestedPersonalityTraits: `
 									d8	Personality Trait
 									1	Friendship is new and strange to me.
@@ -3428,10 +3470,10 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					4	I have an explosive nature. It's pretty easy to trigger me.
 					5	Sometimes I talk to myself. The time in the abyss was long and lonely...
 					6	I usually keep stuff I find or get for me.`,
-    },
+	},
 
 	Acolyte: {
-        description: ` You have spent your life in the service of a temple 
+		description: ` You have spent your life in the service of a temple 
 					to a specific god or pantheon of gods. You act as an 
 					intermediary between the realm of the holy and the 
 					mortal world, performing sacred rites and offering 
@@ -3451,15 +3493,15 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					the leader of a small cult outside of any established 
 					temple structure, or even an occult group that served a 
 					fiendish master that you now deny.`,
-        skillProficiencies: `Insight, Religion `,
-        toolProficiencies: `Two of your choice `,
-        startingEquipment: `A holy symbol (a gift to you when you 
+		skillProficiencies: `Insight, Religion `,
+		toolProficiencies: `Two of your choice `,
+		startingEquipment: `A holy symbol (a gift to you when you 
 						entered the priesthood), a prayer book or prayer 
 						wheel, 5 sticks of incense, vestments, a set of common 
 						clothes, and a belt pouch containing 15 gp`,
-        feature: {
-            title: `Shelter of the Faithful`,
-            description: ` As an acolyte, you command the respect of those who 
+		feature: {
+			title: `Shelter of the Faithful`,
+			description: ` As an acolyte, you command the respect of those who 
 						share your faith, and you can perform the religious 
 						ceremonies of your deity. You and your adventuring 
 						companions can expect to receive free healing and 
@@ -3477,14 +3519,14 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						your temple, you can call upon the priests for assistance, 
 						provided the assistance you ask for is not hazardous and 
 						you remain in good standing with your temple.`,
-        },
-        suggestedCharacteristics: ` Acolytes are shaped by their experience in temples 
+		},
+		suggestedCharacteristics: ` Acolytes are shaped by their experience in temples 
 								or other religious communities. Their study of the 
 								history and tenets of their faith and their relationships 
 								to temples, shrines, or hierarchies affect their 
 								mannerisms and ideals. Their flaws might be some 
 								hidden hypocrisy or heretical idea, or an ideal or bond 
-								taken to an extreme.`,												// needs formatting
+								taken to an extreme.`, // needs formatting
 		suggestedPersonalityTraits: ` 1 I idolize a particular hero of my faith, and constantly 
 									refer to that person’s deeds and example.
 									3 I see omens in every event and action. The gods try to 
@@ -3535,17 +3577,17 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						them.
 						6 Once I pick a goal, I become obsessed with it to the 
 						detriment of everything else in my life`,
-    },
+	},
 	Addict: {
-        description: `Addiction can happen to anyone. While genetics can help increase or decrease the chances of addiction, everything that causes pleasure can become an addiction.
+		description: `Addiction can happen to anyone. While genetics can help increase or decrease the chances of addiction, everything that causes pleasure can become an addiction.
 
 					You've became dependent on some sort of substance or activity. You become jittery and unreasonable if you don't feed your addiction for a while. You may be working to rid yourself of the addiction, became numb to it, or revel in it. In a way, you are a sick person afflicted with a disease that keeps you hooked. You may have tried to get help. Did it work? Are you on recovery?Or perhaps you recovered and fell back into the hole, or even found some new form of addiction. It's a slippery slope, after all.
 
 					When you pick this background, talk with your GM about any addictive substances in the campaign. Is there support for addicts or is knowledge on addictions vague or nonexistent? How long have you been addicted? Is your addiction deadly? What are your withdrawal symptoms and when do they start occurring? And do you do anything to help subdue withdraw and/or the addiction itself? When discussing with your DM, it is recommended you make an addiction that is feasible to the campaign to sustain. It should not be something overly rare, just to keep it always within reach.`,
-        skillProficiencies: `Choose between Deception or Persuasion, your 2nd skill must be related to something you've learned from your addiction (ie: sex or drugs could be medicine, gambling could be sleight of hand).`,
-        toolProficiencies: `1 tool set that facilitates your addiction (ie: alchemy lab for drugs, game set for gambling, a bondage set for sex.)`,
-		languages:`Any one`,
-        startingEquipment: ` Medical diagnosis papers, paraphernalia that relates to your addiction (usually the tool you are proficient in), common clothes, and a pouch containing 5gp.`,
+		skillProficiencies: `Choose between Deception or Persuasion, your 2nd skill must be related to something you've learned from your addiction (ie: sex or drugs could be medicine, gambling could be sleight of hand).`,
+		toolProficiencies: `1 tool set that facilitates your addiction (ie: alchemy lab for drugs, game set for gambling, a bondage set for sex.)`,
+		languages: `Any one`,
+		startingEquipment: ` Medical diagnosis papers, paraphernalia that relates to your addiction (usually the tool you are proficient in), common clothes, and a pouch containing 5gp.`,
 		backgroundSpecial: `Addiction, Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.
 
 							d6	Addiction
@@ -3555,14 +3597,14 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 							4	Sex and/or masturbation.
 							5	A certain activity (maybe you just REALLY love climbing trees, perhaps your fingers tingle and shake to knit scarves, you just can't go very long without needing to do that activity)
 							6	You have a rare genetic disorder that makes anything remotely pleasurable addictive.`,
-        feature: {
-            title: `Strong Highs and Lows`,
-            description: `As an addict, your mental and physical state deal heavily with how you have fed your addiction. When you indulge in your addiction, you start to feel euphoric and powerful. You might make risky decisions or become stupidly cockamamie. It is also what keeps you normal and happy, able to enjoy things.
+		feature: {
+			title: `Strong Highs and Lows`,
+			description: `As an addict, your mental and physical state deal heavily with how you have fed your addiction. When you indulge in your addiction, you start to feel euphoric and powerful. You might make risky decisions or become stupidly cockamamie. It is also what keeps you normal and happy, able to enjoy things.
 
 						On the other side of the spectrum, if you don't feed your addiction you start to feel withdrawal. You might feel anxious, jittery, weak, and may even become dangerously erratic. The agitation caused makes you a danger to yourself and others around you as you recklessly may do dangerous things to try and feed your addiction. For example, if you are addicted to sexual activities, you may steal money from even allies to spend on prostitutes.
 
 						Talk with your GM about your high and the withdrawal symptoms. How long do they last? Do you suffer madness without your fix? How much of your chosen addiction do you require to get high? Is it getting worse?`,
-        },
+		},
 		alterateFeature: [
 			{
 				title: `Enabled`,
@@ -3577,7 +3619,7 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 							Work with the GM to determine your road to recovery. How hard is it to resist? It can depend on what your addiction is. You can use Wisdom or Constitution saves if necessary. Is it worse over time? Will you ever fully recover and if so, when? What benefits might you gain when you finally quit for good?`,
 			},
 		],
-        suggestedCharacteristics: `Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.`,
+		suggestedCharacteristics: `Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.`,
 		suggestedPersonalityTraits: `d8	Personality Trait
 									1	I think constantly about my choice of substance/Activity.
 									2	I will do anything to get more of what I want.
@@ -3609,9 +3651,598 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						4	I have an uncontrollable twitch that never stops, not even when I sleep.
 						5	When going through withdrawal, I become very violent and aggressive to everyone around me.
 						6	When I don't get my addiction satisfied I can barely sleep.`,
+	},
+	Adopted: {
+		isHomebrew: true,
+		description: `You grew up in a family that have a somewhat different appearance from you. This could have been from being stolen, sold, lost and found, switched at birth, or maybe your parent/s even died from childbirth or war. Whatever the reason you are in a family different from you. For how long did you know they are not your blood family?
+
+						Give a lot of thought to what makes you a unique orphan that was adopted. What kind of a harsh life did you endure on the streets until adoption? Were you way too old to be adopted even, and it was pure luck and grace some kind-hearted person took you in? Have you bounced around from orphanage to orphanage and built yourself a reputation as trouble child, still able to be adopted miraculously? Were you a victim of domestic abuse and a great fight broke out over adopting you? Are your birth parents even still alive? Did you maybe see them perish before your eyes or see them leave you as a helpless vagabond?
+
+						After you have your past figured out, think about how you interact with your current family on a deeper level. Do you commonly feel out of place with them, usually preferring to spend time away from any foster siblings you may have? Do you rarely tell your foster parents of your problems and sneak around the house, unable to feel at home? Or do you act normal and accept it?`,
+		skillProficiencies: `Persuasion, Deception and Stealth`,
+		toolProficiencies: `None`,
+		startingEquipment: `A set of common clothes matching the style worn by your current family, something of a trinket left from your birth parents (cannot be worth more than 5gp) and pouch with 10gp`,
+		languages: `You know the language spoken by your adoptive family enough, but you cannot speak it fluently, only sentences with bad syntax and grammar (e.g., "Name is I, Todd"). When you speak in this language, those who understand are inclined to ignore you or take offense.`,
+		backgroundSpecial: {
+			title: `Adopted Family`,
+			description: `Who is your adopting family? How did you meet or how do you fare with them?`,
+			die: `1d10`,
+			roll: [
+				{
+					number: 1,
+					description: `I was kidnapped as a child and sold into slavery until I ended up in my current home.`,
+				},
+				{
+					number: 2,
+					description: `I was left behind in migration and lost until a friendly traveler picked me up to raise as his own.`,
+				},
+				{
+					number: 3,
+					description: `War tore me apart from my family. Rescue efforts landed me a home with the people I now call family.`,
+				},
+				{
+					number: 4,
+					description: `I was curious and got lost looking at something in the bustling city. The person who owned what interested me took me in.`,
+				},
+				{
+					number: 5,
+					description: `My old family abandoned me when they took me out to town and never came back to fetch me. A kindly family saw me crying and took me in.`,
+				},
+				{
+					number: 6,
+					description: `I was found in a wreck with no memory. The person who found me was nice and raised me.`,
+				},
+				{
+					number: 7,
+					description: `My current parents actually stole me from another crib`,
+				},
+				{
+					number: 8,
+					description: `A disaster cost me my family. I was destitute until a nice couple took me in.`,
+				},
+				{
+					number: 9,
+					description: `I was found on the doorstep at the gate of the city.`,
+				},
+				{
+					number: 10,
+					description: `I was dishonorably disowned and wandered until I ended up with a house that took me in warmly.`,
+				},
+			],
+		},
+		feature: {
+			title: `Trust Issues`,
+			description: `People of your birth race, and of the race of your adoptive family (with the possible exception of you family/s) find it harder to trust you. Those of the race you are will take longer to trust you because they think you have been corrupted or on the side of the race of your adoptive family and no longer share their values. People who are the same race of your adoptive family may take longer to trust you because they believe that you will always be one of your race, no matter how you were brought up. Due to this ostracization, races that are not of your birth or adopted tend to take you with a bit more kindness.`,
+		},
+		alterateFeature: [
+			{
+				title: `No Discrimination`,
+				description: `You often see trivial differences between the various races that you encounter. You know that the race itself doesn’t decide who a person will be. You know all types of personalities of creatures you talk with after just an exchange of few words.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: `Adopted children can be seen as little devils or victims of circumstance in stories like Cinderella. Consider what kind of mischievous or angelic adopted child your character is.`,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I love learning about new things, partially about other races and sub-races work`,
+				},
+				{
+					number: 2,
+					description: `I will often change the way my voice sounds just for fun`,
+				},
+				{
+					number: 3,
+					description: `I enjoy puzzles and thinking things through`,
+				},
+				{
+					number: 4,
+					description: `	I can find the most childish things entertaining`,
+				},
+				{
+					number: 5,
+					description: `I am always polite, and use my manners`,
+				},
+				{
+					number: 6,
+					description: `I often feel lonely, even when many others are nearby`,
+				},
+				{
+					number: 7,
+					description: `I sometimes awaken feeling a sense of lingering emotion, from a dream I can never remember`,
+				},
+				{
+					number: 8,
+					description: `I always felt out of place, like a swan raised by ducks, or maybe a duck raised by swans…`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Amusement. If there isn’t any fun in doing something then why do it `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					description: `Belonging. Everyone should know where they belong `,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					description: `Rule-follower. Regardless as to what you are, everyone should follow the rules`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					description: `	Vengeance. For all that happened at my birth, there will be blood to pay`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					description: `Opinions. Everyone is entitled to their own opinions, of course this includes myself `,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					description: `Whatever. Everyone just does what they want anyway`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	What happened at my birth, I know it is important somehow.`,
+				},
+				{
+					number: 2,
+					description: `I must find my birth parents, they have to be out there.`,
+				},
+				{
+					number: 3,
+					description: `How can I know another, when I don’t even know myself?`,
+				},
+				{
+					number: 4,
+					description: `I’m not just another of my race/sub-race, I will prove my worth.`,
+				},
+				{
+					number: 5,
+					description: `What does this mean, this [insert item from birth family], I must know.`,
+				},
+				{
+					number: 6,
+					description: `All I want is to find a place where I belong.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I hoard what’s mine, and am quite possessive. I find it hard to allow others to touch my things, or even give away/sell an item of mine.`,
+				},
+				{
+					number: 2,
+					description: `I am aware of how different I am to those around me, making it hard for myself when I try to get close to others.`,
+				},
+				{
+					number: 3,
+					description: `I am a passive person (I will lose so you can win), I will do almost anything to avoid conflict with others, and will run and hide if people start yelling.`,
+				},
+				{
+					number: 4,
+					description: `I am an aggressive person (For me to win you have to lose), quick to anger, and will keep pressing until I get my way, or making the other person seem at fault.`,
+				},
+				{
+					number: 5,
+					description: `	Trusting people just isn't my thing. Forget about even becoming friends.`,
+				},
+				{
+					number: 6,
+					description: `I have a habit of lying about the most insignificant things.`,
+				},
+			],
+		},
+	},
+	Adopted: {
+		isHomebrew: true,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		languages: ``,
+		startingEquipment: ``,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+					alignment: ``,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+	},
+	
+	Afflicted: {
+	isHomebrew: true ,
+        description: `Since early in life, possibly from birth, you have been subject to a highly visible abnormal condition. Your condition is chronic and, in the absence of powerful magic or advanced medical technology, incurable, though not detrimental to your ability to function. The main impact of your condition is cosmetic, though it may also be uncomfortable, affect your diet, alter your mannerisms, or shorten your lifespan in the long run. People are generally ignorant of the plight of their fellow man, and even in highly advanced enlightened societies, they will swiftly judge one another based on little more than looks alone. As a result, anyone who stands out as being weird in any way is likely to be the target of fear, suspicion, rumors, superstition, abuse, and other expressions of plain ignorance. People suffering through such circumstances find themselves living a life that is not their own, foisted upon them by fate and misfortune, trying to choose their own direction as others try to decide things for them.`,
+        skillProficiencies: `Intimidation and Persuasion.`,
+        toolProficiencies: ` One tool of any sort.`,
+		languages: `any one language`,
+        startingEquipment: ` A medical device (A mask, crutch, brace, etc.) you use to maintain some comfort, a set of common clothes, a bag, a blank notebook, and a belt pouch containing 5gp`,
+		backgroundSpecial: {
+			title: `Affliction`,
+			description: `What is it which makes you so hideous?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Disease. You are afflicted by a chronic disease which cannot be cured. (Real world example is Leprosy.)`,
+				},
+				{
+					number: 2,
+					description: `Deformity. You are permanently disfigured, due to a birth defect. (Think Elephant Man)`,
+				},
+				{
+					number: 3,
+					description: `Dysfunction. You have some neurological problem which prevents you from thinking, remembering, understanding, communicating, or coordinating yourself normally. (In ancient times, people thought these things meant you were possessed.)`,
+				},
+				{
+					number: 4,
+					description: `Disfigurement. An accident has left you horribly scarred. (Note, this does not mean dismembered; it is cosmetic, like the Phantom of the Opera.)`,
+				},
+				{
+					number: 5,
+					description: `Distortion. A magical effect has substantially altered you in a frightening way. (Such as having a warthog's head, or no shadow.)`,
+				},
+				{
+					number: 6,
+					description: `Modification. You have some sort of substantial body modification which is significantly outside of normal, even for people with modifications, and dramatically alters your appearance. (Full body tattoos, facial brandings, etc.)`,
+				}
+			],
+		},
+        feature: {
+            title: `Pity`,
+            description: `People feel your pain. Even if they have never been through anything like what happened to you, they can somehow empathize. People will take pity on you, opting to reduce your suffering if they can, or at least choosing not to inflict any more suffering upon you. This can range from a farmer letting you spend the night in his barn, to a jailer who is cruel to everyone else, but simply neglectful of you.`,
+        },
+		alterateFeature: [
+			{
+				title: `Fear`,
+				description: `Your condition is so severe it dehumanizes you. People have difficulties identifying your gender or race. Some may mistake you for a monster. Children run, babies cry, and people slam doors in your face. On the other hand, you are the master of clearing a room. Nobody knows what's wrong with you, but most people are too afraid to find out! A menacing look or an impossible threat could come across as believable from you, and people might just go along with it because they'd rather not see what happens if you actually spit in the well.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am unyieldingly genuine, and laugh, cry, or scream without restraint.`,
+				},
+				{
+					number: 2,
+					description: `I act as though there is nothing different about me, even when it affects my life.`,
+				},
+				{
+					number: 3,
+					description: `I take advantage of others' pity to shirk my responsibilities.`,
+				},
+				{
+					number: 4,
+					description: `	I can't even look at my own reflection.`,
+				},
+				{
+					number: 5,
+					description: `I came to terms with this a long time ago.`,
+				},
+				{
+					number: 6,
+					description: `I am a permanent optimist, and can find the silver lining to any storm cloud.`,
+				},
+				{
+					number: 7,
+					description: `I never smile- not really anyways, and anyone who pays attention can see the sadness in my false smiles.`,
+				},
+				{
+					number: 8,
+					description: `My condition makes it difficult to communicate, and people have troubles understanding me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+					alignment: ``,
+				}
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				}
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				}
+			],
+		},
     },
 	Charlatan: {
-        description: `You have always had a way with people. You know 
+		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
 					desires after a few minutes of conversation, and with a 
 					few leading questions you can read them like they were 
@@ -3628,25 +4259,25 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					restore youth and vigor, and there’s a bridge in the city 
 					that just happens to be for sale. These marvels sound 
 					implausible, but you make them sound like the real deal.`,
-        skillProficiencies: `Deception, Sleight of Hand `,
-        toolProficiencies: ` Disguise kit, forgery kit `,
-        startingEquipment: ` A set of fine clothes, a disguise kit, tools 
+		skillProficiencies: `Deception, Sleight of Hand `,
+		toolProficiencies: ` Disguise kit, forgery kit `,
+		startingEquipment: ` A set of fine clothes, a disguise kit, tools 
 							of the con of your choice (ten stoppered bottles filled 
 							with colored liquid, a set of weighted dice, a deck of 
 							marked cards, or a signet ring of an imaginary duke), 
 							and a belt pouch containing 15 gp`,
-        feature: {
-            title: `Flase Identity`,
-            description: `You have created a second identity that includes 
+		feature: {
+			title: `Flase Identity`,
+			description: `You have created a second identity that includes 
 						documentation, established acquaintances, and 
 						disguises that allow you to assume that persona. 
 						Additionally, you can forge documents including official 
 						papers and personal letters, as long as you have seen an 
 						example of the kind of document or the handwriting you 
 						are trying to copy.`,
-        },
+		},
 
-        suggestedCharacteristics: ` Charlatans are colorful characters who conceal their 
+		suggestedCharacteristics: ` Charlatans are colorful characters who conceal their 
 									true selves behind the masks they construct. They 
 									reflect what people want to see, what they want to 
 									believe, and how they see the world. But their true 
@@ -3721,23 +4352,24 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						I hate to admit it and will hate myself for it, but I'll run 
 						and preserve my own hide if the going gets tough.
 						`,
-    },
+	},
 	Criminal: {
-        description: ` You are an experienced criminal with a history of 
+		description: ` You are an experienced criminal with a history of 
 					breaking the law. You have spent a lot of time among 
 					other criminals and still have contacts within the 
 					criminal underworld. You’re far closer than most people 
 					to the world of murder, theft, and violence that pervades 
 					the underbelly of civilization, and you have survived up to 
 					this point by flouting the rules and regulations of society.`,
-        skillProficiencies: `Deception, Stealth `,
-        toolProficiencies: `One type of gaming set, 
+		skillProficiencies: `Deception, Stealth `,
+		toolProficiencies: `One type of gaming set, 
 							thieves’ tools`,
-        startingEquipment: `A crowbar, a set of dark common clothes 
+		startingEquipment: `A crowbar, a set of dark common clothes 
 							including a hood, and a belt pouch containing 15 gp`,
 
-		custom: {       // additional 0000
-			title:`Criminal Specialty`,
+		custom: {
+			// additional 0000
+			title: `Criminal Specialty`,
 			feature: `There are many kinds of criminals, and within a thieves’ 
 							guild or similar criminal organization, individual 
 							members have particular specialties. Even criminals 
@@ -3759,18 +4391,17 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 							7 Pickpocket
 							8
 							Smuggler`,
-
 		},
-        feature: {
-            title: `Criminal Contact`,
-            description: ` You have a reliable and trustworthy contact who acts as 
+		feature: {
+			title: `Criminal Contact`,
+			description: ` You have a reliable and trustworthy contact who acts as 
 						your liaison to a network of other criminals. You know 
 						how to get messages to and from your contact, even 
 						over great distances; specifically, you know the local 
 						messengers, corrupt caravan masters, and seedy sailors 
 						who can deliver messages for you.`,
-        },
-        suggestedCharacteristics: ` Criminals might seem like villains on the surface, 
+		},
+		suggestedCharacteristics: ` Criminals might seem like villains on the surface, 
 								and many of them are villainous to the core. But some 
 								have an abundance of endearing, if not redeeming, 
 								characteristics. There might be honor among thieves, but 
@@ -3826,19 +4457,19 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						sanctioned agent of the crown, or perhaps you sold the 
 						secrets you uncovered to the highest bidder.`,
 		},
-    },
+	},
 	Entertainer: {
-        description: ` You thrive in front of an audience. You know how to 
+		description: ` You thrive in front of an audience. You know how to 
 					entrance them, entertain them, and even inspire them. 
 					Your poetics can stir the hearts of those who hear you, 
 					awakening grief or joy, laughter or anger. Your music 
 					raises their spirits or captures their sorrow. Your dance 
 					steps captivate, your humor cuts to the quick. Whatever 
 					techniques you use, your art is your life.`,
-        skillProficiencies: ` Acrobatics, Performance `,
-        toolProficiencies: `Disguise kit, one type of 
+		skillProficiencies: ` Acrobatics, Performance `,
+		toolProficiencies: `Disguise kit, one type of 
 							musical instrument `,
-        startingEquipment: `A musical instrument (one of your choice), 
+		startingEquipment: `A musical instrument (one of your choice), 
 							the favor of an admirer (love letter, lock of hair, or 
 							trinket), a costume, and a belt pouch containing 15 gp`,
 		custom: {
@@ -3865,9 +4496,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						10 Tumbler`,
 		},
 
-        feature: {
-            title: `By Popular Demand`,
-            description: ` You can always find a place to perform, usually in an 
+		feature: {
+			title: `By Popular Demand`,
+			description: ` You can always find a place to perform, usually in an 
 						inn or tavern but possibly with a circus, at a theater, or 
 						even in a noble’s court. At such a place, you receive free 
 						lodging and food of a modest or comfortable standard 
@@ -3876,8 +4507,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						performance makes you something of a local figure. 
 						When strangers recognize you in a town where you have 
 						performed, they typically take a liking to you.`,
-        },
-        suggestedCharacteristics: `Successful entertainers have to be able to capture 
+		},
+		suggestedCharacteristics: `Successful entertainers have to be able to capture 
 								and hold an audience’s attention, so they tend to 
 								have flamboyant or forceful personalities. They’re 
 								inclined toward the romantic and often cling to 
@@ -3932,9 +4563,10 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						5 I have trouble keeping my true feelings hidden. My 
 						sharp tongue lands me in trouble.
 						6 Despite my best efforts, I am unreliable to my friends.`,
-		variant: {  // additional 0000
-			title:`Gladiator`,
-			description:` A gladiator is as much an entertainer as any minstrel 
+		variant: {
+			// additional 0000
+			title: `Gladiator`,
+			description: ` A gladiator is as much an entertainer as any minstrel 
 						or circus performer, trained to make the arts of combat 
 						into a spectacle the crowd can enjoy. This kind of 
 						flashy combat is your entertainer routine, though you 
@@ -3945,18 +4577,18 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						pit fighting club. You can replace the musical instrument 
 						in your equipment package with an inexpensive but 
 						unusual weapon, such as a trident or net.`,
-		}
-    },
+		},
+	},
 	Folk_Hero: {
-        description: `You come from a humble social rank, but you are 
+		description: `You come from a humble social rank, but you are 
 					destined for so much more. Already the people of 
 					your home village regard you as their champion, and 
 					your destiny calls you to stand against the tyrants and 
 					monsters that threaten the common folk everywhere`,
-        skillProficiencies: `animal Handling, Survival `,
-        toolProficiencies: ` One type of artisan’s tools, 
+		skillProficiencies: `animal Handling, Survival `,
+		toolProficiencies: ` One type of artisan’s tools, 
 							vehicles (land)`,
-        startingEquipment: ` A set of artisan’s tools (one of your choice), 
+		startingEquipment: ` A set of artisan’s tools (one of your choice), 
 							a shovel, an iron pot, a set of common clothes, and a 
 							belt pouch containing 10 gp`,
 		custom: {
@@ -3985,17 +4617,17 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					10 Recruited into a lord’s army, I rose to leadership and 
 					was commended for my heroism.`,
 		},
-        feature: {
-            title: `Rustic Hospitality`,
-            description: ` Since you come from the ranks of the common folk, 
+		feature: {
+			title: `Rustic Hospitality`,
+			description: ` Since you come from the ranks of the common folk, 
 						you fit in among them with ease. You can find a place 
 						to hide, rest, or recuperate among other commoners, 
 						unless you have shown yourself to be a danger to 
 						them. They will shield you from the law or anyone 
 						else searching for you, though they will not risk 
 						their lives for you.`,
-        },
-        suggestedCharacteristics: `A folk hero is one of the common people, for better 
+		},
+		suggestedCharacteristics: `A folk hero is one of the common people, for better 
 								or for worse. Most folk heroes look on their humble 
 								origins as a virtue, not a shortcoming, and their home 
 								communities remain very important to them.`,
@@ -4059,9 +4691,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						5 Secretly, I believe that things would be better if I were a 
 						tyrant lording over the land.
 						I have trouble trusting in my allies.`,
-    },
+	},
 	Guild_Artisan: {
-        description: ` You are a member of an artisan’s guild, skilled in 
+		description: ` You are a member of an artisan’s guild, skilled in 
 					a particular field and closely associated with other 
 					artisans. You are a well-established part of the 
 					mercantile world, freed by talent and wealth from the 
@@ -4069,14 +4701,15 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					skills as an apprentice to a master artisan, under the 
 					sponsorship of your guild, until you became a master in 
 					your own right.`,
-        skillProficiencies: `Insight, Persuasion `,
-        toolProficiencies: `One type of artisan’s tools `,
-        startingEquipment: `A set of artisan’s tools (one of your choice), 
+		skillProficiencies: `Insight, Persuasion `,
+		toolProficiencies: `One type of artisan’s tools `,
+		startingEquipment: `A set of artisan’s tools (one of your choice), 
 						a letter of introduction from your guild, a set of 
 						traveler’s clothes, and a belt pouch containing 15 gp`,
 
-		custom: {     // additional 0000
-			title:`Guild Business`,
+		custom: {
+			// additional 0000
+			title: `Guild Business`,
 			description: `  Guilds are generally found in cities large enough to 
 						support several artisans practicing the same trade. 
 						However, your guild might instead be a loose network 
@@ -4131,9 +4764,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						your trade for adventure, or take on the extra effort to 
 						weave adventuring and trade together.`,
 		},
-        feature: {
-            title: `Guild Membership`,
-            description: `As an established and respected member of a guild, you 
+		feature: {
+			title: `Guild Membership`,
+			description: `As an established and respected member of a guild, you 
 						can rely on certain benefits that membership provides. 
 						Your fellow guild members will provide you with 
 						lodging and food if necessary, and pay for your funeral 
@@ -4151,8 +4784,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						You must pay dues of 5 gp per month to the guild. If 
 						you miss payments, you must make up back dues to 
 						remain in the guild’s good graces.`,
-        },
-        suggestedCharacteristics: ` Guild artisans are among the most ordinary people in 
+		},
+		suggestedCharacteristics: ` Guild artisans are among the most ordinary people in 
 								the world—until they set down their tools and take up 
 								an adventuring career. They understand the value of  
 								hard work and the importance of community, but they’re 
@@ -4222,7 +4855,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						6
 						I’m horribly jealous of anyone who can outshine my 
 						handiwork. Everywhere I go, I’m surrounded by rivals.`,
-		variant: {     // additional 0000
+		variant: {
+			// additional 0000
 			title: `Guild Merchant`,
 			description: `Instead of an artisans’ guild, you might belong to a 
 						guild of traders, caravan masters, or shopkeepers. You 
@@ -4242,21 +4876,21 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						with a mule and a cart.
 						`,
 		},
-    },
+	},
 	Hermit: {
-        description: ` You lived in seclusion—either in a sheltered community 
+		description: ` You lived in seclusion—either in a sheltered community 
 					such as a monastery, or entirely alone—for a formative 
 					part of your life. In your time apart from the clamor of 
 					society, you found quiet, solitude, and perhaps some of 
 					the answers you were looking for.`,
-        skillProficiencies: ` Medicine, Religion `,
-        toolProficiencies: ` Herbalism kit `,
-        startingEquipment: `A scroll case stuffed full of notes from your 
+		skillProficiencies: ` Medicine, Religion `,
+		toolProficiencies: ` Herbalism kit `,
+		startingEquipment: `A scroll case stuffed full of notes from your 
 							studies or prayers, a winter blanket, a set of common 
 							clothes, an herbalism kit, and 5 gp`,
 		custom: {
 			title: `Life of Seclusion`,
-			description:` What was the reason for your isolation, and what 
+			description: ` What was the reason for your isolation, and what 
 						changed to allow you to end your solitude? You can work 
 						with your DM to determine the exact nature of your 
 						seclusion, or you can choose or roll on the table below to 
@@ -4277,9 +4911,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						8 I was a pilgrim in search of a person, place, or relic of 
 						spiritual significance.`,
 		},
-        feature: {
-            title: `Discovery`,
-            description: ` The quiet seclusion of your extended hermitage gave you 
+		feature: {
+			title: `Discovery`,
+			description: ` The quiet seclusion of your extended hermitage gave you 
 						access to a unique and powerful discovery. The exact 
 						nature of this revelation depends on the nature of your 
 						seclusion. It might be a great truth about the cosmos, 
@@ -4292,8 +4926,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						to exile, and hence the reason for your return to society.
 						Work with your DM to determine the details of your 
 						discovery and its impact on the campaign.`,
-        },
-        suggestedCharacteristics: ` Some hermits are well suited to a life of seclusion, 
+		},
+		suggestedCharacteristics: ` Some hermits are well suited to a life of seclusion, 
 									whereas others chafe against it and long for company. 
 									Whether they embrace solitude or long to escape it, the 
 									solitary life shapes their attitudes and ideals. A few are 
@@ -4373,9 +5007,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						charlatan, posing as a wise and holy person and letting 
 						pious fools support you.`,
 		},
-    },
+	},
 	Noble: {
-        description: ` You understand wealth, power, and privilege. You 
+		description: ` You understand wealth, power, and privilege. You 
 					carry a noble title, and your family owns land, collects 
 					taxes, and wields significant political influence. You 
 					might be a pampered aristocrat unfamiliar with 
@@ -4412,13 +5046,13 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					line or even a spiritual member of the family?
 					These details help establish your family and your title 
 					as features of the world of the campaign`,
-        skillProficiencies: `History, Persuasion `,
-        toolProficiencies: `One type of gaming set `,
-        startingEquipment: `A set of fine clothes, a signet ring, a scroll 
+		skillProficiencies: `History, Persuasion `,
+		toolProficiencies: `One type of gaming set `,
+		startingEquipment: `A set of fine clothes, a signet ring, a scroll 
 							of pedigree, and a purse containing 25 gp`,
-        feature: {
-            title: `Position of Privelege`,
-            description: `Thanks to your noble birth, people are inclined to 
+		feature: {
+			title: `Position of Privelege`,
+			description: `Thanks to your noble birth, people are inclined to 
 						think the best of you. You are welcome in high society, 
 						and people assume you have the right to be wherever 
 						you are. The common folk make every effort to 
@@ -4426,8 +5060,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						people of high birth treat you as a member of the same 
 						social sphere. You can secure an audience with a local 
 						noble if you need to.`,
-        },
-        suggestedCharacteristics: `Nobles are born and raised to a very different lifestyle 
+		},
+		suggestedCharacteristics: `Nobles are born and raised to a very different lifestyle 
 								than most people ever experience, and their personalities 
 								reflect that upbringing. A noble title comes with a 
 								plethora of bonds—responsibilities to family, to other 
@@ -4535,9 +5169,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						(such as dungeons), and will leave if they are frequently 
 						endangered or abused.`,
 		},
-    },
+	},
 	Outlander: {
-        description: ` You grew up in the wilds, far from civilization and the 
+		description: ` You grew up in the wilds, far from civilization and the 
 					comforts of town and technology. You’ve witnessed the 
 					migration of herds larger than forests, survived weather 
 					more extreme than any city-dweller could comprehend, 
@@ -4547,9 +5181,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					recluse, a hunter-gatherer, or even a marauder. Even in 
 					places where you don’t know the specific features of the 
 					terrain, you know the ways of the wild.`,
-        skillProficiencies: `Athletics, Survival `,
-        toolProficiencies: `One type of musical instrument `,
-        startingEquipment: `A staff, a hunting trap, a trophy from an 
+		skillProficiencies: `Athletics, Survival `,
+		toolProficiencies: `One type of musical instrument `,
+		startingEquipment: `A staff, a hunting trap, a trophy from an 
 							animal you killed, a set of traveler’s clothes, and a belt 
 							pouch containing 10 gp`,
 		custom: {
@@ -4582,16 +5216,16 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						Hunter-gatherer
 						10 Tribal marauder`,
 		},
-        feature: {
-            title: `Wanderer`,
-            description: ` You have an excellent memory for maps and geography, 
+		feature: {
+			title: `Wanderer`,
+			description: ` You have an excellent memory for maps and geography, 
 						and you can always recall the general layout of terrain, 
 						settlements, and other features around you. In addition, 
 						you can find food and fresh water for yourself and up to 
 						five other people each day, provided that the land offers 
 						berries, small game, water, and so forth.`,
-        },
-        suggestedCharacteristics: ` Often considered rude and uncouth among civilized 
+		},
+		suggestedCharacteristics: ` Often considered rude and uncouth among civilized 
 									folk, outlanders have little respect for the niceties of 
 									life in the cities. The ties of tribe, clan, family, and the 
 									natural world of which they are a part are the most 
@@ -4652,15 +5286,15 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						6 Don’t expect me to save those who can’t save 
 						themselves. It is nature’s way that the strong thrive 
 						and the weak perish`,
-    },
+	},
 	Sage: {
-        description: ` You spent years learning the lore of the multiverse. You 
+		description: ` You spent years learning the lore of the multiverse. You 
 						scoured manuscripts, studied scrolls, and listened to the 
 						greatest experts on the subjects that interest you. Your 
 						efforts have made you a master in your fields of study.`,
-        skillProficiencies: `Arcana, History `,
-        toolProficiencies: `Two of your choice`, // this needs to be thought about and fixed werd 2 roon timbs
-        startingEquipment: `A bottle of black ink, a quill, a small knife, 
+		skillProficiencies: `Arcana, History `,
+		toolProficiencies: `Two of your choice`, // this needs to be thought about and fixed werd 2 roon timbs
+		startingEquipment: `A bottle of black ink, a quill, a small knife, 
 							a letter from a dead colleague posing a question you 
 							have not yet been able to answer, a set of common 
 							clothes, and a belt pouch containing 10 gp`,
@@ -4685,9 +5319,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						Scribe
 						`,
 		},
-        feature: {
-            title: `Researcher`,
-            description: ` When you attempt to learn or recall a piece of lore, if you 
+		feature: {
+			title: `Researcher`,
+			description: ` When you attempt to learn or recall a piece of lore, if you 
 						do not know that information, you often know where and 
 						from whom you can obtain it. Usually, this information 
 						comes from a library, scriptorium, university, or a sage 
@@ -4696,8 +5330,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						almost inaccessible place, or that it simply cannot be 
 						found. Unearthing the deepest secrets of the multiverse 
 						can require an adventure or even a whole campaign.`,
-        },
-        suggestedCharacteristics: ` Sages are defined by their extensive studies, and their 
+		},
+		suggestedCharacteristics: ` Sages are defined by their extensive studies, and their 
 									characteristics reflect this life of study. Devoted to 
 									scholarly pursuits, a sage values knowledge highly— 
 									sometimes in its own right, sometimes as a means 
@@ -4763,9 +5397,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						5 I speak without really thinking through my words, 
 						invariably insulting others.
 						I can’t keep a secret to save my life, or anyone else’s.`,
-    },
+	},
 	Sailor: {
-        description: `You sailed on a seagoing vessel for years. In that 
+		description: `You sailed on a seagoing vessel for years. In that 
 					time, you faced down mighty storms, monsters of the 
 					deep, and those who wanted to sink your craft to the 
 					bottomless depths. Your first love is the distant line of 
@@ -4781,16 +5415,16 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					navigator, cook, or some other position? Who were the 
 					captain and first mate? Did you leave your ship on good 
 					terms with your fellows, or on the run?`,
-        skillProficiencies: `Athletics, Perception `,
-        toolProficiencies: `Navigator’s tools, vehicles (water) `,
-        startingEquipment: `A belaying pin (club), 50 feet of silk rope, 
+		skillProficiencies: `Athletics, Perception `,
+		toolProficiencies: `Navigator’s tools, vehicles (water) `,
+		startingEquipment: `A belaying pin (club), 50 feet of silk rope, 
 							a lucky charm such as a rabbit foot or a small stone 
 							with a hole in the center (or you may roll for a random 
 							trinket on the Trinkets table in chapter 5), a set of 
 							common clothes, and a belt pouch containing 10 gp`,
-        feature: {
-            title: `Ship's Passage`,
-            description: ` When you need to, you can secure free passage on 
+		feature: {
+			title: `Ship's Passage`,
+			description: ` When you need to, you can secure free passage on 
 						a sailing ship for yourself and your adventuring 
 						companions. You might sail on the ship you served on, 
 						or another ship you have good relations with (perhaps 
@@ -4801,8 +5435,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						you need to go. In return for your free passage, you 
 						and your companions are expected to assist the crew 
 						during the voyage.`,
-        },
-        suggestedCharacteristics: ` Sailors can be a rough lot, but the responsibilities of 
+		},
+		suggestedCharacteristics: ` Sailors can be a rough lot, but the responsibilities of 
 									life on a ship make them generally reliable as well. Life 
 									aboard a ship shapes their outlook and forms their most 
 									important attachments.`,
@@ -4863,8 +5497,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						6
 						My pride will probably lead to my destruction.`,
 		variant: {
-			title:`Pirate`,  // possibly add variant feature
-			description:`You spent your youth under the sway of a dread pirate, 
+			title: `Pirate`, // possibly add variant feature
+			description: `You spent your youth under the sway of a dread pirate, 
 						a ruthless cutthroat who taught you how to survive in a 
 						world of sharks and savages. You’ve indulged in larceny 
 						on the high seas and sent more than one deserving soul 
@@ -4885,13 +5519,13 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						shop, since most people will not report your activity to the 
 						authorities`,
 		},
-    },
+	},
 	Secret: {
 		isHomebrew: true,
-        description: `You or your past were kept secret for some reason or another. Maybe your parents wanted to protect you from those who might harm you, or maybe they wanted to secret you away to use for their own gain. Maybe they aren’t your parents at all, or maybe you have no parents, being born of a higher power. But why? Are you an alien? A being of extreme power? Or maybe you’re just cursed, and no one wanted to tell you. Whether you led a normal life up to this point or not is of no consequence because now you know, and your life will never be normal again.`,
-        skillProficiencies: `Arcana or History, and Insight or Intimidation`,
-        toolProficiencies: `Disguise Kit`,
-        startingEquipment: `One trinket from your past related to your secret, Disguise Kit, a set of traveller's clothes, a set of common clothes, and a pouch containing 10 gp`,
+		description: `You or your past were kept secret for some reason or another. Maybe your parents wanted to protect you from those who might harm you, or maybe they wanted to secret you away to use for their own gain. Maybe they aren’t your parents at all, or maybe you have no parents, being born of a higher power. But why? Are you an alien? A being of extreme power? Or maybe you’re just cursed, and no one wanted to tell you. Whether you led a normal life up to this point or not is of no consequence because now you know, and your life will never be normal again.`,
+		skillProficiencies: `Arcana or History, and Insight or Intimidation`,
+		toolProficiencies: `Disguise Kit`,
+		startingEquipment: `One trinket from your past related to your secret, Disguise Kit, a set of traveller's clothes, a set of common clothes, and a pouch containing 10 gp`,
 		languages: `One exotic language of your choice.`,
 		backgroundSpecial: {
 			description: `Your secret was a big one, and now you get to choose it. Pick one from the table below (or roll the appropriate die for a random one), or make up a new one, at your DM’s discretion.`,
@@ -4921,13 +5555,13 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				{
 					number: 6,
 					description: `	You have special powers not easily explained by science or magic.`,
-				}
+				},
 			],
 		},
-        feature: {
-            title: `Fabricated Background`,
-            description: `Having the wool pulled over your eyes for so long has some benefits, as you now know how to do it to others. Weaving false stories has become second nature to you, so you gain advantage on Deception checks pertaining to any backstory you have fabricated about your past to make someone believe it as fact.`,
-        },
+		feature: {
+			title: `Fabricated Background`,
+			description: `Having the wool pulled over your eyes for so long has some benefits, as you now know how to do it to others. Weaving false stories has become second nature to you, so you gain advantage on Deception checks pertaining to any backstory you have fabricated about your past to make someone believe it as fact.`,
+		},
 		alterateFeature: [
 			{
 				title: `Heralded`,
@@ -4938,7 +5572,7 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: ``,
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: {
 			description: ``,
 			die: `1d8`,
@@ -4976,7 +5610,6 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					number: 8,
 					description: `I’ll do anything to protect my secret, even if I have to kill.`,
 				},
-				
 			],
 		},
 		suggestedIdeal: {
@@ -5013,7 +5646,7 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					number: 6,
 					description: `Curiosity. I want to know more about my secret, and why it was bestowed upon me`,
 					alignment: `Any`,
-				}
+				},
 			],
 		},
 		suggestedBond: {
@@ -5044,7 +5677,7 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				{
 					number: 6,
 					description: `My secret is my curse, and I need to find a cure.`,
-				}
+				},
 			],
 		},
 		suggestedFlaw: {
@@ -5075,12 +5708,12 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				{
 					number: 6,
 					description: `I don’t think I deserve my secret. It should’ve gone to someone better than me.`,
-				}
+				},
 			],
 		},
-    },
+	},
 	Soldier: {
-        description: ` War has been your life for as long as you care to 
+		description: ` War has been your life for as long as you care to 
 						remember. You trained as a youth, studied the use of 
 						weapons and armor, learned basic survival techniques, 
 						including how to stay alive on the battlefield. You 
@@ -5094,10 +5727,10 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						career. Was it a standing army, a town guard, or a village 
 						militia? Or it might have been a noble’s or merchant’s 
 						private army, or a mercenary company.`,
-        skillProficiencies: `Athletics, Intimidation `,
-        toolProficiencies: ` One type of gaming set, 
+		skillProficiencies: `Athletics, Intimidation `,
+		toolProficiencies: ` One type of gaming set, 
 							vehicles (land)`,
-        startingEquipment: ` An insignia of rank, a trophy taken from 
+		startingEquipment: ` An insignia of rank, a trophy taken from 
 						a fallen enemy (a dagger, broken blade, or piece of a 
 						banner), a set of bone dice or deck of cards, a set of 
 						common clothes, and a belt pouch containing 10 gp`,
@@ -5121,9 +5754,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						blacksmith, or the 
 						like)`,
 		},
-        feature: {
-            title: `Military Rank`,
-            description: ` You have a military rank from your career as a soldier. 
+		feature: {
+			title: `Military Rank`,
+			description: ` You have a military rank from your career as a soldier. 
 						Soldiers loyal to your former military organization 
 						still recognize your authority and influence, and they 
 						defer to you if they are of a lower rank. You can invoke 
@@ -5132,8 +5765,8 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						use. You can also usually gain access to friendly 
 						military encampments and fortresses where your 
 						rank is recognized.`,
-        },
-        suggestedCharacteristics: ` The horrors of war combined with the rigid discipline of 
+		},
+		suggestedCharacteristics: ` The horrors of war combined with the rigid discipline of 
 								military service leave their mark on all soldiers, shaping 
 								their ideals, creating strong bonds, and often leaving 
 								them scarred and vulnerable to fear, shame, and hatred.`,
@@ -5185,9 +5818,9 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						4 My hatred of my enemies is blind and unreasoning.
 						5 I obey the law, even if the law causes misery.
 						6 I’d rather eat my armor than admit when I’m wrong`,
-    },
+	},
 	Urchin: {
-        description: `You grew up on the streets alone, orphaned, and poor. 
+		description: `You grew up on the streets alone, orphaned, and poor. 
 					You had no one to watch over you or to provide for 
 					you, so you learned to provide for yourself. You fought 
 					fiercely over food and kept a constant watch out for other 
@@ -5202,21 +5835,21 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 					How did you come by that money? What allowed you to 
 					break free of your desperate circumstances and embark 
 					on a better life?`,
-        skillProficiencies: `Sleight of Hand, Stealth `,
-        toolProficiencies: `Disguise kit, thieves’ tools `,
-        startingEquipment: ` A small knife, a map of the city you 
+		skillProficiencies: `Sleight of Hand, Stealth `,
+		toolProficiencies: `Disguise kit, thieves’ tools `,
+		startingEquipment: ` A small knife, a map of the city you 
 							grew up in, a pet mouse, a token to remember your 
 							parents by, a set of common clothes, and a belt pouch 
 							containing 10 gp`,
-        feature: {
-            title: `City Secrets`,
-            description: ` You know the secret patterns and flow to cities and can 
+		feature: {
+			title: `City Secrets`,
+			description: ` You know the secret patterns and flow to cities and can 
 						find passages through the urban sprawl that others would 
 						miss. When you are not in combat, you (and companions 
 						you lead) can travel between any two locations in the city 
 						twice as fast as your speed would normally allow.`,
-        },
-        suggestedCharacteristics: `Urchins are shaped by lives of desperate poverty, for 
+		},
+		suggestedCharacteristics: `Urchins are shaped by lives of desperate poverty, for 
 								good and for ill. They tend to be driven either by a 
 								commitment to the people with whom they shared life 
 								on the street or by a burning desire to find a better life— 
@@ -5281,17 +5914,17 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 						5 It’s not stealing if I need it more than someone else.
 						People who can't take care of themselves get what they 
 						deserve.`,
-    },
+	},
 	Far_Traveler: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
 		backgroundSpecial: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
+		feature: {
+			title: ``,
+			description: ``,
+		},
 		alterateFeature: [
 			{
 				title: ``,
@@ -5302,207 +5935,207 @@ Do you have any memories of the time in the Abyss? What have you experienced? Ha
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: ``,
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Haunted_One: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Knight: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Pirate: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	City_Watch: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Clan_Crafter: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Cloistered_Scholar: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Courtier: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Faction_Agent: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Inheritor: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Investigator: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Mercenary_Veteran: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Urban_Bounty_Hunter: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 	Waterdhavian_Noble: {
-        description: ``,
-        skillProficiencies: ``,
-        toolProficiencies: ``,
-        startingEquipment: ``,
-        feature: {
-            title: ``,
-            description: ``,
-        },
-        suggestedCharacteristics: ``,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		startingEquipment: ``,
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: ``,
 		suggestedIdeal: ``,
 		suggestedBond: ``,
 		suggestedFlaw: ``,
-    },
+	},
 };
 
 export const exoticLanguageArray = [

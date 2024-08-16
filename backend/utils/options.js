@@ -1,6 +1,7 @@
 const backgrounds = [
 	"Abandoned",
 	"Abyssdweller",
+	"Adopted",
 	"Acolyte",
 	"Charlatan",
 	"Criminal",
