@@ -3334,11 +3334,11 @@ export const backgroundsArray = [
 	},
 	{
 		option: "Addict",
-		isHomebrew: false,
+		isHomebrew: true,
 	},
 	{
 		option: "Adept",
-		isHomebrew: false,
+		isHomebrew: true,
 	},
 	{
 		option: "Adopted",
@@ -3374,7 +3374,19 @@ export const backgroundsArray = [
 	},
 	{
 		option: "Ancient_Cultist",
-		isHomebrew: false,
+		isHomebrew: true,
+	},
+	{
+		option: "Ancient_King",
+		isHomebrew: true,
+	},
+	{
+		option: "Ancient_One",
+		isHomebrew: true,
+	},
+	{
+		option: "Anthropologist",
+		isHomebrew: true,
 	},
 	{
 		option: "Charlatan",
@@ -5522,6 +5534,588 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 				{
 					number: 6,
 					description: `I dread the idea of killing another sentient creature. I have already spilled enough blood.`,
+				},
+			],
+		},
+	},
+	Ancient_King: {
+		isHomebrew: true,
+		description: `At an ancient, perhaps long-forgotten point in history, you were a mighty ruler who lorded over your people, whether you were cruel or fair. Your name was known all across the land and your people prospered. But like all living things you eventually died, and were memorialised in a tomb. But now, for whatever reason you have risen again. Perhaps a necromancer rose you, or perhaps your patron god revived you for a certain purpose. But these lands are unfamiliar; the people, the environment, even the very ground beneath your feet may be different from how you remember. You had better get used to this new world quickly.`,
+		skillProficiencies: `History, Survival`,
+		toolProficiencies: `One type of gaming set`,
+		languages: `Two of your choice`,
+		startingEquipment: `A set of fine clothes, an ancient signet ring of your dynasty, and a ragged purse containing 15 gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Ancient Thinking`,
+			description: `Since you died so long ago, your way of thinking is unusual for these modern times. Perhaps you believe something long since proven wrong, like that Drow are Fiends formed from the bowels of the earth. Perhaps you don't value the same things that other people do, like believing knowledge is a useless pursuit when compared to something strange such as jousting with boulders. Or perhaps you believe something more esoteric, like that nothing truly happens in the world without spirits deciding it should happen. Let your imagination flow and think of something like that.`,
+		},
+		alterateFeature: [
+			{
+				title: `Ancient Knowledge`,
+				description: `Since you died so long ago, you may know things that have been lost to time, like how to manipulate a certain form of magic, or why an ancient civilisation fell. Whatever you know, there may be people searching for that information at any cost.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I've lost my kingdom, leave me to mourn for what I have lost.`,
+				},
+				{
+					number: 2,
+					description: `I don't need to care about anything anymore, my people have gone and I'm practically immortal now`,
+				},
+				{
+					number: 3,
+					description: `	This world is new, and I want to explore it!`,
+				},
+				{
+					number: 4,
+					description: `I ruled them once. So why don't people treat me the way I deserve!`,
+				},
+				{
+					number: 5,
+					description: `My anger often gets the better of me. But how dare people live while I don't!`,
+				},
+				{
+					number: 6,
+					description: `I am dignified in death, and have the patience only an undying ruler may have.`,
+				},
+				{
+					number: 7,
+					description: `I experienced death, and I fear it. Because of this, I'm a coward.`,
+				},
+				{
+					number: 8,
+					description: `There are new things to do in this world, and I want to do them all!`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Conquest. My rule will return, no matter how many bodies it takes!`,
+					alignment: `Evil`,
+				},
+				{
+					number: 2,
+					description: `Freedom. I've been gone for so long that I don't need to live up to any standards anymore. I can be whoever I want to be!`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					description: `Justice. Though my people may be gone, I still have to hold true to the ideal of a fair and just ruler.`,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					description: `Order. The world I know is different from this new one, it must be tamed.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Rebuilding. This world has changed, but I have to rebuild my life no matter the cost`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					description: `Exploiting. This world is one of opportunity, and I plan to take advantage of that.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Whatever caused my people to be gone from this world will pay!`,
+				},
+				{
+					number: 2,
+					description: `	I need to find out what caused me to rise from my grave.`,
+				},
+				{
+					number: 3,
+					description: `Something was stolen from my tomb, and I want it back!`,
+				},
+				{
+					number: 4,
+					description: `I had a friend when I was alive, and I want to know what happened to them.`,
+				},
+				{
+					number: 5,
+					description: `My people are gone from this world, and I will preserve their memory.`,
+				},
+				{
+					number: 6,
+					description: `	I had an old rival from another Kingdom who wronged me, I want to know what happened to him, and whether or not I'll be able to settle the score.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I believe I'm above everybody else, and that they don't even deserve to be in the same building as me.`,
+				},
+				{
+					number: 2,
+					description: `My curiosity for this new world often gets me into trouble.`,
+				},
+				{
+					number: 3,
+					description: `	I often get distracted by thoughts of what could have happened to my Kingdom.`,
+				},
+				{
+					number: 4,
+					description: `I'm slow to come up with or trust new ideas because of my age.`,
+				},
+				{
+					number: 5,
+					description: `	Whenever someone speaks of my kingdom in a bad light, I fly into a burning rage.`,
+				},
+				{
+					number: 6,
+					description: `I am extremely superstitious, believing otherwise mundane things in a strange way, to ward off bad spirits and the like.`,
+				},
+			],
+		},
+	},
+	Ancient_One: {
+		isHomebrew: true,
+		description: `Long, long ago, you ventured into the world to play your part in history. However, for whatever reason, history has moved on, and you continue to exist. You do not age naturally, or contract common diseases, and have lived several lifetimes beyond your race's eldest. Were you blessed by a deity, to gather knowledge far beyond your years? Cursed by fate to watch everyone around you wither away from age and disease? Or mayhap a victim of your own magical experimentation? Regardless of the cause, your soul refuses to give up its claim to life, and gives you an ancient perspective on life.
+
+					Where some immortals are relatively young and rash, though, you are far older than your appearance may imply, and you've lived a far sight longer than much anyone alive. You've seen kingdoms rise and fall, history be made, and both good and evil waste away to the passage of time.
+
+					The details of your immortality are best left to you and your DM, but it's recommended to use the vanilla Boon of Immortality that prevents aging. Alternative methods could be a dark magic using phylacteries, or some sort of rebirth as a child elsewhere on death.`,
+		skillProficiencies: `History, Insight`,
+		toolProficiencies: ``, // possibly add
+		languages: `Two languages of your choice`,
+		startingEquipment: `A set of traveller's clothes, a heavy cloak or robe, a small trinket from a past life that you always seem to find, and a pouch containing 15 gp`,
+		backgroundSpecial: {
+			title: `Source of your Soul`,
+			description: `What gives you your undying soul? Why do you live on beyond your years?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `I was blessed and given a purpose by a benevolent being.`,
+				},
+				{
+					number: 2,
+					description: `	I was cursed by a cruel being to watch the end of the world.`,
+				},
+				{
+					number: 3,
+					description: `	I obtained a Wish spell and gained immortality, for better or worse.`,
+				},
+				{
+					number: 4,
+					description: `I won a bet against a god of death itself in a time long past, and obtained reincarnation.`,
+				},
+				{
+					number: 5,
+					description: `I meticulously set up a cycle of clones and phylacteries to obtain my own immortality.`,
+				},
+				{
+					number: 6,
+					description: `I don't know why I'm immortal... only that I'm older than I've any right to be.`,
+				},
+			],
+		},
+		feature: {
+			title: `Lifetimes of Experience`,
+			description: `Ancient perspectives give one a broad range of knowledge and history to draw from, though they often cloud new ideas from being formed. You can often recall information about places that many characters have never ventured, or extrapolate based off similar events. Similarly, historical facts come naturally to you, and many a scholar or ruler values your counsel if you make it available.`,
+		},
+		alterateFeature: [
+			{
+				title: `A World of Connections`,
+				description: `As time passed, you cultivated your connections. In any major town, you know ways to gain an audience with important people. Names to drop, people to refer to, symbols to pull up, and various catchphrases to get you into high (and sometimes low) places. These people may not always know why you know these things, though, so getting the audience itself may be all you can manage.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `While most Ancient Ones simply do not age or contract disease, some simply found a way to reincarnate, albeit generally slowly and with some form of penalty. Others have obtained some kind of far more effective means, though the player should consult with their DM for anything stronger than agelessness or rebirth. Most adventuring Ancient Ones, though, have some quirk pushing them out of their timeless vigils, or a cause pushing them on. Below are some ideas to get you started.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I obsess about my appearance. If I'm this old, I refuse to look it!`,
+				},
+				{
+					number: 2,
+					description: `My worldview is old and obtuse to many, but I won't change it for children.`,
+				},
+				{
+					number: 3,
+					description: `Having seen most everything, I spent time away from the world, to let it catch up. What new things can I explore?`,
+				},
+				{
+					number: 4,
+					description: `	I cannot, for the lives of me, replicate the cause of my immortality. I'm so close, though!`,
+				},
+				{
+					number: 5,
+					description: `The world is doomed to repeat itself, and my melancholy attitude makes few friends.`,
+				},
+				{
+					number: 6,
+					description: `My odd mannerisms tend to make people uneasy, though my knowledge tends to eventually make allies.`,
+				},
+				{
+					number: 7,
+					description: `I have a tendency to get bored with what many consider new, and seem disrespectful because of this.`,
+				},
+				{
+					number: 8,
+					description: `Others are unimportant compared to the grand designs of the universe, and I plan to be more than a cog.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Knowledge. My knowledge is meant to be gathered and shared freely, with all who wish to know.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					description: `Prophecy. There are things far beyond the ken of mortals, and I will carry out what must be done.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					description: `Entropy. Infinite time means infinite plans to serve my ends... and mine shall come to fruition soon.`,
+					alignment: `Chaos`,
+				},
+				{
+					number: 4,
+					description: `Calamity. The only way to end my cycle is to end the world, and I shall be the one to usher in the end of eras.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					description: `Rest. I only wish to find a way to end this cycle, and finally make peace`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					description: `Beyond. I have obtained immortality... but what could be even further beyond? `,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	Bonds are hard to form, as other mortals have such short lives.`,
+				},
+				{
+					number: 2,
+					description: `My immortality is the closest of my secrets, and the knowledge slipping away could do irreversible harm.`,
+				},
+				{
+					number: 3,
+					description: `I do not form alliances easily, and trust slowly.`,
+				},
+				{
+					number: 4,
+					description: `I revere the one that gave me immortality, and seek to understand them.`,
+				},
+				{
+					number: 5,
+					description: `	I resent the one that thrust immortality upon me, and seek to undermine them.`,
+				},
+				{
+					number: 6,
+					description: `I wish to find those from my past - or their kin - and rekindle the bonds, but worry they won't realize who I am.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I tire of the world, and find no joy in things.`,
+				},
+				{
+					number: 2,
+					description: `Anything new sends me into an overexcited frenzy.`,
+				},
+				{
+					number: 3,
+					description: `I obsess over knowledge of all kinds, and must seek out anything new.`,
+				},
+				{
+					number: 4,
+					description: `My immortality and drive leave me somewhat callous, and underlings tend to get churned up in my wake.`,
+				},
+				{
+					number: 5,
+					description: `Time wears on the mind, looping over and over and over, until the madness sets in. Oh, the glorious madness!`,
+				},
+				{
+					number: 6,
+					description: `I know all. I am not wrong, and any who disagree with me are foolish whelps.`,
+				},
+			],
+		},
+	},
+	Anthropologist: {
+		isHomebrew: true,
+		description: `You have always been fascinated by other cultures, from the most ancient and primeval lost lands to the most modern civilizations. By studying other cultures, customs, philosophies, laws, rituals, religious beliefs, languages, and art, you have learned how tribes, empires, and all forms of society in between craft their own destinies and doom. This knowledge came to you not only through books and scrolls, but also through firsthand observation – by visiting far-flung settlements and exploring local histories and customs.
+					When making an anthropologist, consider how your character developed this interest in others. Usually, anthropologists have to be good at interacting with people of all cultures, so being a withdrawn misanthrope really doesn't fit the bill. Anthropologists are good at field work, like conducting ethnographies. They are also slow to judge, and good at gathering information and making inferences about the subjects of their study. Sometimes you may be ore interested in specifically the language of a culture, or maybe its history.
+					Alternatively, forensic anthropologists are those who study the structure of bones. They are highly intellectual individuals that can piece together a skull from pieces, and also discern special things about a persons identity from their skeletal remains. This profession can invite stigma, as it closely deals with the dead. Fascination with bones overall is also not usually welcomed.`,
+		skillProficiencies: `Insight, Religion`,
+		toolProficiencies: ``,
+		languages: `Two languages of your choice`,
+		startingEquipment: `A leather-bound diary, a bottle of ink, a quill, a set of traveler's clothes, one trinket of special significance from a culture of your study, and a pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: `Anthropologists study a wide variety of cultures and subjects. A specialization helps better define what you have studied and perhaps what you know of your world and the locale.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Biological Anthropology`,
+				},
+				{
+					number: 2,
+					description: `Cultural Anthropology`,
+				},
+				{
+					number: 3,
+					description: `Linguistics`,
+				},
+				{
+					number: 4,
+					description: `Archaeology`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Cultural Chameleon`,
+			description: `Before becoming an adventurer, you spent much of your adult life away from your homeland, living among people different from your kin. You came to understand these foreign cultures and the ways of their people, who eventually treated you as one of their own. One culture had more of an influence on you than any other, shaping your beliefs and customs. Choose a race whose culture you've adopted. You are considered a friend to the race by their major groups, and they will be willing to help you out, so long as it does not conflict with their own interests or endanger their own`,
+		},
+		alterateFeature: [
+			{
+				title: `Eye for Bone`,
+				description: `You have adept eyes and senses for bones as an anthropologist. From skeletal remains, you can determine creature type, sex and age of the deceased.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Anthropologists leave behind the societies into which they were born to discover what life ls like in other parts of the world. They seek to see how other races and civilizations survive – or why they did not. Some anthropologists are driven by intellectual curiosity, while others want the fame and recognition that comes with being the first to discover a new people, a lost tribe, or the truth about an ancient empire's downfall.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I prefer the company of those who aren't like me, including people of other races.`,
+				},
+				{
+					number: 2,
+					description: `	I'm a stickler when it comes to observing proper etiquette and local customs`,
+				},
+				{
+					number: 3,
+					description: `I would rather observe than meddle.`,
+				},
+				{
+					number: 4,
+					description: `By living among violent people, I have become desensitized to violence.`,
+				},
+				{
+					number: 5,
+					description: `I would risk life and limb to discover a new culture or unravel the secrets of a dead one.`,
+				},
+				{
+					number: 6,
+					description: `When I arrive at a new settlement for the first time, I must learn all its customs.`,
+				},
+				{
+					number: 7,
+					description: `I ask more questions than I give answers.`,
+				},
+				{
+					number: 8,
+					description: `When I want to know something, everything else takes a back seat.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Discovery. I want to be the first person to discover a lost culture.`,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					description: `Distance. One must not interfere with the affairs of another culture – even one in need of aid.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					description: `Knowledge. By understanding other races and cultures, we learn to understand ourselves.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					description: `Power. Common people crave strong leadership, and I do my utmost to provide it. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Protection. I must do everything possible to save a society facing extinction. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					description: `Indifference. Life is cruel. What's the point in saving people if they're going to die anyway? `,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My mentor gave me a journal filled with lore and wisdom. Losing it would devastate me.`,
+				},
+				{
+					number: 2,
+					description: `Having lived among the people of a primeval tribe or clan, I long to return and see how they are faring`,
+				},
+				{
+					number: 3,
+					description: `Years ago, tragedy struck the members of an isolated society I befriended, and I will honor them.`,
+				},
+				{
+					number: 4,
+					description: `	I want to learn more about a particular humanoid culture that fascinates me.`,
+				},
+				{
+					number: 5,
+					description: `I seek to avenge a clan, tribe, kingdom, or empire that was wiped out.`,
+				},
+				{
+					number: 6,
+					description: `I have a trinket that I believe is the key to finding a long-lost society.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Boats make me seasick.`,
+				},
+				{
+					number: 2,
+					description: `I talk to myself, and I don't make friends easily.`,
+				},
+				{
+					number: 3,
+					description: `I believe that I'm intellectually superior to people from other cultures and have much to teach them.`,
+				},
+				{
+					number: 4,
+					description: `I've picked up some unpleasant habits from living among races such as goblins, lizardfolk, or orcs`,
+				},
+				{
+					number: 5,
+					description: `I complain about everything.`,
+				},
+				{
+					number: 6,
+					description: `I sometimes get ahead of myself.`,
 				},
 			],
 		},
