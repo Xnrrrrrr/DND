@@ -1,8 +1,12 @@
 const backgrounds = [
-	"Abandoned", //test
-	"Abyssdweller",
-	"Adopted",
+	"Abandoned", //homebrew
+	"Abyssdweller", // homebrew
+	"Adopted", // homebrew
+	"Addict", //homebrew
+	"Adept", //homebrew
 	"Acolyte",
+	"Alchemist", //homebrew
+	"Alcoholic", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

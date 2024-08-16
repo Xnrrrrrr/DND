@@ -3326,15 +3326,39 @@ others according to their needs.`,
 export const backgroundsArray = [
 	{
 		option: "Abandoned",
-		isHomebrew: false,
+		isHomebrew: true,
 	},
 	{
 		option: "Abyssdweller",
+		isHomebrew: true,
+	},
+	{
+		option: "Addict",
 		isHomebrew: false,
+	},
+	{
+		option: "Adept",
+		isHomebrew: false,
+	},
+	{
+		option: "Adopted",
+		isHomebrew: true,
+	},
+	{
+		option: "Afflicted",
+		isHomebrew: true,
 	},
 	{
 		option: "Acolyte",
 		isHomebrew: false,
+	},
+	{
+		option: "Alchemist",
+		isHomebrew: true,
+	},
+	{
+		option: "Alcoholic",
+		isHomebrew: true,
 	},
 	{
 		option: "Charlatan",
@@ -3953,13 +3977,15 @@ export const backgroundDesc = {
 			],
 		},
 	},
-	Adopted: {
+	Adept: {
 		isHomebrew: true,
-		description: ``,
-		skillProficiencies: ``,
-		toolProficiencies: ``,
-		languages: ``,
-		startingEquipment: ``,
+		description: `You've always wanted to learn something interesting and different to make you stand out from the crowd, and now you have! With the tool skills you have learned they may just save your life one day and you are always ready for that moment.
+
+Your learning has gotten you this far, but you are seeking more. What knowledge could draw you from your books to a life of adventure? Is there forbidden lore you seek? Did the promise of ruins and mysteries draw you from the comfort of your office? Did you learn secrets you weren't welcome to and choose to see the world instead of face the music?`,
+		skillProficiencies: `Two skill of your choice`,
+		toolProficiencies: `One tool kit of your choice`,
+		languages: `One standard language of your choice`,
+		startingEquipment: `A trinket of your choice from your childhood, a set of common clothes, a book of your old teachings, and a belt pouch containing 10gp`,
 		backgroundSpecial: {
 			title: ``,
 			description: ``,
@@ -3992,8 +4018,8 @@ export const backgroundDesc = {
 			],
 		},
 		feature: {
-			title: ``,
-			description: ``,
+			title: `Prodigy`,
+			description: `You are one of the fastest learners out there. When trying to learn something (languages, proficiencies, or otherwise), for every week it would take to gain this, you reduce the time taken by 2 days.`,
 		},
 		alterateFeature: [
 			{
@@ -4005,134 +4031,134 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: ``,
+		suggestedCharacteristics: `Most Adepts have a habit of trusting too much in their easy way of understanding things. Many Adepts suffer from unusual flaws and are stimulated by peculiar drives, it makes them ever more interesting to play and serves to bring a much more unique experience to the world and set out their destiny.`,
 		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I am always eager to learn new subjects`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I will always be ready to help my friends`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `My dream is my destiny, and my friends are my path to setting it`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I only continue to set out my dream to use it for unspeakable uses.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `	I find it hard being around others.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `	I will never back down from a fight.`,
 				},
 			],
 		},
 		suggestedIdeal: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
-					alignment: ``,
+					description: `Teacher I will set out my dream to help the helpless. `,
+					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: ``,
-					alignment: ``,
+					description: `Persistence My dream is my life. No one will stop me from achieving victory in it. `,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					description: ``,
-					alignment: ``,
+					description: `Knowledge When I reach my goal, I will teach others what I've learnt. `,
+					alignment: `Lawful`,
 				},
 				{
 					number: 4,
-					description: ``,
-					alignment: ``,
+					description: `Revenge My dream will be used against those who laughed at me`,
+					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: ``,
-					alignment: ``,
+					description: `Remembrance Even if I don't reach my goal, I will still use my skills.`,
+					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: ``,
-					alignment: ``,
+					description: `	Acceptance This destiny is for me. I can feel it.`,
+					alignment: `Any`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `My Instructor was my everything.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `Once I complete my goal, I will go home and share it.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I would die for my destiny.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My imagination of the future dives me forward.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I can still hear the voice's of the people who helped me.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `	My friends and their help are what keeps me going.`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I will do anything, to reach my goal.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I can only trust in myself and no one else.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `My skills won't always work.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I am rather clumsy and foregetful.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `People ask me for help, but I'm not always the best at my certain skill.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I still wish that my destiny was to be something else.`,
 				},
 			],
 		},
@@ -4330,6 +4356,396 @@ export const backgroundDesc = {
 			],
 		},
 	},
+	Alchemist: {
+		isHomebrew: true,
+		description: `The use of alchemy walks a fine line between that of science and magic. Alchemy utilizes formulas with strict values and carefully weighed portions, compared to how free magic can be. An important thing to note is that alchemy is best realized in settings where magic is not too predominant and common. Too much magic makes alchemy secondary, as one can conjure gold rather than laboriously try and synthesize it. Alchemists often were employed by various nexuses of power to do miraculous things, like transmutation. The ability to change materials from one into another, usually an entirely different element, is something many alchemists seek in their studies. Many other goals also do exist, like finding eternal life or manufacturing artificial forms, like homunculi.
+
+					Alchemy also covers more mundane uses, including medicine. Many alchemists could accurately define or detect certain elements and even concoct tinctures and poisons out of minerals. Alchemists do often require a lot of materials, be it lab equipment or formula ingredients. They are thus less efficient than an arcane scholar in many ways, but they are more meticulously trained to deal in something like the scientific method. Many a time, alchemists might run into doubt regarding their profession, be it due to religious stigma or persecution from rivals.
+
+					So, what kind of alchemist are you? Do you work for a wealthy nobleman or even a governmental agency? What is your goal as an alchemist, and what is expected of you by your superiors? Do you want fame for your work? Do you maybe seek a rare ingredient on your adventures? Or, maybe you need political cover due to some scandal regarding your discoveries? What have you discovered and learned through your work? Have you perhaps perfected a formula that your teacher never finished? Or maybe you found a new element to the medieval alchemic quartet of fire, water, air, and earth?`,
+		skillProficiencies: `Arcana and Medicine`,
+		toolProficiencies: `Alchemist's Supplies`,
+		languages: `One language of your choice`,
+		startingEquipment: `Alchemist's Supplies, a book on alchemical formulae, common clothes, and a belt pouch with 10 gp`,
+		backgroundSpecial: {
+			title: `Alchemy Type`,
+			description: `In seeking their magnum opus, an alchemist decides on a specific field of study, no different than how a scientist may choose to specialize in an area of their expertise. What does your alchemist character study in particular?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Transmutation. The art of changing one thing into another is one of the primary bases for all of alchemy. Usually, this involves changing base materials into more valuable ones, called noble metals, like making gold from dirt.`,
+				},
+				{
+					number: 2,
+					description: `Solvent. The search for the universal solvents known as alkahest and azoth is a pursuit of many alchemists in the fields of medicine.`,
+				},
+				{
+					number: 3,
+					description: `	Animate. Creation of artificial life is a goal for many alchemists who seek to play god.`,
+				},
+				{
+					number: 4,
+					description: `	Eternity. Works to create elixirs of life that grant immortality are present across many areas of the arcane. Alchemy is no exception. Whether its brewing minerals according to rasayana or seeking a philosopher's stone, the quest for longevity is yours.`,
+				},
+				{
+					number: 5,
+					description: `	Yliaster. The prime material is a starting point for all alchemists. It's not easy to isolate the true essence of something, and it is an absolute fundamental that many budding alchemists and even veterans have trouble doing.`,
+				},
+				{
+					number: 6,
+					description: `Esotericism. The arts of alchemy require preservation of symbols, codices, arcane tools, and many other secrets. Alchemists in this vein seek to preserve their traditions.`,
+				},
+			],
+		},
+		feature: {
+			title: `Experimenter`,
+			description: `You are a sort of prototype for the modern scientist, with an insatiable drive and inquisitive mind that seeks further knowledge with or without the aid of the conventional arcane. You have advantage on ability checks to identify mundane materials using your alchemist supplies. This can distinguish metals from one another, like pyrite from gold, for example, but it will not determine if something has magical properties.`,
+		},
+		alterateFeature: [
+			{
+				title: `Secretive Knowledge`,
+				description: `Alchemists often belonged to hidden orders that sought to disseminate, disprove, or test certain knowledge. As an alchemist, you are a member of one such group on the down low, you can expect some help from those also of your alchemist order, including shelter and small alchemical components. However, these groups are very secretive and distrustful of others, meaning your party members will likely not receive such kind treatment. So long as you remain in good terms with your alchemist order, you can receive lodging and food there, up to a modest lifestyle. However, they will not do anything dangerous or extravagant for you, nor will they reveal themselves and follow you to battle.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Alchemists vary as much as scientists. Some are super zealous and love to keep their secrets. Others are open and want to teach and spread their knowledge. Their attitudes towards people can be volatile, with some alchemists having been only shut-ins in their labs and others penniless beggars perhaps disowned by their orders.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I have an insatiable thirst for knowledge.`,
+				},
+				{
+					number: 2,
+					description: `My mind does not work the same as others. Others call me crazy.`,
+				},
+				{
+					number: 3,
+					description: `I tend to speak quietly and avoid eye contact. Really, I prefer talking to myself over talking to others.`,
+				},
+				{
+					number: 4,
+					description: `I cannot handle making big decisions and want others to take or share responsibility.`,
+				},
+				{
+					number: 5,
+					description: `I want everything to be done as I want it, always!`,
+				},
+				{
+					number: 6,
+					description: `I do not take criticism lightly, be it from a sage or a fool. Especially a fool.`,
+				},
+				{
+					number: 7,
+					description: `I spend all my resources on my craft. Money, time...`,
+				},
+				{
+					number: 8,
+					description: `I can't stand being a center of attention. I like to be the one no one notices.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Discovery. I am on the verge of a great discovery that will revolutionize alchemy as we know it, and I must follow through.`,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					description: `Money. I don't care what I'm being told to do; if you can pay, I can do it.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					description: `Power. With this craft, I can control creation and death like a god. All lives thus become trivial before me.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					description: `Ethics. There are bad actors out there that I swear to find and subdue to preserve the integrity of alchemy. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					description: `Improvement. There are great things that alchemy can accomplish for people, like medicine. I strive for this.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					description: `Knowledge. My passion is a drive that never ceases. I will do anything to learn about what I desire.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I grew up in a poor family, which led me to become a bit of a scrooge that scrimps and saves all the time.`,
+				},
+				{
+					number: 2,
+					description: `My customers, sponsors, and patrons are my friends!`,
+				},
+				{
+					number: 3,
+					description: `I have a rival who is a greater alchemist than I. I constantly seek to best them.`,
+				},
+				{
+					number: 4,
+					description: `	My notes on my greatest discovery were stolen, and I must find them before they fall into the wrong hands.`,
+				},
+				{
+					number: 5,
+					description: `I have a great interest in teaching and am constantly seeking out new students.`,
+				},
+				{
+					number: 6,
+					description: `The one who taught me my trade still lives; I respect them above all else and will defend them to the death if they require it.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I once caused a great accident amid an experiment. It is my greatest shame that I will never forgive myself for.`,
+				},
+				{
+					number: 2,
+					description: `	I have twisted my mind a bit in exposure to chemicals, making me lose my sense of morals and such.`,
+				},
+				{
+					number: 3,
+					description: `	I have a tendency to desire destroying what I create for a vile sense of pleasure.`,
+				},
+				{
+					number: 4,
+					description: `I've developed an addiction to one of my substances, and I need to make it whenever possible.`,
+				},
+				{
+					number: 5,
+					description: `Due to my hubris, I irreversibly scarred myself in my experiments and so I never ever want to be seen in public.`,
+				},
+				{
+					number: 6,
+					description: `i  tend to wander in my thoughts and get lost or separated from my group.`,
+				},
+			],
+		},
+	},
+	Alcoholic: {
+		isHomebrew: true ,
+			description: `The vice of alcohol holds a tight grip on your heart, as well as your liver, for some reason or another. Maybe some past trauma has caused you to turn to fermented fruits and grains as a solace and way to cope, no matter how poor it may be. Maybe you enjoy the flavor to the point that you would do anything for a single drop of the bitter tasting substance. You will do anything to continue living your life through beer goggles, and it has lead to desperate measures, be it a life of crime, or brewing your own alcohol in the privacy of your home. Its plain to see that your life has spiraled out of your control and many people have suggested you get help. Maybe that's why you turned to adventuring, to turn over a new leaf and get a fresh start, or maybe you seek more gold to feed your alcoholism.`,
+			skillProficiencies: `Sleight of Hand and Medicine`,
+			toolProficiencies: `Brewer's Tools or Thieves' Tools`,
+			languages: `Any single language of your choice`,
+			startingEquipment: `A flask filled with your favorite alcohol, a memento of your life before alcohol, common clothes, a heavy blanket, and a pouch with 5 sp`,
+			backgroundSpecial: {
+				title: `Drink of Choice`,
+				description: `While you will drink any alcohol if need be, you of course have your own preferences for drinks. Maybe it was the first alcohol you tried, or maybe you just like the flavor, either way, you are utterly obsessed with this beverage and are even more susceptible to its siren song.`,
+				die: `1d6`,
+				roll: [
+					{
+						number: 1,
+						description: `Beer`,
+					},
+					{
+						number: 2,
+						description: `Wine`,
+					},
+					{
+						number: 3,
+						description: `Rum`,
+					},
+					{
+						number: 4,
+						description: `Mead`,
+					},
+					{
+						number: 5,
+						description: `Brandy`,
+					},
+					{
+						number: 6,
+						description: `Scotch`,
+					}
+				],
+			},
+			feature: {
+				title: `Temperance`,
+				description: `Having already struggled through addiction in the past you know how to identify the signs of addiction, and are better equipped to quit other addictions or help others through their addictions. Your demeanor after giving up alcohol may also affect the way different people interact with you.
+							`,
+			},
+			alterateFeature: [
+				{
+					title: `Pitiful`,
+					description: `You love alcohol far too much, and find yourself forgoing inns for the tavern. As such, you have garnered a form of condescending pity from people and can typically find a place to stay on the condition that you do not drink for the duration of your stay. Whether you hold up your end of the bargain or not is up to you.`,
+				},
+				{
+					title: `Strong-headed`,
+					description: `You are extremely tolerant of alcohol and have advantage on Constitution checks related to alcohol. You also can consume 3 times that of most people before feeling even a little tipsy.`,
+				},
+			],
+			suggestedCharacteristics: `Alcoholics are not meant to be envied, they are sad individuals who feel they need alcohol, and their personalities should reflect that.
+`,
+			suggestedPersonalityTraits: {
+				description: ``,
+				die: `1d8`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `I have mastered the art of crocodile tears and use them to get whatever I want from whoever I want`,
+					},
+					{
+						number: 2,
+						description: `I live for any distraction from my monotonous life.`,
+					},
+					{
+						number: 3,
+						description: `	I have found that everyone's a lot more attractive after a few drinks.`,
+					},
+					{
+						number: 4,
+						description: `I find a wooden table to be an easier surface to fall asleep on than a bed.`,
+					},
+					{
+						number: 5,
+						description: `I find the scent of alcohol to be revolting, but still find myself drawn to it.`,
+					},
+					{
+						number: 6,
+						description: `I have found that praying to gods has been ineffective, and have decided to give up on religion all together.`,
+					},
+					{
+						number: 7,
+						description: `	I hate confrontation about my problematic behaviors.`,
+					},
+					{
+						number: 8,
+						description: `I have a very fragile ego and sense of self.`,
+					}
+				],
+			},
+			suggestedIdeal: {
+				description: ``,
+				die: `1d6`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `Self-Serving. Nobody helped me, so why should I do the same for them?`,
+						alignment: `Evil`,
+					},
+					{
+						number: 2,
+						description: `Idealistic. If there's still hope for me, there's hope for anyone.`,
+						alignment: `Good`,
+					},
+					{
+						number: 3,
+						description: `Drinking. I don't care about much else other than alcohol. `,
+						alignment: `Neutral`,
+					},
+					{
+						number: 4,
+						description: `Tempered. I find that drinking within reason keeps me sane, but I still need alcohol everyday`,
+						alignment: `Lawful`,
+					},
+					{
+						number: 5,
+						description: `	Hedonism. If something's good why shouldn't I pursue it? `,
+						alignment: `Chaotic`,
+					},
+					{
+						number: 6,
+						description: `Change. I want to change my ways and be a better person.`,
+						alignment: `Any`,
+					}
+				],
+			},
+			suggestedBond: {
+				description: ``,
+				die: ``,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `The local barkeep is my only real friend.`,
+					},
+					{
+						number: 2,
+						description: `I have abandoned my family for alcohol, I want to fix that.`,
+					},
+					{
+						number: 3,
+						description: `There is at least one night stand who is a bit bitter towards me.`,
+					},
+					{
+						number: 4,
+						description: `Turning away from alcohol has lost me a lot of my drinking buddies.`,
+					},
+					{
+						number: 5,
+						description: `	I have sequestered myself away to avoid alcohol.`,
+					},
+					{
+						number: 6,
+						description: `I have at least one illegitimate child from a drinking bender.`,
+					}
+				],
+			},
+			suggestedFlaw: {
+				description: ``,
+				die: `1d6`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `I drink to run from my problems.`,
+					},
+					{
+						number: 2,
+						description: `I owe people a lot of money from when I was drunk.`,
+					},
+					{
+						number: 3,
+						description: `Loyalty to anyone but alcohol is something I don't get.`,
+					},
+					{
+						number: 4,
+						description: `	I use my drinking as an excuse to be a terrible person.`,
+					},
+					{
+						number: 5,
+						description: `I think that anyone who chooses not to drink is a sanctimonious jerk.`,
+					},
+					{
+						number: 6,
+						description: `	I blame everyone other than me for my problems.`,
+					}
+				],
+			},
+		},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
