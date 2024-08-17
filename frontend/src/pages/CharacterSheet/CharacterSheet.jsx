@@ -96,11 +96,16 @@ const CharacterSheet = () => {
 	const [race, setRace] = useState("");
 	const [subraces, setSubraces] = useState("");
 	const [background, setBackground] = useState("");
+	const [feature, setFeature] = useState({ title: "", description: "" });
 	const [alignment, setAlignment] = useState("");
 	const [ideal, setIdeal] = useState("");
+	const [isTextIdeal, setIsTextIdeal] = useState(false);
 	const [bond, setBond] = useState("");
+	const [isTextBond, setIsTextBond] = useState(false);
 	const [flaw, setFlaw] = useState("");
+	const [isTextFlaw, setIsTextFlaw] = useState(false);
 	const [personalityTraits, setPersonalityTraits] = useState(["", ""]);
+	const [isTextPersonality, setIsTextPersonality] = useState([false, false]);
 
 	// This method is triggered whenever dice are finished rolling
 	Dice.onRollComplete = (results) => {
@@ -141,10 +146,6 @@ const CharacterSheet = () => {
 		setTimeout(() => {
 			setDisableRolling(false);
 		}, 3500);
-	};
-
-	Dice.onRemoveComplete = () => {
-		console.log("gay");
 	};
 
 	const navigate = useNavigate();
@@ -276,18 +277,6 @@ const CharacterSheet = () => {
 		skillsObj[primaryClass]?.filter(
 			(s) => !skills.includes(s) || s === skills[index]
 		) || [];
-
-	const validPersonalityTraitOne = backgroundDesc[
-		background
-	]?.suggestedPersonalityTraits?.roll
-		?.map((pt) => pt.description)
-		?.includes(personalityTraits[0]);
-
-	const validPersonalityTraitTwo = backgroundDesc[
-		background
-	]?.suggestedPersonalityTraits?.roll
-		?.map((pt) => pt.description)
-		?.includes(personalityTraits[1]);
 
 	const handleRaceChange = (e) => {
 		setRace(e.target.value);
@@ -708,18 +697,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isStrengthRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsStrengthRolled,
-														setStrengthRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -797,18 +774,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isDexterityRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsDexterityRolled,
-														setDexterityRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -886,18 +851,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isConstitutionRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsConstitutionRolled,
-														setConstitutionRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -975,18 +928,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isIntelligenceRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsIntelligenceRolled,
-														setIntelligenceRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -1062,18 +1003,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isWisdomRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsWisdomRolled,
-														setWisdomRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -1149,18 +1078,6 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											{/* <button
-												disabled={isCharismaRolled}
-												type="button"
-												onClick={() =>
-													roll4d6DropLowest(
-														setIsCharismaRolled,
-														setCharismaRoll
-													)
-												}
-											>
-												4d6
-											</button> */}
 											<AdvRollBtn
 												label="Roll"
 												disabled={
@@ -1363,9 +1280,31 @@ const CharacterSheet = () => {
 									<select
 										id="background"
 										value={background}
-										onChange={(e) =>
-											setBackground(e.target.value)
-										}
+										onChange={(e) => {
+											setBackground(e.target.value); // Need a function
+											if (!isTextIdeal) {
+												setIdeal("");
+											}
+											if (!isTextBond) {
+												setBond("");
+											}
+											if (!isTextFlaw) {
+												setFlaw("");
+											}
+											if (!isTextPersonality[0]) {
+												setPersonalityTraits(
+													([...personalityTraits][0] =
+														"")
+												);
+											}
+											if (!isTextPersonality[1]) {
+												setPersonalityTraits(
+													([...personalityTraits][1] =
+														"")
+												);
+											}
+										}}
+										required
 									>
 										<option value="">
 											Select a Background
@@ -1388,6 +1327,112 @@ const CharacterSheet = () => {
 									</select>
 								</div>
 								<div>
+									<label htmlFor="feature">
+										Feature(s):
+										{!feature.description && (
+											<sup className="red-star">*</sup>
+										)}
+									</label>
+									<select
+										value={feature.title}
+										required
+										onChange={(e) => {
+											const selectedTitle =
+												e.target.value;
+											const mainFeature =
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].feature;
+											const altFeatures =
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].alterateFeature;
+
+											let selectedFeature = null;
+
+											// Check if the selected feature is the main feature
+											if (
+												mainFeature.title ===
+												selectedTitle
+											) {
+												selectedFeature = mainFeature;
+											}
+											// Otherwise, search in alternate features
+											else {
+												selectedFeature =
+													altFeatures.find(
+														(f) =>
+															f.title ===
+															selectedTitle
+													);
+											}
+
+											// If a feature was found, set its title and description in the state
+											if (selectedFeature) {
+												setFeature({
+													title: selectedFeature.title,
+													description:
+														selectedFeature.description,
+												});
+											}
+										}}
+										disabled={!background}
+									>
+										<option value="">
+											{background
+												? `Select a Feature`
+												: `Select a Background`}
+										</option>
+										{background && (
+											<option
+												value={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].feature.title
+												}
+											>
+												{background &&
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].feature.title}
+											</option>
+										)}
+										{background &&
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											].alterateFeature
+												.filter((e) => e.title !== "")
+												.map((f) => (
+													<option
+														value={f.title}
+														key={f.title}
+													>
+														ALT: {f.title}
+													</option>
+												))}
+									</select>
+									<textarea
+										readOnly
+										value={feature.description}
+										style={{
+											height: "12rem",
+											width: "100%",
+										}}
+									/>
+								</div>
+								<div>
 									<label htmlFor="alignment">
 										Alignments:{" "}
 										{!alignment && (
@@ -1400,6 +1445,7 @@ const CharacterSheet = () => {
 										onChange={(e) =>
 											setAlignment(e.target.value)
 										}
+										required
 									>
 										<option value="">
 											Select an Alignment
@@ -1428,62 +1474,84 @@ const CharacterSheet = () => {
 										{!ideal && (
 											<sup className="red-star">*</sup>
 										)}
+										<button
+											type="button"
+											onClick={(e) => {
+												setIsTextIdeal(!isTextIdeal);
+												setIdeal("");
+											}}
+										>
+											{isTextIdeal
+												? `Select an Option`
+												: `Custom Input`}
+										</button>
 									</label>
-									{/* <textarea
-										id="ideal"
-										value={ideal}
-										onChange={(e) =>
-											setIdeal(e.target.value)
-										}
-										maxLength="100"
-										style={{
-											height: "8rem",
-											width: "100%",
-										}}
-									/> */}
-									<select
-										id="ideal"
-										value={ideal}
-										onChange={(e) =>
-											setIdeal(e.target.value)
-										}
-										disabled={
-											background
-												? alignment
-													? false
-													: true
-												: true
-										}
-									>
-										<option value="">
-											{background
-												? alignment
-													? `Select an Ideal`
-													: `Select an Alignment`
-												: `Select a Background`}
-										</option>
-										{background &&
-											alignment &&
-											backgroundDesc[
+									{isTextIdeal ? (
+										<textarea
+											id="ideal"
+											value={ideal}
+											onChange={(e) =>
+												setIdeal(e.target.value)
+											}
+											maxLength="100"
+											style={{
+												height: "8rem",
+												width: "100%",
+											}}
+											required
+										/>
+									) : (
+										<select
+											id="ideal"
+											value={ideal}
+											onChange={(e) =>
+												setIdeal(e.target.value)
+											}
+											disabled={
 												background
-											].suggestedIdeal.roll
-												.filter(
-													(a) =>
-														alignment.includes(
-															a.alignment
-														) ||
-														a.alignment === "Any"
-												)
-												.map((i) => (
-													<option
-														key={i.description}
-														value={i.description}
-													>
-														{i.alignment}:{" "}
-														{i.description}
-													</option>
-												))}
-									</select>
+													? alignment
+														? false
+														: true
+													: true
+											}
+											required
+										>
+											<option value="">
+												{background
+													? alignment
+														? `Select an Ideal`
+														: `Select an Alignment`
+													: `Select a Background`}
+											</option>
+											{background &&
+												alignment &&
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].suggestedIdeal.roll
+													.filter(
+														(a) =>
+															alignment.includes(
+																a.alignment
+															) ||
+															a.alignment ===
+																"Any"
+													)
+													.map((i) => (
+														<option
+															key={i.description}
+															value={
+																i.description
+															}
+														>
+															{i.alignment}:{" "}
+															{i.description}
+														</option>
+													))}
+										</select>
+									)}
 								</div>
 								<div>
 									<label htmlFor="bond">
@@ -1502,45 +1570,67 @@ const CharacterSheet = () => {
 										{!bond && (
 											<sup className="red-star">*</sup>
 										)}
+										<button
+											type="button"
+											onClick={(e) => {
+												setIsTextBond(!isTextBond);
+												setBond("");
+											}}
+										>
+											{isTextIdeal
+												? `Select an Option`
+												: `Custom Input`}
+										</button>
 									</label>
-									{/* <textarea
-										id="bond"
-										value={bond}
-										onChange={(e) =>
-											setBond(e.target.value)
-										}
-										maxLength="100"
-										style={{
-											height: "8rem",
-											width: "100%",
-										}}
-									/> */}
-									<select
-										id="bond"
-										value={bond}
-										onChange={(e) =>
-											setBond(e.target.value)
-										}
-										disabled={!background}
-										required
-									>
-										<option value="">
-											{background
-												? `Select a Bond`
-												: `Select a Background`}
-										</option>
-										{background &&
-											backgroundDesc[
-												background.replaceAll(" ", "_")
-											].suggestedBond.roll.map((b) => (
-												<option
-													key={b.number}
-													value={b.description}
-												>
-													{b.description}
-												</option>
-											))}
-									</select>
+									{isTextBond ? (
+										<textarea
+											id="bond"
+											value={bond}
+											onChange={(e) =>
+												setBond(e.target.value)
+											}
+											maxLength="100"
+											style={{
+												height: "8rem",
+												width: "100%",
+											}}
+											required
+										/>
+									) : (
+										<select
+											id="bond"
+											value={bond}
+											onChange={(e) =>
+												setBond(e.target.value)
+											}
+											disabled={!background}
+											required
+										>
+											<option value="">
+												{background
+													? `Select a Bond`
+													: `Select a Background`}
+											</option>
+											{background &&
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].suggestedBond.roll.map(
+													(b) => (
+														<option
+															key={b.number}
+															value={
+																b.description
+															}
+														>
+															{b.description}
+														</option>
+													)
+												)}
+										</select>
+									)}
 								</div>
 								<div>
 									<label htmlFor="flaw">
@@ -1559,45 +1649,67 @@ const CharacterSheet = () => {
 										{!flaw && (
 											<sup className="red-star">*</sup>
 										)}
+										<button
+											type="button"
+											onClick={(e) => {
+												setIsTextFlaw(!isTextFlaw);
+												setFlaw("");
+											}}
+										>
+											{isTextFlaw
+												? `Select an Option`
+												: `Custom Input`}
+										</button>
 									</label>
-									{/* <textarea
-										id="flaw"
-										value={flaw}
-										onChange={(e) =>
-											setFlaw(e.target.value)
-										}
-										maxLength="100"
-										style={{
-											height: "8rem",
-											width: "100%",
-										}}
-									/> */}
-									<select
-										id="flaw"
-										value={flaw}
-										onChange={(e) =>
-											setFlaw(e.target.value)
-										}
-										disabled={!background}
-										required
-									>
-										<option value="">
-											{background
-												? `Select a Flaw`
-												: `Select a Background`}
-										</option>
-										{background &&
-											backgroundDesc[
-												background.replaceAll(" ", "_")
-											].suggestedFlaw.roll.map((f) => (
-												<option
-													key={f.number}
-													value={f.description}
-												>
-													{f.description}
-												</option>
-											))}
-									</select>
+									{isTextFlaw ? (
+										<textarea
+											id="flaw"
+											value={flaw}
+											onChange={(e) =>
+												setFlaw(e.target.value)
+											}
+											maxLength="100"
+											style={{
+												height: "8rem",
+												width: "100%",
+											}}
+											required
+										/>
+									) : (
+										<select
+											id="flaw"
+											value={flaw}
+											onChange={(e) =>
+												setFlaw(e.target.value)
+											}
+											disabled={!background}
+											required
+										>
+											<option value="">
+												{background
+													? `Select a Flaw`
+													: `Select a Background`}
+											</option>
+											{background &&
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].suggestedFlaw.roll.map(
+													(f) => (
+														<option
+															key={f.number}
+															value={
+																f.description
+															}
+														>
+															{f.description}
+														</option>
+													)
+												)}
+										</select>
+									)}
 								</div>
 								<div>
 									<label htmlFor="personalityTraitOne">
@@ -1616,66 +1728,98 @@ const CharacterSheet = () => {
 										{!personalityTraits[0] && (
 											<sup className="red-star">*</sup>
 										)}
+										<button
+											type="button"
+											onClick={(e) => {
+												// Create a new copy of the isTextPersonality array
+												const newIsTextPersonality = [
+													...isTextPersonality,
+												];
+												// Toggle the first element (index 0)
+												newIsTextPersonality[0] =
+													!isTextPersonality[0];
+												setIsTextPersonality(
+													newIsTextPersonality
+												);
+												setPersonalityTraits(
+													([...personalityTraits][0] =
+														"")
+												);
+											}}
+										>
+											{isTextPersonality[0]
+												? `Select an Option`
+												: `Custom Input`}
+										</button>
 									</label>
-									{/* <textarea
-										id="personalityTraitOne"
-										value={personalityTraits[0]}
-										onChange={(e) => {
-											const newTraits = [
-												...personalityTraits,
-											];
-											newTraits[0] = e.target.value;
-											setPersonalityTraits(newTraits);
-										}}
-										maxLength="50"
-										style={{
-											height: "6rem",
-											width: "100%",
-										}}
-									/> */}
-									<select
-										id="personalityTraitOne"
-										value={personalityTraits[0]}
-										onChange={(e) => {
-											const newTraits = [
-												...personalityTraits,
-											];
-											newTraits[0] = e.target.value;
-											setPersonalityTraits(newTraits);
-										}}
-										disabled={!background}
-										required
-									>
-										<option value="">
-											{background
-												? `Select a Personality Trait`
-												: `Select a Background`}
-										</option>
-										{background &&
-											backgroundDesc[
-												background
-											].suggestedPersonalityTraits.roll
-												.filter(
-													(pt) =>
-														!personalityTraits.includes(
-															pt.description
-														) ||
-														personalityTraits[0] ===
-															pt.description
-												)
-												.map((p) => (
-													<option
-														key={p.description}
-														value={p.description}
-													>
-														{p.description}
-													</option>
-												))}
-									</select>
+									{isTextPersonality[0] ? (
+										<textarea
+											id="personalityTraitOne"
+											value={personalityTraits[0]}
+											onChange={(e) => {
+												const newTraits = [
+													...personalityTraits,
+												];
+												newTraits[0] = e.target.value;
+												setPersonalityTraits(newTraits);
+											}}
+											maxLength="50"
+											style={{
+												height: "6rem",
+												width: "100%",
+											}}
+											required
+										/>
+									) : (
+										<select
+											id="personalityTraitOne"
+											value={personalityTraits[0]}
+											onChange={(e) => {
+												const newTraits = [
+													...personalityTraits,
+												];
+												newTraits[0] = e.target.value;
+												setPersonalityTraits(newTraits);
+											}}
+											disabled={!background}
+											required
+										>
+											<option value="">
+												{background
+													? `Select a Personality Trait`
+													: `Select a Background`}
+											</option>
+											{background &&
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].suggestedPersonalityTraits.roll
+													.filter(
+														(pt) =>
+															!personalityTraits.includes(
+																pt.description
+															) ||
+															personalityTraits[0] ===
+																pt.description
+													)
+													.map((p) => (
+														<option
+															key={p.description}
+															value={
+																p.description
+															}
+														>
+															{p.description}
+														</option>
+													))}
+										</select>
+									)}
 								</div>
 								<div>
 									<label htmlFor="personalityTraitTwo">
-										Second Personality Trait:{" "}
+										Sec. Personality Trait:{" "}
 										<sub
 											style={{
 												verticalAlign: "sub",
@@ -1690,62 +1834,92 @@ const CharacterSheet = () => {
 										{!personalityTraits[1] && (
 											<sup className="red-star">*</sup>
 										)}
+										<button
+											type="button"
+											onClick={(e) => {
+												const newIsTextPersonality = [
+													...isTextPersonality,
+												];
+												newIsTextPersonality[1] =
+													!isTextPersonality[1];
+												setIsTextPersonality(
+													newIsTextPersonality
+												);
+												setPersonalityTraits(
+													([...personalityTraits][1] =
+														"")
+												);
+											}}
+										>
+											{isTextPersonality[1]
+												? `Select an Option`
+												: `Custom Input`}
+										</button>
 									</label>
-									{/* <textarea
-										id="personalityTraitTwo"
-										value={personalityTraits[1]}
-										onChange={(e) => {
-											const newTraits = [
-												...personalityTraits,
-											];
-											newTraits[1] = e.target.value;
-											setPersonalityTraits(newTraits);
-										}}
-										maxLength="50"
-										style={{
-											height: "6rem",
-											width: "100%",
-										}}
-									/> */}
-									<select
-										id="personalityTraitTwo"
-										value={personalityTraits[1]}
-										onChange={(e) => {
-											const newTraits = [
-												...personalityTraits,
-											];
-											newTraits[1] = e.target.value;
-											setPersonalityTraits(newTraits);
-										}}
-										disabled={!background}
-										required
-									>
-										<option value="">
-											{background
-												? `Select a Personality Trait`
-												: `Select a Background`}
-										</option>
-										{background &&
-											backgroundDesc[
-												background
-											].suggestedPersonalityTraits.roll
-												.filter(
-													(pt) =>
-														!personalityTraits.includes(
-															pt.description
-														) ||
-														personalityTraits[1] ===
-															pt.description
-												)
-												.map((p) => (
-													<option
-														key={p.description}
-														value={p.description}
-													>
-														{p.description}
-													</option>
-												))}
-									</select>
+									{isTextPersonality[1] ? (
+										<textarea
+											id="personalityTraitTwo"
+											value={personalityTraits[1]}
+											onChange={(e) => {
+												const newTraits = [
+													...personalityTraits,
+												];
+												newTraits[1] = e.target.value;
+												setPersonalityTraits(newTraits);
+											}}
+											maxLength="50"
+											style={{
+												height: "6rem",
+												width: "100%",
+											}}
+											required
+										/>
+									) : (
+										<select
+											id="personalityTraitTwo"
+											value={personalityTraits[1]}
+											onChange={(e) => {
+												const newTraits = [
+													...personalityTraits,
+												];
+												newTraits[1] = e.target.value;
+												setPersonalityTraits(newTraits);
+											}}
+											disabled={!background}
+											required
+										>
+											<option value="">
+												{background
+													? `Select a Personality Trait`
+													: `Select a Background`}
+											</option>
+											{background &&
+												backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].suggestedPersonalityTraits.roll
+													.filter(
+														(pt) =>
+															!personalityTraits.includes(
+																pt.description
+															) ||
+															personalityTraits[1] ===
+																pt.description
+													)
+													.map((p) => (
+														<option
+															key={p.description}
+															value={
+																p.description
+															}
+														>
+															{p.description}
+														</option>
+													))}
+										</select>
+									)}
 								</div>
 							</div>
 							<div>

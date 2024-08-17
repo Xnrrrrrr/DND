@@ -170,10 +170,16 @@
 	width: 27.5rem;
 }
 
+.character-sheet-bottom-left div label button {
+	color: var(--base-text-color);
+	padding: 0.1rem 0.5rem;
+	margin-left: 1rem;
+}
+
 /* Above character-sheet-bottom-right */
 .character-sheet-image-container {
-	height: 30rem;
-	width: 30rem;
+	height: 27.5rem;
+	width: 27.5rem;
 
 	margin: auto;
 	margin-top: 1rem;
