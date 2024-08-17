@@ -5,9 +5,10 @@ const backgrounds = [
 	"Addict", //homebrew
 	"Adept", //homebrew
 	"Acolyte",
+	"Affflicted", //homebrew
 	"Alchemist", //homebrew
 	"Alcoholic", //homebrew
-	"Alcoholic_Scientist", //homebrew
+	"Alcoholic Scientist", //homebrew
 	"Amnesiac", //homebrew
 	"Anarchist", //homebrew
 	"Ancient_Cultist", //homebrew
@@ -17,7 +18,8 @@ const backgrounds = [
 	"Antiquarian", //homebrew
 	"Apothecary", //homebrew
 	"Archaeologist", //homebrew
-	"Arranged_Marriage", //homebrew
+	"Arranged Marriage", //homebrew
+	"Artist", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
