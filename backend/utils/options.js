@@ -25,6 +25,9 @@ const backgrounds = [
 	"Astrologer", //homebrew
 	"Asylum Escapee", //homebrew
 	"Banker", //homebrew
+	"Barmaid", //homebrew
+	"Bartender", //homebrew
+	"Battlesmith", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

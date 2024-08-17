@@ -3818,6 +3818,18 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Barmaid", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bartender", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Battlesmith", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -9012,6 +9024,612 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Plagued by the fear of failure and i tend to overwork myself.`,
+				},
+			],
+		},
+	},
+	Barmaid: {
+		isHomebrew: true,
+		description: `Have you ever wanted to spend your days babysitting belligerent drunkards while trying desperately to earn a living? Well too bad, someone has to do it. As a Barmaid you spent your life using both charisma and brute strength to "persuade" drunkards to follow the rules like everybody else`,
+		skillProficiencies: `Persuasion and Intimidation`,
+		toolProficiencies: `An instrument or game set, and your choice of one of the following: brewer's Supplies, calligrapher's Supplies, or cook's utensils.`,
+		languages: `One of your choice`,
+		startingEquipment: `A barmaid outfit, a weighted club, a flask filled with mead or hard cider, an instrument or game set, and a pouch with 15 gold.`,
+		backgroundSpecial: {
+			title: `Place of Employment`,
+			description: `The type of establishment you were employed at can have a big impact on your life, as well as your future adventures`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `You worked in a tavern, where you met many travellers, and performed many songs.`,
+				},
+				{
+					number: 2,
+					description: `You worked in a speakeasy, where you found that deception was a necessary job skill.`,
+				},
+				{
+					number: 3,
+					description: `You worked in a saloon, where you had to learn how to handle the roudy.`,
+				},
+				{
+					number: 4,
+					description: `You worked in a Village Pub, where some of the locals taught you how to use the tools of their trade`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Innocous Persuasion`,
+			description: `Perhaps it is your utterly innocent presence, but you rarely need to hide from people to hear in on what they talk about. You are just a simple barmaid that gives the drinks and takes them away when they are empty. People often forget that you're there to the point that even very important conversations not meant for average ears can be spoken near you. Underworld lords and powerful figures feel no threat from speaking liberally near you, discussing plans and such as long as you tend to them in some way.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I understand that sometimes a little bit of flirting goes a long way.`,
+				},
+				{
+					number: 2,
+					description: `Regulars always get the cheapest drinks. New-comers are almost always trouble.`,
+				},
+				{
+					number: 3,
+					description: `Drinking on the job is never a problem.`,
+				},
+				{
+					number: 4,
+					description: `My quick temper can end as many problems as it starts. At least, that's what I tell myself.`,
+				},
+				{
+					number: 5,
+					description: `Sleazebag pervert is one bad comment away from a slap.`,
+				},
+				{
+					number: 6,
+					description: `A jolly smile and cheerful laugh is the best way to start the day.`,
+				},
+				{
+					number: 7,
+					description: `I hate my job and everyone I have to serve.`,
+				},
+				{
+					number: 8,
+					description: `My loyalty to my employer is unmatched.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Kindness`,
+					description: `Service with a smile is everyone's right`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Strictly Business`,
+					description: `You get what you pay for and I can't help that.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Loose Change`,
+					description: `The drunk make easy money for stealing`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Work Ethic`,
+					description: `Hard days work for a hard days pay`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Fickle`,
+					description: `My time is worth whoever is paying me`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Self-Betterment`,
+					description: `I'm working to be the best I can be.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My employer saved me from a horrible fate. I want to repay him properly`,
+				},
+				{
+					number: 2,
+					description: `The regulars keep money in my pocket and food on my table, they're like family.`,
+				},
+				{
+					number: 3,
+					description: `A great debt keeps me tied to this tavern.`,
+				},
+				{
+					number: 4,
+					description: `I will never forget the name of the adventurer who saved me from a cruel fate.`,
+				},
+				{
+					number: 5,
+					description: `My family has run this tavern for years.`,
+				},
+				{
+					number: 6,
+					description: `I work at a tavern to support my family.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My bar was raided, which has led to a natural distrust of authority figures.`,
+				},
+				{
+					number: 2,
+					description: `I am a perfect example for why you shouldn't sample your own product.`,
+				},
+				{
+					number: 3,
+					description: `I can never turn down a chance to gamble.`,
+				},
+				{
+					number: 4,
+					description: `I'm willing to try anything to have a good time.`,
+				},
+				{
+					number: 5,
+					description: `A little coin and I will do anything you want.`,
+				},
+				{
+					number: 6,
+					description: `Never leave money out around me.`,
+				},
+			],
+		},
+	},
+	Bartender: {
+		isHomebrew: true,
+		description: `You stand by a lot of the most famous scenes in all of stories and fantasy. Your establishment is the gathering, the crux, of many an adventure, the beginning of many a quest, and the meetings of many fates. That's right, you are the bartender. People, drunk or not, have often ended up before you, asking for succor from their troubles. Sometimes they ask for something less alcoholic. Those who fall under the spell of the ale and meads you churn out spew their secrets like gushing fountains to any ears willing to listen, and yours are usually the closest. Sometimes you do some things on the side, like slipping poison into someone's glass, or just also taking the role of chef as well. If you are the owner of a bar, it's pretty hard work.
+
+					When making a character with the bartender background, think outside the occupational aspect and more towards the implications. Bartenders are not always able to hold their liquors, but they can have a heck of a connoisseurs smell and taste for them. After mixing cocktails for so long, you may have a signature brew even. Aside from drinks though, you may have heard many a drunken secret and witnessed several conflicts erupt in a scenery of merriment. Perhaps you are familiar with the fancier scotch clubs where nobles drivel on about politics. Or maybe you've kept your head down as resistance leaders in a greasy pub talked about inciting a rebellion.
+
+					Bartenders are a dime in a dozen in the wide world. So long as people desire release from their awful realities, bartenders have obliged in exchange for coin and then some. You can easily find work in many places so long as there is some bar. If not, you could very easily start a business slinging drinks. Often sitting in the backdrop, bartenders are potential fonts of knowledge and the most interesting gossip. In a way you could be like a barber, but people visit the pub more than they visit the barber.`,
+		skillProficiencies: `Choose 2 from: Perception, Sleight of hand, Performance, Persuasion, or Insight`,
+		toolProficiencies: `Cook's utensils or brewer's supplies`,
+		languages: `One language of your choice`,
+		startingEquipment: `Cook's utensils, or brewer's Supplies, a set of common clothes and a belt pouch of 10 gp`,
+		backgroundSpecial: {
+			title: `Place of Employment`,
+			description: `Where was the last place you worked? Which previous establishment was the most notable? It could very well have been a place you once owned as the barkeep. The atmosphere of the bar could possibly determine what things you have seen and heard throughout your career, as well as what company may be familiar with you.`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `A scandalous place of drunken sailors and gossip of murder and nautical conspiracies.`,
+				},
+				{
+					number: 2,
+					description: `An ill-reputed rats' nest where leaders of the local gangs and mafia congregated to conduct illegal business.`,
+				},
+				{
+					number: 3,
+					description: `A high-end bar where people clinked crystal glasses of cocktails and spoke of the higher caste politics.`,
+				},
+				{
+					number: 4,
+					description: `The layman's bar where common man came for a cold one after a long day at work.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `The Bar's Shadow`,
+			description: `Perhaps it is your utterly innocent presence, but you rarely need to hide from people to hear in on what they talk about. This is particularly true when you have all your working tools out to show you are a real bartender. The bartender image has been cultivated into you, that even very important conversations not meant for average ears can be spoken near you. Underworld lords and powerful figures feel no threat from speaking liberally near you, discussing plans and such over your concoctions.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `As a bartender, you don't have to act like a bystander even if everyone treats you like their servant. Maybe you're a real people person, able to befriend any patron. Or are you perhaps a silent watcher, or even an unfriendly server.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don't talk unless spoken to.`,
+				},
+				{
+					number: 2,
+					description: `I tend to buy the drinks at the table.`,
+				},
+				{
+					number: 3,
+					description: `I never forget the face of those I've served.`,
+				},
+				{
+					number: 4,
+					description: `People tell me I have a big mouth..`,
+				},
+				{
+					number: 5,
+					description: `My first question is usually money-related.`,
+				},
+				{
+					number: 6,
+					description: `I serve and that's it. You couldn't pay me for lip service.`,
+				},
+				{
+					number: 7,
+					description: `Physical contact makes me uncomfortable.`,
+				},
+				{
+					number: 8,
+					description: `Patrons deserve my utmost respect.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Money`,
+					description: `There is a lot of things money will give me.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Secrets`,
+					description: `I just like to hear the deepest darkest secrets of others`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Perfection`,
+					description: `I am pursuing the quest for the greatest brew.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					bold: `Chaos`,
+					description: `I sow discord through my drinks.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Listener`,
+					description: `I'm here for those who need a shoulder to lean on`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Employment`,
+					description: `This is just a job, really, to survive.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I feel a familial bond with the bar busters, wenches, and maids.`,
+				},
+				{
+					number: 2,
+					description: `The patrons are easily friends.`,
+				},
+				{
+					number: 3,
+					description: `In an environment like a bar, you never know what a true man's colors are.`,
+				},
+				{
+					number: 4,
+					description: `I am searching for one particular patron who I served years ago...`,
+				},
+				{
+					number: 5,
+					description: `I work to pay off a debt.`,
+				},
+				{
+					number: 6,
+					description: `My relationships are means to an end.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My only concern is how much I get paid.`,
+				},
+				{
+					number: 2,
+					description: `My relationships are ephemeral.`,
+				},
+				{
+					number: 3,
+					description: `I cannot trust anyone for real.`,
+				},
+				{
+					number: 4,
+					description: `I am easily beguiled by what I hear.`,
+				},
+				{
+					number: 5,
+					description: `I like to leave the hard work to others.`,
+				},
+				{
+					number: 6,
+					description: `I can appear cold to problems of others.`,
+				},
+			],
+		},
+	},
+	Battlesmith: {
+		isHomebrew: true,
+		description: `Battlesmiths are the undisputed masters of traditional Dwarven martial arts. They originated as simple well-equipped berzerkers to counter the savage assaults of Orcish raiders and warbands. As time went on though, Battlesmith-driven victories raised their status to something of the Dwarven equivalent to a knight, socially. As Dwarven craftsmanship improved, battlesmiths became a class of people, each one of them a living symbol of Dwarven warfare.
+
+					Many early battlesmiths were more than just great warriors. Some became kings, carving out new holdings for the Dwarven race from the ruins of enemy land. Others became legendary tactitians, conquering armies with little more than terrified peasants and livestock. Some were great craftsmen, and created fascinating Dwarven weapons, such as the urgrosh. Given this history, many battlesmiths model their beliefs and careers off the lives of these ancient heroes.
+
+					The true power behind the battlesmith is more than brute strength or literal combat prowess, though most have both. Battlesmiths wage war on the minds of their enemies as much as their bodies. They aim to make the enemy believe they have already lost before a battle has even begun. Early battlesmiths blundered into this tactic when they discovered that simply killing the right orc can turn an army of thousands into a stampede of fleeing cowards. Making an enemy think they've lost more blood than they have can cause them to pass out from shock alone. As they became more refined, so too did their techniques.
+
+					Today, battlesmith is mostly an inherited title, though it is possible to rise into their ranks through impressive military service. Those born into the title carry a heavy burden as they are expected to take on the responsibilities of their name. Battlesmiths are often the champion of a noble clan, leading the clan's military force, organizing defense of their land, or taking on special tasks presented only to them.
+
+					Although almost all battlesmiths are dwarves, a few of other races have learned their ways- mostly elves who fought in ancient wars against orcish armies alongside battlesmiths. Humans have proven to be impressive battlesmiths, but most dwarves find their loyalties too difficult to discern or too fickle to maintain, and so humans have greater difficulty proving their worth. There are no records of any half orc battlesmiths, and you would be hard pressed to convince anyone that there should be- the title evolved out of a way of killing orcs after all!`,
+		skillProficiencies: `Athletics, Intimidation`,
+		toolProficiencies: `Your choice of Smith's, Mason's, or Brewer's Tools.`,
+		languages: ``,
+		startingEquipment: `A metal flask, a set of common or fine clothes, a Blacksmiths apron, a whetstone, a flask of oil, a letter from your patron, a badge showing your patron's crest, a hammer, 5ft of chain, and a small pouch containing 4gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Champion`,
+			description: `You are or were, the champion of a patron, (likely a noble dwarven clan) and a known battlesmith. Your patron may come to you with demands or requests; enemies of your patron may try to buy, manipulate, or kill you; and you will likely have made some enemies of your own during your career. The life of a battlesmith can be busy, hectic, and complicated, even long after retirement or expulsion. Work with your DM to flesh out your patron, their enemies, and your personal enemies if you have any.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Battlesmiths are warrriors first, with a lifestyle revolving around combat. For all of the advantages of this lifestyle, there are many drawbacks, and time can take a heavy toll on the minds and spirits of battlesmiths.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My status as a battlesmith has brought me only bloodshed and sorrow.`,
+				},
+				{
+					number: 2,
+					description: `I am always ready to fight.`,
+				},
+				{
+					number: 3,
+					description: `I am unforgiving or intolerant.`,
+				},
+				{
+					number: 4,
+					description: `I envy the easier lives of commoners.`,
+				},
+				{
+					number: 5,
+					description: `I revere the lives and deaths of even my most cruel and fearsome enemies.`,
+				},
+				{
+					number: 6,
+					description: `I make light of violence and death.`,
+				},
+				{
+					number: 7,
+					description: `I'm never too far from a bottle of alcohol.`,
+				},
+				{
+					number: 8,
+					description: `I speak very little- if even at all.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Responsibility`,
+					description: `My power is a gift not to be taken lightly, and I should avoid seeking out unnecessary conflict.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Duty`,
+					description: `My purpose is the continued peace and safety of my people.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Authority`,
+					description: `I do as I wish- who's going to stop me?`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Power`,
+					description: `All who oppose me must be crushed under my boot! `,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Function`,
+					description: `This is what I was made to do.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Purification`,
+					description: `I must stamp out evil wherever it may dwell`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A battlesmith saved me or someone close to me, and I strive towards filling their enormous footsteps.`,
+				},
+				{
+					number: 2,
+					description: `My patron clan is everything to me, and I will do whatever I can do to glorify their name.`,
+				},
+				{
+					number: 3,
+					description: `Countless battles have not shaken the faith I have in my allies.`,
+				},
+				{
+					number: 4,
+					description: `I became a battlesmith to defend my home and people from a great evil.`,
+				},
+				{
+					number: 5,
+					description: `My patron has sent me on one final task before I retire. It must be done at all costs.`,
+				},
+				{
+					number: 6,
+					description: `I am in love with either another battlesmith or a hated enemy.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I find any reason to fight, often attacking enemies when other solutions could have been met.`,
+				},
+				{
+					number: 2,
+					description: `I care more about my weapon, armor, or other possession, than I do about my friends.`,
+				},
+				{
+					number: 3,
+					description: `I have crossed a foreign military force and they have hunted me ever since.`,
+				},
+				{
+					number: 4,
+					description: `I am unwaveringly loyal to my patron, even if my orders conflict with my personal beliefs.`,
+				},
+				{
+					number: 5,
+					description: `I have offended my patron clan, nation, or fellow battlesmiths, and have been stripped of my title.`,
+				},
+				{
+					number: 6,
+					description: `I am actually a terrible coward, willing to do anything to gain glory or power without fighting, and will shy away from a fight if the battle goes sour.`,
 				},
 			],
 		},
