@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header, SliderSwitch } from "../../components";
+import { Header, SliderSwitch, Dice, AdvRollBtn } from "../../components";
 import {
 	classesArray,
 	classDesc,
@@ -27,8 +27,32 @@ import { ClipLoader } from "react-spinners";
 import { classImages } from "./image.js";
 import selectClassImage from "../../assets/classes/select-class.jpg";
 
+import DisplayResults from "@3d-dice/dice-ui/src/displayResults"; // fui index exports are messed up -> going to src
+import DiceParser from "@3d-dice/dice-parser-interface";
+
+// create Dice Roll Parser to handle complex notations
+const DRP = new DiceParser();
+
+// create display overlay for final results
+const DiceResults = new DisplayResults("#dice-box");
+
+// initialize the Dice Box outside of the component
+Dice.init().then(() => {
+	// clear dice on click anywhere on the screen
+	document.addEventListener("mousedown", () => {
+		const diceBoxCanvas = document.getElementById("dice-canvas");
+		if (window.getComputedStyle(diceBoxCanvas).display !== "none") {
+			Dice.hide().clear();
+			DiceResults.clear();
+		}
+	});
+});
+
 const baseAbilityValue = 8;
 const costTable = [0, 1, 2, 3, 4, 5, 7, 9]; // Costs for scores 8-15
+
+let setAbilityScoreHandler = null;
+let setIsAbilityRolledHandler = null;
 
 const CharacterSheet = () => {
 	const [isHomebrew, setIsHomebrew] = useState(false);
@@ -61,6 +85,7 @@ const CharacterSheet = () => {
 	const [charisma, setCharisma] = useState(baseAbilityValue);
 	const [charismaRoll, setCharismaRoll] = useState(0);
 	const [isCharismaRolled, setIsCharismaRolled] = useState(false);
+	const [disableRolling, setDisableRolling] = useState(false);
 	const [maxAbilityPoints, setMaxAbilityPoints] = useState(27);
 	const [totalAbilityPointsRemaining, setTotalAbilityPointsRemaining] =
 		useState(maxAbilityPoints - 6);
@@ -76,6 +101,52 @@ const CharacterSheet = () => {
 	const [bond, setBond] = useState("");
 	const [flaw, setFlaw] = useState("");
 	const [personalityTraits, setPersonalityTraits] = useState(["", ""]);
+
+	// This method is triggered whenever dice are finished rolling
+	Dice.onRollComplete = (results) => {
+		// handle any rerolls
+		const rerolls = DRP.handleRerolls(results);
+		if (rerolls.length) {
+			rerolls.forEach((roll) => Dice.add(roll, roll.groupId));
+			return rerolls;
+		}
+		// if no rerolls needed then parse the final results
+		const finalResults = DRP.parseFinalResults(results);
+
+		const rolledValue = finalResults.value;
+
+		if (setAbilityScoreHandler && setIsAbilityRolledHandler) {
+			// Update the ability score and mark it as rolled
+			setAbilityScoreHandler(rolledValue);
+			setIsAbilityRolledHandler(true);
+			setDisableRolling(false);
+		}
+
+		// show the results
+		DiceResults.showResults(finalResults);
+	};
+
+	// trigger dice roll
+	const rollDice = (notation, setAbilityScore, setIsAbilityRolled) => {
+		// Store the setters for use in onRollComplete
+		setAbilityScoreHandler = setAbilityScore;
+		setIsAbilityRolledHandler = setIsAbilityRolled;
+
+		// Trigger the dice roll using the parser
+		Dice.show().roll(DRP.parseNotation(notation));
+	};
+
+	Dice.onBeforeRoll = () => {
+		setDisableRolling(true);
+		setTimeout(() => {
+			setDisableRolling(false);
+		}, 3500);
+	};
+
+	Dice.onRemoveComplete = () => {
+		console.log("gay");
+		
+	}
 
 	const navigate = useNavigate();
 
@@ -177,17 +248,17 @@ const CharacterSheet = () => {
 		}
 	};
 
-	const roll4d6DropLowest = (setIsAbilityRolled, setIsAbility) => {
-		const rolls = [];
-		for (let i = 0; i < 4; i++) {
-			rolls.push(Math.floor(Math.random() * 6) + 1);
-		}
-		// Sort the rolls and drop the lowest one
-		rolls.sort((a, b) => a - b);
-		rolls.shift(); // Remove the lowest roll
-		setIsAbilityRolled(true);
-		setIsAbility(rolls.reduce((sum, roll) => sum + roll, 0));
-	};
+	// const roll4d6DropLowest = (setIsAbilityRolled, setIsAbility) => {
+	// 	const rolls = [];
+	// 	for (let i = 0; i < 4; i++) {
+	// 		rolls.push(Math.floor(Math.random() * 6) + 1);
+	// 	}
+	// 	// Sort the rolls and drop the lowest one
+	// 	rolls.sort((a, b) => a - b);
+	// 	rolls.shift(); // Remove the lowest roll
+	// 	setIsAbilityRolled(true);
+	// 	setIsAbility(rolls.reduce((sum, roll) => sum + roll, 0));
+	// };
 
 	const handleClassChange = (e) => {
 		setPrimaryClass(e.target.value);
@@ -626,7 +697,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isStrengthRolled}
 												type="button"
 												onClick={() =>
@@ -637,7 +708,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isStrengthRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setStrengthRoll,
+														setIsStrengthRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="strength"
@@ -700,7 +786,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isDexterityRolled}
 												type="button"
 												onClick={() =>
@@ -711,7 +797,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isDexterityRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setDexterityRoll,
+														setIsDexterityRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="dexterity"
@@ -774,7 +875,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isConstitutionRolled}
 												type="button"
 												onClick={() =>
@@ -785,7 +886,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isConstitutionRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setConstitutionRoll,
+														setIsConstitutionRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="constitution"
@@ -848,7 +964,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isIntelligenceRolled}
 												type="button"
 												onClick={() =>
@@ -859,7 +975,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isIntelligenceRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setIntelligenceRoll,
+														setIsIntelligenceRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="intelligence"
@@ -920,7 +1051,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isWisdomRolled}
 												type="button"
 												onClick={() =>
@@ -931,7 +1062,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isWisdomRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setWisdomRoll,
+														setIsWisdomRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="wisdom"
@@ -992,7 +1138,7 @@ const CharacterSheet = () => {
 										</>
 									) : (
 										<>
-											<button
+											{/* <button
 												disabled={isCharismaRolled}
 												type="button"
 												onClick={() =>
@@ -1003,7 +1149,22 @@ const CharacterSheet = () => {
 												}
 											>
 												4d6
-											</button>
+											</button> */}
+											<AdvRollBtn
+												label="Roll"
+												disabled={
+													isCharismaRolled ||
+													disableRolling
+												}
+												notation="4d6dl1"
+												onRoll={() =>
+													rollDice(
+														"4d6dl1",
+														setCharismaRoll,
+														setIsCharismaRolled
+													)
+												}
+											/>
 											<input
 												type="number"
 												id="charisma"

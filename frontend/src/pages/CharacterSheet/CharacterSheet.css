@@ -1,8 +1,8 @@
 .character-sheet-background {
 	position: relative;
-	/* background-image: url("../../assets/wood-background1.png");
+	background-image: url("../../assets/wood-background2.jpg");
 	background-repeat: repeat-y;
-	background-size: contain; */
+	background-size: contain;
 	display: flex;
 	justify-content: center;
 	align-items: center;
