@@ -3516,16 +3516,46 @@ export const backgroundsArray = [
 // all backgroundDescs need formatting
 export const backgroundDesc = {
 	Abandoned: {
+		isHomebrew: true,
 		description: `Not everyone will have someone with them their entire life. Even if there is a crowd of potential relationships waiting to happen, they will tend to not want to forge a relationship, so as to not be abandoned again. These individuals tend to shy away from very large crowds, acting as an observer of sorts (like an outsider observing the in crowd, etc.). A person who is abandoned also has a unique viewpoint as they interpret events drastically from other party members.
-
-					Think for a moment. Who abandoned you? Are you holding a grudge against them, Or are you willing to forgive them? For how long have you been abandoned? These are questions you should ask yourself, and answer in the shoes of your character. You could've been abandoned by a ragtag group of adventurers, after you discussed that you wanted to leave the group behind! Or perhaps, you were abandoned by your family, left to starve in the alleyways of a run down village.`,
-		skillProficiencies: ` Deception, Intimidation, Performance, Persuasion, or Stealth. `,
+						Think for a moment. Who abandoned you? Are you holding a grudge against them, Or are you willing to forgive them? For how long have you been abandoned? These are questions you should ask yourself, and answer in the shoes of your character. You could've been abandoned by a ragtag group of adventurers, after you discussed that you wanted to leave the group behind! Or perhaps, you were abandoned by your family, left to starve in the alleyways of a run down village.`,
+		skillProficiencies: `You are proficient in two of the following skills: Deception, Intimidation, Performance, Persuasion, or Stealth. After all, you've seen and adapted to the hostility of some travelers in the world.`,
 		toolProficiencies: `One artisan's tool of your choice.`,
-		languages: `One language of your choice`,
+		languages: `One language of your choice.`,
 		startingEquipment: `You start with dark common clothes, a few (1d4) pieces of gold, one trinket from your life, before you were abandoned.`,
-		backgroundSpecial: ``,
+		backgroundSpecial: {
+			title: `Hope`,
+			description: ``,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `	Everybody deserves a second chance!`,
+				},
+				{
+					number: 2,
+					description: `I'll never give up on the people I care about!`,
+				},
+				{
+					number: 3,
+					description: `	Everything is gonna turn out a-O.K!`,
+				},
+				{
+					number: 4,
+					description: `Come on, there's always a bright side!`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
 		feature: {
-			title: `Pity or Hope`,
+			title: `Pity`,
 			description: `Whether you are a sorrowful realist, or a hopeful for what the future can give you, you have learned to embrace who you are, for better or worse. When you meet new people and explain what has happened to you, those who can feel empathy or share your pain are more often willing to lend a helping hand. Whether that is in the form of information, food and supplies, or just a place for you and your party to sleep, most with a heart will do their best to understand your plight and help in any way they can.`,
 		},
 		alterateFeature: [
@@ -3538,48 +3568,183 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: `AWAITING FILLING`, // NEEDS TO BE FILLED IN
-		suggestedPersonalityTraits: `d4	Personality Traits (Pity)
-								1	I don’t know what I’m supposed to do with my life anymore…
-								2	People always tell me to look on the bright side...what one, though?
-								3	I worry that even if I help complete some sort of magical quest, I’ll be forgotten.
-								4	I don’t even like to help...I just do it for a second chance.
-								d4	Personality Traits (Hope)
-								1	Everybody deserves a second chance!
-								2	I'll never give up on the people I care about!
-								3	Everything is gonna turn out a-O.K!
-								4	Come on, there's always a bright side!`,
-		suggestedIdeal: `d6	Ideals
-						1	Chaos. I'm just here to cause chaos! no wrong, no right! (Chaotic)
-						2	Self-Improvement. I must go on a journey of self-improvement, or else, what's the point of this all? (Neutral)
-						3	Guidance. I feel that I've broken something, and must been guided by some type of kind deity or system! (Lawful)
-						4	Vengeance. I will find the one that has abandoned me first, and I will have revenge. (Evil)
-						5	The World. The World needs to hear the story of someone like me, someone who's broken boundaries of life. (Any)
-						6	Friendship. I'll go from being abandoned, to having made wondrous friends. (Good)`,
-		suggestedBond: `d6	Bond
-						1	The inn owner that took me in was quite kind...I owe them thanks, still.
-						2	A small group of adventurers guided me to this place...I should thank them if I see them again.
-						3	Whenever I see someone in a similar situation as me, I simply must help them.
-						4	Seeing even little animals get along makes me smile, I can't stand to see one hurt.
-						5	Sometimes I think there's someone out there for me, and that makes all the worries go away.
-						6	Thinking of the people I can call my friends...that makes me smile.`,
-		suggestedFlaw: `d6	Flaw
-						1	I get paranoid and anxious easily.
-						2	If it's to protect my new friends, I will never stand down; no matter how strong the foe.
-						3	I think of myself as some sort of "Tough Guy", having gone through what I have.
-						4	I get angry at the little things in life...
-						5	I often apologize for things out of my control to try and avoid conflict.
-						6	When things get too hard, I push people away before they can abandon me again.`,
+		suggestedCharacteristics: `These are simple, but fleshed out characteristics that might help you build a bridge for your Abandoned!`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d4`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don’t know what I’m supposed to do with my life anymore…`,
+				},
+				{
+					number: 2,
+					description: `People always tell me to look on the bright side...what one, though?`,
+				},
+				{
+					number: 3,
+					description: `I worry that even if I help complete some sort of magical quest, I’ll be forgotten.`,
+				},
+				{
+					number: 4,
+					description: `I don’t even like to help...I just do it for a second chance.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Chaos`,
+					description: `I'm just here to cause chaos! no wrong, no right!`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Self Improvement`,
+					description: `I must go on a journey of self-improvement, or else, what's the point of this all? `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Guidance`,
+					description: `Guidance. I feel that I've broken something, and must been guided by some type of kind deity or system! `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Vengeance`,
+					description: `I will find the one that has abandoned me first, and I will have revenge.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `The World`,
+					description: `The World needs to hear the story of someone like me, someone who's broken boundaries of life.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Friendship`,
+					description: `I'll go from being abandoned, to having made wondrous friends.`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `The inn owner that took me in was quite kind...I owe them thanks, still.`,
+				},
+				{
+					number: 2,
+					description: `A small group of adventurers guided me to this place...I should thank them if I see them again.`,
+				},
+				{
+					number: 3,
+					description: `Whenever I see someone in a similar situation as me, I simply must help them.`,
+				},
+				{
+					number: 4,
+					description: `Seeing even little animals get along makes me smile, I can't stand to see one hurt.`,
+				},
+				{
+					number: 5,
+					description: `	Sometimes I think there's someone out there for me, and that makes all the worries go away.`,
+				},
+				{
+					number: 6,
+					description: `Thinking of the people I can call my friends...that makes me smile.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I get paranoid and anxious easily.`,
+				},
+				{
+					number: 2,
+					description: `	If it's to protect my new friends, I will never stand down; no matter how strong the foe.`,
+				},
+				{
+					number: 3,
+					description: `I think of myself as some sort of "Tough Guy", having gone through what I have.`,
+				},
+				{
+					number: 4,
+					description: `	I get angry at the little things in life...`,
+				},
+				{
+					number: 5,
+					description: `I often apologize for things out of my control to try and avoid conflict.`,
+				},
+				{
+					number: 6,
+					description: `When things get too hard, I push people away before they can abandon me again.`,
+				},
+			],
+		},
 	},
-	AbyssDweller: {
+	Abyssdweller: {
+		isHomebrew: true,
 		description: `You were spawned in the layers of the Abyss. You might be a demon, or a lost soul.
-
 					Do you have any memories of the time in the Abyss? What have you experienced? Have you received torture or torment in any kind and if yes, was there a reason for that? Were you part of the army of a demon lord? Did you fight against devils or other demons? What is the reason that you are not part of that world anymore? Maybe you found a way out by yourself, someone sent you on a mission, or you were summoned by a cult or other force?`,
 		skillProficiencies: `Intimidation, Deception`,
 		toolProficiencies: `Disguise Kit`,
 		languages: `Choose one from the following list: Abyssal, Infernal, Celestial or Deep Speech`,
 		startingEquipment: `A Disguise kit, a set of dark common clothes, a small belt pouch containing 5 gp, and a trinket from the lower planes`,
-		backgroundSpecial: ``,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
 		feature: {
 			title: `Secrets of the Abyss`,
 			description: `As a dweller of the abyss, you know passages and routes through the abyss that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the Abyss twice as fast as your speed would normally allow.`,
@@ -3594,39 +3759,151 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: `AWAITING FILLING`, // NEEDS FILLING
-		suggestedPersonalityTraits: `
-									d8	Personality Trait
-									1	Friendship is new and strange to me.
-									2	I'm not a man of many words.
-									3	The stage is mine; I'm the center of everything.
-									4	I like to express emotions and feelings in wild gestures.
-									5	Staying at one place for too long is not in my interest.
-									6	For some reason, I enjoy nature and it's beauty.
-									7	It's hard/easy to adapt to this world.
-									8	It's easier to kill someone than to be nice to someone.`,
-		suggestedIdeal: `d6	Ideal
-						1	Order. Following orders is sometimes a good option, that might lead in less pain. (Lawful)
-						2	Pain. Feeling pain reminds people of the fact that they are still alive, so it’s good to give them that feeling. [A fact that they forget too easy] (Evil)
-						3	Freedom. If you have the possibility to do everything you want, what could stop you from doing that? (Chaotic)
-						4	Hate. Everyone not from the Abyss does not deserve to live. (Evil)
-						5	Integrity. Reducing the pain of someone means less pain in the entire world. (Good)
-						6	Destruction. Chaos is more likely than order. Let's help with this process. (Chaotic)`,
-		suggestedBond: `
-						d6	Bond
-						1	There is this one special place in the abyss where I always came back to.
-						2	I took part in the blood war against the devils.
-						3	I was/am under the command of a demon lord/prince.
-						4	I had some friends/comrades in the abyss. I wonder what happened to them.
-						5	I once fought in a huge battle between two demon lords/princes.
-						6	I have connections to a cult from the Material Plane.`,
-		suggestedFlaw: `d6	Flaw
-					1	There is no way I'll go back to the abyss. If there is a way to survive, I will take it, even when that means I have to leave others behind.
-					2	Thinking about the abyss always makes me angry.
-					3	Everyone is hateable.
-					4	I have an explosive nature. It's pretty easy to trigger me.
-					5	Sometimes I talk to myself. The time in the abyss was long and lonely...
-					6	I usually keep stuff I find or get for me.`,
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Friendship is new and strange to me.`,
+				},
+				{
+					number: 2,
+					description: `I'm not a man of many words.`,
+				},
+				{
+					number: 3,
+					description: `The stage is mine; I'm the center of everything.`,
+				},
+				{
+					number: 4,
+					description: `I like to express emotions and feelings in wild gestures.`,
+				},
+				{
+					number: 5,
+					description: `Staying at one place for too long is not in my interest.`,
+				},
+				{
+					number: 6,
+					description: `For some reason, I enjoy nature and it's beauty.`,
+				},
+				{
+					number: 7,
+					description: `It's hard/easy to adapt to this world.`,
+				},
+				{
+					number: 8,
+					description: `It's easier to kill someone than to be nice to someone.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Order`,
+					description: `Following orders is sometimes a good option, that might lead in less pain.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Pain`,
+					description: ` Feeling pain reminds people of the fact that they are still alive, so it’s good to give them that feeling. [A fact that they forget too easy] `,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Freedom`,
+					description: `If you have the possibility to do everything you want, what could stop you from doing that?`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Hate`,
+					description: `Everyone not from the Abyss does not deserve to live.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Integrity`,
+					description: `Reducing the pain of someone means less pain in the entire world. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Destruction`,
+					description: `Chaos is more likely than order. Let's help with this process`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `There is this one special place in the abyss where I always came back to.`,
+				},
+				{
+					number: 2,
+					description: `I took part in the blood war against the devils.`,
+				},
+				{
+					number: 3,
+					description: `	I was/am under the command of a demon lord/prince.`,
+				},
+				{
+					number: 4,
+					description: `I had some friends/comrades in the abyss. I wonder what happened to them.`,
+				},
+				{
+					number: 5,
+					description: `I once fought in a huge battle between two demon lords/princes.`,
+				},
+				{
+					number: 6,
+					description: `I have connections to a cult from the Material Plane.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `There is no way I'll go back to the abyss. If there is a way to survive, I will take it, even when that means I have to leave others behind.`,
+				},
+				{
+					number: 2,
+					description: `Thinking about the abyss always makes me angry.`,
+				},
+				{
+					number: 3,
+					description: `	Everyone is hateable.`,
+				},
+				{
+					number: 4,
+					description: `	I have an explosive nature. It's pretty easy to trigger me.`,
+				},
+				{
+					number: 5,
+					description: `	Sometimes I talk to myself. The time in the abyss was long and lonely...`,
+				},
+				{
+					number: 6,
+					description: `I usually keep stuff I find or get for me.`,
+				},
+			],
+		},
 	},
 
 	Acolyte: {
@@ -3736,6 +4013,7 @@ export const backgroundDesc = {
 						detriment of everything else in my life`,
 	},
 	Addict: {
+		isHomebrew: true,
 		description: `Addiction can happen to anyone. While genetics can help increase or decrease the chances of addiction, everything that causes pleasure can become an addiction.
 
 					You've became dependent on some sort of substance or activity. You become jittery and unreasonable if you don't feed your addiction for a while. You may be working to rid yourself of the addiction, became numb to it, or revel in it. In a way, you are a sick person afflicted with a disease that keeps you hooked. You may have tried to get help. Did it work? Are you on recovery?Or perhaps you recovered and fell back into the hole, or even found some new form of addiction. It's a slippery slope, after all.
@@ -3744,16 +4022,38 @@ export const backgroundDesc = {
 		skillProficiencies: `Choose between Deception or Persuasion, your 2nd skill must be related to something you've learned from your addiction (ie: sex or drugs could be medicine, gambling could be sleight of hand).`,
 		toolProficiencies: `1 tool set that facilitates your addiction (ie: alchemy lab for drugs, game set for gambling, a bondage set for sex.)`,
 		languages: `Any one`,
-		startingEquipment: ` Medical diagnosis papers, paraphernalia that relates to your addiction (usually the tool you are proficient in), common clothes, and a pouch containing 5gp.`,
-		backgroundSpecial: `Addiction, Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.
-
-							d6	Addiction
-							1	Drugs (can be recreational or medicinal, be sure to know the drug and its intended effects)
-							2	Food (whether this shows up as a crazy chocolate hunter/lover type, or an unhealthy reaction to purging and unhealthy diets type, is up to you)
-							3	Gambling and/or gaming.
-							4	Sex and/or masturbation.
-							5	A certain activity (maybe you just REALLY love climbing trees, perhaps your fingers tingle and shake to knit scarves, you just can't go very long without needing to do that activity)
-							6	You have a rare genetic disorder that makes anything remotely pleasurable addictive.`,
+		startingEquipment: `Medical diagnosis papers, paraphernalia that relates to your addiction (usually the tool you are proficient in), common clothes, and a pouch containing 5gp.`,
+		backgroundSpecial: {
+			title: `Addiction`,
+			description: `Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Drugs (can be recreational or medicinal, be sure to know the drug and its intended effects)`,
+				},
+				{
+					number: 2,
+					description: `Food (whether this shows up as a crazy chocolate hunter/lover type, or an unhealthy reaction to purging and unhealthy diets type, is up to you)`,
+				},
+				{
+					number: 3,
+					description: `Gambling and/or gaming.`,
+				},
+				{
+					number: 4,
+					description: `Sex and/or masturbation.`,
+				},
+				{
+					number: 5,
+					description: `A certain activity (maybe you just REALLY love climbing trees, perhaps your fingers tingle and shake to knit scarves, you just can't go very long without needing to do that activity)`,
+				},
+				{
+					number: 6,
+					description: `You have a rare genetic disorder that makes anything remotely pleasurable addictive.`,
+				},
+			],
+		},
 		feature: {
 			title: `Strong Highs and Lows`,
 			description: `As an addict, your mental and physical state deal heavily with how you have fed your addiction. When you indulge in your addiction, you start to feel euphoric and powerful. You might make risky decisions or become stupidly cockamamie. It is also what keeps you normal and happy, able to enjoy things.
@@ -3776,38 +4076,151 @@ export const backgroundDesc = {
 							Work with the GM to determine your road to recovery. How hard is it to resist? It can depend on what your addiction is. You can use Wisdom or Constitution saves if necessary. Is it worse over time? Will you ever fully recover and if so, when? What benefits might you gain when you finally quit for good?`,
 			},
 		],
-		suggestedCharacteristics: `Not all addicts are the same. Anything can become addictive with the right person; even symptoms can vary from addict to addict.`,
-		suggestedPersonalityTraits: `d8	Personality Trait
-									1	I think constantly about my choice of substance/Activity.
-									2	I will do anything to get more of what I want.
-									3	I try to get other people addicted as well.
-									4	I believe my addiction is normal for everyone.
-									5	I hate myself but can't seem to stop.
-									6	I frequently twitch and babble about my addiction.
-									7	I am prone to random and frequently inappropriate emotional changes.
-									8	I spend most of my earnings on my addiction.`,
-		suggestedIdeal: `d6	Ideal
-						1	Love and Betterment I'm trying to get a better handle on my addiction so that I can be better for someone I love. (Good)
-						2	Magic Cure I'm chasing the cure for my addiction because the process to quit is WAY too much work. (Chaotic)
-						3	Self Improvement . I am determined to get my life in order. (Lawful)
-						4	Ambrosia I believe my addiction is the key to happiness and spiritual transcendence. (Neutral)
-						5	Improvement I can make my addiction even better, with the right tweaks I could reach new highs. (Neutral)
-						6	MORE I want more, I want it all to myself, I can never get enough, and no one can stop me. (Evil)`,
-		suggestedBond: `d6	Bond
-						1	My addiction is my choice, if I want to let it run my life, that's my prerogative.
-						2	I am trying to get better for the sake my family and friends.
-						3	I will never stop trying to relive that first high.
-						4	my addiction was the only thing that kept me going in trying times.
-						5	I owe someone a mountain of debt.
-						6	I made a tidy sum from other addicts but can't use the money (guilt or the law)
-						`,
-		suggestedFlaw: `d6	Flaw
-						1	I'm allergic (to the material, substance, food, drink, activity, etc, required for my addiction)
-						2	I've become a bit defined by my addiction.
-						3	I have to bring the supplies to aid/sustain my addiction and sometimes people say it's more trouble than it's worth.
-						4	I have an uncontrollable twitch that never stops, not even when I sleep.
-						5	When going through withdrawal, I become very violent and aggressive to everyone around me.
-						6	When I don't get my addiction satisfied I can barely sleep.`,
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I think constantly about my choice of substance/Activity.`,
+				},
+				{
+					number: 2,
+					description: `I will do anything to get more of what I want.`,
+				},
+				{
+					number: 3,
+					description: `I try to get other people addicted as well.`,
+				},
+				{
+					number: 4,
+					description: `I believe my addiction is normal for everyone.`,
+				},
+				{
+					number: 5,
+					description: `I hate myself but can't seem to stop.`,
+				},
+				{
+					number: 6,
+					description: `I frequently twitch and babble about my addiction.`,
+				},
+				{
+					number: 7,
+					description: `I am prone to random and frequently inappropriate emotional changes.`,
+				},
+				{
+					number: 8,
+					description: `I spend most of my earnings on my addiction.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Love and Betterment`,
+					description: `I'm trying to get a better handle on my addiction so that I can be better for someone I love. `,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Magic Cure`,
+					description: `I'm chasing the cure for my addiction because the process to quit is WAY too much work.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Self Improvement`,
+					description: `I am determined to get my life in order.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Ambrosia`,
+					description: `I believe my addiction is the key to happiness and spiritual transcendence.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Improvement`,	
+					description: `I can make my addiction even better, with the right tweaks I could reach new highs. `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `MORE`,
+					description: `I want more, I want it all to myself, I can never get enough, and no one can stop me.`,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My addiction is my choice, if I want to let it run my life, that's my prerogative.`,
+				},
+				{
+					number: 2,
+					description: `I am trying to get better for the sake my family and friends.`,
+				},
+				{
+					number: 3,
+					description: `I will never stop trying to relive that first high.`,
+				},
+				{
+					number: 4,
+					description: `my addiction was the only thing that kept me going in trying times.`,
+				},
+				{
+					number: 5,
+					description: `I owe someone a mountain of debt.`,
+				},
+				{
+					number: 6,
+					description: `I made a tidy sum from other addicts but can't use the money (guilt or the law)`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm allergic (to the material, substance, food, drink, activity, etc, required for my addiction)`,
+				},
+				{
+					number: 2,
+					description: `I've become a bit defined by my addiction.`,
+				},
+				{
+					number: 3,
+					description: `I have to bring the supplies to aid/sustain my addiction and sometimes people say it's more trouble than it's worth.`,
+				},
+				{
+					number: 4,
+					description: `I have an uncontrollable twitch that never stops, not even when I sleep.`,
+				},
+				{
+					number: 5,
+					description: `When going through withdrawal, I become very violent and aggressive to everyone around me.`,
+				},
+				{
+					number: 6,
+					description: `When I don't get my addiction satisfied I can barely sleep.`,
+				},
+			],
+		},
 	},
 	Adopted: {
 		isHomebrew: true,
@@ -3928,32 +4341,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Amusement. If there isn’t any fun in doing something then why do it `,
+					bold: `Amusement`,
+					description: `If there isn’t any fun in doing something then why do it `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 2,
-					description: `Belonging. Everyone should know where they belong `,
+					bold: `Belonging`,
+					description: `Everyone should know where they belong `,
 					alignment: `Good`,
 				},
 				{
 					number: 3,
-					description: `Rule-follower. Regardless as to what you are, everyone should follow the rules`,
+					bold: `Rule-Follower`,
+					description: `Regardless as to what you are, everyone should follow the rules`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 4,
-					description: `	Vengeance. For all that happened at my birth, there will be blood to pay`,
+					bold: `Vengeance`,
+					description: `For all that happened at my birth, there will be blood to pay`,
 					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: `Opinions. Everyone is entitled to their own opinions, of course this includes myself `,
+					bold: `Opinons`,
+					description: `Everyone is entitled to their own opinions, of course this includes myself `,
 					alignment: `Any`,
 				},
 				{
 					number: 6,
-					description: `Whatever. Everyone just does what they want anyway`,
+					bold: `Whatever`,
+					description: `Everyone just does what they want anyway`,
 					alignment: `Neutral`,
 				},
 			],
@@ -4025,7 +4444,7 @@ export const backgroundDesc = {
 		isHomebrew: true,
 		description: `You've always wanted to learn something interesting and different to make you stand out from the crowd, and now you have! With the tool skills you have learned they may just save your life one day and you are always ready for that moment.
 
-Your learning has gotten you this far, but you are seeking more. What knowledge could draw you from your books to a life of adventure? Is there forbidden lore you seek? Did the promise of ruins and mysteries draw you from the comfort of your office? Did you learn secrets you weren't welcome to and choose to see the world instead of face the music?`,
+					Your learning has gotten you this far, but you are seeking more. What knowledge could draw you from your books to a life of adventure? Is there forbidden lore you seek? Did the promise of ruins and mysteries draw you from the comfort of your office? Did you learn secrets you weren't welcome to and choose to see the world instead of face the music?`,
 		skillProficiencies: `Two skill of your choice`,
 		toolProficiencies: `One tool kit of your choice`,
 		languages: `One standard language of your choice`,
@@ -4114,32 +4533,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Teacher I will set out my dream to help the helpless. `,
+					bold: `Teacher`,
+					description: `I will set out my dream to help the helpless. `,
 					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: `Persistence My dream is my life. No one will stop me from achieving victory in it. `,
+					bold: `Persistence`,
+					description: `My dream is my life. No one will stop me from achieving victory in it. `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					description: `Knowledge When I reach my goal, I will teach others what I've learnt. `,
+					bold: `Knowledge`,
+					description: `When I reach my goal, I will teach others what I've learnt. `,
 					alignment: `Lawful`,
 				},
 				{
 					number: 4,
-					description: `Revenge My dream will be used against those who laughed at me`,
+					bold: `Revenge`,
+					description: `My dream will be used against those who laughed at me`,
 					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: `Remembrance Even if I don't reach my goal, I will still use my skills.`,
+					bold: `Rememberance`,
+					description: `Even if I don't reach my goal, I will still use my skills.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: `	Acceptance This destiny is for me. I can feel it.`,
+					bold: `Acceptance`,
+					description: `This destiny is for me. I can feel it.`,
 					alignment: `Any`,
 				},
 			],
@@ -4302,100 +4727,106 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 		},
 		suggestedIdeal: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
-					alignment: ``,
+					bold: `Betterment`,
+					description: `Some day, I will make life better for everyone like me.`,
+					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: ``,
-					alignment: ``,
+					bold: `Practicality`,
+					description: `If I can make my situation useful, I will`,
+					alignment: `Neutral`,
 				},
 				{
 					number: 3,
-					description: ``,
-					alignment: ``,
+					bold: `Retribution`,
+					description: `I believe the cause of my affliction can be traced to a specific source- and it shall feel my vengeance! `,
+					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					description: ``,
-					alignment: ``,
+					bold: `Coexistance`,
+					description: `One cannot legislate love or repect, but one can enforce tolerance`,
+					alignment: `Lawful`,
 				},
 				{
 					number: 5,
-					description: ``,
-					alignment: ``,
+					bold: `Ambivalence`,
+					description: `I don't look like you, but I'm just like you.`,
+					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: ``,
-					alignment: ``,
+					bold: `Whatever`,
+					description: `Who cares? Nothing will hold me back!`,
+					alignment: `Chaotic`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I have nothing to lose and everything to gain.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I believe there is a way to make me normal, and I am on a quest to find it.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `Growing up, there was only one person who could see past my affliction to the real me. I would do anything for them.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I keep hold of some small object which acts as a reminder of life before my affliction.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `All I want is to find somewhere I belong.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I have a diary or journal which I record my experiences in every time I rest.`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `While most would think I am brave, those who know me worry that I may be suicidally so.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I am just as judgmental and prejudiced as everyone else- perhaps more so.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `Years of mistreatment have left me misanthropic and cruel.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My affliction matches a description in some prophecy- and anyone who knows about it wants me dead when they find out.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `My affliction has left me cowardly and over cautious.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I don't understand why people fear or pity me.`,
 				},
 			],
 		},
@@ -4503,32 +4934,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Discovery. I am on the verge of a great discovery that will revolutionize alchemy as we know it, and I must follow through.`,
+					bold: `Discovery`,
+					description: `I am on the verge of a great discovery that will revolutionize alchemy as we know it, and I must follow through.`,
 					alignment: `Any`,
 				},
 				{
 					number: 2,
-					description: `Money. I don't care what I'm being told to do; if you can pay, I can do it.`,
+					bold: `Money`,
+					description: `I don't care what I'm being told to do; if you can pay, I can do it.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 3,
-					description: `Power. With this craft, I can control creation and death like a god. All lives thus become trivial before me.`,
+					bold: `Power`,
+					description: `With this craft, I can control creation and death like a god. All lives thus become trivial before me.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					description: `Ethics. There are bad actors out there that I swear to find and subdue to preserve the integrity of alchemy. `,
+					bold: `Ethics`,
+					description: `There are bad actors out there that I swear to find and subdue to preserve the integrity of alchemy. `,
 					alignment: `Lawful`,
 				},
 				{
 					number: 5,
-					description: `Improvement. There are great things that alchemy can accomplish for people, like medicine. I strive for this.`,
+					bold: `Improvement`,
+					description: `There are great things that alchemy can accomplish for people, like medicine. I strive for this.`,
 					alignment: `Good`,
 				},
 				{
 					number: 6,
-					description: `Knowledge. My passion is a drive that never ceases. I will do anything to learn about what I desire.`,
+					bold: `Knowledge`,
+					description: `My passion is a drive that never ceases. I will do anything to learn about what I desire.`,
 					alignment: `Chaotic`,
 				},
 			],
@@ -4697,32 +5134,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Self-Serving. Nobody helped me, so why should I do the same for them?`,
+					bold: `Self-Serving`,
+					description: `Nobody helped me, so why should I do the same for them?`,
 					alignment: `Evil`,
 				},
 				{
 					number: 2,
-					description: `Idealistic. If there's still hope for me, there's hope for anyone.`,
+					bold: `Idealistic`,
+					description: `If there's still hope for me, there's hope for anyone.`,
 					alignment: `Good`,
 				},
 				{
 					number: 3,
-					description: `Drinking. I don't care about much else other than alcohol. `,
+					bold: `Drinking`,
+					description: `I don't care about much else other than alcohol. `,
 					alignment: `Neutral`,
 				},
 				{
 					number: 4,
-					description: `Tempered. I find that drinking within reason keeps me sane, but I still need alcohol everyday`,
+					bold: `Tempered`,
+					description: `I find that drinking within reason keeps me sane, but I still need alcohol everyday`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 5,
-					description: `	Hedonism. If something's good why shouldn't I pursue it? `,
+					bold: `Hedonism`,
+					description: `If something's good why shouldn't I pursue it? `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 6,
-					description: `Change. I want to change my ways and be a better person.`,
+					bold: `Change`,
+					description: `I want to change my ways and be a better person.`,
 					alignment: `Any`,
 				},
 			],
@@ -4889,32 +5332,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Sincerity. There's no good pretending to be something I'm not.`,
+					bold: `Sincerity`,
+					description: `There's no good pretending to be something I'm not.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 2,
-					description: `Aspiration. I'm determined to make something of myself`,
+					bold: `Aspiration`,
+					description: `I'm determined to make something of myself`,
 					alignment: `Any`,
 				},
 				{
 					number: 3,
-					description: `Creativity. The world is in need of new ideas and bold action. `,
+					bold: `Creativity`,
+					description: `The world is in need of new ideas and bold action. `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 4,
-					description: `	Respect. People deserve to be treated with dignity and respect.`,
+					bold: `Respect`,
+					description: `People deserve to be treated with dignity and respect.`,
 					alignment: `Good`,
 				},
 				{
 					number: 5,
-					description: `Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking.`,
+					bold: `Logic`,
+					description: `Emotions must not cloud our sense of what is right and true, or our logical thinking.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 6,
-					description: `Knowledge. The path to power and self-improvement is through knowledge`,
+					bold: `Knowledge`,
+					description: `The path to power and self-improvement is through knowledge`,
 					alignment: `Neutral`,
 				},
 			],
@@ -5077,32 +5526,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Beginning. "This is a new, fresh start for me!" `,
+					bold: `Beginning`,
+					description: `"This is a new, fresh start for me!" `,
 					alignment: `Any`,
 				},
 				{
 					number: 2,
-					description: `Placement. "I will become a helpful member of my community, both from my past and my new future." `,
+					bold: `Placement`,
+					description: `"I will become a helpful member of my community, both from my past and my new future." `,
 					alignment: `Lawful`,
 				},
 				{
 					number: 3,
-					description: `Improvement. "In order for me to be better in the future, I must know about my past." `,
+					bold: `Improvement`,
+					description: `"In order for me to be better in the future, I must know about my past." `,
 					alignment: `Good`,
 				},
 				{
 					number: 4,
-					description: `Neglect. "Why bother searching for my past? It's in the past, after all." `,
+					bold: `Neglect`,
+					description: `"Why bother searching for my past? It's in the past, after all." `,
 					alignment: `Neutral`,
 				},
 				{
 					number: 5,
-					description: `	Freedom. "Having no memories means having no obligations." `,
+					bold: `Freedom`,
+					description: `"Having no memories means having no obligations." `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 6,
-					description: `Advantage. "Once I find out who I was, I'll use it to take back what I want." `,
+					bold: `Evil`,
+					description: `"Once I find out who I was, I'll use it to take back what I want." `,
 					alignment: `Evil`,
 				},
 			],
@@ -5269,32 +5724,38 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			roll: [
 				{
 					number: 1,
-					description: `Nihilism. Society is corrupt and cruel and people will benefit from it's removal. `,
+					bold: `Nihilism`,
+					description: `Society is corrupt and cruel and people will benefit from it's removal. `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 2,
-					description: `Relativism. Everyone has their own morals and making people follow your own is wrong.`,
+					bold: `Relativsm`,
+					description: `Everyone has their own morals and making people follow your own is wrong.`,
 					alignment: `Any`,
 				},
 				{
 					number: 3,
-					description: `Sociopath. Society did not accept me so I will burn it down to feel it's warmth.`,
+					bold: `Sociopath`,
+					description: `Society did not accept me so I will burn it down to feel it's warmth.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					description: `	Freedom. I want to do what I want and nobody can tell me otherwise.`,
+					bold: `Freedom`,
+					description: `I want to do what I want and nobody can tell me otherwise.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 5,
-					description: `Equaliser. Power should be equal from one person to another.`,
+					bold: `Equaliser`,
+					description: `Power should be equal from one person to another.`,
 					alignment: `Good`,
 				},
 				{
 					number: 6,
-					description: `	Choice. People should know everything about their leader, they can then make judgement from that. `,
+					bold: `Choice`,
+					description: `People should know everything about their leader, they can then make judgement from that. `,
 					alignment: `Lawful`,
 				},
 			],
@@ -6722,9 +7183,9 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 		languages: ``,
 		startingEquipment: `10gp, betrothal ring worth 15gp`,
 		backgroundSpecial: {
-			title: ``,
-			description: ``,
-			die: ``,
+			title: `A Narrow Escape`,
+			description: `After years of preparation what caused the marriage to fail?`,
+			die: `1d6`,
 			roll: [
 				{
 					number: 1,
