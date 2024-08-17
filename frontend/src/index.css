@@ -80,14 +80,13 @@ body {
 
 #dice-box,
 #dice-box canvas {
-  position: fixed;
-  pointer-events: none;
-  padding: 20rem;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
+	position: fixed;
+	pointer-events: none;
+	/* padding: 20rem; */
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
 }
-
 
 input[type="checkbox"] {
 	appearance: checkbox;

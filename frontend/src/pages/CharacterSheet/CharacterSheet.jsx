@@ -145,8 +145,7 @@ const CharacterSheet = () => {
 
 	Dice.onRemoveComplete = () => {
 		console.log("gay");
-		
-	}
+	};
 
 	const navigate = useNavigate();
 
@@ -277,6 +276,18 @@ const CharacterSheet = () => {
 		skillsObj[primaryClass]?.filter(
 			(s) => !skills.includes(s) || s === skills[index]
 		) || [];
+
+	const validPersonalityTraitOne = backgroundDesc[
+		background
+	]?.suggestedPersonalityTraits?.roll
+		?.map((pt) => pt.description)
+		?.includes(personalityTraits[0]);
+
+	const validPersonalityTraitTwo = backgroundDesc[
+		background
+	]?.suggestedPersonalityTraits?.roll
+		?.map((pt) => pt.description)
+		?.includes(personalityTraits[1]);
 
 	const handleRaceChange = (e) => {
 		setRace(e.target.value);
@@ -1436,10 +1447,42 @@ const CharacterSheet = () => {
 										onChange={(e) =>
 											setIdeal(e.target.value)
 										}
+										disabled={
+											background
+												? alignment
+													? false
+													: true
+												: true
+										}
 									>
 										<option value="">
-											Select an Ideal
+											{background
+												? alignment
+													? `Select an Ideal`
+													: `Select an Alignment`
+												: `Select a Background`}
 										</option>
+										{background &&
+											alignment &&
+											backgroundDesc[
+												background
+											].suggestedIdeal.roll
+												.filter(
+													(a) =>
+														alignment.includes(
+															a.alignment
+														) ||
+														a.alignment === "Any"
+												)
+												.map((i) => (
+													<option
+														key={i.description}
+														value={i.description}
+													>
+														{i.alignment}:{" "}
+														{i.description}
+													</option>
+												))}
 									</select>
 								</div>
 								<div>
@@ -1574,7 +1617,7 @@ const CharacterSheet = () => {
 											<sup className="red-star">*</sup>
 										)}
 									</label>
-									<textarea
+									{/* <textarea
 										id="personalityTraitOne"
 										value={personalityTraits[0]}
 										onChange={(e) => {
@@ -1589,7 +1632,46 @@ const CharacterSheet = () => {
 											height: "6rem",
 											width: "100%",
 										}}
-									/>
+									/> */}
+									<select
+										id="personalityTraitOne"
+										value={personalityTraits[0]}
+										onChange={(e) => {
+											const newTraits = [
+												...personalityTraits,
+											];
+											newTraits[0] = e.target.value;
+											setPersonalityTraits(newTraits);
+										}}
+										disabled={!background}
+										required
+									>
+										<option value="">
+											{background
+												? `Select a Personality Trait`
+												: `Select a Background`}
+										</option>
+										{background &&
+											backgroundDesc[
+												background
+											].suggestedPersonalityTraits.roll
+												.filter(
+													(pt) =>
+														!personalityTraits.includes(
+															pt.description
+														) ||
+														personalityTraits[0] ===
+															pt.description
+												)
+												.map((p) => (
+													<option
+														key={p.description}
+														value={p.description}
+													>
+														{p.description}
+													</option>
+												))}
+									</select>
 								</div>
 								<div>
 									<label htmlFor="personalityTraitTwo">
@@ -1609,7 +1691,7 @@ const CharacterSheet = () => {
 											<sup className="red-star">*</sup>
 										)}
 									</label>
-									<textarea
+									{/* <textarea
 										id="personalityTraitTwo"
 										value={personalityTraits[1]}
 										onChange={(e) => {
@@ -1624,7 +1706,46 @@ const CharacterSheet = () => {
 											height: "6rem",
 											width: "100%",
 										}}
-									/>
+									/> */}
+									<select
+										id="personalityTraitTwo"
+										value={personalityTraits[1]}
+										onChange={(e) => {
+											const newTraits = [
+												...personalityTraits,
+											];
+											newTraits[1] = e.target.value;
+											setPersonalityTraits(newTraits);
+										}}
+										disabled={!background}
+										required
+									>
+										<option value="">
+											{background
+												? `Select a Personality Trait`
+												: `Select a Background`}
+										</option>
+										{background &&
+											backgroundDesc[
+												background
+											].suggestedPersonalityTraits.roll
+												.filter(
+													(pt) =>
+														!personalityTraits.includes(
+															pt.description
+														) ||
+														personalityTraits[1] ===
+															pt.description
+												)
+												.map((p) => (
+													<option
+														key={p.description}
+														value={p.description}
+													>
+														{p.description}
+													</option>
+												))}
+									</select>
 								</div>
 							</div>
 							<div>
