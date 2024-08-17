@@ -2786,7 +2786,16 @@ export const raceDesc = {
 			"Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
 		expectedLifeSpan: "160 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Charisma +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Celestial",
 	},
@@ -2795,7 +2804,16 @@ export const raceDesc = {
 			"Small, mechanical gnomes created by the gnomes of the world to assist them.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Gnomish",
 	},
@@ -2804,7 +2822,16 @@ export const raceDesc = {
 			"Large, hairy goblinoids known for their surprising stealth and physical prowess.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2813,7 +2840,16 @@ export const raceDesc = {
 			"Half-human, half-horse creatures with a strong connection to nature and a powerful build.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "40 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2822,7 +2858,16 @@ export const raceDesc = {
 			"Shapechangers with the ability to alter their appearance at will.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Primordial",
 	},
@@ -2831,7 +2876,16 @@ export const raceDesc = {
 			"Humanoid dragons with draconic ancestry and the ability to breathe elemental energy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -2840,7 +2894,16 @@ export const raceDesc = {
 			"Short, stout, and resilient beings known for their craftsmanship and endurance.",
 		expectedLifeSpan: "350 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Constitution +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Dwarvish",
 	},
@@ -2849,7 +2912,16 @@ export const raceDesc = {
 			"Graceful and long-lived beings with keen senses and an affinity for magic.",
 		expectedLifeSpan: "750 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -2858,7 +2930,16 @@ export const raceDesc = {
 			"Tiny, magical creatures with wings and a playful demeanor.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "2.5 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (fly 30 feet)",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2867,7 +2948,16 @@ export const raceDesc = {
 			"Large, reclusive forest dwellers with a natural affinity for the land.",
 		expectedLifeSpan: "500 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish, Sylvan",
 	},
@@ -2876,8 +2966,12 @@ export const raceDesc = {
 			"Beings with elemental heritage, exhibiting traits of their elemental ancestors.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease:
-			"Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 3,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Primordial",
 	},
@@ -2886,7 +2980,16 @@ export const raceDesc = {
 			"Alien humanoids with a history of interplanar conflict and psionic abilities.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Gith",
 	},
@@ -2895,7 +2998,16 @@ export const raceDesc = {
 			"Inventive and curious beings known for their cleverness and affinity with magic.",
 		expectedLifeSpan: "400 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Intelligence +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Gnomish",
 	},
@@ -2904,7 +3016,16 @@ export const raceDesc = {
 			"Small, cunning creatures with a knack for mischief and survival.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2913,7 +3034,16 @@ export const raceDesc = {
 			"Giant humanoids with a powerful build and a competitive nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Giant",
 	},
@@ -2922,7 +3052,16 @@ export const raceDesc = {
 			"Small, amphibious humanoids with a toxic skin and a unique culture.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "25 feet (jump 20 feet)",
 		standardLanguages: "Common, Grung",
 	},
@@ -2931,7 +3070,16 @@ export const raceDesc = {
 			"A race of winged creatures with a love for exploration and adventure.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (fly 30 feet)",
 		standardLanguages: "Common, Auran",
 	},
@@ -2940,8 +3088,16 @@ export const raceDesc = {
 			"Versatile and adaptable individuals born of human and elven parentage.",
 		expectedLifeSpan: "180 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease:
-			"Charisma +2, and two other ability scores of your choice +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -2950,7 +3106,16 @@ export const raceDesc = {
 			"Strong and resilient beings born of human and orcish lineage, known for their combat prowess.",
 		expectedLifeSpan: "75 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Orc",
 	},
@@ -2959,7 +3124,16 @@ export const raceDesc = {
 			"Small and agile beings with a penchant for good luck and stealth.",
 		expectedLifeSpan: "150 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Dexterity +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Halfling",
 	},
@@ -2968,7 +3142,16 @@ export const raceDesc = {
 			"Rabbit-like humanoids known for their swiftness and connection to nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2977,7 +3160,16 @@ export const raceDesc = {
 			"Disciplined and militaristic goblinoids with a strong sense of order and hierarchy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2986,7 +3178,16 @@ export const raceDesc = {
 			"The most adaptable and diverse of races, with a wide range of potential.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease: "Two ability scores of your choice +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common",
 	},
@@ -2995,7 +3196,16 @@ export const raceDesc = {
 			"Mystical beings with a psychic connection to a collective consciousness.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease: "Wisdom +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Wisdom",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Quori",
 	},
@@ -3004,7 +3214,16 @@ export const raceDesc = {
 			"Crow-like humanoids with the ability to mimic sounds and voices.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "5 to 5.5 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Auran",
 	},
@@ -3013,7 +3232,16 @@ export const raceDesc = {
 			"Small, draconic creatures known for their cunning and trap-making skills.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2.5 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Strength +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -3022,7 +3250,16 @@ export const raceDesc = {
 			"Leonin are lion-like humanoids with a strong sense of pride and a warrior culture.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "35 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3031,7 +3268,16 @@ export const raceDesc = {
 			"Reptilian humanoids with a natural affinity for the swamp and a primal outlook.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -3040,7 +3286,16 @@ export const raceDesc = {
 			"Loxodons are elephantine humanoids with great physical strength and a peaceful nature, often serving as diplomats or guardians.",
 		expectedLifeSpan: "200-300 years",
 		expectedSize: "About 7 to 8 feet tall",
-		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Loxodon",
 	},
@@ -3049,7 +3304,16 @@ export const raceDesc = {
 			"Bull-headed humanoids known for their strength and labyrinthine culture.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Minotaur",
 	},
@@ -3058,7 +3322,16 @@ export const raceDesc = {
 			"Large, brutish creatures with a fierce demeanor and exceptional physical power.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "6 to 7 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Orc",
 	},
@@ -3067,7 +3340,16 @@ export const raceDesc = {
 			"Owlin are bird-like humanoids with large, owl-like eyes and the ability to glide.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "About 4 to 5 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Auran",
 	},
@@ -3076,7 +3358,16 @@ export const raceDesc = {
 			"Plasmoids are amorphous beings capable of changing their shape and form, often resembling oozes or slimes.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "Variable, but generally around 5 to 6 feet tall",
-		abilityScoreIncrease: "Constitution +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Abyssal",
 	},
@@ -3085,7 +3376,16 @@ export const raceDesc = {
 			"Satyrs are fey creatures with the lower bodies of goats and the upper bodies of humanoids, known for their love of revelry and nature.",
 		expectedLifeSpan: "90-120 years",
 		expectedSize: "About 4 to 5 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "35 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3094,7 +3394,16 @@ export const raceDesc = {
 			"Beings with a bestial nature and the ability to assume animal-like traits.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3103,7 +3412,16 @@ export const raceDesc = {
 			"Simic Hybrids are experimental beings created by the Simic Combine, combining traits of various creatures for specific purposes.",
 		expectedLifeSpan: "80-120 years",
 		expectedSize: "Varies, typically 5 to 6 feet tall",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -3112,7 +3430,16 @@ export const raceDesc = {
 			"Cat-like humanoids with a penchant for curiosity and agility.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -3121,7 +3448,16 @@ export const raceDesc = {
 			"Thri-kreen are insectoid humanoids with a chitinous exoskeleton and powerful limbs, known for their agility and natural predatory skills.",
 		expectedLifeSpan: "50-60 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Thri-Kreen",
 	},
@@ -3130,7 +3466,16 @@ export const raceDesc = {
 			"Infernal-heritaged beings with horns, tails, and a touch of dark magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Infernal",
 	},
@@ -3139,7 +3484,20 @@ export const raceDesc = {
 			"Aquatic beings with a connection to the ocean and an affinity for water magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +1, Constitution +1, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (swim 30 feet)",
 		standardLanguages: "Common, Primordial",
 	},
@@ -3148,7 +3506,16 @@ export const raceDesc = {
 			"Vedalken are a race of tall, blue-skinned humanoids known for their intellectual prowess and dedication to knowledge and order.",
 		expectedLifeSpan: "150 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Vedalken",
 	},
@@ -3157,7 +3524,16 @@ export const raceDesc = {
 			"Verdan are a race of small, green-skinned humanoids who evolve rapidly and have a unique biological adaptability.",
 		expectedLifeSpan: "40-60 years",
 		expectedSize: "About 3 to 4 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -3166,8 +3542,12 @@ export const raceDesc = {
 			"Constructed beings with a humanoid form and a capacity for sentience and emotion.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease:
-			"Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 3,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Warforged",
 	},
@@ -3176,7 +3556,16 @@ export const raceDesc = {
 			"Serpent-like humanoids with a mysterious and sinister heritage.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
