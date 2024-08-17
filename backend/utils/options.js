@@ -20,6 +20,8 @@ const backgrounds = [
 	"Archaeologist", //homebrew
 	"Arranged Marriage", //homebrew
 	"Artist", //homebrew
+	"Aspirant", //homebrew
+	"Assistant", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

@@ -3409,6 +3409,14 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Aspirant", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Assistant", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -7511,46 +7519,116 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Cubism`,
+					description: `I must do what is commissioned of me, or I wont get payed.`,
+					alignment: `Lawful`,
 				},
 				{
 					number: 2,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Abstract`,
+					description: `I flow from place to place, doing what's best for me.`,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Vandalism`,
+					description: `The world is my canvas- I will paint it how I please and no one will tell me otherwise! `,
+					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Realism`,
+					description: `I deal with whats real, and try and help as many as I can along the way.`,
+					alignment: `Good`,
 				},
 				{
 					number: 5,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Impressionism`,
+					description: `I have a great deal to learn from those around me. They are the inspiration for my work.`,
+					alignment: `Any`,
 				},
 				{
 					number: 6,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Minimalism`,
+					description: `A little bit of this and a little bit of that is all you need in life.`,
+					alignment: `Neutral`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am forever indebted to the one who taught me my craft.`,
+				},
+				{
+					number: 2,
+					description: `I am simply trying to provide for my family.`,
+				},
+				{
+					number: 3,
+					description: `I am constantly trying to win the affection of the one whose caught my eye.`,
+				},
+				{
+					number: 4,
+					description: `I am drawn to travel, to see the world and recreate it's wonders in art.`,
+				},
+				{
+					number: 5,
+					description: `I am forever locked in competition with my long time rival. They always seem to be one step ahead.`,
+				},
+				{
+					number: 6,
+					description: `I will not call a task complete until I am certain it is the best I can possibly do`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will kill the critic who depreciates my work!`,
+				},
+				{
+					number: 2,
+					description: `If there's no way I'll gain from it, there's no way I'll do it.`,
+				},
+				{
+					number: 3,
+					description: `I get jealous easily, especially around other artists`,
+				},
+				{
+					number: 4,
+					description: `I will do anything for a slow turn from a nice pair of legs.`,
+				},
+				{
+					number: 5,
+					description: `I am the BEST at what I do, and I laugh at those who suggest they can find one better than I.`,
+				},
+				{
+					number: 6,
+					description: `I spend most of my gold overindulging in life's pleasures.`,
+				},
+			],
+		},
+	},
+	Aspirant: {
+		isHomebrew: true,
+		description: `Growing up, we’ve all heard or read legends of selfless heroes and dastardly villains. These stories stick with us our entire lives and tend to inspire us in one way or another. But you…you’ve taken it a step beyond. Whether you call it passion or obsession, the “hero” of these legends has influenced every facet of your life, down to very decisions you make. Some aspirants become traveling storytellers, spreading the tales of their idol across the world. Others follow in the footsteps of their idol, using him or her as an inspiration to aspire to. A small few, however, have become so enveloped in these legends that they’ve become completely delusional, believing THEMSELVES to be the very idol from these stories.`,
+		skillProficiencies: `Performance and History`,
+		toolProficiencies: `Calligrapher tools or Disguise Kit`,
+		languages: `A language that your idol knows`,
+		startingEquipment: `A bottle of black ink, a quill, a tome or scrolls with the legends of your idol written out, common clothes, a costume inspired by your idol, and a belt pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
 			roll: [
 				{
 					number: 1,
@@ -7578,34 +7656,365 @@ export const backgroundDesc = {
 				},
 			],
 		},
-		suggestedFlaw: {
+		feature: {
+			title: `Just Like in the Stories`,
+			description: `Considering how often their idol’s legacy is on their mind, aspiriants are always trying to find connections between their lives and the folklore surrounding their idol.
+
+						Roll a D10. If you roll a 9 or 10, your current situation bears an uncanny resemblance to one your idol was in. What this means is completely up to the discretion of the DM. You may remember a weakness that your idol exposed against a similar enemy or meet a new person in the same way your idol met their love interest meaning you know that new person's motives.
+
+						This may be rolled whenever you make a check where you are experiencing something "for the first time". Examples of this include the first time you meet a new NPC, the first time you visit a new location, the first time you see a quest specific item, etc.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d8`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I believe that my idol and I are connected in some way.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I try to make connections between my idol’s situations and my own.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `Sometimes my passion is confused for obsession. However, sometimes those people are right.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I am typically more interested in what my idol has done than what I am currently doing.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I sometimes begin to daydream about my idol to a point where I lose focus of everything around me.`,
+				},
+				{
+					number: 6,
+					description: `I become incredibly excited whenever someone shows even the smallest amount of interest in my idol.`,
+				},
+				{
+					number: 7,
+					description: `I repeat the same stories about my idol to anyone who will listen, no matter how many times they have heard it before.`,
+				},
+				{
+					number: 8,
+					description: `I have a near encyclopedic knowledge of the legends of my idol.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Imitator`,
+					description: `Never straying from the legends, I act identical to the way my idol has in similar situations.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Hero`,
+					description: `My idol was a hero of the people and I was inspired by his or her good deeds.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Villian`,
+					description: `My idol spread terror throughout the land and hurt many innocent people.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Surpasser`,
+					description: `Even though they have inspired me, I act distinctly from my idol. I’ll create my own legends.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Messenger`,
+					description: `I will spread the legends of my idol far and wide. `,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Mogul`,
+					description: `My idol became an incredibly wealthy and powerful man /woman and I aspire to be one as well.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am obsessed with my idol or at least the legend surrounding him or her.`,
+				},
+				{
+					number: 2,
+					description: `The oral traditions of my idol must be passed on to future generations.`,
+				},
+				{
+					number: 3,
+					description: `I am more than just a fan of my idol. I have become them!`,
+				},
+				{
+					number: 4,
+					description: `My idol is an ancestor of mine and my family is proud that I am following in his or her footsteps.`,
+				},
+				{
+					number: 5,
+					description: `My idol is an ancestor of mine and my family is proud that I am following in his or her footsteps.`,
+				},
+				{
+					number: 6,
+					description: `The tomes or scrolls containing the stories of my idol must be protected at all costs, even at the expense of my life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am completely delusional to a point where I have become my idol. The actual “me” no longer exists.`,
+				},
+				{
+					number: 2,
+					description: `I care little about the consequences of my actions and how they affect other people.`,
+				},
+				{
+					number: 3,
+					description: `I can hear my idol’s voice speaking to me in my head.`,
+				},
+				{
+					number: 4,
+					description: `I follow my idol around everywhere they go to the point where they have become a little uneasy around me.`,
+				},
+				{
+					number: 5,
+					description: `I struggle making decisions not based on my idol’s previous choices.`,
+				},
+				{
+					number: 6,
+					description: `My obsession with my idol has become so severe it has pushed my loved ones away.`,
+				},
+			],
+		},
+	},
+	Assistant: {
+		isHomebrew: true,
+		description: `Your life before adventure was marked by its mundanity. Under the supervision of your higher ups, you have helped keep shops running, taverns full or farms working. This is the simple life many lead, but this is not the life cut out for you. You feel compelled towards adventure, with reasons ranging from a dramatic event which forced you into it, or a growing boredom with your current career. You know how shops are run and helped, can get on common terms with others in your previous trade, and up to this point have experienced, with joy or regret, the new active life of adventuring`,
+		skillProficiencies: ` Insight, Persuasion`,
+		toolProficiencies: ``,
+		languages: `Two of your choice`,
+		startingEquipment: `A keepsake from your previous career, a set of assistant's clothes, a small book with common phrases in Common, Elvish, Dwarvish, Gnomish and Undercommon, a pouch containing 15 gp.`,
+		backgroundSpecial: {
+			title: `Previous Profession`,
+			description: `There are many professions which need some sort of assistant or apprentice in order to function. Many of these are found in towns or cities, though some are more rural in nature. Wherever you are from, the life of being told what to do is shared everywhere. Choose the previous profession you helped in, or roll on the table below.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Stablehand`,
+				},
+				{
+					number: 2,
+					description: `Library Clerk`,
+				},
+				{
+					number: 3,
+					description: `Apprentice Alchemist`,
+				},
+				{
+					number: 4,
+					description: `Shop Assistant`,
+				},
+				{
+					number: 5,
+					description: `Tavern Staff`,
 				},
 				{
 					number: 6,
 					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Common Ground`,
+			description: `Your time spent assisting others mean that you can empathize with those with jobs like yours. You can talk freely about your past with assistants of yours or other professions, be it stablehands, bartenders, or library clerks. Assistants typically enjoy the attention, and are inclined to trust you. These assistants can tell you much of the local gossip and information about the area, can be convinced to help you in minor tasks, and can talk enough about their profession in order for you to quickly get the gist of it.Assistants will often be more than happy to suggest you as a helping hand to their employer. You will be paid at a rate from 2 sp to 1 gp per hour. During work you can talk with other assistants freely and your employer on less distant terms. Any profession you have worked well for without issue are more inclined to favor you. They may give you or party members better treatment, offer discounts or trust you more than the average customer, if of course you or your party members haven't caused any trouble.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Assistants come from the lower classes in society, and may miss or despise their past profession. However, their training has leaned them towards a practical way of thinking. Their practicality, knowledge of commoners' lives and wanting to escape it may shape their ideals. Their bonds could be to their old employer, an assistant friend or an unique customer. Their flaws could be shaped by an overly simplistic view of the world, or excessive recklessness or caution due to their newfound freedom.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I despise people who are significantly more well off than me, and treat them with disrespect.`,
+				},
+				{
+					number: 2,
+					description: `I will always go on the side of talking a situation out rather than it descend to violence.`,
+				},
+				{
+					number: 3,
+					description: `I am eager to be taught new things by more experienced adventurers.`,
+				},
+				{
+					number: 4,
+					description: `I can deal with situations of rising anger and arguments coldly and calmly.`,
+				},
+				{
+					number: 5,
+					description: `I will revel in any moment of fame I get.`,
+				},
+				{
+					number: 6,
+					description: `I often zone out when people drone for too long, but I have learned to hide this from dealing with it in the shop.
+`,
+				},
+				{
+					number: 7,
+					description: `I always attempt to barter the prices of goods.`,
+				},
+				{
+					number: 8,
+					description: `I am humble and get surprised and flustered whenever someone praises me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Freedom`,
+					description: `The boring life of an assistant wasn't for me. Now with this vast life ahead of me I can at last live.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Heroism`,
+					description: `Why stay in a shop when I could help solve the issues plaguing the land?`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Might`,
+					description: `I have spent too much time being told what to do. It's time to change that.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Discipline`,
+					description: `I will do what I have been told to, and I will do it well.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Fulfillment`,
+					description: `Adventuring brings meaning to my life.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Oppurtunity`,
+					description: `Anyone should be given an equal chance to rise.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My old employer had his business looted, and I am doing this in order to help him.`,
+				},
+				{
+					number: 2,
+					description: `A mysterious customer once came into the premises and secretly handed me a scroll in a language I do not understand. What does it say?`,
+				},
+				{
+					number: 3,
+					description: `An old regular told me every night of his adventuring stories. I am doing this to show how he inspired me.`,
+				},
+				{
+					number: 4,
+					description: `My brother owns the family business while I do the cleaning. Wait until I show them what I am made of.`,
+				},
+				{
+					number: 5,
+					description: `Life was okay as an assistant until a work friend of mine became an adventurer. I regret not going with them.`,
+				},
+				{
+					number: 6,
+					description: `I still enjoy the work that I did, and find any reference or temporary return to it wondrous.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I pretend to know a lot more about my profession than I actually do.`,
+				},
+				{
+					number: 2,
+					description: `I am needlessly reckless or cautious due to my limited training as an adventurer.`,
+				},
+				{
+					number: 3,
+					description: `Abstract ideas bore me, as do overcomplicated plans.`,
+				},
+				{
+					number: 4,
+					description: `I will instinctively listen and obey to authority, as I fear the consequences of not doing so.`,
+				},
+				{
+					number: 5,
+					description: `I get easily nervous and may not share ideas or information on the assumption the other party members already thought of it and know about it.`,
+				},
+				{
+					number: 6,
+					description: `I get overly defensive about my humble past, and I am ready to lie about it or insult the person who asks.`,
 				},
 			],
 		},
