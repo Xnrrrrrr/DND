@@ -3405,6 +3405,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Artist", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -4147,7 +4151,7 @@ export const backgroundDesc = {
 				},
 				{
 					number: 5,
-					bold: `Improvement`,	
+					bold: `Improvement`,
 					description: `I can make my addiction even better, with the right tweaks I could reach new highs. `,
 					alignment: `Neutral`,
 				},
@@ -5922,31 +5926,37 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Protective. Dark cults trifle with powers that are beyond their understanding or control. Those fools must be stopped.`,
+					bold: `Protective`,
+					description: `Dark cults trifle with powers that are beyond their understanding or control. Those fools must be stopped.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 2,
-					description: `Nihilist. What’s the point of anything? People are insignificant and their struggle is futile. `,
+					bold: `Nihilist`,
+					description: `What’s the point of anything? People are insignificant and their struggle is futile. `,
 					alignment: `Neutral`,
 				},
 				{
 					number: 3,
-					description: `Repentant. I cannot possibly undo the wrongs I have done, but I can still try and atone.`,
+					bond: `Repentant`,
+					description: `I cannot possibly undo the wrongs I have done, but I can still try and atone.`,
 					alignment: `Good`,
 				},
 				{
 					number: 4,
-					description: `	Anarchist. Lives of men should not be ruled by anyone. No gods, no masters! `,
+					bond: `Anarchist`,
+					description: `Lives of men should not be ruled by anyone. No gods, no masters! `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 5,
-					description: `Faithful. While our cause is righteous, the cult's leaders are corrupt: I seek to follow my god's plans.`,
+					bold: `Faithful`,
+					description: `While our cause is righteous, the cult's leaders are corrupt: I seek to follow my god's plans.`,
 					alignment: `Any`,
 				},
 				{
 					number: 6,
+					bond: ``,
 					description: `Selfish. The world is doomed either way. Better make the most of it.`,
 					alignment: `Evil`,
 				},
@@ -6114,32 +6124,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Conquest. My rule will return, no matter how many bodies it takes!`,
+					bold: `Conquest`,
+					description: `My rule will return, no matter how many bodies it takes!`,
 					alignment: `Evil`,
 				},
 				{
 					number: 2,
-					description: `Freedom. I've been gone for so long that I don't need to live up to any standards anymore. I can be whoever I want to be!`,
+					bold: `Freedom`,
+					description: `I've been gone for so long that I don't need to live up to any standards anymore. I can be whoever I want to be!`,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					description: `Justice. Though my people may be gone, I still have to hold true to the ideal of a fair and just ruler.`,
+					bold: `Justice`,
+					description: `Though my people may be gone, I still have to hold true to the ideal of a fair and just ruler.`,
 					alignment: `Good`,
 				},
 				{
 					number: 4,
-					description: `Order. The world I know is different from this new one, it must be tamed.`,
+					bold: `Order`,
+					description: `The world I know is different from this new one, it must be tamed.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 5,
-					description: `Rebuilding. This world has changed, but I have to rebuild my life no matter the cost`,
+					bold: `Rebuilding`,
+					description: `This world has changed, but I have to rebuild my life no matter the cost`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: `Exploiting. This world is one of opportunity, and I plan to take advantage of that.`,
+					bold: `Exploiting`,
+					description: `This world is one of opportunity, and I plan to take advantage of that.`,
 					alignment: `Any`,
 				},
 			],
@@ -6310,32 +6326,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Knowledge. My knowledge is meant to be gathered and shared freely, with all who wish to know.`,
+					bold: `Knowledge`,
+					description: `My knowledge is meant to be gathered and shared freely, with all who wish to know.`,
 					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: `Prophecy. There are things far beyond the ken of mortals, and I will carry out what must be done.`,
+					bold: `Prophecy`,
+					description: `There are things far beyond the ken of mortals, and I will carry out what must be done.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 3,
-					description: `Entropy. Infinite time means infinite plans to serve my ends... and mine shall come to fruition soon.`,
+					bold: `Entropy`,
+					description: `Infinite time means infinite plans to serve my ends... and mine shall come to fruition soon.`,
 					alignment: `Chaos`,
 				},
 				{
 					number: 4,
-					description: `Calamity. The only way to end my cycle is to end the world, and I shall be the one to usher in the end of eras.`,
+					bold: `Calamity`,
+					description: `The only way to end my cycle is to end the world, and I shall be the one to usher in the end of eras.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: `Rest. I only wish to find a way to end this cycle, and finally make peace`,
+					bold: `Rest`,
+					description: `I only wish to find a way to end this cycle, and finally make peace`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 6,
-					description: `Beyond. I have obtained immortality... but what could be even further beyond? `,
+					bold: `Beyond`,
+					description: `I have obtained immortality... but what could be even further beyond? `,
 					alignment: `Any`,
 				},
 			],
@@ -6504,32 +6526,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Discovery. I want to be the first person to discover a lost culture.`,
+					bold: `Discovery`,
+					description: `I want to be the first person to discover a lost culture.`,
 					alignment: `Any`,
 				},
 				{
 					number: 2,
-					description: `Distance. One must not interfere with the affairs of another culture – even one in need of aid.`,
+					bold: `Distance`,
+					description: `One must not interfere with the affairs of another culture – even one in need of aid.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 3,
-					description: `Knowledge. By understanding other races and cultures, we learn to understand ourselves.`,
+					bold: `Knowledge`,
+					description: `By understanding other races and cultures, we learn to understand ourselves.`,
 					alignment: `Any`,
 				},
 				{
 					number: 4,
-					description: `Power. Common people crave strong leadership, and I do my utmost to provide it. `,
+					bold: `Power`,
+					description: `Common people crave strong leadership, and I do my utmost to provide it. `,
 					alignment: `Lawful`,
 				},
 				{
 					number: 5,
-					description: `Protection. I must do everything possible to save a society facing extinction. `,
+					bold: `Protection`,
+					description: `I must do everything possible to save a society facing extinction. `,
 					alignment: `Good`,
 				},
 				{
 					number: 6,
-					description: `Indifference. Life is cruel. What's the point in saving people if they're going to die anyway? `,
+					bold: `Indifference`,
+					description: `Life is cruel. What's the point in saving people if they're going to die anyway? `,
 					alignment: `Chaotic`,
 				},
 			],
@@ -6696,32 +6724,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
+					bold: `Preservation`,
 					description: `	Preservation We must protect the relics of the past, else their creators will fade from memory.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 2,
+					bold: `Betterment`,
 					description: `Betterment By studying the mistakes of our elders, we might prevent the mistakes of our children.`,
 					alignment: `Good`,
 				},
 				{
 					number: 3,
-					description: `	Dominance The past holds secrets I can use against those who oppose me.`,
+					bold: `Dominance`,
+					description: `The past holds secrets I can use against those who oppose me.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					description: `Trophy The original inventors of these relics are dead; why shouldn’t I hold on to them for a while? `,
+					bold: `Trophy`,
+					description: `The original inventors of these relics are dead; why shouldn’t I hold on to them for a while? `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 5,
-					description: `Expertise I must become the authority in my field of study.`,
+					bold: `Expertise`,
+					description: `I must become the authority in my field of study.`,
 					alignment: `Any`,
 				},
 				{
 					number: 6,
-					description: `Vigil Only by remembering the dead do we honor their accomplishments.`,
+					bold: `Vigil`,
+					description: `Only by remembering the dead do we honor their accomplishments.`,
 					alignment: `Lawful`,
 				},
 			],
@@ -6889,32 +6923,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Aid. Every sick or wounded person deserves my help, regardless of the life they lead.`,
+					bold: `Aid`,
+					description: `Every sick or wounded person deserves my help, regardless of the life they lead.`,
 					alignment: `Good`,
 				},
 				{
 					number: 2,
-					description: `Control. By deciding who lives and who dies, I can shape the world to my liking.`,
+					bold: `Control`,
+					description: `By deciding who lives and who dies, I can shape the world to my liking.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 3,
-					description: `Loyalty. It is my duty to treat those to whom I have sworn allegiance.`,
+					bold: `Loyalty`,
+					description: `It is my duty to treat those to whom I have sworn allegiance.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 4,
-					description: `Efficiency. I am not emotionally invested in those I aid; to act otherwise would compromise my work.`,
+					bold: `Efficiency`,
+					description: `I am not emotionally invested in those I aid; to act otherwise would compromise my work.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 5,
-					description: `Prevention. Stopping the spread of sickness is better than treating it. `,
+					bold: `Prevention`,
+					description: `Stopping the spread of sickness is better than treating it. `,
 					alignment: `Any`,
 				},
 				{
 					number: 6,
-					description: `Research. In order to treat patients effectively, we must understand the maladies afflicting them. `,
+					bold: `Research`,
+					description: `In order to treat patients effectively, we must understand the maladies afflicting them. `,
 					alignment: `Any`,
 				},
 			],
@@ -7081,32 +7121,38 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: `Respect The treasures of yesteryear should be honored and respected.`,
+					bold: `Respect`,
+					description: `The treasures of yesteryear should be honored and respected.`,
 					alignment: `Lawful`,
 				},
 				{
 					number: 2,
-					description: `	Reverence The dead deserve to be remembered in a world full of so much loss. `,
+					bold: `Reverence`,
+					description: `The dead deserve to be remembered in a world full of so much loss. `,
 					alignment: `Good`,
 				},
 				{
 					number: 3,
-					description: `Pragmatism I could use this stuff more than the dead who possess it.`,
+					bold: `Pragmatism`,
+					description: `I could use this stuff more than the dead who possess it.`,
 					alignment: `Neutral`,
 				},
 				{
 					number: 4,
-					description: `Ambitious There is power to be derived from the secret of the past, and it should be mine.`,
+					bold: `Ambitious`,
+					description: `There is power to be derived from the secret of the past, and it should be mine.`,
 					alignment: `Evil`,
 				},
 				{
 					number: 5,
-					description: `	Excitement Life is short, have fun while you can and enjoy your finds `,
+					bold: `Excitement`,
+					description: `Life is short, have fun while you can and enjoy your finds `,
 					alignment: `Chaotic`,
 				},
 				{
 					number: 6,
-					description: `Greed In this world gold means survival, and I'll survive by any means.`,
+					bold: `Greed`,
+					description: `In this world gold means survival, and I'll survive by any means.`,
 					alignment: `Chaotic`,
 				},
 			],
@@ -7189,33 +7235,34 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `My betrothed rejected me.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I jilted my betrothed.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I decide who I’m going to marry.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My betrothed died just before we were to be wedded.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `Duty is part of who I am.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I am ambitious. I'm always looking for the next opportunity to further my standing.`,
 				},
 			],
 		},
 		feature: {
-			title: ``,
-			description: ``,
+			title: `Tragic History`,
+			description: `Your story is parable for the times. When goodly people hear your heart-rending tale (truthful or otherwise) they will be sympathetic towards you. The sympathetic can be counted as short-term friends; they will be inclined to give discounts for their trade and services.
+`,
 		},
 		alterateFeature: [
 			{
@@ -7230,32 +7277,230 @@ export const backgroundDesc = {
 		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I am headstrong and willful.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I can't take the weight of expectation and so I run from my responsibilities.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I am a master of the long-game. I am calculating and patient.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I do what is expected of me despite how I feel.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `Duty is part of who I am.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I am ambitious. I'm always looking for the next opportunity to further my standing.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Honor`,
+					description: `I failed my family I must find a way to repay them. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Liberty`,
+					description: `No one should have their lives controlled by another.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Corrupt`,
+					description: `This was always the plan, take the dowry and run.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Penance`,
+					description: `I seek redemption for past failings`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Power`,
+					description: `The stronger I become the more I can control my own destiny.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Self Interest`,
+					description: `I’m free to do what I want to do`,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My betrothed’s family and their agents are pursuing me.`,
+				},
+				{
+					number: 2,
+					description: `My family and their associates are pursuing me`,
+				},
+				{
+					number: 3,
+					description: `The marriage preparations were costly. I have debts that require repaying.`,
+				},
+				{
+					number: 4,
+					description: `The dowry should rightfully be mine. I will claim what is owed me.`,
+				},
+				{
+					number: 5,
+					description: `Someone I cared about died because the marriage failed. I must redeem myself.`,
+				},
+				{
+					number: 6,
+					description: `I will prove that I am worth more than that stupid marriage.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I find commitment difficult.`,
+				},
+				{
+					number: 2,
+					description: `I spent my formative years in indentured servitude. I won't take orders from anyone.`,
+				},
+				{
+					number: 3,
+					description: `My life was prescribed for me, now I struggle to make my own choices.`,
+				},
+				{
+					number: 4,
+					description: `Love is pain. I can never feel that way again.`,
+				},
+				{
+					number: 5,
+					description: `I am haunted by what happened to me. I fear betrayal at every turn.`,
+				},
+				{
+					number: 6,
+					description: `The scandal surrounding my marriage prevents me from ever going home again. Trouble seems to follow me around.`,
+				},
+			],
+		},
+	},
+	Artist: {
+		isHomebrew: true,
+		description: `Artists are sought after and respected individuals all over the world. No matter their race age or gender, all artists are loved for their talent to place life and emotion into things such as clay, stone and paint. As an Artist you have perfected your art to the point that people pay to see you and pay your for your grand works of art. When choosing this background for your character you must ask yourself these questions: Is your character self taught? Are they a natural at what they do, or must they work as hard as they can everyday? Is your character struggling or successful? If they are indeed good at what they do, are they well known or new to the artist scene? Do they have a high opinion of themselves or are they humble? What has brought them into the world of adventuring? Did they choose to follow a band of warriors for inspiration? Or are they caught in the midst of a mess they cant get out of?`,
+		skillProficiencies: `Sleight of Hand and History`,
+		toolProficiencies: `Artist's Tools`,
+		languages: `One language of your choice`,
+		startingEquipment: `Artist's Tools, a set of common clothes and a belt pouch with 10gp.`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: `Not every artist is great at everything. Though you may dabble with the different types of artistry, there will always be one thing that places you above the rest. What is that thing? And are you the best?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Painter`,
+				},
+				{
+					number: 2,
+					description: `Playwright`,
+				},
+				{
+					number: 3,
+					description: `Sculpter`,
+				},
+				{
+					number: 4,
+					description: `Composer`,
+				},
+				{
+					number: 5,
+					description: `Architect`,
+				},
+				{
+					number: 6,
+					description: `Novelist`,
+				},
+			],
+		},
+		feature: {
+			title: `Commisioned Artist`,
+			description: `You are a Commissioned Artist. You are known well throughout your local area or maybe even globally by many important figures. On request, you may even be able to gain entry into royal courts and meetings with rich merchants who want a commissioned piece. You get paid ahead of time for your efforts, you must discuss and negotiate the price you will be paid for your art work.`,
+		},
+		alterateFeature: [
+			{
+				title: `The People's Poet`,
+				description: `You have made a name for yourself making works of art that point out the flaw in society, making fun of those in charge, of religion, law enforcement. Though Royals and Rich Merchants may not fancy your company the common people love you for your satirical and controversial artwork.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `A life surrounded by artists and critics has molded you into the person you are today. What do you create for?`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My art is my life, my works, my soul, and I will defend my creations at all costs.`,
+				},
+				{
+					number: 2,
+					description: `I am my own worst critic. There is nothing you can say about me I haven't already said to myself.`,
+				},
+				{
+					number: 3,
+					description: `I am not worth the time of the common folk. Their gold pouches are simply too light for me.`,
+				},
+				{
+					number: 4,
+					description: `The people deserve to be heard and I am their voice! Viva la revolution!`,
+				},
+				{
+					number: 5,
+					description: `I am like the art I create. I flow, I feel. I do what feels natural, what feels right.`,
+				},
+				{
+					number: 6,
+					description: `Art is like magic or science; there are strict rules to follow, and ignoring those leaves you no better than a three year old with a pile of clay.`,
+				},
+				{
+					number: 7,
+					description: `I create beautiful things to woo beautiful folk.`,
+				},
+				{
+					number: 8,
+					description: `My art is private. Only my commissioned works are for the public eye.`,
 				},
 			],
 		},
@@ -7266,31 +7511,37 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
 				{
 					number: 2,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
 				{
 					number: 3,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
 				{
 					number: 4,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
 				{
 					number: 5,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
 				{
 					number: 6,
+					bold: ``,
 					description: ``,
 					alignment: ``,
 				},
