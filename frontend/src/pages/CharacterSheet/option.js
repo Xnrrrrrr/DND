@@ -3806,6 +3806,18 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Astrologer", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Asylum_Escapee", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Banker", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -8404,6 +8416,602 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I get overly defensive about my humble past, and I am ready to lie about it or insult the person who asks.`,
+				},
+			],
+		},
+	},
+	Astrologer: {
+		isHomebrew: true,
+		description: `You my friend are one of the few people across the world to dedicate your life to unraveling the mysteries of the universe. What led you to choose this life? Was it a desire to know more or do you just think stars are really cool. Either way you know more about the stars then just about anyone around and that comes with some perks`,
+		skillProficiencies: `Arcana, Perception`,
+		toolProficiencies: `navigators tools`,
+		languages: `celestial and one other of your choice`,
+		startingEquipment: `A bottle of black ink, a quill, a map of constellations, a set of navigator's tools, a set of traveler's clothes, and a pouch containing 10 gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Map of the Stars`,
+			description: `you have spent most of your life studying the stars and their locations in the night sky, so naturally you are able to tell which way is which as long as you are able to see the stars, you have advantage on finding your way as long as you can see the stars above you`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `think about what caused you to start studying the night sky as thorough as you did, were you looking for some long forgotten secret, you could have been lost at sea and had nothing to do but study the stars, or maybe you just thought stars were cool`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I find the night sky extremely calming amd find peace under it.`,
+				},
+				{
+					number: 2,
+					description: `I would rather talk about the unknown than common small talk.`,
+				},
+				{
+					number: 3,
+					description: `There’s nothing I like more than a good mystery`,
+				},
+				{
+					number: 4,
+					description: `I’m willing to listen to every side of an argument before I make my own judgment.`,
+				},
+				{
+					number: 5,
+					description: `I’ve read every book in the world’s greatest libraries — or I like to boast that I have.`,
+				},
+				{
+					number: 6,
+					description: `I use polysyllabic words that convey the impression of great erudition.`,
+				},
+				{
+					number: 7,
+					description: `I’m used to helping out those who aren’t as smart as I am, and I patiently explain anything and everything to others.`,
+				},
+				{
+					number: 8,
+					description: `I … speak … slowly … when talking … to idiots, … which … almost … everyone … is … compared … to me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Knowledge`,
+					description: `The path to power and self-improvement is through knowledge`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Freedom`,
+					description: `Everyone is like an individual star in the night sky`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Unity`,
+					description: `The world is like a constellation, everyone is a star connecting to make something greater`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Self Improvement`,
+					description: `I must work hard to be the brightest star I can be`,
+					alignment: `Any`,
+				},
+				{
+					number: 5,
+					bold: `Greed`,
+					description: `I am like a black hole in the void of space, I continue to take from everything around me so that I become the strongest`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Nurture`,
+					description: `I am like the sun in the sky, I help other grow to their greatest potentials`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I protect the location of a powerful telescope for fear of what it might reveal`,
+				},
+				{
+					number: 2,
+					description: `My life’s work is a series of tomes related to a specific area of astronomy.`,
+				},
+				{
+					number: 3,
+					description: `I’ve been searching my whole life for the answer to a certain question.`,
+				},
+				{
+					number: 4,
+					description: `I witnessed the birth of a star that was prophesized long ago and I must proclaim this to all`,
+				},
+				{
+					number: 5,
+					description: `I do this for an old sage. I will make his/her dreams come true.`,
+				},
+				{
+					number: 6,
+					description: `The stars hold the key to a long forgotten magic, I will be the first to find it-`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I get too caught up in the complex that I sometime forget rudimentary knowledge`,
+				},
+				{
+					number: 2,
+					description: `Sometimes I think that I'm the only one as smart and daring as I am`,
+				},
+				{
+					number: 3,
+					description: `Unlocking an ancient mystery is worth the price of a civilization`,
+				},
+				{
+					number: 4,
+					description: `Most people scream and run when they see an aberration. I long to see something from out of this universe`,
+				},
+				{
+					number: 5,
+					description: `I sometimes get caught spacing out as I stare at the stars`,
+				},
+				{
+					number: 6,
+					description: `I overlook obvious solutions in favor of complicated ones.`,
+				},
+			],
+		},
+	},
+	Asylum_Escapee: {
+		isHomebrew: true,
+		description: `You are on the lamb having escaped out of an asylum. You couldn't take it anymore: the mistreatment, their inability to believe any truths you spoke, the walls closing in around you. The law will try to find you and bring you back, if you are not cautious. If they do who knows what the doctors will do to you. You won't go back, you will never go back.
+					Maybe there is nothing wrong with you, maybe you angered a noble, perhaps you are a woman with an opinion, maybe the voices are whisperings from you latent patron or maybe you divined the wrong voice from the far realms.`,
+		skillProficiencies: `Persuasion, Insight`,
+		toolProficiencies: `One of the player's choice.`,
+		languages: `One of the player's choice.`,
+		startingEquipment: `A straightjacket or head cage, a set of common clothes, one trinket of special significance, and 1 sp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Ear for Madness`,
+			description: `You have witnessed different forms of madness in the asylum. You can recognize it in others. If you interact with a creature for 1 minute, outside of combat, you can tell if they have a: short term, long term, or indefinite madness. You are not able to identify what madness effects they possess, only that they have it.
+						For short term and long term madness, you are not able to identify the duration of their madness.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try to make friends where ever I go. I want to form a support circle...maybe one day even tell them.`,
+				},
+				{
+					number: 2,
+					description: `I spend money freely and live life to the fullest, knowing that tomorrow I might die.`,
+				},
+				{
+					number: 3,
+					description: `I don't run from evil because I am oblivious to it or uncaring.`,
+				},
+				{
+					number: 4,
+					description: `I am very superstitious.`,
+				},
+				{
+					number: 5,
+					description: `I expect danger around every corner.`,
+				},
+				{
+					number: 6,
+					description: `I don't talk about my mental state with others. I'd rather not burden them.`,
+				},
+				{
+					number: 7,
+					description: `I try to help others who have been through what I have been through.`,
+				},
+				{
+					number: 8,
+					description: `I am unyieldingly genuine, and laugh, cry, or scream without restraint.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Improvement`,
+					description: `Some day, I will make life better for everyone like me`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Survival`,
+					description: `We have to take care of each other, because no one else is going to do it`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Similar`,
+					description: `My mental state isn't like yours, but I'm just like you.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `Madness`,
+					description: `It's only a matter of time... It's only a matter of time... It's only a matter of time...`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Maniac`,
+					description: `The people who did this to me are going to pay.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Seeking`,
+					description: `I'm a good person. I deserve love.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I keep my thoughts and discoveries in a journal. My journal helps me cope.`,
+				},
+				{
+					number: 2,
+					description: `I seek to undo this cursed mental clouding, so I can return to my former life. But everyday I feel less stable, and closer to the point of no return.`,
+				},
+				{
+					number: 3,
+					description: `I believe there is a way to make me normal, and I am on a quest to find it.`,
+				},
+				{
+					number: 4,
+					description: `I blame everyone else for what happened to me.`,
+				},
+				{
+					number: 5,
+					description: `Growing up, there was only one person who could see past my affliction to the real me. I would do anything for them.`,
+				},
+				{
+					number: 6,
+					description: `All I want is to find somewhere I belong.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have certain rituals that I must follow every day. I can never break them.`,
+				},
+				{
+					number: 2,
+					description: `I am just as judgmental and prejudiced as everyone else- perhaps more so.`,
+				},
+				{
+					number: 3,
+					description: `I don't understand why people fear or pity me.`,
+				},
+				{
+					number: 4,
+					description: `Violence is my answer to almost any challenge.`,
+				},
+				{
+					number: 5,
+					description: `It doesn't matter what people say to me. I'm not crazy, I'm not a monster, I'm just ahead of the curve...more evolved.`,
+				},
+				{
+					number: 6,
+					description: `The voices... The voices... never... stop...`,
+				},
+			],
+		},
+	},
+	Banker: {
+		isHomebrew: true,
+		description: `You either work for a large bank or own a small one. You spend your life learning how to make money out of money. Although seen as business only fit for greedy, soulless exploiters, you don't necessarily have to be one yourself. Some banks for example are forbidden by their faith from taking interest, while others participate in social projects, especially since their business is seen as amoral. Lastly, some who are forbidden from practicing an "honest" trade are pushed into the business, holding a risky position of influence and wealth that depends on the good will of the governing body. As soon as they get too rich or the ruler does not need them anymore, they can easily be expelled and their assets confiscated. Work with the DM to establish the nature of the bank you worked for, its size, influence and membership. In addition, you may want to find a justification for your adventuring lifestyle. Did you grow bored with the trade? Maybe you have some debts to collect? Did your bank go bankrupt? If so, is there anyone responsible for the deed? Do you still have friends from your former life?`,
+		skillProficiencies: `Persuasion, Insight`,
+		toolProficiencies: ``,
+		languages: `Two languages of your choices`,
+		startingEquipment: `An ink pen, Fine Clothes, a bottle of ink, 10 sheets of parchment, an accounting book, a taxroll and a pouch containing 25 gp`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: ``,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Accountant`,
+				},
+				{
+					number: 2,
+					description: `Moneylender`,
+				},
+				{
+					number: 3,
+					description: `Clerk`,
+				},
+				{
+					number: 4,
+					description: `Mortgage Specialist`,
+				},
+				{
+					number: 5,
+					description: `Financier`,
+				},
+				{
+					number: 6,
+					description: `Investor`,
+				},
+			],
+		},
+		feature: {
+			title: `Struck it Rich`,
+			description: `Your dealings have made you rich before you ever embarked on the life of an adventurer. And although the assets you obtained are not easily convertible into currency, they do allow you to live a life free of material want. As long as a banking house can be found in the city you currently reside in, you can maintain a wealthy lifestyle without expending money.`,
+		},
+		alterateFeature: [
+			{
+				title: `Banking Guild Membership`,
+				description: `Not everyone in the banking business makes a fortune out of it. You, however, have made it your job to be reliable, competent and be held in esteem by the fellow members of your trade. This feature works similar to the "guild membership" feature.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Those working in the banking business are a varied lot. Some see the way banks accumulate money as a path out of the parochialism of a feudal rule, where war, famine and ignorance are fostered, into a future free from want. Others relish the money and debt give them over others, while a few use the money to do charitable work and use their power to change society for the better. In any case, appearing trustworthy, groomed and educated are very important to all bankers, especially when don't have any of these qualities.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My appearance and grooming are always impeccable, no matter how dire the situation.`,
+				},
+				{
+					number: 2,
+					description: `I use polished and refined language, to showcase my good education.`,
+				},
+				{
+					number: 3,
+					description: `I delight in ordering others around with spiteful and meaningless tasks.`,
+				},
+				{
+					number: 4,
+					description: `Too much work has left me morose and withdrawn.`,
+				},
+				{
+					number: 5,
+					description: `I prefer a cautious and safe approach. Charging ahead seems foolish.`,
+				},
+				{
+					number: 6,
+					description: `I am so much better than these uneducated brutes around me.`,
+				},
+				{
+					number: 7,
+					description: `A stovepipe is the sign of a refined person. As such, i never leave my home without one.`,
+				},
+				{
+					number: 8,
+					description: `I hold myself up to high standards of behavior and others just as much.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Obedience`,
+					description: `If i do how i am told, everything will work out fine. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Money`,
+					description: `Money is the first and foremost thing a banker should have in mind`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `People`,
+					description: `Who cares about the money or what the bank wants? It's all the different people i met and talk to that matter in the end.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					bold: `Power`,
+					description: `I relish the power money allows me to hold over others. There is nothing as delightful as legally robbing a person of everything they hold dear. `,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Charity`,
+					description: ` I help the poor by investing in social projects, like housing for the homeless and universal education. All the money of the world isn't worth it if my soul goes to hell. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Change`,
+					description: `The dynamic and efficient system i represent will one day do away with overcome traditions and silly believes.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I work to pay off a debt.`,
+				},
+				{
+					number: 2,
+					description: `I plan to extend the influence of my bank to the far reaches of the world.`,
+				},
+				{
+					number: 3,
+					description: `I am loyal to my boss and will enforce their will, whatever it takes.`,
+				},
+				{
+					number: 4,
+					description: `I have only ever loved two things: money and my self.`,
+				},
+				{
+					number: 5,
+					description: `My current job is everything to me.`,
+				},
+				{
+					number: 6,
+					description: `I will take revenge on all who laughed at me while i was younger.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don't care for the less fortunate. As far as i am concerned, they should have pulled themselves up by their bootstraps instead of wasting their lives.`,
+				},
+				{
+					number: 2,
+					description: `I utterly believe in the word of whoever governs the bank.`,
+				},
+				{
+					number: 3,
+					description: `I would do anything to get more money.`,
+				},
+				{
+					number: 4,
+					description: `I am unused to rough living, being used to living a life of luxury.`,
+				},
+				{
+					number: 5,
+					description: `I tend to trust the wrong persons too much, leading to unsound investments.`,
+				},
+				{
+					number: 6,
+					description: `Plagued by the fear of failure and i tend to overwork myself.`,
 				},
 			],
 		},

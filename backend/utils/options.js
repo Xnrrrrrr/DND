@@ -22,6 +22,9 @@ const backgrounds = [
 	"Artist", //homebrew
 	"Aspirant", //homebrew
 	"Assistant", //homebrew
+	"Astrologer", //homebrew
+	"Asylum Escapee", //homebrew
+	"Banker", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
