@@ -3393,6 +3393,18 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Apothecary", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Archaeologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Arranged_Marriage", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -6316,7 +6328,576 @@ Your learning has gotten you this far, but you are seeking more. What knowledge 
 			],
 		},
 	},
-
+	Apothecary: {
+		isHomebrew: true,
+		description: `The world you live in remains anchored in certain practices that have yet to approach that of modern medicine. But illness does not wait for progress. People are dying and ailing from a litany of diseases and poxes that plague your days. As an apothecary, you are one of the few recourses for the people. With your knowledge of tinctures and cures, you travel the land to find new cures and uses for nature's bounty. With rather primitive tools, you play the role of pharmacologist, doctor, and pharmacist. In addition to learning of ailments, you also know of their cures, causes, and how to construct their cures. Some apothecaries even know the opposite: they can recreate the poison. While apothecaries are not solely limited to what they can do with herbs, plants and natural minerals are their most trusted sources of medicine. Some even know the art of extracting vital material from animals.
+					When making an apothecary character, think about their motivation for going down this route of work, which can be harsh and grating, as one has to witness death. Are you perhaps a stalwart believer in healing anyone, no matter their finances? Perhaps you are more of a scientist type, interested in the crafting aspect of apothecaries rather than the social doctor side of things. Being skilled with nonmagical means, apothecaries can often be called conmen who sell snake oils due to the inadequacy of their cures compared to magic. However, in a world where magic may not be ample, people are not picky. Apothecaries can often find themselves the judge of someone's life, holding the key to whether they live or die. Such a power can corrupt a healing man, making them depraved and arrogant. It is not impossible nor unheard of for apothecaries to be greedy, turning a blind eye to the poor in need. There are still yet even those who devote themselves solely to the concoctions of deadly poisons to kill, and sell them to assassins and figures of the underworld for the highest of prices.`,
+		skillProficiencies: `Medicine and Nature.`,
+		toolProficiencies: `Herbalism Kit.`,
+		languages: `One of your choice.`,
+		startingEquipment: `Herbalism kit, a merchant’s scale, a set of common clothes, and a belt pouch containing 10 gp.`,
+		backgroundSpecial: {
+			title: `Practice`,
+			description: ``,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `Poisoner. You specialize in the concoctions of lethal and deadly substances, including hallucinogens and other drugs`,
+				},
+				{
+					number: 2,
+					description: `Doctor. You spend your time mostly treating the sick`,
+				},
+				{
+					number: 3,
+					description: `Researcher. You focus on the procurement of materials and studying their uses for others to practice.`,
+				},
+				{
+					number: 4,
+					description: `Con Man. You peddle false cures for money, though you might know a thing or two about actual medicine.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Purveyor of Cures`,
+			description: `You have a reputation as a healer of the sick, and are often called upon by those who are diseased or injured. You can usually gain an audience with anyone who needs treatment — even if protocol would normally prevent you from doing so — simply by agreeing to offer your assistance.`,
+		},
+		alterateFeature: [
+			{
+				title: `Poison or Cure`,
+				description: `By spending a few minutes examining a chemical — a vial of liquid, a packet of ground powder, or the like — you can determine whether the substance is intended to harm or heal (or neither). This examination does not reveal any specific information about the substance(such as that a powder is actually an inhaled poison, or that it paralyzes its victim), only that it is either harmful or helpful to those that it is used on.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Apothecaries are defined by their attention to detail. Because so many of the illnesses they treat often have similar symptoms, they are careful about the things they say and the questions they ask, always looking to gather precise and accurate information. They tend towards cleanliness and organization, as they need to keep their tools sterile and their supplies ready at all times.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I distance myself from everyone, even those I care about.`,
+				},
+				{
+					number: 2,
+					description: `I keep all of my possessions meticulously clean, and I hate any kind of filth.`,
+				},
+				{
+					number: 3,
+					description: `	I am honest to a fault; knowing all of the information is the only way to make an accurate diagnosis.`,
+				},
+				{
+					number: 4,
+					description: `I make incredibly poor jokes in an attempt to put others at ease.`,
+				},
+				{
+					number: 5,
+					description: `I talk down to others when speaking on a field I believe myself to be knowledgeable in.`,
+				},
+				{
+					number: 6,
+					description: `I present everything I say as a guess or estimate so that I don’t look bad if it turns out to be wrong.`,
+				},
+				{
+					number: 7,
+					description: `It seems like I always try to strike up a conversation at the worst possible moment.`,
+				},
+				{
+					number: 8,
+					description: `I set very high standards for myself, and expect others to follow my example.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Aid. Every sick or wounded person deserves my help, regardless of the life they lead.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					description: `Control. By deciding who lives and who dies, I can shape the world to my liking.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					description: `Loyalty. It is my duty to treat those to whom I have sworn allegiance.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					description: `Efficiency. I am not emotionally invested in those I aid; to act otherwise would compromise my work.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					description: `Prevention. Stopping the spread of sickness is better than treating it. `,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					description: `Research. In order to treat patients effectively, we must understand the maladies afflicting them. `,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	I share my discoveries with my fellow apothecaries, to further the goals of our trade.`,
+				},
+				{
+					number: 2,
+					description: `I give my aid to those who protect my country and my ruler.`,
+				},
+				{
+					number: 3,
+					description: `Many medicinal reagents are rare or hard to find; those who secure them deserve respect.`,
+				},
+				{
+					number: 4,
+					description: `I seek a cure to a mysterious disease that afflicts one of my loved ones.`,
+				},
+				{
+					number: 5,
+					description: `I wish to prove that “mundane” healing is just as viable as magic.`,
+				},
+				{
+					number: 6,
+					description: `I work closely with a group that aims to eliminate a particular disease from existence.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I use unproven treatments on my patients without their knowledge.`,
+				},
+				{
+					number: 2,
+					description: `	I refuse to give aid to those of a certain species or nationality, no matter how desperately they need it.`,
+				},
+				{
+					number: 3,
+					description: `If a disease is particularly deadly, I refuse to treat it out of fear for my own health.`,
+				},
+				{
+					number: 4,
+					description: `Memories of a horrible plague that I failed to cure still haunt me to this day.`,
+				},
+				{
+					number: 5,
+					description: `	The sight of blood makes me queasy, and I can only treat those who have no external wounds`,
+				},
+				{
+					number: 6,
+					description: `	I am only interested in the ailments my patients suffer from, not the people themselves.`,
+				},
+			],
+		},
+	},
+	Archaeologist: {
+		isHomebrew: true,
+		description: `Following many years of education and workplace experience, digging up and researching ancient cultures and societies, you've made connections with various organizations; selling artifacts and historical research to nobles, governments, and collectors hoping to honor the past, as well as to mage houses and criminals hoping to harness ancient powers. Your own moral compass dictates whom you're willing to do business with, but there always seems to be interested buyers and benefactors when you're around people with money. Years in the field have taught you how to identify how old and how valuable (or worthless) these finds might be. And while this might make you some money, and gain you some notoriety, it's also likely to put you on a dangerous path from time to time. Many of your finds are in long-forgotten, trap-filled areas, and sometimes, legends - true or not - will put others on the same path as you.`,
+		skillProficiencies: `History, Investigation`,
+		toolProficiencies: `Thieves’ Tools`,
+		languages: `While you can't speak either, you can understand and read both Celestial and Infernal`,
+		startingEquipment: `Notepad w/ Charcoal Pencil, Map/Scroll Case, Climber's Kit, Lamp & flask of oil, Thieves' Tools, Empty Lockbox, 2 Empty Vials, and a keepsake from an early dig-site (ex: small animal skeleton, ancient arrowhead, centuries-old silverware, etc)`,
+		backgroundSpecial: {
+			title: `Historical Focus`,
+			description: ``,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `Gravesites`,
+				},
+				{
+					number: 2,
+					description: `Ancient Text`,
+				},
+				{
+					number: 3,
+					description: `Magical Artifacts`,
+				},
+				{
+					number: 4,
+					description: `Religious Origins`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Sixth Sense`,
+			description: `You seem able to sense if you're close to discovering something special on an expedition, which gives you some insight or whether a dig is worth your time within the first hours, rather than wasting days, if not years on fruitless digs as some other do.`,
+		},
+		alterateFeature: [
+			{
+				title: `Fence Connections`,
+				description: `While you might not be the greatest salesmen, over the years you've made connections with intermediaries in your field that can usually find a buyer for whatever it is you're trying to unload. You'll have to pay a percentage, but it usually works out in your favor overall.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I live for the thrill of the find`,
+				},
+				{
+					number: 2,
+					description: `	I love selling stuff I simply pulled out of the ground`,
+				},
+				{
+					number: 3,
+					description: `The knowledge gained is my reward`,
+				},
+				{
+					number: 4,
+					description: `I've been secretly looking for something specific this whole time`,
+				},
+				{
+					number: 5,
+					description: `I only started all this to impress someone`,
+				},
+				{
+					number: 6,
+					description: `I hate my life, but feel trapped in my station`,
+				},
+				{
+					number: 7,
+					description: `I'll never stop looking for the next treasure`,
+				},
+				{
+					number: 8,
+					description: `I long to find a score big enough to retire on`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Respect The treasures of yesteryear should be honored and respected.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					description: `	Reverence The dead deserve to be remembered in a world full of so much loss. `,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					description: `Pragmatism I could use this stuff more than the dead who possess it.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					description: `Ambitious There is power to be derived from the secret of the past, and it should be mine.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					description: `	Excitement Life is short, have fun while you can and enjoy your finds `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					description: `Greed In this world gold means survival, and I'll survive by any means.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will never forget the lessons learned from my teacher, he was a good man whom I will honor through my deeds.`,
+				},
+				{
+					number: 2,
+					description: `I will never part with _______, a relic from my first expedition that keeps me grounded.`,
+				},
+				{
+					number: 3,
+					description: `No matter how far I travel or how long I'm gone, I know that I have someone back home who awaits my return, and I take comfort in that.`,
+				},
+				{
+					number: 4,
+					description: `So long as there is coin in my pocket, my mind is generally at ease, as I draw a line from gold to peace.`,
+				},
+				{
+					number: 5,
+					description: `I loved someone long ago, and the memory of them (be it a delusional misremembrance or not) keeps me moving`,
+				},
+				{
+					number: 6,
+					description: `I've got my trusty shovel, and that's all I need. With it, the next find is always just a matter of when and where.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `	My arrogance often betrays me in social situations.`,
+				},
+				{
+					number: 2,
+					description: `I am better at dealing with skeletons than living people.`,
+				},
+				{
+					number: 3,
+					description: `My short fuse can be an issue in negotiations`,
+				},
+				{
+					number: 4,
+					description: `A lack of confidence causes me to bite my tongue when I should speak up.`,
+				},
+				{
+					number: 5,
+					description: `	I sometimes voice my unpopular opinion too loudly and at the wrong times.`,
+				},
+				{
+					number: 6,
+					description: `I am a fraud, but I'm pretty good at faking it so long as no one is around that knows more than me.`,
+				},
+			],
+		},
+	},
+	Arranged_Marriage: {
+		isHomebrew: true,
+		description: `From an early age you were betrothed to someone of power and significance. Your whole life has been about preparing you for your marriage vow and married life. You have diligently practiced the skills, protocols, and customs expected of you. But now the marriage is finished! Your life was prescribed for you by others, but now you find yourself in existential limbo.
+					What was the nature of your marriage? Was it to bond two powerful families or perhaps a regular custom among your people? Was the marriage a religious anointment and you were to be wedded to a supernatural entity? What caused the marriage to prematurely end or did you never reach the altar?`,
+		skillProficiencies: `Performance, Persuasion`,
+		toolProficiencies: ``,
+		languages: ``,
+		startingEquipment: `10gp, betrothal ring worth 15gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+					alignment: ``,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+	},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
