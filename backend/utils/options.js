@@ -32,6 +32,8 @@ const backgrounds = [
 	"Bereaved", //homebrew
 	"Biologist", //homebrew
 	"Bodyguard", //homebrew
+	"Botanist", //homebrew
+	"Bounty Hunter", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

@@ -3842,6 +3842,14 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Botanist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bounty_Hunter", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -10058,14 +10066,17 @@ export const backgroundDesc = {
 	},
 	Biologist: {
 		isHomebrew: true,
-		description: "You have always been fascinated with life, from insects to plants, to monsters. You desire to find and document as many creatures around the world as you can. By studying these creatures, you believe you can either use them for your own gain or you can hopefully better understand them and help others understand them.",
+		description:
+			"You have always been fascinated with life, from insects to plants, to monsters. You desire to find and document as many creatures around the world as you can. By studying these creatures, you believe you can either use them for your own gain or you can hopefully better understand them and help others understand them.",
 		skillProficiencies: "Animal Handling, Nature",
 		toolProficiencies: "None",
 		languages: "Two of your choice",
-		startingEquipment: "A leather-bound diary, documentation of your favorite animal, a bottle of ink, an ink pen, a set of traveler’s clothes, and a pouch containing 10 gp",
+		startingEquipment:
+			"A leather-bound diary, documentation of your favorite animal, a bottle of ink, an ink pen, a set of traveler’s clothes, and a pouch containing 10 gp",
 		backgroundSpecial: {
 			title: "Favored Animal",
-			description: "Every biologist has a specialized type of animal that they excel at examining.",
+			description:
+				"Every biologist has a specialized type of animal that they excel at examining.",
 			die: "d6",
 			roll: [
 				{
@@ -10091,12 +10102,13 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: "Fish",
-				}
+				},
 			],
 		},
 		feature: {
 			title: "Respectful Connections",
-			description: "As a biologist, you are constantly trying to document as many creatures as you can. Other researchers of animals and creatures respect you depending on the number of creatures that you've documented. You gain the respect of people who view intelligence highly. These types of people are more willing to speak with you than others.",
+			description:
+				"As a biologist, you are constantly trying to document as many creatures as you can. Other researchers of animals and creatures respect you depending on the number of creatures that you've documented. You gain the respect of people who view intelligence highly. These types of people are more willing to speak with you than others.",
 		},
 		alterateFeature: [
 			{
@@ -10108,7 +10120,8 @@ export const backgroundDesc = {
 				description: "",
 			},
 		],
-		suggestedCharacteristics: "Biologists come in many different personalities. Some are benevolent, wanting to learn and expand their knowledge. Others only want to learn so they gain an advantage in combat. Some biologists even value animal life more than their own.",
+		suggestedCharacteristics:
+			"Biologists come in many different personalities. Some are benevolent, wanting to learn and expand their knowledge. Others only want to learn so they gain an advantage in combat. Some biologists even value animal life more than their own.",
 		suggestedPersonalityTraits: {
 			description: "",
 			die: "d8",
@@ -10120,32 +10133,39 @@ export const backgroundDesc = {
 				},
 				{
 					number: 2,
-					description: "My love for animals outweighs my love for people.",
+					description:
+						"My love for animals outweighs my love for people.",
 				},
 				{
 					number: 3,
-					description: "Many people dislike my favorite animal and I'm not sure why.",
+					description:
+						"Many people dislike my favorite animal and I'm not sure why.",
 				},
 				{
 					number: 4,
-					description: "I am intolerant of people you dislike animals and life.",
+					description:
+						"I am intolerant of people you dislike animals and life.",
 				},
 				{
 					number: 5,
-					description: "I don't actually like animals and only examine them to kill them later.",
+					description:
+						"I don't actually like animals and only examine them to kill them later.",
 				},
 				{
 					number: 6,
-					description: "People are often weirded out by me for my love of animals.",
+					description:
+						"People are often weirded out by me for my love of animals.",
 				},
 				{
 					number: 7,
-					description: "I am constantly spouting off random facts about certain creatures.",
+					description:
+						"I am constantly spouting off random facts about certain creatures.",
 				},
 				{
 					number: 8,
-					description: "Every time I meet someone, I often compare them to a certain animal's behavior.",
-				}
+					description:
+						"Every time I meet someone, I often compare them to a certain animal's behavior.",
+				},
 			],
 		},
 		suggestedIdeal: {
@@ -10156,39 +10176,45 @@ export const backgroundDesc = {
 				{
 					number: 1,
 					bold: "Preservation.",
-					description: "Animals and creatures of all kinds must be preserved. Life deserves to remain.",
+					description:
+						"Animals and creatures of all kinds must be preserved. Life deserves to remain.",
 					alignment: "Good",
 				},
 				{
 					number: 2,
 					bold: "Circle of Life.",
-					description: "The circle of life must be preserved regardless of others' fears or concerns.",
+					description:
+						"The circle of life must be preserved regardless of others' fears or concerns.",
 					alignment: "Neutral",
 				},
 				{
 					number: 3,
 					bold: "Fascination.",
-					description: "The creatures at the top of the food chain should be idolized and looked up to.",
+					description:
+						"The creatures at the top of the food chain should be idolized and looked up to.",
 					alignment: "Chaotic",
 				},
 				{
 					number: 4,
 					bold: "Selfish Preservation.",
-					description: "Creatures and animals only serve as food and supplies for my gain and mine alone.",
+					description:
+						"Creatures and animals only serve as food and supplies for my gain and mine alone.",
 					alignment: "Evil",
 				},
 				{
 					number: 5,
 					bold: "Natural.",
-					description: "Leaving the world to its natural state is the best course of action.",
+					description:
+						"Leaving the world to its natural state is the best course of action.",
 					alignment: "Neutral",
 				},
 				{
 					number: 6,
 					bold: "Knowledge.",
-					description: "The pursuit of knowledge for life is beneficial to both me and others.",
+					description:
+						"The pursuit of knowledge for life is beneficial to both me and others.",
 					alignment: "Any",
-				}
+				},
 			],
 		},
 		suggestedBond: {
@@ -10198,28 +10224,33 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: "My house pet is the most important thing to me and I would die for them.",
+					description:
+						"My house pet is the most important thing to me and I would die for them.",
 				},
 				{
 					number: 2,
-					description: "Injuries or cruelties to a creature is an injury or cruelty to me.",
+					description:
+						"Injuries or cruelties to a creature is an injury or cruelty to me.",
 				},
 				{
 					number: 3,
-					description: "Poachers destroyed the vibrant life of my homeland and I will take revenge.",
+					description:
+						"Poachers destroyed the vibrant life of my homeland and I will take revenge.",
 				},
 				{
 					number: 4,
-					description: "My mentor was killed by a raging animal and so I want to find out more about said animal.",
+					description:
+						"My mentor was killed by a raging animal and so I want to find out more about said animal.",
 				},
 				{
 					number: 5,
-					description: "The extinction of certain species scares me to my core.",
+					description:
+						"The extinction of certain species scares me to my core.",
 				},
 				{
 					number: 6,
 					description: "It is my duty to preserve life in all forms.",
-				}
+				},
 			],
 		},
 		suggestedFlaw: {
@@ -10229,80 +10260,104 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: "Sometimes I can't resist the taste of an animal to leave it alive.",
+					description:
+						"Sometimes I can't resist the taste of an animal to leave it alive.",
 				},
 				{
 					number: 2,
-					description: "I often put myself and others in danger in order to examine creatures.",
+					description:
+						"I often put myself and others in danger in order to examine creatures.",
 				},
 				{
 					number: 3,
-					description: "I remember the look and appearance of every animal I've ever come across more so than people's names.",
+					description:
+						"I remember the look and appearance of every animal I've ever come across more so than people's names.",
 				},
 				{
 					number: 4,
-					description: "I care more for the safety of a beast than the safety of my fellow peers.",
+					description:
+						"I care more for the safety of a beast than the safety of my fellow peers.",
 				},
 				{
 					number: 5,
-					description: "I often like to pit certain species against each other to see what would happen for my own entertainment.",
+					description:
+						"I often like to pit certain species against each other to see what would happen for my own entertainment.",
 				},
 				{
 					number: 6,
-					description: "I'm actually very afraid of a specific species and refuse to document it.",
-				}
+					description:
+						"I'm actually very afraid of a specific species and refuse to document it.",
+				},
 			],
 		},
 	},
 	Bodyguard: {
 		isHomebrew: true,
-		description: "Whether you hide in the shadows and watch those whom you protect, or boldly be at their side as their shield, clashing against those who would do them harm, you have devoted your life to servitude for the individuals who you have deemed in need of protection.",
+		description:
+			"Whether you hide in the shadows and watch those whom you protect, or boldly be at their side as their shield, clashing against those who would do them harm, you have devoted your life to servitude for the individuals who you have deemed in need of protection.",
 		skillProficiencies: ["Perception", "Intimidation"],
 		toolProficiencies: ["Thieves' tools", "Herbalism kit"],
 		languages: ["One extra language of your choice"],
-		startingEquipment: ["2 hand crossbows or 1 heavy crossbow", "Leather armor", "Thieves' tools", "Hooded cloak", "Set of common clothes", "Belt pouch with 15 gold"],
+		startingEquipment: [
+			"2 hand crossbows or 1 heavy crossbow",
+			"Leather armor",
+			"Thieves' tools",
+			"Hooded cloak",
+			"Set of common clothes",
+			"Belt pouch with 15 gold",
+		],
 		backgroundSpecial: {
 			title: "Guardian",
-			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+			description:
+				"You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
 			die: "d8",
 			roll: [
 				{
 					number: 1,
-					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+					description:
+						"I am overly cautious of all food and drink that either my companion or I consume.",
 				},
 				{
 					number: 2,
-					description: "I find it hard to leave my designated companion to themselves.",
+					description:
+						"I find it hard to leave my designated companion to themselves.",
 				},
 				{
 					number: 3,
-					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+					description:
+						"I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
 				},
 				{
 					number: 4,
-					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+					description:
+						"If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
 				},
 				{
 					number: 5,
-					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+					description:
+						"Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
 				},
 				{
 					number: 6,
-					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+					description:
+						"I often try to make situations sound better than they are to make my companion feel more comfortable.",
 				},
 				{
 					number: 7,
-					description: "II may be a stick in the mud while I am sober, but I am wilder than an owlbear when I am intoxicated.",
+					description:
+						"II may be a stick in the mud while I am sober, but I am wilder than an owlbear when I am intoxicated.",
 				},
 				{
 					number: 8,
-					description: "I form attachments to those I care about, and often find myself going above and beyond to make them happy.",
+					description:
+						"I form attachments to those I care about, and often find myself going above and beyond to make them happy.",
 				},
 			],
 		},
 		feature: {
 			title: "Guardian",
-			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+			description:
+				"You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
 		},
 		alterateFeature: [
 			{
@@ -10314,7 +10369,8 @@ export const backgroundDesc = {
 				description: "",
 			},
 		],
-		suggestedCharacteristics: "There are many reasons as to why you may be guarding someone. It could be that you and your family are in the service of a powerful individual, or that you owe a friend a life debt after they rescued you from some perilous encounter. You may be friends with the ones you protect: You may not. But in any case, your loyalties are unwavering, and your courage speaks for itself.",
+		suggestedCharacteristics:
+			"There are many reasons as to why you may be guarding someone. It could be that you and your family are in the service of a powerful individual, or that you owe a friend a life debt after they rescued you from some perilous encounter. You may be friends with the ones you protect: You may not. But in any case, your loyalties are unwavering, and your courage speaks for itself.",
 		suggestedPersonalityTraits: {
 			description: "",
 			die: "d8",
@@ -10322,27 +10378,33 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+					description:
+						"I am overly cautious of all food and drink that either my companion or I consume.",
 				},
 				{
 					number: 2,
-					description: "I find it hard to leave my designated companion to themselves.",
+					description:
+						"I find it hard to leave my designated companion to themselves.",
 				},
 				{
 					number: 3,
-					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+					description:
+						"I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
 				},
 				{
 					number: 4,
-					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+					description:
+						"If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
 				},
 				{
 					number: 5,
-					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+					description:
+						"Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
 				},
 				{
 					number: 6,
-					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+					description:
+						"I often try to make situations sound better than they are to make my companion feel more comfortable.",
 				},
 				{
 					number: 7,
@@ -10350,7 +10412,8 @@ export const backgroundDesc = {
 				},
 				{
 					number: 8,
-					description: "I have a deep sense of loyalty to those I protect.",
+					description:
+						"I have a deep sense of loyalty to those I protect.",
 				},
 			],
 		},
@@ -10362,37 +10425,43 @@ export const backgroundDesc = {
 				{
 					number: 1,
 					bold: "Guardian",
-					description: "I dedicate my life to defending those who cannot defend themselves.",
+					description:
+						"I dedicate my life to defending those who cannot defend themselves.",
 					alignment: "Good",
 				},
 				{
 					number: 2,
 					bold: "Indifferent",
-					description: "I do not have personal connections with my charge. They are merely part of the job.",
+					description:
+						"I do not have personal connections with my charge. They are merely part of the job.",
 					alignment: "Neutral",
 				},
 				{
 					number: 3,
 					bold: "Determined",
-					description: "I will protect those who I must... by any means necessary.",
+					description:
+						"I will protect those who I must... by any means necessary.",
 					alignment: "Chaotic",
 				},
 				{
 					number: 4,
 					bold: "Underhanded",
-					description: "I will learn what the weaknesses of my companion are so that I may take them down in the long run.",
+					description:
+						"I will learn what the weaknesses of my companion are so that I may take them down in the long run.",
 					alignment: "Evil",
 				},
 				{
 					number: 5,
 					bold: "Resolute",
-					description: "I follow the law laid down for me to protect those whom I am ordered to.",
+					description:
+						"I follow the law laid down for me to protect those whom I am ordered to.",
 					alignment: "Lawful",
 				},
 				{
 					number: 6,
 					bold: "Flexible",
-					description: "I take into account my past experiences to help prepare for the future endeavors.",
+					description:
+						"I take into account my past experiences to help prepare for the future endeavors.",
 					alignment: "Any",
 				},
 			],
@@ -10404,27 +10473,33 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: "I have a home I love somewhere, though I may not often see it.",
+					description:
+						"I have a home I love somewhere, though I may not often see it.",
 				},
 				{
 					number: 2,
-					description: "I am part of an order dedicated to protecting those in need.",
+					description:
+						"I am part of an order dedicated to protecting those in need.",
 				},
 				{
 					number: 3,
-					description: "The one who I look after saved me from something horrible once: I owe them everything.",
+					description:
+						"The one who I look after saved me from something horrible once: I owe them everything.",
 				},
 				{
 					number: 4,
-					description: "I have other friends in this business who don't perform their duties exactly how I do.",
+					description:
+						"I have other friends in this business who don't perform their duties exactly how I do.",
 				},
 				{
 					number: 5,
-					description: "I became as I am to escape a darker time in my life. That time is behind me now, but the faces from the past still linger.",
+					description:
+						"I became as I am to escape a darker time in my life. That time is behind me now, but the faces from the past still linger.",
 				},
 				{
 					number: 6,
-					description: "My companion isn't the only one who I should protect. There are many more out there without a shield to stand behind.",
+					description:
+						"My companion isn't the only one who I should protect. There are many more out there without a shield to stand behind.",
 				},
 			],
 		},
@@ -10435,27 +10510,430 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					description: "I have lost companions before. I now detach myself from my new companions to prevent that same heartache from returning.",
+					description:
+						"I have lost companions before. I now detach myself from my new companions to prevent that same heartache from returning.",
 				},
 				{
 					number: 2,
-					description: "I am oftentimes forgetful, and find this is much to my companion's dismay.",
+					description:
+						"I am oftentimes forgetful, and find this is much to my companion's dismay.",
 				},
 				{
 					number: 3,
-					description: "Due to my experience and law, I am very stubborn in my ways. It is very nearly impossible to sway my opinions on how things should be handled.",
+					description:
+						"Due to my experience and law, I am very stubborn in my ways. It is very nearly impossible to sway my opinions on how things should be handled.",
 				},
 				{
 					number: 4,
-					description: "Trust is a rare commodity in my line of work. As such, it is not something I often give to others.",
+					description:
+						"Trust is a rare commodity in my line of work. As such, it is not something I often give to others.",
 				},
 				{
 					number: 5,
-					description: "My companion and I don't get along in the slightest. It makes it quite difficult to want to look after them.",
+					description:
+						"My companion and I don't get along in the slightest. It makes it quite difficult to want to look after them.",
 				},
 				{
 					number: 6,
-					description: "Although I am sworn to protect my companion first and foremost, I will abandon them in the face of certain death. No pay is worth the trouble.",
+					description:
+						"Although I am sworn to protect my companion first and foremost, I will abandon them in the face of certain death. No pay is worth the trouble.",
+				},
+			],
+		},
+	},
+	Botanist: {
+		isHomebrew: true,
+		description: `A botanist, plant scientist, or phytologist is a scientist who specializes in this field. Botany originated in prehistory as herbalism with the efforts of early humans to identify – and later cultivate – edible, medicinal, and poisonous plants, making it one of the oldest branches of science. Medieval physic gardens, often attached to monasteries, contained plants of medical importance. When did you had begun to specialize in the study of plants? Do you talk to the plants? Do you feel like they talk to you back? What would you do if foes manage to harm flora?`,
+		skillProficiencies: `Medicine, Nature.`,
+		toolProficiencies: `Herbalism Kit`,
+		languages: `Sylvan`,
+		startingEquipment: `A plant in one pot, a book of plants, a belt pouch containing 15gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Plant Whisperer`,
+			description: `You are the one who feels that plants are indeed alive, you have absolute knowledge of every kind of plant without the need to do a Nature check, able to turn herbs into a medicine potion for allies or poison for foes, you also have advantage on checks against Plant-based monsters.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am that type of person who interacts more with plants than people.`,
+				},
+				{
+					number: 2,
+					description: `I often tell people to be kind to flora as one day Mother Nature will return the favor.`,
+				},
+				{
+					number: 3,
+					description: `Somethimes I think I am made out of grass.`,
+				},
+				{
+					number: 4,
+					description: `*Achoo!* Allergies don't matter, this little flower is nice!`,
+				},
+				{
+					number: 5,
+					description: `I see that autumn and winter times are coming, I become sad.`,
+				},
+				{
+					number: 6,
+					description: `Relax! There's nothing fine that a leafy buddy to chill with.`,
+				},
+				{
+					number: 7,
+					description: `A person always has the first word to speak than a plant, I still have common sense.`,
+				},
+				{
+					number: 8,
+					description: `Excuse me?! Did you just cut that leaf of that poor sprout?!`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Bloom`,
+					description: `I will bloom my skills to shine for others!`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Poisonous`,
+					description: `Plants shall rise as the superior race! `,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Withered`,
+					description: `Maybe there's hope and other fellas can water me back to life?`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					bold: `Ecology`,
+					description: `Flora and fauna has to be perfectly balanced in order to coexist.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Rooted`,
+					description: `I keep myself rooted neutrally when it comes to a meaty person and a bush.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Wicked Weed`,
+					description: `People need to know the power of Mother Nature! `,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My garden, I would die to save my paradise of grassy friends!`,
+				},
+				{
+					number: 2,
+					description: `Knowledge is power when it comes to teaching people about the many use of different herbs.`,
+				},
+				{
+					number: 3,
+					description: `My beloved one, I want to give the finest roses to the most precious flower turned into a person.`,
+				},
+				{
+					number: 4,
+					description: `Will there be a person like me who understands the wonderful world of trees?`,
+				},
+				{
+					number: 5,
+					description: `My friends are like a forest. Burn them and I will chop and timber you down.`,
+				},
+				{
+					number: 6,
+					description: `No! People won't understand me and my love for the leaves! I need to keep them out!`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I put my plants over my friends too often.`,
+				},
+				{
+					number: 2,
+					description: `I get distracted easily seeing a little sprout in the middle of nowhere.`,
+				},
+				{
+					number: 3,
+					description: `Don't harm the flower, or I punish you with death. This is also addressed to my buddies.`,
+				},
+				{
+					number: 4,
+					description: `I love blossoms even if I'm very *Sniff* allergic to them.`,
+				},
+				{
+					number: 5,
+					description: `I once used to hate plants, if people find out, they will call me hypocrit.`,
+				},
+				{
+					number: 6,
+					description: `I get jealous when I meet a smartguy that shows to be more expert on plants than me.`,
+				},
+			],
+		},
+	},
+	Bounty_Hunter: {
+		isHomebrew: true,
+		description: `However fine and noble the world might have seemed at first glance, once you dug a little deeper beneath the facade, a deeper truth revealed itself to you. Conflict and strife are the only real constants in "civilized" lands, and for you, therein lay the opportunity for profit. As a bounty hunter you had plied your trade well, offering dubious (if effective) services and skills to all manner of client for myriad reasons- superficial or otherwise. Regardless of the cause, the justification, or the moral impunity associated with locating your mark. Every job finished brought the clink of coin between your purse strings at the expense of another poor soul fated to endure consequences dire, and often foul.
+					Though the time spent in this line of work has left you grim and jilted, your reputation for ruthlessness and cunning precedes you. More often than not, you found yourself sought after and petitioned to ferret a mark, never needing to eke out the work on your own. From the lowly debtor owing the wrong merchant guild, to the misguided runaway offspring of a minor noble, or the thieving murderer eluding the city guard, none could evade your dogged pursuit, and many more dared not try once your involvement was learned.`,
+		skillProficiencies: `Pick two from: Perception, Insight, Survival, Investigation, Stealth, History`,
+		toolProficiencies: `Thieves' Tools`,
+		languages: `Choose one language`,
+		startingEquipment: `Ink bottle, a set of traveler's clothes, ink pen, 5 pages of parchment, 2 hunting traps, thieves' tools, 3 trinkets from previous bounties (roll on table PHB pg. 160-161), and a belt pouch containing 10 gold`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Names, Faces, and Places`,
+			description: `Though many claim the role of a bounty hunter, few actually excel at the profession save those with a keen eye for observation. Among the adept are those who are truly gifted, having an almost preternatural talent for anticipating the behavior of their targeted mark. Being among their ranks, you have an uncanny ability to recall specific details of conversation and names you overhear or participate in as it relates to your bounty, or otherwise see written, even if only for a moment or two. You can also sketch out faces and general locations you've seen with accuracy, possessing exceptional recollection. In addition, you often effortlessly identify clues when tracking your bounty's movements and disposition that would be otherwise lost on lesser pursuers.`,
+		},
+		alterateFeature: [
+			{
+				title: `Contacts and Forgery`,
+				description: `As a bounty hunter you have traveled far and wide which has allowed you to have built up a network of contacts and informants that can help you track down your mark. If you are in a town or city where one of your contacts or informants reside (DM's discretion) you may inquire about information that pertains to your mark for the right price or trade a favor to gain the information (DM's discretion). Additionally you have trained yourself in creating documents that will allow you to gain entry into areas you would normally not be allowed to enter in order to capture your mark. You can forge documents including officials papers and personal letters, as long as you have seen an example of the kind of document or handwriting you are trying to copy.`,
+			},
+			{
+				title: `Ear to the Ground`,
+				description: `You are in frequent contact with people in the segment of society that your chosen mark moves through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people, places and the political standings of the local area.`,
+			},
+		],
+		suggestedCharacteristics: `A bounty hunter's sole purpose is to hunt down people with a price on their head, for grievances ranging from the mundane to the terrible. Those who follow this life can be quiet, taciturn individuals as readily as they can be savage brutes living not for the pay, but for the thrill of pursuit. Hunters are therefore often as varied in personality as their marks.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I tend to approach conversation with people I've just met as though it were an interrogation.`,
+				},
+				{
+					number: 2,
+					description: `I project arrogance and conceit at times, especially after turning in a troublesome target.`,
+				},
+				{
+					number: 3,
+					description: `I'll accept the help of others with a bounty, so long as they can prove their skill to me first.`,
+				},
+				{
+					number: 4,
+					description: `It needn't be hunting down a mark - I'll chop firewood for an old woman if there's pay involved.`,
+				},
+				{
+					number: 5,
+					description: `I'm not prone to idle chatter, and prefer keeping to myself unless the topic's business.`,
+				},
+				{
+					number: 6,
+					description: `I've a great deal of practical experience from hunting bounties, and can relate to almost any situation.`,
+				},
+				{
+					number: 7,
+					description: `I'm rather adept at games of skill like darts, or five-finger fillet.`,
+				},
+				{
+					number: 8,
+					description: `I frequently move from town to town, eager to pursue new marks and seek new contacts.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Justice`,
+					description: `These people have violated the law once. I won't let it happen twice`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Clean-Up`,
+					description: `I will get these criminals off the street with help from the law or not.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Brutality`,
+					description: `Gold pales to the brilliance of the life draining from their eyes.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Morality`,
+					description: `It's not enough to hunt them down. They have to understand what they've done is reprehensible.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Ambiguity`,
+					description: `This job's just a job, like any other. Nothing personal against my targets.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Endurance`,
+					description: `In no other line of work could anyone expect to test their limits so completely.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Once a soldier, my comrade's grave betrayal forced me from my home, and into this life.`,
+				},
+				{
+					number: 2,
+					description: `Though my friends are few, I owe them my life many times over, and would happily die for them.`,
+				},
+				{
+					number: 3,
+					description: `Horrendous tales and vile rumor destroyed my family's good name, and this path is the only recourse to find the truth.`,
+				},
+				{
+					number: 4,
+					description: `The contract turned sour, and now I find myself yoked to dangerously twisted employers.`,
+				},
+				{
+					number: 5,
+					description: `All my deeds would surely consign me to prison - only by servicing officials do I stay free.`,
+				},
+				{
+					number: 6,
+					description: `Mindless thuggery stole the life of one I cherished, and the price they must pay is one I will collect.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Sleep, when it comes, is no sleep at all. The time spent tracking marks has left me skittish and paranoid.`,
+				},
+				{
+					number: 2,
+					description: `Not only am I good at what I do, but I love what I do - and I hate myself for it.`,
+				},
+				{
+					number: 3,
+					description: `I refuse to believe anyone can be trusted, and will root through their life until I'm satisfied they can be.`,
+				},
+				{
+					number: 4,
+					description: `At a younger age my actions earned me the brand of a criminal, those mistakes haunting me and my fellows even today.`,
+				},
+				{
+					number: 5,
+					description: `It is only for my own selfish need to be the best at what I do that I abandon my team to bring the bounty in first.`,
+				},
+				{
+					number: 6,
+					description: `Contract or not, I never bring murder bounties back alive. They showed no mercy, and so neither will I.`,
 				},
 			],
 		},
