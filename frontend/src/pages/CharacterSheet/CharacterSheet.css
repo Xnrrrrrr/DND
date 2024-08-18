@@ -21,7 +21,7 @@
 
 .character-sheet-container {
 	position: relative;
-	max-width: 800px;
+	min-width: 800px;
 	margin: 10rem auto 2rem;
 	padding: 2rem;
 	border-radius: 1rem;
@@ -65,6 +65,13 @@
 	color: red;
 	vertical-align: super;
 	font-size: 0.9rem;
+}
+
+.tooltip-character-sheet-span {
+	text-decoration: underline;
+	cursor: pointer;
+	color: var(--base-text-color);
+	margin: 0rem 0.3rem;
 }
 
 /* Start Top */
@@ -204,7 +211,7 @@
 }
 
 .character-sheet-stats-right {
-	width: 326px;
+	width: 325px;
 }
 
 .character-sheet-stats-right div {
@@ -238,6 +245,7 @@
 .character-sheet-bottom-left div label button {
 	color: var(--base-text-color);
 	padding: 0.1rem 0.5rem;
+	font-weight: 300;
 }
 
 .character-sheet-image-container {
@@ -287,12 +295,4 @@
 	margin-top: 1rem;
 	padding: 1rem 2rem;
 	transition: all 0.5s ease;
-}
-
-.character-sheet-footer {
-	margin-top: 1rem;
-	padding: 1rem;
-	border: 2px solid var(--border-color);
-	border-radius: 1rem;
-	background-color: var(--secondary-background-color);
 }

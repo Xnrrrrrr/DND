@@ -15,6 +15,10 @@ const {
 
 const CharacterSheetSchema = new mongoose.Schema(
 	{
+		homebrew: {
+			type: Boolean,
+			default: false,
+		},
 		characterFirstName: {
 			type: String,
 			required: [true, "Please provide your desired first name"],
@@ -28,12 +32,12 @@ const CharacterSheetSchema = new mongoose.Schema(
 		ideals: {
 			type: String,
 			required: [true, "Please provide your ideal"], // Ensures that at least one ideal is provided
-			maxlength: 100,
+			maxlength: [500, "Your ideal must bot exceed 500 characters."]
 		},
 		bonds: {
 			type: String,
 			required: [true, "Please provide your desired bond"],
-			maxlength: 100,
+			maxlength: [500, "Your bond must not exceed 500 characters."],
 		},
 		// religion: {
 		// 	type: String,
@@ -42,35 +46,35 @@ const CharacterSheetSchema = new mongoose.Schema(
 		// },
 		flaws: {
 			type: String,
-			// enum: [
-			// 	"I judge others harshly, and myself even more severely.",
-			// 	"I have trouble trusting in my allies.",
-			// 	"My appetite for pleasures of the flesh often leads me into trouble.",
-			// 	"I am quick to anger and slow to forgive.",
-			// 	"I believe that everything worth doing is worth doing with excess.",
-			// 	"I harbor dark, bloodthirsty thoughts that my better nature strives to hide.",
-			// 	"I have an insatiable desire for carnal pleasures.",
-			// 	"I turn tail and run when things look bad.",
-			// 	"I am convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure.",
-			// 	"I see most people as expendable, and worth less than the gold they carry.",
-			// 	"Once I pick a goal, I become obsessed with it to the detriment of everything else in my life.",
-			// 	"I cling to secrets and refuse to share important information with my allies.",
-			// 	"I can’t resist swindling people who are more powerful than I am.",
-			// 	"I’m never satisfied with what I have—I always want more.",
-			// 	"I’ll do anything to win fame and renown.",
-			// 	"I’m too enamored of ale, wine, and other intoxicants.",
-			// 	"I have an overwhelming fear of a particular kind of creature, and I freeze up in the face of it.",
-			// 	"I can’t stand to be without a weapon in my hand.",
-			// 	"I’m deeply paranoid and constantly suspect my companions of betrayal.",
-			// 	"I trust no one and expect betrayal at every turn.",
-			// ],
 			required: [true, "Please provide your desired flaw"],
-			maxlength: 100,
+			maxlength: [500, "Your flaw must not exceed 500 characters."],
 		},
 		backgrounds: {
 			type: String,
 			enum: backgrounds, // Use enum to restrict values to official D&D 5e backgrounds
 			required: [true, "Please provide your desired background"],
+		},
+		specialBackground: {
+			title: {
+				type: String,
+				maxlength: [50, "The title for a special background must not exceed 50 characters"],
+			},
+			description: {
+				type: String,
+				maxlength: [500, "Your special background description must not exceed 500 characters."],
+			}
+		},
+		feature: {
+			title: {
+				type: String,
+				required: [true, "A title is required for a feature."],
+				maxlength: [50, "The title for a feature must not exceed 50 characters"],
+			},
+			description: {
+				type: String,
+				required: [true, "A description is required for a feature."],
+				maxlength: [500, "Feature description must not exceed 500 characters."],
+			}
 		},
 		primaryClass: {
 			type: String,
@@ -246,15 +250,10 @@ const CharacterSheetSchema = new mongoose.Schema(
 			enum: alignment, // Use enum to restrict values to official D&D 5e alignments
 			required: [true, "Please provide your desired alignment"],
 		},
-		// features: {
-		// 	type: String,
-		// 	enum: ["common", "uncommon", "rare", "epic", "legendary"], // Use enum to restrict values
-		// 	required: [true, "Please provide your desired username"],
-		// },
 		personalityTraits: {
 			type: [String], // Changed to an array to allow multiple selections (Must be 2 different traits)
 			required: [true, "Please provide your desired traits"], // Ensures at least one trait is selected
-			maxlength: 50,
+			maxlength: [250, "A single personality trait must not exceed 250 characters."],
 		},
 		// Determined by race/subrace
 		languages: {
@@ -450,7 +449,7 @@ const CharacterSheetSchema = new mongoose.Schema(
 		backstory: {
 			type: String,
 			required: [true, "Please provide your character's backstory"],
-			maxlength: 1000,
+			maxlength: [2000, "Your backstory must not exceed 2000 characters."]
 		},
 		// allies: {
 		// 	type: String,

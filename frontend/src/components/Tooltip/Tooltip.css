@@ -1,0 +1,48 @@
+.tooltip-container {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip-container div {
+	font-weight: 400;
+}
+
+.tooltip-content {
+	position: absolute;
+	background-color: var(--secondary-background-color);
+	color: var(--base-text-color);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--border-color);
+	font-size: 1.2rem;
+	width: 250px;
+	z-index: 1000;
+	top: 100%; /* Adjust position relative to the parent */
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	white-space: pre-wrap;
+}
+
+.tooltip-content::before {
+	content: "";
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 6px;
+	border-style: solid;
+	border-color: transparent transparent var(--secondary-background-color) transparent;
+	z-index: 1001;
+}
+
+.tooltip-content.above {
+	top: auto;
+	bottom: 100%; /* Position the tooltip above the trigger */
+}
+
+.tooltip-content.above::before {
+	top: auto;
+	bottom: -12px;
+	border-color: var(--secondary-background-color) transparent transparent transparent;
+}

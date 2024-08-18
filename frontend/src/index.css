@@ -69,7 +69,7 @@ body {
 	/* padding: 20rem; */
 	width: 100vw;
 	height: 100vh;
-	z-index: 10000;
+	z-index: 1000;
 }
 
 input[type="checkbox"] {
@@ -210,6 +210,10 @@ span {
 
 strong {
 	font-weight: bold;
+}
+
+u {
+	text-decoration: underline;
 }
 
 input,
