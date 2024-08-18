@@ -111,6 +111,10 @@ const CharacterSheet = () => {
 	const [race, setRace] = useState("");
 	const [subraces, setSubraces] = useState("");
 	const [background, setBackground] = useState("");
+	const [specialBackground, setSpecialBackground] = useState({
+		title: "",
+		description: "",
+	});
 	const [feature, setFeature] = useState({ title: "", description: "" });
 	const [alignment, setAlignment] = useState("");
 	const [ideal, setIdeal] = useState("");
@@ -203,11 +207,28 @@ const CharacterSheet = () => {
 		setRace("");
 		setSubraces("");
 		setBackground("");
+		setSpecialBackground({ title: "", description: "" });
+		setFeature({ title: "", description: "" });
 		setAlignment("");
-		setIdeal("");
-		setBond("");
-		setFlaw("");
-		setPersonalityTraits(["", ""]);
+		if (!isTextIdeal) {
+			setIdeal("");
+		}
+		if (!isTextBond) {
+			setBond("");
+		}
+		if (!isTextFlaw) {
+			setFlaw("");
+		}
+		if (!isTextPersonality[0]) {
+			const newPersonalityTraits = [...personalityTraits];
+			newPersonalityTraits[0] = "";
+			setPersonalityTraits(newPersonalityTraits);
+		}
+		if (!isTextPersonality[1]) {
+			const newPersonalityTraits = [...personalityTraits];
+			newPersonalityTraits[1] = "";
+			setPersonalityTraits(newPersonalityTraits);
+		}
 	};
 
 	const handleNumberChange = (e, setValue, min, max) => {
@@ -301,7 +322,7 @@ const CharacterSheet = () => {
 			};
 
 			const raceAbilityModifiers = raceDesc[
-				e.target.value
+				e.target.value.replaceAll(" ", "_").replaceAll("-", "0")
 			].abilityScoreIncrease.reduce((modifiers, abilityObj) => {
 				const { ability, increase } = abilityObj;
 				if (ability.toLowerCase() in modifiers) {
@@ -369,21 +390,24 @@ const CharacterSheet = () => {
 
 		// Prepare the request payload
 		const payload = {
+			homebrew: isHomebrew,
 			characterFirstName,
 			characterLastName,
 			ideals: ideal,
 			bonds: bond,
 			flaws: flaw,
 			backgrounds: background,
+			specialBackground,
+			feature,
 			primaryClass,
 			subclass,
 			skills: filteredSkills,
 			race,
 			alignment,
 			personalityTraits,
-			age,
-			height,
-			weight,
+			age: Number(age),
+			height: Number(height),
+			weight: Number(weight),
 			sex,
 			skin,
 			hair,
@@ -438,7 +462,7 @@ const CharacterSheet = () => {
 									<SliderSwitch
 										label="Include Homebrew?"
 										tooltipLabel="?"
-										tooltipContent="Including homebrew will give you more options to choose from. However, your GM may not allow homebrew characters in their campaign. If you do not plan to choose homebrew options, do not turn homebrew on, as this will flag your character as a homebrew character."
+										tooltipContent="Including homebrew will give you more options to choose from. However, your GM may not allow homebrew characters in their campaign. If you do not plan to choose homebrew options, do not turn homebrew on. RThis will flag your character as a homebrew character.R"
 										toolTipSpanClassName="tooltip-character-sheet-span"
 										checked={isHomebrew}
 										onChange={toggleHomebrew}
@@ -569,8 +593,8 @@ const CharacterSheet = () => {
 										required
 									>
 										<option value="">Select a Sex</option>
-										{sexArray.map((s) => (
-											<option key={s} value={s}>
+										{sexArray.map((s, index) => (
+											<option key={index} value={s}>
 												{s}
 											</option>
 										))}
@@ -580,7 +604,7 @@ const CharacterSheet = () => {
 							<div className="character-sheet-top-right-container">
 								<div>
 									<label htmlFor="backstory">
-										Backstory (1000 Char Limit):{" "}
+										Backstory (2000 Char Limit):{" "}
 										{!backstory && (
 											<sup className="red-star">*</sup>
 										)}
@@ -591,7 +615,7 @@ const CharacterSheet = () => {
 										onChange={(e) =>
 											setBackstory(e.target.value)
 										}
-										maxLength="1000"
+										maxLength="2000"
 										className="backstory-text-area"
 										required
 									/>
@@ -614,8 +638,8 @@ const CharacterSheet = () => {
 										<option value="">
 											Select a Skin Color
 										</option>
-										{skinArray.map((s) => (
-											<option key={s} value={s}>
+										{skinArray.map((s, index) => (
+											<option key={index} value={s}>
 												{s}
 											</option>
 										))}
@@ -639,8 +663,8 @@ const CharacterSheet = () => {
 										<option value="">
 											Select a Hair Color
 										</option>
-										{hairArray.map((h) => (
-											<option key={h} value={h}>
+										{hairArray.map((h, index) => (
+											<option key={index} value={h}>
 												{h}
 											</option>
 										))}
@@ -664,8 +688,8 @@ const CharacterSheet = () => {
 										<option value="">
 											Select an Eye Color
 										</option>
-										{eyesArray.map((e) => (
-											<option key={e} value={e}>
+										{eyesArray.map((e, index) => (
+											<option key={index} value={e}>
 												{e}
 											</option>
 										))}
@@ -1222,7 +1246,7 @@ const CharacterSheet = () => {
 						</div>
 						<div className="character-sheet-stats">
 							<div>
-								<h3>Character Statistics:</h3>
+								<h3>Ability Modifiers:</h3>
 								<div className="character-sheet-stats-left">
 									<div>
 										<label>Strength Modifier:</label>
@@ -1320,7 +1344,8 @@ const CharacterSheet = () => {
 												? parseInt(
 														classDesc[
 															primaryClass
-														].hitDie.slice(2)
+														].hitDie.slice(2),
+														10
 												  ) +
 												  (isPointBuy
 														? abilityModifier(
@@ -1385,8 +1410,8 @@ const CharacterSheet = () => {
 										required
 									>
 										<option value="">Select a Class</option>
-										{classesArray.map((c) => (
-											<option key={c} value={c}>
+										{classesArray.map((c, index) => (
+											<option key={index} value={c}>
 												{c}
 											</option>
 										))}
@@ -1417,8 +1442,11 @@ const CharacterSheet = () => {
 										</option>
 										{primaryClass &&
 											subclasses[primaryClass]?.map(
-												(sc) => (
-													<option key={sc} value={sc}>
+												(sc, index) => (
+													<option
+														key={index}
+														value={sc}
+													>
 														{sc}
 													</option>
 												)
@@ -1458,9 +1486,9 @@ const CharacterSheet = () => {
 														: `Select a Class`}
 												</option>
 												{availableSkills(index).map(
-													(s) => (
+													(s, index) => (
 														<option
-															key={s}
+															key={index}
 															value={s}
 														>
 															{s}
@@ -1489,8 +1517,8 @@ const CharacterSheet = () => {
 										required
 									>
 										<option value="">Select a Race</option>
-										{raceArray.map((r) => (
-											<option key={r} value={r}>
+										{raceArray.map((r, index) => (
+											<option key={index} value={r}>
 												{r}
 											</option>
 										))}
@@ -1525,9 +1553,9 @@ const CharacterSheet = () => {
 														Select a Subrace
 													</option>
 													{subracesObj[race].map(
-														(sr) => (
+														(sr, index) => (
 															<option
-																key={sr}
+																key={index}
 																value={sr}
 															>
 																{sr}
@@ -1568,6 +1596,10 @@ const CharacterSheet = () => {
 												title: "",
 												description: "",
 											});
+											setSpecialBackground({
+												title: "",
+												description: "",
+											});
 											if (!isTextIdeal) {
 												setIdeal("");
 											}
@@ -1600,9 +1632,9 @@ const CharacterSheet = () => {
 												(b) =>
 													isHomebrew || !b.isHomebrew
 											) // Only include non-homebrew when isHomebrew is false
-											.map((b) => (
+											.map((b, index) => (
 												<option
-													key={b.option}
+													key={index}
 													value={b.option}
 												>
 													{b.option}{" "}
@@ -1610,6 +1642,59 @@ const CharacterSheet = () => {
 														`(Homebrew)`}
 												</option>
 											))}
+									</select>
+								</div>
+								<div>
+									<label htmlFor="specialBackground">
+										<div>Special Backgrounds:</div>
+									</label>
+									<select
+										id="specialBackground"
+										value={specialBackground.description}
+										onChange={(e) => {
+											setSpecialBackground({
+												title: backgroundDesc[
+													background.replaceAll(
+														" ",
+														"_"
+													)
+												].backgroundSpecial.title,
+												description: e.target.value,
+											});
+										}}
+										disabled={!background}
+									>
+										<option value="">
+											{background
+												? backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+												  ].backgroundSpecial.title !==
+												  ""
+													? `Select a Special Background`
+													: `No special background for this background.`
+												: `Select a Background`}
+										</option>
+										{background &&
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											].backgroundSpecial.title !== "" &&
+											backgroundDesc[
+												background.replaceAll(" ", "_")
+											].backgroundSpecial.roll
+												.filter(
+													(s) => s.description !== ""
+												)
+												.map((bs, index) => (
+													<option
+														key={index}
+														value={bs.description}
+													>
+														{bs.description}
+													</option>
+												))}
 									</select>
 								</div>
 								<div>
@@ -1704,10 +1789,10 @@ const CharacterSheet = () => {
 												background.replaceAll(" ", "_")
 											].alterateFeature
 												.filter((e) => e.title !== "")
-												.map((f) => (
+												.map((f, index) => (
 													<option
 														value={f.title}
-														key={f.title}
+														key={index}
 													>
 														ALT: {f.title}
 													</option>
@@ -1744,8 +1829,8 @@ const CharacterSheet = () => {
 										<option value="">
 											Select an Alignment
 										</option>
-										{alignmentArray.map((a) => (
-											<option key={a} value={a}>
+										{alignmentArray.map((a, index) => (
+											<option key={index} value={a}>
 												{a}
 											</option>
 										))}
@@ -1760,7 +1845,7 @@ const CharacterSheet = () => {
 													*
 												</sup>
 											)}
-											<Tooltip content="Your _*ideals*_ are the things that you believe in most strongly, the fundamental moral and ethical principles that compel you to act as you do. Ideals encompass everything from your life goals to your core belief system. Ideals may answer the following questions: What are the principles that you will never betray? What would prompt you to make sacrifices? What drives you to act and guides your goals and ambitions? What is the single most important thing you strive for? (100 char limit)">
+											<Tooltip content="Your _*ideals*_ are the things that you believe in most strongly, the fundamental moral and ethical principles that compel you to act as you do. Ideals encompass everything from your life goals to your core belief system. Ideals may answer the following questions: What are the principles that you will never betray? What would prompt you to make sacrifices? What drives you to act and guides your goals and ambitions? What is the single most important thing you strive for? (500 char limit)">
 												<span className="tooltip-character-sheet-span">
 													?
 												</span>
@@ -1785,7 +1870,7 @@ const CharacterSheet = () => {
 											onChange={(e) =>
 												setIdeal(e.target.value)
 											}
-											maxLength="100"
+											maxLength="500"
 											style={{
 												height: "8rem",
 												width: "100%",
@@ -1831,9 +1916,9 @@ const CharacterSheet = () => {
 															a.alignment ===
 																"Any"
 													)
-													.map((i) => (
+													.map((i, index) => (
 														<option
-															key={i.description}
+															key={index}
 															value={
 																i.description
 															}
@@ -1854,7 +1939,7 @@ const CharacterSheet = () => {
 													*
 												</sup>
 											)}
-											<Tooltip content="_*Bonds*_ represent a character’s connections to people, places, and events in the world. Bonds may answer the following questions: Whom do you care most about? To what place do you feel a special connection? What is your most treasured possession? (100 char limit)">
+											<Tooltip content="_*Bonds*_ represent a character’s connections to people, places, and events in the world. Bonds may answer the following questions: Whom do you care most about? To what place do you feel a special connection? What is your most treasured possession? (500 char limit)">
 												<span className="tooltip-character-sheet-span">
 													?
 												</span>
@@ -1879,7 +1964,7 @@ const CharacterSheet = () => {
 											onChange={(e) =>
 												setBond(e.target.value)
 											}
-											maxLength="100"
+											maxLength="500"
 											style={{
 												height: "8rem",
 												width: "100%",
@@ -1908,9 +1993,9 @@ const CharacterSheet = () => {
 														"_"
 													)
 												].suggestedBond.roll.map(
-													(b) => (
+													(b, index) => (
 														<option
-															key={b.number}
+															key={index}
 															value={
 																b.description
 															}
@@ -1925,13 +2010,13 @@ const CharacterSheet = () => {
 								<div>
 									<label htmlFor="flaw">
 										<div>
-											Flaw:{" "}
+											Flaw:
 											{!flaw && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
-											<Tooltip content="Your character’s _*flaw*_ represents some vice, compulsion, fear, or weakness; in particular, anything that someone else could exploit to bring you to ruin or cause you to act against your best interests. A flaw might answer any of these question: What enrages you? What’s the one person, concept, or event that you are terrified of? What are your vices? (100 char limit)">
+											<Tooltip content="Your character’s _*flaw*_ represents some vice, compulsion, fear, or weakness; in particular, anything that someone else could exploit to bring you to ruin or cause you to act against your best interests. A flaw might answer any of these question: What enrages you? What’s the one person, concept, or event that you are terrified of? What are your vices? (500 char limit)">
 												<span className="tooltip-character-sheet-span">
 													?
 												</span>
@@ -1956,7 +2041,7 @@ const CharacterSheet = () => {
 											onChange={(e) =>
 												setFlaw(e.target.value)
 											}
-											maxLength="100"
+											maxLength="500"
 											style={{
 												height: "8rem",
 												width: "100%",
@@ -1985,9 +2070,9 @@ const CharacterSheet = () => {
 														"_"
 													)
 												].suggestedFlaw.roll.map(
-													(f) => (
+													(f, index) => (
 														<option
-															key={f.number}
+															key={index}
 															value={
 																f.description
 															}
@@ -2008,7 +2093,7 @@ const CharacterSheet = () => {
 													*
 												</sup>
 											)}
-											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (50 char limit each)">
+											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (250 char limit each)">
 												<span className="tooltip-character-sheet-span">
 													?
 												</span>
@@ -2053,7 +2138,7 @@ const CharacterSheet = () => {
 												newTraits[0] = e.target.value;
 												setPersonalityTraits(newTraits);
 											}}
-											maxLength="50"
+											maxLength="250"
 											style={{
 												height: "6rem",
 												width: "100%",
@@ -2094,9 +2179,9 @@ const CharacterSheet = () => {
 															personalityTraits[0] ===
 																pt.description
 													)
-													.map((p) => (
+													.map((p, index) => (
 														<option
-															key={p.description}
+															key={index}
 															value={
 																p.description
 															}
@@ -2116,7 +2201,7 @@ const CharacterSheet = () => {
 													*
 												</sup>
 											)}
-											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (50 char limit each)">
+											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (250 char limit each)">
 												<span className="tooltip-character-sheet-span">
 													?
 												</span>
@@ -2159,7 +2244,7 @@ const CharacterSheet = () => {
 												newTraits[1] = e.target.value;
 												setPersonalityTraits(newTraits);
 											}}
-											maxLength="50"
+											maxLength="250"
 											style={{
 												height: "6rem",
 												width: "100%",
@@ -2200,9 +2285,9 @@ const CharacterSheet = () => {
 															personalityTraits[1] ===
 																pt.description
 													)
-													.map((p) => (
+													.map((p, index) => (
 														<option
-															key={p.description}
+															key={index}
 															value={
 																p.description
 															}
@@ -2826,5 +2911,4 @@ const CharacterSheet = () => {
 
 export default CharacterSheet;
 
-// add special background select and options with conditional render
 // include features, special background, and ability score validation (min 3 and max 21 on character creation)

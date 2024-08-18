@@ -26,12 +26,15 @@ const {
 const createCharacterSheet = asyncHandler(async (req, res) => {
 	const userId = req.user._id.toString();
 	const {
+		homebrew,
 		characterFirstName,
 		characterLastName,
 		ideals,
 		bonds,
 		flaws,
 		backgrounds,
+		specialBackground,
+		feature,
 		primaryClass,
 		subclass,
 		skills,
@@ -70,6 +73,8 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 		!flaws ||
 		!backgrounds ||
 		!primaryClass ||
+		!feature.title ||
+		!feature.description ||
 		!subclass ||
 		!skills ||
 		!race ||
@@ -97,14 +102,17 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 	if (characterFirstName.length > 30 || characterLastName.length > 30) {
 		res.status(StatusCodes.BAD_REQUEST);
 		throw new Error(
-			`The character's names must be less than 30 characters each.`
+			`The character's names must be less than or equal to 30 characters each.`
 		);
 	}
 
-	if (personalityTraits[0].length > 50 || personalityTraits[1].length > 50) {
+	if (
+		personalityTraits[0].length > 250 ||
+		personalityTraits[1].length > 250
+	) {
 		res.status(StatusCodes.BAD_REQUEST);
 		throw new Error(
-			`The character's personaility trait must be less than 50 characters each.`
+			`The character's personaility trait must be less than or equal to 250 characters each.`
 		);
 	}
 
@@ -115,17 +123,48 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 		);
 	}
 
-	if (ideals.length > 100 || bonds.length > 100 || flaws.length > 100) {
+	if (ideals.length > 500 || bonds.length > 500 || flaws.length > 500) {
 		res.status(StatusCodes.BAD_REQUEST);
 		throw new Error(
-			`The character's ideal, bond, and flaw must be less than 100 characters each.`
+			`The character's ideal, bond, and flaw must be less than or equal to 500 characters each.`
 		);
 	}
 
-	if (backstory.length > 1000) {
+	if (specialBackground.title && specialBackground.title.length > 50) {
 		res.status(StatusCodes.BAD_REQUEST);
 		throw new Error(
-			`The character's backstory must be less than 100 characters.`
+			`The character's special background title must be less than or equal to 50 characters.`
+		);
+	}
+
+	if (
+		specialBackground.description &&
+		specialBackground.description.length > 500
+	) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			`The character's special background description must be less than or equal to 500 characters.`
+		);
+	}
+
+	if (feature.title.length > 50) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			`The character's feature title must be less than or equal to 50 characters.`
+		);
+	}
+
+	if (feature.description.length > 500) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			`The character's feature description must be less than or equal to 500 characters.`
+		);
+	}
+
+	if (backstory.length > 2000) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			`The character's backstory must be less than or equal to 100 characters.`
 		);
 	}
 
@@ -142,6 +181,26 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 	if (weight < 50 || weight > 500) {
 		res.status(StatusCodes.BAD_REQUEST);
 		throw new Error(`Your height must be between 50 and 500.`);
+	}
+
+	if (
+		strength < 3 ||
+		strength > 21 ||
+		dexterity < 3 ||
+		dexterity > 21 ||
+		constitution < 3 ||
+		constitution > 21 ||
+		intelligence < 3 ||
+		intelligence > 21 ||
+		wisdom < 3 ||
+		wisdom > 21 ||
+		charisma < 3 ||
+		charisma > 21
+	) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			`One of the ability scores are out of the acceptable range (3-21): \nStrength: ${strength} \nDexterity: ${dexterity} \nConstitution: ${constitution} \nIntelligence: ${intelligence} \nWisdom: ${wisdom} \nCharisma: ${charisma}`
+		);
 	}
 
 	if (!optionBackgrounds.includes(backgrounds)) {
@@ -223,7 +282,7 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 		}
 	}
 
-    // Needed to be added: proficiencyBonus and toolProficiency
+	// Needed to be added: proficiencyBonus and toolProficiency
 
 	// class determinants
 	const savingThrowProficiency = classDefault[primaryClass].savingThrowPro;
@@ -245,12 +304,15 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 	const currentHitPoints = hitPointMax;
 
 	const characterSheet = await CharacterSheet.create({
+		homebrew,
 		characterFirstName,
 		characterLastName,
 		ideals,
 		bonds,
 		flaws,
 		backgrounds,
+		specialBackground,
+		feature,
 		primaryClass,
 		subclass,
 		skills,
@@ -267,21 +329,21 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 		hitPointMax,
 		currentHitPoints,
 		alignment,
-        personalityTraits,
-        languages,
-        speed,
-        transportationCapability,
-        age,
-        height,
-        weight,
-        sex,
-        skin,
-        hair,
-        eyes,
-        armorProficiency,
-        weaponProficiency,
-        backstory,
-        user: user._id,
+		personalityTraits,
+		languages,
+		speed,
+		transportationCapability,
+		age,
+		height,
+		weight,
+		sex,
+		skin,
+		hair,
+		eyes,
+		armorProficiency,
+		weaponProficiency,
+		backstory,
+		user: user._id,
 	});
 	await characterSheet.save();
 	res.status(StatusCodes.CREATED).json({ characterSheet });

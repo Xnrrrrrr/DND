@@ -21,7 +21,7 @@
 
 .character-sheet-container {
 	position: relative;
-	max-width: 800px;
+	min-width: 800px;
 	margin: 10rem auto 2rem;
 	padding: 2rem;
 	border-radius: 1rem;
@@ -211,7 +211,7 @@
 }
 
 .character-sheet-stats-right {
-	width: 291px;
+	width: 325px;
 }
 
 .character-sheet-stats-right div {

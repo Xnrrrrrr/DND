@@ -11,9 +11,9 @@ const backgrounds = [
 	"Alcoholic Scientist", //homebrew
 	"Amnesiac", //homebrew
 	"Anarchist", //homebrew
-	"Ancient_Cultist", //homebrew
-	"Ancient_King", //homebrew
-	"Ancient_One", //homebrew
+	"Ancient Cultist", //homebrew
+	"Ancient King", //homebrew
+	"Ancient One", //homebrew
 	"Anthropologist", //homebrew
 	"Antiquarian", //homebrew
 	"Apothecary", //homebrew
