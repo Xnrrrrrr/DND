@@ -1,0 +1,26 @@
+.info-box-table {
+	width: 95%;
+	border-collapse: collapse;
+	margin: 1rem;
+	background-color: var(--secondary-background-color);
+	border: 2px solid var(--border-color);
+}
+
+.info-box-table th,
+.info-box-table td {
+	border: 1px solid var(--border-color);
+	padding: 1rem;
+	text-align: left;
+}
+
+.info-box-table th {
+	background-color: var(--button-color);
+	color: var(--secondary-background-color);
+	font-size: 1.6rem;
+}
+
+.info-box-table td {
+	background-color: var(--background-color-o);
+	color: var(--base-text-color);
+	font-size: 1.4rem;
+}

@@ -54,22 +54,6 @@ textarea {
 	--option-odd-color: #4b3832;
 	--option-even-color: #544838;
 
-	/* accent colors */
-	--deep-amber: #e07a5f;
-	--deep-amber-hover: #cc6d55;
-	--muted-gold: #c9a66b;
-	--muted-gold-hover: #b8915e;
-	--steel-blue: #3a5a73;
-	--steel-blue-hover: #344f65;
-	--dark-olive: #606c38;
-	--dark-olive-hover: #556132;
-
-	/* background variants */
-	--soft-slate-gray: #6d7b8d;
-	--soft-slate-gray-hover: #5f6b7b;
-	--dusty-rose: #d3aaba;
-	--pale-sage: #d8e2dc;
-
 	background-color: var(--background-color);
 	color: var(--base-text-color);
 }
@@ -222,6 +206,10 @@ li {
 
 span {
 	font-size: 1.4rem;
+}
+
+strong {
+	font-weight: bold;
 }
 
 input,

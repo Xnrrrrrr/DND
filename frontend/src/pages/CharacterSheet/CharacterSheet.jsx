@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header, SliderSwitch, Dice, AdvRollBtn } from "../../components";
+import {
+	Header,
+	SliderSwitch,
+	Dice,
+	AdvRollBtn,
+	InfoTable,
+} from "../../components";
 import {
 	classesArray,
 	classDesc,
@@ -85,6 +91,14 @@ const CharacterSheet = () => {
 	const [charisma, setCharisma] = useState(baseAbilityValue);
 	const [charismaRoll, setCharismaRoll] = useState(0);
 	const [isCharismaRolled, setIsCharismaRolled] = useState(false);
+	const [raceAbilityModifier, setRaceAbilityModifier] = useState({
+		strength: 0,
+		dexterity: 0,
+		constitution: 0,
+		intelligence: 0,
+		wisdom: 0,
+		charisma: 0,
+	});
 	const [disableRolling, setDisableRolling] = useState(false);
 	const [maxAbilityPoints, setMaxAbilityPoints] = useState(27);
 	const [totalAbilityPointsRemaining, setTotalAbilityPointsRemaining] =
@@ -220,16 +234,6 @@ const CharacterSheet = () => {
 		}
 	};
 
-	const toggleAbility = (e) => {
-		setIsPointBuy(e.target.checked);
-		setStrength(isPointBuy ? strengthRoll || 0 : baseAbilityValue);
-		setDexterity(isPointBuy ? 0 : baseAbilityValue);
-		setConstitution(isPointBuy ? 0 : baseAbilityValue);
-		setIntelligence(isPointBuy ? 0 : baseAbilityValue);
-		setWisdom(isPointBuy ? 0 : baseAbilityValue);
-		setCharisma(isPointBuy ? 0 : baseAbilityValue);
-	};
-
 	const handleAbilityBuyChange = (abilitySetter, currentValue, change) => {
 		if (isPointBuy) {
 			const newValue = currentValue + change;
@@ -246,6 +250,10 @@ const CharacterSheet = () => {
 
 			abilitySetter(newValue);
 		}
+	};
+
+	const abilityModifier = (ability) => {
+		return Math.floor((ability - 10) / 2);
 	};
 
 	// const roll4d6DropLowest = (setIsAbilityRolled, setIsAbility) => {
@@ -280,6 +288,37 @@ const CharacterSheet = () => {
 
 	const handleRaceChange = (e) => {
 		setRace(e.target.value);
+
+		if (e.target.value) {
+			const initialModifiers = {
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0,
+			};
+
+			const raceAbilityModifiers = raceDesc[
+				e.target.value
+			].abilityScoreIncrease.reduce((modifiers, abilityObj) => {
+				const { ability, increase } = abilityObj;
+				if (ability.toLowerCase() in modifiers) {
+					modifiers[ability.toLowerCase()] = increase;
+				}
+				return modifiers;
+			}, initialModifiers);
+			setRaceAbilityModifier(raceAbilityModifiers);
+		} else {
+			setRaceAbilityModifier({
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0,
+			});
+		}
 
 		// Reset subraces when a new race is selected
 		setSubraces("");
@@ -318,9 +357,11 @@ const CharacterSheet = () => {
 				!intelligenceRoll ||
 				!wisdomRoll ||
 				!charismaRoll
-			)
+			) {
+				// Make this a toastify msg
 				console.error("You must roll for all of your ability points.");
-			return;
+				return;
+			}
 		}
 
 		const filteredSkills = skills.filter((skill) => skill.trim() !== "");
@@ -355,19 +396,23 @@ const CharacterSheet = () => {
 		}
 
 		if (isPointBuy) {
-			payload.strength = strength;
-			payload.dexterity = dexterity;
-			payload.constitution = constitution;
-			payload.intelligence = intelligence;
-			payload.wisdom = wisdom;
-			payload.charisma = charisma;
+			payload.strength = strength + raceAbilityModifier.strength;
+			payload.dexterity = dexterity + raceAbilityModifier.dexterity;
+			payload.constitution =
+				constitution + raceAbilityModifier.constitution;
+			payload.intelligence =
+				intelligence + raceAbilityModifier.intelligence;
+			payload.wisdom = wisdom + raceAbilityModifier.wisdom;
+			payload.charisma = charisma + raceAbilityModifier.charisma;
 		} else {
-			payload.strength = strengthRoll;
-			payload.dexterity = dexterityRoll;
-			payload.constitution = constitutionRoll;
-			payload.intelligence = intelligenceRoll;
-			payload.wisdom = wisdomRoll;
-			payload.charisma = charismaRoll;
+			payload.strength = strengthRoll + raceAbilityModifier.strength;
+			payload.dexterity = dexterityRoll + raceAbilityModifier.dexterity;
+			payload.constitution =
+				constitutionRoll + raceAbilityModifier.constitution;
+			payload.intelligence =
+				intelligenceRoll + raceAbilityModifier.intelligence;
+			payload.wisdom = wisdomRoll + raceAbilityModifier.wisdom;
+			payload.charisma = charismaRoll + raceAbilityModifier.charisma;
 		}
 
 		try {
@@ -634,7 +679,9 @@ const CharacterSheet = () => {
 										subLabel="2"
 										subLabelAction={handleSubLabelClick}
 										checked={isPointBuy}
-										onChange={toggleAbility}
+										onChange={(e) =>
+											setIsPointBuy(e.target.checked)
+										}
 										id="ability-toggle"
 									/>
 								</div>
@@ -647,7 +694,19 @@ const CharacterSheet = () => {
 							</div>
 							<div className="character-sheet-ability-bottom">
 								<div>
-									<label htmlFor="strength">Strength:</label>
+									<label htmlFor="strength">
+										Strength:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.strength
+												? `+${raceAbilityModifier.strength}`
+												: ``}
+										</span>
+									</label>
 									{isPointBuy ? (
 										<>
 											<button
@@ -723,7 +782,17 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="dexterity">
-										Dexterity:
+										Dexterity:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.dexterity
+												? `+${raceAbilityModifier.dexterity}`
+												: ``}
+										</span>
 									</label>
 									{isPointBuy ? (
 										<>
@@ -800,7 +869,17 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="constitution">
-										Constitution:
+										Constitution:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.constitution
+												? `+${raceAbilityModifier.constitution}`
+												: ``}
+										</span>
 									</label>
 									{isPointBuy ? (
 										<>
@@ -877,7 +956,17 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="intelligence">
-										Intelligence:
+										Intelligence:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.intelligence
+												? `+${raceAbilityModifier.intelligence}`
+												: ``}
+										</span>
 									</label>
 									{isPointBuy ? (
 										<>
@@ -953,7 +1042,19 @@ const CharacterSheet = () => {
 									)}
 								</div>
 								<div>
-									<label htmlFor="wisdom">Wisdom:</label>
+									<label htmlFor="wisdom">
+										Wisdom:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.wisdom
+												? `+${raceAbilityModifier.wisdom}`
+												: ``}
+										</span>
+									</label>
 									{isPointBuy ? (
 										<>
 											<button
@@ -1028,7 +1129,19 @@ const CharacterSheet = () => {
 									)}
 								</div>
 								<div>
-									<label htmlFor="charisma">Charisma:</label>
+									<label htmlFor="charisma">
+										Charisma:{" "}
+										<span
+											style={{
+												color: "green",
+												fontSize: "0.9rem",
+											}}
+										>
+											{raceAbilityModifier.charisma
+												? `+${raceAbilityModifier.charisma}`
+												: ``}
+										</span>
+									</label>
 									{isPointBuy ? (
 										<>
 											<button
@@ -1104,15 +1217,163 @@ const CharacterSheet = () => {
 								</div>
 							</div>
 						</div>
-						<div>Ability Modifiers...</div>
+						<div className="character-sheet-stats">
+							<div>
+								<h3>Character Statistics:</h3>
+								<div className="character-sheet-stats-left">
+									<div>
+										<label>Strength Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														strength +
+															raceAbilityModifier.strength
+												  )
+												: abilityModifier(
+														strengthRoll +
+															raceAbilityModifier.strength
+												  )}
+										</p>
+									</div>
+									<div>
+										<label>Dexterity Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														dexterity +
+															raceAbilityModifier.dexterity
+												  )
+												: abilityModifier(
+														dexterityRoll +
+															raceAbilityModifier.dexterity
+												  )}
+										</p>
+									</div>
+									<div>
+										<label>Constitution Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														constitution +
+															raceAbilityModifier.constitution
+												  )
+												: abilityModifier(
+														constitutionRoll +
+															raceAbilityModifier.constitution
+												  )}
+										</p>
+									</div>
+									<div>
+										<label>Intelligence Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														intelligence +
+															raceAbilityModifier.intelligence
+												  )
+												: abilityModifier(
+														intelligenceRoll +
+															raceAbilityModifier.intelligence
+												  )}
+										</p>
+									</div>
+									<div>
+										<label>Wisdom Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														wisdom +
+															raceAbilityModifier.wisdom
+												  )
+												: abilityModifier(
+														wisdomRoll +
+															raceAbilityModifier.wisdom
+												  )}
+										</p>
+									</div>
+									<div>
+										<label>Charisma Modifier:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														charisma +
+															raceAbilityModifier.charisma
+												  )
+												: abilityModifier(
+														charismaRoll +
+															raceAbilityModifier.charisma
+												  )}
+										</p>
+									</div>
+								</div>
+							</div>
+							<div>
+								<h3>Additional Stats:</h3>
+								<div className="character-sheet-stats-right">
+									<div>
+										<label>Health at Level 1:</label>
+										<p>
+											{primaryClass
+												? parseInt(
+														classDesc[
+															primaryClass
+														].hitDie.slice(2)
+												  ) +
+												  (isPointBuy
+														? abilityModifier(
+																constitution +
+																	raceAbilityModifier.constitution
+														  )
+														: abilityModifier(
+																constitutionRoll +
+																	raceAbilityModifier.constitution
+														  ))
+												: `Select a Class`}
+										</p>
+									</div>
+									<div>
+										<label>Unarmored Armor Class:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														dexterity +
+															raceAbilityModifier.dexterity
+												  ) + 10
+												: abilityModifier(
+														dexterityRoll +
+															raceAbilityModifier.dexterity
+												  ) + 10}
+										</p>
+									</div>
+									<div>
+										<label>Initiative Bonus:</label>
+										<p>
+											{isPointBuy
+												? abilityModifier(
+														dexterity +
+															raceAbilityModifier.dexterity
+												  )
+												: abilityModifier(
+														dexterityRoll +
+															raceAbilityModifier.dexterity
+												  )}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div className="character-sheet-bottom">
 							<div className="character-sheet-bottom-left">
 								<div>
 									<label htmlFor="primaryClass">
-										Classes:{" "}
-										{!primaryClass && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Classes:{" "}
+											{!primaryClass && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="primaryClass"
@@ -1130,10 +1391,14 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="subclass">
-										Subclasses:{" "}
-										{!subclass && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Subclasses:{" "}
+											{!subclass && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="subclass"
@@ -1163,12 +1428,14 @@ const CharacterSheet = () => {
 											<label
 												htmlFor={`skill${index + 1}`}
 											>
-												Skill {index + 1}:{" "}
-												{!skills[index] && (
-													<sup className="red-star">
-														*
-													</sup>
-												)}
+												<div>
+													Skill {index + 1}:{" "}
+													{!skills[index] && (
+														<sup className="red-star">
+															*
+														</sup>
+													)}
+												</div>
 											</label>
 											<select
 												id={`skill${index + 1}`}
@@ -1203,10 +1470,14 @@ const CharacterSheet = () => {
 								)}
 								<div>
 									<label htmlFor="race">
-										Races:{" "}
-										{!race && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Races:{" "}
+											{!race && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="race"
@@ -1224,10 +1495,14 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="subraces">
-										Subraces:{" "}
-										{subracesObj[race] && !subraces && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Subraces:{" "}
+											{subracesObj[race] && !subraces && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="subraces"
@@ -1272,16 +1547,24 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="background">
-										Backgrounds:{" "}
-										{!background && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Backgrounds:{" "}
+											{!background && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="background"
 										value={background}
 										onChange={(e) => {
 											setBackground(e.target.value); // Need a function
+											setFeature({
+												title: "",
+												description: "",
+											});
 											if (!isTextIdeal) {
 												setIdeal("");
 											}
@@ -1328,10 +1611,14 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="feature">
-										Feature(s):
-										{!feature.description && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Feature(s):
+											{!feature.description && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										value={feature.title}
@@ -1434,10 +1721,14 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="alignment">
-										Alignments:{" "}
-										{!alignment && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Alignments:{" "}
+											{!alignment && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 									</label>
 									<select
 										id="alignment"
@@ -1459,21 +1750,25 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="ideal">
-										Ideal:{" "}
-										<sub
-											style={{
-												verticalAlign: "sub",
-												fontSize: "0.8rem",
-												cursor: "pointer",
-												color: "#edf2f4",
-											}}
-											onClick={handleSubLabelClick}
-										>
-											3
-										</sub>{" "}
-										{!ideal && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Ideal:{" "}
+											<sub
+												style={{
+													verticalAlign: "sub",
+													fontSize: "0.8rem",
+													cursor: "pointer",
+													color: "#edf2f4",
+												}}
+												onClick={handleSubLabelClick}
+											>
+												3
+											</sub>{" "}
+											{!ideal && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 										<button
 											type="button"
 											onClick={(e) => {
@@ -1555,21 +1850,25 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="bond">
-										Bond:{" "}
-										<sub
-											style={{
-												verticalAlign: "sub",
-												fontSize: "0.8rem",
-												cursor: "pointer",
-												color: "#edf2f4",
-											}}
-											onClick={handleSubLabelClick}
-										>
-											4
-										</sub>{" "}
-										{!bond && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Bond:{" "}
+											<sub
+												style={{
+													verticalAlign: "sub",
+													fontSize: "0.8rem",
+													cursor: "pointer",
+													color: "#edf2f4",
+												}}
+												onClick={handleSubLabelClick}
+											>
+												4
+											</sub>{" "}
+											{!bond && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 										<button
 											type="button"
 											onClick={(e) => {
@@ -1634,21 +1933,25 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="flaw">
-										Flaw:{" "}
-										<sub
-											style={{
-												verticalAlign: "sub",
-												fontSize: "0.8rem",
-												cursor: "pointer",
-												color: "#edf2f4",
-											}}
-											onClick={handleSubLabelClick}
-										>
-											5
-										</sub>{" "}
-										{!flaw && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Flaw:{" "}
+											<sub
+												style={{
+													verticalAlign: "sub",
+													fontSize: "0.8rem",
+													cursor: "pointer",
+													color: "#edf2f4",
+												}}
+												onClick={handleSubLabelClick}
+											>
+												5
+											</sub>{" "}
+											{!flaw && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 										<button
 											type="button"
 											onClick={(e) => {
@@ -1713,21 +2016,25 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="personalityTraitOne">
-										First Personality Trait:{" "}
-										<sub
-											style={{
-												verticalAlign: "sub",
-												fontSize: "0.8rem",
-												cursor: "pointer",
-												color: "#edf2f4",
-											}}
-											onClick={handleSubLabelClick}
-										>
-											6
-										</sub>{" "}
-										{!personalityTraits[0] && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											First Personality Trait:{" "}
+											<sub
+												style={{
+													verticalAlign: "sub",
+													fontSize: "0.8rem",
+													cursor: "pointer",
+													color: "#edf2f4",
+												}}
+												onClick={handleSubLabelClick}
+											>
+												6
+											</sub>{" "}
+											{!personalityTraits[0] && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 										<button
 											type="button"
 											onClick={(e) => {
@@ -1741,9 +2048,13 @@ const CharacterSheet = () => {
 												setIsTextPersonality(
 													newIsTextPersonality
 												);
+
+												const newPersonalityTraits = [
+													...personalityTraits,
+												];
+												newPersonalityTraits[0] = "";
 												setPersonalityTraits(
-													([...personalityTraits][0] =
-														"")
+													newPersonalityTraits
 												);
 											}}
 										>
@@ -1819,21 +2130,25 @@ const CharacterSheet = () => {
 								</div>
 								<div>
 									<label htmlFor="personalityTraitTwo">
-										Sec. Personality Trait:{" "}
-										<sub
-											style={{
-												verticalAlign: "sub",
-												fontSize: "0.8rem",
-												cursor: "pointer",
-												color: "#edf2f4",
-											}}
-											onClick={handleSubLabelClick}
-										>
-											6
-										</sub>{" "}
-										{!personalityTraits[1] && (
-											<sup className="red-star">*</sup>
-										)}
+										<div>
+											Sec. Personality Trait:{" "}
+											<sub
+												style={{
+													verticalAlign: "sub",
+													fontSize: "0.8rem",
+													cursor: "pointer",
+													color: "#edf2f4",
+												}}
+												onClick={handleSubLabelClick}
+											>
+												6
+											</sub>{" "}
+											{!personalityTraits[1] && (
+												<sup className="red-star">
+													*
+												</sup>
+											)}
+										</div>
 										<button
 											type="button"
 											onClick={(e) => {
@@ -1845,9 +2160,13 @@ const CharacterSheet = () => {
 												setIsTextPersonality(
 													newIsTextPersonality
 												);
+
+												const newPersonalityTraits = [
+													...personalityTraits,
+												];
+												newPersonalityTraits[1] = "";
 												setPersonalityTraits(
-													([...personalityTraits][1] =
-														"")
+													newPersonalityTraits
 												);
 											}}
 										>
@@ -1936,7 +2255,7 @@ const CharacterSheet = () => {
 										/>
 									)}
 								</div>
-								<div className="character-sheet-bottom-right">
+								<div className="character-sheet-info-box">
 									<h3>Class</h3>
 									{primaryClass ? (
 										<>
@@ -2152,22 +2471,27 @@ const CharacterSheet = () => {
 													].speed
 												}
 											</p>
-											<p>
-												- Additional Ability Scores:{" "}
-												{
-													raceDesc[
-														race
-															.replaceAll(
-																"-",
-																"0"
-															)
-															.replaceAll(
-																" ",
-																"_"
-															)
-													].abilityScoreIncrease
-												}
-											</p>
+											<p>- Additional Ability Scores:</p>
+											{raceDesc[
+												race
+													.replaceAll(" ", "_")
+													.replaceAll("-", "0")
+											].abilityScoreIncrease.map(
+												(a, index) => (
+													<React.Fragment key={index}>
+														<p
+															style={{
+																paddingLeft:
+																	"2rem",
+															}}
+														>
+															- Ability:{" "}
+															{a.ability} +
+															{a.increase}
+														</p>
+													</React.Fragment>
+												)
+											)}
 											<p>
 												- Spoken Languages:{" "}
 												{
@@ -2240,8 +2564,229 @@ const CharacterSheet = () => {
 													].description
 												}
 											</p>
-											<p></p>
-											{/* Add others here when done */}
+											<p>
+												- Starting Equipment:{" "}
+												{
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].startingEquipment
+												}
+											</p>
+											<p>
+												- Tool Proficiencies:{" "}
+												{
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].toolProficiencies
+												}
+											</p>
+											<p>
+												- Languages:{" "}
+												{
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].languages
+												}
+											</p>
+											<p>- Feature:</p>
+											<p style={{ paddingLeft: "2rem" }}>
+												- Title:{" "}
+												{
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].feature.title
+												}
+											</p>
+											<p style={{ paddingLeft: "4rem" }}>
+												- Description:{" "}
+												{
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].feature.description
+												}
+											</p>
+											{backgroundDesc[
+												background.replaceAll(" ", "_")
+											].alterateFeature[0].title !==
+												"" && (
+												<>
+													<p>- ALT Feature:</p>
+													{backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].alterateFeature
+														.filter(
+															(a) =>
+																a.title !== ""
+														)
+														.map((f, index) => (
+															<React.Fragment
+																key={index}
+															>
+																<p
+																	style={{
+																		paddingLeft:
+																			"2rem",
+																	}}
+																>
+																	- Title:{" "}
+																	{f.title}
+																</p>
+																<p
+																	style={{
+																		paddingLeft:
+																			"4rem",
+																	}}
+																>
+																	{
+																		f.description
+																	}
+																</p>
+															</React.Fragment>
+														))}
+												</>
+											)}
+											{backgroundDesc[
+												background.replaceAll(" ", "_")
+											].backgroundSpecial.title ? (
+												<InfoTable
+													title={
+														backgroundDesc[
+															background.replaceAll(
+																" ",
+																"_"
+															)
+														].backgroundSpecial
+															.title
+													}
+													description={
+														backgroundDesc[
+															background.replaceAll(
+																" ",
+																"_"
+															)
+														].backgroundSpecial
+															.description
+													}
+													die={
+														backgroundDesc[
+															background.replaceAll(
+																" ",
+																"_"
+															)
+														].backgroundSpecial.die
+													}
+													roll={
+														backgroundDesc[
+															background.replaceAll(
+																" ",
+																"_"
+															)
+														].backgroundSpecial.roll
+													}
+													specialType="special"
+												/>
+											) : (
+												<p>
+													- This background does not
+													have a special background.
+												</p>
+											)}
+											<InfoTable
+												die={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedIdeal.die
+												}
+												roll={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedIdeal.roll
+												}
+												specialType="ideal"
+											/>
+											<InfoTable
+												die={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedBond.die
+												}
+												roll={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedBond.roll
+												}
+												specialType="bond"
+											/>
+											<InfoTable
+												die={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedFlaw.die
+												}
+												roll={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedFlaw.roll
+												}
+												specialType="flaw"
+											/>
+											<InfoTable
+												die={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedPersonalityTraits
+														.die
+												}
+												roll={
+													backgroundDesc[
+														background.replaceAll(
+															" ",
+															"_"
+														)
+													].suggestedPersonalityTraits
+														.roll
+												}
+												specialType="personality"
+											/>
 										</>
 									) : (
 										<p>
@@ -2310,7 +2855,9 @@ const CharacterSheet = () => {
 							</p>
 							<p>
 								2. You have the choice to roll for your ability
-								points if you please. Be aware
+								points if you would like. There is no penality
+								for rolling. You will roll a 4d6dl1 (the lowest
+								die will get dropped) for each ability.
 							</p>
 							<p>
 								3. Your ideals are the things that you believe
@@ -2370,3 +2917,7 @@ const CharacterSheet = () => {
 };
 
 export default CharacterSheet;
+
+// Add on hover for some labels
+// add special background select and options with conditional render
+// include features, special background, and ability score validation (min 3 and max 21 on character creation)

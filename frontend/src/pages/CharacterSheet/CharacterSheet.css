@@ -127,7 +127,7 @@
 	background-color: var(--secondary-background-color);
 	border-radius: 15%;
 	margin-top: 1rem;
-	padding: 1rem;
+	padding: 1rem 0.5rem;
 	text-align: center;
 }
 
@@ -144,11 +144,10 @@
 	padding: 0.45rem 0.9rem;
 	border-radius: 0.3rem;
 	font-size: 1rem;
-	transition: all 0.5s ease;
 }
 .character-sheet-ability-bottom div button:disabled {
-    cursor: not-allowed;
-    opacity: 0.45;
+	cursor: not-allowed;
+	opacity: 0.45;
 }
 
 .character-sheet-ability-bottom div button:nth-child(4) {
@@ -158,6 +157,67 @@
 .character-sheet-ability-bottom div button:nth-child(2) {
 	margin-right: 0.5rem;
 }
+
+.character-sheet-stats {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: var(--secondary-background-color);
+	padding: 1rem;
+	border: 2px solid var(--border-color);
+	border-radius: 1rem;
+	margin-top: 1rem;
+}
+
+.character-sheet-stats h3 {
+	text-align: center;
+	margin-bottom: 1rem;
+	color: var(--button-color);
+}
+
+.character-sheet-stats-left {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 400px;
+	gap: 1rem;
+}
+
+.character-sheet-stats-left div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--background-color-o);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--border-color);
+}
+
+.character-sheet-stats-left div label,
+.character-sheet-stats-right div label {
+	color: var(--base-text-color);
+}
+
+.character-sheet-stats-left div p,
+.character-sheet-stats-right div p {
+	font-weight: bold;
+	color: var(--button-color);
+}
+
+.character-sheet-stats-right {
+	width: 326px;
+}
+
+.character-sheet-stats-right div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--background-color-o);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--border-color);
+	margin-bottom: 1rem;
+}
+
 /* End Middle */
 
 /* Start Bottom */
@@ -170,25 +230,28 @@
 	width: 27.5rem;
 }
 
+.character-sheet-bottom-left div label {
+	display: flex;
+	justify-content: space-between;
+}
+
 .character-sheet-bottom-left div label button {
 	color: var(--base-text-color);
 	padding: 0.1rem 0.5rem;
-	margin-left: 1rem;
 }
 
-/* Above character-sheet-bottom-right */
 .character-sheet-image-container {
 	height: 27.5rem;
 	width: 27.5rem;
 
 	margin: auto;
 	margin-top: 1rem;
-	border-radius: 50%; /* Makes the container circular */
+	border-radius: 50%;
 	/* border: 0.6rem solid var(--secondary-background-color); */
 	padding: 1rem;
 
-	overflow: hidden; /* Ensures any overflow from image is hidden */
-	box-shadow: 10px 10px 10px 6px var(--tint-overlay); /* Adds a subtle shadow to the frame */
+	overflow: hidden;
+	box-shadow: 10px 10px 10px 6px var(--tint-overlay);
 
 	background-image: url("../../assets/classes/parchment.jpg");
 	background-size: cover;
@@ -203,7 +266,7 @@
 	border-radius: 50%;
 }
 
-.character-sheet-bottom-right {
+.character-sheet-info-box {
 	margin-top: 1rem;
 	width: 45rem;
 	height: 52rem;
@@ -214,7 +277,7 @@
 	background-color: var(--secondary-background-color);
 }
 
-.character-sheet-bottom-right h3 {
+.character-sheet-info-box h3 {
 	text-align: center;
 	border-bottom: 4px solid var(--border-color);
 	font-weight: bolder;
