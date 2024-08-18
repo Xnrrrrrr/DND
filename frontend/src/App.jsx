@@ -8,6 +8,7 @@ import "./index.css";
 import './components/Header/Header.css';
 import './components/SliderSwitch/SliderSwitch.css';
 import './components/InfoTable/InfoTable.css';
+import './components/Tooltip/Tooltip.css';
 
 // Pages CSS
 import './pages/Landing/Landing.css';

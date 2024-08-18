@@ -212,6 +212,10 @@ strong {
 	font-weight: bold;
 }
 
+u {
+	text-decoration: underline;
+}
+
 input,
 select,
 textarea {

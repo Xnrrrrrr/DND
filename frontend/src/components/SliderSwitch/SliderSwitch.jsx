@@ -1,7 +1,10 @@
+import { Tooltip } from "../../components";
+
 const SliderSwitch = ({
 	label,
-	subLabel,
-	subLabelAction,
+	tooltipLabel,
+	tooltipContent,
+	toolTipSpanClassName,
 	checked,
 	onChange,
 	id,
@@ -10,18 +13,12 @@ const SliderSwitch = ({
 		<>
 			<label htmlFor={id} className="toggle-label">
 				{label}{" "}
-				{subLabel && (
-					<sub
-						style={{
-							verticalAlign: "sub",
-							fontSize: "0.8rem",
-							cursor: "pointer",
-							color: "#edf2f4",
-						}}
-						onClick={subLabelAction}
-					>
-						{subLabel}
-					</sub>
+				{tooltipLabel && (
+					<Tooltip content={tooltipContent}>
+						<span className={toolTipSpanClassName}>
+							{tooltipLabel}
+						</span>
+					</Tooltip>
 				)}
 			</label>
 			<label className="switch">

@@ -6,6 +6,7 @@ import {
 	Dice,
 	AdvRollBtn,
 	InfoTable,
+	Tooltip,
 } from "../../components";
 import {
 	classesArray,
@@ -436,8 +437,9 @@ const CharacterSheet = () => {
 								<div>
 									<SliderSwitch
 										label="Include Homebrew?"
-										subLabel="1"
-										subLabelAction={handleSubLabelClick}
+										tooltipLabel="?"
+										tooltipContent="Including homebrew will give you more options to choose from. However, your GM may not allow homebrew characters in their campaign. If you do not plan to choose homebrew options, do not turn homebrew on, as this will flag your character as a homebrew character."
+										toolTipSpanClassName="tooltip-character-sheet-span"
 										checked={isHomebrew}
 										onChange={toggleHomebrew}
 										id="homebrew-toggle"
@@ -676,8 +678,9 @@ const CharacterSheet = () => {
 								<div>
 									<SliderSwitch
 										label="Purchase Ability Score?"
-										subLabel="2"
-										subLabelAction={handleSubLabelClick}
+										tooltipLabel="?"
+										tooltipContent="You have the choice to roll for your ability points if you would like. There is no penality for rolling. You will roll a 4d6dl1 (the lowest die will get dropped) for each ability."
+										toolTipSpanClassName="tooltip-character-sheet-span"
 										checked={isPointBuy}
 										onChange={(e) =>
 											setIsPointBuy(e.target.checked)
@@ -1751,23 +1754,17 @@ const CharacterSheet = () => {
 								<div>
 									<label htmlFor="ideal">
 										<div>
-											Ideal:{" "}
-											<sub
-												style={{
-													verticalAlign: "sub",
-													fontSize: "0.8rem",
-													cursor: "pointer",
-													color: "#edf2f4",
-												}}
-												onClick={handleSubLabelClick}
-											>
-												3
-											</sub>{" "}
+											Ideal:
 											{!ideal && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
+											<Tooltip content="Your _*ideals*_ are the things that you believe in most strongly, the fundamental moral and ethical principles that compel you to act as you do. Ideals encompass everything from your life goals to your core belief system. Ideals may answer the following questions: What are the principles that you will never betray? What would prompt you to make sacrifices? What drives you to act and guides your goals and ambitions? What is the single most important thing you strive for? (100 char limit)">
+												<span className="tooltip-character-sheet-span">
+													?
+												</span>
+											</Tooltip>
 										</div>
 										<button
 											type="button"
@@ -1851,23 +1848,17 @@ const CharacterSheet = () => {
 								<div>
 									<label htmlFor="bond">
 										<div>
-											Bond:{" "}
-											<sub
-												style={{
-													verticalAlign: "sub",
-													fontSize: "0.8rem",
-													cursor: "pointer",
-													color: "#edf2f4",
-												}}
-												onClick={handleSubLabelClick}
-											>
-												4
-											</sub>{" "}
+											Bond:
 											{!bond && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
+											<Tooltip content="_*Bonds*_ represent a character’s connections to people, places, and events in the world. Bonds may answer the following questions: Whom do you care most about? To what place do you feel a special connection? What is your most treasured possession? (100 char limit)">
+												<span className="tooltip-character-sheet-span">
+													?
+												</span>
+											</Tooltip>
 										</div>
 										<button
 											type="button"
@@ -1935,22 +1926,16 @@ const CharacterSheet = () => {
 									<label htmlFor="flaw">
 										<div>
 											Flaw:{" "}
-											<sub
-												style={{
-													verticalAlign: "sub",
-													fontSize: "0.8rem",
-													cursor: "pointer",
-													color: "#edf2f4",
-												}}
-												onClick={handleSubLabelClick}
-											>
-												5
-											</sub>{" "}
 											{!flaw && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
+											<Tooltip content="Your character’s _*flaw*_ represents some vice, compulsion, fear, or weakness; in particular, anything that someone else could exploit to bring you to ruin or cause you to act against your best interests. A flaw might answer any of these question: What enrages you? What’s the one person, concept, or event that you are terrified of? What are your vices? (100 char limit)">
+												<span className="tooltip-character-sheet-span">
+													?
+												</span>
+											</Tooltip>
 										</div>
 										<button
 											type="button"
@@ -2017,23 +2002,17 @@ const CharacterSheet = () => {
 								<div>
 									<label htmlFor="personalityTraitOne">
 										<div>
-											First Personality Trait:{" "}
-											<sub
-												style={{
-													verticalAlign: "sub",
-													fontSize: "0.8rem",
-													cursor: "pointer",
-													color: "#edf2f4",
-												}}
-												onClick={handleSubLabelClick}
-											>
-												6
-											</sub>{" "}
+											First Personality Trait:
 											{!personalityTraits[0] && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
+											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (50 char limit each)">
+												<span className="tooltip-character-sheet-span">
+													?
+												</span>
+											</Tooltip>
 										</div>
 										<button
 											type="button"
@@ -2131,23 +2110,17 @@ const CharacterSheet = () => {
 								<div>
 									<label htmlFor="personalityTraitTwo">
 										<div>
-											Sec. Personality Trait:{" "}
-											<sub
-												style={{
-													verticalAlign: "sub",
-													fontSize: "0.8rem",
-													cursor: "pointer",
-													color: "#edf2f4",
-												}}
-												onClick={handleSubLabelClick}
-											>
-												6
-											</sub>{" "}
+											Second Personality Trait:
 											{!personalityTraits[1] && (
 												<sup className="red-star">
 													*
 												</sup>
 											)}
+											<Tooltip content="_*Personality traits*_ are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self descriptions that are specific about what makes your character stand out. “I’m smart” is not a good trait, because it describes a lot of characters. “I’ve read every book in Candlekeep” tells you something specific about your character’s interests and disposition. Personality traits might describe the things your character likes, his or her past accomplishments, things your character dislikes or fears, your character’s selfattitude or mannerisms, or the influence of his or her ability scores. (50 char limit each)">
+												<span className="tooltip-character-sheet-span">
+													?
+												</span>
+											</Tooltip>
 										</div>
 										<button
 											type="button"
@@ -2844,71 +2817,6 @@ const CharacterSheet = () => {
 								`Save Character`
 							)}
 						</button>
-						<div className="character-sheet-footer">
-							<p>
-								1. Including homebrew will give you more options
-								to choose from. However, your GM may not allow
-								homebrew characters in their campaign. If you do
-								not plan to choose homebrew options, do not turn
-								homebrew on, as this will flag your character as
-								a homebrew character.
-							</p>
-							<p>
-								2. You have the choice to roll for your ability
-								points if you would like. There is no penality
-								for rolling. You will roll a 4d6dl1 (the lowest
-								die will get dropped) for each ability.
-							</p>
-							<p>
-								3. Your ideals are the things that you believe
-								in most strongly, the fundamental moral and
-								ethical principles that com pel you to act as
-								you do. Ideals encompass everything from your
-								life goals to your core belief system. Ideals
-								may answer the following questions: What are the
-								principles that you will never betray? What
-								would prompt you to make sacrifices? What drives
-								you to act and guides your goals and ambitions?
-								What is the single most important thing you
-								strive for? (100 char limit)
-							</p>
-							<p>
-								4. Bonds represent a character’s connections to
-								people, places, and events in the world. Bonds
-								may answer the following questions: Whom do you
-								care most about? To what place do you feel a
-								special connection? What is your most treasured
-								possession? (100 char limit)
-							</p>
-							<p>
-								5. Your character’s flaw represents some vice,
-								compulsion, fear, or weakness; in particular,
-								anything that someone else could exploit to
-								bring you to ruin or cause you to act against
-								your best interests. A flaw might answer any of
-								these question: What enrages you? What’s the one
-								person, concept, or event that you are terrified
-								of? What are your vices? (100 char limit)
-							</p>
-							<p>
-								6. Personality traits are small, simple ways to
-								help you set your character apart from every
-								other character. Your personality traits should
-								tell you something interesting and fun about
-								your character. They should be self descriptions
-								that are specific about what makes your
-								character stand out. “I’m smart” is not a good
-								trait, because it describes a lot of characters.
-								“I’ve read every book in Candlekeep” tells you
-								something specific about your character’s
-								interests and disposition. Personality traits
-								might describe the things your character likes,
-								his or her past accomplishments, things your
-								character dislikes or fears, your character’s
-								selfattitude or mannerisms, or the influence of
-								his or her ability scores. (50 char limit each)
-							</p>
-						</div>
 					</form>
 				</div>
 			</div>
@@ -2918,6 +2826,5 @@ const CharacterSheet = () => {
 
 export default CharacterSheet;
 
-// Add on hover for some labels
 // add special background select and options with conditional render
 // include features, special background, and ability score validation (min 3 and max 21 on character creation)
