@@ -10292,11 +10292,11 @@ export const backgroundDesc = {
 				},
 				{
 					number: 7,
-					description: "I am vigilant and never let my guard down.",
+					description: "II may be a stick in the mud while I am sober, but I am wilder than an owlbear when I am intoxicated.",
 				},
 				{
 					number: 8,
-					description: "I have a deep sense of loyalty to those I protect.",
+					description: "I form attachments to those I care about, and often find myself going above and beyond to make them happy.",
 				},
 			],
 		},
@@ -10306,15 +10306,15 @@ export const backgroundDesc = {
 		},
 		alterateFeature: [
 			{
-				title: "Alternate Guardian",
-				description: "You may choose to grant your protected ally advantage on a saving throw, using your own Wisdom modifier. You may use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+				title: "",
+				description: "",
 			},
 			{
-				title: "Shield of Faith",
-				description: "You can cast the Shield of Faith spell on a creature you are protecting without expending a spell slot. You can use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+				title: "",
+				description: "",
 			},
 		],
-		suggestedCharacteristics: "",
+		suggestedCharacteristics: "There are many reasons as to why you may be guarding someone. It could be that you and your family are in the service of a powerful individual, or that you owe a friend a life debt after they rescued you from some perilous encounter. You may be friends with the ones you protect: You may not. But in any case, your loyalties are unwavering, and your courage speaks for itself.",
 		suggestedPersonalityTraits: {
 			description: "",
 			die: "d8",
@@ -10459,8 +10459,7 @@ export const backgroundDesc = {
 				},
 			],
 		},
-	}
-	
+	},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
