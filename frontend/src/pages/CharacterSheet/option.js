@@ -3850,6 +3850,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Butler", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -10934,6 +10938,215 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Contract or not, I never bring murder bounties back alive. They showed no mercy, and so neither will I.`,
+				},
+			],
+		},
+	},
+	Butler: {
+		isHomebrew: true,
+		description: `As a servant to a noble or a high ranking family, you spent your time as their faithful retainer. Your daily chores might have included laundry, helping others dress, cooking, taking care of animals, gardening, mending worn out clothes, cleaning, playing with kids as a babysitter, shopping, and other tasks given by your master. The people you served under became your family, something very close to you. Your own family might be deceased, or you might be a part of a servant ancestry with a long tradition of working under your master's family.
+					Your life might not have been eventful, or interesting, but that will change soon. Right now you are called somewhere else, towards adventure. When picking this background, ask yourself why you decided to take a detour from a simple life you led so far? Perhaps you were forced to by something? What were the circumstances of you becoming a butler? How much do you know about your biological family? Is service to your master the only way to satisfy you in your life? Were you always diligent in your work? Perhaps you were always planning on leaving your master behind along with your profession?`,
+		skillProficiencies: `Investigation and Perception`,
+		toolProficiencies: `Cook’s utensils,Brewer’s supplies`,
+		languages: `You can optionally pick two additional languages from Dwarvish, Elvish, Gnomish or Halfling. It must be the same languages your master is able to speak.`,
+		startingEquipment: `A fine butler's suit (equivalent to Fine Clothes), a signet ring given to the servants of the family you worked for and a pouch containing 10 gp.`,
+		backgroundSpecial: {
+			title: `Relation with Master`,
+			description: `What was your relationship with your master from when you were a butler?`,
+			die: `1d8`,
+			roll: [
+				{
+					number: 1,
+					description: `I was always happy to see master's face, and I always tried to ease their mood.`,
+				},
+				{
+					number: 2,
+					description: `My master was a good person, albeit greedy. I never had the money or time to spend it on the things I wanted.`,
+				},
+				{
+					number: 3,
+					description: `My master treated me as nothing more than their servant. As long as I was doing my job properly I never got scolded.`,
+				},
+				{
+					number: 4,
+					description: `My master always taught me things so that I could help my master and their descendants.`,
+				},
+				{
+					number: 5,
+					description: `According to my master, I never understood my position. Many times I suffered physical abuse, after which I sometimes plotted to murder them`,
+				},
+				{
+					number: 6,
+					description: `I secretly fell in love with my master, but I never confessed my feeling towards them.`,
+				},
+				{
+					number: 7,
+					description: `My master always tried their best at prohibiting me from social interactions. I had to cleverly lie about my relations with others.`,
+				},
+				{
+					number: 8,
+					description: `I want to become just like my master. I openly idolize them even if my master never acknowledged that.`,
+				},
+			],
+		},
+		feature: {
+			title: `Butler's Profession`,
+			description: `As a long servant to your family, noble or high ranking people will recognize your origin. They might be willing to listen to you, if your family had any connections with them, but they also might be reluctant to trust you. As a servant to your family, whenever former or present, you are still seen through their reputation.
+						Additionally, your expertise and heritage is useful in the eyes of your potential employers. You should be able to find a job that involves your profession easier.`,
+		},
+		alterateFeature: [
+			{
+				title: `Talented Butler`,
+				description: `Due to the many years of servitude to your master, you have learned how to perform tasks that a servant could do, such as fetching things, cleaning, Mending, folding clothes, lighting fires, serving food, and pouring wine. Because of this it takes you half the time to learn Tool Proficiencies.
+							Additionally, Because of your expertise and skills you gain the ability to cast Mending and Prestidigitation.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Being a butler doesn't mean that you didn't have a personality or a life of your own. Pick the ones you find pleasing and fitting for your character or roll for them. You should only pick one from each table.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am always cheerful, thinking about what I am going to do tomorrow.`,
+				},
+				{
+					number: 2,
+					description: `I enjoy peaceful music and relaxing downtime activities.`,
+				},
+				{
+					number: 3,
+					description: `I'm only glad when the work is over, it is the only time when I can finally doze off.`,
+				},
+				{
+					number: 4,
+					description: `I live my life day-to-day, I can't imagine changing anything.`,
+				},
+				{
+					number: 5,
+					description: `I am a perfectionist. I always push myself to my limit when I'm working or doing something.`,
+				},
+				{
+					number: 6,
+					description: `I am confident in my own skills and I will do what I want, even things that would hurt my master indirectly.`,
+				},
+				{
+					number: 7,
+					description: `I have many goals and dreams I want to achieve, but I am not sure which are the ones I want to pursue.`,
+				},
+				{
+					number: 8,
+					description: `I respect my master more than anyone in the world. I always try to mimic their pattern of speech and demeanour.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 2,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 3,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 5,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 6,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
 				},
 			],
 		},
