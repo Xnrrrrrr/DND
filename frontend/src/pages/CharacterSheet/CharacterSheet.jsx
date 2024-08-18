@@ -2910,5 +2910,3 @@ const CharacterSheet = () => {
 };
 
 export default CharacterSheet;
-
-// include features, special background, and ability score validation (min 3 and max 21 on character creation)

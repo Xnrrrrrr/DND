@@ -3,6 +3,7 @@ import Login from './Login/Login.jsx';
 import SignUp from './SignUp/SignUp.jsx';
 import CharacterSheet from './CharacterSheet/CharacterSheet.jsx';
 import Home from './Home/Home.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 export {
     Landing,
@@ -10,4 +11,5 @@ export {
     SignUp,
     CharacterSheet,
     Home,
+    PrivateRoute,
 };
