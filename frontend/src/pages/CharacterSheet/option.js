@@ -2786,7 +2786,16 @@ export const raceDesc = {
 			"Celestial beings with a divine heritage, known for their otherworldly beauty and ability to heal.",
 		expectedLifeSpan: "160 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Charisma +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Celestial",
 	},
@@ -2795,7 +2804,16 @@ export const raceDesc = {
 			"Small, mechanical gnomes created by the gnomes of the world to assist them.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Gnomish",
 	},
@@ -2804,7 +2822,16 @@ export const raceDesc = {
 			"Large, hairy goblinoids known for their surprising stealth and physical prowess.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2813,7 +2840,16 @@ export const raceDesc = {
 			"Half-human, half-horse creatures with a strong connection to nature and a powerful build.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "40 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2822,7 +2858,16 @@ export const raceDesc = {
 			"Shapechangers with the ability to alter their appearance at will.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Primordial",
 	},
@@ -2831,7 +2876,16 @@ export const raceDesc = {
 			"Humanoid dragons with draconic ancestry and the ability to breathe elemental energy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -2840,7 +2894,16 @@ export const raceDesc = {
 			"Short, stout, and resilient beings known for their craftsmanship and endurance.",
 		expectedLifeSpan: "350 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Constitution +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Dwarvish",
 	},
@@ -2849,7 +2912,16 @@ export const raceDesc = {
 			"Graceful and long-lived beings with keen senses and an affinity for magic.",
 		expectedLifeSpan: "750 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -2858,7 +2930,16 @@ export const raceDesc = {
 			"Tiny, magical creatures with wings and a playful demeanor.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "2.5 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (fly 30 feet)",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2867,7 +2948,16 @@ export const raceDesc = {
 			"Large, reclusive forest dwellers with a natural affinity for the land.",
 		expectedLifeSpan: "500 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish, Sylvan",
 	},
@@ -2876,8 +2966,12 @@ export const raceDesc = {
 			"Beings with elemental heritage, exhibiting traits of their elemental ancestors.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease:
-			"Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 3,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Primordial",
 	},
@@ -2886,7 +2980,16 @@ export const raceDesc = {
 			"Alien humanoids with a history of interplanar conflict and psionic abilities.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Gith",
 	},
@@ -2895,7 +2998,16 @@ export const raceDesc = {
 			"Inventive and curious beings known for their cleverness and affinity with magic.",
 		expectedLifeSpan: "400 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Intelligence +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Gnomish",
 	},
@@ -2904,7 +3016,16 @@ export const raceDesc = {
 			"Small, cunning creatures with a knack for mischief and survival.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2913,7 +3034,16 @@ export const raceDesc = {
 			"Giant humanoids with a powerful build and a competitive nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Giant",
 	},
@@ -2922,7 +3052,16 @@ export const raceDesc = {
 			"Small, amphibious humanoids with a toxic skin and a unique culture.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "25 feet (jump 20 feet)",
 		standardLanguages: "Common, Grung",
 	},
@@ -2931,7 +3070,16 @@ export const raceDesc = {
 			"A race of winged creatures with a love for exploration and adventure.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (fly 30 feet)",
 		standardLanguages: "Common, Auran",
 	},
@@ -2940,8 +3088,16 @@ export const raceDesc = {
 			"Versatile and adaptable individuals born of human and elven parentage.",
 		expectedLifeSpan: "180 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease:
-			"Charisma +2, and two other ability scores of your choice +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -2950,7 +3106,16 @@ export const raceDesc = {
 			"Strong and resilient beings born of human and orcish lineage, known for their combat prowess.",
 		expectedLifeSpan: "75 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Orc",
 	},
@@ -2959,7 +3124,16 @@ export const raceDesc = {
 			"Small and agile beings with a penchant for good luck and stealth.",
 		expectedLifeSpan: "150 years",
 		expectedSize: "3 to 4 feet",
-		abilityScoreIncrease: "Dexterity +2",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "25 feet",
 		standardLanguages: "Common, Halfling",
 	},
@@ -2968,7 +3142,16 @@ export const raceDesc = {
 			"Rabbit-like humanoids known for their swiftness and connection to nature.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "4 to 5 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -2977,7 +3160,16 @@ export const raceDesc = {
 			"Disciplined and militaristic goblinoids with a strong sense of order and hierarchy.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -2986,7 +3178,16 @@ export const raceDesc = {
 			"The most adaptable and diverse of races, with a wide range of potential.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease: "Two ability scores of your choice +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common",
 	},
@@ -2995,7 +3196,16 @@ export const raceDesc = {
 			"Mystical beings with a psychic connection to a collective consciousness.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5.5 to 6 feet",
-		abilityScoreIncrease: "Wisdom +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Wisdom",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Quori",
 	},
@@ -3004,7 +3214,16 @@ export const raceDesc = {
 			"Crow-like humanoids with the ability to mimic sounds and voices.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "5 to 5.5 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Auran",
 	},
@@ -3013,7 +3232,16 @@ export const raceDesc = {
 			"Small, draconic creatures known for their cunning and trap-making skills.",
 		expectedLifeSpan: "60 years",
 		expectedSize: "2.5 to 3 feet",
-		abilityScoreIncrease: "Dexterity +2, Strength +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -3022,7 +3250,16 @@ export const raceDesc = {
 			"Leonin are lion-like humanoids with a strong sense of pride and a warrior culture.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Strength +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "35 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3031,7 +3268,16 @@ export const raceDesc = {
 			"Reptilian humanoids with a natural affinity for the swamp and a primal outlook.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -3040,7 +3286,16 @@ export const raceDesc = {
 			"Loxodons are elephantine humanoids with great physical strength and a peaceful nature, often serving as diplomats or guardians.",
 		expectedLifeSpan: "200-300 years",
 		expectedSize: "About 7 to 8 feet tall",
-		abilityScoreIncrease: "Constitution +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Loxodon",
 	},
@@ -3049,7 +3304,16 @@ export const raceDesc = {
 			"Bull-headed humanoids known for their strength and labyrinthine culture.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "7 to 8 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Minotaur",
 	},
@@ -3058,7 +3322,16 @@ export const raceDesc = {
 			"Large, brutish creatures with a fierce demeanor and exceptional physical power.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "6 to 7 feet",
-		abilityScoreIncrease: "Strength +2, Constitution +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 2,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Orc",
 	},
@@ -3067,7 +3340,16 @@ export const raceDesc = {
 			"Owlin are bird-like humanoids with large, owl-like eyes and the ability to glide.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "About 4 to 5 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Auran",
 	},
@@ -3076,7 +3358,16 @@ export const raceDesc = {
 			"Plasmoids are amorphous beings capable of changing their shape and form, often resembling oozes or slimes.",
 		expectedLifeSpan: "60-80 years",
 		expectedSize: "Variable, but generally around 5 to 6 feet tall",
-		abilityScoreIncrease: "Constitution +2, Dexterity +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Dexterity",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Abyssal",
 	},
@@ -3085,7 +3376,16 @@ export const raceDesc = {
 			"Satyrs are fey creatures with the lower bodies of goats and the upper bodies of humanoids, known for their love of revelry and nature.",
 		expectedLifeSpan: "90-120 years",
 		expectedSize: "About 4 to 5 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "35 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3094,7 +3394,16 @@ export const raceDesc = {
 			"Beings with a bestial nature and the ability to assume animal-like traits.",
 		expectedLifeSpan: "80 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Sylvan",
 	},
@@ -3103,7 +3412,16 @@ export const raceDesc = {
 			"Simic Hybrids are experimental beings created by the Simic Combine, combining traits of various creatures for specific purposes.",
 		expectedLifeSpan: "80-120 years",
 		expectedSize: "Varies, typically 5 to 6 feet tall",
-		abilityScoreIncrease: "Constitution +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -3112,7 +3430,16 @@ export const raceDesc = {
 			"Cat-like humanoids with a penchant for curiosity and agility.",
 		expectedLifeSpan: "70 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Dexterity +2, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Elvish",
 	},
@@ -3121,7 +3448,16 @@ export const raceDesc = {
 			"Thri-kreen are insectoid humanoids with a chitinous exoskeleton and powerful limbs, known for their agility and natural predatory skills.",
 		expectedLifeSpan: "50-60 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Thri-Kreen",
 	},
@@ -3130,7 +3466,16 @@ export const raceDesc = {
 			"Infernal-heritaged beings with horns, tails, and a touch of dark magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Infernal",
 	},
@@ -3139,7 +3484,20 @@ export const raceDesc = {
 			"Aquatic beings with a connection to the ocean and an affinity for water magic.",
 		expectedLifeSpan: "100 years",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease: "Strength +1, Constitution +1, Charisma +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Strength",
+				increase: 1,
+			},
+			{
+				ability: "Constitution",
+				increase: 1,
+			},
+			{
+				ability: "Charisma",
+				increase: 1,
+			},
+		],
 		speed: "30 feet (swim 30 feet)",
 		standardLanguages: "Common, Primordial",
 	},
@@ -3148,7 +3506,16 @@ export const raceDesc = {
 			"Vedalken are a race of tall, blue-skinned humanoids known for their intellectual prowess and dedication to knowledge and order.",
 		expectedLifeSpan: "150 years",
 		expectedSize: "About 6 to 7 feet tall",
-		abilityScoreIncrease: "Intelligence +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Intelligence",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Vedalken",
 	},
@@ -3157,7 +3524,16 @@ export const raceDesc = {
 			"Verdan are a race of small, green-skinned humanoids who evolve rapidly and have a unique biological adaptability.",
 		expectedLifeSpan: "40-60 years",
 		expectedSize: "About 3 to 4 feet tall",
-		abilityScoreIncrease: "Dexterity +2, Wisdom +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Dexterity",
+				increase: 2,
+			},
+			{
+				ability: "Wisdom",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Goblin",
 	},
@@ -3166,8 +3542,12 @@ export const raceDesc = {
 			"Constructed beings with a humanoid form and a capacity for sentience and emotion.",
 		expectedLifeSpan: "Variable",
 		expectedSize: "6 to 6.5 feet",
-		abilityScoreIncrease:
-			"Constitution +2, another +1 depending on the subrace",
+		abilityScoreIncrease: [
+			{
+				ability: "Constitution",
+				increase: 3,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Warforged",
 	},
@@ -3176,7 +3556,16 @@ export const raceDesc = {
 			"Serpent-like humanoids with a mysterious and sinister heritage.",
 		expectedLifeSpan: "120 years",
 		expectedSize: "5 to 6 feet",
-		abilityScoreIncrease: "Charisma +2, Intelligence +1",
+		abilityScoreIncrease: [
+			{
+				ability: "Charisma",
+				increase: 2,
+			},
+			{
+				ability: "Intelligence",
+				increase: 1,
+			},
+		],
 		speed: "30 feet",
 		standardLanguages: "Common, Draconic",
 	},
@@ -3406,6 +3795,54 @@ export const backgroundsArray = [
 	},
 	{
 		option: "Artist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Aspirant", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Assistant", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Astrologer", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Asylum_Escapee", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Banker", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Barmaid", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bartender", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Battlesmith", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Beggar", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Biologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bodyguard", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bereaved",
 		isHomebrew: true,
 	},
 	{
@@ -7511,77 +7948,116 @@ export const backgroundDesc = {
 			roll: [
 				{
 					number: 1,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Cubism`,
+					description: `I must do what is commissioned of me, or I wont get payed.`,
+					alignment: `Lawful`,
 				},
 				{
 					number: 2,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Abstract`,
+					description: `I flow from place to place, doing what's best for me.`,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Vandalism`,
+					description: `The world is my canvas- I will paint it how I please and no one will tell me otherwise! `,
+					alignment: `Evil`,
 				},
 				{
 					number: 4,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Realism`,
+					description: `I deal with whats real, and try and help as many as I can along the way.`,
+					alignment: `Good`,
 				},
 				{
 					number: 5,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Impressionism`,
+					description: `I have a great deal to learn from those around me. They are the inspiration for my work.`,
+					alignment: `Any`,
 				},
 				{
 					number: 6,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Minimalism`,
+					description: `A little bit of this and a little bit of that is all you need in life.`,
+					alignment: `Neutral`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I am forever indebted to the one who taught me my craft.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I am simply trying to provide for my family.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I am constantly trying to win the affection of the one whose caught my eye.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I am drawn to travel, to see the world and recreate it's wonders in art.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I am forever locked in competition with my long time rival. They always seem to be one step ahead.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I will not call a task complete until I am certain it is the best I can possibly do`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will kill the critic who depreciates my work!`,
+				},
+				{
+					number: 2,
+					description: `If there's no way I'll gain from it, there's no way I'll do it.`,
+				},
+				{
+					number: 3,
+					description: `I get jealous easily, especially around other artists`,
+				},
+				{
+					number: 4,
+					description: `I will do anything for a slow turn from a nice pair of legs.`,
+				},
+				{
+					number: 5,
+					description: `I am the BEST at what I do, and I laugh at those who suggest they can find one better than I.`,
+				},
+				{
+					number: 6,
+					description: `I spend most of my gold overindulging in life's pleasures.`,
+				},
+			],
+		},
+	},
+	Aspirant: {
+		isHomebrew: true,
+		description: `Growing up, we’ve all heard or read legends of selfless heroes and dastardly villains. These stories stick with us our entire lives and tend to inspire us in one way or another. But you…you’ve taken it a step beyond. Whether you call it passion or obsession, the “hero” of these legends has influenced every facet of your life, down to very decisions you make. Some aspirants become traveling storytellers, spreading the tales of their idol across the world. Others follow in the footsteps of their idol, using him or her as an inspiration to aspire to. A small few, however, have become so enveloped in these legends that they’ve become completely delusional, believing THEMSELVES to be the very idol from these stories.`,
+		skillProficiencies: `Performance and History`,
+		toolProficiencies: `Calligrapher tools or Disguise Kit`,
+		languages: `A language that your idol knows`,
+		startingEquipment: `A bottle of black ink, a quill, a tome or scrolls with the legends of your idol written out, common clothes, a costume inspired by your idol, and a belt pouch containing 10 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
 			roll: [
 				{
 					number: 1,
@@ -7609,7 +8085,2382 @@ export const backgroundDesc = {
 				},
 			],
 		},
+		feature: {
+			title: `Just Like in the Stories`,
+			description: `Considering how often their idol’s legacy is on their mind, aspiriants are always trying to find connections between their lives and the folklore surrounding their idol.
+
+						Roll a D10. If you roll a 9 or 10, your current situation bears an uncanny resemblance to one your idol was in. What this means is completely up to the discretion of the DM. You may remember a weakness that your idol exposed against a similar enemy or meet a new person in the same way your idol met their love interest meaning you know that new person's motives.
+
+						This may be rolled whenever you make a check where you are experiencing something "for the first time". Examples of this include the first time you meet a new NPC, the first time you visit a new location, the first time you see a quest specific item, etc.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I believe that my idol and I are connected in some way.`,
+				},
+				{
+					number: 2,
+					description: `I try to make connections between my idol’s situations and my own.`,
+				},
+				{
+					number: 3,
+					description: `Sometimes my passion is confused for obsession. However, sometimes those people are right.`,
+				},
+				{
+					number: 4,
+					description: `I am typically more interested in what my idol has done than what I am currently doing.`,
+				},
+				{
+					number: 5,
+					description: `I sometimes begin to daydream about my idol to a point where I lose focus of everything around me.`,
+				},
+				{
+					number: 6,
+					description: `I become incredibly excited whenever someone shows even the smallest amount of interest in my idol.`,
+				},
+				{
+					number: 7,
+					description: `I repeat the same stories about my idol to anyone who will listen, no matter how many times they have heard it before.`,
+				},
+				{
+					number: 8,
+					description: `I have a near encyclopedic knowledge of the legends of my idol.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Imitator`,
+					description: `Never straying from the legends, I act identical to the way my idol has in similar situations.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Hero`,
+					description: `My idol was a hero of the people and I was inspired by his or her good deeds.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Villian`,
+					description: `My idol spread terror throughout the land and hurt many innocent people.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Surpasser`,
+					description: `Even though they have inspired me, I act distinctly from my idol. I’ll create my own legends.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Messenger`,
+					description: `I will spread the legends of my idol far and wide. `,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Mogul`,
+					description: `My idol became an incredibly wealthy and powerful man /woman and I aspire to be one as well.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am obsessed with my idol or at least the legend surrounding him or her.`,
+				},
+				{
+					number: 2,
+					description: `The oral traditions of my idol must be passed on to future generations.`,
+				},
+				{
+					number: 3,
+					description: `I am more than just a fan of my idol. I have become them!`,
+				},
+				{
+					number: 4,
+					description: `My idol is an ancestor of mine and my family is proud that I am following in his or her footsteps.`,
+				},
+				{
+					number: 5,
+					description: `My idol is an ancestor of mine and my family is proud that I am following in his or her footsteps.`,
+				},
+				{
+					number: 6,
+					description: `The tomes or scrolls containing the stories of my idol must be protected at all costs, even at the expense of my life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am completely delusional to a point where I have become my idol. The actual “me” no longer exists.`,
+				},
+				{
+					number: 2,
+					description: `I care little about the consequences of my actions and how they affect other people.`,
+				},
+				{
+					number: 3,
+					description: `I can hear my idol’s voice speaking to me in my head.`,
+				},
+				{
+					number: 4,
+					description: `I follow my idol around everywhere they go to the point where they have become a little uneasy around me.`,
+				},
+				{
+					number: 5,
+					description: `I struggle making decisions not based on my idol’s previous choices.`,
+				},
+				{
+					number: 6,
+					description: `My obsession with my idol has become so severe it has pushed my loved ones away.`,
+				},
+			],
+		},
 	},
+	Assistant: {
+		isHomebrew: true,
+		description: `Your life before adventure was marked by its mundanity. Under the supervision of your higher ups, you have helped keep shops running, taverns full or farms working. This is the simple life many lead, but this is not the life cut out for you. You feel compelled towards adventure, with reasons ranging from a dramatic event which forced you into it, or a growing boredom with your current career. You know how shops are run and helped, can get on common terms with others in your previous trade, and up to this point have experienced, with joy or regret, the new active life of adventuring`,
+		skillProficiencies: ` Insight, Persuasion`,
+		toolProficiencies: ``,
+		languages: `Two of your choice`,
+		startingEquipment: `A keepsake from your previous career, a set of assistant's clothes, a small book with common phrases in Common, Elvish, Dwarvish, Gnomish and Undercommon, a pouch containing 15 gp.`,
+		backgroundSpecial: {
+			title: `Previous Profession`,
+			description: `There are many professions which need some sort of assistant or apprentice in order to function. Many of these are found in towns or cities, though some are more rural in nature. Wherever you are from, the life of being told what to do is shared everywhere. Choose the previous profession you helped in, or roll on the table below.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Stablehand`,
+				},
+				{
+					number: 2,
+					description: `Library Clerk`,
+				},
+				{
+					number: 3,
+					description: `Apprentice Alchemist`,
+				},
+				{
+					number: 4,
+					description: `Shop Assistant`,
+				},
+				{
+					number: 5,
+					description: `Tavern Staff`,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Common Ground`,
+			description: `Your time spent assisting others mean that you can empathize with those with jobs like yours. You can talk freely about your past with assistants of yours or other professions, be it stablehands, bartenders, or library clerks. Assistants typically enjoy the attention, and are inclined to trust you. These assistants can tell you much of the local gossip and information about the area, can be convinced to help you in minor tasks, and can talk enough about their profession in order for you to quickly get the gist of it.Assistants will often be more than happy to suggest you as a helping hand to their employer. You will be paid at a rate from 2 sp to 1 gp per hour. During work you can talk with other assistants freely and your employer on less distant terms. Any profession you have worked well for without issue are more inclined to favor you. They may give you or party members better treatment, offer discounts or trust you more than the average customer, if of course you or your party members haven't caused any trouble.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Assistants come from the lower classes in society, and may miss or despise their past profession. However, their training has leaned them towards a practical way of thinking. Their practicality, knowledge of commoners' lives and wanting to escape it may shape their ideals. Their bonds could be to their old employer, an assistant friend or an unique customer. Their flaws could be shaped by an overly simplistic view of the world, or excessive recklessness or caution due to their newfound freedom.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I despise people who are significantly more well off than me, and treat them with disrespect.`,
+				},
+				{
+					number: 2,
+					description: `I will always go on the side of talking a situation out rather than it descend to violence.`,
+				},
+				{
+					number: 3,
+					description: `I am eager to be taught new things by more experienced adventurers.`,
+				},
+				{
+					number: 4,
+					description: `I can deal with situations of rising anger and arguments coldly and calmly.`,
+				},
+				{
+					number: 5,
+					description: `I will revel in any moment of fame I get.`,
+				},
+				{
+					number: 6,
+					description: `I often zone out when people drone for too long, but I have learned to hide this from dealing with it in the shop.
+`,
+				},
+				{
+					number: 7,
+					description: `I always attempt to barter the prices of goods.`,
+				},
+				{
+					number: 8,
+					description: `I am humble and get surprised and flustered whenever someone praises me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Freedom`,
+					description: `The boring life of an assistant wasn't for me. Now with this vast life ahead of me I can at last live.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Heroism`,
+					description: `Why stay in a shop when I could help solve the issues plaguing the land?`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Might`,
+					description: `I have spent too much time being told what to do. It's time to change that.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Discipline`,
+					description: `I will do what I have been told to, and I will do it well.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Fulfillment`,
+					description: `Adventuring brings meaning to my life.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Oppurtunity`,
+					description: `Anyone should be given an equal chance to rise.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My old employer had his business looted, and I am doing this in order to help him.`,
+				},
+				{
+					number: 2,
+					description: `A mysterious customer once came into the premises and secretly handed me a scroll in a language I do not understand. What does it say?`,
+				},
+				{
+					number: 3,
+					description: `An old regular told me every night of his adventuring stories. I am doing this to show how he inspired me.`,
+				},
+				{
+					number: 4,
+					description: `My brother owns the family business while I do the cleaning. Wait until I show them what I am made of.`,
+				},
+				{
+					number: 5,
+					description: `Life was okay as an assistant until a work friend of mine became an adventurer. I regret not going with them.`,
+				},
+				{
+					number: 6,
+					description: `I still enjoy the work that I did, and find any reference or temporary return to it wondrous.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I pretend to know a lot more about my profession than I actually do.`,
+				},
+				{
+					number: 2,
+					description: `I am needlessly reckless or cautious due to my limited training as an adventurer.`,
+				},
+				{
+					number: 3,
+					description: `Abstract ideas bore me, as do overcomplicated plans.`,
+				},
+				{
+					number: 4,
+					description: `I will instinctively listen and obey to authority, as I fear the consequences of not doing so.`,
+				},
+				{
+					number: 5,
+					description: `I get easily nervous and may not share ideas or information on the assumption the other party members already thought of it and know about it.`,
+				},
+				{
+					number: 6,
+					description: `I get overly defensive about my humble past, and I am ready to lie about it or insult the person who asks.`,
+				},
+			],
+		},
+	},
+	Astrologer: {
+		isHomebrew: true,
+		description: `You my friend are one of the few people across the world to dedicate your life to unraveling the mysteries of the universe. What led you to choose this life? Was it a desire to know more or do you just think stars are really cool. Either way you know more about the stars then just about anyone around and that comes with some perks`,
+		skillProficiencies: `Arcana, Perception`,
+		toolProficiencies: `navigators tools`,
+		languages: `celestial and one other of your choice`,
+		startingEquipment: `A bottle of black ink, a quill, a map of constellations, a set of navigator's tools, a set of traveler's clothes, and a pouch containing 10 gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Map of the Stars`,
+			description: `you have spent most of your life studying the stars and their locations in the night sky, so naturally you are able to tell which way is which as long as you are able to see the stars, you have advantage on finding your way as long as you can see the stars above you`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `think about what caused you to start studying the night sky as thorough as you did, were you looking for some long forgotten secret, you could have been lost at sea and had nothing to do but study the stars, or maybe you just thought stars were cool`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I find the night sky extremely calming amd find peace under it.`,
+				},
+				{
+					number: 2,
+					description: `I would rather talk about the unknown than common small talk.`,
+				},
+				{
+					number: 3,
+					description: `There’s nothing I like more than a good mystery`,
+				},
+				{
+					number: 4,
+					description: `I’m willing to listen to every side of an argument before I make my own judgment.`,
+				},
+				{
+					number: 5,
+					description: `I’ve read every book in the world’s greatest libraries — or I like to boast that I have.`,
+				},
+				{
+					number: 6,
+					description: `I use polysyllabic words that convey the impression of great erudition.`,
+				},
+				{
+					number: 7,
+					description: `I’m used to helping out those who aren’t as smart as I am, and I patiently explain anything and everything to others.`,
+				},
+				{
+					number: 8,
+					description: `I … speak … slowly … when talking … to idiots, … which … almost … everyone … is … compared … to me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Knowledge`,
+					description: `The path to power and self-improvement is through knowledge`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Freedom`,
+					description: `Everyone is like an individual star in the night sky`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Unity`,
+					description: `The world is like a constellation, everyone is a star connecting to make something greater`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Self Improvement`,
+					description: `I must work hard to be the brightest star I can be`,
+					alignment: `Any`,
+				},
+				{
+					number: 5,
+					bold: `Greed`,
+					description: `I am like a black hole in the void of space, I continue to take from everything around me so that I become the strongest`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Nurture`,
+					description: `I am like the sun in the sky, I help other grow to their greatest potentials`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I protect the location of a powerful telescope for fear of what it might reveal`,
+				},
+				{
+					number: 2,
+					description: `My life’s work is a series of tomes related to a specific area of astronomy.`,
+				},
+				{
+					number: 3,
+					description: `I’ve been searching my whole life for the answer to a certain question.`,
+				},
+				{
+					number: 4,
+					description: `I witnessed the birth of a star that was prophesized long ago and I must proclaim this to all`,
+				},
+				{
+					number: 5,
+					description: `I do this for an old sage. I will make his/her dreams come true.`,
+				},
+				{
+					number: 6,
+					description: `The stars hold the key to a long forgotten magic, I will be the first to find it-`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I get too caught up in the complex that I sometime forget rudimentary knowledge`,
+				},
+				{
+					number: 2,
+					description: `Sometimes I think that I'm the only one as smart and daring as I am`,
+				},
+				{
+					number: 3,
+					description: `Unlocking an ancient mystery is worth the price of a civilization`,
+				},
+				{
+					number: 4,
+					description: `Most people scream and run when they see an aberration. I long to see something from out of this universe`,
+				},
+				{
+					number: 5,
+					description: `I sometimes get caught spacing out as I stare at the stars`,
+				},
+				{
+					number: 6,
+					description: `I overlook obvious solutions in favor of complicated ones.`,
+				},
+			],
+		},
+	},
+	Asylum_Escapee: {
+		isHomebrew: true,
+		description: `You are on the lamb having escaped out of an asylum. You couldn't take it anymore: the mistreatment, their inability to believe any truths you spoke, the walls closing in around you. The law will try to find you and bring you back, if you are not cautious. If they do who knows what the doctors will do to you. You won't go back, you will never go back.
+					Maybe there is nothing wrong with you, maybe you angered a noble, perhaps you are a woman with an opinion, maybe the voices are whisperings from you latent patron or maybe you divined the wrong voice from the far realms.`,
+		skillProficiencies: `Persuasion, Insight`,
+		toolProficiencies: `One of the player's choice.`,
+		languages: `One of the player's choice.`,
+		startingEquipment: `A straightjacket or head cage, a set of common clothes, one trinket of special significance, and 1 sp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Ear for Madness`,
+			description: `You have witnessed different forms of madness in the asylum. You can recognize it in others. If you interact with a creature for 1 minute, outside of combat, you can tell if they have a: short term, long term, or indefinite madness. You are not able to identify what madness effects they possess, only that they have it.
+						For short term and long term madness, you are not able to identify the duration of their madness.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try to make friends where ever I go. I want to form a support circle...maybe one day even tell them.`,
+				},
+				{
+					number: 2,
+					description: `I spend money freely and live life to the fullest, knowing that tomorrow I might die.`,
+				},
+				{
+					number: 3,
+					description: `I don't run from evil because I am oblivious to it or uncaring.`,
+				},
+				{
+					number: 4,
+					description: `I am very superstitious.`,
+				},
+				{
+					number: 5,
+					description: `I expect danger around every corner.`,
+				},
+				{
+					number: 6,
+					description: `I don't talk about my mental state with others. I'd rather not burden them.`,
+				},
+				{
+					number: 7,
+					description: `I try to help others who have been through what I have been through.`,
+				},
+				{
+					number: 8,
+					description: `I am unyieldingly genuine, and laugh, cry, or scream without restraint.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Improvement`,
+					description: `Some day, I will make life better for everyone like me`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Survival`,
+					description: `We have to take care of each other, because no one else is going to do it`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Similar`,
+					description: `My mental state isn't like yours, but I'm just like you.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `Madness`,
+					description: `It's only a matter of time... It's only a matter of time... It's only a matter of time...`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Maniac`,
+					description: `The people who did this to me are going to pay.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Seeking`,
+					description: `I'm a good person. I deserve love.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I keep my thoughts and discoveries in a journal. My journal helps me cope.`,
+				},
+				{
+					number: 2,
+					description: `I seek to undo this cursed mental clouding, so I can return to my former life. But everyday I feel less stable, and closer to the point of no return.`,
+				},
+				{
+					number: 3,
+					description: `I believe there is a way to make me normal, and I am on a quest to find it.`,
+				},
+				{
+					number: 4,
+					description: `I blame everyone else for what happened to me.`,
+				},
+				{
+					number: 5,
+					description: `Growing up, there was only one person who could see past my affliction to the real me. I would do anything for them.`,
+				},
+				{
+					number: 6,
+					description: `All I want is to find somewhere I belong.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have certain rituals that I must follow every day. I can never break them.`,
+				},
+				{
+					number: 2,
+					description: `I am just as judgmental and prejudiced as everyone else- perhaps more so.`,
+				},
+				{
+					number: 3,
+					description: `I don't understand why people fear or pity me.`,
+				},
+				{
+					number: 4,
+					description: `Violence is my answer to almost any challenge.`,
+				},
+				{
+					number: 5,
+					description: `It doesn't matter what people say to me. I'm not crazy, I'm not a monster, I'm just ahead of the curve...more evolved.`,
+				},
+				{
+					number: 6,
+					description: `The voices... The voices... never... stop...`,
+				},
+			],
+		},
+	},
+	Banker: {
+		isHomebrew: true,
+		description: `You either work for a large bank or own a small one. You spend your life learning how to make money out of money. Although seen as business only fit for greedy, soulless exploiters, you don't necessarily have to be one yourself. Some banks for example are forbidden by their faith from taking interest, while others participate in social projects, especially since their business is seen as amoral. Lastly, some who are forbidden from practicing an "honest" trade are pushed into the business, holding a risky position of influence and wealth that depends on the good will of the governing body. As soon as they get too rich or the ruler does not need them anymore, they can easily be expelled and their assets confiscated. Work with the DM to establish the nature of the bank you worked for, its size, influence and membership. In addition, you may want to find a justification for your adventuring lifestyle. Did you grow bored with the trade? Maybe you have some debts to collect? Did your bank go bankrupt? If so, is there anyone responsible for the deed? Do you still have friends from your former life?`,
+		skillProficiencies: `Persuasion, Insight`,
+		toolProficiencies: ``,
+		languages: `Two languages of your choices`,
+		startingEquipment: `An ink pen, Fine Clothes, a bottle of ink, 10 sheets of parchment, an accounting book, a taxroll and a pouch containing 25 gp`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: ``,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Accountant`,
+				},
+				{
+					number: 2,
+					description: `Moneylender`,
+				},
+				{
+					number: 3,
+					description: `Clerk`,
+				},
+				{
+					number: 4,
+					description: `Mortgage Specialist`,
+				},
+				{
+					number: 5,
+					description: `Financier`,
+				},
+				{
+					number: 6,
+					description: `Investor`,
+				},
+			],
+		},
+		feature: {
+			title: `Struck it Rich`,
+			description: `Your dealings have made you rich before you ever embarked on the life of an adventurer. And although the assets you obtained are not easily convertible into currency, they do allow you to live a life free of material want. As long as a banking house can be found in the city you currently reside in, you can maintain a wealthy lifestyle without expending money.`,
+		},
+		alterateFeature: [
+			{
+				title: `Banking Guild Membership`,
+				description: `Not everyone in the banking business makes a fortune out of it. You, however, have made it your job to be reliable, competent and be held in esteem by the fellow members of your trade. This feature works similar to the "guild membership" feature.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Those working in the banking business are a varied lot. Some see the way banks accumulate money as a path out of the parochialism of a feudal rule, where war, famine and ignorance are fostered, into a future free from want. Others relish the money and debt give them over others, while a few use the money to do charitable work and use their power to change society for the better. In any case, appearing trustworthy, groomed and educated are very important to all bankers, especially when don't have any of these qualities.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My appearance and grooming are always impeccable, no matter how dire the situation.`,
+				},
+				{
+					number: 2,
+					description: `I use polished and refined language, to showcase my good education.`,
+				},
+				{
+					number: 3,
+					description: `I delight in ordering others around with spiteful and meaningless tasks.`,
+				},
+				{
+					number: 4,
+					description: `Too much work has left me morose and withdrawn.`,
+				},
+				{
+					number: 5,
+					description: `I prefer a cautious and safe approach. Charging ahead seems foolish.`,
+				},
+				{
+					number: 6,
+					description: `I am so much better than these uneducated brutes around me.`,
+				},
+				{
+					number: 7,
+					description: `A stovepipe is the sign of a refined person. As such, i never leave my home without one.`,
+				},
+				{
+					number: 8,
+					description: `I hold myself up to high standards of behavior and others just as much.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Obedience`,
+					description: `If i do how i am told, everything will work out fine. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Money`,
+					description: `Money is the first and foremost thing a banker should have in mind`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `People`,
+					description: `Who cares about the money or what the bank wants? It's all the different people i met and talk to that matter in the end.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					bold: `Power`,
+					description: `I relish the power money allows me to hold over others. There is nothing as delightful as legally robbing a person of everything they hold dear. `,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Charity`,
+					description: ` I help the poor by investing in social projects, like housing for the homeless and universal education. All the money of the world isn't worth it if my soul goes to hell. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Change`,
+					description: `The dynamic and efficient system i represent will one day do away with overcome traditions and silly believes.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I work to pay off a debt.`,
+				},
+				{
+					number: 2,
+					description: `I plan to extend the influence of my bank to the far reaches of the world.`,
+				},
+				{
+					number: 3,
+					description: `I am loyal to my boss and will enforce their will, whatever it takes.`,
+				},
+				{
+					number: 4,
+					description: `I have only ever loved two things: money and my self.`,
+				},
+				{
+					number: 5,
+					description: `My current job is everything to me.`,
+				},
+				{
+					number: 6,
+					description: `I will take revenge on all who laughed at me while i was younger.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don't care for the less fortunate. As far as i am concerned, they should have pulled themselves up by their bootstraps instead of wasting their lives.`,
+				},
+				{
+					number: 2,
+					description: `I utterly believe in the word of whoever governs the bank.`,
+				},
+				{
+					number: 3,
+					description: `I would do anything to get more money.`,
+				},
+				{
+					number: 4,
+					description: `I am unused to rough living, being used to living a life of luxury.`,
+				},
+				{
+					number: 5,
+					description: `I tend to trust the wrong persons too much, leading to unsound investments.`,
+				},
+				{
+					number: 6,
+					description: `Plagued by the fear of failure and i tend to overwork myself.`,
+				},
+			],
+		},
+	},
+	Barmaid: {
+		isHomebrew: true,
+		description: `Have you ever wanted to spend your days babysitting belligerent drunkards while trying desperately to earn a living? Well too bad, someone has to do it. As a Barmaid you spent your life using both charisma and brute strength to "persuade" drunkards to follow the rules like everybody else`,
+		skillProficiencies: `Persuasion and Intimidation`,
+		toolProficiencies: `An instrument or game set, and your choice of one of the following: brewer's Supplies, calligrapher's Supplies, or cook's utensils.`,
+		languages: `One of your choice`,
+		startingEquipment: `A barmaid outfit, a weighted club, a flask filled with mead or hard cider, an instrument or game set, and a pouch with 15 gold.`,
+		backgroundSpecial: {
+			title: `Place of Employment`,
+			description: `The type of establishment you were employed at can have a big impact on your life, as well as your future adventures`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `You worked in a tavern, where you met many travellers, and performed many songs.`,
+				},
+				{
+					number: 2,
+					description: `You worked in a speakeasy, where you found that deception was a necessary job skill.`,
+				},
+				{
+					number: 3,
+					description: `You worked in a saloon, where you had to learn how to handle the roudy.`,
+				},
+				{
+					number: 4,
+					description: `You worked in a Village Pub, where some of the locals taught you how to use the tools of their trade`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Innocous Persuasion`,
+			description: `Perhaps it is your utterly innocent presence, but you rarely need to hide from people to hear in on what they talk about. You are just a simple barmaid that gives the drinks and takes them away when they are empty. People often forget that you're there to the point that even very important conversations not meant for average ears can be spoken near you. Underworld lords and powerful figures feel no threat from speaking liberally near you, discussing plans and such as long as you tend to them in some way.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I understand that sometimes a little bit of flirting goes a long way.`,
+				},
+				{
+					number: 2,
+					description: `Regulars always get the cheapest drinks. New-comers are almost always trouble.`,
+				},
+				{
+					number: 3,
+					description: `Drinking on the job is never a problem.`,
+				},
+				{
+					number: 4,
+					description: `My quick temper can end as many problems as it starts. At least, that's what I tell myself.`,
+				},
+				{
+					number: 5,
+					description: `Sleazebag pervert is one bad comment away from a slap.`,
+				},
+				{
+					number: 6,
+					description: `A jolly smile and cheerful laugh is the best way to start the day.`,
+				},
+				{
+					number: 7,
+					description: `I hate my job and everyone I have to serve.`,
+				},
+				{
+					number: 8,
+					description: `My loyalty to my employer is unmatched.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Kindness`,
+					description: `Service with a smile is everyone's right`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Strictly Business`,
+					description: `You get what you pay for and I can't help that.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Loose Change`,
+					description: `The drunk make easy money for stealing`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Work Ethic`,
+					description: `Hard days work for a hard days pay`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Fickle`,
+					description: `My time is worth whoever is paying me`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Self-Betterment`,
+					description: `I'm working to be the best I can be.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My employer saved me from a horrible fate. I want to repay him properly`,
+				},
+				{
+					number: 2,
+					description: `The regulars keep money in my pocket and food on my table, they're like family.`,
+				},
+				{
+					number: 3,
+					description: `A great debt keeps me tied to this tavern.`,
+				},
+				{
+					number: 4,
+					description: `I will never forget the name of the adventurer who saved me from a cruel fate.`,
+				},
+				{
+					number: 5,
+					description: `My family has run this tavern for years.`,
+				},
+				{
+					number: 6,
+					description: `I work at a tavern to support my family.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My bar was raided, which has led to a natural distrust of authority figures.`,
+				},
+				{
+					number: 2,
+					description: `I am a perfect example for why you shouldn't sample your own product.`,
+				},
+				{
+					number: 3,
+					description: `I can never turn down a chance to gamble.`,
+				},
+				{
+					number: 4,
+					description: `I'm willing to try anything to have a good time.`,
+				},
+				{
+					number: 5,
+					description: `A little coin and I will do anything you want.`,
+				},
+				{
+					number: 6,
+					description: `Never leave money out around me.`,
+				},
+			],
+		},
+	},
+	Bartender: {
+		isHomebrew: true,
+		description: `You stand by a lot of the most famous scenes in all of stories and fantasy. Your establishment is the gathering, the crux, of many an adventure, the beginning of many a quest, and the meetings of many fates. That's right, you are the bartender. People, drunk or not, have often ended up before you, asking for succor from their troubles. Sometimes they ask for something less alcoholic. Those who fall under the spell of the ale and meads you churn out spew their secrets like gushing fountains to any ears willing to listen, and yours are usually the closest. Sometimes you do some things on the side, like slipping poison into someone's glass, or just also taking the role of chef as well. If you are the owner of a bar, it's pretty hard work.
+
+					When making a character with the bartender background, think outside the occupational aspect and more towards the implications. Bartenders are not always able to hold their liquors, but they can have a heck of a connoisseurs smell and taste for them. After mixing cocktails for so long, you may have a signature brew even. Aside from drinks though, you may have heard many a drunken secret and witnessed several conflicts erupt in a scenery of merriment. Perhaps you are familiar with the fancier scotch clubs where nobles drivel on about politics. Or maybe you've kept your head down as resistance leaders in a greasy pub talked about inciting a rebellion.
+
+					Bartenders are a dime in a dozen in the wide world. So long as people desire release from their awful realities, bartenders have obliged in exchange for coin and then some. You can easily find work in many places so long as there is some bar. If not, you could very easily start a business slinging drinks. Often sitting in the backdrop, bartenders are potential fonts of knowledge and the most interesting gossip. In a way you could be like a barber, but people visit the pub more than they visit the barber.`,
+		skillProficiencies: `Choose 2 from: Perception, Sleight of hand, Performance, Persuasion, or Insight`,
+		toolProficiencies: `Cook's utensils or brewer's supplies`,
+		languages: `One language of your choice`,
+		startingEquipment: `Cook's utensils, or brewer's Supplies, a set of common clothes and a belt pouch of 10 gp`,
+		backgroundSpecial: {
+			title: `Place of Employment`,
+			description: `Where was the last place you worked? Which previous establishment was the most notable? It could very well have been a place you once owned as the barkeep. The atmosphere of the bar could possibly determine what things you have seen and heard throughout your career, as well as what company may be familiar with you.`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `A scandalous place of drunken sailors and gossip of murder and nautical conspiracies.`,
+				},
+				{
+					number: 2,
+					description: `An ill-reputed rats' nest where leaders of the local gangs and mafia congregated to conduct illegal business.`,
+				},
+				{
+					number: 3,
+					description: `A high-end bar where people clinked crystal glasses of cocktails and spoke of the higher caste politics.`,
+				},
+				{
+					number: 4,
+					description: `The layman's bar where common man came for a cold one after a long day at work.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `The Bar's Shadow`,
+			description: `Perhaps it is your utterly innocent presence, but you rarely need to hide from people to hear in on what they talk about. This is particularly true when you have all your working tools out to show you are a real bartender. The bartender image has been cultivated into you, that even very important conversations not meant for average ears can be spoken near you. Underworld lords and powerful figures feel no threat from speaking liberally near you, discussing plans and such over your concoctions.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `As a bartender, you don't have to act like a bystander even if everyone treats you like their servant. Maybe you're a real people person, able to befriend any patron. Or are you perhaps a silent watcher, or even an unfriendly server.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don't talk unless spoken to.`,
+				},
+				{
+					number: 2,
+					description: `I tend to buy the drinks at the table.`,
+				},
+				{
+					number: 3,
+					description: `I never forget the face of those I've served.`,
+				},
+				{
+					number: 4,
+					description: `People tell me I have a big mouth..`,
+				},
+				{
+					number: 5,
+					description: `My first question is usually money-related.`,
+				},
+				{
+					number: 6,
+					description: `I serve and that's it. You couldn't pay me for lip service.`,
+				},
+				{
+					number: 7,
+					description: `Physical contact makes me uncomfortable.`,
+				},
+				{
+					number: 8,
+					description: `Patrons deserve my utmost respect.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Money`,
+					description: `There is a lot of things money will give me.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Secrets`,
+					description: `I just like to hear the deepest darkest secrets of others`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Perfection`,
+					description: `I am pursuing the quest for the greatest brew.`,
+					alignment: `Any`,
+				},
+				{
+					number: 4,
+					bold: `Chaos`,
+					description: `I sow discord through my drinks.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Listener`,
+					description: `I'm here for those who need a shoulder to lean on`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Employment`,
+					description: `This is just a job, really, to survive.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I feel a familial bond with the bar busters, wenches, and maids.`,
+				},
+				{
+					number: 2,
+					description: `The patrons are easily friends.`,
+				},
+				{
+					number: 3,
+					description: `In an environment like a bar, you never know what a true man's colors are.`,
+				},
+				{
+					number: 4,
+					description: `I am searching for one particular patron who I served years ago...`,
+				},
+				{
+					number: 5,
+					description: `I work to pay off a debt.`,
+				},
+				{
+					number: 6,
+					description: `My relationships are means to an end.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My only concern is how much I get paid.`,
+				},
+				{
+					number: 2,
+					description: `My relationships are ephemeral.`,
+				},
+				{
+					number: 3,
+					description: `I cannot trust anyone for real.`,
+				},
+				{
+					number: 4,
+					description: `I am easily beguiled by what I hear.`,
+				},
+				{
+					number: 5,
+					description: `I like to leave the hard work to others.`,
+				},
+				{
+					number: 6,
+					description: `I can appear cold to problems of others.`,
+				},
+			],
+		},
+	},
+	Battlesmith: {
+		isHomebrew: true,
+		description: `Battlesmiths are the undisputed masters of traditional Dwarven martial arts. They originated as simple well-equipped berzerkers to counter the savage assaults of Orcish raiders and warbands. As time went on though, Battlesmith-driven victories raised their status to something of the Dwarven equivalent to a knight, socially. As Dwarven craftsmanship improved, battlesmiths became a class of people, each one of them a living symbol of Dwarven warfare.
+
+					Many early battlesmiths were more than just great warriors. Some became kings, carving out new holdings for the Dwarven race from the ruins of enemy land. Others became legendary tactitians, conquering armies with little more than terrified peasants and livestock. Some were great craftsmen, and created fascinating Dwarven weapons, such as the urgrosh. Given this history, many battlesmiths model their beliefs and careers off the lives of these ancient heroes.
+
+					The true power behind the battlesmith is more than brute strength or literal combat prowess, though most have both. Battlesmiths wage war on the minds of their enemies as much as their bodies. They aim to make the enemy believe they have already lost before a battle has even begun. Early battlesmiths blundered into this tactic when they discovered that simply killing the right orc can turn an army of thousands into a stampede of fleeing cowards. Making an enemy think they've lost more blood than they have can cause them to pass out from shock alone. As they became more refined, so too did their techniques.
+
+					Today, battlesmith is mostly an inherited title, though it is possible to rise into their ranks through impressive military service. Those born into the title carry a heavy burden as they are expected to take on the responsibilities of their name. Battlesmiths are often the champion of a noble clan, leading the clan's military force, organizing defense of their land, or taking on special tasks presented only to them.
+
+					Although almost all battlesmiths are dwarves, a few of other races have learned their ways- mostly elves who fought in ancient wars against orcish armies alongside battlesmiths. Humans have proven to be impressive battlesmiths, but most dwarves find their loyalties too difficult to discern or too fickle to maintain, and so humans have greater difficulty proving their worth. There are no records of any half orc battlesmiths, and you would be hard pressed to convince anyone that there should be- the title evolved out of a way of killing orcs after all!`,
+		skillProficiencies: `Athletics, Intimidation`,
+		toolProficiencies: `Your choice of Smith's, Mason's, or Brewer's Tools.`,
+		languages: ``,
+		startingEquipment: `A metal flask, a set of common or fine clothes, a Blacksmiths apron, a whetstone, a flask of oil, a letter from your patron, a badge showing your patron's crest, a hammer, 5ft of chain, and a small pouch containing 4gp.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Champion`,
+			description: `You are or were, the champion of a patron, (likely a noble dwarven clan) and a known battlesmith. Your patron may come to you with demands or requests; enemies of your patron may try to buy, manipulate, or kill you; and you will likely have made some enemies of your own during your career. The life of a battlesmith can be busy, hectic, and complicated, even long after retirement or expulsion. Work with your DM to flesh out your patron, their enemies, and your personal enemies if you have any.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Battlesmiths are warrriors first, with a lifestyle revolving around combat. For all of the advantages of this lifestyle, there are many drawbacks, and time can take a heavy toll on the minds and spirits of battlesmiths.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My status as a battlesmith has brought me only bloodshed and sorrow.`,
+				},
+				{
+					number: 2,
+					description: `I am always ready to fight.`,
+				},
+				{
+					number: 3,
+					description: `I am unforgiving or intolerant.`,
+				},
+				{
+					number: 4,
+					description: `I envy the easier lives of commoners.`,
+				},
+				{
+					number: 5,
+					description: `I revere the lives and deaths of even my most cruel and fearsome enemies.`,
+				},
+				{
+					number: 6,
+					description: `I make light of violence and death.`,
+				},
+				{
+					number: 7,
+					description: `I'm never too far from a bottle of alcohol.`,
+				},
+				{
+					number: 8,
+					description: `I speak very little- if even at all.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Responsibility`,
+					description: `My power is a gift not to be taken lightly, and I should avoid seeking out unnecessary conflict.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Duty`,
+					description: `My purpose is the continued peace and safety of my people.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Authority`,
+					description: `I do as I wish- who's going to stop me?`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Power`,
+					description: `All who oppose me must be crushed under my boot! `,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Function`,
+					description: `This is what I was made to do.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Purification`,
+					description: `I must stamp out evil wherever it may dwell`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A battlesmith saved me or someone close to me, and I strive towards filling their enormous footsteps.`,
+				},
+				{
+					number: 2,
+					description: `My patron clan is everything to me, and I will do whatever I can do to glorify their name.`,
+				},
+				{
+					number: 3,
+					description: `Countless battles have not shaken the faith I have in my allies.`,
+				},
+				{
+					number: 4,
+					description: `I became a battlesmith to defend my home and people from a great evil.`,
+				},
+				{
+					number: 5,
+					description: `My patron has sent me on one final task before I retire. It must be done at all costs.`,
+				},
+				{
+					number: 6,
+					description: `I am in love with either another battlesmith or a hated enemy.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I find any reason to fight, often attacking enemies when other solutions could have been met.`,
+				},
+				{
+					number: 2,
+					description: `I care more about my weapon, armor, or other possession, than I do about my friends.`,
+				},
+				{
+					number: 3,
+					description: `I have crossed a foreign military force and they have hunted me ever since.`,
+				},
+				{
+					number: 4,
+					description: `I am unwaveringly loyal to my patron, even if my orders conflict with my personal beliefs.`,
+				},
+				{
+					number: 5,
+					description: `I have offended my patron clan, nation, or fellow battlesmiths, and have been stripped of my title.`,
+				},
+				{
+					number: 6,
+					description: `I am actually a terrible coward, willing to do anything to gain glory or power without fighting, and will shy away from a fight if the battle goes sour.`,
+				},
+			],
+		},
+	},
+	Beggar: {
+		isHomebrew: true,
+		description: `Why did you start begging? Did you suffer an injury or did you want some extra pocket change? Do you fake an injury or is it real? Have always lived on the streets or were you pushed away by loved ones? Whatever the reason you now rely on people better off than you for help`,
+		skillProficiencies: `Deception, Sleight of Hand`,
+		toolProficiencies: `Thieves tools, and one gaming set or musical instrument of your choice`,
+		languages: `one non-exotic language of your choice`,
+		startingEquipment: `Worn common cloths with many patches, thieves tools, a Fake Injury kit (see Tools section in equipment), and a hat with 5 gp.`,
+		backgroundSpecial: {
+			title: `A Poor Man's Story`,
+			description: `Perhaps you weren't always begging. Perhaps you life forced you in that situation. Perhaps it was a choice.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `I used to be a criminal, and my name earns me no honest work now.`,
+				},
+				{
+					number: 2,
+					description: `I lost everything due to loans, and they did take all I had.`,
+				},
+				{
+					number: 3,
+					description: `I wronged my family too much for them to overlook, and they kicked me out.`,
+				},
+				{
+					number: 4,
+					description: `I may have been poor since I was born, but never in my life have I done a misdeed.`,
+				},
+				{
+					number: 5,
+					description: `I left all I had behind, in hopes to get rid of all the fake people in my life.`,
+				},
+				{
+					number: 6,
+					description: `I can't even think all the troubles the rich people go through. I pity them too.`,
+				},
+				{
+					number: 7,
+					description: `I try to collect enough money to stop being poor.`,
+				},
+				{
+					number: 8,
+					description: `Even with the money I get, I try to help others in need.`,
+				},
+			],
+		},
+		feature: {
+			title: `An Ignorable Presence`,
+			description: `After all this time, you have learned to be ignored, no matter the place you go. As long as you don't steal anything or speak to anyone, your presence is as good as your absence.`,
+		},
+		alterateFeature: [
+			{
+				title: `A Pig's feast`,
+				description: `No matter where you eat or what you eat, you don't feel disgusted when you ingest anything. However, you cannot appreciate a finer taste either.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I always wish someone who leaves money well.`,
+				},
+				{
+					number: 2,
+					description: `I remember everyone who has given alms or spat in my face.`,
+				},
+				{
+					number: 3,
+					description: `I will do anything for even a piece of bread, if I haven't eaten for days.`,
+				},
+				{
+					number: 4,
+					description: `Every copper in the day is another piece of copper in the night.`,
+				},
+				{
+					number: 5,
+					description: `I hide my coins in places people would find either crude or weird.`,
+				},
+				{
+					number: 6,
+					description: `I want to be in no trouble; just to live in peace.`,
+				},
+				{
+					number: 7,
+					description: `I try to collect enough money to stop being poor.`,
+				},
+				{
+					number: 8,
+					description: `Even with the money I get, I try to help others in need.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Helper`,
+					description: `Despite my misfortunes I will help others in place of getting out of poverty. (Good)`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Poor`,
+					description: `I use my low social position and connections to aid authority's investigations, for a price.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Hatred`,
+					description: ``,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Freedom`,
+					description: `I hate the social contract and will subvert it in every way I can, big or small.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Revenge`,
+					description: `I didn't choose this and I will get revenge on the people who betrayed me. Percieved or True.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Survival`,
+					description: `We all do what we must to survive this cruel world. `,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I owe loyalty to a particular person and I am protecting them from the shadows.`,
+				},
+				{
+					number: 2,
+					description: `I'm a fugitive hiding in plain sight.`,
+				},
+				{
+					number: 3,
+					description: `I can't or choose not to remember my previous life.`,
+				},
+				{
+					number: 4,
+					description: `I have a particular skill that went out of popularity or legality, so now I use it for my own ends.`,
+				},
+				{
+					number: 5,
+					description: `There are voices that guide me to stop tragedy, but I'm afraid people with think I'm insane if I talk about them.`,
+				},
+				{
+					number: 6,
+					description: `I'm trying to find my place in the world.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am penchant to gambling and rarely stop until I am in debt.`,
+				},
+				{
+					number: 2,
+					description: `I'm lazy and avoid doing work as much as possible.`,
+				},
+				{
+					number: 3,
+					description: `I lack the self confidance and courage to take on opportunities presented to me.`,
+				},
+				{
+					number: 4,
+					description: `I'm always manage to insult or repulse people, perhaps through a lack of social awareness.`,
+				},
+				{
+					number: 5,
+					description: `I'm naïve and despite having a good work ethic, people take advantage of me.`,
+				},
+				{
+					number: 6,
+					description: `My addictions can be overwhelming and kick me down everytime things start going my way.`,
+				},
+			],
+		},
+	},
+	Bereaved: {
+		isHomebrew: true,
+		description: `People come and go, yet sometimes they can affect your life long after their passing.
+						Someone very important to you died. A family member, a lover or a friend. Perhaps a celebrity or role model. Whoever they were, they had an impact on your life so profound that they dominate your thoughts even now.
+						Who was this person that I mourn? What was it about them that impacted me me so? Has the manner of their death left me with unresolved anguish? Do I refuse to let them go believing that they live again? Or am I revengeful, blaming their death on an individual or group? Do I mourn in sadness, or do I celebrate their life? And why did this lead me to the adventuring life? Did they have a powerful secret or unfinished work? Or do they deserve to be remembered? Also ask your GM about the mourning practices in the world the campaign takes place in`,
+		skillProficiencies: `Religion, Insight.`,
+		toolProficiencies: `One type of gaming set or toolset`,
+		languages: `Any language of your choice`,
+		startingEquipment: `A keepsake from your loved one (jewellery, artwork, or some other trinket), a letter of condolence, a gaming set or tool set, common clothes, and a pouch containing 10gp.`,
+		backgroundSpecial: {
+			title: `Your Loved One`,
+			description: `Your loved one either had a life that lead you to adventuring, or events surrounding their death drive you on. Roll a d6 or choose from the options in the table below.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `They had unfinished work that I'm duty bound to finish.`,
+				},
+				{
+					number: 2,
+					description: `They deserve to be remembered by others. I do all in their name.`,
+				},
+				{
+					number: 3,
+					description: `Their deaths were murder or unjust and I will avenge them.`,
+				},
+				{
+					number: 4,
+					description: `They were spiritual and I must please their spirit.`,
+				},
+				{
+					number: 5,
+					description: `They had a powerful secret or artifact that must be protected.`,
+				},
+				{
+					number: 6,
+					description: `They were an adventurer, and I simply wish to follow in their footsteps.`,
+				},
+			],
+		},
+		feature: {
+			title: `In Mourning`,
+			description: `When something terrible happens to someone, people in good relations with that person tend to take pity. Friends might help you in ways that don't threaten their life. Like giving supplies or providing a place to stay as long as it seems to comfort the mourner. However, enemies of the mourner might take their emotional vulnerability to their advantage; so beware of charlatans and other villainous characters`,
+		},
+		alterateFeature: [
+			{
+				title: `Spiritual Presence`,
+				description: `Nearly every culture believes in some form of a ghost or spirit. You believe that the spirit of your loved one is guiding you in your adventures. Sudden strokes of luck or mysterious events seem to not be a coincidence to you; but a sign that your loved one is watching over you. But sometimes this sense of guidance can make you seem overconfident or make you easy to fool.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try to make new friends and want to move on.`,
+				},
+				{
+					number: 2,
+					description: `I'm working on my drinking problem.`,
+				},
+				{
+					number: 3,
+					description: `I'm hugely interested in reincarnation and the afterlife.`,
+				},
+				{
+					number: 4,
+					description: `I've become overly sympathetic to others.`,
+				},
+				{
+					number: 5,
+					description: `Darkness doesn't unnerve me like most people.`,
+				},
+				{
+					number: 6,
+					description: `I think I see people that look like my loved one all the time.`,
+				},
+				{
+					number: 7,
+					description: `I cherish my memories and will hold onto any keepsakes I have.`,
+				},
+				{
+					number: 8,
+					description: `I will never find someone to replace them.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Memories`,
+					description: `I'll forever cherish the memories of my loved one`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Appeasement`,
+					description: `I must appease the spirit of my loved one.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Defilement`,
+					description: `I'll break the laws of nature and the Gods to get my loved one back! `,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Non-Superstition`,
+					description: `I miss my loved one, but that does not mean that they're watching me.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Preservation`,
+					description: `I'll never forget my loved one, I want others to remember them too.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Future`,
+					description: `I must learn to be concerned about my future.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I promised to follow my dreams.`,
+				},
+				{
+					number: 2,
+					description: `I will complete their life's goal.`,
+				},
+				{
+					number: 3,
+					description: `I will raise a monument to their memory.`,
+				},
+				{
+					number: 4,
+					description: `I will exonerate them after death.`,
+				},
+				{
+					number: 5,
+					description: `Their secret will remain hidden.`,
+				},
+				{
+					number: 6,
+					description: `I shall return them to life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Don't even try to replace my loved one. You're not worthy to step in their shadow.`,
+				},
+				{
+					number: 2,
+					description: `I am often maudlin and introspective.`,
+				},
+				{
+					number: 3,
+					description: `I hide my pain behind a facade of bravado.`,
+				},
+				{
+					number: 4,
+					description: `I cry without provocation.`,
+				},
+				{
+					number: 5,
+					description: `I don't want to love again.`,
+				},
+				{
+					number: 6,
+					description: `Your pain is nothing compared to mine.`,
+				},
+			],
+		},
+	},
+	Biologist: {
+		isHomebrew: true,
+		description: "You have always been fascinated with life, from insects to plants, to monsters. You desire to find and document as many creatures around the world as you can. By studying these creatures, you believe you can either use them for your own gain or you can hopefully better understand them and help others understand them.",
+		skillProficiencies: "Animal Handling, Nature",
+		toolProficiencies: "None",
+		languages: "Two of your choice",
+		startingEquipment: "A leather-bound diary, documentation of your favorite animal, a bottle of ink, an ink pen, a set of traveler’s clothes, and a pouch containing 10 gp",
+		backgroundSpecial: {
+			title: "Favored Animal",
+			description: "Every biologist has a specialized type of animal that they excel at examining.",
+			die: "d6",
+			roll: [
+				{
+					number: 1,
+					description: "Mammals",
+				},
+				{
+					number: 2,
+					description: "Birds",
+				},
+				{
+					number: 3,
+					description: "Reptiles",
+				},
+				{
+					number: 4,
+					description: "Amphibians",
+				},
+				{
+					number: 5,
+					description: "Bugs",
+				},
+				{
+					number: 6,
+					description: "Fish",
+				}
+			],
+		},
+		feature: {
+			title: "Respectful Connections",
+			description: "As a biologist, you are constantly trying to document as many creatures as you can. Other researchers of animals and creatures respect you depending on the number of creatures that you've documented. You gain the respect of people who view intelligence highly. These types of people are more willing to speak with you than others.",
+		},
+		alterateFeature: [
+			{
+				title: "",
+				description: "",
+			},
+			{
+				title: "",
+				description: "",
+			},
+		],
+		suggestedCharacteristics: "Biologists come in many different personalities. Some are benevolent, wanting to learn and expand their knowledge. Others only want to learn so they gain an advantage in combat. Some biologists even value animal life more than their own.",
+		suggestedPersonalityTraits: {
+			description: "",
+			die: "d8",
+			title: "Personality Traits",
+			roll: [
+				{
+					number: 1,
+					description: "I love the sound of small chirping outside.",
+				},
+				{
+					number: 2,
+					description: "My love for animals outweighs my love for people.",
+				},
+				{
+					number: 3,
+					description: "Many people dislike my favorite animal and I'm not sure why.",
+				},
+				{
+					number: 4,
+					description: "I am intolerant of people you dislike animals and life.",
+				},
+				{
+					number: 5,
+					description: "I don't actually like animals and only examine them to kill them later.",
+				},
+				{
+					number: 6,
+					description: "People are often weirded out by me for my love of animals.",
+				},
+				{
+					number: 7,
+					description: "I am constantly spouting off random facts about certain creatures.",
+				},
+				{
+					number: 8,
+					description: "Every time I meet someone, I often compare them to a certain animal's behavior.",
+				}
+			],
+		},
+		suggestedIdeal: {
+			description: "",
+			die: "d6",
+			title: "Ideal",
+			roll: [
+				{
+					number: 1,
+					bold: "Preservation.",
+					description: "Animals and creatures of all kinds must be preserved. Life deserves to remain.",
+					alignment: "Good",
+				},
+				{
+					number: 2,
+					bold: "Circle of Life.",
+					description: "The circle of life must be preserved regardless of others' fears or concerns.",
+					alignment: "Neutral",
+				},
+				{
+					number: 3,
+					bold: "Fascination.",
+					description: "The creatures at the top of the food chain should be idolized and looked up to.",
+					alignment: "Chaotic",
+				},
+				{
+					number: 4,
+					bold: "Selfish Preservation.",
+					description: "Creatures and animals only serve as food and supplies for my gain and mine alone.",
+					alignment: "Evil",
+				},
+				{
+					number: 5,
+					bold: "Natural.",
+					description: "Leaving the world to its natural state is the best course of action.",
+					alignment: "Neutral",
+				},
+				{
+					number: 6,
+					bold: "Knowledge.",
+					description: "The pursuit of knowledge for life is beneficial to both me and others.",
+					alignment: "Any",
+				}
+			],
+		},
+		suggestedBond: {
+			description: "",
+			die: "d6",
+			title: "Bond",
+			roll: [
+				{
+					number: 1,
+					description: "My house pet is the most important thing to me and I would die for them.",
+				},
+				{
+					number: 2,
+					description: "Injuries or cruelties to a creature is an injury or cruelty to me.",
+				},
+				{
+					number: 3,
+					description: "Poachers destroyed the vibrant life of my homeland and I will take revenge.",
+				},
+				{
+					number: 4,
+					description: "My mentor was killed by a raging animal and so I want to find out more about said animal.",
+				},
+				{
+					number: 5,
+					description: "The extinction of certain species scares me to my core.",
+				},
+				{
+					number: 6,
+					description: "It is my duty to preserve life in all forms.",
+				}
+			],
+		},
+		suggestedFlaw: {
+			description: "",
+			die: "d6",
+			title: "Flaw",
+			roll: [
+				{
+					number: 1,
+					description: "Sometimes I can't resist the taste of an animal to leave it alive.",
+				},
+				{
+					number: 2,
+					description: "I often put myself and others in danger in order to examine creatures.",
+				},
+				{
+					number: 3,
+					description: "I remember the look and appearance of every animal I've ever come across more so than people's names.",
+				},
+				{
+					number: 4,
+					description: "I care more for the safety of a beast than the safety of my fellow peers.",
+				},
+				{
+					number: 5,
+					description: "I often like to pit certain species against each other to see what would happen for my own entertainment.",
+				},
+				{
+					number: 6,
+					description: "I'm actually very afraid of a specific species and refuse to document it.",
+				}
+			],
+		},
+	},
+	Bodyguard: {
+		isHomebrew: true,
+		description: "Whether you hide in the shadows and watch those whom you protect, or boldly be at their side as their shield, clashing against those who would do them harm, you have devoted your life to servitude for the individuals who you have deemed in need of protection.",
+		skillProficiencies: ["Perception", "Intimidation"],
+		toolProficiencies: ["Thieves' tools", "Herbalism kit"],
+		languages: ["One extra language of your choice"],
+		startingEquipment: ["2 hand crossbows or 1 heavy crossbow", "Leather armor", "Thieves' tools", "Hooded cloak", "Set of common clothes", "Belt pouch with 15 gold"],
+		backgroundSpecial: {
+			title: "Guardian",
+			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+			die: "d8",
+			roll: [
+				{
+					number: 1,
+					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+				},
+				{
+					number: 2,
+					description: "I find it hard to leave my designated companion to themselves.",
+				},
+				{
+					number: 3,
+					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+				},
+				{
+					number: 4,
+					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+				},
+				{
+					number: 5,
+					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+				},
+				{
+					number: 6,
+					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+				},
+				{
+					number: 7,
+					description: "I am vigilant and never let my guard down.",
+				},
+				{
+					number: 8,
+					description: "I have a deep sense of loyalty to those I protect.",
+				},
+			],
+		},
+		feature: {
+			title: "Guardian",
+			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+		},
+		alterateFeature: [
+			{
+				title: "Alternate Guardian",
+				description: "You may choose to grant your protected ally advantage on a saving throw, using your own Wisdom modifier. You may use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+			},
+			{
+				title: "Shield of Faith",
+				description: "You can cast the Shield of Faith spell on a creature you are protecting without expending a spell slot. You can use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+			},
+		],
+		suggestedCharacteristics: "",
+		suggestedPersonalityTraits: {
+			description: "",
+			die: "d8",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+				},
+				{
+					number: 2,
+					description: "I find it hard to leave my designated companion to themselves.",
+				},
+				{
+					number: 3,
+					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+				},
+				{
+					number: 4,
+					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+				},
+				{
+					number: 5,
+					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+				},
+				{
+					number: 6,
+					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+				},
+				{
+					number: 7,
+					description: "I am vigilant and never let my guard down.",
+				},
+				{
+					number: 8,
+					description: "I have a deep sense of loyalty to those I protect.",
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					bold: "Guardian",
+					description: "I dedicate my life to defending those who cannot defend themselves.",
+					alignment: "Good",
+				},
+				{
+					number: 2,
+					bold: "Indifferent",
+					description: "I do not have personal connections with my charge. They are merely part of the job.",
+					alignment: "Neutral",
+				},
+				{
+					number: 3,
+					bold: "Determined",
+					description: "I will protect those who I must... by any means necessary.",
+					alignment: "Chaotic",
+				},
+				{
+					number: 4,
+					bold: "Underhanded",
+					description: "I will learn what the weaknesses of my companion are so that I may take them down in the long run.",
+					alignment: "Evil",
+				},
+				{
+					number: 5,
+					bold: "Resolute",
+					description: "I follow the law laid down for me to protect those whom I am ordered to.",
+					alignment: "Lawful",
+				},
+				{
+					number: 6,
+					bold: "Flexible",
+					description: "I take into account my past experiences to help prepare for the future endeavors.",
+					alignment: "Any",
+				},
+			],
+		},
+		suggestedBond: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I have a home I love somewhere, though I may not often see it.",
+				},
+				{
+					number: 2,
+					description: "I am part of an order dedicated to protecting those in need.",
+				},
+				{
+					number: 3,
+					description: "The one who I look after saved me from something horrible once: I owe them everything.",
+				},
+				{
+					number: 4,
+					description: "I have other friends in this business who don't perform their duties exactly how I do.",
+				},
+				{
+					number: 5,
+					description: "I became as I am to escape a darker time in my life. That time is behind me now, but the faces from the past still linger.",
+				},
+				{
+					number: 6,
+					description: "My companion isn't the only one who I should protect. There are many more out there without a shield to stand behind.",
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I have lost companions before. I now detach myself from my new companions to prevent that same heartache from returning.",
+				},
+				{
+					number: 2,
+					description: "I am oftentimes forgetful, and find this is much to my companion's dismay.",
+				},
+				{
+					number: 3,
+					description: "Due to my experience and law, I am very stubborn in my ways. It is very nearly impossible to sway my opinions on how things should be handled.",
+				},
+				{
+					number: 4,
+					description: "Trust is a rare commodity in my line of work. As such, it is not something I often give to others.",
+				},
+				{
+					number: 5,
+					description: "My companion and I don't get along in the slightest. It makes it quite difficult to want to look after them.",
+				},
+				{
+					number: 6,
+					description: "Although I am sworn to protect my companion first and foremost, I will abandon them in the face of certain death. No pay is worth the trouble.",
+				},
+			],
+		},
+	}
+	
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
