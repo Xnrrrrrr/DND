@@ -3830,6 +3830,22 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Beggar", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Biologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bodyguard", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bereaved",
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -9634,6 +9650,817 @@ export const backgroundDesc = {
 			],
 		},
 	},
+	Beggar: {
+		isHomebrew: true,
+		description: `Why did you start begging? Did you suffer an injury or did you want some extra pocket change? Do you fake an injury or is it real? Have always lived on the streets or were you pushed away by loved ones? Whatever the reason you now rely on people better off than you for help`,
+		skillProficiencies: `Deception, Sleight of Hand`,
+		toolProficiencies: `Thieves tools, and one gaming set or musical instrument of your choice`,
+		languages: `one non-exotic language of your choice`,
+		startingEquipment: `Worn common cloths with many patches, thieves tools, a Fake Injury kit (see Tools section in equipment), and a hat with 5 gp.`,
+		backgroundSpecial: {
+			title: `A Poor Man's Story`,
+			description: `Perhaps you weren't always begging. Perhaps you life forced you in that situation. Perhaps it was a choice.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `I used to be a criminal, and my name earns me no honest work now.`,
+				},
+				{
+					number: 2,
+					description: `I lost everything due to loans, and they did take all I had.`,
+				},
+				{
+					number: 3,
+					description: `I wronged my family too much for them to overlook, and they kicked me out.`,
+				},
+				{
+					number: 4,
+					description: `I may have been poor since I was born, but never in my life have I done a misdeed.`,
+				},
+				{
+					number: 5,
+					description: `I left all I had behind, in hopes to get rid of all the fake people in my life.`,
+				},
+				{
+					number: 6,
+					description: `I can't even think all the troubles the rich people go through. I pity them too.`,
+				},
+				{
+					number: 7,
+					description: `I try to collect enough money to stop being poor.`,
+				},
+				{
+					number: 8,
+					description: `Even with the money I get, I try to help others in need.`,
+				},
+			],
+		},
+		feature: {
+			title: `An Ignorable Presence`,
+			description: `After all this time, you have learned to be ignored, no matter the place you go. As long as you don't steal anything or speak to anyone, your presence is as good as your absence.`,
+		},
+		alterateFeature: [
+			{
+				title: `A Pig's feast`,
+				description: `No matter where you eat or what you eat, you don't feel disgusted when you ingest anything. However, you cannot appreciate a finer taste either.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I always wish someone who leaves money well.`,
+				},
+				{
+					number: 2,
+					description: `I remember everyone who has given alms or spat in my face.`,
+				},
+				{
+					number: 3,
+					description: `I will do anything for even a piece of bread, if I haven't eaten for days.`,
+				},
+				{
+					number: 4,
+					description: `Every copper in the day is another piece of copper in the night.`,
+				},
+				{
+					number: 5,
+					description: `I hide my coins in places people would find either crude or weird.`,
+				},
+				{
+					number: 6,
+					description: `I want to be in no trouble; just to live in peace.`,
+				},
+				{
+					number: 7,
+					description: `I try to collect enough money to stop being poor.`,
+				},
+				{
+					number: 8,
+					description: `Even with the money I get, I try to help others in need.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Helper`,
+					description: `Despite my misfortunes I will help others in place of getting out of poverty. (Good)`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Poor`,
+					description: `I use my low social position and connections to aid authority's investigations, for a price.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Hatred`,
+					description: ``,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Freedom`,
+					description: `I hate the social contract and will subvert it in every way I can, big or small.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Revenge`,
+					description: `I didn't choose this and I will get revenge on the people who betrayed me. Percieved or True.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Survival`,
+					description: `We all do what we must to survive this cruel world. `,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I owe loyalty to a particular person and I am protecting them from the shadows.`,
+				},
+				{
+					number: 2,
+					description: `I'm a fugitive hiding in plain sight.`,
+				},
+				{
+					number: 3,
+					description: `I can't or choose not to remember my previous life.`,
+				},
+				{
+					number: 4,
+					description: `I have a particular skill that went out of popularity or legality, so now I use it for my own ends.`,
+				},
+				{
+					number: 5,
+					description: `There are voices that guide me to stop tragedy, but I'm afraid people with think I'm insane if I talk about them.`,
+				},
+				{
+					number: 6,
+					description: `I'm trying to find my place in the world.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am penchant to gambling and rarely stop until I am in debt.`,
+				},
+				{
+					number: 2,
+					description: `I'm lazy and avoid doing work as much as possible.`,
+				},
+				{
+					number: 3,
+					description: `I lack the self confidance and courage to take on opportunities presented to me.`,
+				},
+				{
+					number: 4,
+					description: `I'm always manage to insult or repulse people, perhaps through a lack of social awareness.`,
+				},
+				{
+					number: 5,
+					description: `I'm naïve and despite having a good work ethic, people take advantage of me.`,
+				},
+				{
+					number: 6,
+					description: `My addictions can be overwhelming and kick me down everytime things start going my way.`,
+				},
+			],
+		},
+	},
+	Bereaved: {
+		isHomebrew: true,
+		description: `People come and go, yet sometimes they can affect your life long after their passing.
+						Someone very important to you died. A family member, a lover or a friend. Perhaps a celebrity or role model. Whoever they were, they had an impact on your life so profound that they dominate your thoughts even now.
+						Who was this person that I mourn? What was it about them that impacted me me so? Has the manner of their death left me with unresolved anguish? Do I refuse to let them go believing that they live again? Or am I revengeful, blaming their death on an individual or group? Do I mourn in sadness, or do I celebrate their life? And why did this lead me to the adventuring life? Did they have a powerful secret or unfinished work? Or do they deserve to be remembered? Also ask your GM about the mourning practices in the world the campaign takes place in`,
+		skillProficiencies: `Religion, Insight.`,
+		toolProficiencies: `One type of gaming set or toolset`,
+		languages: `Any language of your choice`,
+		startingEquipment: `A keepsake from your loved one (jewellery, artwork, or some other trinket), a letter of condolence, a gaming set or tool set, common clothes, and a pouch containing 10gp.`,
+		backgroundSpecial: {
+			title: `Your Loved One`,
+			description: `Your loved one either had a life that lead you to adventuring, or events surrounding their death drive you on. Roll a d6 or choose from the options in the table below.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `They had unfinished work that I'm duty bound to finish.`,
+				},
+				{
+					number: 2,
+					description: `They deserve to be remembered by others. I do all in their name.`,
+				},
+				{
+					number: 3,
+					description: `Their deaths were murder or unjust and I will avenge them.`,
+				},
+				{
+					number: 4,
+					description: `They were spiritual and I must please their spirit.`,
+				},
+				{
+					number: 5,
+					description: `They had a powerful secret or artifact that must be protected.`,
+				},
+				{
+					number: 6,
+					description: `They were an adventurer, and I simply wish to follow in their footsteps.`,
+				},
+			],
+		},
+		feature: {
+			title: `In Mourning`,
+			description: `When something terrible happens to someone, people in good relations with that person tend to take pity. Friends might help you in ways that don't threaten their life. Like giving supplies or providing a place to stay as long as it seems to comfort the mourner. However, enemies of the mourner might take their emotional vulnerability to their advantage; so beware of charlatans and other villainous characters`,
+		},
+		alterateFeature: [
+			{
+				title: `Spiritual Presence`,
+				description: `Nearly every culture believes in some form of a ghost or spirit. You believe that the spirit of your loved one is guiding you in your adventures. Sudden strokes of luck or mysterious events seem to not be a coincidence to you; but a sign that your loved one is watching over you. But sometimes this sense of guidance can make you seem overconfident or make you easy to fool.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try to make new friends and want to move on.`,
+				},
+				{
+					number: 2,
+					description: `I'm working on my drinking problem.`,
+				},
+				{
+					number: 3,
+					description: `I'm hugely interested in reincarnation and the afterlife.`,
+				},
+				{
+					number: 4,
+					description: `I've become overly sympathetic to others.`,
+				},
+				{
+					number: 5,
+					description: `Darkness doesn't unnerve me like most people.`,
+				},
+				{
+					number: 6,
+					description: `I think I see people that look like my loved one all the time.`,
+				},
+				{
+					number: 7,
+					description: `I cherish my memories and will hold onto any keepsakes I have.`,
+				},
+				{
+					number: 8,
+					description: `I will never find someone to replace them.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Memories`,
+					description: `I'll forever cherish the memories of my loved one`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Appeasement`,
+					description: `I must appease the spirit of my loved one.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Defilement`,
+					description: `I'll break the laws of nature and the Gods to get my loved one back! `,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Non-Superstition`,
+					description: `I miss my loved one, but that does not mean that they're watching me.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Preservation`,
+					description: `I'll never forget my loved one, I want others to remember them too.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Future`,
+					description: `I must learn to be concerned about my future.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I promised to follow my dreams.`,
+				},
+				{
+					number: 2,
+					description: `I will complete their life's goal.`,
+				},
+				{
+					number: 3,
+					description: `I will raise a monument to their memory.`,
+				},
+				{
+					number: 4,
+					description: `I will exonerate them after death.`,
+				},
+				{
+					number: 5,
+					description: `Their secret will remain hidden.`,
+				},
+				{
+					number: 6,
+					description: `I shall return them to life.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Don't even try to replace my loved one. You're not worthy to step in their shadow.`,
+				},
+				{
+					number: 2,
+					description: `I am often maudlin and introspective.`,
+				},
+				{
+					number: 3,
+					description: `I hide my pain behind a facade of bravado.`,
+				},
+				{
+					number: 4,
+					description: `I cry without provocation.`,
+				},
+				{
+					number: 5,
+					description: `I don't want to love again.`,
+				},
+				{
+					number: 6,
+					description: `Your pain is nothing compared to mine.`,
+				},
+			],
+		},
+	},
+	Biologist: {
+		isHomebrew: true,
+		description: "You have always been fascinated with life, from insects to plants, to monsters. You desire to find and document as many creatures around the world as you can. By studying these creatures, you believe you can either use them for your own gain or you can hopefully better understand them and help others understand them.",
+		skillProficiencies: "Animal Handling, Nature",
+		toolProficiencies: "None",
+		languages: "Two of your choice",
+		startingEquipment: "A leather-bound diary, documentation of your favorite animal, a bottle of ink, an ink pen, a set of traveler’s clothes, and a pouch containing 10 gp",
+		backgroundSpecial: {
+			title: "Favored Animal",
+			description: "Every biologist has a specialized type of animal that they excel at examining.",
+			die: "d6",
+			roll: [
+				{
+					number: 1,
+					description: "Mammals",
+				},
+				{
+					number: 2,
+					description: "Birds",
+				},
+				{
+					number: 3,
+					description: "Reptiles",
+				},
+				{
+					number: 4,
+					description: "Amphibians",
+				},
+				{
+					number: 5,
+					description: "Bugs",
+				},
+				{
+					number: 6,
+					description: "Fish",
+				}
+			],
+		},
+		feature: {
+			title: "Respectful Connections",
+			description: "As a biologist, you are constantly trying to document as many creatures as you can. Other researchers of animals and creatures respect you depending on the number of creatures that you've documented. You gain the respect of people who view intelligence highly. These types of people are more willing to speak with you than others.",
+		},
+		alterateFeature: [
+			{
+				title: "",
+				description: "",
+			},
+			{
+				title: "",
+				description: "",
+			},
+		],
+		suggestedCharacteristics: "Biologists come in many different personalities. Some are benevolent, wanting to learn and expand their knowledge. Others only want to learn so they gain an advantage in combat. Some biologists even value animal life more than their own.",
+		suggestedPersonalityTraits: {
+			description: "",
+			die: "d8",
+			title: "Personality Traits",
+			roll: [
+				{
+					number: 1,
+					description: "I love the sound of small chirping outside.",
+				},
+				{
+					number: 2,
+					description: "My love for animals outweighs my love for people.",
+				},
+				{
+					number: 3,
+					description: "Many people dislike my favorite animal and I'm not sure why.",
+				},
+				{
+					number: 4,
+					description: "I am intolerant of people you dislike animals and life.",
+				},
+				{
+					number: 5,
+					description: "I don't actually like animals and only examine them to kill them later.",
+				},
+				{
+					number: 6,
+					description: "People are often weirded out by me for my love of animals.",
+				},
+				{
+					number: 7,
+					description: "I am constantly spouting off random facts about certain creatures.",
+				},
+				{
+					number: 8,
+					description: "Every time I meet someone, I often compare them to a certain animal's behavior.",
+				}
+			],
+		},
+		suggestedIdeal: {
+			description: "",
+			die: "d6",
+			title: "Ideal",
+			roll: [
+				{
+					number: 1,
+					bold: "Preservation.",
+					description: "Animals and creatures of all kinds must be preserved. Life deserves to remain.",
+					alignment: "Good",
+				},
+				{
+					number: 2,
+					bold: "Circle of Life.",
+					description: "The circle of life must be preserved regardless of others' fears or concerns.",
+					alignment: "Neutral",
+				},
+				{
+					number: 3,
+					bold: "Fascination.",
+					description: "The creatures at the top of the food chain should be idolized and looked up to.",
+					alignment: "Chaotic",
+				},
+				{
+					number: 4,
+					bold: "Selfish Preservation.",
+					description: "Creatures and animals only serve as food and supplies for my gain and mine alone.",
+					alignment: "Evil",
+				},
+				{
+					number: 5,
+					bold: "Natural.",
+					description: "Leaving the world to its natural state is the best course of action.",
+					alignment: "Neutral",
+				},
+				{
+					number: 6,
+					bold: "Knowledge.",
+					description: "The pursuit of knowledge for life is beneficial to both me and others.",
+					alignment: "Any",
+				}
+			],
+		},
+		suggestedBond: {
+			description: "",
+			die: "d6",
+			title: "Bond",
+			roll: [
+				{
+					number: 1,
+					description: "My house pet is the most important thing to me and I would die for them.",
+				},
+				{
+					number: 2,
+					description: "Injuries or cruelties to a creature is an injury or cruelty to me.",
+				},
+				{
+					number: 3,
+					description: "Poachers destroyed the vibrant life of my homeland and I will take revenge.",
+				},
+				{
+					number: 4,
+					description: "My mentor was killed by a raging animal and so I want to find out more about said animal.",
+				},
+				{
+					number: 5,
+					description: "The extinction of certain species scares me to my core.",
+				},
+				{
+					number: 6,
+					description: "It is my duty to preserve life in all forms.",
+				}
+			],
+		},
+		suggestedFlaw: {
+			description: "",
+			die: "d6",
+			title: "Flaw",
+			roll: [
+				{
+					number: 1,
+					description: "Sometimes I can't resist the taste of an animal to leave it alive.",
+				},
+				{
+					number: 2,
+					description: "I often put myself and others in danger in order to examine creatures.",
+				},
+				{
+					number: 3,
+					description: "I remember the look and appearance of every animal I've ever come across more so than people's names.",
+				},
+				{
+					number: 4,
+					description: "I care more for the safety of a beast than the safety of my fellow peers.",
+				},
+				{
+					number: 5,
+					description: "I often like to pit certain species against each other to see what would happen for my own entertainment.",
+				},
+				{
+					number: 6,
+					description: "I'm actually very afraid of a specific species and refuse to document it.",
+				}
+			],
+		},
+	},
+	Bodyguard: {
+		isHomebrew: true,
+		description: "Whether you hide in the shadows and watch those whom you protect, or boldly be at their side as their shield, clashing against those who would do them harm, you have devoted your life to servitude for the individuals who you have deemed in need of protection.",
+		skillProficiencies: ["Perception", "Intimidation"],
+		toolProficiencies: ["Thieves' tools", "Herbalism kit"],
+		languages: ["One extra language of your choice"],
+		startingEquipment: ["2 hand crossbows or 1 heavy crossbow", "Leather armor", "Thieves' tools", "Hooded cloak", "Set of common clothes", "Belt pouch with 15 gold"],
+		backgroundSpecial: {
+			title: "Guardian",
+			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+			die: "d8",
+			roll: [
+				{
+					number: 1,
+					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+				},
+				{
+					number: 2,
+					description: "I find it hard to leave my designated companion to themselves.",
+				},
+				{
+					number: 3,
+					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+				},
+				{
+					number: 4,
+					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+				},
+				{
+					number: 5,
+					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+				},
+				{
+					number: 6,
+					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+				},
+				{
+					number: 7,
+					description: "I am vigilant and never let my guard down.",
+				},
+				{
+					number: 8,
+					description: "I have a deep sense of loyalty to those I protect.",
+				},
+			],
+		},
+		feature: {
+			title: "Guardian",
+			description: "You may elect to place yourself in the path of danger in order to protect a friendly creature or humanoid. Any time that you are within 10 feet of them, and they suffer an attack, you may switch places with them and receive the attack in their place. You must declare this before the attack roll is made. You can use this feature a number of times equal to your Dexterity modifier, and it is restored after a long rest.",
+		},
+		alterateFeature: [
+			{
+				title: "Alternate Guardian",
+				description: "You may choose to grant your protected ally advantage on a saving throw, using your own Wisdom modifier. You may use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+			},
+			{
+				title: "Shield of Faith",
+				description: "You can cast the Shield of Faith spell on a creature you are protecting without expending a spell slot. You can use this feature a number of times equal to your Wisdom modifier, and it is restored after a long rest.",
+			},
+		],
+		suggestedCharacteristics: "",
+		suggestedPersonalityTraits: {
+			description: "",
+			die: "d8",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I am overly cautious of all food and drink that either my companion or I consume.",
+				},
+				{
+					number: 2,
+					description: "I find it hard to leave my designated companion to themselves.",
+				},
+				{
+					number: 3,
+					description: "I try to take the safest routes through cities, roads, or passes: I am not a fan of dark alley shortcuts.",
+				},
+				{
+					number: 4,
+					description: "If my companion's legs were weary in the Nine Hells, I would carry them every step of the way.",
+				},
+				{
+					number: 5,
+					description: "Even though I am constantly by my companion's side, I cannot help but feel alone sometimes.",
+				},
+				{
+					number: 6,
+					description: "I often try to make situations sound better than they are to make my companion feel more comfortable.",
+				},
+				{
+					number: 7,
+					description: "I am vigilant and never let my guard down.",
+				},
+				{
+					number: 8,
+					description: "I have a deep sense of loyalty to those I protect.",
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					bold: "Guardian",
+					description: "I dedicate my life to defending those who cannot defend themselves.",
+					alignment: "Good",
+				},
+				{
+					number: 2,
+					bold: "Indifferent",
+					description: "I do not have personal connections with my charge. They are merely part of the job.",
+					alignment: "Neutral",
+				},
+				{
+					number: 3,
+					bold: "Determined",
+					description: "I will protect those who I must... by any means necessary.",
+					alignment: "Chaotic",
+				},
+				{
+					number: 4,
+					bold: "Underhanded",
+					description: "I will learn what the weaknesses of my companion are so that I may take them down in the long run.",
+					alignment: "Evil",
+				},
+				{
+					number: 5,
+					bold: "Resolute",
+					description: "I follow the law laid down for me to protect those whom I am ordered to.",
+					alignment: "Lawful",
+				},
+				{
+					number: 6,
+					bold: "Flexible",
+					description: "I take into account my past experiences to help prepare for the future endeavors.",
+					alignment: "Any",
+				},
+			],
+		},
+		suggestedBond: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I have a home I love somewhere, though I may not often see it.",
+				},
+				{
+					number: 2,
+					description: "I am part of an order dedicated to protecting those in need.",
+				},
+				{
+					number: 3,
+					description: "The one who I look after saved me from something horrible once: I owe them everything.",
+				},
+				{
+					number: 4,
+					description: "I have other friends in this business who don't perform their duties exactly how I do.",
+				},
+				{
+					number: 5,
+					description: "I became as I am to escape a darker time in my life. That time is behind me now, but the faces from the past still linger.",
+				},
+				{
+					number: 6,
+					description: "My companion isn't the only one who I should protect. There are many more out there without a shield to stand behind.",
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: "",
+			die: "d6",
+			title: "",
+			roll: [
+				{
+					number: 1,
+					description: "I have lost companions before. I now detach myself from my new companions to prevent that same heartache from returning.",
+				},
+				{
+					number: 2,
+					description: "I am oftentimes forgetful, and find this is much to my companion's dismay.",
+				},
+				{
+					number: 3,
+					description: "Due to my experience and law, I am very stubborn in my ways. It is very nearly impossible to sway my opinions on how things should be handled.",
+				},
+				{
+					number: 4,
+					description: "Trust is a rare commodity in my line of work. As such, it is not something I often give to others.",
+				},
+				{
+					number: 5,
+					description: "My companion and I don't get along in the slightest. It makes it quite difficult to want to look after them.",
+				},
+				{
+					number: 6,
+					description: "Although I am sworn to protect my companion first and foremost, I will abandon them in the face of certain death. No pay is worth the trouble.",
+				},
+			],
+		},
+	}
+	
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 

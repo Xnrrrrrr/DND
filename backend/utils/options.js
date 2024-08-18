@@ -28,6 +28,10 @@ const backgrounds = [
 	"Barmaid", //homebrew
 	"Bartender", //homebrew
 	"Battlesmith", //homebrew
+	"Beggar", //homebrew
+	"Bereaved", //homebrew
+	"Biologist", //homebrew
+	"Bodyguard", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
