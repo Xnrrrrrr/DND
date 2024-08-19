@@ -37,6 +37,10 @@ const UserSchema = new mongoose.Schema(
 			enum: ["user", "admin", "superAdmin"],
 			default: "user",
 		},
+		characters: {
+			type: [mongoose.Schema.Types.ObjectId],
+			ref: "CharacterSheet",
+		},
 	},
 	{
 		timestamps: true,

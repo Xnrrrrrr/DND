@@ -11,7 +11,7 @@ import {
 import store from './store.js';
 import { Provider } from 'react-redux';
 
-import { Landing, Login, SignUp, CharacterSheet, Home, PrivateRoute } from "./pages";
+import { Landing, Login, SignUp, PrivateRoute, Home, CharacterSheet, Party } from "./pages";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -23,6 +23,7 @@ const router = createBrowserRouter(
 			<Route path="" element={<PrivateRoute />}>
 				<Route path="/home" element={<Home />} />
 				<Route path="/character-sheet" element={<CharacterSheet />} />
+				<Route path="/party" element={<Party />} />
 			</Route>
 		</Route>
 	)

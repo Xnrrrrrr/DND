@@ -30,6 +30,8 @@ import {
 	eyesArray,
 } from "./option.js";
 import { useCreateCharacterSheetMutation } from "../../slices/characterSheet/characterSheetApiSlice.js";
+import { getUserInfo } from "../../slices/user/userSlice.js";
+import { getAllUserCharacterSheets } from "../../slices/characterSheet/characterSheetSlice.js";
 import { ClipLoader } from "react-spinners";
 import { classImages } from "./image.js";
 import selectClassImage from "../../assets/classes/select-class.jpg";
@@ -355,13 +357,6 @@ const CharacterSheet = () => {
 		}
 	};
 
-	const handleSubLabelClick = () => {
-		window.scrollTo({
-			top: document.body.scrollHeight,
-			behavior: "smooth",
-		});
-	};
-
 	const submitHandler = async (e) => {
 		e.preventDefault();
 
@@ -371,7 +366,7 @@ const CharacterSheet = () => {
 			return;
 		}
 
-		if (isPointBuy) {
+		if (!isPointBuy) {
 			if (
 				!strengthRoll ||
 				!dexterityRoll ||
@@ -442,11 +437,16 @@ const CharacterSheet = () => {
 
 		try {
 			const res = await create(payload).unwrap();
+
+			console.log(res);
+			
 			if (res) {
+				await dispatch(getAllUserCharacterSheets());
+				await dispatch(getUserInfo());
 				navigate("/home");
 			}
 		} catch (err) {
-			console.error(err?.data?.message || err.error);
+			console.error(err?.data?.message || err.error); // error here
 		}
 	};
 

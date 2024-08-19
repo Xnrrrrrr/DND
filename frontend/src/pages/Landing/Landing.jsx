@@ -33,9 +33,9 @@ const Landing = () => {
 						{userData ? (
 							<button
 								className="cta-button"
-								onClick={() => navigate("/party")}
+								onClick={() => navigate("/home")}
 							>
-								Create/Join a Adventure
+								Navigate to Home
 							</button>
 						) : (
 							<button

@@ -346,13 +346,37 @@ const createCharacterSheet = asyncHandler(async (req, res) => {
 		user: user._id,
 	});
 	await characterSheet.save();
+	user.characters.push(characterSheet._id);
+	await user.save();
 	res.status(StatusCodes.CREATED).json({ characterSheet });
+});
+
+/**
+ * @desc	Get all of a user's character sheets
+ * @route	Get /api/v1/character-sheet/user
+ * @access	Private
+ */
+const getAllUserCharacterSheets = asyncHandler(async (req, res) => {
+	const userId = req.user._id.toString();
+
+	const user = await User.findById(userId);
+
+	if (!user) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(`No user found with id ${userId}.`);
+	}
+
+	const characterSheets = await CharacterSheet.find({
+		_id: { $in: user.characters },
+	});
+
+	res.status(StatusCodes.OK).json({ characterSheets });
 });
 
 /**
  * @desc	Get all character sheets
  * @route	Get /api/v1/character-sheet
- * @access	Private
+ * @access	Private --- admin
  */
 const getAllCharacterSheets = asyncHandler(async (req, res) => {
 	const characterSheets = await CharacterSheet.find({})
@@ -370,125 +394,49 @@ const getAllCharacterSheets = asyncHandler(async (req, res) => {
  * @access	Private
  */
 const updateCharacterSheet = asyncHandler(async (req, res) => {
-	const { characterSheetId } = req.params;
-	const {
-		skills,
-		characterFirstName,
-		characterLastName,
-		ideals,
-		bonds,
-		religion,
-		flaws,
-		backgrounds,
-		primaryClass,
-		subClass,
-		armorClass,
-		currentHitPoints,
-		temporaryHitPoints,
-		equipment,
-		race,
-		inspiration,
-		dexterity,
-		intelligence,
-		wisdom,
-		charisma,
-		strength,
-		proficiencyBonus,
-		savingThrows,
-		alignment,
-		background,
-		features,
-		personalityTraits,
-		languages,
-		exoticLanguage,
-		age,
-		height,
-		weight,
-		skin,
-		hair,
-		eyes,
-		proficiencies,
-		characterAppearance,
-		characterBackstory,
-		allies,
-		organizations,
-	} = req.body;
-	const characterSheet = await CharacterSheet.findByIdAndUpdate(
-		characterSheetId,
-		{
-			skills,
-			characterFirstName,
-			characterLastName,
-			ideals,
-			bonds,
-			religion,
-			flaws,
-			backgrounds,
-			primaryClass,
-			subClass,
-			armorClass,
-			currentHitPoints,
-			temporaryHitPoints,
-			equipment,
-			race,
-			inspiration,
-			dexterity,
-			intelligence,
-			wisdom,
-			charisma,
-			strength,
-			proficiencyBonus,
-			savingThrows,
-			alignment,
-			background,
-			features,
-			personalityTraits,
-			languages,
-			exoticLanguage,
-			age,
-			height,
-			weight,
-			skin,
-			hair,
-			eyes,
-			proficiencies,
-			characterAppearance,
-			characterBackstory,
-			allies,
-			organizations,
-		}, // checking2
-		{ new: true }
-	);
-	if (!characterSheet) {
-		res.status(StatusCodes.NOT_FOUND);
-		throw new Error(
-			`No characterSheet found with an id of ${characterSheetId}.`
-		);
-	}
-	res.status(StatusCodes.OK).json({ characterSheet });
+	res.status(StatusCodes.OK).json({});
 });
 
 /**
  * @desc	Deletes a user's character sheet
- * @route	DELETE /api/v1/character-sheet
+ * @route	DELETE /api/v1/character-sheet/:characterSheetId
  * @access	Private
  */
 const deleteCharacterSheet = asyncHandler(async (req, res) => {
 	const { characterSheetId } = req.params;
-	const characterSheet = await CharacterSheet.findByIdAndDelete(
-		characterSheetId
-	);
+
+	const characterSheet = await CharacterSheet.findById(characterSheetId);
+
 	if (!characterSheet) {
 		res.status(StatusCodes.NOT_FOUND);
 		throw new Error(
 			`No characterSheet found with an id of ${characterSheetId}.`
 		);
 	}
-	res.status(StatusCodes.OK).json({ msg: `CharacterSheet deleted.` });
+
+	const userId = characterSheet.user;
+	const user = await User.findById(userId);
+
+	if (!user) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(`No user found with id ${userId}.`);
+	}
+
+	user.characters = user.characters.filter(
+		(c) => c.toString() !== characterSheetId.toString()
+	);
+	await user.save();
+
+	// Remove from campaign here
+
+	await CharacterSheet.findByIdAndDelete(characterSheet._id);
+
+	res.status(StatusCodes.OK).json({ msg: `Character sheet deleted.` });
 });
 
 module.exports = {
 	createCharacterSheet,
+	getAllUserCharacterSheets,
 	getAllCharacterSheets,
 	updateCharacterSheet,
 	deleteCharacterSheet,

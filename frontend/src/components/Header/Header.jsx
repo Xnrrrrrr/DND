@@ -39,7 +39,7 @@ const Header = () => {
 				<nav>
 					<div className="logo">
 						<GiDiceTwentyFacesTwenty size={36} />
-						<Link to={"/"} className="home-link">
+						<Link to={"/home"} className="home-link">
 							Home
 						</Link>
 					</div>

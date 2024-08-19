@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getUserInfo } from "../../slices/user/userSlice";
+import { getAllUserCharacterSheets } from "../../slices/characterSheet/characterSheetSlice";
 import { ClipLoader } from "react-spinners";
 
 const PrivateRoute = () => {
 	const [user, setUser] = useState();
+	const [characterSheets, setCharacterSheets] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
 	const dispatch = useDispatch();
@@ -18,13 +20,24 @@ const PrivateRoute = () => {
 			}
 		} catch (error) {
 			console.error("Error fetching user data", error);
-		} finally {
-			setIsLoading(false);
+		}
+	};
+
+	const fetchCharacterSheets = async () => {
+		try {
+			const res = await dispatch(getAllUserCharacterSheets());
+			if (res && res.payload && res.payload.characterSheets) {
+				setCharacterSheets(res.payload.characterSheets);
+			}
+		} catch (err) {
+			console.error(err);
 		}
 	};
 
 	useEffect(() => {
-		fetchUserData();
+		Promise.all([fetchUserData(), fetchCharacterSheets()]).finally(() =>
+			setIsLoading(false)
+		);
 	}, []);
 
 	if (isLoading) {
@@ -43,7 +56,11 @@ const PrivateRoute = () => {
 		);
 	}
 
-	return user ? <Outlet /> : <Navigate to="/login" replace />;
+	return user ? (
+		<Outlet context={{ user, characterSheets }} />
+	) : (
+		<Navigate to="/login" replace />
+	);
 };
 
 export default PrivateRoute;
