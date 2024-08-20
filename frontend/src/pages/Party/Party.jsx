@@ -2,16 +2,40 @@ import { useState, useEffect } from "react";
 import { Header, ChatBox } from "../../components";
 import { useDispatch } from "react-redux";
 import { getAllUserCharacterSheets } from "../../slices/characterSheet/characterSheetSlice.js";
-import { useOutletContext } from "react-router-dom";
 import { getUserInfo } from "../../slices/user/userSlice.js";
 
 const Party = () => {
-	const { user, characterSheets } = useOutletContext();
-
-	console.log(user);
-	console.log(characterSheets);
+	const [user, setUser] = useState();
+	const [characterSheets, setCharacterSheets] = useState([]);
 
 	const dispatch = useDispatch();
+
+	const fetchUser = async () => {
+		try {
+			const res = await dispatch(getUserInfo());		
+			if (res && res.payload && res.payload.user) {
+				setUser(res.payload.user);
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
+	const fetchCharacterSheets = async () => {
+		try {
+			const res = await dispatch(getAllUserCharacterSheets());
+			if (res && res.payload && res.payload.characterSheets) {
+				setCharacterSheets(res.payload.characterSheets);
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	};
+	
+	useEffect(() => {
+		fetchUser();
+		fetchCharacterSheets();
+	}, []);
 
 	return (
 		<>
@@ -21,7 +45,7 @@ const Party = () => {
 
 				</div>
 			</div>
-			<ChatBox />
+			<ChatBox user={user} />
 		</>
 	);
 };

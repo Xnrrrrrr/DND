@@ -8,6 +8,7 @@ import {
 	InfoTable,
 	Tooltip,
 } from "../../components";
+import { useDispatch } from "react-redux";
 import {
 	classesArray,
 	classDesc,
@@ -30,8 +31,6 @@ import {
 	eyesArray,
 } from "./option.js";
 import { useCreateCharacterSheetMutation } from "../../slices/characterSheet/characterSheetApiSlice.js";
-import { getUserInfo } from "../../slices/user/userSlice.js";
-import { getAllUserCharacterSheets } from "../../slices/characterSheet/characterSheetSlice.js";
 import { ClipLoader } from "react-spinners";
 import { classImages } from "./image.js";
 import selectClassImage from "../../assets/classes/select-class.jpg";
@@ -127,6 +126,8 @@ const CharacterSheet = () => {
 	const [isTextFlaw, setIsTextFlaw] = useState(false);
 	const [personalityTraits, setPersonalityTraits] = useState(["", ""]);
 	const [isTextPersonality, setIsTextPersonality] = useState([false, false]);
+
+	const dispatch = useDispatch();
 
 	// This method is triggered whenever dice are finished rolling
 	Dice.onRollComplete = (results) => {
@@ -438,15 +439,11 @@ const CharacterSheet = () => {
 		try {
 			const res = await create(payload).unwrap();
 
-			console.log(res);
-			
 			if (res) {
-				await dispatch(getAllUserCharacterSheets());
-				await dispatch(getUserInfo());
 				navigate("/home");
 			}
 		} catch (err) {
-			console.error(err?.data?.message || err.error); // error here
+			console.error(err?.data?.message || err.error);
 		}
 	};
 
