@@ -11044,7 +11044,7 @@ export const backgroundDesc = {
 					description: `I respect my master more than anyone in the world. I always try to mimic their pattern of speech and demeanour.`,
 				},
 			],
-		},
+		},				//test
 		suggestedIdeal: {
 			description: ``,
 			die: `1d6`,
