@@ -3854,6 +3854,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Cannibal", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -11044,7 +11048,7 @@ export const backgroundDesc = {
 					description: `I respect my master more than anyone in the world. I always try to mimic their pattern of speech and demeanour.`,
 				},
 			],
-		},				//test
+		}, //test
 		suggestedIdeal: {
 			description: ``,
 			die: `1d6`,
@@ -11147,6 +11151,208 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: ``,
+				},
+			],
+		},
+	},
+	Cannibal: {
+		isHomebrew: true,
+		description: `One way or another, you have developed a taste for the repulsive: forbidden flesh. While cannibals are known to usually eat the flesh of their own kind, this does not restrict, say, a human who eats elves and dwarves from being called a detestable cannibal. There is a colorful amount of cannibals, with a mix of motive and method. Some cannibals see their diet as a ritual, and cannibalism being integral to it. Religious ceremonies sometimes involve sacrifices and a following feast of the sacrificed body. Other forms of this include cultures which have enshrined the act of cannibalism in their diet. This can be a practical application, as they eat the elderly, who do not have anymore perceived use in society. They have no qualms eating the weak as a way to fuel the strong.
+
+						There are always outlier cases. Cannibals can be deranged hedonists who simply developed a perverted taste for the forbidden. They do so because it satisfies them, regardless of society's views on it. Keep in mind that this background requires that cannibalism encompass a significant portion of a character's composition. It cannot simply be a trait, or it will not suffice as a complete background. Cannibalism maintains a firm central base for your character, and it heavily affected how they grew up and became who they are today. Perhaps they were thoroughly enlightened by their taste of forbidden flesh, which then made them incredibly driven for more. There are cannibals who see it as an art they wish to perfect, and so they travel in search of exotic tastes. Some cannibals are defined by a crucial moment in their life which involved cannibalism. They could have been trapped in a desperate situation which forced them to do the unthinkable, and it now remains a part of them forever.
+
+						So, what sort of cannibal is your character? Do they do it for the religious or ritual experience? How did they acquire this taste? Did someone introduce it to them? Do they still openly practice, or do they feast away from even the gaze of allies? Do they want to change, by any chance?`,
+		skillProficiencies: `Survival, Deception`,
+		toolProficiencies: `Cook's Utensils`,
+		languages: ``,
+		startingEquipment: `A set of traveler's clothes, two knives, a recipe book for how to safely prepare various races for consumpton, and a belt pouch of 5gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I want to be free of these disgusting cravings.`,
+				},
+				{
+					number: 2,
+					description: `Others need only realize that this is not an abhorrent thing to do. Everyone should do it.`,
+				},
+				{
+					number: 3,
+					description: `I want to try all the species there are in the world. `,
+				},
+				{
+					number: 4,
+					description: `There is a single individual I want to eat before I die...`,
+				},
+				{
+					number: 5,
+					description: ` I can eat whatever I want and no one can tell me otherwise! `,
+				},
+				{
+					number: 6,
+					description: `I want to eat the world.`,
+				},
+			],
+		},
+		feature: {
+			title: `Thoe of a Different Taste`,
+			description: `As those of a complex and niche taste preference, you and others with this persecuted diet have ways to get what you need. You have some shady contacts with dealers of forbidden comestibles. This can extend beyond just forbidden meat, and can cover parts of the underworld, including illegal substances like poison. Since this is largely with criminal undertones, these people will not provide for your lifestyle, but they can pass on information down the grapevine about illegal smuggling, dealing, and safe-houses.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `There are charming cannibals who can talk their way out of jail and make themselves like victims. Better yet are the affable ones who try to convert others to their diet.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try not to talk to people.`,
+				},
+				{
+					number: 2,
+					description: `I like to smile a lot and put people at ease.`,
+				},
+				{
+					number: 3,
+					description: `Fear is the best way I introduce myself. Be afraid.`,
+				},
+				{
+					number: 4,
+					description: `I hate waste in general, but especially in food.`,
+				},
+				{
+					number: 5,
+					description: `I will do whatever necessary to achieve my goals.`,
+				},
+				{
+					number: 6,
+					description: `I like to experiment and am open to try new things.`,
+				},
+				{
+					number: 7,
+					description: `I can be picky and pedantic about what even allies do.`,
+				},
+				{
+					number: 8,
+					description: `Cooking is a wonderful outlet for me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Conversion`,
+					description: ``,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Converting`,
+					description: ``,
+					alignment: `Any`,
+				},
+				{
+					number: 3,
+					bold: `Connoisseur`,
+					description: ``,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `End Meal`,
+					description: ``,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Survival`,
+					description: ``,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Devour`,
+					description: ``,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I was raised by a person who endowed me with this diet.`,
+				},
+				{
+					number: 2,
+					description: `I have fellow cultists who believe in this food as well.`,
+				},
+				{
+					number: 3,
+					description: `My tribe has practiced this and I grew up mimicking them.`,
+				},
+				{
+					number: 4,
+					description: `People are useless ultimately. Why get to know your next meal?`,
+				},
+				{
+					number: 5,
+					description: `I would like to know what love tastes like.`,
+				},
+				{
+					number: 6,
+					description: `This lifestyle has isolated me from everyone I cared about.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am an absolute glutton who eats too greedily.`,
+				},
+				{
+					number: 2,
+					description: `I am too lazy to get my own food, most of the time.`,
+				},
+				{
+					number: 3,
+					description: `I follow things traditionally to the letter, and I hate change.`,
+				},
+				{
+					number: 4,
+					description: `My whimsy is capricious. I can't make up my mind.`,
+				},
+				{
+					number: 5,
+					description: `I lack empathy entirely.`,
+				},
+				{
+					number: 6,
+					description: `I think too much about my stomach and nothing else.`,
 				},
 			],
 		},
