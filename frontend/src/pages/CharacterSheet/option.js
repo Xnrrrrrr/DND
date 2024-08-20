@@ -3858,6 +3858,14 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Cartographer", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Child", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -11353,6 +11361,401 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I think too much about my stomach and nothing else.`,
+				},
+			],
+		},
+	},
+	Cartographer: {
+		isHomebrew: true,
+		description: `As a Cartographer, you are a master of mapmaking and navigation, skilled in creating accurate representations of the world and charting courses through unknown territories. Whether you're mapping unexplored lands, charting sea routes, or documenting the intricate layout of a city, your expertise lies in capturing the essence of geography and providing invaluable guidance to travelers and explorers.`,
+		skillProficiencies: `Intelligence, Perception`,
+		toolProficiencies: `Cartographer's Tools, Navigator's Tools`,
+		languages: `One language of your choice`,
+		startingEquipment: `A set of artisan's tools (Cartographer's Tools), a compass, a measuring chain, a parchment scroll, a quill and ink, a magnifying glass, a set of common clothes, and a pouch containing 10gp`,
+		backgroundSpecial: {
+			title: `Mapmaking Techniques`,
+			description: `Specialization`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `Topographic Maps. Specializing in depicting elevation and landforms, you excel at creating detailed maps that accurately portray the contours of the terrain.`,
+				},
+				{
+					number: 2,
+					description: `	Nautical Charts. Specializing in maritime navigation, you excel at creating maps of coastal regions and sea routes, including navigational hazards and tidal patterns.`,
+				},
+				{
+					number: 3,
+					description: `Urban Cartography. Specializing in city mapping, you excel at documenting the layout of urban environments, including streets, buildings, and landmarks.`,
+				},
+				{
+					number: 4,
+					description: `Exploratory Mapping. Specializing in exploration, you excel at mapping uncharted territories and discovering new lands, using a combination of surveying techniques and field observations.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Cartographer's Insight`,
+			description: `Your keen eye for detail and intuitive understanding of geography make you an expert in interpreting maps and navigating unfamiliar terrain. You can quickly analyze a map to identify key landmarks, estimate distances, and plot the most efficient routes. Additionally, you can create simple maps of your surroundings using basic materials, providing valuable guidance to your companions during travels.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `As a Cartographer, you possess a deep fascination with the intricacies of the world and a passion for uncovering its secrets. Your experiences have shaped your personality and worldview, influencing how you interact with others and approach challenges.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am curious and inquisitive, always eager to explore new lands and uncover hidden treasures.`,
+				},
+				{
+					number: 2,
+					description: `I am meticulous and detail-oriented, ensuring that every map I create is accurate and precise.`,
+				},
+				{
+					number: 3,
+					description: `	I am patient and methodical, willing to spend hours studying maps and planning routes before embarking on a journey.`,
+				},
+				{
+					number: 4,
+					description: `I am observant and perceptive, noticing subtle details that others overlook and using them to my advantage.`,
+				},
+				{
+					number: 5,
+					description: `I am resourceful and adaptable, able to navigate through unfamiliar terrain and find creative solutions to obstacles.`,
+				},
+				{
+					number: 6,
+					description: `I am introverted and reserved, preferring the solitude of my studies and the quiet contemplation of maps.`,
+				},
+				{
+					number: 7,
+					description: `I am independent and self-reliant, trusting my own instincts and abilities above all else.`,
+				},
+				{
+					number: 8,
+					description: `I am passionate and enthusiastic, eager to share my knowledge and discoveries with others.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Exploration`,
+					description: `I am driven by a thirst for discovery and adventure, constantly seeking to uncover new lands and chart unexplored territories.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Knowledge`,
+					description: `I believe that knowledge is the key to understanding the world, and I am dedicated to documenting its wonders for future generations.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Freedom`,
+					description: `I value my independence and autonomy, cherishing the freedom to roam the world and explore its mysteries`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Unity`,
+					description: `I believe that maps have the power to bring people together, bridging the gap between cultures and fostering cooperation and understanding`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Preservation`,
+					description: `I am committed to preserving the natural beauty of the world, using my maps to promote conservation and environmental stewardship.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Ambition`,
+					description: `I aspire to create the greatest maps ever made, pushing the boundaries of cartography and leaving a lasting legacy for posterity.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am dedicated to completing a comprehensive atlas of the known world, documenting every land, sea, and sky.`,
+				},
+				{
+					number: 2,
+					description: `I owe my life to a mentor who taught me the art of cartography and inspired me to pursue my dreams.`,
+				},
+				{
+					number: 3,
+					description: `I am searching for a lost civilization whose secrets are said to be hidden within the pages of ancient maps.`,
+				},
+				{
+					number: 4,
+					description: `I am indebted to a wealthy patron who funds my expeditions and commissions me to create maps of exotic locales.`,
+				},
+				{
+					number: 5,
+					description: `I am driven by the memory of a loved one who perished due to a navigational error, spurring me to become a master cartographer.`,
+				},
+				{
+					number: 6,
+					description: `I am on a quest to map the fabled lands of legend, seeking to separate fact from fiction and uncover the truth behind the myths.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I become so engrossed in my work that I often neglect other aspects of my life, including relationships and personal well-being.`,
+				},
+				{
+					number: 2,
+					description: `I am overly critical of my own work, constantly striving for perfection and becoming frustrated when I fall short of my high standards.`,
+				},
+				{
+					number: 3,
+					description: `I sometimes underestimate the dangers of the unknown, assuming that my skills as a cartographer will protect me from harm.`,
+				},
+				{
+					number: 4,
+					description: `I prefer the company of maps and charts to that of other people, leading me to withdraw from social interactions and become isolated from society.`,
+				},
+				{
+					number: 5,
+					description: `I am resistant to change and new ideas, clinging to outdated mapping techniques and refusing to adapt to modern innovations.`,
+				},
+				{
+					number: 6,
+					description: `I have a compulsive need to map every location I visit, regardless of its significance or importance, often at the expense of more pressing tasks.`,
+				},
+			],
+		},
+	},
+	Child: {
+		isHomebrew: true,
+		description: `You are a child. Not even a young teenager, a child. There could be many reasons why you're ready to take on dragons, lichs, or other nasty things, but it's still a little unsettling for you to be ready for that sort of danger at such a young age. Whether you're motivated by the pressures of your family, an important personal goal, or by simple curiosity, you are a child in a world of grown-ups; This won't be easy, but it'll be fun!`,
+		skillProficiencies: `Choose two from: Persuasion, Deception, Animal Handling, Acrobatics, Performance`,
+		toolProficiencies: `Gaming Set, musical instrument`,
+		languages: `One language of your choice.`,
+		startingEquipment: `Mess kit, set of common clothes, small belt pouch containing 3 GP and a small toy of your choosing`,
+		backgroundSpecial: {
+			title: `Child-Like Wonder`,
+			description: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Child-Like Wonder`,
+			description: `Your naivety and inexperience with the world around you lead you to have an overwhelming appreciation for everything you see. You can use this to your advantage in order to seem innocent or non-threatening, or just to convince that cool wizard to let you pet their familiar. Some magic items will work better for you if "sense of childlike wonder" is mentioned in the lore`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Every kid is different, so don't feel like you have to slot into the types below. Have fun with it! After all, you won't be little for long!`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm really energetic and tend to get real excited about everything!!!`,
+				},
+				{
+					number: 2,
+					description: `I like making up my own jokes and pranks, and I think it's hilarious!`,
+				},
+				{
+					number: 3,
+					description: `I'm weirdly knowledgeable in one really niche area, and I can hold a full conversation about it. Otherwise, I'm pretty normal.`,
+				},
+				{
+					number: 4,
+					description: `I'm really clingy and shy, and will latch onto one person as my "safe place."`,
+				},
+				{
+					number: 5,
+					description: `I'm very physical and express affection by wrestling or aggressively hugging people.`,
+				},
+				{
+					number: 6,
+					description: `I'm super curious about everything! Tell me more!`,
+				},
+				{
+					number: 7,
+					description: `I'm very calm and quiet around big groups, but I'm rambunctious and lively around my friends.`,
+				},
+				{
+					number: 8,
+					description: `I'm kind of obnoxious, but I'm completely unaware of it.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Fun`,
+					description: `I want to have a ton of fun, even if I might get in trouble! `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Knowledge`,
+					description: `I want to be the smartest kid my age.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Family`,
+					description: `I want to find a better family than the one I have.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Family`,
+					description: `I want to make my family proud of me.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Rebellion`,
+					description: `I'm sick of all the pointless rules my parents make me follow.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Happiness`,
+					description: `I want everyone I meet to have a reason to be happy that day!`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My older sibling is the coolest person ever, and I want to be just like them!`,
+				},
+				{
+					number: 2,
+					description: `My parents want me to be a perfect child, and I'm willing to try if it makes them happy.`,
+				},
+				{
+					number: 3,
+					description: `My grandma says I have to write home to her if I go on this adventure!`,
+				},
+				{
+					number: 4,
+					description: `I intend to go to an expensive school when I'm old enough, but my family can't afford it. I refuse to accept defeat and I'm going to get the gold on my own.`,
+				},
+				{
+					number: 5,
+					description: `I've gotta get money for my mom's healing spell costs, otherwise she won't get better.`,
+				},
+				{
+					number: 6,
+					description: `My dad is a retired adventurer, and he's super supportive of my chosen career. I can't wait to show him all the things I've done!`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I always think of things as much simpler or much more complicated then they actually are.`,
+				},
+				{
+					number: 2,
+					description: `I can't stand the feeling of armor much heavier than hide.`,
+				},
+				{
+					number: 3,
+					description: `I can't eat anything if it hasn't been cut into smaller bites.`,
+				},
+				{
+					number: 4,
+					description: `I'm still learning to tie my shoes by myself. I get really upset when I can't do it alone.`,
+				},
+				{
+					number: 5,
+					description: `I'm easily distracted. Like, really easily.`,
+				},
+				{
+					number: 6,
+					description: `I have little to no filter, and will say whatever comes to mind.`,
 				},
 			],
 		},
