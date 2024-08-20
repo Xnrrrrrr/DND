@@ -4,6 +4,9 @@ require("express-async-errors");
 const express = require("express");
 const app = express();
 
+// WebSocket import
+const initWebSocket = require('./socket');
+
 // Cybersecurity imports
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -53,9 +56,10 @@ const port = process.env.PORT || 6001;
 const startServer = async () => {
 	try {
 		await connectDB();
-		app.listen(port, () => {
+		const server = app.listen(port, () => {
 			console.log(`Server is listening on port ${port} ...`);
 		});
+		initWebSocket(server);
 	} catch (error) {
 		console.log(error);
 	}

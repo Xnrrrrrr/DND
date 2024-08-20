@@ -24,7 +24,8 @@
 		"joi": "^17.9.2",
 		"jsonwebtoken": "^9.0.1",
 		"mongoose": "^8.5.2",
-		"validator": "^13.9.0"
+		"validator": "^13.9.0",
+		"ws": "^8.18.0"
 	},
 	"devDependencies": {
 		"concurrently": "^8.2.0",

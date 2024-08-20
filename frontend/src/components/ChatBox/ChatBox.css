@@ -63,3 +63,8 @@
     padding: 1rem;
     background-color: var(--background-color);
 }
+
+.sender-span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
