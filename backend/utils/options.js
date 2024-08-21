@@ -38,6 +38,7 @@ const backgrounds = [
 	"Cannibal", //homebrew
 	"Cartographer", //homebrew
 	"Child", //homebrew
+	"Child Soldier", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

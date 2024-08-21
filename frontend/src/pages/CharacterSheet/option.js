@@ -3866,6 +3866,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Child_Soldier", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -11760,6 +11764,204 @@ export const backgroundDesc = {
 			],
 		},
 	},
+	Child_Soldier: {
+	isHomebrew: true ,
+        description: `As a child, you were part of an organization that specialized in turning children into weapons. Your time there made you proficient in many different fighting styles, assassination, all so you could eventually serve the organization you trained under in the real world. You have been forced to kill and have almost been killed, all in the name of making you stronger. One way or another, you are able to escape this place. However, a lot of resources went into making you the weapon you are today, and there are people out there still looking for you.`,
+        skillProficiencies: `Survival, Stealth`,
+        toolProficiencies: `Disguise kit`,
+		languages: `Any one of your choosing`,
+        startingEquipment: `A trinket of your past, a set of worn combat style clothes, a hooded cloak, a weapon of your choice, a backpack, and 15 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				}
+			],
+		},
+        feature: {
+            title: `Vigilant`,
+            description: `Because of your rigorous training, you are an extremely light sleeper and it is almost impossible for anything or anyone to sneak up on you. Your constant vigilance also means that you may pick up on things happening that others might not immediately notice. You gain advantage on perception`,
+        },
+		alterateFeature: [
+			{
+				title: `Respect and Fear`,
+				description: `criminal organizations are inclined to fear you, and people assume you have the right to be wherever you are. Everyone will probably make every effort to accommodate you and avoid your displeasure, and other people of high riches treat you as a member of the same social sphere.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+        suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I take charge of a situation. I am rough around the edges, and forceful in conversations.`,
+				},
+				{
+					number: 2,
+					description: `I am constantly seeking any sliver of knowledge or secret item which can give me a new edge over my enemy.`,
+				},
+				{
+					number: 3,
+					description: `My body is covered in scars, or other markings- my trophies earned from each mark I have claimed.`,
+				},
+				{
+					number: 4,
+					description: `My time hunting my mark has caused me to think so much like them, I sometimes frighten or confuse those around me.`,
+				},
+				{
+					number: 5,
+					description: `I am extremely protective of my employers, as though they were my own family.`,
+				},
+				{
+					number: 6,
+					description: `I distract myself from my memories of work by escaping in indulgences and good company.`,
+				},
+				{
+					number: 7,
+					description: `I trivialize the true depth or magnitude of a situation.`,
+				},
+				{
+					number: 8,
+					description: `I am very proud of myself and my history, and consider my past career to be glorious and honorable.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Purity`,
+					description: `I fight to destroy the the evil which corrupts our world`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Balance`,
+					description: `My marks defy the natural order and destabilize nature.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Prejudice`,
+					description: `My marks must all be destroyed without question or hesitation.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Police`,
+					description: `My profession is a necessary extension of law enforcement. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Righteousness`,
+					description: `I will defeat them at all costs- with or without your help.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Thrill`,
+					description: `Wherever they rear their ugly heads, I'll be there.`,
+					alignment: `Chaotic`,
+				}
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have been hunting for the greatest, rarest mark.`,
+				},
+				{
+					number: 2,
+					description: `My loved one(s) were taken from me by a mark.`,
+				},
+				{
+					number: 3,
+					description: `My master, (possibly a parent) made me who I am today.`,
+				},
+				{
+					number: 4,
+					description: `I am fighting to protect something or someone important to me.`,
+				},
+				{
+					number: 5,
+					description: `A mark once spared my life. I have always wondered why.`,
+				},
+				{
+					number: 6,
+					description: `I want to reform my marks into forces of justice/good.`,
+				}
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A specific, extremely powerful mark, has a vendetta against me, and will stop at nothing to kill me.`,
+				},
+				{
+					number: 2,
+					description: `I am obsessed with killing every last mark, and will brave insane dangers in my quest.`,
+				},
+				{
+					number: 3,
+					description: `Decades of death and combat have made me cruel, reclusive, dangerous, or addicted.`,
+				},
+				{
+					number: 4,
+					description: `I am secretly deeply terrified of my marks.`,
+				},
+				{
+					number: 5,
+					description: `I am a phony, all of my marks were illusions, actors, or lies.`,
+				},
+				{
+					number: 6,
+					description: `My actions have incidentally put me at odds with a specific nation, religion, faction, or other organization.`,
+				},
+			],
+		},
+    },
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
