@@ -40,6 +40,14 @@ const backgrounds = [
 	"Child", //homebrew
 	"Child Soldier", //homebrew
 	"City Guard", //homebrew
+	"Collector", //homebrew
+	"Conscript", //homebrew
+	"Cursed", //homebrew
+	"Demonologist", //homebrew
+	"Denizen", //homebrew
+	"Detective", //homebrew
+	"Disgrace", //homebrew
+	"Dragon Raised", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
