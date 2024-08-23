@@ -52,6 +52,9 @@
 	text-decoration: underline;
 }
 
+.selected-tab {
+    color: var(--background-color);
+}
 
 .chat-box-content-container {
     flex-grow: 1;
@@ -62,6 +65,40 @@
 .chat-box-input-container {
     padding: 1rem;
     background-color: var(--background-color);
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 2.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--secondary-background-color);
+    color: var(--base-text-color);
+    font-size: 1.4rem;
+}
+
+.input-wrapper button {
+    position: absolute;
+    right: 8px; /* Position the button inside the input field */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: var(--base-text-color);
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.input-wrapper button:hover {
+    cursor: pointer;
+    color: var(--background-color);
 }
 
 .sender-span:hover {

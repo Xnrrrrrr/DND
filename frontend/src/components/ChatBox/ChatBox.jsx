@@ -1,17 +1,25 @@
 import { useState, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
 import { DiAptana } from "react-icons/di";
 import { ClipLoader } from "react-spinners";
+import { useSaveGeneralMessageMutation } from "../../slices/chat/general/generalChatApiSlice.js";
+import { getGeneralMessages } from "../../slices/chat/general/generalChatSlice.js";
 
 const ChatBox = ({ user }) => {
 	const [inputValue, setInputValue] = useState("");
 	const [messages, setMessages] = useState([]);
 	const [isAtBottom, setIsAtBottom] = useState(true); // Track whether the user is at the bottom
+	const [selectedTab, setSelectedTab] = useState("general");
 	const chatBoxRef = useRef(null);
 	const chatEndRef = useRef(null);
 
 	const [ws, setWs] = useState(null);
 
-	const handleSend = () => {
+	const dispatch = useDispatch();
+
+	const [general] = useSaveGeneralMessageMutation();
+
+	const handleSend = async () => {
 		if (inputValue.trim() !== "") {
 			const now = new Date();
 			// Get UTC time string in HH:mm:ss format
@@ -25,6 +33,16 @@ const ChatBox = ({ user }) => {
 			};
 
 			ws.send(JSON.stringify({ type: "chat", generalChat }));
+
+			try {
+				await general({
+					sender: user.username,
+					role: user.role,
+					content: inputValue,
+				}).unwrap();
+			} catch (error) {
+				console.error("Failed to save message:", error);
+			}
 
 			setInputValue("");
 		}
@@ -59,6 +77,28 @@ const ChatBox = ({ user }) => {
 			chatEndRef.current.scrollIntoView({ behavior: "smooth" });
 		}
 	}, [messages, isAtBottom]);
+
+	useEffect(() => {
+		if (selectedTab === "general") {
+			dispatch(getGeneralMessages()).then((action) => {
+				if (action.payload) {
+					const formattedMessages = action.payload.map(message => {
+						const date = new Date(message.timestamp);
+						const hours = String(date.getUTCHours()).padStart(2, '0');
+						const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+						const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+						return {
+							...message,
+							timestamp: `${hours}:${minutes}:${seconds}`
+						};
+					});
+					setMessages(formattedMessages);
+				} else {
+					console.error("Failed to fetch general messages");
+				}
+			});
+		}
+	}, [dispatch, selectedTab]);
 
 	const handleScroll = () => {
 		if (chatBoxRef.current) {
@@ -95,9 +135,36 @@ const ChatBox = ({ user }) => {
 				<div className="chat-box-tab-container">
 					<div className="chat-box-tabs">
 						{/* For Party Page */}
-						<p>General</p>
-						<p>Party</p>
-						<p>Private</p>
+						<p
+							onClick={() => {
+								setSelectedTab("general");
+							}}
+							className={
+								selectedTab === "general" ? `selected-tab` : ``
+							}
+						>
+							General
+						</p>
+						<p
+							onClick={() => {
+								setSelectedTab("party");
+							}}
+							className={
+								selectedTab === "party" ? `selected-tab` : ``
+							}
+						>
+							Party
+						</p>
+						<p
+							onClick={() => {
+								setSelectedTab("private");
+							}}
+							className={
+								selectedTab === "private" ? `selected-tab` : ``
+							}
+						>
+							Private
+						</p>
 					</div>
 					<div
 						style={{
@@ -118,34 +185,45 @@ const ChatBox = ({ user }) => {
 					ref={chatBoxRef}
 					onScroll={handleScroll}
 				>
-					{messages.map((m, index) => (
-						<div
-							key={index}
-							style={{
-								backgroundColor:
-									index % 2 === 0
-										? "var(--border-color)"
-										: "transparent",
-							}}
-						>
-							<p style={{ padding: "2px" }}>
-								({m.timestamp}) {m.badge ? `` : ``} <span className="sender-span">{m.sender}</span>: {m.content}	
-							</p>
-						</div>
-					))}
+					{selectedTab === "general"
+						? messages.map((m, index) => (
+								<div
+									key={index}
+									style={{
+										backgroundColor:
+											index % 2 === 0
+												? "var(--border-color)"
+												: "transparent",
+									}}
+								>
+									<p style={{ padding: "2px" }}>
+										({m.timestamp}) {m.badge ? `` : ``}{" "}
+										<span className="sender-span">
+											{m.sender}
+										</span>
+										: {m.content}
+									</p>
+								</div>
+						  ))
+						: ``}
 					{/* Reference element for auto-scroll */}
 					<div ref={chatEndRef} />
 				</div>
 				<div className="chat-box-input-container">
-					<input
-						type="text"
-						value={inputValue}
-						onChange={(e) => setInputValue(e.target.value)}
-						onKeyDown={(e) => {
-							if (e.key === "Enter") handleSend();
-						}}
-						maxLength={100}
-					/>
+					<div className="input-wrapper">
+						<input
+							type="text"
+							value={inputValue}
+							onChange={(e) => setInputValue(e.target.value)}
+							onKeyDown={(e) => {
+								if (e.key === "Enter") handleSend();
+							}}
+							maxLength={100}
+						/>
+						<button type="button" onClick={handleSend}>
+							&#10148;
+						</button>
+					</div>
 				</div>
 			</div>
 		</>
@@ -153,5 +231,3 @@ const ChatBox = ({ user }) => {
 };
 
 export default ChatBox;
-
-// add db to display previous chat messages (delete within 30 mins), badges, and different chat rooms
