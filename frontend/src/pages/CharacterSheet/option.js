@@ -3874,7 +3874,15 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
-		option: "Bereaved",
+		option: "Collector", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Bereaved", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Conscript", //homebrew
 		isHomebrew: true,
 	},
 	{
@@ -12161,6 +12169,426 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I will never let injustice pass me by.`,
+				},
+			],
+		},
+	},
+	Collector: {
+		isHomebrew: true,
+		description: `You were once, and still somewhat are, a collector of some sort of semi-rare object that serve little or no practical use, be it gems, spoons, or some other thing. The interest may have come from a family collection passed down to you, or simply through a fascination with a certain thing. You may have even begun travelling and adventuring in pursuit of expanding your collection. You might have heard of a rare item resting as part of a dragon's treasure hoard, or heard rumors of an influential noble with a collection much like yours being willing to trade.`,
+		skillProficiencies: `History, Persuasion`,
+		toolProficiencies: `A set of artisan's tools of your choice`,
+		languages: `A mundane language of your choice`,
+		startingEquipment: `a set of common clothes, your collection in its container (A sack, jar, book, display case, etc.), and a belt pouch containing 10 gp. If you do not wear other armor, you may have Collector's Armor`,
+		backgroundSpecial: {
+			title: `Collection`,
+			description: `Specialization`,
+			die: `1d12`,
+			roll: [
+				{
+					number: 1,
+					description: `Spoons`,
+				},
+				{
+					number: 2,
+					description: `Forks`,
+				},
+				{
+					number: 3,
+					description: `Gems`,
+				},
+				{
+					number: 4,
+					description: `Out of Mint Coins`,
+				},
+				{
+					number: 5,
+					description: `Feathers`,
+				},
+				{
+					number: 6,
+					description: `Trinkets`,
+				},
+				{
+					number: 7,
+					description: `Cards`,
+				},
+				{
+					number: 8,
+					description: `Stamps`,
+				},
+				{
+					number: 9,
+					description: `Puzzle Pieces`,
+				},
+				{
+					number: 10,
+					description: `Fish`,
+				},
+				{
+					number: 11,
+					description: `Butterflies`,
+				},
+				{
+					number: 12,
+					description: `Dice`,
+				},
+			],
+		},
+		feature: {
+			title: `Collective History`,
+			description: `You have extensive knowledge on the object you collect. It may not seem important to some, but these object have been somewhat ubiquitous across history. You know when your objects have been touched by famous figures, like Kings and Queens, heroes and villains, and even prominent figures of the peasantry. You know its purpose as well as a rough selling price and potential buyer.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm defensive about my collection.`,
+				},
+				{
+					number: 2,
+					description: `When I see something to add to my collection, I will stop at nothing to get it.`,
+				},
+				{
+					number: 3,
+					description: `I often correct people about my collection.`,
+				},
+				{
+					number: 4,
+					description: `I'm self conscious about my collection and sharing it.`,
+				},
+				{
+					number: 5,
+					description: `I'm great at organizing.`,
+				},
+				{
+					number: 6,
+					description: `I try to get all of my friends and family into collecting.`,
+				},
+				{
+					number: 7,
+					description: `I'm an awkward individual.`,
+				},
+				{
+					number: 8,
+					description: `I steal things for my collection.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Knowledge`,
+					description: `I must learn all about my collection and what history it holds.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Community`,
+					description: `I share my hobby with everyone else.`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Narcissism`,
+					description: `I must have the best collection.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Wealth`,
+					description: `I will sell my collection once it's worth more.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Love`,
+					description: `My collection is the coolest, I'll get all the wenches.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Boredom`,
+					description: `It gives me something to do.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My father bought me the thing to start my collection, then died.`,
+				},
+				{
+					number: 2,
+					description: `I love to see a completed collection.`,
+				},
+				{
+					number: 3,
+					description: `I want to spread my knowledge to all.`,
+				},
+				{
+					number: 4,
+					description: `I will sell my collection.`,
+				},
+				{
+					number: 5,
+					description: `I have a rival who thinks he's better at collecting than me.`,
+				},
+				{
+					number: 6,
+					description: `There is one part of my collection I will never give up.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I value my collection over other lives, including mine.`,
+				},
+				{
+					number: 2,
+					description: `I will do anything to add to my collection. Even crimes.`,
+				},
+				{
+					number: 3,
+					description: `I am jealous of other collections.`,
+				},
+				{
+					number: 4,
+					description: `I'm somewhat antisocial. I care about my collection more than friendship.`,
+				},
+				{
+					number: 5,
+					description: `I'm very clingy, with objects and people.`,
+				},
+				{
+					number: 6,
+					description: `I can't accept someone criticizing my collection.`,
+				},
+			],
+		},
+	},
+	Conscript: {
+		isHomebrew: true,
+		description: `You never asked to be a fighter, a soldier in a war. You had nothing to do with the cause, and it was not yours personally. But it is the cause of the blanketing system in which you are a civilian and member of. As such, you have a duty to serve, and they can call on you when they want to. They can tell you to lay down your life for them, to pick up the blade and put down whatever life you've made for yourself, and be thrown into the maws of the beast that is battle. Conscription, or drafting, is a method from antiquity to rally troops when needed by calling upon compulsory service of the people. Able bodies are pulled from the population to pay their public dues in blood.Consider some of the following questions when making a conscript: Are you happy with having been displaced from your normal life and thrown into a chaotic new environment? Were other members in your family previously conscripted? How do you view this system of drafting, and do you resent the powers behind it? Some are drafted, but have the means to have others go in their place, while others may be forcibly drafted despite their medical conditions due to the lack of manpower. What did you leave behind as a result of the draft? Is the battle over for you yet? If so, how did things change when you returned from battle?`,
+		skillProficiencies: `Athletics, Perception`,
+		toolProficiencies: `Gaming Set`,
+		languages: `Any one`,
+		startingEquipment: `Writ of release from conscription (served or dismissed), worn emblem of a conscript, a set of common clothing, and 5 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Lasting Recognition`,
+			description: `Serving in a war or battle at all earns you some presence. While you are not highly ranked or decorated, you made some connections in the military. Soldiers loyal to your former military organization still recognize your service and show you preference over those who did not serve. Other conscripts that served like you are also friendly to you and your allies, perhaps willing to provide you with some emergency supplies and aid, so long as it does not put them in immediate danger.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `This was never my fight..`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am in it to win it.`,
+				},
+				{
+					number: 2,
+					description: `Why do i crave battles?`,
+				},
+				{
+					number: 3,
+					description: `I just want to go home!`,
+				},
+				{
+					number: 4,
+					description: `I will make the best of a bad situation.`,
+				},
+				{
+					number: 5,
+					description: `I face it with honor.`,
+				},
+				{
+					number: 6,
+					description: `When it's over I'll bring it to those who placed me in bondage!`,
+				},
+				{
+					number: 7,
+					description: `My comrades are worth fighting for! `,
+				},
+				{
+					number: 8,
+					description: `Perhaps, I too will die this day.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Reservation`,
+					description: `I fight for my own reasons.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Continued Spillage`,
+					description: `War has left me changed. I have an unquenchable blood lust.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Repatriation`,
+					description: `One day, I'll return to home and hearth. Until then, I live honorably.`,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					bold: `Wealth`,
+					description: `War is profitable. I have learned to capitalize on the death of others.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Virtue`,
+					description: `My time as a conscript has taught me the value of the aid of others. I will fight for their sake!`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Perpetiuty`,
+					description: `If you can't beat 'em, conscript 'em`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I hold those who were conscripted along side me dear.`,
+				},
+				{
+					number: 2,
+					description: `I will return to my family.`,
+				},
+				{
+					number: 3,
+					description: `I remember, and Honor those that fell beside me.`,
+				},
+				{
+					number: 4,
+					description: `I have a special kind of hatred for soldiers.`,
+				},
+				{
+					number: 5,
+					description: `I know that I am strong, I will teach others that they are strong too!`,
+				},
+				{
+					number: 6,
+					description: `I vividly remember the faces of the enemies I have slain.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `At times, I feel such anger towards military personnel, I wish to kill them.`,
+				},
+				{
+					number: 2,
+					description: `Memories, plagued with memories...`,
+				},
+				{
+					number: 3,
+					description: `My hands often shake, causing me to drop things I am holding.`,
+				},
+				{
+					number: 4,
+					description: `I haven't been able to stop killing. I cannot hold myself back in a fight.`,
+				},
+				{
+					number: 5,
+					description: `I despise those who are cowards in battle.`,
+				},
+				{
+					number: 6,
+					description: `I drink to cope. Like a lot.`,
 				},
 			],
 		},
