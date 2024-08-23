@@ -858,18 +858,28 @@ const raceDefault = {
 	},
 };
 
+const armorProficiencies = [
+    "Light Armor",
+    "Medium Armor",
+    "Nonmetal Medium Armor",
+    "Heavy Armor",
+    "Shield",
+    "Nonmetal Shield",
+];
+
 module.exports = {
-	backgrounds,
-	alignment,
-	sex,
-	skin,
-	hair,
-	eyes,
-	skills,
-	maxSkills,
-	races,
-	subraces,
-	subclasses,
-	classDefault,
-	raceDefault,
+    backgrounds,
+    alignment,
+    sex,
+    skin,
+    hair,
+    eyes,
+    skills,
+    maxSkills,
+    races,
+    subraces,
+    subclasses,
+    classDefault,
+    raceDefault,
+    armorProficiencies,
 };
