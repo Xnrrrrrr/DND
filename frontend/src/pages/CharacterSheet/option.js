@@ -3886,6 +3886,30 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Cursed", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Demonologist", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Denizen", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Detective", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Disgrace", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Dragon_Raised", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -12589,6 +12613,1210 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I drink to cope. Like a lot.`,
+				},
+			],
+		},
+	},
+	Cursed: {
+		isHomebrew: true,
+		description: `Woe is you, unfortunate soul. You have been cursed, whether from birth or some unfortunate series of events, and this curse holds sway over your life. You are not sure if the curse can be broken, but certainly your life would be much more pleasant without it. Each time the fates seem to be working in your favor some disaster strikes and suddenly all your efforts seem thwarted. You may at times feel helpless against the power of this curse, or maybe you reject these dark fortunes and strive against them. In the end though, luck is not on your side. It is up to you and your DM to determine what kinds of effects your curse may have on you beyond what is detailed in this background.`,
+		skillProficiencies: `Perception, and one of the following that is associated with your curse's origin: Arcana, Nature, Religion`,
+		toolProficiencies: `One of your choice`,
+		languages: `One of your choice`,
+		startingEquipment: `Religious book, thyme, a set of common clothes, and a small pouch with 15gp, and a gothic trinket.`,
+		backgroundSpecial: {
+			title: `Origin of Curse`,
+			description: `What cursed you?`,
+			die: `1d10`,
+			roll: [
+				{
+					number: 1,
+					description: `Demonic: A demon has placed this curse upon you.`,
+				},
+				{
+					number: 2,
+					description: `Divine: A good or evil deity has cursed you.`,
+				},
+				{
+					number: 3,
+					description: `Primal: The spirits of nature or a primordial has cursed you.`,
+				},
+				{
+					number: 4,
+					description: `Fey: An elven or other fey creature has set a curse on you.`,
+				},
+				{
+					number: 5,
+					description: `Arcane: A wizard or other arcane force has stricken you with a curse.`,
+				},
+				{
+					number: 6,
+					description: `Draconic: A dragon saw it fit to curse you.`,
+				},
+				{
+					number: 7,
+					description: `Elemental: An elemental or the elements themselves have conspired and cursed you.`,
+				},
+				{
+					number: 8,
+					description: `Immortal: An immortal being, neither divine nor demonic, has found amusement in cursing you.`,
+				},
+				{
+					number: 9,
+					description: `Aberration: A being from beyond your plane has inflicted a curse upon you, whether it knows is the question.`,
+				},
+				{
+					number: 10,
+					description: `Unknown: Somehow, you are so unlucky it is considered a curse.`,
+				},
+			],
+		},
+		feature: {
+			title: `Curse Catcher`,
+			description: `You are drawn to others who are under the influence of a curse or similar magics. NPCs that are suffering from a curse will be drawn to you, and you to them. In addition to this, you have an eye for curses similar to your own. You can determine if a curse shares its origin with your own (demonic, fey, primal, etc.) due to your lengthy time spent under the influence of the curse.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm incredibly optimistic in the face of my terrible curse.`,
+				},
+				{
+					number: 2,
+					description: `I get angry when I hear people complaining about their lives. They don't know what true misfortune is!`,
+				},
+				{
+					number: 3,
+					description: `I engage in a variety of rituals to attempt to lessen my curse.`,
+				},
+				{
+					number: 4,
+					description: `I am fearful of creatures that share an origin with my curse.`,
+				},
+				{
+					number: 5,
+					description: `I pray frequently, hoping the gods will break my curse.`,
+				},
+				{
+					number: 6,
+					description: `I always try to persevere when the odds are against me.`,
+				},
+				{
+					number: 7,
+					description: `Taking risks is worth it, if it gives me a chance to test the curse's power.`,
+				},
+				{
+					number: 8,
+					description: `I am often melancholic when presented with the effects of my curse.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Fate`,
+					description: `I was cursed for a reason, and therefore I will live with this burden.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Experimental`,
+					description: `Perhaps this will break the curse! No? Well, then maybe I'll give this a try! Not that either? Then maybe...`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Suffering`,
+					description: `If I must bear this pain then so shall the world!`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Defiance`,
+					description: `I will do the one thing that this curse cannot stop me from doing... ignoring it.`,
+					alignment: `Any`,
+				},
+				{
+					number: 5,
+					bold: `Retribution`,
+					description: `My ancestors deserved this curse but I will do whatever i must to cleanse my bloodline!`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Triumph`,
+					description: `Each victory I have is precious, for each one is a blow against my curse! `,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `The being that cursed me knows a dark secret about me or my bloodline. This is payment for them keeping silent.`,
+				},
+				{
+					number: 2,
+					description: `This curse pushed my family or lover away. I would do anything to get them back.`,
+				},
+				{
+					number: 3,
+					description: `I had a master who died in an attempt to remove my curse.`,
+				},
+				{
+					number: 4,
+					description: `I took the place of the one who was supposed to have this curse.`,
+				},
+				{
+					number: 5,
+					description: `I've been kicked out of towns and cities before because they were afraid I'd bring bad luck.`,
+				},
+				{
+					number: 6,
+					description: `I almost had a lover once but they fled when they found out. It was probably my lowest point.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I blame misfortune on the curse even when I know it was my own actions that caused it.`,
+				},
+				{
+					number: 2,
+					description: `I secretly wish I could transfer my curse onto another to escape it, no matter who that person is.`,
+				},
+				{
+					number: 3,
+					description: `I have become cold and bitter as the curse has pushed people away.`,
+				},
+				{
+					number: 4,
+					description: `I am afflicted with devastating nightmares and sometimes have panic attacks.`,
+				},
+				{
+					number: 5,
+					description: `I am slow to trust others. After all, others cursed me once, and I've never cursed anyone!`,
+				},
+				{
+					number: 6,
+					description: `I hate it when other people refer to me as "cursed" or "unfortunate", and will get verbal when they do.`,
+				},
+			],
+		},
+	},
+	Demonologist: {
+		isHomebrew: true,
+		description: `A demonologist has spent most of their life cloistered away because of their studies. Why have they become so obsessed with demons, devils, and fiends that they would leave behind society? Do they come from a long line of warlocks and seek to know more information about the ones they’ve formed a pact with? Are they slayers of demons, devils and fiends and need to know everything about them? Are they looking to summon and control these types of beings? Or perhaps they need knowledge for a mission given to them by the church. Whatever their reasoning may be, their knowledge would surely be useful in a battle.`,
+		skillProficiencies: `Choose two: Arcana, History, or Religion`,
+		toolProficiencies: `Abyssal and Infernal`,
+		languages: ``,
+		startingEquipment: `A backpack, a set of common clothes, a hooded cloak, a silvered or cold-iron weapon you are proficient with, a bedroll, six tattered scrolls, a pouch containing 5 gp, and several (3-6) books about demons and devils (Origin of Demons and Devils, Origins of Demons, Origins of Devils, The Baatezu of Baator, The Tanar'ri of the Abyss, The Blood War, Fiend Folio, Guide to the Lower Planes, Summoning Rites and Binding Procedures, Fiendish Familiars and Their Masters, etc.)`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Obsession`,
+			description: `Having spent several years of your life studying demons, devils, and fiends, you’ve gained vast knowledge about them. You are able to recognize any fiend as well as recall more than basic information about them. (i.e. resistances, vulnerabilities, special abilities, and other information the DM may choose to disclose) However, people who learn of your obsession may try to avoid contact with you if at all possible`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I think we can relate more to demons than celestials.`,
+				},
+				{
+					number: 2,
+					description: `I don’t understand the role of religion.`,
+				},
+				{
+					number: 3,
+					description: `I have far more important things to do than save the world.`,
+				},
+				{
+					number: 4,
+					description: `I honestly forgot why I started my research, but it passes the time.`,
+				},
+				{
+					number: 5,
+					description: `I'll settle for nothing less than perfection.`,
+				},
+				{
+					number: 6,
+					description: `I believe that everything worth doing is worth doing right. I can't help it--I'm a perfectionist.`,
+				},
+				{
+					number: 7,
+					description: `I am utterly serene, even in the face of disaster.`,
+				},
+				{
+					number: 8,
+					description: `I once spent a night at an inn with a succubus… We just talked, I swear.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Sincerity`,
+					description: `There's no good pretending to be something I'm not. `,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Aspiration`,
+					description: `I'm determined to make something of myself.`,
+					alignment: `Any`,
+				},
+				{
+					number: 3,
+					bold: `Creativity`,
+					description: `The world is in need of new ideas and bold action. `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Respect`,
+					description: `People deserve to be treated with dignity and respect.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Logic`,
+					description: `Emotions must not cloud our sense of what is right and true, or our logical thinking.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 6,
+					bold: `Knowledge`,
+					description: `The path to power and self-improvement is through knowledge. `,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm trying to discover the truth behind the demon my family has pacted with.`,
+				},
+				{
+					number: 2,
+					description: `My life’s work was stolen from me, and I will stop at nothing to get it back.`,
+				},
+				{
+					number: 3,
+					description: `The church that took me in as a child is the most important place in the world to me.`,
+				},
+				{
+					number: 4,
+					description: `I’m trying desperately to find my apprentice ever since he’d disappeared during an experiment.`,
+				},
+				{
+					number: 5,
+					description: `I work to preserve a library, university, scriptorium, or monastery.`,
+				},
+				{
+					number: 6,
+					description: `I owe a debt I can never repay to the person who took pity on me.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am a little too flexible with my thinking.`,
+				},
+				{
+					number: 2,
+					description: `I have a weakness for the vices of the city, especially the brothel.`,
+				},
+				{
+					number: 3,
+					description: `Once I start drinking, it's hard for me to stop.`,
+				},
+				{
+					number: 4,
+					description: `Now that I've returned to the world, I enjoy its delights a little too much.`,
+				},
+				{
+					number: 5,
+					description: `I’d forgotten what the outside looks like, and it’s only disappointed me.`,
+				},
+				{
+					number: 6,
+					description: `...Okay. Maybe I did more than talk with the succubus.`,
+				},
+			],
+		},
+	},
+	Denizen: {
+		isHomebrew: true,
+		description: `You are a spirit, a soul that has come into possession of a body that did not originally belong to you; whether the original occupant gave up their body willingly, you deceived or tricked them out of it, or some other way entirely. Who were you before? Perhaps you were once a terrible human warlock, trapped in an amulet and hidden away. A dwarven hero who gave in to selfish desire and escaped death. An ancient halfling wizard who desired to see the future, and so contained your soul for a thousand years. You see with new eyes, and feel with new hands. What is your desire for your new life?`,
+		skillProficiencies: `Arcana, Deception`,
+		toolProficiencies: `One of your choice`,
+		languages: `One of your choice`,
+		startingEquipment: `A small trinket, a pouch of 8 gp, a set of common clothes`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Soul Whisper`,
+			description: `Your time spent as a soul without a body, whether for a millennium or a mere moment, granted you valuable insight into spirits and other paranormal beings. As a result, you have the ability to converse with the souls of the recently deceased, ghosts, as well as those souls that may be magically contained.`,
+		},
+		alterateFeature: [
+			{
+				title: `Phantom Body`,
+				description: `Adjusting to a new body can be an odd sensation, and something that many never get used to. You may catch yourself ducking under a doorway as a dwarf, or breaking a door when you simply meant to open it as an orc.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am very secretive. No one can find out about my past life.`,
+				},
+				{
+					number: 2,
+					description: `I am somewhat absentminded and will sometimes ramble about my past life`,
+				},
+				{
+					number: 3,
+					description: `Preoccupied with death, I constantly seek a way to escape it`,
+				},
+				{
+					number: 4,
+					description: `I am extremely cheerful, even a terrible day can’t bring me down`,
+				},
+				{
+					number: 5,
+					description: `The living don't matter so much as the secrets of the dead`,
+				},
+				{
+					number: 6,
+					description: `The memories of my host body co-exist with my own, making me appear at times to have two personalities`,
+				},
+				{
+					number: 7,
+					description: `Despite the many who view me as an abomination, I am very open about my past life`,
+				},
+				{
+					number: 8,
+					description: `I fear paladins and priests, and will avoid them at all costs`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Oppurtunity`,
+					description: `This new body offers me another chance to prove myself, I’ll make the most of it`,
+					alignment: `Any`,
+				},
+				{
+					number: 2,
+					bold: `Immortality`,
+					description: `I must escape death, no matter the cost`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Knowledge`,
+					description: `With another lifetime, I can learn so much more.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `Redemption`,
+					description: ` My new body came at great cost, I must repay my debt to the people, and help them wherever they may need it.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Chance`,
+					description: `Death is just the roll of the dice, and I plan to gamble with it`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Balance`,
+					description: `Death is a delicate thing, no one must be allowed to cheat it again`,
+					alignment: `Lawful`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have family who believe me dead, I must find them`,
+				},
+				{
+					number: 2,
+					description: `The ancient trinket my soul was contained in was stolen, I wish to find it`,
+				},
+				{
+					number: 3,
+					description: `The gods would see me returned to the grave, I will not allow it`,
+				},
+				{
+					number: 4,
+					description: `I wish to find, and win back, my lover from my past life`,
+				},
+				{
+					number: 5,
+					description: `I have a very strong bond with the people from my past life, but they must never know I still live`,
+				},
+				{
+					number: 6,
+					description: `I owe a great debt to the family of my host, and I will repay them in kind`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Others are more often a burden than not, I like to do things alone`,
+				},
+				{
+					number: 2,
+					description: `If I come too close to death, I will abandon the field out of cowardice`,
+				},
+				{
+					number: 3,
+					description: `Ambition blinds me, I sometimes ignore everything else in pursuit of what I want`,
+				},
+				{
+					number: 4,
+					description: `My new body is simply a shell, losing life and limb doesn't matter to me`,
+				},
+				{
+					number: 5,
+					description: `I am above everyone, even the most powerful of mortal authorities`,
+				},
+				{
+					number: 6,
+					description: `I am a pathological liar, even in the smallest of things`,
+				},
+			],
+		},
+	},
+	Detective: {
+		isHomebrew: true,
+		description: `In a world of magic and monsters, crime is an ever-present factor. From petty thieves to kidnapping fey, the work of a detective is never finished. But why did you become a detective? Do you, or did you, have a partner? Does your work pay well, or do you struggle to make ends meet? What was your breakout case, or are you still trying to make your name known? How have you dealt with the stress of your job?`,
+		skillProficiencies: `Investigation, Insight`,
+		toolProficiencies: `Forgery kit`,
+		languages: `1 common language of your choice.`,
+		startingEquipment: `Lamp, forgery kit, a quill, an ink well, a set of common or travaller's clothes and a pouch with 15 gold pieces.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Can I ask you some questions?`,
+			description: `You’re a detective, investigation is what you do. Innocent people are typically more willing to talk to you when it pertains to the administration of justice, and high ranking servants of the law may come to you for help more often.`,
+		},
+		alterateFeature: [
+			{
+				title: `Weathered`,
+				description: `You’ve seen enough of the criminal underworld and put enough law-breakers behind bars to know how they work. You can blend in with the crowd a little easier, and you pack innocuously enough that you’re less likely to be stolen from.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `The life of a detective is filled with sleepless nights and stressful deliberation. This comes with a slurry of mental and physical fatigue.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I’m not actually a great detective, I just get lucky.`,
+				},
+				{
+					number: 2,
+					description: `I don’t like people knowing anything about my real identity.`,
+				},
+				{
+					number: 3,
+					description: `I forget useless information, including common knowledge.`,
+				},
+				{
+					number: 4,
+					description: `I’m not that strong, I’m just used to pain.`,
+				},
+				{
+					number: 5,
+					description: `Don’t talk to me until I’ve had my daily dose.`,
+				},
+				{
+					number: 6,
+					description: `I don’t get much sleep, but when I do it’s impossible to wake me.`,
+				},
+				{
+					number: 7,
+					description: `I may act extroverted, but it’s just that, an act.`,
+				},
+				{
+					number: 8,
+					description: `I see the face of someone close to me in every victim.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Justice`,
+					description: `I want the law to triumph.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 2,
+					bold: `Pain`,
+					description: `I love watching people get punished harshly, especially for crimes they didn’t commit.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Comfort`,
+					description: `I don’t want people to suffer.`,
+					alignment: `Good`,
+				},
+				{
+					number: 4,
+					bold: `Tracking`,
+					description: `I’m looking for someone personally`,
+					alignment: `Any`,
+				},
+				{
+					number: 5,
+					bold: `Justice`,
+					description: `I’m the only one who can administer true justice.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Wealth`,
+					description: `I’m just in it for the money.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I own my own detective agency.`,
+				},
+				{
+					number: 2,
+					description: `I’ll do whatever’s necessary to close a case.`,
+				},
+				{
+					number: 3,
+					description: `I can’t turn down a case.`,
+				},
+				{
+					number: 4,
+					description: `Fey are almost always one of my top suspects.`,
+				},
+				{
+					number: 5,
+					description: `I have a decent network of informants.`,
+				},
+				{
+					number: 6,
+					description: `I’ve been tracking the same perp for years.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I chase tail faster than I chase leads.`,
+				},
+				{
+					number: 2,
+					description: `The memories of mistakes I made and people I couldn’t save, keep me up at night.`,
+				},
+				{
+					number: 3,
+					description: `I despise criminals, and true justice entails their death.`,
+				},
+				{
+					number: 4,
+					description: `I can’t let a case go, even if it’s a dead end.`,
+				},
+				{
+					number: 5,
+					description: `I have a debilitating reliance on a substance I can barely afford.`,
+				},
+				{
+					number: 6,
+					description: `I see the face of someone important to me in every criminal.`,
+				},
+			],
+		},
+	},
+	Disgrace: {
+		isHomebrew: true,
+		description: `You're a disappointment. A worthless waste of food and air. A disgrace. At least, that's what others will say about you. You may have always been frowned upon by society, or perhaps you were once a respected member of your community, but regardless, you are now considered a nuisance at best or a downright curse to your community at worst. You're hated by all and loved by few, if any.`,
+		skillProficiencies: `Intimidation, Perception`,
+		toolProficiencies: `Brewer's Supplies and a Gaming Set of your choice`,
+		languages: `Choose any one language`,
+		startingEquipment: `An old set of commoner's clothes, a gaming set of your choice, a bottle of hard liqueur, and 1d12 copper pieces.`,
+		backgroundSpecial: {
+			title: `Origins of Disgrace`,
+			description: `There's a reason you're hated.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `I am a drunkard and a layabout. I have done nothing but prove that I am useless.`,
+				},
+				{
+					number: 2,
+					description: `I was born into a noble family, but I didn't live up to my family's expectations.`,
+				},
+				{
+					number: 3,
+					description: `I am a bastard child, and nobody cares for a fatherless wretch.`,
+				},
+				{
+					number: 4,
+					description: `I was accused of a terrible crime that I didn't commit. Even though no evidence came of the investigations, rumors are still spread about me.`,
+				},
+				{
+					number: 5,
+					description: `I spoke out against the local government's injustices. The nail that sticks out gets hammered down...`,
+				},
+				{
+					number: 6,
+					description: `I was supposedly a prophesied hero, but I failed to meet the expectations of my people.`,
+				},
+			],
+		},
+		feature: {
+			title: `Wretched Kinship`,
+			description: `The undesirables of society trust you, mostly because they assume that you fear persecution as much as they do. You are able to find free 'lodging' (You sleep for free, but you are only experiencing the 'comforts' of the squalid lifestyle) with criminals and vagrants alike. However, if you are in a town, village, or city in which your name is known, you are unable to stay in any respectable establishment.`,
+		},
+		alterateFeature: [
+			{
+				title: `Redeemer`,
+				description: `Though you are still hated by the masses, you have found a generous bunch that is willing to overlook your societal standing. Be it a wealthy employer or a religious sect, you are able to obtain free food and lodging when dealing with associates of your ward. (Work with your DM to decide if you wish to work with a church, be a servant, or maybe even a bodyguard to a wealthy noble.) You will still be looked down upon by commoners and nobility alike, but the organization that took you in will treat you with respect so long as you do the same.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I don't speak much since I have been stigmatized by my people.`,
+				},
+				{
+					number: 2,
+					description: `I believe that others are always looking for an excuse to hate me.`,
+				},
+				{
+					number: 3,
+					description: `I know people hate me, and that's fine. I hate them more.`,
+				},
+				{
+					number: 4,
+					description: `I won't let some stupid stigma against me hold me back. I still have a life to live.`,
+				},
+				{
+					number: 5,
+					description: `I am excessively apologetic to others, fearing that any little mistake is a potential angry mob in my future.`,
+				},
+				{
+					number: 6,
+					description: `I don't let the little things bother me. There's plenty worse than judgmental stares and whispered rumors.`,
+				},
+				{
+					number: 7,
+					description: `I am aggressive and abrasive, always making sure to let people know that they're no better than me.`,
+				},
+				{
+					number: 8,
+					description: `I am determined to grow and rise above this adversity, taking every day in stride.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Refuge`,
+					description: `I just want to be left to live my life without constantly hearing others gripe.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Revenge`,
+					description: `There's a reason I'm hated, and that's because there were those who thought themselves more powerful than me. I'll prove them wrong...`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Redemption`,
+					description: `I am flawed, and I have done wrong before, but I can become a productive member of society once again.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Respite`,
+					description: `I don't care what it takes, I will ensure that no other faces unjust persecution like I did. `,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Ravage`,
+					description: `Society is to blame for my ill fortune. Surely, society must be made anew... `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Revitalize`,
+					description: `I know I can be more than this. I will become better, stronger, smarter.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I once had a child, but either before or after I fell to this level of depravity, they were taken from me. I wish to find them again.`,
+				},
+				{
+					number: 2,
+					description: `My childhood friend stood with me even after all others turned on me. I owe them so much.`,
+				},
+				{
+					number: 3,
+					description: `I used to own a business, but it was taken from me in the trials. I will have it once again.`,
+				},
+				{
+					number: 4,
+					description: `I truly did wrong someone (Be it an individual, a group or a family) and I must make amends for the suffering I have caused them.`,
+				},
+				{
+					number: 5,
+					description: `I was imprisoned after my trial, but a traveling businessman heard me out and paid my bail. I will repay him however I can.`,
+				},
+				{
+					number: 6,
+					description: `My faith has kept me strong through my disgrace, I thank my god every day for the freedom I still have.`,
+				},
+			],
+		},
+		Dragon_Raised: {
+			isHomebrew: true,
+			description: `You were raised by dragons. You have learned to persuade and intimidate from the best of the best. You've gained the trust of a dragon and all their connections. But how? Maybe a gold dragon took pity on you, living in a largely working class settlement. Maybe you impressed a red dragon by overthrowing a political leader, and bringing chaos to - and possibly ending a civilization. Maybe a deep dragon found you stranded in the underdark and worked you as a slave, or maybe you impressed them and they thought highly of you.`,
+			skillProficiencies: `Persuasion, Intimidation`,
+			toolProficiencies: `One type of gaming set`,
+			languages: `Draconic, or if you already know it choose another one of your choice.`,
+			startingEquipment: `One type of gaming set, a set of fine clothes, a trinket (page 160 PHB) and a pouch containing 30 gp`,
+			backgroundSpecial: {
+				title: ``,
+				description: ``,
+				die: ``,
+				roll: [
+					{
+						number: 1,
+						description: ``,
+					},
+					{
+						number: 2,
+						description: ``,
+					},
+					{
+						number: 3,
+						description: ``,
+					},
+					{
+						number: 4,
+						description: ``,
+					},
+					{
+						number: 5,
+						description: ``,
+					},
+					{
+						number: 6,
+						description: ``,
+					},
+				],
+			},
+			feature: {
+				title: `Draconic Connections`,
+				description: `Thanks to your dragon parent, you share any connections they may have had. If the dragon used a messenger, you know where to find them. This could be a follower of the dragon, such as a dragon blessed, chosen, or speaker, or maybe a kobold. If the dragon did not use a messenger, then you have to contact the connections yourself. They should be willing to help, depending on what you're asking for.`,
+			},
+			alterateFeature: [
+				{
+					title: ``,
+					description: ``,
+				},
+				{
+					title: ``,
+					description: ``,
+				},
+			],
+			suggestedCharacteristics: `Dragon raised have huge respect for dragons, value culture and love gold. Some go crazy at the sight of gold, and will do anything to get it, while some might appreciate culture more.`,
+			suggestedPersonalityTraits: {
+				description: ``,
+				die: `1d8`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `I ask a lot of questions about different cultures.`,
+					},
+					{
+						number: 2,
+						description: `I have huge respect for dragons, and their connections.`,
+					},
+					{
+						number: 3,
+						description: `I expect kobolds to worship me, even though I'm not a dragon.`,
+					},
+					{
+						number: 4,
+						description: `I treat dragonborn as if they were below me, because they are.`,
+					},
+					{
+						number: 5,
+						description: `I get very angry when any kind of dragon is threatened.`,
+					},
+					{
+						number: 6,
+						description: `I treat dragonborn with great respect, due to their draconic heritage and shared culture.`,
+					},
+					{
+						number: 7,
+						description: `I have no remorse for dragons, because my draconic parent abused and used me.`,
+					},
+					{
+						number: 8,
+						description: `I have flashbacks to when I was being raised or enslaved when I see a dragon('s lair) of the same type as my parent.`,
+					},
+				],
+			},
+			suggestedIdeal: {
+				description: ``,
+				die: `1d6`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						bold: `Money`,
+						description: `Money is the most important thing in the world, and I'd do anything to get some, even if that means breaking the law.`,
+						alignment: `Chaotic`,
+					},
+					{
+						number: 2,
+						bold: `Culture`,
+						description: `There is nothing more important than culture. It shapes history and laws, which we must follow.`,
+						alignment: `Lawful`,
+					},
+					{
+						number: 3,
+						bold: `Control`,
+						description: `I love control. I must be the head of any group I'm in, and if they refuse me, I'll get there by authoritarian means `,
+						alignment: `Evil`,
+					},
+					{
+						number: 4,
+						bold: `Religion`,
+						description: `Worship is the most important thing, especially to Tiamat or Bahamut `,
+						alignment: `Any`,
+					},
+					{
+						number: 5,
+						bold: `Connections`,
+						description: `Cooperation between creatures is the best way to figure anything out.`,
+						alignment: `Good`,
+					},
+					{
+						number: 6,
+						bold: `Balance`,
+						description: `Everything is a complex interaction of forces that must be kept in a delicate balance`,
+						alignment: `Neutral`,
+					},
+				],
+			},
+			suggestedBond: {
+				description: ``,
+				die: `1d6`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `Dragons are the most important thing to me, I'll do anything to protect them.`,
+					},
+					{
+						number: 2,
+						description: `I'll do anything to keep my (rather small) horde safe.`,
+					},
+					{
+						number: 3,
+						description: `Culture is the strongest force, and I stick to it, no matter the cost`,
+					},
+					{
+						number: 4,
+						description: `I was given a magic item from my draconic parent, and wish to keep it safe.`,
+					},
+					{
+						number: 5,
+						description: `Money is something sacred to me.`,
+					},
+					{
+						number: 6,
+						description: ``,
+					},
+				],
+			},
+			suggestedFlaw: {
+				description: ``,
+				die: `1d6`,
+				title: ``,
+				roll: [
+					{
+						number: 1,
+						description: `I'll do anything for money, and it gets in the way of my relationships.`,
+					},
+					{
+						number: 2,
+						description: `Common is a language I hardly understand.`,
+					},
+					{
+						number: 3,
+						description: `I am so devoted to worshipping the dragon gods, that anyone who opposes them I must kill`,
+					},
+					{
+						number: 4,
+						description: `The thought of dragons makes me mad, and enact violence on any mildly draconic creature.`,
+					},
+					{
+						number: 5,
+						description: `Fire is beautiful, and so is anything on fire, so why not set fire to everything?`,
+					},
+					{
+						number: 6,
+						description: `Anyone who is uncultured doesn't deserve my respect.`,
+					},
+				],
+			},
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `The distrust of others has led me to my own suspicions of others.`,
+				},
+				{
+					number: 2,
+					description: `I hate all nobility. It's because of their damnable politicking that my life fell apart.`,
+				},
+				{
+					number: 3,
+					description: `I've taken a bit too well to pariah-hood. I'm uncomfortable around law-abiding individuals.`,
+				},
+				{
+					number: 4,
+					description: `I've only recently re-entered the civilized world. My hostile environment still haunts me, making me skittish and fearful.`,
+				},
+				{
+					number: 5,
+					description: `High ranking officials who ask too many questions often receive thinly veiled death threats from me.`,
+				},
+				{
+					number: 6,
+					description: `I'm still just as much of a disgrace as I was accused of being. I will lie, cheat and steal to my heart's content.`,
 				},
 			],
 		},
