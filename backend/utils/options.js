@@ -867,6 +867,26 @@ const armorProficiencies = [
     "Nonmetal Shield",
 ];
 
+const weaponProficiencies = [
+    "Simple",
+    "Martial",
+    "Light Crossbow",
+    "Hand Crossbow",
+    "Longsword",
+    "Rapier",
+    "Shortsword",
+    "Club",
+    "Dagger",
+    "Dart",
+    "Javelin",
+    "Mace",
+    "Quarterstaff",
+    "Scimitar",
+    "Sickle",
+    "Sling",
+    "Spear",
+];
+
 module.exports = {
     backgrounds,
     alignment,
@@ -882,4 +902,5 @@ module.exports = {
     classDefault,
     raceDefault,
     armorProficiencies,
+    weaponProficiencies,
 };
