@@ -3870,6 +3870,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "City_Guard", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -11765,12 +11769,12 @@ export const backgroundDesc = {
 		},
 	},
 	Child_Soldier: {
-	isHomebrew: true ,
-        description: `As a child, you were part of an organization that specialized in turning children into weapons. Your time there made you proficient in many different fighting styles, assassination, all so you could eventually serve the organization you trained under in the real world. You have been forced to kill and have almost been killed, all in the name of making you stronger. One way or another, you are able to escape this place. However, a lot of resources went into making you the weapon you are today, and there are people out there still looking for you.`,
-        skillProficiencies: `Survival, Stealth`,
-        toolProficiencies: `Disguise kit`,
+		isHomebrew: true,
+		description: `As a child, you were part of an organization that specialized in turning children into weapons. Your time there made you proficient in many different fighting styles, assassination, all so you could eventually serve the organization you trained under in the real world. You have been forced to kill and have almost been killed, all in the name of making you stronger. One way or another, you are able to escape this place. However, a lot of resources went into making you the weapon you are today, and there are people out there still looking for you.`,
+		skillProficiencies: `Survival, Stealth`,
+		toolProficiencies: `Disguise kit`,
 		languages: `Any one of your choosing`,
-        startingEquipment: `A trinket of your past, a set of worn combat style clothes, a hooded cloak, a weapon of your choice, a backpack, and 15 gp`,
+		startingEquipment: `A trinket of your past, a set of worn combat style clothes, a hooded cloak, a weapon of your choice, a backpack, and 15 gp`,
 		backgroundSpecial: {
 			title: ``,
 			description: ``,
@@ -11799,13 +11803,13 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: ``,
-				}
+				},
 			],
 		},
-        feature: {
-            title: `Vigilant`,
-            description: `Because of your rigorous training, you are an extremely light sleeper and it is almost impossible for anything or anyone to sneak up on you. Your constant vigilance also means that you may pick up on things happening that others might not immediately notice. You gain advantage on perception`,
-        },
+		feature: {
+			title: `Vigilant`,
+			description: `Because of your rigorous training, you are an extremely light sleeper and it is almost impossible for anything or anyone to sneak up on you. Your constant vigilance also means that you may pick up on things happening that others might not immediately notice. You gain advantage on perception`,
+		},
 		alterateFeature: [
 			{
 				title: `Respect and Fear`,
@@ -11816,7 +11820,7 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-        suggestedCharacteristics: ``,
+		suggestedCharacteristics: ``,
 		suggestedPersonalityTraits: {
 			description: ``,
 			die: `1d8`,
@@ -11896,7 +11900,7 @@ export const backgroundDesc = {
 					bold: `Thrill`,
 					description: `Wherever they rear their ugly heads, I'll be there.`,
 					alignment: `Chaotic`,
-				}
+				},
 			],
 		},
 		suggestedBond: {
@@ -11927,10 +11931,11 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I want to reform my marks into forces of justice/good.`,
-				}
+				},
 			],
 		},
-		suggestedFlaw: { // test push
+		suggestedFlaw: {
+			//
 			description: ``,
 			die: `1d6`,
 			title: ``,
@@ -11961,7 +11966,205 @@ export const backgroundDesc = {
 				},
 			],
 		},
-    },
+	},
+	City_Guard: {
+		isHomebrew: true,
+		description: `City Guards come from all walks of life, whether they be born into it, a retired solider or mercenary, a reformed criminal or perhaps just your average citizen in need of a job. They form the back bone of law and order but also form an effective fighting unit in the event of a siege or bandit raid. Garrisons vary wildly depending on location and culture. Some are the perfect aspiration of honor and justice while others are little better than enforcers for the local ruler. Important things for a City Guard to consider are: How did you end up a guard? What city are you from? Why did you leave? What was your garrison like?`,
+		skillProficiencies: `Athletics or Acrobatics and Insight or Investigation`,
+		toolProficiencies: `Musical Instrument - Horn`,
+		languages: `Choose one Standard Language`,
+		startingEquipment: `Instrument - Horn, a set of common clothes, City Insignia on a necklace, pair of shackles and 2 keys, Guards Cloak, and a belt pouch containing 10gp`,
+		backgroundSpecial: {
+			title: `Guardsman`,
+			description: `During your time as a guardsman what duties did you most frequently carry out.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Wall Watchman`,
+				},
+				{
+					number: 2,
+					description: `Gate Guard`,
+				},
+				{
+					number: 3,
+					description: `Palace Guard`,
+				},
+				{
+					number: 4,
+					description: `Street Patroller`,
+				},
+				{
+					number: 5,
+					description: `Guard Officer`,
+				},
+				{
+					number: 6,
+					description: `Dungeon Warden`,
+				},
+			],
+		},
+		feature: {
+			title: `One of the Guard`,
+			description: `When in a city or town you can always find food and a place to sleep with the local guards garrison. The local Guards will be hesitant to start a fight with you and are likely to come to your aid in a fight, the guards will also believe you except in the face of overwhelming evidence or under the command of a superior. For this effect to apply you must be in a city that you would fit in as a Guard, this is decided by the DM.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `City Guards end up in their line of work for all manner of reasons so their personalities and flaws are often as varied as the citizens they protect.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am always on the watch and never let my guard down.`,
+				},
+				{
+					number: 2,
+					description: `My friends know they can rely on me no matter what.`,
+				},
+				{
+					number: 3,
+					description: `Breaking up a brawl is the fun part of my day.`,
+				},
+				{
+					number: 4,
+					description: `I can stare down a hell hound without flinching.`,
+				},
+				{
+					number: 5,
+					description: `I enjoy being strong and able to protect others.`,
+				},
+				{
+					number: 6,
+					description: `My language is as foul as a bug-bear.`,
+				},
+				{
+					number: 7,
+					description: `I like the night patrols best, very peaceful or very not.`,
+				},
+				{
+					number: 8,
+					description: `I like gate duty best.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Sacrifice`,
+					description: `Our lot is to lay down our lives for others.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Ordained`,
+					description: `I must do as the city rulers command to keep order.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Breaker`,
+					description: `I must do what is right for the city despite orders.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Enforcement`,
+					description: `People will always do as I say with force.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Realist`,
+					description: `There will always be crime, as sure as there will be guards.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Lover`,
+					description: `I love my city, and I will do anything to protect it`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `It is my duty to protect the city and its citizens.`,
+				},
+				{
+					number: 2,
+					description: `My fellow Guards are my brothers/sisters in arms.`,
+				},
+				{
+					number: 3,
+					description: `Someone saved my life on patrol, and I still owe them to this day.`,
+				},
+				{
+					number: 4,
+					description: `My honor is my life.`,
+				},
+				{
+					number: 5,
+					description: `I will never forget or forgive the crime lord who killed my fellows.`,
+				},
+				{
+					number: 6,
+					description: `I fight for those who cannot fight for themselves.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I made a mistake once, and it cost a lot of lives.`,
+				},
+				{
+					number: 2,
+					description: `My hatred for raiders is blinding and furious.`,
+				},
+				{
+					number: 3,
+					description: `I obey the law even when it serves no good.`,
+				},
+				{
+					number: 4,
+					description: `I can be bribed easily; a few gold here, please...`,
+				},
+				{
+					number: 5,
+					description: `I care only for my own authority.`,
+				},
+				{
+					number: 6,
+					description: `I will never let injustice pass me by.`,
+				},
+			],
+		},
+	},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
