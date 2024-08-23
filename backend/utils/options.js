@@ -35,6 +35,11 @@ const backgrounds = [
 	"Botanist", //homebrew
 	"Bounty Hunter", //homebrew
 	"Butler", //homebrew
+	"Cannibal", //homebrew
+	"Cartographer", //homebrew
+	"Child", //homebrew
+	"Child Soldier", //homebrew
+	"City Guard", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

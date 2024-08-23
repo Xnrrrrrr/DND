@@ -3854,6 +3854,26 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Cannibal", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Cartographer", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Child", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Child_Soldier", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "City_Guard", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Bereaved",
 		isHomebrew: true,
 	},
@@ -11044,7 +11064,7 @@ export const backgroundDesc = {
 					description: `I respect my master more than anyone in the world. I always try to mimic their pattern of speech and demeanour.`,
 				},
 			],
-		},				//test
+		}, //test
 		suggestedIdeal: {
 			description: ``,
 			die: `1d6`,
@@ -11147,6 +11167,1000 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: ``,
+				},
+			],
+		},
+	},
+	Cannibal: {
+		isHomebrew: true,
+		description: `One way or another, you have developed a taste for the repulsive: forbidden flesh. While cannibals are known to usually eat the flesh of their own kind, this does not restrict, say, a human who eats elves and dwarves from being called a detestable cannibal. There is a colorful amount of cannibals, with a mix of motive and method. Some cannibals see their diet as a ritual, and cannibalism being integral to it. Religious ceremonies sometimes involve sacrifices and a following feast of the sacrificed body. Other forms of this include cultures which have enshrined the act of cannibalism in their diet. This can be a practical application, as they eat the elderly, who do not have anymore perceived use in society. They have no qualms eating the weak as a way to fuel the strong.
+
+						There are always outlier cases. Cannibals can be deranged hedonists who simply developed a perverted taste for the forbidden. They do so because it satisfies them, regardless of society's views on it. Keep in mind that this background requires that cannibalism encompass a significant portion of a character's composition. It cannot simply be a trait, or it will not suffice as a complete background. Cannibalism maintains a firm central base for your character, and it heavily affected how they grew up and became who they are today. Perhaps they were thoroughly enlightened by their taste of forbidden flesh, which then made them incredibly driven for more. There are cannibals who see it as an art they wish to perfect, and so they travel in search of exotic tastes. Some cannibals are defined by a crucial moment in their life which involved cannibalism. They could have been trapped in a desperate situation which forced them to do the unthinkable, and it now remains a part of them forever.
+
+						So, what sort of cannibal is your character? Do they do it for the religious or ritual experience? How did they acquire this taste? Did someone introduce it to them? Do they still openly practice, or do they feast away from even the gaze of allies? Do they want to change, by any chance?`,
+		skillProficiencies: `Survival, Deception`,
+		toolProficiencies: `Cook's Utensils`,
+		languages: ``,
+		startingEquipment: `A set of traveler's clothes, two knives, a recipe book for how to safely prepare various races for consumpton, and a belt pouch of 5gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I want to be free of these disgusting cravings.`,
+				},
+				{
+					number: 2,
+					description: `Others need only realize that this is not an abhorrent thing to do. Everyone should do it.`,
+				},
+				{
+					number: 3,
+					description: `I want to try all the species there are in the world. `,
+				},
+				{
+					number: 4,
+					description: `There is a single individual I want to eat before I die...`,
+				},
+				{
+					number: 5,
+					description: ` I can eat whatever I want and no one can tell me otherwise! `,
+				},
+				{
+					number: 6,
+					description: `I want to eat the world.`,
+				},
+			],
+		},
+		feature: {
+			title: `Thoe of a Different Taste`,
+			description: `As those of a complex and niche taste preference, you and others with this persecuted diet have ways to get what you need. You have some shady contacts with dealers of forbidden comestibles. This can extend beyond just forbidden meat, and can cover parts of the underworld, including illegal substances like poison. Since this is largely with criminal undertones, these people will not provide for your lifestyle, but they can pass on information down the grapevine about illegal smuggling, dealing, and safe-houses.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `There are charming cannibals who can talk their way out of jail and make themselves like victims. Better yet are the affable ones who try to convert others to their diet.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I try not to talk to people.`,
+				},
+				{
+					number: 2,
+					description: `I like to smile a lot and put people at ease.`,
+				},
+				{
+					number: 3,
+					description: `Fear is the best way I introduce myself. Be afraid.`,
+				},
+				{
+					number: 4,
+					description: `I hate waste in general, but especially in food.`,
+				},
+				{
+					number: 5,
+					description: `I will do whatever necessary to achieve my goals.`,
+				},
+				{
+					number: 6,
+					description: `I like to experiment and am open to try new things.`,
+				},
+				{
+					number: 7,
+					description: `I can be picky and pedantic about what even allies do.`,
+				},
+				{
+					number: 8,
+					description: `Cooking is a wonderful outlet for me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Conversion`,
+					description: ``,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Converting`,
+					description: ``,
+					alignment: `Any`,
+				},
+				{
+					number: 3,
+					bold: `Connoisseur`,
+					description: ``,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `End Meal`,
+					description: ``,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Survival`,
+					description: ``,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Devour`,
+					description: ``,
+					alignment: `Evil`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I was raised by a person who endowed me with this diet.`,
+				},
+				{
+					number: 2,
+					description: `I have fellow cultists who believe in this food as well.`,
+				},
+				{
+					number: 3,
+					description: `My tribe has practiced this and I grew up mimicking them.`,
+				},
+				{
+					number: 4,
+					description: `People are useless ultimately. Why get to know your next meal?`,
+				},
+				{
+					number: 5,
+					description: `I would like to know what love tastes like.`,
+				},
+				{
+					number: 6,
+					description: `This lifestyle has isolated me from everyone I cared about.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am an absolute glutton who eats too greedily.`,
+				},
+				{
+					number: 2,
+					description: `I am too lazy to get my own food, most of the time.`,
+				},
+				{
+					number: 3,
+					description: `I follow things traditionally to the letter, and I hate change.`,
+				},
+				{
+					number: 4,
+					description: `My whimsy is capricious. I can't make up my mind.`,
+				},
+				{
+					number: 5,
+					description: `I lack empathy entirely.`,
+				},
+				{
+					number: 6,
+					description: `I think too much about my stomach and nothing else.`,
+				},
+			],
+		},
+	},
+	Cartographer: {
+		isHomebrew: true,
+		description: `As a Cartographer, you are a master of mapmaking and navigation, skilled in creating accurate representations of the world and charting courses through unknown territories. Whether you're mapping unexplored lands, charting sea routes, or documenting the intricate layout of a city, your expertise lies in capturing the essence of geography and providing invaluable guidance to travelers and explorers.`,
+		skillProficiencies: `Intelligence, Perception`,
+		toolProficiencies: `Cartographer's Tools, Navigator's Tools`,
+		languages: `One language of your choice`,
+		startingEquipment: `A set of artisan's tools (Cartographer's Tools), a compass, a measuring chain, a parchment scroll, a quill and ink, a magnifying glass, a set of common clothes, and a pouch containing 10gp`,
+		backgroundSpecial: {
+			title: `Mapmaking Techniques`,
+			description: `Specialization`,
+			die: `1d4`,
+			roll: [
+				{
+					number: 1,
+					description: `Topographic Maps. Specializing in depicting elevation and landforms, you excel at creating detailed maps that accurately portray the contours of the terrain.`,
+				},
+				{
+					number: 2,
+					description: `	Nautical Charts. Specializing in maritime navigation, you excel at creating maps of coastal regions and sea routes, including navigational hazards and tidal patterns.`,
+				},
+				{
+					number: 3,
+					description: `Urban Cartography. Specializing in city mapping, you excel at documenting the layout of urban environments, including streets, buildings, and landmarks.`,
+				},
+				{
+					number: 4,
+					description: `Exploratory Mapping. Specializing in exploration, you excel at mapping uncharted territories and discovering new lands, using a combination of surveying techniques and field observations.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Cartographer's Insight`,
+			description: `Your keen eye for detail and intuitive understanding of geography make you an expert in interpreting maps and navigating unfamiliar terrain. You can quickly analyze a map to identify key landmarks, estimate distances, and plot the most efficient routes. Additionally, you can create simple maps of your surroundings using basic materials, providing valuable guidance to your companions during travels.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `As a Cartographer, you possess a deep fascination with the intricacies of the world and a passion for uncovering its secrets. Your experiences have shaped your personality and worldview, influencing how you interact with others and approach challenges.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am curious and inquisitive, always eager to explore new lands and uncover hidden treasures.`,
+				},
+				{
+					number: 2,
+					description: `I am meticulous and detail-oriented, ensuring that every map I create is accurate and precise.`,
+				},
+				{
+					number: 3,
+					description: `	I am patient and methodical, willing to spend hours studying maps and planning routes before embarking on a journey.`,
+				},
+				{
+					number: 4,
+					description: `I am observant and perceptive, noticing subtle details that others overlook and using them to my advantage.`,
+				},
+				{
+					number: 5,
+					description: `I am resourceful and adaptable, able to navigate through unfamiliar terrain and find creative solutions to obstacles.`,
+				},
+				{
+					number: 6,
+					description: `I am introverted and reserved, preferring the solitude of my studies and the quiet contemplation of maps.`,
+				},
+				{
+					number: 7,
+					description: `I am independent and self-reliant, trusting my own instincts and abilities above all else.`,
+				},
+				{
+					number: 8,
+					description: `I am passionate and enthusiastic, eager to share my knowledge and discoveries with others.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Exploration`,
+					description: `I am driven by a thirst for discovery and adventure, constantly seeking to uncover new lands and chart unexplored territories.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Knowledge`,
+					description: `I believe that knowledge is the key to understanding the world, and I am dedicated to documenting its wonders for future generations.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Freedom`,
+					description: `I value my independence and autonomy, cherishing the freedom to roam the world and explore its mysteries`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Unity`,
+					description: `I believe that maps have the power to bring people together, bridging the gap between cultures and fostering cooperation and understanding`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Preservation`,
+					description: `I am committed to preserving the natural beauty of the world, using my maps to promote conservation and environmental stewardship.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Ambition`,
+					description: `I aspire to create the greatest maps ever made, pushing the boundaries of cartography and leaving a lasting legacy for posterity.`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am dedicated to completing a comprehensive atlas of the known world, documenting every land, sea, and sky.`,
+				},
+				{
+					number: 2,
+					description: `I owe my life to a mentor who taught me the art of cartography and inspired me to pursue my dreams.`,
+				},
+				{
+					number: 3,
+					description: `I am searching for a lost civilization whose secrets are said to be hidden within the pages of ancient maps.`,
+				},
+				{
+					number: 4,
+					description: `I am indebted to a wealthy patron who funds my expeditions and commissions me to create maps of exotic locales.`,
+				},
+				{
+					number: 5,
+					description: `I am driven by the memory of a loved one who perished due to a navigational error, spurring me to become a master cartographer.`,
+				},
+				{
+					number: 6,
+					description: `I am on a quest to map the fabled lands of legend, seeking to separate fact from fiction and uncover the truth behind the myths.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I become so engrossed in my work that I often neglect other aspects of my life, including relationships and personal well-being.`,
+				},
+				{
+					number: 2,
+					description: `I am overly critical of my own work, constantly striving for perfection and becoming frustrated when I fall short of my high standards.`,
+				},
+				{
+					number: 3,
+					description: `I sometimes underestimate the dangers of the unknown, assuming that my skills as a cartographer will protect me from harm.`,
+				},
+				{
+					number: 4,
+					description: `I prefer the company of maps and charts to that of other people, leading me to withdraw from social interactions and become isolated from society.`,
+				},
+				{
+					number: 5,
+					description: `I am resistant to change and new ideas, clinging to outdated mapping techniques and refusing to adapt to modern innovations.`,
+				},
+				{
+					number: 6,
+					description: `I have a compulsive need to map every location I visit, regardless of its significance or importance, often at the expense of more pressing tasks.`,
+				},
+			],
+		},
+	},
+	Child: {
+		isHomebrew: true,
+		description: `You are a child. Not even a young teenager, a child. There could be many reasons why you're ready to take on dragons, lichs, or other nasty things, but it's still a little unsettling for you to be ready for that sort of danger at such a young age. Whether you're motivated by the pressures of your family, an important personal goal, or by simple curiosity, you are a child in a world of grown-ups; This won't be easy, but it'll be fun!`,
+		skillProficiencies: `Choose two from: Persuasion, Deception, Animal Handling, Acrobatics, Performance`,
+		toolProficiencies: `Gaming Set, musical instrument`,
+		languages: `One language of your choice.`,
+		startingEquipment: `Mess kit, set of common clothes, small belt pouch containing 3 GP and a small toy of your choosing`,
+		backgroundSpecial: {
+			title: `Child-Like Wonder`,
+			description: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Child-Like Wonder`,
+			description: `Your naivety and inexperience with the world around you lead you to have an overwhelming appreciation for everything you see. You can use this to your advantage in order to seem innocent or non-threatening, or just to convince that cool wizard to let you pet their familiar. Some magic items will work better for you if "sense of childlike wonder" is mentioned in the lore`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Every kid is different, so don't feel like you have to slot into the types below. Have fun with it! After all, you won't be little for long!`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm really energetic and tend to get real excited about everything!!!`,
+				},
+				{
+					number: 2,
+					description: `I like making up my own jokes and pranks, and I think it's hilarious!`,
+				},
+				{
+					number: 3,
+					description: `I'm weirdly knowledgeable in one really niche area, and I can hold a full conversation about it. Otherwise, I'm pretty normal.`,
+				},
+				{
+					number: 4,
+					description: `I'm really clingy and shy, and will latch onto one person as my "safe place."`,
+				},
+				{
+					number: 5,
+					description: `I'm very physical and express affection by wrestling or aggressively hugging people.`,
+				},
+				{
+					number: 6,
+					description: `I'm super curious about everything! Tell me more!`,
+				},
+				{
+					number: 7,
+					description: `I'm very calm and quiet around big groups, but I'm rambunctious and lively around my friends.`,
+				},
+				{
+					number: 8,
+					description: `I'm kind of obnoxious, but I'm completely unaware of it.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Fun`,
+					description: `I want to have a ton of fun, even if I might get in trouble! `,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Knowledge`,
+					description: `I want to be the smartest kid my age.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Family`,
+					description: `I want to find a better family than the one I have.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Family`,
+					description: `I want to make my family proud of me.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Rebellion`,
+					description: `I'm sick of all the pointless rules my parents make me follow.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Happiness`,
+					description: `I want everyone I meet to have a reason to be happy that day!`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My older sibling is the coolest person ever, and I want to be just like them!`,
+				},
+				{
+					number: 2,
+					description: `My parents want me to be a perfect child, and I'm willing to try if it makes them happy.`,
+				},
+				{
+					number: 3,
+					description: `My grandma says I have to write home to her if I go on this adventure!`,
+				},
+				{
+					number: 4,
+					description: `I intend to go to an expensive school when I'm old enough, but my family can't afford it. I refuse to accept defeat and I'm going to get the gold on my own.`,
+				},
+				{
+					number: 5,
+					description: `I've gotta get money for my mom's healing spell costs, otherwise she won't get better.`,
+				},
+				{
+					number: 6,
+					description: `My dad is a retired adventurer, and he's super supportive of my chosen career. I can't wait to show him all the things I've done!`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I always think of things as much simpler or much more complicated then they actually are.`,
+				},
+				{
+					number: 2,
+					description: `I can't stand the feeling of armor much heavier than hide.`,
+				},
+				{
+					number: 3,
+					description: `I can't eat anything if it hasn't been cut into smaller bites.`,
+				},
+				{
+					number: 4,
+					description: `I'm still learning to tie my shoes by myself. I get really upset when I can't do it alone.`,
+				},
+				{
+					number: 5,
+					description: `I'm easily distracted. Like, really easily.`,
+				},
+				{
+					number: 6,
+					description: `I have little to no filter, and will say whatever comes to mind.`,
+				},
+			],
+		},
+	},
+	Child_Soldier: {
+		isHomebrew: true,
+		description: `As a child, you were part of an organization that specialized in turning children into weapons. Your time there made you proficient in many different fighting styles, assassination, all so you could eventually serve the organization you trained under in the real world. You have been forced to kill and have almost been killed, all in the name of making you stronger. One way or another, you are able to escape this place. However, a lot of resources went into making you the weapon you are today, and there are people out there still looking for you.`,
+		skillProficiencies: `Survival, Stealth`,
+		toolProficiencies: `Disguise kit`,
+		languages: `Any one of your choosing`,
+		startingEquipment: `A trinket of your past, a set of worn combat style clothes, a hooded cloak, a weapon of your choice, a backpack, and 15 gp`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Vigilant`,
+			description: `Because of your rigorous training, you are an extremely light sleeper and it is almost impossible for anything or anyone to sneak up on you. Your constant vigilance also means that you may pick up on things happening that others might not immediately notice. You gain advantage on perception`,
+		},
+		alterateFeature: [
+			{
+				title: `Respect and Fear`,
+				description: `criminal organizations are inclined to fear you, and people assume you have the right to be wherever you are. Everyone will probably make every effort to accommodate you and avoid your displeasure, and other people of high riches treat you as a member of the same social sphere.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I take charge of a situation. I am rough around the edges, and forceful in conversations.`,
+				},
+				{
+					number: 2,
+					description: `I am constantly seeking any sliver of knowledge or secret item which can give me a new edge over my enemy.`,
+				},
+				{
+					number: 3,
+					description: `My body is covered in scars, or other markings- my trophies earned from each mark I have claimed.`,
+				},
+				{
+					number: 4,
+					description: `My time hunting my mark has caused me to think so much like them, I sometimes frighten or confuse those around me.`,
+				},
+				{
+					number: 5,
+					description: `I am extremely protective of my employers, as though they were my own family.`,
+				},
+				{
+					number: 6,
+					description: `I distract myself from my memories of work by escaping in indulgences and good company.`,
+				},
+				{
+					number: 7,
+					description: `I trivialize the true depth or magnitude of a situation.`,
+				},
+				{
+					number: 8,
+					description: `I am very proud of myself and my history, and consider my past career to be glorious and honorable.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Purity`,
+					description: `I fight to destroy the the evil which corrupts our world`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Balance`,
+					description: `My marks defy the natural order and destabilize nature.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Prejudice`,
+					description: `My marks must all be destroyed without question or hesitation.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Police`,
+					description: `My profession is a necessary extension of law enforcement. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Righteousness`,
+					description: `I will defeat them at all costs- with or without your help.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Thrill`,
+					description: `Wherever they rear their ugly heads, I'll be there.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have been hunting for the greatest, rarest mark.`,
+				},
+				{
+					number: 2,
+					description: `My loved one(s) were taken from me by a mark.`,
+				},
+				{
+					number: 3,
+					description: `My master, (possibly a parent) made me who I am today.`,
+				},
+				{
+					number: 4,
+					description: `I am fighting to protect something or someone important to me.`,
+				},
+				{
+					number: 5,
+					description: `A mark once spared my life. I have always wondered why.`,
+				},
+				{
+					number: 6,
+					description: `I want to reform my marks into forces of justice/good.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			//
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `A specific, extremely powerful mark, has a vendetta against me, and will stop at nothing to kill me.`,
+				},
+				{
+					number: 2,
+					description: `I am obsessed with killing every last mark, and will brave insane dangers in my quest.`,
+				},
+				{
+					number: 3,
+					description: `Decades of death and combat have made me cruel, reclusive, dangerous, or addicted.`,
+				},
+				{
+					number: 4,
+					description: `I am secretly deeply terrified of my marks.`,
+				},
+				{
+					number: 5,
+					description: `I am a phony, all of my marks were illusions, actors, or lies.`,
+				},
+				{
+					number: 6,
+					description: `My actions have incidentally put me at odds with a specific nation, religion, faction, or other organization.`,
+				},
+			],
+		},
+	},
+	City_Guard: {
+		isHomebrew: true,
+		description: `City Guards come from all walks of life, whether they be born into it, a retired solider or mercenary, a reformed criminal or perhaps just your average citizen in need of a job. They form the back bone of law and order but also form an effective fighting unit in the event of a siege or bandit raid. Garrisons vary wildly depending on location and culture. Some are the perfect aspiration of honor and justice while others are little better than enforcers for the local ruler. Important things for a City Guard to consider are: How did you end up a guard? What city are you from? Why did you leave? What was your garrison like?`,
+		skillProficiencies: `Athletics or Acrobatics and Insight or Investigation`,
+		toolProficiencies: `Musical Instrument - Horn`,
+		languages: `Choose one Standard Language`,
+		startingEquipment: `Instrument - Horn, a set of common clothes, City Insignia on a necklace, pair of shackles and 2 keys, Guards Cloak, and a belt pouch containing 10gp`,
+		backgroundSpecial: {
+			title: `Guardsman`,
+			description: `During your time as a guardsman what duties did you most frequently carry out.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Wall Watchman`,
+				},
+				{
+					number: 2,
+					description: `Gate Guard`,
+				},
+				{
+					number: 3,
+					description: `Palace Guard`,
+				},
+				{
+					number: 4,
+					description: `Street Patroller`,
+				},
+				{
+					number: 5,
+					description: `Guard Officer`,
+				},
+				{
+					number: 6,
+					description: `Dungeon Warden`,
+				},
+			],
+		},
+		feature: {
+			title: `One of the Guard`,
+			description: `When in a city or town you can always find food and a place to sleep with the local guards garrison. The local Guards will be hesitant to start a fight with you and are likely to come to your aid in a fight, the guards will also believe you except in the face of overwhelming evidence or under the command of a superior. For this effect to apply you must be in a city that you would fit in as a Guard, this is decided by the DM.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `City Guards end up in their line of work for all manner of reasons so their personalities and flaws are often as varied as the citizens they protect.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am always on the watch and never let my guard down.`,
+				},
+				{
+					number: 2,
+					description: `My friends know they can rely on me no matter what.`,
+				},
+				{
+					number: 3,
+					description: `Breaking up a brawl is the fun part of my day.`,
+				},
+				{
+					number: 4,
+					description: `I can stare down a hell hound without flinching.`,
+				},
+				{
+					number: 5,
+					description: `I enjoy being strong and able to protect others.`,
+				},
+				{
+					number: 6,
+					description: `My language is as foul as a bug-bear.`,
+				},
+				{
+					number: 7,
+					description: `I like the night patrols best, very peaceful or very not.`,
+				},
+				{
+					number: 8,
+					description: `I like gate duty best.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Sacrifice`,
+					description: `Our lot is to lay down our lives for others.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Ordained`,
+					description: `I must do as the city rulers command to keep order.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Breaker`,
+					description: `I must do what is right for the city despite orders.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Enforcement`,
+					description: `People will always do as I say with force.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Realist`,
+					description: `There will always be crime, as sure as there will be guards.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Lover`,
+					description: `I love my city, and I will do anything to protect it`,
+					alignment: `Any`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `It is my duty to protect the city and its citizens.`,
+				},
+				{
+					number: 2,
+					description: `My fellow Guards are my brothers/sisters in arms.`,
+				},
+				{
+					number: 3,
+					description: `Someone saved my life on patrol, and I still owe them to this day.`,
+				},
+				{
+					number: 4,
+					description: `My honor is my life.`,
+				},
+				{
+					number: 5,
+					description: `I will never forget or forgive the crime lord who killed my fellows.`,
+				},
+				{
+					number: 6,
+					description: `I fight for those who cannot fight for themselves.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I made a mistake once, and it cost a lot of lives.`,
+				},
+				{
+					number: 2,
+					description: `My hatred for raiders is blinding and furious.`,
+				},
+				{
+					number: 3,
+					description: `I obey the law even when it serves no good.`,
+				},
+				{
+					number: 4,
+					description: `I can be bribed easily; a few gold here, please...`,
+				},
+				{
+					number: 5,
+					description: `I care only for my own authority.`,
+				},
+				{
+					number: 6,
+					description: `I will never let injustice pass me by.`,
 				},
 			],
 		},
