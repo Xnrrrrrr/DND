@@ -48,6 +48,7 @@ const backgrounds = [
 	"Detective", //homebrew
 	"Disgrace", //homebrew
 	"Dragon Raised", //homebrew
+	"Entomologist", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
@@ -858,18 +859,49 @@ const raceDefault = {
 	},
 };
 
+const armorProficiencies = [
+    "Light Armor",
+    "Medium Armor",
+    "Nonmetal Medium Armor",
+    "Heavy Armor",
+    "Shield",
+    "Nonmetal Shield",
+];
+
+const weaponProficiencies = [
+    "Simple",
+    "Martial",
+    "Light Crossbow",
+    "Hand Crossbow",
+    "Longsword",
+    "Rapier",
+    "Shortsword",
+    "Club",
+    "Dagger",
+    "Dart",
+    "Javelin",
+    "Mace",
+    "Quarterstaff",
+    "Scimitar",
+    "Sickle",
+    "Sling",
+    "Spear",
+];
+
 module.exports = {
-	backgrounds,
-	alignment,
-	sex,
-	skin,
-	hair,
-	eyes,
-	skills,
-	maxSkills,
-	races,
-	subraces,
-	subclasses,
-	classDefault,
-	raceDefault,
+    backgrounds,
+    alignment,
+    sex,
+    skin,
+    hair,
+    eyes,
+    skills,
+    maxSkills,
+    races,
+    subraces,
+    subclasses,
+    classDefault,
+    raceDefault,
+    armorProficiencies,
+    weaponProficiencies,
 };
