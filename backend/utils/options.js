@@ -48,6 +48,7 @@ const backgrounds = [
 	"Detective", //homebrew
 	"Disgrace", //homebrew
 	"Dragon Raised", //homebrew
+	"Entomologist", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
