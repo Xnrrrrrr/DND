@@ -11,6 +11,8 @@ const {
 	races,
 	subraces,
 	subclasses,
+	armorProficiencies,
+	weaponProficiencies,
 } = require("../utils");
 
 const CharacterSheetSchema = new mongoose.Schema(
@@ -359,36 +361,11 @@ const CharacterSheetSchema = new mongoose.Schema(
 		// Determined by selected class
 		armorProficiency: {
 			type: [String],
-			enum: [
-				"Light Armor",
-				"Medium Armor",
-				"Nonmetal Medium Armor",
-				"Heavy Armor",
-				"Shield",
-				"Nonmetal Shield",
-			],
+			enum: armorProficiencies,
 		},
 		weaponProficiency: {
 			type: [String],
-			enum: [
-				"Simple",
-				"Martial",
-				"Light Crossbow",
-				"Hand Crossbow",
-				"Longsword",
-				"Rapier",
-				"Shortsword",
-				"Club",
-				"Dagger",
-				"Dart",
-				"Javelin",
-				"Mace",
-				"Quarterstaff",
-				"Scimitar",
-				"Sickle",
-				"Sling",
-				"Spear",
-			],
+			enum: weaponProficiencies,
 			required: true,
 		},
 		// Determined by selected race, class, or background
