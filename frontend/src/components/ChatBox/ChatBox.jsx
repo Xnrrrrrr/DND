@@ -4,20 +4,34 @@ import { DiAptana } from "react-icons/di";
 import { ClipLoader } from "react-spinners";
 import { useSaveGeneralMessageMutation } from "../../slices/chat/general/generalChatApiSlice.js";
 import { getGeneralMessages } from "../../slices/chat/general/generalChatSlice.js";
+import { ChatBoxContextMenu, useChatBoxContextMenu } from "../";
 
 const ChatBox = ({ user }) => {
 	const [inputValue, setInputValue] = useState("");
-	const [messages, setMessages] = useState([]);
-	const [isAtBottom, setIsAtBottom] = useState(true); // Track whether the user is at the bottom
+	const [messages, setMessages] = useState({
+		general: [],
+		party: [],
+		private: [],
+	});
+	const [notifications, setNotifications] = useState({
+		general: 0,
+		party: 0,
+		private: 0,
+	});
+	const [isAtBottom, setIsAtBottom] = useState(true);
 	const [selectedTab, setSelectedTab] = useState("general");
+	const selectedTabRef = useRef(selectedTab);
 	const chatBoxRef = useRef(null);
 	const chatEndRef = useRef(null);
+
+	const { contextMenu, showContextMenu } = useChatBoxContextMenu();
+	const [contextUsername, setContextUsername] = useState("");
+	const inputRef = useRef(null);
 
 	const [ws, setWs] = useState(null);
 
 	const dispatch = useDispatch();
-
-	const [general] = useSaveGeneralMessageMutation();
+	const [general, { isGeneral }] = useSaveGeneralMessageMutation();
 
 	const handleSend = async () => {
 		if (inputValue.trim() !== "") {
@@ -25,37 +39,112 @@ const ChatBox = ({ user }) => {
 			// Get UTC time string in HH:mm:ss format
 			const utcTimeString = now.toISOString().split("T")[1].slice(0, 8);
 
-			const generalChat = {
+			let chatMessage = {
 				badge: user.role,
 				sender: user.username,
 				content: inputValue,
 				timestamp: utcTimeString,
 			};
 
-			ws.send(JSON.stringify({ type: "chat", generalChat }));
+			const privateMessageMatch = inputValue.match(/^\/\/(\w+):\s(.+)/);
+			if (privateMessageMatch) {
+				const recipientUsername = privateMessageMatch[1];
+				const privateMessageContent = privateMessageMatch[2];
 
-			try {
-				await general({
+				const privateChat = {
+					badge: user.role,
 					sender: user.username,
-					role: user.role,
-					content: inputValue,
-				}).unwrap();
-			} catch (error) {
-				console.error("Failed to save message:", error);
+					content: privateMessageContent,
+					timestamp: utcTimeString,
+					recipient: recipientUsername,
+				};
+
+				// Send the private message through WebSocket
+				ws.send(
+					JSON.stringify({
+						type: "chat",
+						recipient: recipientUsername,
+						privateChat,
+					})
+				);
+			} else if (selectedTab === "general") {
+				ws.send(
+					JSON.stringify({ type: "chat", generalChat: chatMessage })
+				);
+
+				try {
+					await general({
+						sender: user.username,
+						badge: user.role,
+						content: inputValue,
+					}).unwrap();
+				} catch (err) {
+					console.error("Failed to save message:", err);
+				}
+			} else if (selectedTab === "private") {
+				setMessages((prevMessages) => ({
+					...prevMessages,
+					private: [
+						...prevMessages.private,
+						{
+							type: "error",
+							content:
+								"Use the private chat command to reply or to send a private message. Ex: //System: Hi",
+							sender: "System",
+							timestamp: utcTimeString,
+						},
+					],
+				}));
 			}
 
 			setInputValue("");
+			inputRef.current.focus();
 		}
 	};
 
 	const handleMessage = (e) => {
 		const messageData = JSON.parse(e.data);
+		const tabType = messageData.generalChat
+			? "general"
+			: messageData.privateChat
+			? "private"
+			: "party";
 
 		if ("generalChat" in messageData) {
 			const parsedMessage = messageData.generalChat;
-			setMessages((prevMessages) => [...prevMessages, parsedMessage]);
+			setMessages((prevMessages) => ({
+				...prevMessages,
+				general: [...prevMessages.general, parsedMessage],
+			}));
+		} else if ("privateChat" in messageData) {
+			const parsedMessage = messageData.privateChat;
+			setMessages((prevMessages) => ({
+				...prevMessages,
+				private: [...prevMessages.private, parsedMessage],
+			}));
+		}
+
+		if (tabType !== selectedTabRef.current) {
+			setNotifications((prev) => ({
+				...prev,
+				[tabType]: prev[tabType] + 1,
+			}));
 		}
 	};
+
+	const handleTabClick = (tab) => {
+		setSelectedTab(tab);
+
+		// Reset notifications for the clicked tab
+		setNotifications((prevNotifications) => ({
+			...prevNotifications,
+			[tab]: 0,
+		}));
+	};
+
+	useEffect(() => {
+		selectedTabRef.current = selectedTab;
+	}, [selectedTab]);
 
 	useEffect(() => {
 		const ws = new WebSocket(`${import.meta.env.VITE_WS_BASE_URL}`);
@@ -82,17 +171,30 @@ const ChatBox = ({ user }) => {
 		if (selectedTab === "general") {
 			dispatch(getGeneralMessages()).then((action) => {
 				if (action.payload) {
-					const formattedMessages = action.payload.map(message => {
+					const formattedMessages = action.payload.map((message) => {
 						const date = new Date(message.timestamp);
-						const hours = String(date.getUTCHours()).padStart(2, '0');
-						const minutes = String(date.getUTCMinutes()).padStart(2, '0');
-						const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+						const hours = String(date.getUTCHours()).padStart(
+							2,
+							"0"
+						);
+						const minutes = String(date.getUTCMinutes()).padStart(
+							2,
+							"0"
+						);
+						const seconds = String(date.getUTCSeconds()).padStart(
+							2,
+							"0"
+						);
 						return {
 							...message,
-							timestamp: `${hours}:${minutes}:${seconds}`
+							timestamp: `${hours}:${minutes}:${seconds}`,
 						};
 					});
-					setMessages(formattedMessages);
+					setMessages({
+						general: formattedMessages,
+						party: messages.party,
+						private: messages.private,
+					});
 				} else {
 					console.error("Failed to fetch general messages");
 				}
@@ -113,6 +215,31 @@ const ChatBox = ({ user }) => {
 		}
 	};
 
+	useEffect(() => {
+		if (contextMenu.index || contextMenu.index === 0) {
+			if (selectedTabRef.current === "general") {
+				if (messages.general[contextMenu.index]?.sender) {
+					setContextUsername(
+						messages.general[contextMenu.index].sender
+					);
+				}
+			} else if (selectedTabRef.current === "party") {
+				if (messages.party[contextMenu.index]?.sender) {
+					setContextUsername(
+						messages.party[contextMenu.index].sender
+					);
+				}
+			} else if (selectedTabRef.current === "private") {
+				if (messages.private[contextMenu.index]?.sender) {
+					setContextUsername(
+						messages.private[contextMenu.index].sender
+					);
+					console.log(messages.private[contextMenu.index].sender);
+				}
+			}
+		}
+	}, [contextMenu]);
+
 	if (!user) {
 		return (
 			<div
@@ -131,39 +258,62 @@ const ChatBox = ({ user }) => {
 
 	return (
 		<>
+			<ChatBoxContextMenu
+				contextMenu={contextMenu}
+				contextUsername={contextUsername}
+				username={user.username}
+				inputValue={inputValue}
+				setInputValue={setInputValue}
+				inputRef={inputRef}
+			/>
 			<div className="chat-box">
 				<div className="chat-box-tab-container">
 					<div className="chat-box-tabs">
 						{/* For Party Page */}
 						<p
-							onClick={() => {
-								setSelectedTab("general");
-							}}
+							onClick={() => handleTabClick("general")}
 							className={
 								selectedTab === "general" ? `selected-tab` : ``
 							}
 						>
-							General
+							General{" "}
+							{notifications.general > 0
+								? `(${
+										notifications.general > 9
+											? "9+"
+											: notifications.general
+								  })`
+								: ""}
 						</p>
 						<p
-							onClick={() => {
-								setSelectedTab("party");
-							}}
+							onClick={() => handleTabClick("party")}
 							className={
 								selectedTab === "party" ? `selected-tab` : ``
 							}
 						>
-							Party
+							Party{" "}
+							{notifications.party > 0
+								? `(${
+										notifications.party > 9
+											? "9+"
+											: notifications.party
+								  })`
+								: ""}
 						</p>
 						<p
-							onClick={() => {
-								setSelectedTab("private");
-							}}
+							onClick={() => handleTabClick("private")}
 							className={
 								selectedTab === "private" ? `selected-tab` : ``
 							}
 						>
-							Private
+							Private{" "}
+							{notifications.private > 0
+								? `(${
+										notifications.private > 9
+											? "9+"
+											: notifications.private
+								  })`
+								: ""}
 						</p>
 					</div>
 					<div
@@ -185,27 +335,126 @@ const ChatBox = ({ user }) => {
 					ref={chatBoxRef}
 					onScroll={handleScroll}
 				>
-					{selectedTab === "general"
-						? messages.map((m, index) => (
-								<div
-									key={index}
-									style={{
-										backgroundColor:
-											index % 2 === 0
-												? "var(--border-color)"
-												: "transparent",
-									}}
-								>
-									<p style={{ padding: "2px" }}>
-										({m.timestamp}) {m.badge ? `` : ``}{" "}
-										<span className="sender-span">
-											{m.sender}
-										</span>
-										: {m.content}
-									</p>
-								</div>
-						  ))
-						: ``}
+					{!isGeneral ? (
+						<>
+							{selectedTab === "general"
+								? messages.general.map((m, index) => (
+										<div
+											key={index}
+											style={{
+												backgroundColor:
+													index % 2 === 0
+														? "var(--border-color)"
+														: "transparent",
+											}}
+										>
+											<p style={{ padding: "2px" }}>
+												({m.timestamp}){" "}
+												{m.badge === "superAdmin" ? (
+													<span
+														style={{
+															color: "gold",
+														}}
+														title="Super Admin"
+													>
+														SA
+													</span>
+												) : m.badge === "admin" ? (
+													<span
+														style={{
+															color: "green",
+														}}
+														title="Admin"
+													>
+														A
+													</span>
+												) : (
+													``
+												)}{" "}
+												<span
+													className="sender-span"
+													onContextMenu={(e) =>
+														showContextMenu(
+															e,
+															index
+														)
+													}
+												>
+													{m.sender}
+												</span>
+												: {m.content}
+											</p>
+										</div>
+								  ))
+								: ``}
+						</>
+					) : (
+						<p>Loading General Chat...</p>
+					)}
+					<>
+						{selectedTab === "private"
+							? messages.private.map((m, index) => (
+									<div
+										key={index}
+										style={{
+											backgroundColor:
+												index % 2 === 0
+													? "var(--border-color)"
+													: "transparent",
+										}}
+									>
+										{m?.type === "error" ? (
+											<p>
+												({m.timestamp}){" "}
+												<span style={{ color: "red" }}>
+													{m.sender}
+												</span>
+												: {m.content}
+											</p>
+										) : (
+											<p style={{ padding: "2px" }}>
+												({m.timestamp}){" "}
+												{m.badge === "superAdmin" ? (
+													<span
+														style={{
+															color: "gold",
+														}}
+														title="Super Admin"
+													>
+														SA
+													</span>
+												) : m.badge === "admin" ? (
+													<span
+														style={{
+															color: "green",
+														}}
+														title="Admin"
+													>
+														A
+													</span>
+												) : (
+													``
+												)}{" "}
+												<span
+													className="sender-span"
+													onContextMenu={(e) =>
+														showContextMenu(
+															e,
+															index
+														)
+													}
+												>
+													{m.sender}
+												</span>{" "}
+												{`=>`} {m.recipient}:{" "}
+												{m.content}
+											</p>
+										)}
+									</div>
+							  ))
+							: ``}
+					</>
+
 					{/* Reference element for auto-scroll */}
 					<div ref={chatEndRef} />
 				</div>
@@ -219,6 +468,7 @@ const ChatBox = ({ user }) => {
 								if (e.key === "Enter") handleSend();
 							}}
 							maxLength={100}
+							ref={inputRef}
 						/>
 						<button type="button" onClick={handleSend}>
 							&#10148;

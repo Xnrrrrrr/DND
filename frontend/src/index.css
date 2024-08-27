@@ -53,6 +53,7 @@ textarea {
 	--tint-overlay: rgba(0, 0, 0, 0.5);
 	--option-odd-color: #4b3832;
 	--option-even-color: #544838;
+	--option-even-color-o: #544838ea;
 
 	background-color: var(--background-color);
 	color: var(--base-text-color);

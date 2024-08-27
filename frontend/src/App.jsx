@@ -10,6 +10,7 @@ import './components/SliderSwitch/SliderSwitch.css';
 import './components/InfoTable/InfoTable.css';
 import './components/Tooltip/Tooltip.css';
 import './components/ChatBox/ChatBox.css';
+import './components/ContextMenu/ChatBox/ChatBoxContextMenu.css';
 
 // Pages CSS
 import './pages/Landing/Landing.css';

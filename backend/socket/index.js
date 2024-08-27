@@ -59,6 +59,38 @@ const initWebSocket = (server) => {
 			[...wss.clients].forEach((client) => {
 				client.send(JSON.stringify({ generalChat: message.generalChat }));
 			});
+		} else if (message && message.privateChat) {
+			const recipientConnection = [...wss.clients].find(
+				(client) => {
+        			return client.users && client.users.username === message.recipient;
+				}
+			);
+
+			if (recipientConnection) {
+				message.privateChat.type = "message"
+				// Send private message to the recipient
+				recipientConnection.send(JSON.stringify({ privateChat: message.privateChat }));
+				// Send a copy of the message to the sender
+				senderConnection.send(JSON.stringify({ privateChat: message.privateChat }));
+			} else if (message.privateChat.content === "Hi" && message.privateChat?.recipient === "System") {
+				const systemMessage = {
+					type: "error",
+					content: `Hello`,
+					sender: "System",
+					timestamp: new Date().toISOString().split("T")[1].slice(0, 8),
+				};
+		
+				senderConnection.send(JSON.stringify({ privateChat: systemMessage }));
+			} else {
+				const errorMessage = {
+					type: "error",
+					content: `User ${message.recipient} is not online.`,
+					sender: "System",
+					timestamp: new Date().toISOString().split("T")[1].slice(0, 8),
+				};
+		
+				senderConnection.send(JSON.stringify({ privateChat: errorMessage }));
+			}
 		}
 	};
 };

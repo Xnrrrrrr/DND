@@ -176,7 +176,7 @@
 	margin-top: 1rem;
 }
 
-.character-sheet-stats h3 {
+.character-sheet-stats h4 {
 	text-align: center;
 	margin-bottom: 1rem;
 	color: var(--button-color);
@@ -199,15 +199,17 @@
 	border: 1px solid var(--border-color);
 }
 
-.character-sheet-stats-left div label,
-.character-sheet-stats-right div label {
-	color: var(--base-text-color);
-}
-
 .character-sheet-stats-left div p,
 .character-sheet-stats-right div p {
 	font-weight: bold;
 	color: var(--button-color);
+}
+
+.character-sheet-stats-left div h6,
+.character-sheet-stats-right div h6 {
+	color: var(--base-text-color);
+	font-size: 1.4rem;
+	font-weight: bold;
 }
 
 .character-sheet-stats-right {
