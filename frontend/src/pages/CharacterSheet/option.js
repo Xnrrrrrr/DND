@@ -4349,6 +4349,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Exiled", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -14295,6 +14299,204 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Isopologist`,
+				},
+			],
+		},
+		feature: {
+			title: `Slow, but possible training`,
+			description: `As an entomologist, you can employ the capture, use, and companionship of an insect. You can spend your downtime to train an insect of no more than CR 1/2 to perform special tricks, like basic commands through scents or sounds. Each trick takes 10 days of downtime to learn. You can only have 1 insect that can learn an attack.`,
+		},
+		alterateFeature: [
+			{
+				title: `Knowledge of Insects`,
+				description: `You generally can tell a lot about an invert just by looking at it; you have advantage on Intelligence checks to recall and gather information on myriapods, insects, arachnids, worms, slugs, snails, etc.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `When other people scream at a spider in their pack, you might pick it up, identify it, and take notes. In the middle of an intense moment, spotting a rare insect might pull your attention away from whatever was important.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `You don't care about animals and only became an entomologist so you cold get away from civilization and still make money.`,
+				},
+				{
+					number: 2,
+					description: `You struggle to make friends, as most people think you are weird for picking your profession.`,
+				},
+				{
+					number: 3,
+					description: `You have a lot of grit and never stop working until you achieve your goals.`,
+				},
+				{
+					number: 4,
+					description: `You are extremely brave and have little care for your own life.`,
+				},
+				{
+					number: 5,
+					description: `You have an immense fear of spiders, but your family pressured you to pursue your career to get over the fear. So far, no luck.`,
+				},
+				{
+					number: 6,
+					description: `You are super forgiving. Even when people bully you non-stop, you forgive them as soon as they apologize.`,
+				},
+				{
+					number: 7,
+					description: ``,
+				},
+				{
+					number: 8,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Humane`,
+					description: `Cruelty is wrong and you feel you should protect the suffering`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Peace`,
+					description: `Violence solves nothing`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Order`,
+					description: `Chaos cuases countless problems`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Working with Nature`,
+					description: `Nature and people can work together to achieve greatness`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Greed`,
+					description: `You always act for your own good, never doing service for others`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Freedom`,
+					description: `Everyone should be free to do whatever they want`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `You love a specific invert that goes with you wherever you go.`,
+				},
+				{
+					number: 2,
+					description: `Your best friend is also your mentor or master when you were an apprentice.`,
+				},
+				{
+					number: 3,
+					description: `You get homesick when you are away from the wilderness.`,
+				},
+				{
+					number: 4,
+					description: `You miss your peers from zoology class who moved on with their lives.`,
+				},
+				{
+					number: 5,
+					description: `Your pet tarantula was killed by your rival: besting them or getting revenge is your #1 priority.`,
+				},
+				{
+					number: 6,
+					description: `You would sacrifice your life to protect an insect species that has been hunted nearly to extinction for its medicinal uses.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `You went into zoology because you are terrible at interacting with people, and talk to bugs instead.`,
+				},
+				{
+					number: 2,
+					description: `You are always out in the wild, so you never have time to take a shower or bath.`,
+				},
+				{
+					number: 3,
+					description: `The only people you knew well was a teacher and your parents, so you don't have practice in society.`,
+				},
+				{
+					number: 4,
+					description: `You are always grumpy because you find your profession terribly boring.`,
+				},
+				{
+					number: 5,
+					description: `You are super lazy because you find your job ridiculously easy.`,
+				},
+				{
+					number: 6,
+					description: `You have a terrible sense of humor, even though you try to make jokes.`,
+				},
+			],
+		},
+	},
+	Exiled: {
+		isHomebrew: true,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		languages: ``,
+		startingEquipment: ``,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
 				},
 			],
 		},
