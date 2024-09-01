@@ -51,6 +51,7 @@ const backgrounds = [
 	"Entomologist", //homebrew
 	"Exiled", //homebrew
 	"Explorer", //homebrew
+	"Fishmonger", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

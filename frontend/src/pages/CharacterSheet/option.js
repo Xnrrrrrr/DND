@@ -4357,6 +4357,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Fishmonger", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -14859,6 +14863,204 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Don't tell me what I can't do.`,
+				},
+			],
+		},
+	},
+	Fishmonger: {
+		isHomebrew: true,
+		description: `You spent your days working by the docks or in the bustling marketplace, selling fresh catches from the nearby rivers, lakes, or seas. Your livelihood depended on your ability to haggle, clean, and display the day's catch, earning you a reputation as a reliable provider of seafood. Whether you're a seasoned veteran of the trade or a newcomer learning the ropes, your experiences as a fishmonger have shaped your skills and outlook on life.`,
+		skillProficiencies: `Persuasion, Sleight of Hand`,
+		toolProficiencies: `Fisherman's Tools`,
+		languages: `One language of your choice, often a regional dialect or pidgin common among sailors and fishermen`,
+		startingEquipment: `A set of artisan's tools (chosen from the appropriate options), a scale, a knife, a set of common clothes, a pouch containing 10 gp, and a token from your first day as a fishmonger (perhaps a lucky charm or a trinket from a memorable catch).`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Market Expertise`,
+			description: `Your time spent in the marketplace has granted you insight into the local economy and social dynamics. You know where to find the freshest seafood, the best prices, and the juiciest gossip. Additionally, you can often rely on fellow fishmongers and market vendors for assistance or information when needed, provided you approach them with respect and courtesy.`,
+		},
+		alterateFeature: [
+			{
+				title: `Sea-Farer's Connections`,
+				description: `Through your connections with fellow seafarers and merchants, you have access to valuable information and resources. Whether it's learning about the best fishing spots or gaining insights into local trade routes, your network of contacts proves invaluable in your endeavors.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: `Fishmongers come from all walks of life, but they share a deep connection to the aquatic life and a passion for their trade. Whether they are grizzled veterans or wide-eyed newcomers, they possess a unique blend of practicality, resilience, and resourcefulness.`,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have a knack for striking up conversations with strangers and making them feel at ease.`,
+				},
+				{
+					number: 2,
+					description: `I'm always on the lookout for a good deal or an opportunity to turn a profit.`,
+				},
+				{
+					number: 3,
+					description: `I take pride in my work and go to great lengths to ensure that my customers receive the best quality seafood.`,
+				},
+				{
+					number: 4,
+					description: `I have a quick wit and a sharp tongue, honed by years of haggling and bantering with customers.`,
+				},
+				{
+					number: 5,
+					description: `I'm a bit superstitious and always carry a lucky charm or perform a ritual before heading out to sea or starting a new day at the market.`,
+				},
+				{
+					number: 6,
+					description: `I have a deep respect for the ocean and its creatures, viewing them not just as a source of livelihood but as majestic beings worthy of reverence.`,
+				},
+				{
+					number: 7,
+					description: `I love to share stories of my adventures fishing or at sea, embellishing them for dramatic effect.`,
+				},
+				{
+					number: 8,
+					description: `I'm fiercely protective of my territory and won't hesitate to confront anyone who tries to encroach on my turf.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Community`,
+					description: `I believe in supporting my fellow fishermen and market vendors, knowing that together we are stronger.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Oppurtunity`,
+					description: `I'm always on the lookout for new business ventures and ways to expand my enterprise.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 3,
+					bold: `Independance`,
+					description: `I cherish my freedom and autonomy, refusing to be tied down by obligations or commitments.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: `Tradition`,
+					description: `I adhere to the time-honored practices and rituals of my trade, respecting the wisdom of those who came before me`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: `Growth`,
+					description: `I strive to improve myself and my skills, seeking out challenges and experiences that will help me evolve.`,
+					alignment: `Any`,
+				},
+				{
+					number: 6,
+					bold: `Hospitality`,
+					description: `I take pleasure in sharing the bounty of the sea with others, welcoming friends and strangers alike to my table.`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I owe a debt of gratitude to the mentor who taught me the ways of the fishmonger, and I will always cherish their guidance.`,
+				},
+				{
+					number: 2,
+					description: `My family has been in the fishing business for generations, and I am proud to carry on the tradition.`,
+				},
+				{
+					number: 3,
+					description: `I have formed close bonds with the fishermen and sailors who brave the dangers of the sea, and I will always stand by them in times of need.`,
+				},
+				{
+					number: 4,
+					description: `The sea holds many secrets and treasures, and I am determined to uncover them all, no matter the cost.`,
+				},
+				{
+					number: 5,
+					description: `I am deeply invested in the prosperity of my hometown or community, and I will do whatever it takes to ensure its success.`,
+				},
+				{
+					number: 6,
+					description: `I have a soft spot for stray cats and dogs, often bringing home scraps of fish to feed them.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have a tendency to exaggerate or embellish stories about my fishing exploits, especially when trying to impress others.`,
+				},
+				{
+					number: 2,
+					description: `I am easily swayed by flattery or smooth talkers, often making deals or decisions that I later regret.`,
+				},
+				{
+					number: 3,
+					description: `I can be fiercely competitive, sometimes resorting to underhanded tactics to outshine rival fishmongers.`,
+				},
+				{
+					number: 4,
+					description: `I have a short temper, especially when dealing with rude or disrespectful customers.`,
+				},
+				{
+					number: 5,
+					description: `I am overly superstitious, believing in signs and omens that others might dismiss as mere coincidence.`,
+				},
+				{
+					number: 6,
+					description: `I have a weakness for gambling and often find myself risking more than I can afford to lose in games of chance.`,
 				},
 			],
 		},
