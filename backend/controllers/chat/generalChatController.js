@@ -8,16 +8,13 @@ const { GeneralMessage } = require("../../models");
  * @access	Private
  */
 const saveGeneralMessage = asyncHandler(async (req, res) => {
-	const { sender, role, content } = req.body;
-	const message = new GeneralMessage({ sender, role, content });
+	const { sender, badge, content } = req.body;
+	const message = new GeneralMessage({ sender, badge, content });
 	await message.save();
 
 	const count = await GeneralMessage.countDocuments();
 	if (count > 30) {
-		const oldestMessage = await GeneralMessage.findOne().sort({ timestamp: 1 });
-		if (oldestMessage) {
-			await oldestMessage.remove();
-		}
+		await GeneralMessage.findOneAndDelete().sort({ timestamp: 1 });
 	}
 
 	res.status(StatusCodes.OK).json({ msg: "Message Saved" });

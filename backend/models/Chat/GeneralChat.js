@@ -5,7 +5,7 @@ const generalMessageSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	role: {
+	badge: {
 		type: String,
 		required: true,
 	},

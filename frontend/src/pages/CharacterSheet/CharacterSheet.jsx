@@ -1243,10 +1243,10 @@ const CharacterSheet = () => {
 						</div>
 						<div className="character-sheet-stats">
 							<div>
-								<h3>Ability Modifiers:</h3>
+								<h4>Ability Modifiers:</h4>
 								<div className="character-sheet-stats-left">
 									<div>
-										<label>Strength Modifier:</label>
+										<h6>Strength Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1260,7 +1260,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Dexterity Modifier:</label>
+										<h6>Dexterity Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1274,7 +1274,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Constitution Modifier:</label>
+										<h6>Constitution Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1288,7 +1288,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Intelligence Modifier:</label>
+										<h6>Intelligence Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1302,7 +1302,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Wisdom Modifier:</label>
+										<h6>Wisdom Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1316,7 +1316,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Charisma Modifier:</label>
+										<h6>Charisma Modifier:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1332,10 +1332,10 @@ const CharacterSheet = () => {
 								</div>
 							</div>
 							<div>
-								<h3>Additional Stats:</h3>
+								<h4>Additional Stats:</h4>
 								<div className="character-sheet-stats-right">
 									<div>
-										<label>Health at Level 1:</label>
+										<h6>Health at Level 1:</h6>
 										<p>
 											{primaryClass
 												? parseInt(
@@ -1357,7 +1357,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Unarmored Armor Class:</label>
+										<h6>Unarmored Armor Class:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1371,7 +1371,7 @@ const CharacterSheet = () => {
 										</p>
 									</div>
 									<div>
-										<label>Initiative Bonus:</label>
+										<h6>Initiative Bonus:</h6>
 										<p>
 											{isPointBuy
 												? abilityModifier(
@@ -1706,6 +1706,7 @@ const CharacterSheet = () => {
 										</div>
 									</label>
 									<select
+										id="feature"
 										value={feature.title}
 										required
 										onChange={(e) => {
@@ -1796,6 +1797,7 @@ const CharacterSheet = () => {
 												))}
 									</select>
 									<textarea
+										name="feature"
 										readOnly
 										value={feature.description}
 										style={{
