@@ -50,6 +50,7 @@ const backgrounds = [
 	"Dragon Raised", //homebrew
 	"Entomologist", //homebrew
 	"Exiled", //homebrew
+	"Explorer", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

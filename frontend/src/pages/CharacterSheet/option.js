@@ -4353,6 +4353,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Explorer", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -14464,45 +14468,45 @@ export const backgroundDesc = {
 	},
 	Exiled: {
 		isHomebrew: true,
-		description: ``,
-		skillProficiencies: ``,
-		toolProficiencies: ``,
-		languages: ``,
-		startingEquipment: ``,
+		description: `You have been thrown out of your home and may never return. Where were you before you were exiled? What did you do to deserve the exile? Were you falsely accused and if so why? What are the conditions of your return if there are any? Are you over your exile, or are you still torn by it? Do you still have contacts with your old life, or have you been fully cut off? Do you carry something with you to remember and if so to remember what? Your home? Your crime? Revenge?`,
+		skillProficiencies: `Insight, Perception and Survival`,
+		toolProficiencies: `One type of Artisan's tools of your choice`,
+		languages: `two of your choice`,
+		startingEquipment: `One set of Artisan's tools of your choice, travelers clothes, a winter blanket, a pouch containing 5 gp, and a reminder of home (a drawing, a leaf, a ring...)`,
 		backgroundSpecial: {
-			title: ``,
-			description: ``,
-			die: ``,
+			title: `Origin`,
+			description: `You've had to have been exiled from somewhere. Consider what your home was like and what it meant to you. You may roll on the following table to find your home setting, or simply choose one that fits your character.`,
+			die: `1d6`,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `Noble Family`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `Mountaintop Monastery`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `Nomadic Tribe`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `Smalltown/City`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `Military Unit`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `A Guild`,
 				},
 			],
 		},
 		feature: {
-			title: ``,
-			description: ``,
+			title: `Echoes of the Past`,
+			description: `You may have been forced to leave your previous life, but it hasn't left you. You have knowledge about the ways people treat one another and therefore have been gifted with skills revolving around a quick-witted nature. with each long rest you are guaranteed persuasion or deception`,
 		},
 		alterateFeature: [
 			{
@@ -14514,148 +14518,347 @@ export const backgroundDesc = {
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: ``,
+		suggestedCharacteristics: `Some exiles take time to adjust to their new life, others adapt fairly quickly and try to drown out their memories of home. Exiles may be slow to trust others, but they are eager to make allies. Some exiles seek only to return home no matter the cost. Are you one of them?`,
 		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d8`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I talk to travelers frequently for any news about home.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I feel a need to prove myself to others so I won't be thrown out again.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I am full of stories from my old life, and am eager to share them.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I don't talk about my past, it's too painful for me.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I still follow the culture and practices of my old life.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I'd rather make friends than enemies.`,
 				},
 				{
 					number: 7,
-					description: ``,
+					description: `I don't do relationships, they could fall apart at any time.`,
 				},
 				{
 					number: 8,
-					description: ``,
+					description: `I blow up when someone badmouths my old home.`,
 				},
 			],
 		},
 		suggestedIdeal: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Spite`,
+					description: `Those fools will RUE the day they threw me out`,
+					alignment: `Evil`,
 				},
 				{
 					number: 2,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Customs`,
+					description: `I had to be thrown out. There was no other choice`,
+					alignment: `Lawful`,
 				},
 				{
 					number: 3,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Change`,
+					description: `The rules I was exiled for were dated and wrong. I must change them.`,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 4,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Belonging`,
+					description: `I need to find myself a place to belong.`,
+					alignment: `Neutral`,
 				},
 				{
 					number: 5,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Destiny`,
+					description: ` I must make the best of my exile and use my abilities to help others.`,
+					alignment: `Good`,
 				},
 				{
 					number: 6,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Return`,
+					description: `I will be back.`,
+					alignment: `Any`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I will never forget my old home.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I still have a friend or two from my old life who I can still talk to.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I was falsely accused and exiled, I will not stand for injustice toward others.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `When I was exiled, I was separated from the love of my life. I must reunite with them.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `There were people who conspired my exile. I will get my revenge.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `My friends are all I have now, I would gladly die for them instead of being alone again.`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I have learned of a dark secret from my old life, something with grave consequences if revealed.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I get flustered easily when I feel people are going to leave me.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I am often incredibly defensive, seeing accusations where none were made.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My desire to return home often blinds me from seeing the big picture.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I am always in a foul mood.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `There are people from my old life who want me dead.`,
+				},
+			],
+		},
+	},
+	Explorer: {
+		isHomebrew: true,
+		description: `Venturing to places deemed too dangerous or too deeply shrouded in mystery for even the most experienced of scouts is what you do. Or, at least, it's what you used to do. The question remains: is that still who you are, or are you trying to distance yourself from your exploratory tendencies? What drove you to seek the unknown in the first place? A promise of immeasurable treasure? The fame and adoration of countless would-be adventurers?`,
+		skillProficiencies: `Acrobatics, Animal handling`,
+		toolProficiencies: `Herbalism Kit, Vehicles (land), Vehicles (water)`,
+		languages: `One of your choice`,
+		startingEquipment: `A climber's kit, Herbalism Kit, a set of traveler's clothes, a belt pouch containing 10 gp, and a small telescope`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: `Explorers have few specializations. Most fall into the general idea of explorer, someone who goes into the wild and explores, but some have unique motives or goals. Here are some examples of explorer specialization.`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Cartographer`,
+				},
+				{
+					number: 2,
+					description: `Guide`,
+				},
+				{
+					number: 3,
+					description: `Royal Explorer`,
+				},
+				{
+					number: 4,
+					description: `Climber`,
+				},
+				{
+					number: 5,
+					description: `Relic Hunter`,
+				},
+				{
+					number: 6,
+					description: `Wilderness Explorer`,
+				},
+			],
+		},
+		feature: {
+			title: `Experience`,
+			description: `You always know how to find water, food, and can make a shelter if the land provides. You have absolute knowledge of every kind of plant without the need to do a Nature check, you have advantage for any checks to turn herbs into a medicine potion for allies or poison for foes.`,
+		},
+		alterateFeature: [
+			{
+				title: `Scout/Dexterous Explorer`,
+				description: `The scout, or dexterous explorer is very much similar to the explorer, yet they lean towards dexterity as their main skill. They are proficient in Dexterity (Acrobatics) instead of Strength (Athletics) and can make Dexterity (Acrobatics) checks for any checks you make with your climber's kit or grappling hook. You have advantage on checks to gauge the value of an item.`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `When I'm in the city, I'm quick-tempered and annoyed at everyone.`,
+				},
+				{
+					number: 2,
+					description: `I always expect everyone to be as good as me at exploration and travel.`,
+				},
+				{
+					number: 3,
+					description: `I jot down notes on everything I see in the wild.`,
+				},
+				{
+					number: 4,
+					description: `Even when I'm not exploring, I delve into alleys and climb the tallest buildings in the city so I can get a little of what I love.`,
+				},
+				{
+					number: 5,
+					description: `I don't really care about the beauty of the land, just the treasure hidden inside it.`,
+				},
+				{
+					number: 6,
+					description: `I take every chance I have to have fun or feel exhilarated.`,
+				},
+				{
+					number: 7,
+					description: `If I'm not exploring, I'm trading my relics and maps for whatever I can find.`,
+				},
+				{
+					number: 8,
+					description: `When I'm in the wild, I'm calm and respectful to everyone.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `People`,
+					description: `I don't care for ideals, but for the people that help me with the thing I love.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Nature`,
+					description: `While surrounded by nature, I have seen wonderful things and have had moments of serenity`,
+					alignment: `Good`,
+				},
+				{
+					number: 3,
+					bold: `Live`,
+					description: `Exploration is dangerous, but I have accustomed myself to the laws of the wild`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `Greed`,
+					description: `The ancient artifacts that can be traded for a hefty cost are all I want from the land.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Knowledge`,
+					description: `Whenever I chart a new land or find a new thing, I feel more complete than I had before`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 6,
+					bold: `Freedom`,
+					description: `When I explore and discover new lands, only then do I feel truly free.`,
+					alignment: `Chaotic`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I began a life of exploration at a young age. However, this came at the cost of leaving my noble family.`,
+				},
+				{
+					number: 2,
+					description: `I found a dangerous relic of a fallen god on my travels, and must safeguard it for the rest of my life.`,
+				},
+				{
+					number: 3,
+					description: `I will do anything to protect the wilds that I have come to love more than any city.`,
+				},
+				{
+					number: 4,
+					description: `I left my companions to die when I could have sacrificed myself to save them. Now, I will only return to that life for something I truly believe in.`,
+				},
+				{
+					number: 5,
+					description: `I would rather die than retire, my job is my life.
+`,
+				},
+				{
+					number: 6,
+					description: `I get a blast of excitement whenever I discover something new.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I'm greedy as a goblin.`,
+				},
+				{
+					number: 2,
+					description: `I act like I'm the most important member of the party.`,
+				},
+				{
+					number: 3,
+					description: `I get overly excited easily.`,
+				},
+				{
+					number: 4,
+					description: `Finding whatever I am looking for is more important than the lives of my friends.`,
+				},
+				{
+					number: 5,
+					description: `Don't tell me what I can't do.`,
+				},
+				{
+					number: 6,
+					description: `Don't tell me what I can't do.`,
 				},
 			],
 		},
