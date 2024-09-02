@@ -25,6 +25,7 @@ const mobRouter = require("./routes/mobRoutes.js");
 const spellRouter = require("./routes/spellRoutes.js");
 const npcRouter = require("./routes/npcRoutes.js");
 const generalChatRouter = require("./routes/chat/generalChatRoutes.js");
+const partyRouter = require("./routes/partyRoutes.js");
 
 const corsOptions = {
 	origin: process.env.CLIENT_URL,
@@ -47,6 +48,7 @@ app.use("/api/v1/mob", mobRouter);
 app.use("/api/v1/spell", spellRouter);
 app.use("/api/v1/npc", npcRouter);
 app.use("/api/v1/general", generalChatRouter);
+app.use("/api/v1/party", partyRouter);
 
 // Error handlers (Has to be last)
 app.use(notFound);

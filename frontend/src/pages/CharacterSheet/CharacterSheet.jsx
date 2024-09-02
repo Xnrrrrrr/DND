@@ -8,6 +8,7 @@ import {
 	InfoTable,
 	Tooltip,
 } from "../../components";
+import { handleNumberChange, enforceMinMax } from "../../utils/index.js";
 import { useDispatch } from "react-redux";
 import {
 	classesArray,
@@ -231,31 +232,6 @@ const CharacterSheet = () => {
 			const newPersonalityTraits = [...personalityTraits];
 			newPersonalityTraits[1] = "";
 			setPersonalityTraits(newPersonalityTraits);
-		}
-	};
-
-	const handleNumberChange = (e, setValue, min, max) => {
-		// Allow empty input or leading zeros
-		const inputValue = e.target.value;
-		if (
-			inputValue === "" ||
-			inputValue.match(/^0+\d*$/) ||
-			inputValue.match(/^\d+$/)
-		) {
-			setValue(inputValue);
-		}
-	};
-
-	const enforceMinMax = (e, setValue, min, max) => {
-		let value = Number(e.target.value);
-
-		// If input is empty, keep it as empty, otherwise enforce limits
-		if (e.target.value === "") {
-			setValue("");
-		} else {
-			if (value < min) value = min;
-			if (value > max) value = max;
-			setValue(value.toString());
 		}
 	};
 
@@ -514,12 +490,7 @@ const CharacterSheet = () => {
 										id="age"
 										value={age}
 										onChange={(e) =>
-											handleNumberChange(
-												e,
-												setAge,
-												1,
-												300
-											)
+											handleNumberChange(e, setAge)
 										}
 										onBlur={(e) =>
 											enforceMinMax(e, setAge, 1, 300)
@@ -540,16 +511,13 @@ const CharacterSheet = () => {
 										id="height"
 										value={height}
 										onChange={(e) =>
-											handleNumberChange(
-												e,
-												setHeight,
-												25,
-												300
-											)
+											handleNumberChange(e, setHeight)
 										}
 										onBlur={(e) =>
 											enforceMinMax(e, setHeight, 25, 300)
 										}
+										min={25}
+										max={300}
 									/>
 								</div>
 								<div>
@@ -564,16 +532,13 @@ const CharacterSheet = () => {
 										id="weight"
 										value={weight}
 										onChange={(e) =>
-											handleNumberChange(
-												e,
-												setWeight,
-												50,
-												500
-											)
+											handleNumberChange(e, setWeight)
 										}
 										onBlur={(e) =>
 											enforceMinMax(e, setWeight, 50, 500)
 										}
+										min={50}
+										max={500}
 									/>
 								</div>
 								<div>
@@ -2896,7 +2861,10 @@ const CharacterSheet = () => {
 							disabled={isCreateLoading}
 						>
 							{isCreateLoading ? (
-								<ClipLoader color="#fff" size={12} />
+								<ClipLoader
+									color="var(--base-text-color)"
+									size={12}
+								/>
 							) : (
 								`Save Character`
 							)}

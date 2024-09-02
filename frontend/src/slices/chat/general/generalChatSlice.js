@@ -1,10 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { GENERAL_CHAT_URL } from "../../rootRoutes";
+import { GENERAL_CHAT_URL } from "../../rootRoutes.js";
 
 export const getGeneralMessages = createAsyncThunk(
 	"generalChat/getGeneralMessages",
 	async () => {
-		const res = await fetch(`${GENERAL_CHAT_URL}`);
+		const res = await fetch(
+			`${import.meta.env.VITE_BASE_URL}/${GENERAL_CHAT_URL}`
+		);
 		const data = await res.json();
 		return data;
 	}
@@ -21,7 +23,10 @@ const generalChatSlice = createSlice({
 				return action.payload;
 			})
 			.addCase(getGeneralMessages.rejected, (state, action) => {
-				console.error("Error fetching user info:", action.error);
+				console.error(
+					"Error fetching general chat info:",
+					action.error
+				);
 				return null;
 			});
 	},

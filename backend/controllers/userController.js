@@ -39,10 +39,15 @@ const registerUser = asyncHandler(async (req, res) => {
 /**
  * @desc	Get user info
  * @route	Get /api/v1/user
- * @access	Public
+ * @access	Private
  */
 const getUser = asyncHandler(async (req, res) => {
 	const user = await User.findById(req.user._id).select("-__v -password");
+
+	if (!user) {
+		res.status(StatusCodes.NOT_FOUND);
+		throw new Error("User not found");
+	}
 
 	res.status(StatusCodes.OK).json({ user });
 });

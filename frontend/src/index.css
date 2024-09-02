@@ -46,6 +46,7 @@ textarea {
 	--background-color: #a89070;
 	--background-color-o: #a89070ea;
 	--secondary-background-color: #4b3832;
+	--tertiary-background-color: #937d62;
 	--base-text-color: #edf2f4;
 	--button-color: #d2b48c;
 	--button-color-hover: #b6966c;
@@ -228,9 +229,17 @@ textarea {
 
 input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
 	border-color: var(--button-color);
 	background: var(--background-color);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+	cursor: not-allowed;
 }
 
 button {

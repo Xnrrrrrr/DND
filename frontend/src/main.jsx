@@ -8,10 +8,20 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 
-import store from './store.js';
-import { Provider } from 'react-redux';
+import store from "./store.js";
+import { Provider } from "react-redux";
 
-import { Landing, Login, SignUp, PrivateRoute, Home, CharacterSheet, Party } from "./pages";
+import {
+	Landing,
+	Login,
+	SignUp,
+	PrivateRoute,
+	Home,
+	CharacterSheet,
+	Party,
+	PartyCreate,
+	PartyDetail,
+} from "./pages";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -23,7 +33,10 @@ const router = createBrowserRouter(
 			<Route path="" element={<PrivateRoute />}>
 				<Route path="/home" element={<Home />} />
 				<Route path="/character-sheet" element={<CharacterSheet />} />
-				<Route path="/party" element={<Party />} />
+				<Route path="/party" element={<Party />}>
+					<Route path="create" element={<PartyCreate />} />
+					<Route path=":partyId" element={<PartyDetail />} />
+				</Route>
 			</Route>
 		</Route>
 	)

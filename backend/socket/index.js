@@ -1,7 +1,7 @@
 const ws = require("ws");
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
-const { User } = require("../models");
+const { User, Party } = require("../models");
 
 const initWebSocket = (server) => {
 	const wss = new ws.Server({ server });
@@ -38,7 +38,21 @@ const initWebSocket = (server) => {
 				try {
 					const parsedMessage = JSON.parse(message);
 					if (parsedMessage.type === "chat") {
-						handleChatMessage(parsedMessage, connection);
+						handleChatMessage(parsedMessage, connection);	
+					} else if (parsedMessage.type === "joinParty") {
+
+					} else if (parsedMessage.type === "leaveParty") {
+
+					} else if (parsedMessage.type === "updateParty") {
+						[...wss.clients].forEach((client) => {
+							client.send(JSON.stringify({ type: "updateParty" }));
+						});
+					} else if (parsedMessage.type === "deleteParty") {
+						[...wss.clients].forEach((client) => {
+							client.send(
+								JSON.stringify({ type: "partyDeleted", partyId: parsedMessage.partyId })
+							);
+						});
 					}
 				} catch (err) {
 					console.error(

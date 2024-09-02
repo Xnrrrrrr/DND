@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { USER_URL } from "../rootRoutes.js";
 
 export const getUserInfo = createAsyncThunk("user/getUserInfo", async () => {
-	const res = await fetch(`${USER_URL}`);
+	const res = await fetch(`${import.meta.env.VITE_BASE_URL}/${USER_URL}`);	
 	const data = await res.json();
 	return data;
 });

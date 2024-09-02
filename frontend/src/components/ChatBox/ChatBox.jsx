@@ -461,6 +461,7 @@ const ChatBox = ({ user }) => {
 				<div className="chat-box-input-container">
 					<div className="input-wrapper">
 						<input
+							name="chat-input"
 							type="text"
 							value={inputValue}
 							onChange={(e) => setInputValue(e.target.value)}

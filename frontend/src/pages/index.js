@@ -5,6 +5,8 @@ import CharacterSheet from './CharacterSheet/CharacterSheet.jsx';
 import Home from './Home/Home.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import Party from './Party/Party.jsx';
+import PartyCreate from './Party/PartyCreate.jsx';
+import PartyDetail from './Party/PartyDetail.jsx';
 
 export {
     Landing,
@@ -14,4 +16,6 @@ export {
     Home,
     PrivateRoute,
     Party,
+    PartyCreate,
+    PartyDetail,
 };
