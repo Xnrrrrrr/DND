@@ -4361,6 +4361,18 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Fortune_Teller", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Hitman", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Innkeeper", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -15061,6 +15073,608 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I have a weakness for gambling and often find myself risking more than I can afford to lose in games of chance.`,
+				},
+			],
+		},
+	},
+	Fortune_Teller: {
+		isHomebrew: true,
+		description: `You are a kind of diviner who makes a name for themselves doing things like tarot, palm-reading, and the like. Sometimes it is for profit, and other times you are a sibyl of the city perhaps, in a royal court. Your tongue can commune supposedly with forces beyond mortal understanding, reaching into the fate that entwines all planes of existence. You may be self-employed, traveling the lands and reading fortunes, setting up shop here and there. Perhaps you cater to a selectly powerful circle of those who use you to plan their next steps in the world. Armies are known to consult auguries to ensure their odds in battle. They come to people like you. Are your abilities real, though? Or are you merely a swindler?`,
+		skillProficiencies: `Perception and either Insight or Persuasion`,
+		toolProficiencies: `Playing card set`,
+		languages: `Two languages of your choice`,
+		startingEquipment: `A medium through which you read fortunes (tarot deck, small bag of bones, crystal orb, collapsible divining board, etc.), a set of traveler's clothes, and a belt pouch containing 15 gp`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: ``,
+			die: `1d8`,
+			roll: [
+				{
+					number: 1,
+					description: `Crystal Ball Seer`,
+				},
+				{
+					number: 2,
+					description: `Tea Leaf Reader`,
+				},
+				{
+					number: 3,
+					description: `Palm Reader`,
+				},
+				{
+					number: 4,
+					description: `Psychic / Clairvoyant`,
+				},
+				{
+					number: 5,
+					description: `Bone Reader`,
+				},
+				{
+					number: 6,
+					description: `Medium`,
+				},
+				{
+					number: 7,
+					description: `Astrologer`,
+				},
+				{
+					number: 8,
+					description: `Smoke Reader`,
+				},
+			],
+		},
+		feature: {
+			title: `Sign Reader`,
+			description: `The future is not always clear, even to you. Unlike a mystic, you don't even get visions so clearly, Instead, you see them in the natural world and the surroundings about you. At the DM's discretion, you may notice small subtle hints of odd patterns or portents that you can interpret to decipher an event. You may not always know when it will happen or where, and the magnitude or significance may not be clear. `,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I travel far and wide to uncover the secrets of the world.`,
+				},
+				{
+					number: 2,
+					description: `My powers are my profession.`,
+				},
+				{
+					number: 3,
+					description: `I've seen empires fall before it even happened.`,
+				},
+				{
+					number: 4,
+					description: `I've read enough books and tomes it would make a wizard blush.`,
+				},
+				{
+					number: 5,
+					description: `I feel more comfortable outdoors than inside claustrophobic spaces.`,
+				},
+				{
+					number: 6,
+					description: `I always have a plan for when things go wrong.`,
+				},
+				{
+					number: 7,
+					description: ``,
+				},
+				{
+					number: 8,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Freedom`,
+					description: `I'm a free spirit unbound by the laws of man.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Greed`,
+					description: `I'll tell any lie to make it rich`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Tradition`,
+					description: `The stories, legends, and songs must never be forgotten, for they make us who we are. `,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Profit`,
+					description: `I tell a story, they like it. I get paid. Everyone's happy.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Generosity`,
+					description: `My talents were given to me so that I could use them to benefit the world.`,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Self-Knowledge`,
+					description: `If you know yourself, there's nothing left to know, nothing to tell`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d4`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I had to leave the people I care about for I put them in constant danger.`,
+				},
+				{
+					number: 2,
+					description: `Should my discoveries come to light, they could bring ruin to the world.`,
+				},
+				{
+					number: 3,
+					description: `I sponsor an orphanage to keep others from enduring what I to.`,
+				},
+				{
+					number: 4,
+					description: `I pursue wealth to secure someone's love.`,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I never want to use my gifts to help people.`,
+				},
+				{
+					number: 2,
+					description: `I am often drowning in self pity because of the cursed nature of my power.`,
+				},
+				{
+					number: 3,
+					description: `I suffer horrible nightmares from my abilities.`,
+				},
+				{
+					number: 4,
+					description: `I can't help but pocket trinkets and loose coins that I did not rightfully earn.`,
+				},
+				{
+					number: 5,
+					description: `I'm a fraud who keeps on lying.`,
+				},
+				{
+					number: 6,
+					description: `I'll say anything to avoid extra work.`,
+				},
+			],
+		},
+	},
+	Hitman: {
+		isHomebrew: true,
+		description: `A hitman is someone who is either so far gone from their previous selves or just enjoys the work enough to kill people for money. How might your character have gotten into this kind of work? Is he or she willingly in this line or forcefully? Are there any jobs that your character might regret taking for various reasons? What type of reputation in the crime world does your character have? Is he or she feared, respected, or even hated?`,
+		skillProficiencies: `Stealth, Perception`,
+		toolProficiencies: `Disguise kit, Thieves' tools`,
+		languages: `Choose two languages`,
+		startingEquipment: `2 hand crossbows or 1 heavy crossbow, leather armor, thieve's tools, a hooded cloak, a set of common clothes, and a belt pouch with 15 gold.`,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Contract Killing`,
+			description: `Your character kills people for money and generally has taken a few jobs before the start of the game. In places where crime is heavy such as a larger city your character should be able to find a job or a contract to complete for local crime bosses or people just willing to pay to have someone else killed.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `My years of killing have made me cold and distant to those around me.`,
+				},
+				{
+					number: 2,
+					description: `I take pride in what I do and brag about my exploits to those I trust not to tell.`,
+				},
+				{
+					number: 3,
+					description: `Money is king, it is the only thing worth killing for.`,
+				},
+				{
+					number: 4,
+					description: `My time spent with the wrong crowd has made me untrusting to new people.`,
+				},
+				{
+					number: 5,
+					description: `I am wary of those who also kill because if they are like me, I know what they are capable of.`,
+				},
+				{
+					number: 6,
+					description: `If someone is in the way of me completing a job it's on them, not me.`,
+				},
+				{
+					number: 7,
+					description: `I am quick to violence because in my line of work that is usually how it ends up. Might as well not stand around arguing first.`,
+				},
+				{
+					number: 8,
+					description: `I will break your jaw if you start to annoy me.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Reputation`,
+					description: `In this business reputation is key and I've got to keep mine`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Destruction`,
+					description: `I want to be not only the best option for those looking to hire but the only option`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: `Immediate`,
+					description: `If you are not willing to do what it takes to get the job done, don't do it.`,
+					alignment: `Chaos`,
+				},
+				{
+					number: 4,
+					bold: `Swords`,
+					description: `There are a thousand men to do the job. I want to be top of the list, however possible`,
+					alignment: `Evil`,
+				},
+				{
+					number: 5,
+					bold: `Honorable`,
+					description: `I only take the jobs I need to survive. There is no purpose in senseless killing. `,
+					alignment: `Good`,
+				},
+				{
+					number: 6,
+					bold: `Savior`,
+					description: `I only kill the bad ones. I won't kill an honorable man`,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Once while on a job I killed the wrong man. That mistake still haunts me today.`,
+				},
+				{
+					number: 2,
+					description: `When I do a job I have to do it with my specific calling card or else I consider it a failure.`,
+				},
+				{
+					number: 3,
+					description: `Snitches get stitches. I learned that the hard way.`,
+				},
+				{
+					number: 4,
+					description: `I take a trophy from every job to remind me of what I have done.`,
+				},
+				{
+					number: 5,
+					description: `There was a man in my youth who taught me everything I know. He was my first contract.`,
+				},
+				{
+					number: 6,
+					description: `I never kill children. Everyone has a line and that is mine.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `All of this killing and doing it myself has made me not work well with others.`,
+				},
+				{
+					number: 2,
+					description: `I must complete the job at all costs. No exceptions.`,
+				},
+				{
+					number: 3,
+					description: `I close myself off when anything about my work or my past is mentioned for fear someone will use it against me.`,
+				},
+				{
+					number: 4,
+					description: `I always assume everyone of stature in the room knows of my exploits.`,
+				},
+				{
+					number: 5,
+					description: `I always assume that everyone is looking to hire.`,
+				},
+				{
+					number: 6,
+					description: `My one fear is the law and I don't think I would hold up if I was questioned by them.`,
+				},
+			],
+		},
+	},
+	Innkeeper: {
+		isHomebrew: true,
+		description: `Throughout your entire life, you've heard of the grand adventures by grander adventurers, and from the amount of heroes that pass through your inn you've finally become fed up, and have decided to start up the adventuring life of your own, with from what you've wrangled up spare from lost property to using card games to earn a little extra gold, you saved up enough to begin your adventure, selling or granting your inn, you set out and begin a new chapter in your life`,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		languages: ``,
+		startingEquipment: ``,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: `Former Proprieter`,
+			description: `You ran an inn, which you have abandoned for the life of adventure. However, the new owner of the inn or tavern may give you free room and board at a modest standard. Other innkeepers will likely favor you, upon learning your background. You may also know patrons, who may offer favors or jobs.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: `Innkeepers are mostly defined by their customers, for better or worse.`,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `Everyone has a story to tell, for the right price.`,
+				},
+				{
+					number: 2,
+					description: `In my books, if you're a Patron, you're a friend.`,
+				},
+				{
+					number: 3,
+					description: `I've always believed that alcohol is the best medicine.`,
+				},
+				{
+					number: 4,
+					description: `I've never been scared to back down from a fight.`,
+				},
+				{
+					number: 5,
+					description: `My sharp wit and cunning remarks can cut tension like a hot knife.`,
+				},
+				{
+					number: 6,
+					description: `I have a joke for every occasion.`,
+				},
+				{
+					number: 7,
+					description: `I like to collect trinkets and magical objects, even if that means stealing them sometimes.`,
+				},
+				{
+					number: 8,
+					description: `I always have a story that relates to the matter at hand.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Kindness`,
+					description: `A smile and a free ale can raise a lot of spirits`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: `Frugal`,
+					description: `If I can haggle a price I will`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Power`,
+					description: `Gold can get you a lot, but a threat can get you more`,
+					alignment: `Evil`,
+				},
+				{
+					number: 4,
+					bold: `Curiosity`,
+					description: `I'm always thinking of new concoctions to introduce to the inn`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 5,
+					bold: `Knowledge`,
+					description: `With enough alcohol, you can make someone tell you anything`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 6,
+					bold: `Freedom`,
+					description: `If something is being given away, chances are, I will always take it`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I will always be grateful to my mentor who taught me everything I know.`,
+				},
+				{
+					number: 2,
+					description: `I remember being a "gutter rat" and will push for them to be treated equally.`,
+				},
+				{
+					number: 3,
+					description: `I am forever in debt to the family that adopted me when no one else would.`,
+				},
+				{
+					number: 4,
+					description: `A monster destroyed my village and family, and now it is my duty to slay the beast.`,
+				},
+				{
+					number: 5,
+					description: `I accidentally served a dangerous criminal and now the guards don't trust me.`,
+				},
+				{
+					number: 6,
+					description: `I have grown up fixing my families mistakes.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I always speak my mind, for better or worse.`,
+				},
+				{
+					number: 2,
+					description: `I'm not the most careful of people and tend to break things now and again.`,
+				},
+				{
+					number: 3,
+					description: `I have a serious drinking problem.`,
+				},
+				{
+					number: 4,
+					description: `My wit has landed me in more jails than I can count.`,
+				},
+				{
+					number: 5,
+					description: `I tend to get carried away when insulting someone.`,
+				},
+				{
+					number: 6,
+					description: `My anger issues have been responsible for many broken jaws.`,
 				},
 			],
 		},
