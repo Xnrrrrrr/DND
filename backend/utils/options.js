@@ -49,6 +49,12 @@ const backgrounds = [
 	"Disgrace", //homebrew
 	"Dragon Raised", //homebrew
 	"Entomologist", //homebrew
+	"Exiled", //homebrew
+	"Explorer", //homebrew
+	"Fishmonger", //homebrew
+	"Fortune Teller", //homebrew
+	"Hitman", //homebrew
+	"Innkeeper", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",
