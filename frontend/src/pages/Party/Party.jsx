@@ -5,7 +5,7 @@ import { getAllUserCharacterSheets } from "../../slices/characterSheet/character
 import { getUserInfo } from "../../slices/user/userSlice.js";
 import { getParties } from "../../slices/party/partySlice.js";
 import { useJoinPartyMutation } from "../../slices/party/partyApiSlice.js";
-import { useNavigate, Outlet, Link, useLocation } from "react-router-dom";
+import { useNavigate, Outlet, Link, useLocation, useNavigationType } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const Party = () => {
@@ -19,6 +19,7 @@ const Party = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const location = useLocation();
+	const navigationType = useNavigationType();
 
 	const [join, { isJoinLoading }] = useJoinPartyMutation();
 
@@ -57,15 +58,16 @@ const Party = () => {
 		}
 	};
 
-	const rerenderParties = () => {
-		fetchParties();
-	};
-
 	useEffect(() => {
 		if (location.pathname === "/party") {
 			fetchCharacterSheets();
+			fetchParties();
 		}
-	}, [location])
+		// Needed whenever a user reroutes from /party/:partyId to here
+		if (ws) {
+			ws.send(JSON.stringify({ type: "updateParty" }));
+		}
+	}, [location]);
 
 	useEffect(() => {
 		fetchUser();
@@ -105,6 +107,18 @@ const Party = () => {
 		};
 
 	}, []);
+
+	useEffect(() => {
+		if (ws) {
+			ws.send(JSON.stringify({ type: "updateParty" }));
+		}
+	}, [ws]);
+
+	useEffect(() => {
+		if (navigationType === "POP" && ws) {
+			ws.send(JSON.stringify({ type: "updateParty" }));
+		}
+	}, [navigationType, ws]);
 
 	const handleSubmit = async (e, partyId) => {
 		e.preventDefault();

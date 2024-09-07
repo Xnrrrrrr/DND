@@ -1374,6 +1374,7 @@ const CharacterSheet = () => {
 										<option value="">Select a Class</option>
 										{classesArray.map((c, index) => (
 											<option key={index} value={c}>
+												{/* Warning here */}
 												{c}
 											</option>
 										))}
