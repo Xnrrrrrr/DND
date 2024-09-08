@@ -4373,6 +4373,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Intellectual", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -15675,6 +15679,220 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `My anger issues have been responsible for many broken jaws.`,
+				},
+			],
+		},
+	},
+	Intellectual: {
+		isHomebrew: true,
+		description: `You have dedicated your life to the pursuit of knowledge, critical thinking, and intellectual discourse. Whether as an academic, philosopher, scientist, or historian, your mind is your greatest asset. You are well-versed in various schools of thought and possess a deep understanding of complex ideas. Your expertise lies in one of the following specialties:`,
+		skillProficiencies: `Choose any two from Arcana, History, Investigation, Medicine, Nature, Religion.`,
+		toolProficiencies: `Choose any one from Alchemist's Supplies, Calligrapher's Supplies, Cartographer's Tools, Herbalism Kit, or Musical Instrument.`,
+		languages: `Choose two languages of your choice.`,
+		startingEquipment: `A set of common clothes, a writing kit (small pouch with a quill, a bottle of ink, folded parchment, and a small penknife), a book related to your chosen specialty, a pouch containing 10 gp.`,
+		backgroundSpecial: {
+			title: `Specialty`,
+			description: `Choose one of the following specialties to define your intellectual focus:`,
+			die: `1d10`,
+			roll: [
+				{
+					number: 1,
+					description: `You value the preservation of cultural customs, rituals, and beliefs. You have studied ancient texts, folklore, and traditional practices extensively, and you strive to uphold and pass on these traditions to future generations.`,
+				},
+				{
+					number: 2,
+					description: `You advocate for a system of government where power is held by the people. You have studied political theory, revolutionary movements, and the history of republics. You are knowledgeable about the principles of democracy and seek to dismantle oppressive monarchies.`,
+				},
+				{
+					number: 3,
+					description: `You believe in a centralized authority that regulates and controls society for the greater good. You have studied social engineering, propaganda, and political ideologies such as socialism or communism. Your goal is to establish a system where the state has complete control over all aspects of life.`,
+				},
+				{
+					number: 4,
+					description: `You are an advocate for a legal system where laws and their operation derive their validity from their existence. You have studied jurisprudence, legal history, and philosophy of law. Your goal is to contribute to the development and improvement of legal systems.`,
+				},
+				{
+					number: 5,
+					description: `You believe that actual power and recognized power should align as closely as possible. You have studied political structures, governance, and power dynamics. Your expertise lies in understanding the mechanisms that shape authority and influence.`,
+				},
+				{
+					number: 6,
+					description: `You believe that society should adhere to the natural order and reject artificial constructs. You have studied evolutionary biology, anthropology, and social dynamics. Your goal is to promote a social system that aligns with the natural order of society`,
+				},
+				{
+					number: 7,
+					description: `You reject all religious and moral principles, believing that life is inherently meaningless. You have studied existential philosophy, nihilistic literature, and postmodern thought. Your goal is to challenge and deconstruct existing societal norms and values.`,
+				},
+				{
+					number: 8,
+					description: `You believe in the existence of a creator who intervenes in the universe, above all other gods. You have studied theology, religious texts, and the history of religious practices. Your goal is to deepen your understanding of divine intervention and promote the beliefs associated with your chosen faith.`,
+				},
+				{
+					number: 9,
+					description: `You hold the belief that certain races are superior or inferior to others. You have studied racial theories, eugenics, and social hierarchies. Your goal is to advance your racial ideology and shape society based on these principles`,
+				},
+				{
+					number: 10,
+					description: `You believe that power and dominance determine the rightful order of society. You have studied political realism, military strategy, and historical conquests. Your goal is to acquire and consolidate power, enforcing your will upon others.`,
+				},
+			],
+		},
+		feature: {
+			title: `Intellectual Network`,
+			description: `Your intellectual pursuits have connected you with like-minded individuals and granted you access to a network of scholars, thinkers, and experts within your chosen specialty. You can reach out to this network for assistance or information. To make use of your network, spend time in a library, university, or other scholarly institutions, or send letters or messages to your contacts. The information and assistance you receive depend on the nature of your request and the availability of your network members.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I constantly seek to challenge established ideas and norms.`,
+				},
+				{
+					number: 2,
+					description: `I find solace and inspiration in the pursuit of knowledge.`,
+				},
+				{
+					number: 3,
+					description: `I am highly curious and always eager to learn more.`,
+				},
+				{
+					number: 4,
+					description: `I am skeptical and question everything, seeking the truth.`,
+				},
+				{
+					number: 5,
+					description: `I am aloof and prefer the company of books and thoughts to people.`,
+				},
+				{
+					number: 6,
+					description: `I enjoy debating and discussing ideas with others.`,
+				},
+				{
+					number: 7,
+					description: `I am driven by a strong desire to understand the mysteries of the world.`,
+				},
+				{
+					number: 8,
+					description: `I am passionate about my belief and love sharing my knowledge with others.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Knowledge`,
+					description: `The pursuit of knowledge is the greatest goal in life`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 2,
+					bold: `Progress`,
+					description: `Advancement and innovation are essential for society's well-being`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 3,
+					bold: `Truth`,
+					description: `Seeking and promoting truth is of utmost importance.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 4,
+					bold: `Freedom`,
+					description: `Everyone should have the freedom to think and express their ideas.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 5,
+					bold: `Wisdom`,
+					description: `Knowledge should be used to guide and benefit others.`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 6,
+					bold: `Harmony`,
+					description: `Intellectual pursuits should aim to bring harmony and balance. `,
+					alignment: `Good`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I have a mentor or role model who inspired me to pursue intellectual pursuits.`,
+				},
+				{
+					number: 2,
+					description: `My research or studies have a direct impact on my family or community.`,
+				},
+				{
+					number: 3,
+					description: `I am part of a prestigious intellectual society, and its reputation is important to me.`,
+				},
+				{
+					number: 4,
+					description: `I seek to uncover ancient secrets or forgotten knowledge.`,
+				},
+				{
+					number: 5,
+					description: `I am determined to prove a controversial theory or idea.`,
+				},
+				{
+					number: 6,
+					description: `I am searching for a rare artifact or text that holds great significance in my field.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I am so focused on my belief that I sometimes neglect other aspects of my life.`,
+				},
+				{
+					number: 2,
+					description: `I can be condescending and dismissive of those who lack intellectual curiosity.`,
+				},
+				{
+					number: 3,
+					description: `I am easily distracted by new topics or ideas, often abandoning current pursuits.`,
+				},
+				{
+					number: 4,
+					description: `I am secretive about my research, fearing that others may steal my ideas.`,
+				},
+				{
+					number: 5,
+					description: `I struggle to communicate my ideas clearly and often come across as confusing.`,
+				},
+				{
+					number: 6,
+					description: `I am obsessed with a particular subject or theory and disregard opposing viewpoints.`,
 				},
 			],
 		},
