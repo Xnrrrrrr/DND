@@ -1,13 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {
-	useNavigate,
-	useOutletContext,
-} from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import {
 	useGetPartyQuery,
 	useLeavePartyMutation,
+	useKickFromPartyMutation,
 	useDeletePartyMutation,
 } from "../../slices/party/partyApiSlice.js";
 import { Header, ChatBox } from "../../components";
@@ -29,24 +27,33 @@ const PartyDetail = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 
-	const [deleteParty, { isDeletePartyLoading }] = useDeletePartyMutation();
 	const [leaveParty, { isLeavePartyLoading }] = useLeavePartyMutation();
+	const [kickFromParty, { isKickFromPartyLoading }] =
+		useKickFromPartyMutation();
+	const [deleteParty, { isDeletePartyLoading }] = useDeletePartyMutation();
 
 	useEffect(() => {
 		const handleMessage = (e) => {
 			const message = JSON.parse(e.data);
-	
-			console.log(message);
-	
-			if (message.type === "partyDeleted" && message.partyId === partyId) {
-				navigate("/party");
-			} else if (
-				message.type === "updateParty" ||
-				message.type === "leaveParty"
+
+			//console.log("Message received: ", message);
+
+			if (
+				message.type === "partyDeleted" &&
+				message.partyId === partyId
 			) {
-				refetch();
+				navigate("/party");
+			} else if (message.type === "updateParty") {
+				// Need to resolve the error when refetching causes a 404 after deleteing a party
+				if (location.pathname === `/party/${partyId}`) {
+					refetch();
+				}
+				if (message.id === user?._id) {
+					window.alert("You have been kicked from the party.");
+					navigate("/party");
+					window.location.reload();
+				}
 			} else if (message.type === "userPartyState") {
-				console.log(message);
 				setUserStatuses(message.statuses);
 			}
 		};
@@ -57,6 +64,9 @@ const PartyDetail = () => {
 			setWs(wss);
 		});
 		wss.addEventListener("message", handleMessage);
+		wss.addEventListener("error", (e) => {
+			console.error("WebSocket error:", e);
+		});
 		wss.addEventListener("close", () => {
 			console.log("WebSocket closed in PartyDetail");
 		});
@@ -85,7 +95,7 @@ const PartyDetail = () => {
 
 		try {
 			const res = await leaveParty(partyId).unwrap();
-			console.log(res);
+			//console.log(res);
 			if (res && ws && ws.readyState === WebSocket.OPEN) {
 				ws.send(JSON.stringify({ type: "updateParty" }));
 			}
@@ -95,8 +105,22 @@ const PartyDetail = () => {
 		}
 	};
 
-	const handleKick = async (playerId) => {
+	const handleKick = async (playerId, playerUsername) => {
 		if (user.username === gameMaster) return;
+
+		try {
+			const res = await kickFromParty({
+				partyId,
+				playerId,
+				playerUsername,
+			}).unwrap();
+			//console.log(res);
+			if (res && ws && ws.readyState === WebSocket.OPEN) {
+				ws.send(JSON.stringify({ type: "updateParty", playerId }));
+			}
+		} catch (err) {
+			console.error(err);
+		}
 	};
 
 	// Needed if a user leaves and rejoins another party
@@ -226,28 +250,43 @@ const PartyDetail = () => {
 							{m.characterSheet.primaryClass}{" "}
 							{m.characterSheet.race}){" "}
 							{user.username === data.party.gameMaster && (
-								<button type="button" onClick={((e) => handleKick(playerId))}>
-									Kick {m.user.username}
+								<button
+									type="button"
+									onClick={() =>
+										handleKick(m.user._id, m.user.username)
+									}
+								>
+									{isKickFromPartyLoading ? (
+										<ClipLoader
+											color="var(--base-text-color)"
+											size={12}
+										/>
+									) : (
+										`Kick ${m.user.username}`
+									)}
 								</button>
 							)}
 						</p>
 					);
 				})}
 				{user.username === data.party.gameMaster ? (
-					<button
-						type="button"
-						disabled={isDeletePartyLoading}
-						onClick={handlePartyDelete}
-					>
-						{isDeletePartyLoading ? (
-							<ClipLoader
-								color="var(--base-text-color)"
-								size={12}
-							/>
-						) : (
-							`Delete Party`
-						)}
-					</button>
+					<>
+						<button
+							type="button"
+							disabled={isDeletePartyLoading}
+							onClick={handlePartyDelete}
+						>
+							{isDeletePartyLoading ? (
+								<ClipLoader
+									color="var(--base-text-color)"
+									size={12}
+								/>
+							) : (
+								`Delete Party`
+							)}
+						</button>
+						<button type="button">Create Campaign</button>
+					</>
 				) : (
 					<button
 						type="button"

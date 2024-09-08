@@ -66,6 +66,7 @@ const PartyCreate = () => {
 							type="text"
 							id="password"
 							value={password}
+							required={isPasswordProtected}
 							disabled={!isPasswordProtected}
 							onChange={(e) => setPassword(e.target.value)}
 							style={{}}

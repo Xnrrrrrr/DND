@@ -29,6 +29,13 @@ export const partyApiSlice = apiSlice.injectEndpoints({
 				method: "PUT",
 			}),
 		}),
+		kickFromParty: builder.mutation({
+			query: ({ partyId, playerId, playerUsername }) => ({
+				url: `${PARTY_URL}/${partyId}/kick`,
+				method: "PUT",
+				body: { playerId, playerUsername },
+			}),
+		}),
 		deleteParty: builder.mutation({
 			query: (data) => ({
 				url: `${PARTY_URL}`,
@@ -44,5 +51,6 @@ export const {
 	useJoinPartyMutation,
 	useGetPartyQuery,
 	useLeavePartyMutation,
+	useKickFromPartyMutation,
 	useDeletePartyMutation,
 } = partyApiSlice;

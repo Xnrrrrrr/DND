@@ -44,7 +44,7 @@ const initWebSocket = (server) => {
 					} else if (parsedMessage.type === "updateParty") {
 						[...wss.clients].forEach((client) => {
 							client.send(
-								JSON.stringify({ type: "updateParty" })
+								JSON.stringify({ type: "updateParty", id: parsedMessage?.playerId || "" })
 							);
 						});
 					} else if (parsedMessage.type === "deleteParty") {
@@ -60,7 +60,7 @@ const initWebSocket = (server) => {
 						userStatuses[connection.users.username] = {
 							state: parsedMessage.state,
 							status: parsedMessage.status,
-						}
+						};
 						broadcastUserStatuses();
 					}
 				} catch (err) {
@@ -71,8 +71,12 @@ const initWebSocket = (server) => {
 				}
 			});
 
+			connection.on("error", (err) => {
+				console.error("WebSocket error for user:", connection.users.username, err);
+			});
+
 			connection.on("close", () => {
-				if (req.user) {
+				if (req.user && connection.readyStatus === 1) {
 					userStatuses[connection.users.username] = "closed";
 					broadcastUserStatuses();
 				}
@@ -141,8 +145,7 @@ const initWebSocket = (server) => {
 	};
 
 	const broadcastUserStatuses = () => {
-		console.log(userStatuses);
-		
+		//console.log(userStatuses);
 		[...wss.clients].forEach((client) => {
 			client.send(
 				JSON.stringify({

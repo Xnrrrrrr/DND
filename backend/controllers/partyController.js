@@ -39,6 +39,11 @@ const createParty = asyncHandler(async (req, res) => {
 		throw new Error("Your password length is too long.");
 	}
 
+	if (passwordProtected && !password) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error("You must provide a password if your party is password protected.");
+	}
+
 	const existingParty = await Party.findOne({ gameMasterId: user._id });
 
 	if (existingParty) {
@@ -185,7 +190,7 @@ const leaveParty = asyncHandler(async (req, res) => {
 	if (!user) {
 		res.status(StatusCodes.NOT_FOUND);
 		throw new Error("User not found for party request.");
-	}	
+	}
 
 	const party = await Party.findById(partyId);
 
@@ -200,7 +205,54 @@ const leaveParty = asyncHandler(async (req, res) => {
 
 	await party.save();
 
-	res.status(StatusCodes.OK).json({ msg: `${user.username} left the party.` });
+	res.status(StatusCodes.OK).json({
+		msg: `${user.username} left the party.`,
+	});
+});
+
+/**
+ * @desc	Kick a User
+ * @route	PUT /api/v1/party/:partyId/kick
+ * @access	Private
+ */
+const kickFromParty = asyncHandler(async (req, res) => {
+	const { partyId } = req.params;
+	const { playerId, playerUsername } = req.body;
+	const user = await User.findById(req.user._id).select("-__v -password");
+
+	if (!user) {
+		res.status(StatusCodes.NOT_FOUND);
+		throw new Error("User not found for party request.");
+	}
+
+	const party = await Party.findById(partyId);
+
+	if (!party) {
+		res.status(StatusCodes.NOT_FOUND);
+		throw new Error("Party not found.");
+	}
+
+	if (user._id.toString() !== party.gameMasterId.toString()) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error("Only the game master can kick users.");
+	}
+
+	if (user._id.toString() === playerId.toString()) {
+		res.status(StatusCodes.BAD_REQUEST);
+		throw new Error(
+			"The game master may not kick themselves from their own party."
+		);
+	}
+
+	party.characters = party.characters.filter(
+		(character) => character.user.toString() !== playerId.toString()
+	);
+
+	await party.save();
+
+	res.status(StatusCodes.OK).json({
+		msg: `${playerUsername || playerId} has been kicked.`,
+	});
 });
 
 /**
@@ -236,5 +288,6 @@ module.exports = {
 	joinParty,
 	getParty,
 	leaveParty,
+	kickFromParty,
 	deleteParty,
 };

@@ -5,7 +5,13 @@ import { getAllUserCharacterSheets } from "../../slices/characterSheet/character
 import { getUserInfo } from "../../slices/user/userSlice.js";
 import { getParties } from "../../slices/party/partySlice.js";
 import { useJoinPartyMutation } from "../../slices/party/partyApiSlice.js";
-import { useNavigate, Outlet, Link, useLocation, useNavigationType } from "react-router-dom";
+import {
+	useNavigate,
+	Outlet,
+	Link,
+	useLocation,
+	useNavigationType,
+} from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const Party = () => {
@@ -99,13 +105,10 @@ const Party = () => {
 		return () => {
 			if (socket.readyState === WebSocket.OPEN) {
 				// Notify server that the user left the party
-				socket.send(
-					JSON.stringify({ type: "leaveParty" })
-				);
+				socket.send(JSON.stringify({ type: "leaveParty" }));
 			}
 			socket.close();
 		};
-
 	}, []);
 
 	useEffect(() => {
@@ -158,112 +161,114 @@ const Party = () => {
 						<p>Search by GM</p>
 						{parties ? (
 							parties.map((p, index) => (
-								<React.Fragment key={index}>
-									<form
-										onSubmit={(e) => handleSubmit(e, p._id)}
+								<form
+									key={index}
+									onSubmit={(e) => handleSubmit(e, p._id)}
+								>
+									<p>GM: {p.gameMaster}</p>
+									<p>
+										Player count: {p.characters.length}/
+										{p.maxCharacters}
+									</p>
+									<p>Current Characters:</p>
+									{p.characters.map((c, index) => (
+										<React.Fragment key={index}>
+											<p>
+												{c.user.username} as{" "}
+												{c.characterSheet === null
+													? `the game master`
+													: `${c.characterSheet.characterFirstName} ${c.characterSheet.characterLastName}`}
+												.{" "}
+												<span>
+													View Character Sheet
+												</span>
+											</p>
+										</React.Fragment>
+									))}
+									{p.passwordProtected && (
+										<>
+											<label
+												htmlFor={
+													p.gameMaster +
+													`${index + 1}`
+												}
+											>
+												Password:
+											</label>
+											<input
+												type="password"
+												id={
+													p.gameMaster +
+													`${index + 1}`
+												}
+												value={password}
+												maxLength={100}
+												onChange={(e) =>
+													setPassword(e.target.value)
+												}
+												required={p.passwordProtected}
+											/>
+										</>
+									)}
+									<label
+										htmlFor={p.gameMaster + `${index + 2}`}
 									>
-										<p>GM: {p.gameMaster}</p>
-										<p>
-											Player count: {p.characters.length}/
-											{p.maxCharacters}
-										</p>
-										<p>Current Characters:</p>
-										{p.characters.map((c, index) => (
-											<React.Fragment key={index}>
-												<p>
-													{c.user.username} as{" "}
-													{c.characterSheet === null
-														? `the game master`
-														: `${c.characterSheet.characterFirstName} ${c.characterSheet.characterLastName}`}
-													.{" "}
-													<span>
-														View Character Sheet
-													</span>
-												</p>
-											</React.Fragment>
-										))}
-										{p.passwordProtected && (
-											<>
-												<label
-													htmlFor={
-														p.gameMaster +
-														`${index + 1}`
-													}
+										Character Sheets:
+									</label>
+									<select
+										id={p.gameMaster + `${index + 2}`}
+										value={selectedCharSheet}
+										onChange={(e) =>
+											setSelectedCharSheet(e.target.value)
+										}
+										required
+									>
+										<option value="">
+											Select a Character Sheet
+										</option>
+										{characterSheets ? (
+											characterSheets.map((c, index) => (
+												<option
+													key={index}
+													value={c._id}
 												>
-													Password:
-												</label>
-												<input
-													type="password"
-													id={
-														p.gameMaster +
-														`${index + 1}`
-													}
-													value={password}
-													maxLength={100}
-													onChange={(e) =>
-														setPassword(
-															e.target.value
-														)
-													}
-													required={
-														p.passwordProtected
-													}
-												/>
-											</>
-										)}
-										<label
-											htmlFor={
-												p.gameMaster + `${index + 2}`
-											}
-										>
-											Character Sheets:
-										</label>
-										<select
-											id={p.gameMaster + `${index + 2}`}
-											value={selectedCharSheet}
-											onChange={(e) =>
-												setSelectedCharSheet(
-													e.target.value
-												)
-											}
-											required
-										>
-											<option value="">
-												Select a Character Sheet
-											</option>
-											{characterSheets ? (
-												characterSheets.map(
-													(c, index) => (
-														<option
-															key={index}
-															value={c._id}
-														>
-															{
-																c.characterFirstName
-															}{" "}
-															{
-																c.characterLastName
-															}{" "}
-															({c.primaryClass})
-														</option>
-													)
-												)
-											) : (
-												<option value="">
-													No Character sheets found.
+													{c.characterFirstName}{" "}
+													{c.characterLastName} (
+													{c.primaryClass})
 												</option>
-											)}
-										</select>
-										<p>
-											No Character Sheet?{" "}
-											<Link to={"/character-sheet"}>
-												Click Here
-											</Link>
-											.
-										</p>
+											))
+										) : (
+											<option value="">
+												No Character sheets found.
+											</option>
+										)}
+									</select>
+									<p>
+										No Character Sheet?{" "}
+										<Link to={"/character-sheet"}>
+											Click Here
+										</Link>
+										.
+									</p>
+									{p.characters.some(
+										(g) => g?.user?._id === user?._id
+									) ? (
+										<button
+											type="button"
+											onClick={() =>
+												navigate(`/party/${p._id}`)
+											}
+										>
+											Re-Join
+										</button>
+									) : (
 										<button
 											type="submit"
-											disabled={isJoinLoading || p.characters.length >= p.maxCharacters}
+											disabled={
+												isJoinLoading ||
+												p.characters.length >=
+													p.maxCharacters
+											}
 										>
 											{isJoinLoading ? (
 												<ClipLoader
@@ -274,8 +279,8 @@ const Party = () => {
 												`Join`
 											)}
 										</button>
-									</form>
-								</React.Fragment>
+									)}
+								</form>
 							))
 						) : (
 							<p>There are no parties to display here.</p>

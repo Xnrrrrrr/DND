@@ -13,6 +13,7 @@ const {
 	joinParty,
 	getParty,
 	leaveParty,
+	kickFromParty,
 	deleteParty,
 } = require("../controllers/partyController.js");
 
@@ -23,6 +24,7 @@ router
 	.delete([protect], deleteParty);
 router.route("/:partyId").get([protect], getParty);
 router.route("/:partyId/leave").put([protect], leaveParty);
+router.route("/:partyId/kick").put([protect], kickFromParty);
 router.route("/join").post([protect], joinParty);
 
 module.exports = router;
