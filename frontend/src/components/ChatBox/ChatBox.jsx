@@ -6,7 +6,7 @@ import { useSaveGeneralMessageMutation } from "../../slices/chat/general/general
 import { getGeneralMessages } from "../../slices/chat/general/generalChatSlice.js";
 import { ChatBoxContextMenu, useChatBoxContextMenu } from "../";
 
-const ChatBox = ({ user }) => {
+const ChatBox = ({ user, party }) => {
 	const [inputValue, setInputValue] = useState("");
 	const [messages, setMessages] = useState({
 		general: [],
@@ -46,6 +46,7 @@ const ChatBox = ({ user }) => {
 				timestamp: utcTimeString,
 			};
 
+			// Checks for private chat command
 			const privateMessageMatch = inputValue.match(/^\/\/(\w+):\s(.+)/);
 			if (privateMessageMatch) {
 				const recipientUsername = privateMessageMatch[1];
@@ -81,6 +82,30 @@ const ChatBox = ({ user }) => {
 				} catch (err) {
 					console.error("Failed to save message:", err);
 				}
+			} else if (selectedTab === "party") {
+				if (!party) {
+					setMessages((prevMessages) => ({
+						...prevMessages,
+						party: [
+							...prevMessages.party,
+							{
+								type: "error",
+								content:
+									"Join a party to start chatting with party members.",
+								sender: "System",
+								timestamp: utcTimeString,
+							},
+						],
+					}));
+				} else {
+					ws.send(
+						JSON.stringify({
+							type: "chat",
+							partyChat: chatMessage,
+							party,
+						})
+					);
+				}
 			} else if (selectedTab === "private") {
 				setMessages((prevMessages) => ({
 					...prevMessages,
@@ -104,31 +129,43 @@ const ChatBox = ({ user }) => {
 
 	const handleMessage = (e) => {
 		const messageData = JSON.parse(e.data);
-		const tabType = messageData.generalChat
-			? "general"
-			: messageData.privateChat
-			? "private"
-			: "party";
+		if (
+			messageData.generalChat ||
+			messageData.partyChat ||
+			messageData.privateChat
+		) {
+			const tabType = messageData.generalChat
+				? "general"
+				: messageData.privateChat
+				? "private"
+				: "party";
 
-		if ("generalChat" in messageData) {
-			const parsedMessage = messageData.generalChat;
-			setMessages((prevMessages) => ({
-				...prevMessages,
-				general: [...prevMessages.general, parsedMessage],
-			}));
-		} else if ("privateChat" in messageData) {
-			const parsedMessage = messageData.privateChat;
-			setMessages((prevMessages) => ({
-				...prevMessages,
-				private: [...prevMessages.private, parsedMessage],
-			}));
-		}
+			if ("generalChat" in messageData) {
+				const parsedMessage = messageData.generalChat;
+				setMessages((prevMessages) => ({
+					...prevMessages,
+					general: [...prevMessages.general, parsedMessage],
+				}));
+			} else if ("partyChat" in messageData) {
+				const parsedMessage = messageData.partyChat;
+				setMessages((prevMessages) => ({
+					...prevMessages,
+					party: [...prevMessages.party, parsedMessage],
+				}));
+			} else if ("privateChat" in messageData) {
+				const parsedMessage = messageData.privateChat;
+				setMessages((prevMessages) => ({
+					...prevMessages,
+					private: [...prevMessages.private, parsedMessage],
+				}));
+			}
 
-		if (tabType !== selectedTabRef.current) {
-			setNotifications((prev) => ({
-				...prev,
-				[tabType]: prev[tabType] + 1,
-			}));
+			if (tabType !== selectedTabRef.current) {
+				setNotifications((prev) => ({
+					...prev,
+					[tabType]: prev[tabType] + 1,
+				}));
+			}
 		}
 	};
 
@@ -392,6 +429,66 @@ const ChatBox = ({ user }) => {
 						<p>Loading General Chat...</p>
 					)}
 					<>
+						{selectedTab === "party"
+							? messages.party.map((m, index) => (
+									<div
+										key={index}
+										style={{
+											backgroundColor:
+												index % 2 === 0
+													? "var(--border-color)"
+													: "transparent",
+										}}
+									>
+										{m?.type === "error" ? (
+											<p>
+												({m.timestamp}){" "}
+												<span style={{ color: "red" }}>
+													{m.sender}
+												</span>
+												: {m.content}
+											</p>
+										) : (
+											<p style={{ padding: "2px" }}>
+												({m.timestamp}){" "}
+												{m.badge === "superAdmin" ? (
+													<span
+														style={{
+															color: "gold",
+														}}
+														title="Super Admin"
+													>
+														SA
+													</span>
+												) : m.badge === "admin" ? (
+													<span
+														style={{
+															color: "green",
+														}}
+														title="Admin"
+													>
+														A
+													</span>
+												) : (
+													``
+												)}{" "}
+												<span
+													className="sender-span"
+													onContextMenu={(e) =>
+														showContextMenu(
+															e,
+															index
+														)
+													}
+												>
+													{m.sender}
+												</span>
+												: {m.content}
+											</p>
+										)}
+									</div>
+							  ))
+							: ``}
 						{selectedTab === "private"
 							? messages.private.map((m, index) => (
 									<div

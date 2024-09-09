@@ -176,7 +176,7 @@ const Party = () => {
 											<p>
 												{c.user.username} as{" "}
 												{c.characterSheet === null
-													? `the game master`
+													? `the Game Master`
 													: `${c.characterSheet.characterFirstName} ${c.characterSheet.characterLastName}`}
 												.{" "}
 												<span>

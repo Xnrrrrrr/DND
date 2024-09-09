@@ -304,8 +304,7 @@ const PartyDetail = () => {
 					</button>
 				)}
 			</div>
-			{/* Display other party details here */}
-			{user && <ChatBox user={user} />}
+			{user && data.party && <ChatBox user={user} party={data.party} />}
 		</>
 	);
 };
