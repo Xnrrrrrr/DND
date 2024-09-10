@@ -11,16 +11,17 @@ import {
 	Link,
 	useLocation,
 	useNavigationType,
+	useOutletContext,
 } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const Party = () => {
+	const { globalWs } = useOutletContext();
 	const [user, setUser] = useState();
 	const [characterSheets, setCharacterSheets] = useState([]);
 	const [parties, setParties] = useState([]);
 	const [password, setPassword] = useState("");
 	const [selectedCharSheet, setSelectedCharSheet] = useState("");
-	const [ws, setWs] = useState(null);
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -65,63 +66,48 @@ const Party = () => {
 	};
 
 	useEffect(() => {
-		if (location.pathname === "/party") {
-			fetchCharacterSheets();
-			fetchParties();
-		}
-		// Needed whenever a user reroutes from /party/:partyId to here
-		if (ws) {
-			ws.send(JSON.stringify({ type: "updateParty" }));
-		}
-	}, [location]);
-
-	useEffect(() => {
 		fetchUser();
 		if (user) {
 			fetchCharacterSheets();
 		}
 		fetchParties();
 
-		const socket = new WebSocket(`${import.meta.env.VITE_WS_BASE_URL}`);
-
-		socket.onopen = () => {
-			console.log("Connected to websocket");
-			setWs(socket);
-		};
-
-		socket.onmessage = (e) => {
-			const message = JSON.parse(e.data);
-
-			// Handle party-related messages here
-			if (message.type === "updateParty") {
-				fetchParties();
-			}
-		};
-
-		socket.onclose = () => {
-			console.log("Disconnected from websocket");
-		};
+		globalWs.addEventListener("message", handleMessage);
 
 		return () => {
-			if (socket.readyState === WebSocket.OPEN) {
-				// Notify server that the user left the party
-				socket.send(JSON.stringify({ type: "leaveParty" }));
-			}
-			socket.close();
+			globalWs.removeEventListener('message', handleMessage);
 		};
 	}, []);
 
 	useEffect(() => {
-		if (ws) {
-			ws.send(JSON.stringify({ type: "updateParty" }));
+		if (location.pathname === "/party") {
+			fetchCharacterSheets();
+			fetchParties();
 		}
-	}, [ws]);
+		// Needed whenever a user reroutes from /party/:partyId to here
+		if (globalWs) {
+			globalWs.send(JSON.stringify({ type: "updateParty" }));
+		}
+	}, [location]);
 
 	useEffect(() => {
-		if (navigationType === "POP" && ws) {
-			ws.send(JSON.stringify({ type: "updateParty" }));
+		if (globalWs) {
+			globalWs.send(JSON.stringify({ type: "updateParty" }));
 		}
-	}, [navigationType, ws]);
+	}, [globalWs]);
+
+	useEffect(() => {
+		if (navigationType === "POP" && globalWs) {
+			globalWs.send(JSON.stringify({ type: "updateParty" }));
+		}
+	}, [navigationType, globalWs]);
+
+	const handleMessage = (e) => {
+		const messageData = JSON.parse(e.data);
+		if (messageData.type === "updateParty") {		
+			fetchParties();
+		}
+	}
 
 	const handleSubmit = async (e, partyId) => {
 		e.preventDefault();
@@ -133,7 +119,7 @@ const Party = () => {
 			}).unwrap();
 			if (res && res.msg) {
 				navigate(`/party/${partyId}`);
-				ws.send(JSON.stringify({ type: "updateParty" }));
+				globalWs.send(JSON.stringify({ type: "updateParty" }));
 			}
 		} catch (err) {
 			console.error(err);
@@ -313,8 +299,8 @@ const Party = () => {
 					</div>
 				</div>
 			</div>
-			<ChatBox user={user} />
-			<Outlet context={{ user, ws }} />
+			<ChatBox user={user} globalWs={globalWs} />
+			<Outlet context={{ user, globalWs }} />
 		</>
 	);
 };

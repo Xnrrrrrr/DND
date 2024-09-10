@@ -13,7 +13,7 @@ import { ClipLoader } from "react-spinners";
 import { MdRefresh } from "react-icons/md";
 
 const PartyDetail = () => {
-	const { user } = useOutletContext();
+	const { user, globalWs } = useOutletContext();
 	const { partyId } = useParams();
 	const { data, isLoading, error, refetch } = useGetPartyQuery(partyId);
 	const [ws, setWs] = useState(null);
@@ -36,7 +36,7 @@ const PartyDetail = () => {
 		const handleMessage = (e) => {
 			const message = JSON.parse(e.data);
 
-			//console.log("Message received: ", message);
+			console.log("Message received: ", message);
 
 			if (
 				message.type === "partyDeleted" &&
@@ -44,10 +44,11 @@ const PartyDetail = () => {
 			) {
 				navigate("/party");
 			} else if (message.type === "updateParty") {
-				// Need to resolve the error when refetching causes a 404 after deleteing a party
-				if (location.pathname === `/party/${partyId}`) {
-					refetch();
-				}
+				// if (location.pathname === `/party/${partyId}` && ws) {
+				// 	refetch();
+				// }
+				// Figure out how to fix this 404 error on deleting a party
+				refetch();
 				if (message.id === user?._id) {
 					window.alert("You have been kicked from the party.");
 					navigate("/party");
@@ -79,9 +80,9 @@ const PartyDetail = () => {
 		try {
 			const res = await deleteParty().unwrap();
 			//console.log(res);
-			if (res && ws && ws.readyState === WebSocket.OPEN) {
-				ws.send(JSON.stringify({ type: "updateParty" }));
-				ws.send(JSON.stringify({ type: "deleteParty", partyId }));
+			if (res && globalWs && globalWs.readyState === WebSocket.OPEN) {
+				globalWs.send(JSON.stringify({ type: "updateParty" }));
+				globalWs.send(JSON.stringify({ type: "deleteParty", partyId }));
 			}
 		} catch (err) {
 			console.error(err);
@@ -96,8 +97,8 @@ const PartyDetail = () => {
 		try {
 			const res = await leaveParty(partyId).unwrap();
 			//console.log(res);
-			if (res && ws && ws.readyState === WebSocket.OPEN) {
-				ws.send(JSON.stringify({ type: "updateParty" }));
+			if (res && globalWs && globalWs.readyState === WebSocket.OPEN) {
+				globalWs.send(JSON.stringify({ type: "updateParty" }));
 			}
 			navigate("/party");
 		} catch (err) {
@@ -115,8 +116,10 @@ const PartyDetail = () => {
 				playerUsername,
 			}).unwrap();
 			//console.log(res);
-			if (res && ws && ws.readyState === WebSocket.OPEN) {
-				ws.send(JSON.stringify({ type: "updateParty", playerId }));
+			if (res && globalWs && globalWs.readyState === WebSocket.OPEN) {
+				globalWs.send(
+					JSON.stringify({ type: "updateParty", playerId })
+				);
 			}
 		} catch (err) {
 			console.error(err);
@@ -304,7 +307,9 @@ const PartyDetail = () => {
 					</button>
 				)}
 			</div>
-			{user && data.party && <ChatBox user={user} party={data.party} />}
+			{user && data.party && (
+				<ChatBox user={user} party={data.party} globalWs={globalWs} />
+			)}
 		</>
 	);
 };

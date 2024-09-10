@@ -7,8 +7,19 @@ import { ClipLoader } from "react-spinners";
 const PrivateRoute = () => {
 	const [user, setUser] = useState();
 	const [isLoading, setIsLoading] = useState(true);
+	const [globalWs, setGlobalWs] = useState(null);
 
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		const wss = new WebSocket(`${import.meta.env.VITE_WS_BASE_URL}`);
+		wss.addEventListener("open", () => {
+			setGlobalWs(wss);
+		});
+		return () => {
+			wss.close();
+		};
+	}, [])
 
 	const fetchUserData = async () => {
 		try {
@@ -27,7 +38,7 @@ const PrivateRoute = () => {
 		fetchUserData();
 	}, []);
 
-	if (isLoading) {
+	if (isLoading || globalWs === null) {
 		return (
 			<div
 				style={{
@@ -43,7 +54,7 @@ const PrivateRoute = () => {
 		);
 	}
 
-	return user ? <Outlet /> : <Navigate to="/login" replace />;
+	return user && globalWs ? <Outlet context={{ globalWs }} /> : <Navigate to="/" replace />;
 };
 
 export default PrivateRoute;

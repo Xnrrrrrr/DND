@@ -7,8 +7,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const PartyCreate = () => {
-	const { user, ws } = useOutletContext();
-
+	const { user, globalWs } = useOutletContext();
 	const [isPasswordProtected, setIsPasswordProtected] = useState(false);
 	const [password, setPassword] = useState("");
 	const [isAllowHomebrew, setIsAllowHombrew] = useState(false);
@@ -30,7 +29,7 @@ const PartyCreate = () => {
 				maxCharacters,
 			}).unwrap();
 			if (res && res.party && res.party._id) {
-				ws.send(JSON.stringify({ type: "updateParty" }));
+				globalWs.send(JSON.stringify({ type: "updateParty" }));
 				navigate(`/party/${res.party._id}`);
 			}
 		} catch (err) {

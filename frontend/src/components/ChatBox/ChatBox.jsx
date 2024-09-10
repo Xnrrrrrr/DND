@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { DiAptana } from "react-icons/di";
 import { ClipLoader } from "react-spinners";
 import { useSaveGeneralMessageMutation } from "../../slices/chat/general/generalChatApiSlice.js";
 import { getGeneralMessages } from "../../slices/chat/general/generalChatSlice.js";
 import { ChatBoxContextMenu, useChatBoxContextMenu } from "../";
 
-const ChatBox = ({ user, party }) => {
+const ChatBox = ({ user, party, globalWs }) => {
 	const [inputValue, setInputValue] = useState("");
 	const [messages, setMessages] = useState({
 		general: [],
@@ -28,10 +29,19 @@ const ChatBox = ({ user, party }) => {
 	const [contextUsername, setContextUsername] = useState("");
 	const inputRef = useRef(null);
 
-	const [ws, setWs] = useState(null);
-
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const [general, { isGeneral }] = useSaveGeneralMessageMutation();
+
+	useEffect(() => {
+		if (globalWs) {
+			globalWs.addEventListener("message", handleMessage);
+
+			return () => {
+				globalWs.removeEventListener('message', handleMessage);
+			};
+		}				
+	}, [globalWs]);
 
 	const handleSend = async () => {
 		if (inputValue.trim() !== "") {
@@ -61,7 +71,7 @@ const ChatBox = ({ user, party }) => {
 				};
 
 				// Send the private message through WebSocket
-				ws.send(
+				globalWs.send(
 					JSON.stringify({
 						type: "chat",
 						recipient: recipientUsername,
@@ -69,7 +79,7 @@ const ChatBox = ({ user, party }) => {
 					})
 				);
 			} else if (selectedTab === "general") {
-				ws.send(
+				globalWs.send(
 					JSON.stringify({ type: "chat", generalChat: chatMessage })
 				);
 
@@ -98,7 +108,7 @@ const ChatBox = ({ user, party }) => {
 						],
 					}));
 				} else {
-					ws.send(
+					globalWs.send(
 						JSON.stringify({
 							type: "chat",
 							partyChat: chatMessage,
@@ -179,24 +189,22 @@ const ChatBox = ({ user, party }) => {
 		}));
 	};
 
+	const handleScroll = () => {
+		if (chatBoxRef.current) {
+			const { scrollTop, scrollHeight, clientHeight } =
+				chatBoxRef.current;
+			// Check if the user is at the bottom (or near the bottom)
+			if (scrollHeight - scrollTop === clientHeight) {
+				setIsAtBottom(true);
+			} else {
+				setIsAtBottom(false);
+			}
+		}
+	};
+
 	useEffect(() => {
 		selectedTabRef.current = selectedTab;
 	}, [selectedTab]);
-
-	useEffect(() => {
-		const ws = new WebSocket(`${import.meta.env.VITE_WS_BASE_URL}`);
-		setWs(ws);
-
-		ws.addEventListener("open", () => {
-			console.log("WebSocket connection opened");
-		});
-
-		ws.addEventListener("message", handleMessage);
-
-		return () => {
-			ws.close();
-		};
-	}, []);
 
 	useEffect(() => {
 		if (isAtBottom && chatEndRef.current) {
@@ -238,19 +246,6 @@ const ChatBox = ({ user, party }) => {
 			});
 		}
 	}, [dispatch, selectedTab]);
-
-	const handleScroll = () => {
-		if (chatBoxRef.current) {
-			const { scrollTop, scrollHeight, clientHeight } =
-				chatBoxRef.current;
-			// Check if the user is at the bottom (or near the bottom)
-			if (scrollHeight - scrollTop === clientHeight) {
-				setIsAtBottom(true);
-			} else {
-				setIsAtBottom(false);
-			}
-		}
-	};
 
 	useEffect(() => {
 		if (contextMenu.index || contextMenu.index === 0) {
