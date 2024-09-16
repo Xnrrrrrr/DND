@@ -15897,6 +15897,196 @@ export const backgroundDesc = {
 			],
 		},
 	},
+	Adopted: {
+		isHomebrew: true,
+		description: ``,
+		skillProficiencies: ``,
+		toolProficiencies: ``,
+		languages: ``,
+		startingEquipment: ``,
+		backgroundSpecial: {
+			title: ``,
+			description: ``,
+			die: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		feature: {
+			title: ``,
+			description: ``,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: ``,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 2,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 3,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 4,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 5,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+				{
+					number: 6,
+					bold: ``,
+					description: ``,
+					alignment: ``,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: ``,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: ``,
+				},
+				{
+					number: 2,
+					description: ``,
+				},
+				{
+					number: 3,
+					description: ``,
+				},
+				{
+					number: 4,
+					description: ``,
+				},
+				{
+					number: 5,
+					description: ``,
+				},
+				{
+					number: 6,
+					description: ``,
+				},
+			],
+		},
+	},
 	Charlatan: {
 		description: `You have always had a way with people. You know 
 					what makes them tick, you can tease out their hearts' 
