@@ -56,6 +56,7 @@ const backgrounds = [
 	"Hitman", //homebrew
 	"Innkeeper", //homebrew
 	"Intellectual", //homebrew
+	"Inventor", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

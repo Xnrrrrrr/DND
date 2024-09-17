@@ -4377,6 +4377,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Inventor", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -15897,13 +15901,13 @@ export const backgroundDesc = {
 			],
 		},
 	},
-	Adopted: {
+	Inventor: {
 		isHomebrew: true,
-		description: ``,
-		skillProficiencies: ``,
-		toolProficiencies: ``,
-		languages: ``,
-		startingEquipment: ``,
+		description: `You are essentially a creator. You have brilliant ideas and then you translate them into reality via technology or magic. You go for original content or at least try to. People may find you eccentric and funny or attractive in personality. Others may decry your practices as unorthodox or dangerous even. Inventors vary far and wide in aims and specialties, from weaponry to tinkering, and even the realm of metaphysical, like theorists and magic spell makers. Bottom line is that you bring new things to the table.`,
+		skillProficiencies: `Arcana, Investigation`,
+		toolProficiencies: `Tinker's Tools`,
+		languages: `Choose between Gnomish or Dwarven`,
+		startingEquipment: `A set of common clothes, Tinker's Tools, a hammer, an hourglass, a magnifying glass, and 10 gp`,
 		backgroundSpecial: {
 			title: ``,
 			description: ``,
@@ -15936,153 +15940,164 @@ export const backgroundDesc = {
 			],
 		},
 		feature: {
-			title: ``,
-			description: ``,
+			title: `Inventor's Eye`,
+			description: `Your inquisitive eye and critical thinking let you come up with ad hoc solutions to problems as they pop up. By spending at least a minute looking over something no larger than a 5-foot cube, you can figure out new and innovative ways to use it in tandem with other materials at hand or that you know of. You can speak to your DM about inventing the thought process for wholly new and incredible things like guns in the age of swords, given you have the sound logic behind it.`,
 		},
 		alterateFeature: [
 			{
-				title: ``,
-				description: ``,
+				title: `Inspiring Inventions`,
+				description: `​With your ability to create wonderful contraptions, you command respect among both artists and craftsmen. As a fellow creator, you are on friendly terms with these folk, provided you have done nothing to offend them, and their local connections can often prove invaluable to a traveling artisan such as yourself. Through these connections, you learn of the best suppliers of raw goods in the area as well as the identities of local people who would be the most interested in purchasing your inventions.`,
 			},
 			{
 				title: ``,
 				description: ``,
 			},
 		],
-		suggestedCharacteristics: ``,
+		suggestedCharacteristics: `Inventors are rather intelligent people with a drive to change the world for the better or the worse. They love to make objects of complete wonder or complete destruction. There are two types of Inventors: Those that want to share their gifts with the world and those that want to hide their inventions for themselves.`,
 		suggestedPersonalityTraits: {
 			description: ``,
-			die: ``,
+			die: `1d8`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `I ask a lot of questions.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I am always polite.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I quote famous philosophers, sometimes adding my own twist.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I am more of an indoors person. Being outside (literally or figuratively) gives me hives.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `The idea of multiple Gods is ridiculous to me.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I treat my creations with the same care a parent does for their child.`,
 				},
+				{
+					number: 7,
+					description: `I change the topic at hand if it doesn't interest me.`,
+				},
+				{
+					number: 8,
+					description: `I absentmindedly construct/destruct when I'm thinking over something.`,
+				},
+				
+				
+				
 			],
 		},
 		suggestedIdeal: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Mastermind`,
+					description: `​I refer to others as tools that I can use`,
+					alignment: `Evil`,
 				},
 				{
 					number: 2,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Ingenious`,
+					description: `Sometimes, I speak in random nonsense just to see others' reactions.`,
+					alignment: `Chaotic`,
 				},
 				{
 					number: 3,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Resolved`,
+					description: `We build our own destinies, we are the real gods. `,
+					alignment: `Neutral`,
 				},
 				{
 					number: 4,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Supportive`,
+					description: `I hope to build a grand machine to help the community.`,
+					alignment: `Good`,
 				},
 				{
 					number: 5,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Purposeful`,
+					description: `We have been created for a purpose, we need to follow our orders.`,
+					alignment: `Lawful`,
 				},
 				{
 					number: 6,
-					bold: ``,
-					description: ``,
-					alignment: ``,
+					bold: `Inventive`,
+					description: `I build to help myself or others, whichever is more important.`,
+					alignment: `Any`,
 				},
 			],
 		},
 		suggestedBond: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `My creations are my only true companions.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I am trying to outdo a rival inventor with my own inventions.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `I stole the ideas from my old partner and they want revenge.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `My old partner stole some valuable blueprints and I plan on ​getting them back.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `My mentor taught me everything I know to this day, I could not be where i am without them.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I love seeing the looks of amazement as I build something new and wonderful.`,
 				},
 			],
 		},
 		suggestedFlaw: {
 			description: ``,
-			die: ``,
+			die: `1d6`,
 			title: ``,
 			roll: [
 				{
 					number: 1,
-					description: ``,
+					description: `Anyone who criticises my creations will find a hammer coming their way.`,
 				},
 				{
 					number: 2,
-					description: ``,
+					description: `I refuse to stop once I begin a task, I can't leave something incomplete.`,
 				},
 				{
 					number: 3,
-					description: ``,
+					description: `When explaining something I end up speaking far too quickly for anyone to understand.`,
 				},
 				{
 					number: 4,
-					description: ``,
+					description: `I snap at others pretty often, especially if they're distracting me.`,
 				},
 				{
 					number: 5,
-					description: ``,
+					description: `I end up treating everyone else as complete idiots.`,
 				},
 				{
 					number: 6,
-					description: ``,
+					description: `I can be pretty blunt.`,
 				},
 			],
 		},
