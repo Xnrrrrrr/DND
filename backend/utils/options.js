@@ -57,6 +57,7 @@ const backgrounds = [
 	"Innkeeper", //homebrew
 	"Intellectual", //homebrew
 	"Inventor", //homebrew
+	"Islander", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

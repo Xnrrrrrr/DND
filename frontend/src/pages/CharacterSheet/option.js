@@ -4381,6 +4381,10 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Islander", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -15991,9 +15995,6 @@ export const backgroundDesc = {
 					number: 8,
 					description: `I absentmindedly construct/destruct when I'm thinking over something.`,
 				},
-				
-				
-				
 			],
 		},
 		suggestedIdeal: {
@@ -16098,6 +16099,212 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `I can be pretty blunt.`,
+				},
+			],
+		},
+	},
+	Islander: {
+		isHomebrew: true,
+		description: `You’ve spent the majority of your life as an island hopper. You are excellent at getting what you need from the land, but particularly so from bodies of water. Huge, open spaces make you feel at home, as they can make you feel alone even when with others. Civilization is mostly foreign to you, but you know the ways of the wild and the ocean. You have endured great storms on a raft you lashed yourself, sailed for weeks guided by only the stars, and lived happily among the rocks and reefs other seafarer’s see as death. Whether you were a secluded fisherman, a self-imposed castaway, or a sailor whose port was the ocean, your map is the stars and your boat is anything that floats!`,
+		skillProficiencies: `Perception, Survival`,
+		toolProficiencies: `One type of musical instrument, Vehicles (water)`,
+		languages: `One of your choosing`,
+		startingEquipment: `Fishing tackle, a trophy from the sea, a set of traveler’s clothes, and a belt pouch containing 5 gp`,
+		backgroundSpecial: {
+			title: `Origin`,
+			description: ``,
+			die: `1d8`,
+			roll: [
+				{
+					number: 1,
+					description: `Fisherman`,
+				},
+				{
+					number: 2,
+					description: `Deserter`,
+				},
+				{
+					number: 3,
+					description: `Castaway`,
+				},
+				{
+					number: 4,
+					description: `Tribal Nomad`,
+				},
+				{
+					number: 5,
+					description: `Guide`,
+				},
+				{
+					number: 6,
+					description: `Long Distance Canoer`,
+				},
+				{
+					number: 7,
+					description: `Exile`,
+				},
+				{
+					number: 8,
+					description: `Shaman`,
+				},
+			],
+		},
+		feature: {
+			title: `Wanderer`,
+			description: `You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.`,
+		},
+		alterateFeature: [
+			{
+				title: ``,
+				description: ``,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Most islanders hold ties of nature, family, clan, tribe, or a particular island. They are often awkward in conversation, and almost always quiet - reverent in nature and bewildered by civilization.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I’m so entranced with the stars, that I’d rather sleep by day.`,
+				},
+				{
+					number: 2,
+					description: `If I can’t get all I need from one island, I’m living lavishly.`,
+				},
+				{
+					number: 3,
+					description: `I have a lesson for every situation, drawn from my observations of nature.`,
+				},
+				{
+					number: 4,
+					description: `I’d prefer if everywhere had a view of the ocean.`,
+				},
+				{
+					number: 5,
+					description: `There’s nothing more pleasing than laying on the warm sand while the waves graze my feet.`,
+				},
+				{
+					number: 6,
+					description: `I’m at my best when I’m alone and can hear only nature.`,
+				},
+				{
+					number: 7,
+					description: `I feel far more comfortable among animals than people.`,
+				},
+				{
+					number: 8,
+					description: `I’ve fallen asleep floating and awoken on a new island.`,
+				},
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: `Freedom`,
+					description: `The sea is freedom - the freedom to go anywhere as well as do anything.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 2,
+					bold: `Survival`,
+					description: `If I don’t fight to live on, then I will become part of something else's fight - that's just how things are.`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 3,
+					bold: `Nature`,
+					description: `The natural world is more important than all the constructs of civilization`,
+					alignment: `Neutral`,
+				},
+				{
+					number: 4,
+					bold: `Greater Good`,
+					description: `It’s everyone’s responsibility to do their best to be kind to the world.`,
+					alignment: `Good`,
+				},
+				{
+					number: 5,
+					bold: `Destruction`,
+					description: `Only the mightiest don’t get weathered`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: `Solitude`,
+					description: `The best way to live life is alone`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I return to the same island at least once a month to make sure no one else has claimed it.`,
+				},
+				{
+					number: 2,
+					description: `My tribe is gone except for me, but I’ll renew it someday.`,
+				},
+				{
+					number: 3,
+					description: `The ocean is the world’s lifeblood. I won’t see it be fouled up.`,
+				},
+				{
+					number: 4,
+					description: `I want a child, so after I’m gone someone will still watch the sea.`,
+				},
+				{
+					number: 5,
+					description: `The great blue took my parents, but it will never take me.`,
+				},
+				{
+					number: 6,
+					description: `The ocean is in pain, and I must find the source.`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `There’s no room for caution in a life lived to the fullest.`,
+				},
+				{
+					number: 2,
+					description: `I’ll never stop pursuing someone who leaves anything on an isle that they brought with them.`,
+				},
+				{
+					number: 3,
+					description: `I tend to withdraw when faced with new situations.`,
+				},
+				{
+					number: 4,
+					description: `The ocean takes everything eventually, I just quicken the process.`,
+				},
+				{
+					number: 5,
+					description: `I am slow to trust anybody who seems not to notice nature.`,
+				},
+				{
+					number: 6,
+					description: `Often I talk to myself in public because I forget I’m not alone.`,
 				},
 			],
 		},
