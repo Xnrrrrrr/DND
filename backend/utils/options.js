@@ -58,6 +58,8 @@ const backgrounds = [
 	"Intellectual", //homebrew
 	"Inventor", //homebrew
 	"Islander", //homebrew
+	"Jester", //homebrew
+	"Librarian", //homebrew
 	"Charlatan",
 	"Criminal",
 	"Entertainer",

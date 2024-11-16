@@ -4385,6 +4385,14 @@ export const backgroundsArray = [
 		isHomebrew: true,
 	},
 	{
+		option: "Jester", //homebrew
+		isHomebrew: true,
+	},
+	{
+		option: "Librarian", //homebrew
+		isHomebrew: true,
+	},
+	{
 		option: "Charlatan",
 		isHomebrew: false,
 	},
@@ -16305,6 +16313,205 @@ export const backgroundDesc = {
 				{
 					number: 6,
 					description: `Often I talk to myself in public because I forget I’m not alone.`,
+				},
+			],
+		},
+	},
+	Jester: {
+		isHomebrew: true,
+		description: `Did you choose this career, or you were obligated to? Was it assigned to you at birth, or did your parents or a superior force force you to go through this path? Did you like it? Did you take your jester path as a life philosophy or just as a job or hobby (possibly as a dare)? Were you considered great at what you did? If you were obligated to follow the career, would you flee it if you had the chance? And what made you abandon it to become an adventurer? Did you get fired, flee? And why?`,
+		skillProficiencies: `Choose two between Performance, Persuasion, Acrobatics and Sleight of Hand.`,
+		toolProficiencies: `Thieves' tools or two musical instruments and one gaming set`,
+		languages: `One common language of your choice.`,
+		startingEquipment: `Court jester outfit, juggling balls or other such devices for entertainment, 17 gold coins, 50 copper coins, one musical instrument or dice, an uncommon weapon (trident or whip, for example).`,
+		backgroundSpecial: {
+			title: `Specialization`,
+			description: `You always made it better with a certain type of show. Were you a great actor, did your music enchanted the entire family or had your agile hands made the best use of magic tricks?`,
+			die: `1d6`,
+			roll: [
+				{
+					number: 1,
+					description: `Comedian`,
+				},
+				{
+					number: 2,
+					description: `Magician`,
+				},
+				{
+					number: 3,
+					description: `Theatrical`,
+				},
+				{
+					number: 4,
+					description: `Signer/Musician`,
+				},
+				{
+					number: 5,
+					description: `Juggler`,
+				},
+				{
+					number: 6,
+					description: `Acrobat`,
+				},
+			],
+		},
+		feature: {
+			title: `The Whole World Is Strange`,
+			description: `Due to your hard working past, you can always find lodging and food for a performance. You're an expert at finding opportunities to do your show, even if they're not so obvious at a first place. People will tip you for your performance based on how good it is. These people also tend not to suspect much from a simple fool, allowing some foul play from you to go unnoticed.`,
+		},
+		alterateFeature: [
+			{
+				title: `Noble Company`,
+				description: `Since you've worked with people of the highest classes for a great time of your life, you know how to impress and relate to them. They will generally be more open to your presence. Nobles tend to protect their jeste`,
+			},
+			{
+				title: ``,
+				description: ``,
+			},
+		],
+		suggestedCharacteristics: `Not everyone knows how to be a good comedian. It requires time and effort to refine your art. Jesters tend to be kind of crazier than normal people even when not working.`,
+		suggestedPersonalityTraits: {
+			description: ``,
+			die: `1d8`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I vary my emotions very fast.`,
+				},
+				{
+					number: 2,
+					description: `Sometimes, I hear or see imaginary things.`,
+				},
+				{
+					number: 3,
+					description: `I always can make people around me laugh.`,
+				},
+				{
+					number: 4,
+					description: `I can't be just one person: I've multiple personalities!`,
+				},
+				{
+					number: 5,
+					description: `I can't resist the temptation to steal something.`,
+				},
+				{
+					number: 6,
+					description: `When talking to strangers, I babble a lot.`,
+				},
+				{
+					number: 7,
+					description: `I'm always worried something will happen.`,
+				},
+				{
+					number: 8,
+					description: `Even when other people don't like it, I follow them and try to discover about their life.`,
+				},
+				
+			],
+		},
+		suggestedIdeal: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					bold: ``,
+					description: `My performances are wholesome.`,
+					alignment: `Good`,
+				},
+				{
+					number: 2,
+					bold: ``,
+					description: `My performances are cruel or wicked.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 3,
+					bold: ``,
+					description: `I perform what I when I want at any given time.`,
+					alignment: `Chaotic`,
+				},
+				{
+					number: 4,
+					bold: ``,
+					description: `I never criticize authority in my performances`,
+					alignment: `Lawful`,
+				},
+				{
+					number: 5,
+					bold: ``,
+					description: `I secretly try to undermine all civilizations in my performances.`,
+					alignment: `Evil`,
+				},
+				{
+					number: 6,
+					bold: ``,
+					description: `I just want the audience entertained.`,
+					alignment: `Neutral`,
+				},
+			],
+		},
+		suggestedBond: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I love my outfits.`,
+				},
+				{
+					number: 2,
+					description: `I have a favorite pair of shoes.`,
+				},
+				{
+					number: 3,
+					description: `I use animals in my acts.`,
+				},
+				{
+					number: 4,
+					description: `Always seeking a fellow jester to share stories.`,
+				},
+				{
+					number: 5,
+					description: `I love mirrors and they're often part of my shows.`,
+				},
+				{
+					number: 6,
+					description: `I will earn as much gold as I can`,
+				},
+			],
+		},
+		suggestedFlaw: {
+			description: ``,
+			die: `1d6`,
+			title: ``,
+			roll: [
+				{
+					number: 1,
+					description: `I tend to mock royalty or governmental authority through action or deed.`,
+				},
+				{
+					number: 2,
+					description: `I pick on the biggest guy in the room, and mock him for identifiable traits cruelly.`,
+				},
+				{
+					number: 3,
+					description: `I have racially insensitive performances against the majority race during performances..`,
+				},
+				{
+					number: 4,
+					description: `I'm really not a good entertainer.`,
+				},
+				{
+					number: 5,
+					description: `I lie about my past performances, greatly exaggerating.`,
+				},
+				{
+					number: 6,
+					description: `I tell jokes about my deity.`,
 				},
 			],
 		},
